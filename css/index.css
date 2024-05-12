@@ -1,0 +1,233 @@
+@import url(https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap);
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-weight: 300;
+  font-size: 16px;
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+a {
+  display: block;
+  text-decoration: none;
+  color: #000;
+}
+
+strong,
+span {
+  display: block;
+}
+
+address {
+  font-style: normal;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+img,
+input,
+textarea,
+select {
+  vertical-align: middle;
+}
+
+h1 {
+  font-size: 30px;
+}
+
+h2 {
+  font-size: 24px;
+}
+
+h3 {
+  font-size: 20px;
+}
+
+p {
+  font-size: 16px;
+}
+
+header,
+nav,
+main,
+section,
+footer {
+  display: block;
+}
+
+.container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  background-color: lightgreen;
+}
+
+.container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  background-color: lightgreen;
+}
+
+.container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  background-color: antiquewhite;
+}
+
+header {
+  width: 100%;
+  height: 150px;
+  padding: 0 20px;
+  background-color: skyblue;
+}
+header .logo-gnb-rightmenu .logo-gnb-menu-box {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+header .logo-gnb-rightmenu .logo-gnb-menu-box .logo img {
+  margin-top: 36px;
+  width: 182px;
+}
+header .logo-gnb-rightmenu .main-menu {
+  display: none;
+}
+header .logo-gnb-rightmenu .right-menu {
+  display: flex;
+  justify-content: space-between;
+  width: 145px;
+  height: 45px;
+  margin-top: 54px;
+}
+header .logo-gnb-rightmenu .right-menu ul .login {
+  display: none;
+}
+header .logo-gnb-rightmenu .right-menu ul .search {
+  width: 45px;
+}
+header .logo-gnb-rightmenu .right-menu .mobile-menu {
+  width: 45px;
+  height: 45px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+header .logo-gnb-rightmenu .right-menu .mobile-menu .bar {
+  width: 100%;
+  height: 4px;
+  background-color: #000;
+}
+@media only screen and (min-width: 1024px) {
+  header {
+    position: relative;
+  }
+  header .logo-gnb-rightmenu .logo-gnb-menu-box {
+    justify-content: flex-start;
+  }
+  header .logo-gnb-rightmenu .logo-gnb-menu-box .logo img {
+    margin-top: 41px;
+    width: 191px;
+  }
+  header .logo-gnb-rightmenu .main-menu {
+    margin: 72px 272px 0 230px;
+    display: block;
+  }
+  header .logo-gnb-rightmenu .main-menu .gnb {
+    display: flex;
+    justify-content: space-between;
+    width: 616px;
+  }
+  header .logo-gnb-rightmenu .main-menu .gnb li a.gnb-title {
+    font-size: 20px;
+    font-weight: 400;
+  }
+  header .logo-gnb-rightmenu .main-menu .gnb li .sub-menu {
+    display: none;
+  }
+  header .logo-gnb-rightmenu .right-menu {
+    margin-top: 67px;
+  }
+  header .logo-gnb-rightmenu .right-menu ul {
+    display: flex;
+    justify-content: space-between;
+    width: 85px;
+    height: 21px;
+  }
+  header .logo-gnb-rightmenu .right-menu ul .login {
+    display: block;
+    width: 27px;
+  }
+  header .logo-gnb-rightmenu .right-menu ul .search {
+    width: 21px;
+  }
+  header .logo-gnb-rightmenu .right-menu .mobile-menu {
+    display: none;
+  }
+}
+
+footer {
+  width: 100%;
+  height: 400px;
+  background-color: coral;
+}
+footer .footer-img img {
+  width: 100%;
+}
+footer .footerlogo-info .footer-content-box {
+  margin: 48px 0;
+  padding: 0 20px;
+}
+footer .footerlogo-info .footer-content-box .footer-logo h2 {
+  font-weight: 100;
+  font-size: 42px;
+}
+footer .footerlogo-info .footer-content-box .info .address {
+  width: 240px;
+}
+footer .footerlogo-info .footer-content-box .info .tel {
+  width: 148px;
+}
+footer .footerlogo-info .footer-content-box .info .sns {
+  width: 85px;
+}
+footer .footerlogo-info .footer-content-box .info .info-title {
+  width: 601px;
+  border-top: 2px solid #b0afaf;
+}
+footer .footerlogo-info .footer-content-box .info .info-title ul {
+  display: flex;
+}
+footer .footerlogo-info .footer-content-box .info .info-title ul li {
+  font-weight: 400;
+  color: #717171;
+}
+footer .footerlogo-info .footer-content-box .info .division-line {
+  display: flex;
+  width: 41px;
+  height: 2px;
+}
+footer .footerlogo-info .footer-content-box .info .division-line .line {
+  width: 100%;
+  color: #717171;
+}
+footer .footerlogo-info .footer-content-box .info .info-txt {
+  display: flex;
+}
+footer .footerlogo-info .footer-content-box .info .info-txt .txt {
+  font-size: 18px;
+  color: #b0afaf;
+}/*# sourceMappingURL=index.css.map */

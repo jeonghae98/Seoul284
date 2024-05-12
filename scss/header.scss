@@ -1,0 +1,130 @@
+@import "./style.scss";
+@import "./mixin.scss";
+
+.container {
+    width: $width-wide;
+    max-width: 1440px;
+    margin: 0 auto;
+    background-color: lightgreen;
+}
+
+@mixin header-style() {
+    width: $width-wide;
+    height: 150px;
+    padding: 0 20px;
+    background-color: skyblue;
+
+    .logo-gnb-rightmenu {
+        .logo-gnb-menu-box {
+            width: $width-wide;
+            display: flex;
+            justify-content: space-between;
+            // background-color: brown;
+
+            .logo img {
+                margin-top: 36px;
+                width: 182px;
+            }
+        }
+
+        .main-menu {
+            display: none;
+        }  // main-menu
+
+        .right-menu {
+            display: flex;
+            justify-content: space-between;
+            width: 145px;
+            height: 45px;
+            margin-top: 54px;
+            // background-color: aquamarine;
+
+            ul {
+                .login {
+                    display: none;
+                }
+                .search {
+                    width: 45px;
+                }
+            }
+
+            .mobile-menu {
+                width: 45px; 
+                height: 45px; 
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                .bar {
+                    width: $width-wide;
+                    height: 4px;
+                    background-color: $color-main;
+                }
+            }
+        }  // right-menu
+    }  // logo-rightmenu
+
+
+    // PC ver
+    @include responsive(pc-screens) {
+        position: relative;
+
+        .logo-gnb-rightmenu {
+            .logo-gnb-menu-box {
+                justify-content: flex-start;
+
+                .logo img {
+                    margin-top: 41px;
+                    width: 191px;
+                }
+            }
+
+            .main-menu {
+                margin: 72px 272px 0 230px;
+                display: block;
+                
+                .gnb {
+                    display: flex;
+                    justify-content: space-between;
+                    width: 616px;
+    
+                    li {
+                        a.gnb-title {
+                            font: {
+                                size: 20px;
+                                weight: $font-regular;
+                            }
+                        }
+                        .sub-menu {
+                            display: none;
+                        }
+                    }
+    
+                }  // gnb
+            }  // main-menu
+
+            .right-menu {
+                margin-top: 67px;
+                // background-color: aquamarine;
+    
+                ul {
+                    display: flex;
+                    justify-content: space-between;
+                    width: 85px;
+                    height: 21px;
+
+                    .login {
+                        display: block;
+                        width: 27px;
+                    }
+                    .search {
+                        width: 21px;
+                    }
+                }
+    
+                .mobile-menu {
+                    display: none;
+                }
+            }  // right-menu
+        }  // logo-menu-box
+    }  
+}

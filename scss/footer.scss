@@ -1,0 +1,116 @@
+@import "./style.scss";
+@import "./mixin.scss";
+
+.container {
+    width: $width-wide;
+    max-width: 1440px;
+    margin: 0 auto;
+    background-color: lightgreen;
+}
+
+@mixin footer-style() {
+    width: $width-wide;
+    height: 400px;
+    // padding: 0 20px;
+    background-color: coral;
+
+    .footer-img{
+        img {
+            width: $width-wide;
+        }
+    }
+
+    .footerlogo-info {
+        .footer-content-box{
+            margin: 48px 0;
+            padding: 0 20px;
+            .footer-logo h2 {
+                font: {
+                    weight: $font-thin;
+                    size: 42px;
+                }
+            }
+
+            .info {
+                .address {
+                    width: 240px;
+                }
+                .tel {
+                    width: 148px;
+                }
+                .sns {
+                    width: 85px;
+                }
+
+                .info-title {
+                    width: 601px;
+                    border-top: 2px solid $footer-gray;
+
+                    ul {
+                        display: flex;
+                        
+                        li {
+                            font: {
+                                weight: $font-regular;
+                            }
+                            color: $footer-darkgray;
+                        }
+                    }
+                }
+
+                .division-line {
+                    display: flex;
+                    width: 41px;
+                    height: 2px;
+
+                    .line {
+                        width: $width-wide;
+                        color: $footer-darkgray;
+                    }
+                }
+
+                .info-txt {
+                    display: flex;
+                    .txt {
+                        font-size: 18px;
+                        color: $footer-gray;
+                    }
+                }
+                // position: relative;
+                // display: flex;
+                // justify-content: space-between;
+                // width: 601px;
+                // border-top: 2px solid $footer-gray;
+                
+                // strong {
+                //     font: {
+                //         weight: $font-regular;
+                //     }
+                //     color: $footer-darkgray;
+                // }
+                // .line {
+                //     position: absolute;
+                //     left: 0; top: 0;
+                //     width: 41px;
+                //     height: 2px;
+                //     background-color: $footer-darkgray;
+                // }
+                
+                // .txt {
+                //     font-size: 18px;
+                //     color: $footer-gray;
+                // }
+                // .address {
+                //     width: 240px;
+                // }
+                // .tel {
+                //     width: 148px;
+                // }
+                // .sns {
+                //     width: 85px;
+                // }
+                
+            }  // info
+        }  // footer-content-box
+    }  // footerlogo-info
+}  // footer-style()
