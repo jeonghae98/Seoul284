@@ -2,17 +2,18 @@
 @import "./mixin.scss";
 
 .container {
+    position: relative;
     width: $width-wide;
     max-width: 1440px;
     margin: 0 auto;
-    background-color: lightgreen;
+    // background-color: lightgreen;
 }
 
 @mixin footer-style() {
+    position: relative;
     width: $width-wide;
-    height: 400px;
-    // padding: 0 20px;
-    background-color: coral;
+    height: 420px;
+    // background-color: coral;
 
     .footer-img{
         img {
@@ -21,9 +22,11 @@
     }
 
     .footerlogo-info {
-        .footer-content-box{
-            margin: 48px 0;
-            padding: 0 20px;
+        padding: 0 20px;
+        margin-top: 35px;
+        .footer-content-box {
+            width: 84%;
+            margin: 0 auto;
             .footer-logo h2 {
                 font: {
                     weight: $font-thin;
@@ -31,7 +34,38 @@
                 }
             }
 
+            .division-line {
+                position: relative;
+                width: $width-wide;
+                height: 2px; 
+                margin: 30px 0 20px;
+                background-color: $footer-gray;
+                
+                .line {
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    width: 5.7%; 
+                    height: $width-wide;
+                    background-color: $footer-darkgray; 
+                }
+                
+                .line:nth-child(2) {
+                    left: 49%;  // 294px
+                }
+                .line:nth-child(3) {
+                    left: 83%;  // 498px
+                }
+            }
+
             .info {
+                width: $width-wide;
+                display: flex;
+                
+                div {
+                    margin-right: 55px;
+                }
+                
                 .address {
                     width: 240px;
                 }
@@ -40,77 +74,143 @@
                 }
                 .sns {
                     width: 85px;
+                    margin-right: 0;
                 }
 
-                .info-title {
-                    width: 601px;
-                    border-top: 2px solid $footer-gray;
+                strong {
+                    margin-bottom: 18px;
+                    font: {
+                        weight: $font-regular;
+                    }
+                    color: $footer-darkgray;
+                }
+                
+                .txt {
+                    font: {
+                        weight: $font-regular;
+                        size: 18px;
+                    }
+                    color: $footer-gray;
+                }
+            }  // info
 
-                    ul {
-                        display: flex;
-                        
-                        li {
-                            font: {
-                                weight: $font-regular;
-                            }
-                            color: $footer-darkgray;
+            .copyright {
+                margin-top: 30px;
+                p {
+                    font: {
+                        weight: $font-regular;
+                    }
+                    color: $footer-gray;
+                }
+            }
+        }  // footer-content-box
+    }  // footerlogo-info
+
+    .fixed-menu {
+        position: fixed;
+        right: 105px; bottom: 300px;
+        
+        a {
+            width: 50px; 
+            height: 50px;
+            line-height: 50px;
+            border-radius: 50%;
+            text-align: center;
+            color: $color-second;
+            background-color: $color-main;
+        }
+    }
+
+    // PC ver
+    @include responsive(large-screens) {
+        height: 415px;
+        
+        .footerlogo-info {
+            .footer-content-box {
+                display: grid;
+                grid-template-columns: (2, 1fr);
+                grid-template-rows: minmax(100px, auto);
+                grid-column-gap: 6.25%;  // 90px
+                justify-content: flex-start;
+                align-items: center;
+                width: 82%;  // 1180px  988
+                background-color: lightpink;
+
+                .footer-logo {
+                    margin-top: 7px;
+                    width: 190px;
+                    line-height: 1.2;
+                    background-color: aquamarine;
+                    h2 {
+                        font: {
+                            size: 53px;
                         }
                     }
                 }
 
                 .division-line {
-                    display: flex;
-                    width: 41px;
-                    height: 2px;
-
+                    position: absolute;
+                    left: 410px; top: 42px;
+                    width: 62.36%;
+                    margin: 0;
+                    
                     .line {
-                        width: $width-wide;
-                        color: $footer-darkgray;
+                        width: 33px; 
+                    }
+    
+                    .line:nth-child(2) {
+                        left: 325px;  // 30%
+                    }
+                    .line:nth-child(3) {
+                        left: 54%;  // 54%
                     }
                 }
 
-                .info-txt {
-                    display: flex;
+                .info {
+                    grid-column-start: 2;
+                    grid-row-start: 1;
+                    justify-content: space-between;
+                    align-items: center;
+                    width: 705px;  // 705px
+                    background-color: aqua;
+                    
+                    div {
+                        margin-right: 0;
+                    }
+                    .address {
+                        width: 190px;
+                    }
+                    .tel {
+                        width: 117px;
+                    }
+                    .sns {
+                        width: 70px;
+                        margin-right: 0;
+                    }
+    
+                    strong {
+                        margin-bottom: 35px;
+                        font: {
+                            size: 18px;
+                        }
+                    }
+                    
                     .txt {
-                        font-size: 18px;
-                        color: $footer-gray;
+                        font-size: 14px;
+                    }
+                }  // info
+    
+                .copyright {
+                    margin-top: 0;
+                    grid-column-start: 2;
+                    grid-row-start: 3;
+                    p {
+                        font: {
+                            size: 10px;
+                        }
                     }
                 }
-                // position: relative;
-                // display: flex;
-                // justify-content: space-between;
-                // width: 601px;
-                // border-top: 2px solid $footer-gray;
-                
-                // strong {
-                //     font: {
-                //         weight: $font-regular;
-                //     }
-                //     color: $footer-darkgray;
-                // }
-                // .line {
-                //     position: absolute;
-                //     left: 0; top: 0;
-                //     width: 41px;
-                //     height: 2px;
-                //     background-color: $footer-darkgray;
-                // }
-                
-                // .txt {
-                //     font-size: 18px;
-                //     color: $footer-gray;
-                // }
-                // .address {
-                //     width: 240px;
-                // }
-                // .tel {
-                //     width: 148px;
-                // }
-                // .sns {
-                //     width: 85px;
-                // }
-                
-            }  // info
-        }  // footer-content-box
-    }  // footerlogo-info
+            }  // footer-content-box
+        }  // footer-info
+    }  // pc ver
 }  // footer-style()

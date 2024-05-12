@@ -1,10 +1,10 @@
 @mixin responsive($break) {
-    @if $break == mobile-screens {
-        @media only screen and (min-width:$break-small) {
+    @if $break == small-screens {
+        @media only screen and (min-width:$berak-small) {
             @content;
         };
     }
-    @else if $break == pc-screens {
+    @else if $break == large-screens {
         @media only screen and (min-width:$break-large) {
             @content;
         };
