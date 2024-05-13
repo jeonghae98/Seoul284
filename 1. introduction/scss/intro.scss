@@ -9,7 +9,7 @@
     width: $width-wide;
     max-width: 1440px;
     margin: 0 auto;
-    background-color: antiquewhite;
+    // background-color: antiquewhite;
 }
 
 //***********header***********
@@ -18,7 +18,75 @@ header {
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //***********main***********
+main {
+    .container {
+        section.main-title {
+            h2 {
+                margin: 120px 0 50px 0;
+                font: {
+                   weight : $font-regular;
+                   size : 3rem;
+                }
+                text-align: center;
+                // background-color: aqua;
+            }
+            p {
+                font : {
+                    font-weight: $font-regular;
+                    size : 1.3rem;
+                    color: #9b9b9b;
+                }
+                text-align: center;
+                // background-color: aliceblue
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 //***********footer***********
