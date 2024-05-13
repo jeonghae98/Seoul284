@@ -14,6 +14,9 @@
     width: $width-wide;
     height: 420px;
     // background-color: coral;
+    @include responsive(large-screens) {
+        height: 415px;
+    }
 
     .footer-img{
         img {
@@ -24,13 +27,36 @@
     .footerlogo-info {
         padding: 0 20px;
         margin-top: 35px;
+
         .footer-content-box {
             width: 84%;
             margin: 0 auto;
-            .footer-logo h2 {
-                font: {
-                    weight: $font-thin;
-                    size: 42px;
+
+            @include responsive(large-screens) {
+                display: flex;
+                // justify-content:;
+                // align-items: center;
+                width: 82%;  // 1180px  988
+                background-color: lightpink;
+            }
+
+            .footer-logo {
+                h2 {
+                    font: {
+                        weight: $font-thin;
+                        size: 42px;
+                    }
+                }
+                    
+                @include responsive(large-screens) {
+                    margin-top: 7px;
+                    margin-right: 90px;
+                    width: 300px;
+                    line-height: 1.2;
+                    font: {
+                        size: 53px;
+                    }
+                    background-color: aquamarine;
                 }
             }
 
@@ -40,6 +66,13 @@
                 height: 2px; 
                 margin: 30px 0 20px;
                 background-color: $footer-gray;
+
+                @include responsive(large-screens) {
+                    position: absolute;
+                    left: 410px; top: 42px;
+                    width: 62.36%;
+                    margin: 0;
+                }
                 
                 .line {
                     position: absolute;
@@ -48,67 +81,120 @@
                     width: 5.7%; 
                     height: $width-wide;
                     background-color: $footer-darkgray; 
+
+                    @include responsive(large-screens) {
+                        width: 33px; 
+                    }
                 }
                 
                 .line:nth-child(2) {
                     left: 49%;  // 294px
+
+                    @include responsive(large-screens) {
+                        left: 350px;  
+                    }
                 }
                 .line:nth-child(3) {
                     left: 83%;  // 498px
+
+                    @include responsive(large-screens) {
+                        left: 635px;
+                    }
                 }
             }
 
             .info {
                 width: $width-wide;
                 display: flex;
-                
+                // justify-content: space-between;
+                // align-items: center;
+                @include responsive(large-screens) {
+                    justify-content: space-between;
+                    // align-items: center;
+                    // width: 705px;  // 705px
+                    background-color: aqua;
+                }
+
                 div {
-                    margin-right: 55px;
+                    margin-right: 40px;
+                    @include responsive(large-screens) {
+                        margin-right: 0;
+                    }
                 }
                 
                 .address {
                     width: 240px;
+                    @include responsive(large-screens) {
+                        width: 190px;
+                    }
                 }
                 .tel {
-                    width: 148px;
+                    width: 155px;
+                    @include responsive(large-screens) {
+                        width: 125px;
+                    }
                 }
                 .sns {
                     width: 85px;
                     margin-right: 0;
+                    @include responsive(large-screens) {
+                        width: 70px;
+                    }
                 }
 
                 strong {
-                    margin-bottom: 18px;
+                    margin-bottom: 1.25rem;  // 18px
+                    }
                     font: {
                         weight: $font-regular;
                     }
                     color: $footer-darkgray;
-                }
+
+                    @include responsive(large-screens) {
+                        margin-bottom: 35px;
+                        font: {
+                            size: 18px;
+                        }
+                    }
                 
                 .txt {
                     font: {
                         weight: $font-regular;
-                        size: 18px;
+                        size: 1.25rem;  // 18px
                     }
                     color: $footer-gray;
+                    @include responsive(large-screens) {
+                        font-size: 14px;
+                    }
                 }
             }  // info
 
             .copyright {
+                width: $width-wide;
                 margin-top: 30px;
+
+                @include responsive(large-screens) {
+                    margin-top: 25px;
+                }
+
                 p {
                     font: {
                         weight: $font-regular;
                     }
                     color: $footer-gray;
+                    @include responsive(large-screens) {
+                        font: {
+                            size: 10px;
+                        }
+                    }
                 }
-            }
+            }  // copyright
         }  // footer-content-box
     }  // footerlogo-info
 
     .fixed-menu {
         position: fixed;
-        right: 105px; bottom: 300px;
+        right: 105px; bottom: 180px;
         
         a {
             width: 50px; 
@@ -119,98 +205,5 @@
             color: $color-second;
             background-color: $color-main;
         }
-    }
-
-    // PC ver
-    @include responsive(large-screens) {
-        height: 415px;
-        
-        .footerlogo-info {
-            .footer-content-box {
-                display: grid;
-                grid-template-columns: (2, 1fr);
-                grid-template-rows: minmax(100px, auto);
-                grid-column-gap: 6.25%;  // 90px
-                justify-content: flex-start;
-                align-items: center;
-                width: 82%;  // 1180px  988
-                background-color: lightpink;
-
-                .footer-logo {
-                    margin-top: 7px;
-                    width: 190px;
-                    line-height: 1.2;
-                    background-color: aquamarine;
-                    h2 {
-                        font: {
-                            size: 53px;
-                        }
-                    }
-                }
-
-                .division-line {
-                    position: absolute;
-                    left: 410px; top: 42px;
-                    width: 62.36%;
-                    margin: 0;
-                    
-                    .line {
-                        width: 33px; 
-                    }
-    
-                    .line:nth-child(2) {
-                        left: 325px;  // 30%
-                    }
-                    .line:nth-child(3) {
-                        left: 54%;  // 54%
-                    }
-                }
-
-                .info {
-                    grid-column-start: 2;
-                    grid-row-start: 1;
-                    justify-content: space-between;
-                    align-items: center;
-                    width: 705px;  // 705px
-                    background-color: aqua;
-                    
-                    div {
-                        margin-right: 0;
-                    }
-                    .address {
-                        width: 190px;
-                    }
-                    .tel {
-                        width: 117px;
-                    }
-                    .sns {
-                        width: 70px;
-                        margin-right: 0;
-                    }
-    
-                    strong {
-                        margin-bottom: 35px;
-                        font: {
-                            size: 18px;
-                        }
-                    }
-                    
-                    .txt {
-                        font-size: 14px;
-                    }
-                }  // info
-    
-                .copyright {
-                    margin-top: 0;
-                    grid-column-start: 2;
-                    grid-row-start: 3;
-                    p {
-                        font: {
-                            size: 10px;
-                        }
-                    }
-                }
-            }  // footer-content-box
-        }  // footer-info
-    }  // pc ver
+    }  // fixed-menu
 }  // footer-style()

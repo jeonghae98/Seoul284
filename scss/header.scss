@@ -21,14 +21,47 @@
             display: flex;
             justify-content: space-between;
             // background-color: brown;
+            @include responsive(large-screens) {
+                position: relative;
+            }
 
             .logo img {
                 margin-top: 36px;
-                width: 182px;
+                width: 182px;  // 182px
+
+                @include responsive(large-screens) {
+                    margin-top: 41px;
+                    width: 191px; // 
+                }
             }
 
             .main-menu {
                 display: none;
+
+                @include responsive(large-screens) {
+                    margin-top: 72px;
+                    margin-left: -43px;
+                    width: 616px;  // 616px 47.8%
+                    display: block;
+
+                    .gnb {
+                        display: flex;
+                        justify-content: space-between;
+                        background-color: aquamarine;
+        
+                        li {
+                            a.gnb-title {
+                                font: {
+                                    size: 20px;
+                                    weight: $font-regular;
+                                }
+                            }
+                            .sub-menu {
+                                display: none;
+                            }
+                        }
+                    }  // gnb
+                }
             }  // main-menu
     
             .right-menu {
@@ -38,23 +71,47 @@
                 height: 45px;
                 margin-top: 54px;
                 // background-color: aquamarine;
+
+                @include responsive(large-screens) {
+                    display: block;
+                    margin-top: 67px;
+                    margin-right: 35px;
+                    width: 85px;  // 85px 6%
+                    height: 21px;
+                }
     
                 ul {
+                    @include responsive(large-screens) {
+                        display: flex;
+                        justify-content: space-between;
+                    }
                     .login {
                         display: none;
+
+                        @include responsive(large-screens) {
+                            display: block;
+                            width: 27px;
+                        }
                     }
                     .search {
-                        width: 45px;
+                        width: 45px;  //6.25
                         margin-right: 10px;
+                        @include responsive(large-screens) {
+                            width: 21px;
+                        }
                     }
                 }
     
                 .mobile-menu {
-                    width: 45px; 
+                    width: 45px;  // 6.25
                     height: 45px; 
                     display: flex;
                     flex-direction: column;
                     justify-content: space-between;
+
+                    @include responsive(large-screens) {
+                        display: none;
+                    }
                     .bar {
                         width: $width-wide;
                         height: 4px;
@@ -63,68 +120,5 @@
                 }
             }  // right-menu
         }  //logo-gnb-menu-box
-    }  // logo-gnb-rightmenu
-
-        // PC ver
-        @include responsive(large-screens) {
-            position: relative;
-    
-            .logo-gnb-rightmenu {
-                .logo-gnb-menu-box {
-                    .logo img {
-                        margin-top: 41px;
-                        width: 191px;
-                    }
-                    
-                    .main-menu {
-                        margin-top: 72px;
-                        margin-left: -43px;
-                        width: 616px;  // 616px 47.8%
-                        display: block;
-                        
-                        .gnb {
-                            display: flex;
-                            justify-content: space-between;
-                            background-color: aquamarine;
-            
-                            li {
-                                a.gnb-title {
-                                    font: {
-                                        size: 20px;
-                                        weight: $font-regular;
-                                    }
-                                }
-                                .sub-menu {
-                                    display: none;
-                                }
-                            }
-                        }  // gnb
-                    }  // main-menu
-                    
-                    .right-menu {
-                        display: block;
-                        margin-top: 67px;
-                        margin-right: 35px;
-                        width: 85px;  // 85px 6%
-                        height: 21px;
-                        
-                        ul {
-                            display: flex;
-                            justify-content: space-between;
-                            .login {
-                                display: block;
-                                width: 27px;
-                            }
-                            .search {
-                                width: 21px;
-                            }
-                        }
-            
-                        .mobile-menu {
-                            display: none;
-                        }
-                    }  // right-menu
-                }  // logo-gnb-menu-box
-            }  // logo-gnb-rightmenu
-        }  // pc ver
+    }  // logo-gnb-rightmen
 }  // header-style()
