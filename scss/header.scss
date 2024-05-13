@@ -39,7 +39,7 @@
                 display: none;
 
                 @include responsive(large-screens) {
-                    margin-top: 72px;
+                    margin-top: 70px;
                     margin-left: -43px;
                     width: 616px;  // 616px 47.8%
                     display: block;
@@ -47,12 +47,12 @@
                     .gnb {
                         display: flex;
                         justify-content: space-between;
-                        background-color: aquamarine;
+                        // background-color: aquamarine;
         
                         li {
                             a.gnb-title {
                                 font: {
-                                    size: 20px;
+                                    size: 1.33rem;  // 16pt 21px
                                     weight: $font-regular;
                                 }
                             }
@@ -67,14 +67,14 @@
             .right-menu {
                 display: flex;
                 justify-content: space-between;
-                width: 145px;  // 145px  20.14%
-                height: 45px;
-                margin-top: 54px;
+                width: 100px;
+                height: 35px;
+                margin-top: 65px;
                 // background-color: aquamarine;
 
                 @include responsive(large-screens) {
                     display: block;
-                    margin-top: 67px;
+                    margin-top: 70px;
                     margin-right: 35px;
                     width: 85px;  // 85px 6%
                     height: 21px;
@@ -84,6 +84,7 @@
                     @include responsive(large-screens) {
                         display: flex;
                         justify-content: space-between;
+                        align-items: center;
                     }
                     .login {
                         display: none;
@@ -94,7 +95,7 @@
                         }
                     }
                     .search {
-                        width: 45px;  //6.25
+                        width: 32px;  
                         margin-right: 10px;
                         @include responsive(large-screens) {
                             width: 21px;
@@ -103,8 +104,8 @@
                 }
     
                 .mobile-menu {
-                    width: 45px;  // 6.25
-                    height: 45px; 
+                    width: 32px;  
+                    height: 32px; 
                     display: flex;
                     flex-direction: column;
                     justify-content: space-between;
@@ -114,7 +115,7 @@
                     }
                     .bar {
                         width: $width-wide;
-                        height: 4px;
+                        height: 3px;
                         background-color: $color-main;
                     }
                 }

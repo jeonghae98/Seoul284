@@ -20,6 +20,9 @@ a {
     display: block;
     text-decoration: none;
     color: $color-a;
+    &:hover {
+        color: $color-point;
+    }
 }
 strong,
 span {

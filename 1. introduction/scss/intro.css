@@ -21,9 +21,6 @@ a {
   text-decoration: none;
   color: #000;
 }
-a:hover {
-  color: #ff6000;
-}
 
 strong,
 span {
@@ -87,6 +84,7 @@ footer {
   width: 100%;
   max-width: 1440px;
   margin: 0 auto;
+  background-color: antiquewhite;
 }
 
 header {
@@ -119,7 +117,7 @@ header .logo-gnb-rightmenu .logo-gnb-menu-box .main-menu {
 }
 @media only screen and (min-width: 1024px) {
   header .logo-gnb-rightmenu .logo-gnb-menu-box .main-menu {
-    margin-top: 70px;
+    margin-top: 72px;
     margin-left: -43px;
     width: 616px;
     display: block;
@@ -129,7 +127,7 @@ header .logo-gnb-rightmenu .logo-gnb-menu-box .main-menu {
     justify-content: space-between;
   }
   header .logo-gnb-rightmenu .logo-gnb-menu-box .main-menu .gnb li a.gnb-title {
-    font-size: 1.33rem;
+    font-size: 27px;
     font-weight: 400;
   }
   header .logo-gnb-rightmenu .logo-gnb-menu-box .main-menu .gnb li .sub-menu {
@@ -139,14 +137,14 @@ header .logo-gnb-rightmenu .logo-gnb-menu-box .main-menu {
 header .logo-gnb-rightmenu .logo-gnb-menu-box .right-menu {
   display: flex;
   justify-content: space-between;
-  width: 100px;
+  width: 145px;
   height: 35px;
-  margin-top: 65px;
+  margin-top: 54px;
 }
 @media only screen and (min-width: 1024px) {
   header .logo-gnb-rightmenu .logo-gnb-menu-box .right-menu {
     display: block;
-    margin-top: 70px;
+    margin-top: 67px;
     margin-right: 35px;
     width: 85px;
     height: 21px;
@@ -156,7 +154,6 @@ header .logo-gnb-rightmenu .logo-gnb-menu-box .right-menu {
   header .logo-gnb-rightmenu .logo-gnb-menu-box .right-menu ul {
     display: flex;
     justify-content: space-between;
-    align-items: center;
   }
 }
 header .logo-gnb-rightmenu .logo-gnb-menu-box .right-menu ul .login {
@@ -169,7 +166,7 @@ header .logo-gnb-rightmenu .logo-gnb-menu-box .right-menu ul .login {
   }
 }
 header .logo-gnb-rightmenu .logo-gnb-menu-box .right-menu ul .search {
-  width: 32px;
+  width: 20px;
   margin-right: 10px;
 }
 @media only screen and (min-width: 1024px) {
@@ -178,8 +175,8 @@ header .logo-gnb-rightmenu .logo-gnb-menu-box .right-menu ul .search {
   }
 }
 header .logo-gnb-rightmenu .logo-gnb-menu-box .right-menu .mobile-menu {
-  width: 32px;
-  height: 32px;
+  width: 20px;
+  height: 20px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -191,15 +188,14 @@ header .logo-gnb-rightmenu .logo-gnb-menu-box .right-menu .mobile-menu {
 }
 header .logo-gnb-rightmenu .logo-gnb-menu-box .right-menu .mobile-menu .bar {
   width: 100%;
-  height: 3px;
+  height: 4px;
   background-color: #000;
 }
 
 footer {
   position: relative;
   width: 100%;
-  height: 400px;
-  background-color: coral;
+  height: 420px;
 }
 @media only screen and (min-width: 1024px) {
   footer {
@@ -212,7 +208,6 @@ footer .footer-img img {
 footer .footerlogo-info {
   padding: 0 20px;
   margin-top: 35px;
-  background-color: aquamarine;
 }
 footer .footerlogo-info .footer-content-box {
   width: 84%;
@@ -227,7 +222,7 @@ footer .footerlogo-info .footer-content-box {
 }
 footer .footerlogo-info .footer-content-box .footer-logo h2 {
   font-weight: 100;
-  font-size: 2.5rem;
+  font-size: 42px;
 }
 @media only screen and (min-width: 1024px) {
   footer .footerlogo-info .footer-content-box .footer-logo {
@@ -330,7 +325,7 @@ footer .footerlogo-info .footer-content-box .info .sns {
   }
 }
 footer .footerlogo-info .footer-content-box .info strong {
-  margin-bottom: 18px;
+  margin-bottom: 1.25rem;
 }
 @media only screen and (min-width: 1024px) {
   footer .footerlogo-info .footer-content-box .info {
@@ -340,7 +335,7 @@ footer .footerlogo-info .footer-content-box .info strong {
 }
 footer .footerlogo-info .footer-content-box .info .txt {
   font-weight: 400;
-  font-size: 0.83rem;
+  font-size: 1.25rem;
   color: #b0afaf;
 }
 @media only screen and (min-width: 1024px) {
@@ -359,7 +354,6 @@ footer .footerlogo-info .footer-content-box .copyright {
 }
 footer .footerlogo-info .footer-content-box .copyright p {
   font-weight: 400;
-  font-size: 0.83rem;
   color: #b0afaf;
 }
 @media only screen and (min-width: 1024px) {
@@ -380,4 +374,4 @@ footer .fixed-menu a {
   text-align: center;
   color: #fff;
   background-color: #000;
-}/*# sourceMappingURL=index.css.map */
+}/*# sourceMappingURL=intro.css.map */
