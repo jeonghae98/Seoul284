@@ -21,9 +21,6 @@ a {
   text-decoration: none;
   color: #000;
 }
-a:hover {
-  color: #ff6000;
-}
 
 strong,
 span {
@@ -115,16 +112,7 @@ header .logo-gnb-rightmenu .logo-gnb-menu-box .logo img {
   }
 }
 header .logo-gnb-rightmenu .logo-gnb-menu-box .main-menu {
-  height: 100%;
-  width: 0;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  background-color: rgb(0, 0, 0);
-  background-color: rgba(0, 0, 0, 0.9);
-  overflow-x: hidden;
-  transition: 0.5s;
+  display: none;
 }
 @media only screen and (min-width: 1024px) {
   header .logo-gnb-rightmenu .logo-gnb-menu-box .main-menu {
@@ -186,35 +174,95 @@ header .logo-gnb-rightmenu .logo-gnb-menu-box .right-menu ul .search {
     width: 21px;
   }
 }
-header .logo-gnb-rightmenu .logo-gnb-menu-box .right-menu #mobile-menu {
-  position: relative;
-  width: 40px;
+header .logo-gnb-rightmenu .logo-gnb-menu-box .right-menu .mobile-menu {
+  width: 32px;
   height: 32px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  align-items: center;
 }
 @media only screen and (min-width: 1024px) {
-  header .logo-gnb-rightmenu .logo-gnb-menu-box .right-menu #mobile-menu {
+  header .logo-gnb-rightmenu .logo-gnb-menu-box .right-menu .mobile-menu {
     display: none;
   }
 }
-header .logo-gnb-rightmenu .logo-gnb-menu-box .right-menu #mobile-menu .bar {
+header .logo-gnb-rightmenu .logo-gnb-menu-box .right-menu .mobile-menu .bar {
   width: 100%;
   height: 3px;
   background-color: #000;
-  transition: transform 0.3s ease;
-  transform-origin: center;
 }
-header .logo-gnb-rightmenu .logo-gnb-menu-box .right-menu #mobile-menu.active .bar:nth-child(1) {
-  transform: rotate(-45deg) translate(-10px, 10px);
+
+main .container section.main-title h2 {
+  margin: 120px 0 50px 0;
+  font-weight: 400;
+  font-size: 3rem;
+  text-align: center;
+  animation-duration: 0.5s;
+  animation-name: move;
 }
-header .logo-gnb-rightmenu .logo-gnb-menu-box .right-menu #mobile-menu.active .bar:nth-child(2) {
-  transform: scale(0);
+@keyframes move {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
-header .logo-gnb-rightmenu .logo-gnb-menu-box .right-menu #mobile-menu.active .bar:nth-child(3) {
-  transform: rotate(45deg) translate(-10px, -10px);
+main .container section.main-title p {
+  font-size: 1.3rem;
+  font-weight: 400;
+  color: #9b9b9b;
+  text-align: center;
+  animation-duration: 2s;
+  animation-name: move;
+}
+@keyframes move {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+main .container section.main-title img {
+  width: 500px;
+  height: 375px;
+  margin: 0 auto;
+  animation-duration: 4s;
+  animation-name: move;
+}
+@keyframes move {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+main hr {
+  width: 100%;
+  height: 50px;
+  margin-top: 100px;
+  background-color: #000;
+}
+main section.box1 img {
+  position: absolute;
+  height: 100%;
+}
+main section.box1 .container .box1-txt h2 {
+  width: 70%;
+  margin: 0 auto;
+  padding-top: 15%;
+  padding-bottom: 6%;
+  text-align: left;
+  font-size: 2rem;
+}
+main section.box1 .container .box1-txt p {
+  width: 70%;
+  margin: 0 auto;
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #565656;
 }
 
 footer {
@@ -402,4 +450,4 @@ footer .fixed-menu a {
   text-align: center;
   color: #fff;
   background-color: #000;
-}/*# sourceMappingURL=index.css.map */
+}/*# sourceMappingURL=intro.css.map */

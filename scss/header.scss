@@ -37,6 +37,16 @@
 
             .main-menu {
                 display: none;
+                // height: 100%;
+                // width: 0;
+                // position: fixed;
+                // z-index: 1;
+                // top: 0;
+                // left: 0;
+                // background-color: rgb(0,0,0);
+                // background-color: rgba(0,0,0, 0.9);
+                // overflow-x: hidden;
+                // transition: 0.5s;
 
                 @include responsive(large-screens) {
                     margin-top: 70px;
@@ -103,22 +113,39 @@
                     }
                 }
     
-                .mobile-menu {
-                    width: 32px;  
+                #mobile-menu {
+                    position: relative;
+                    width: 40px;  
                     height: 32px; 
                     display: flex;
                     flex-direction: column;
                     justify-content: space-between;
+                    align-items: center;
 
                     @include responsive(large-screens) {
                         display: none;
                     }
+
                     .bar {
                         width: $width-wide;
                         height: 3px;
                         background-color: $color-main;
+                        transition: transform 0.3s ease;
+                        transform-origin: center;
+                    }
+                    &.active {
+                        .bar:nth-child(1) {
+                            transform: rotate(-45deg) translate(-10px, 10px);
+                        }
+                        .bar:nth-child(2) {
+                            transform: scale(0);
+                        }
+                        .bar:nth-child(3) {
+                            transform: rotate(45deg) translate(-10px, -10px);
+                        }
                     }
                 }
+                
             }  // right-menu
         }  //logo-gnb-menu-box
     }  // logo-gnb-rightmen

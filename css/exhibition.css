@@ -21,9 +21,6 @@ a {
   text-decoration: none;
   color: #000;
 }
-a:hover {
-  color: #ff6000;
-}
 
 strong,
 span {
@@ -87,6 +84,7 @@ footer {
   width: 100%;
   max-width: 1440px;
   margin: 0 auto;
+  background-color: antiquewhite;
 }
 
 header {
@@ -115,16 +113,7 @@ header .logo-gnb-rightmenu .logo-gnb-menu-box .logo img {
   }
 }
 header .logo-gnb-rightmenu .logo-gnb-menu-box .main-menu {
-  height: 100%;
-  width: 0;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  background-color: rgb(0, 0, 0);
-  background-color: rgba(0, 0, 0, 0.9);
-  overflow-x: hidden;
-  transition: 0.5s;
+  display: none;
 }
 @media only screen and (min-width: 1024px) {
   header .logo-gnb-rightmenu .logo-gnb-menu-box .main-menu {
@@ -186,35 +175,22 @@ header .logo-gnb-rightmenu .logo-gnb-menu-box .right-menu ul .search {
     width: 21px;
   }
 }
-header .logo-gnb-rightmenu .logo-gnb-menu-box .right-menu #mobile-menu {
-  position: relative;
-  width: 40px;
+header .logo-gnb-rightmenu .logo-gnb-menu-box .right-menu .mobile-menu {
+  width: 32px;
   height: 32px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  align-items: center;
 }
 @media only screen and (min-width: 1024px) {
-  header .logo-gnb-rightmenu .logo-gnb-menu-box .right-menu #mobile-menu {
+  header .logo-gnb-rightmenu .logo-gnb-menu-box .right-menu .mobile-menu {
     display: none;
   }
 }
-header .logo-gnb-rightmenu .logo-gnb-menu-box .right-menu #mobile-menu .bar {
+header .logo-gnb-rightmenu .logo-gnb-menu-box .right-menu .mobile-menu .bar {
   width: 100%;
   height: 3px;
   background-color: #000;
-  transition: transform 0.3s ease;
-  transform-origin: center;
-}
-header .logo-gnb-rightmenu .logo-gnb-menu-box .right-menu #mobile-menu.active .bar:nth-child(1) {
-  transform: rotate(-45deg) translate(-10px, 10px);
-}
-header .logo-gnb-rightmenu .logo-gnb-menu-box .right-menu #mobile-menu.active .bar:nth-child(2) {
-  transform: scale(0);
-}
-header .logo-gnb-rightmenu .logo-gnb-menu-box .right-menu #mobile-menu.active .bar:nth-child(3) {
-  transform: rotate(45deg) translate(-10px, -10px);
 }
 
 footer {
@@ -402,4 +378,4 @@ footer .fixed-menu a {
   text-align: center;
   color: #fff;
   background-color: #000;
-}/*# sourceMappingURL=index.css.map */
+}/*# sourceMappingURL=exhibition.css.map */
