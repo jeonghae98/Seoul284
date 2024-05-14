@@ -117,7 +117,7 @@ header .logo-gnb-rightmenu .logo-gnb-menu-box .main-menu {
 }
 @media only screen and (min-width: 1024px) {
   header .logo-gnb-rightmenu .logo-gnb-menu-box .main-menu {
-    margin-top: 72px;
+    margin-top: 70px;
     margin-left: -43px;
     width: 616px;
     display: block;
@@ -125,10 +125,9 @@ header .logo-gnb-rightmenu .logo-gnb-menu-box .main-menu {
   header .logo-gnb-rightmenu .logo-gnb-menu-box .main-menu .gnb {
     display: flex;
     justify-content: space-between;
-    background-color: aquamarine;
   }
   header .logo-gnb-rightmenu .logo-gnb-menu-box .main-menu .gnb li a.gnb-title {
-    font-size: 20px;
+    font-size: 1.33rem;
     font-weight: 400;
   }
   header .logo-gnb-rightmenu .logo-gnb-menu-box .main-menu .gnb li .sub-menu {
@@ -138,14 +137,14 @@ header .logo-gnb-rightmenu .logo-gnb-menu-box .main-menu {
 header .logo-gnb-rightmenu .logo-gnb-menu-box .right-menu {
   display: flex;
   justify-content: space-between;
-  width: 145px;
-  height: 45px;
-  margin-top: 54px;
+  width: 100px;
+  height: 35px;
+  margin-top: 65px;
 }
 @media only screen and (min-width: 1024px) {
   header .logo-gnb-rightmenu .logo-gnb-menu-box .right-menu {
     display: block;
-    margin-top: 67px;
+    margin-top: 70px;
     margin-right: 35px;
     width: 85px;
     height: 21px;
@@ -155,6 +154,7 @@ header .logo-gnb-rightmenu .logo-gnb-menu-box .right-menu {
   header .logo-gnb-rightmenu .logo-gnb-menu-box .right-menu ul {
     display: flex;
     justify-content: space-between;
+    align-items: center;
   }
 }
 header .logo-gnb-rightmenu .logo-gnb-menu-box .right-menu ul .login {
@@ -167,7 +167,7 @@ header .logo-gnb-rightmenu .logo-gnb-menu-box .right-menu ul .login {
   }
 }
 header .logo-gnb-rightmenu .logo-gnb-menu-box .right-menu ul .search {
-  width: 45px;
+  width: 32px;
   margin-right: 10px;
 }
 @media only screen and (min-width: 1024px) {
@@ -175,28 +175,42 @@ header .logo-gnb-rightmenu .logo-gnb-menu-box .right-menu ul .search {
     width: 21px;
   }
 }
-header .logo-gnb-rightmenu .logo-gnb-menu-box .right-menu .mobile-menu {
-  width: 45px;
-  height: 45px;
+header .logo-gnb-rightmenu .logo-gnb-menu-box .right-menu #mobile-menu {
+  position: relative;
+  width: 40px;
+  height: 32px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  align-items: center;
 }
 @media only screen and (min-width: 1024px) {
-  header .logo-gnb-rightmenu .logo-gnb-menu-box .right-menu .mobile-menu {
+  header .logo-gnb-rightmenu .logo-gnb-menu-box .right-menu #mobile-menu {
     display: none;
   }
 }
-header .logo-gnb-rightmenu .logo-gnb-menu-box .right-menu .mobile-menu .bar {
+header .logo-gnb-rightmenu .logo-gnb-menu-box .right-menu #mobile-menu .bar {
   width: 100%;
-  height: 4px;
+  height: 3px;
   background-color: #000;
+  transition: transform 0.3s ease;
+  transform-origin: center;
+}
+header .logo-gnb-rightmenu .logo-gnb-menu-box .right-menu #mobile-menu.active .bar:nth-child(1) {
+  transform: rotate(-45deg) translate(-10px, 10px);
+}
+header .logo-gnb-rightmenu .logo-gnb-menu-box .right-menu #mobile-menu.active .bar:nth-child(2) {
+  transform: scale(0);
+}
+header .logo-gnb-rightmenu .logo-gnb-menu-box .right-menu #mobile-menu.active .bar:nth-child(3) {
+  transform: rotate(45deg) translate(-10px, -10px);
 }
 
 footer {
   position: relative;
   width: 100%;
-  height: 420px;
+  height: 400px;
+  background-color: coral;
 }
 @media only screen and (min-width: 1024px) {
   footer {
@@ -209,6 +223,7 @@ footer .footer-img img {
 footer .footerlogo-info {
   padding: 0 20px;
   margin-top: 35px;
+  background-color: aquamarine;
 }
 footer .footerlogo-info .footer-content-box {
   width: 84%;
@@ -223,7 +238,7 @@ footer .footerlogo-info .footer-content-box {
 }
 footer .footerlogo-info .footer-content-box .footer-logo h2 {
   font-weight: 100;
-  font-size: 42px;
+  font-size: 2.5rem;
 }
 @media only screen and (min-width: 1024px) {
   footer .footerlogo-info .footer-content-box .footer-logo {
@@ -326,7 +341,7 @@ footer .footerlogo-info .footer-content-box .info .sns {
   }
 }
 footer .footerlogo-info .footer-content-box .info strong {
-  margin-bottom: 1.25rem;
+  margin-bottom: 18px;
 }
 @media only screen and (min-width: 1024px) {
   footer .footerlogo-info .footer-content-box .info {
@@ -336,7 +351,7 @@ footer .footerlogo-info .footer-content-box .info strong {
 }
 footer .footerlogo-info .footer-content-box .info .txt {
   font-weight: 400;
-  font-size: 1.25rem;
+  font-size: 0.83rem;
   color: #b0afaf;
 }
 @media only screen and (min-width: 1024px) {
@@ -355,6 +370,7 @@ footer .footerlogo-info .footer-content-box .copyright {
 }
 footer .footerlogo-info .footer-content-box .copyright p {
   font-weight: 400;
+  font-size: 0.83rem;
   color: #b0afaf;
 }
 @media only screen and (min-width: 1024px) {

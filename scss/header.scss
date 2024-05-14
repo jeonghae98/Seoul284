@@ -10,10 +10,12 @@
 }
 
 @mixin header-style() {
+    position: relative;
+    z-index: 1;
     width: $width-wide;
     height: 150px;
     padding: 0 20px;
-    // background-color: skyblue;
+    // background-color: rgb(255, 255, 255, 0.2);
 
     .logo-gnb-rightmenu {
         .logo-gnb-menu-box {
