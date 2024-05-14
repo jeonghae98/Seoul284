@@ -94,8 +94,8 @@ main {
     section.box1 {
         // display: flex;
         img {
-            position: absolute;
-            height: 100%;
+            // position: absolute;
+            height: 1150px;
         }
         .container {
             .box1-txt {
@@ -116,10 +116,17 @@ main {
                     font-size: 1.2rem;
                     font-weight:$font-regular;
                     color: #565656;
-                    
+                }
+                div.dotted-line {
+                    position: absolute; right: 30%;
+                    width: 100%; height: 2px;
+                    rotate: 90deg;
+                    background-image: linear-gradient(to right, black 50%, transparent 10%);
+                    background-size: 10px 1px;
+                    background-color: aqua
                 }
             }
-        }
+        } // container
     }
     
 

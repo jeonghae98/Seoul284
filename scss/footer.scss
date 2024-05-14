@@ -13,7 +13,7 @@
     position: relative;
     width: $width-wide;
     height: 400px;
-    background-color: coral;
+    // background-color: coral;
     @include responsive(large-screens) {
         height: 415px;
     }
@@ -27,7 +27,7 @@
     .footerlogo-info {
         padding: 0 20px;
         margin-top: 35px;
-        background-color: aquamarine;
+        // background-color: aquamarine;
 
         .footer-content-box {
             width: 84%;
@@ -38,7 +38,7 @@
                 // justify-content:;
                 // align-items: center;
                 width: 82%;  // 1180px  988
-                background-color: lightpink;
+                // background-color: lightpink;
             }
 
             .footer-logo {
@@ -57,7 +57,7 @@
                     font: {
                         size: 53px;
                     }
-                    background-color: aquamarine;
+                    // background-color: aquamarine;
                 }
             }
 
@@ -113,7 +113,7 @@
                     justify-content: space-between;
                     // align-items: center;
                     // width: 705px;  // 705px
-                    background-color: aqua;
+                    // background-color: aqua;
                 }
 
                 div {
