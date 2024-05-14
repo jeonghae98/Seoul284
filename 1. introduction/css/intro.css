@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url(https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap);
 * {
   margin: 0;
@@ -264,7 +265,7 @@ main section.box1 img {
   height: 1150px;
 }
 main section.box1 .container .box1-txt h2 {
-  width: 70%;
+  width: 55%;
   margin: 0 auto;
   padding-top: 15%;
   padding-bottom: 6%;
@@ -272,21 +273,47 @@ main section.box1 .container .box1-txt h2 {
   font-size: 2rem;
 }
 main section.box1 .container .box1-txt p {
-  width: 70%;
+  width: 55%;
   margin: 0 auto;
   font-size: 1.2rem;
   font-weight: 400;
   color: #565656;
 }
-main section.box1 .container .box1-txt div.dotted-line {
+main section.box1 .container .box1-txt div.vertical-dotted-line {
   position: absolute;
-  right: 30%;
-  width: 100%;
-  height: 2px;
-  rotate: 90deg;
-  background-image: linear-gradient(to right, black 50%, transparent 10%);
-  background-size: 10px 1px;
-  background-color: aqua;
+  top: 0;
+  bottom: 0;
+  left: 15%; /* 세로 점선의 위치를 조정합니다. */
+  width: 1px;
+  background-image: linear-gradient(to bottom, black 70%, transparent 10%);
+  background-size: 1px 10px; /* 점선의 크기와 간격을 조정합니다. */
+}
+main section.box1 .container .box1-txt div.vertical-dotted-line2 {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 15.4%; /* 세로 점선의 위치를 조정합니다. */
+  width: 1px;
+  background-image: linear-gradient(to bottom, black 70%, transparent 10%);
+  background-size: 1px 10px; /* 점선의 크기와 간격을 조정합니다. */
+}
+main section.box1 .container .box1-txt div.outer-cicle {
+  position: relative;
+  left: 14%;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #000;
+  border-radius: 50%;
+  background-color: white;
+}
+main section.box1 .container .box1-txt div.outer-cicle div.inner-cicle {
+  position: absolute;
+  top: 30%;
+  left: 30%;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: #000;
 }
 
 footer {
