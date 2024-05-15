@@ -219,8 +219,19 @@ main .main-video video {
   top: 0;
   width: 100%;
 }
-main section {
+main section.main-intro {
   margin-top: 1000px;
+}
+main section.main-intro .intro-title {
+  font-weight: 400;
+  font-size: 3.5rem;
+}
+main section.main-intro .intro-text {
+  font-weight: 100;
+  font-size: 1.5rem;
+}
+main section.main-intro .intro-text .num {
+  color: #ff6000;
 }
 
 footer {

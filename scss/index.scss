@@ -36,8 +36,26 @@ main {
         
     }
 
-    section {
+    section.main-intro {
         margin-top: 1000px;
+
+        .intro-title {
+            font: {
+                weight: $font-regular;
+                size: 3.5rem;   // 56pt
+            }
+        }
+
+        .intro-text {
+            font: {
+                weight: $font-thin;
+                size: 1.5rem;   // 24pt
+            }
+
+            .num {
+                color: $color-point;
+            }
+        }
     }
 }
 
