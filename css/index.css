@@ -219,8 +219,74 @@ main .main-video video {
   top: 0;
   width: 100%;
 }
-main section {
+main section.main-intro {
   margin-top: 1000px;
+}
+main section.main-intro .intro-title {
+  font-weight: 400;
+  font-size: 3.5rem;
+}
+main section.main-intro .intro-text {
+  width: 385px;
+  height: 58px;
+  font-weight: 100;
+  font-size: 1.5rem;
+}
+main section.main-intro .intro-text .num {
+  display: inline;
+  color: #ff6000;
+}
+main section.main-intro .detail-button {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  border-radius: 100%;
+}
+main section.main-intro .detail-button .circle-text {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  color: #000;
+  font-weight: 100;
+  font-size: 0.5625rem;
+  animation: textRotation 8s linear infinite;
+}
+@keyframes textRotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+main section.main-intro .detail-button .circle-text span {
+  position: absolute;
+  left: 50%;
+  font-size: 0.5625rem;
+  transform-origin: 0 40px;
+}
+main section.main-intro .detail-button .button {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 58px;
+  height: 58px;
+  border-radius: 100%;
+  border: 1px solid #000;
+}
+main section.main-intro .detail-button .button .line {
+  width: 16px;
+  height: 2px;
+  margin-bottom: 5px;
+  background-color: #000;
+}
+main section.main-intro .detail-button .button .line:last-child {
+  margin-bottom: 0;
 }
 
 footer {
