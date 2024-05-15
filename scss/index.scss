@@ -9,7 +9,7 @@
     width: $width-wide;
     max-width: 1440px;
     margin: 0 auto;
-    background-color: antiquewhite;
+    // background-color: antiquewhite;
 }
 
 //***********header***********
@@ -19,6 +19,27 @@ header {
 
 
 //***********main***********
+
+main {
+    
+    .main-video {
+        h2 {
+            font-size: 0;
+        }
+        video {
+            position: absolute;
+            left: 0; top: 0;
+            width: $width-wide;
+        }
+    }
+    @include responsive(large-screens) {
+        
+    }
+
+    section {
+        margin-top: 1000px;
+    }
+}
 
 
 //***********footer***********
