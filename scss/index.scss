@@ -36,10 +36,94 @@ main {
         
     }
 
-    section {
+    section.main-intro {
         margin-top: 1000px;
-    }
-}
+
+        .intro-title {
+            font: {
+                weight: $font-regular;
+                size: 3.5rem;   // 56pt
+            }
+        }
+
+        .intro-text {
+            width: 385px;
+            height: 58px;
+            font: {
+                weight: $font-thin;
+                size: 1.5rem;   // 24pt
+            }
+
+            .num {
+                display: inline;
+                color: $color-point;
+            }
+        }
+
+        .detail-button {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 80px;
+            height: 80px;
+            border-radius: 100%;
+
+            .circle-text {
+                position: absolute;
+                width: $width-wide;
+                height: $hieght-wide;
+                color: $color-main;
+                font: {
+                    weight: $font-thin;
+                    size: 0.5625rem;  // 10ptW
+                }
+                animation: textRotation 8s linear infinite;
+
+                @keyframes textRotation {
+                    0% {
+                        transform: rotate(0deg);
+                    }
+                    100% {
+                        transform: rotate(360deg);
+                    }
+                }
+
+                span {
+                    position: absolute;
+                    left: 50%;
+                    font-size: 0.5625rem;
+                    transform-origin: 0 40px;
+                }
+            }
+
+            .button {
+                position: absolute;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                width: 58px;
+                height: 58px;
+                border-radius: 100%;
+                border: 1px solid $color-main;
+
+                .line {
+                    width: 16px;
+                    height: 2px;
+                    margin-bottom: 5px;
+                    background-color: $color-main;
+                    // transition: transform 0.3s ease;
+                    // transform-origin: center;
+                }
+
+                .line:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }  // detail-button
+    }  // main-intro
+}  // main
 
 
 //***********footer***********
