@@ -12,9 +12,14 @@ $(function() {
         // console.log(windowHeight);
 
         if (scrollPosition > (elementOffset - windowHeight)) {
-            $('.main-intro .line').animate({
+            $('.main-intro .intro-line').animate({
                 height: '1072px'
               }, 3000);
+            
+            
+            //   $('.main-intro .year').animate({
+            //     opacity: '1'
+            //   }, 3000)
         }
     });
 

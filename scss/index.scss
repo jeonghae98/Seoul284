@@ -43,7 +43,7 @@ main {
     section.main-intro {
         position: relative;
         z-index: 1;
-        margin-top: 230px;
+        margin-top: 229px;
         height: 1072px;
         background: {
             image: url(/images/intro-bg.png);
@@ -54,7 +54,7 @@ main {
             // color: aqua;
         }
     
-        .line {
+        .intro-line {
             position: absolute;
             width: 1px;
             height: 0px;
@@ -73,12 +73,14 @@ main {
 
         .year {
             right: 215px; top: 82px;
+            // opacity: 0;
         }
 
         .now-year {
             right: 50px; top: 444px;
         }
 
+       
         .intro-text-box {
             padding-top: 280px;
             margin-left: 30px;
@@ -183,7 +185,7 @@ main {
         .parallelogram {
             position: absolute;
             left: 0; top: -60px; 
-            width: $width-wide;
+            width: 99.53%;
             height: $height-wide;
             background: {
                 color: #fb7829;

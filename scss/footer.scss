@@ -34,9 +34,13 @@
             margin: 0 auto;
 
             @include responsive(large-screens) {
-                display: flex;
-                // justify-content:;
+                // display: flex;
+                // justify-content: space-around;
                 // align-items: center;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-auto-rows: minmax(100px, auto);
+                // grid-column-gap: 90px;
                 width: 82%;  // 1180px  988
                 background-color: lightpink;
             }
@@ -50,9 +54,11 @@
                 }
                     
                 @include responsive(large-screens) {
+                    grid-column-start: 1;
+                    grid-row-start: 1;
                     margin-top: 7px;
-                    margin-right: 90px;
-                    width: 300px;
+                    margin-left: 50px;
+                    width: 140px;  
                     line-height: 1.2;
                     font: {
                         size: 53px;
@@ -89,14 +95,14 @@
                 }
                 
                 .line:nth-child(2) {
-                    left: 49%;  // 294px
+                    left: 50%;  
 
                     @include responsive(large-screens) {
                         left: 350px;  
                     }
                 }
                 .line:nth-child(3) {
-                    left: 83%;  // 498px
+                    left: 85%;  
 
                     @include responsive(large-screens) {
                         left: 635px;
@@ -110,9 +116,11 @@
                 // justify-content: space-between;
                 // align-items: center;
                 @include responsive(large-screens) {
+                    grid-column-start: 2;
+                    grid-row-start: 1;
                     justify-content: space-between;
                     // align-items: center;
-                    // width: 705px;  // 705px
+                    width: 750px;  // 705px
                     background-color: aqua;
                 }
 
@@ -175,7 +183,11 @@
                 margin-top: 30px;
 
                 @include responsive(large-screens) {
-                    margin-top: 25px;
+                    grid-column-start: 2;
+                    grid-row-start: 2;
+                    margin-top: 0;
+                    height: 30px;
+                    background-color: blanchedalmond;
                 }
 
                 p {
@@ -196,7 +208,7 @@
 
     .fixed-menu {
         position: fixed;
-        right: 70px; bottom: 100px;
+        right: 60px; bottom: 100px;
         z-index: 10;
 
         a {
