@@ -88,6 +88,8 @@ footer {
 }
 
 header {
+  position: relative;
+  z-index: 1;
   width: 100%;
   height: 150px;
   padding: 0 20px;
@@ -231,7 +233,9 @@ footer .footerlogo-info .footer-content-box {
 }
 @media only screen and (min-width: 1024px) {
   footer .footerlogo-info .footer-content-box {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: minmax(100px, auto);
     width: 82%;
     background-color: lightpink;
   }
@@ -242,9 +246,11 @@ footer .footerlogo-info .footer-content-box .footer-logo h2 {
 }
 @media only screen and (min-width: 1024px) {
   footer .footerlogo-info .footer-content-box .footer-logo {
+    grid-column-start: 1;
+    grid-row-start: 1;
     margin-top: 7px;
-    margin-right: 90px;
-    width: 300px;
+    margin-left: 50px;
+    width: 140px;
     line-height: 1.2;
     font-size: 53px;
     background-color: aquamarine;
@@ -280,7 +286,7 @@ footer .footerlogo-info .footer-content-box .division-line .line {
   }
 }
 footer .footerlogo-info .footer-content-box .division-line .line:nth-child(2) {
-  left: 49%;
+  left: 50%;
 }
 @media only screen and (min-width: 1024px) {
   footer .footerlogo-info .footer-content-box .division-line .line:nth-child(2) {
@@ -288,7 +294,7 @@ footer .footerlogo-info .footer-content-box .division-line .line:nth-child(2) {
   }
 }
 footer .footerlogo-info .footer-content-box .division-line .line:nth-child(3) {
-  left: 83%;
+  left: 85%;
 }
 @media only screen and (min-width: 1024px) {
   footer .footerlogo-info .footer-content-box .division-line .line:nth-child(3) {
@@ -303,7 +309,10 @@ footer .footerlogo-info .footer-content-box .info {
 }
 @media only screen and (min-width: 1024px) {
   footer .footerlogo-info .footer-content-box .info {
+    grid-column-start: 2;
+    grid-row-start: 1;
     justify-content: space-between;
+    width: 750px;
     background-color: aqua;
   }
 }
@@ -365,7 +374,11 @@ footer .footerlogo-info .footer-content-box .copyright {
 }
 @media only screen and (min-width: 1024px) {
   footer .footerlogo-info .footer-content-box .copyright {
-    margin-top: 25px;
+    grid-column-start: 2;
+    grid-row-start: 2;
+    margin-top: 0;
+    height: 30px;
+    background-color: blanchedalmond;
   }
 }
 footer .footerlogo-info .footer-content-box .copyright p {
@@ -380,8 +393,9 @@ footer .footerlogo-info .footer-content-box .copyright p {
 }
 footer .fixed-menu {
   position: fixed;
-  right: 105px;
-  bottom: 180px;
+  right: 60px;
+  bottom: 100px;
+  z-index: 10;
 }
 footer .fixed-menu a {
   width: 50px;
