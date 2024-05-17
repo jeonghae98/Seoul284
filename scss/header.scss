@@ -64,8 +64,13 @@
                         li {
                             a.gnb-title {
                                 font: {
-                                    size: 1.33rem;  // 16pt 21px
+                                    size: 1.1rem;  // 16pt 21px
                                     weight: $font-regular;
+                                }
+                                color: $color-second;
+
+                                &:hover {
+                                    color: $color-point;
                                 }
                             }
                             .sub-menu {

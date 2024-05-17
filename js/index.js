@@ -1,8 +1,12 @@
 $(function() {
+    //===================== header =====================
     $('#mobile-menu').click(function() {
         $(this).toggleClass('active');
     });
 
+
+
+    //===================== main =====================
     $(window).scroll(function() {
         var scrollPosition = $(this).scrollTop();  // 수직 스크롤바의 위치 인식
         var elementOffset = $('.main-intro').offset().top;
@@ -28,7 +32,11 @@ $(function() {
             //   }, 3000)
         }
 
-
+        if(windowWidth <768) {
+            $('.main-collection-text').html('문화역서울284의<br>소장품을 구경해보세요.');
+        } else {
+            $('.main-collection-text').html('문화역서울284의 소장품을<br>구경해보세요.');
+        }
     });
 
 
@@ -38,7 +46,7 @@ $(function() {
 
 
 
-    //=========footer==========
+    //===================== footer =====================
     $('.fixed-menu a').click(function(e) {
         e.preventDefault();
         $('html').animate({ scrollTop: 0 }, 500)

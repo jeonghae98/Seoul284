@@ -10,11 +10,11 @@
     max-width: 1440px;
     margin: 0 auto;
     padding: 0 20px;
+    background-color: antiquewhite;
 
     @include responsive(large-screens) {
         padding: 0;
     }
-    // background-color: antiquewhite;
 }
 
 //***********header***********
@@ -118,17 +118,17 @@ main {
             image: url(/images/intro-bg.png);
             repeat: no-repeat;
             position-x: -100px;
-            position-y: 700px;
+            position-y: 500px;
             size: 1170px 788px;
-            color: aqua;
+            // color: aqua;
         }
 
         @include responsive(large-screens) {
-            margin-top: 895px;
+            margin-top: 894px;
             height: 1572px;
             background: {
                 position-x: 220px;
-                position-y: 630px;
+                position-y: 600px;
                 size: 1826px 1231px;
             }
         }
@@ -141,26 +141,35 @@ main {
             border: 1px solid $line-black;
 
             @include responsive(large-screens) {
-                
+                right: 404px;
             }
         }
 
         .year,
         .now-year {
             position: absolute;
-            font: {
-                weight: $font-thin;
-                size: 4.167rem;  // 50pt
-            }
+            font-weight: $font-semibold;
         }
 
         .year {
-            right: 215px; top: 82px;
+            right: 215px; top: 92px;
+            font-size: 3.333rem;  // 40pt;
             // opacity: 0;
+
+            @include responsive(large-screens) {
+                right: 429px; top: 200px;
+                font-size: 6.25rem;  // 75pt
+            }
         }
 
         .now-year {
-            right: 50px; top: 444px;
+            right: 30px; top: 444px;
+            font-size: 4.167rem;  // 50pt
+
+            @include responsive(large-screens) {
+                right: 85px; top: 675px;
+                font-size: 7.917rem;  // 95pt
+            }
         }
 
         .first-circle,
@@ -172,23 +181,46 @@ main {
             height: 14px;
             border-radius: 50%;
             background-color: $color-main;
+
+            @include responsive(large-screens) {
+                right: 398px;
+            }
         }
 
         .first-circle {
             top: 130px;
+
+            @include responsive(large-screens) {
+                top: 275px;
+            }
         }
         .second-circle {
             top: 491px;
-        }
 
+            @include responsive(large-screens) {
+                top: 770px;
+            }
+        }
         .intro-text-box {
             padding-top: 280px;
             margin-left: 30px;
             // background-color: beige;
+
+            @include responsive(large-screens) {
+                padding-top: 530px;
+                margin-left: 0;
+            }
+
             .intro-title {
                 font: {
                     weight: $font-regular;
                     size: 3.333rem;   // 40pt origin 56pt
+                }
+
+                @include responsive(large-screens) {
+                    font: {
+                        size: 6.25rem;  // 75pt
+                    }
                 }
             }
     
@@ -200,7 +232,11 @@ main {
                     weight: $font-thin;
                     size: 1.5rem;   // 24pt
                 }
-    
+                
+                @include responsive(large-screens) {
+                    width: 560px;
+                    font-size: 2.167rem;  // 30pt
+                }
                 .num {
                     display: inline;
                     color: $color-point;
@@ -211,17 +247,27 @@ main {
         .detail-button {
             margin-top: 65px;
             margin-left: 35px;
+            
+            @include responsive(large-screens) {
+                margin-top: -45px;
+                margin-left: 580px;
+            }
         }
         
     }  // main-intro
 
-    .collection {
+
+    //----- collection ----- 
+    .main-collection {
         position:relative;
         z-index: 3;
         width: $width-wide;
         height: 1150px;
         background-color: bisque;
         
+        @include responsive(large-screens) {
+        }
+
         .parallelogram {
             position: absolute;
             left: 0; top: -60px; 
@@ -231,6 +277,17 @@ main {
                 color: #fb7829;
             }
             transform: skew(8deg) rotate(8deg);
+        }
+
+        .main-collection-title {
+            font-size: 4.167rem;  //50px
+        }
+
+        .main-collection-text {
+            font: {
+                weight: $font-regular;
+                size: 2rem;  //28pt
+            }
         }
     }  // collection
 }  // main

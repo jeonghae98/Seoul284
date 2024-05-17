@@ -51,6 +51,7 @@ h1 {
 }
 
 h2 {
+  font-weight: 100;
   font-size: 24px;
 }
 
@@ -88,6 +89,7 @@ footer {
   max-width: 1440px;
   margin: 0 auto;
   padding: 0 20px;
+  background-color: antiquewhite;
 }
 @media only screen and (min-width: 1024px) {
   .container {
@@ -137,8 +139,12 @@ header .logo-gnb-rightmenu .logo-gnb-menu-box .main-menu {
     justify-content: space-between;
   }
   header .logo-gnb-rightmenu .logo-gnb-menu-box .main-menu .gnb li a.gnb-title {
-    font-size: 1.33rem;
+    font-size: 1.1rem;
     font-weight: 400;
+    color: #fff;
+  }
+  header .logo-gnb-rightmenu .logo-gnb-menu-box .main-menu .gnb li a.gnb-title:hover {
+    color: #ff6000;
   }
   header .logo-gnb-rightmenu .logo-gnb-menu-box .main-menu .gnb li .sub-menu {
     display: none;
@@ -287,16 +293,15 @@ main section.main-intro {
   background-image: url(/images/intro-bg.png);
   background-repeat: no-repeat;
   background-position-x: -100px;
-  background-position-y: 700px;
+  background-position-y: 500px;
   background-size: 1170px 788px;
-  background-color: aqua;
 }
 @media only screen and (min-width: 1024px) {
   main section.main-intro {
-    margin-top: 895px;
+    margin-top: 894px;
     height: 1572px;
     background-position-x: 220px;
-    background-position-y: 630px;
+    background-position-y: 600px;
     background-size: 1826px 1231px;
   }
 }
@@ -308,19 +313,39 @@ main section.main-intro .intro-line {
   top: 0;
   border: 1px solid #000;
 }
+@media only screen and (min-width: 1024px) {
+  main section.main-intro .intro-line {
+    right: 404px;
+  }
+}
 main section.main-intro .year,
 main section.main-intro .now-year {
   position: absolute;
-  font-weight: 100;
-  font-size: 4.167rem;
+  font-weight: 600;
 }
 main section.main-intro .year {
   right: 215px;
-  top: 82px;
+  top: 92px;
+  font-size: 3.333rem;
+}
+@media only screen and (min-width: 1024px) {
+  main section.main-intro .year {
+    right: 429px;
+    top: 200px;
+    font-size: 6.25rem;
+  }
 }
 main section.main-intro .now-year {
-  right: 50px;
+  right: 30px;
   top: 444px;
+  font-size: 4.167rem;
+}
+@media only screen and (min-width: 1024px) {
+  main section.main-intro .now-year {
+    right: 85px;
+    top: 675px;
+    font-size: 7.917rem;
+  }
 }
 main section.main-intro .first-circle,
 main section.main-intro .second-circle {
@@ -332,19 +357,46 @@ main section.main-intro .second-circle {
   border-radius: 50%;
   background-color: #000;
 }
+@media only screen and (min-width: 1024px) {
+  main section.main-intro .first-circle,
+  main section.main-intro .second-circle {
+    right: 398px;
+  }
+}
 main section.main-intro .first-circle {
   top: 130px;
 }
+@media only screen and (min-width: 1024px) {
+  main section.main-intro .first-circle {
+    top: 275px;
+  }
+}
 main section.main-intro .second-circle {
   top: 491px;
+}
+@media only screen and (min-width: 1024px) {
+  main section.main-intro .second-circle {
+    top: 770px;
+  }
 }
 main section.main-intro .intro-text-box {
   padding-top: 280px;
   margin-left: 30px;
 }
+@media only screen and (min-width: 1024px) {
+  main section.main-intro .intro-text-box {
+    padding-top: 530px;
+    margin-left: 0;
+  }
+}
 main section.main-intro .intro-text-box .intro-title {
   font-weight: 400;
   font-size: 3.333rem;
+}
+@media only screen and (min-width: 1024px) {
+  main section.main-intro .intro-text-box .intro-title {
+    font-size: 6.25rem;
+  }
 }
 main section.main-intro .intro-text-box .intro-text {
   margin-top: 20px;
@@ -352,6 +404,12 @@ main section.main-intro .intro-text-box .intro-text {
   height: 58px;
   font-weight: 100;
   font-size: 1.5rem;
+}
+@media only screen and (min-width: 1024px) {
+  main section.main-intro .intro-text-box .intro-text {
+    width: 560px;
+    font-size: 2.167rem;
+  }
 }
 main section.main-intro .intro-text-box .intro-text .num {
   display: inline;
@@ -361,14 +419,20 @@ main section.main-intro .detail-button {
   margin-top: 65px;
   margin-left: 35px;
 }
-main .collection {
+@media only screen and (min-width: 1024px) {
+  main section.main-intro .detail-button {
+    margin-top: -45px;
+    margin-left: 580px;
+  }
+}
+main .main-collection {
   position: relative;
   z-index: 3;
   width: 100%;
   height: 1150px;
   background-color: bisque;
 }
-main .collection .parallelogram {
+main .main-collection .parallelogram {
   position: absolute;
   left: 0;
   top: -60px;
@@ -376,6 +440,13 @@ main .collection .parallelogram {
   height: 100%;
   background-color: #fb7829;
   transform: skew(8deg) rotate(8deg);
+}
+main .main-collection .main-collection-title {
+  font-size: 4.167rem;
+}
+main .main-collection .main-collection-text {
+  font-weight: 400;
+  font-size: 2rem;
 }
 
 footer {
