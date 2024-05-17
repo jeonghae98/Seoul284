@@ -26,6 +26,73 @@ header {
 //***********main***********
 
 main {
+    // 여러 section의 공통 스타일
+    .detail-button {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 80px;
+        height: 80px;
+        border-radius: 100%;
+
+        .circle-text {
+            position: absolute;
+            width: $width-wide;
+            height: $height-wide;
+            color: $color-main;
+            font: {
+                weight: $font-light;
+                size: 0.5625rem;  // 10ptW
+            }
+            animation: textRotation 8s linear infinite;
+
+            @keyframes textRotation {
+                0% {
+                    transform: rotate(0deg);
+                }
+                100% {
+                    transform: rotate(360deg);
+                }
+            }
+
+            span {
+                position: absolute;
+                left: 50%;
+                font-size: 0.5625rem;
+                transform-origin: 0 40px;
+            }
+        }  // circle-text
+
+        .button {
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 58px;
+            height: 58px;
+            border-radius: 100%;
+            border: 1px solid $color-main;
+
+            .btn-line {
+                width: 16px;
+                height: 2px;
+                margin-bottom: 5px;
+                border-radius: 2px;
+                background-color: $color-main;
+                // transition: transform 0.3s ease;
+                // transform-origin: center;
+            }
+
+            .btn-line:last-child {
+                margin-bottom: 0;
+            }
+        }  // button
+    }  // detail-button
+
+
+    //----- main-video -----
     .main-video {
         h2 {
             font-size: 0;
@@ -40,6 +107,8 @@ main {
         
     }
 
+
+    //----- main-intro ----- 
     section.main-intro {
         position: relative;
         z-index: 1;
@@ -49,17 +118,31 @@ main {
             image: url(/images/intro-bg.png);
             repeat: no-repeat;
             position-x: -100px;
-            position-y: 480px;
+            position-y: 700px;
             size: 1170px 788px;
-            // color: aqua;
+            color: aqua;
         }
-    
+
+        @include responsive(large-screens) {
+            margin-top: 895px;
+            height: 1572px;
+            background: {
+                position-x: 220px;
+                position-y: 630px;
+                size: 1826px 1231px;
+            }
+        }
+
         .intro-line {
             position: absolute;
             width: 1px;
             height: 0px;
-            right: 200px;
+            right: 200px; top: 0;
             border: 1px solid $line-black;
+
+            @include responsive(large-screens) {
+                
+            }
         }
 
         .year,
@@ -80,7 +163,24 @@ main {
             right: 50px; top: 444px;
         }
 
-       
+        .first-circle,
+        .second-circle {
+            position: absolute;
+            right: 194px;
+            z-index: 2;
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            background-color: $color-main;
+        }
+
+        .first-circle {
+            top: 130px;
+        }
+        .second-circle {
+            top: 491px;
+        }
+
         .intro-text-box {
             padding-top: 280px;
             margin-left: 30px;
@@ -108,71 +208,11 @@ main {
             }
         }  // imtro-text-box
         
-
         .detail-button {
-            position: relative;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 80px;
-            height: 80px;
             margin-top: 65px;
             margin-left: 35px;
-            border-radius: 100%;
-
-            .circle-text {
-                position: absolute;
-                width: $width-wide;
-                height: $height-wide;
-                color: $color-main;
-                font: {
-                    weight: $font-light;
-                    size: 0.5625rem;  // 10ptW
-                }
-                animation: textRotation 8s linear infinite;
-
-                @keyframes textRotation {
-                    0% {
-                        transform: rotate(0deg);
-                    }
-                    100% {
-                        transform: rotate(360deg);
-                    }
-                }
-
-                span {
-                    position: absolute;
-                    left: 50%;
-                    font-size: 0.5625rem;
-                    transform-origin: 0 40px;
-                }
-            }  // circle-text
-
-            .button {
-                position: absolute;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                width: 58px;
-                height: 58px;
-                border-radius: 100%;
-                border: 1px solid $color-main;
-
-                .btn-line {
-                    width: 16px;
-                    height: 2px;
-                    margin-bottom: 5px;
-                    background-color: $color-main;
-                    // transition: transform 0.3s ease;
-                    // transform-origin: center;
-                }
-
-                .btn-line:last-child {
-                    margin-bottom: 0;
-                }
-            }  // button
-        }  // detail-button
+        }
+        
     }  // main-intro
 
     .collection {

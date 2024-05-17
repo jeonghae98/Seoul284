@@ -131,6 +131,7 @@
                     .bar {
                         width: $width-wide;
                         height: 3px;
+                        border-radius: 10px;
                         background-color: $color-main;
                         transition: transform 0.3s ease;
                         transform-origin: center;
