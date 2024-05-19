@@ -44,7 +44,8 @@ select {
 }
 
 h1 {
-  font-size: 30px;
+  font-weight: 400;
+  font-size: 4.167rem;
 }
 
 h2 {
@@ -129,8 +130,12 @@ header .logo-gnb-rightmenu .logo-gnb-menu-box .main-menu {
     justify-content: space-between;
   }
   header .logo-gnb-rightmenu .logo-gnb-menu-box .main-menu .gnb li a.gnb-title {
-    font-size: 1.33rem;
+    font-size: 1.1rem;
     font-weight: 400;
+    color: #fff;
+  }
+  header .logo-gnb-rightmenu .logo-gnb-menu-box .main-menu .gnb li a.gnb-title:hover {
+    color: #ff6000;
   }
   header .logo-gnb-rightmenu .logo-gnb-menu-box .main-menu .gnb li .sub-menu {
     display: none;
@@ -194,6 +199,7 @@ header .logo-gnb-rightmenu .logo-gnb-menu-box .right-menu #mobile-menu {
 header .logo-gnb-rightmenu .logo-gnb-menu-box .right-menu #mobile-menu .bar {
   width: 100%;
   height: 3px;
+  border-radius: 10px;
   background-color: #000;
   transition: transform 0.3s ease;
   transform-origin: center;

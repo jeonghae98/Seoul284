@@ -10,7 +10,7 @@
     max-width: 1440px;
     margin: 0 auto;
     padding: 0 20px;
-    background-color: antiquewhite;
+    // background-color: antiquewhite;
 
     @include responsive(large-screens) {
         padding: 0;
@@ -92,7 +92,7 @@ main {
     }  // detail-button
 
 
-    //----- main-video -----
+    //=================== main-video ===================
     .main-video {
         h2 {
             font-size: 0;
@@ -257,12 +257,12 @@ main {
     }  // main-intro
 
 
-    //----- collection ----- 
+    //=================== collection =================== 
     .main-collection {
         position:relative;
         z-index: 3;
         width: $width-wide;
-        height: 1150px;
+        height: 1345px;
         background-color: bisque;
         
         @include responsive(large-screens) {
@@ -271,7 +271,7 @@ main {
         .parallelogram {
             position: absolute;
             left: 0; top: -60px; 
-            width: 99.53%;
+            width: 99.5%;
             height: $height-wide;
             background: {
                 color: #fb7829;
@@ -279,19 +279,304 @@ main {
             transform: skew(8deg) rotate(8deg);
         }
 
-        .main-collection-title {
-            font-size: 4.167rem;  //50px
+        .collection-title {
+            margin-left: 40px;
+            margin-bottom: 60px;
+            font-size: 4.167rem;  //50pt
+            line-height: 1.2;
+            color: $color-second;
         }
 
-        .main-collection-text {
-            font: {
-                weight: $font-regular;
-                size: 2rem;  //28pt
+        .main-collection-row-line {
+            position: absolute;
+            z-index: 4;
+            width: $width-wide;
+            height: 1px;
+            left: 0; top: 268px;
+            border: 1px solid $line-white;
+        }
+
+        .main-collection-col-line {
+            position: absolute;
+            width: 1px;
+            height: 300px;
+            right: 200px; top: -55px;
+            border: 1px solid $line-white;
+
+            @include responsive(large-screens) {
+                // right: 404px;
+            }
+        }
+
+        .main-collection-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: auto;
+            width: 600px;
+            background-color: aquamarine;
+
+            .collection-text {
+                p {
+                    font-weight: $font-regular;
+                    font-size: 2.167rem;  // 26pt
+                    color: $color-second;
+                }
+            }
+    
+            .main-collection-list {
+                display: none;
+            }
+
+            .detail-button {
+                .circle-text {
+                    color: $color-second;
+                }
+
+                .button {
+                    border: 0;
+                    background-color: $color-second;
+                }
+            }
+        }  // maiin-collection-content
+
+        .collection-image {
+            display: flex;
+            justify-content: space-between;
+            margin: auto;
+            margin-top: 35px;
+            width: 600px;
+            height: 863px;
+            overflow: hidden;
+
+            div {
+                height: $height-wide;
+                ul {
+                    display: flex;
+                    flex-direction: column;
+                    // justify-content: space-between;
+                    align-items: center;
+
+                    li {
+                        img {
+                            width: 260px;
+                            height: 260px;
+                            margin-bottom: 40px;
+                        }
+                    }
+                }
+            }
+
+            .image-row3 {
+                display: none;
             }
         }
     }  // collection
 }  // main
 
+
+//=================== exhibition =================== 
+.exhibition {
+    position: relative;
+    width: $width-wide;
+    // height: 3250px;
+    background-color: lightcyan;
+
+    // .exhibition-row-line {
+    //     div {
+    //         position: absolute;
+    //         left: 0; top: 118px;
+    //         width: 94.44%;
+    //         height: 1px;
+    //         border: 1px solid $line-gray;
+    //     }
+    // }
+
+    .exhibition-title {
+        margin: 110px 0 60px;
+        font-size: 4.167rem;  //50pt
+    }
+
+    .exhibition-content {
+        margin: auto;
+        
+        div {
+            padding: 65px 0 48px;
+            border-top: 1px solid $line-gray;
+            img {
+                margin: auto;
+            }
+            .title {
+                margin-top: 50px;
+                font-size: 2.333rem; // 28pt
+            }
+        }
+
+        .exhibition1 {
+            img {
+                width: 650px;
+            }
+        }
+
+        .exhibition2 {
+            img {
+                width: 645px;
+            }
+        }
+
+        .exhibition3 {
+            img {
+                width: 460px;
+            }
+        }
+
+        .exhibition4 {
+            // border-bottom: 1px solid $line-gray;
+            img {
+                width: 652px;
+            }
+        }
+
+        .arrow-button {
+            padding: 0;
+            margin: 0;
+            border-bottom: 1px solid $line-gray;
+
+            ul {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: nowrap;
+                // align-items: center;
+                width: $width-wide;
+                height: 70px;
+    
+                .empty {
+                    width: 560px;
+                    height: $height-wide;
+                }
+                .arrow {
+                    width: 120px;
+                    height: 70px;
+                    align-items: center;
+                    line-height: 70px;
+                    // background-color: lightcoral;
+                    
+                    a {
+                        border-left: 1px solid $line-gray;
+                        font: {
+                            weight: $font-thin;
+                            size: 2.5rem;  // 30pt
+                        }
+                        text-align: center;
+                        color: $line-gray;
+                    }
+                }
+            }
+        }
+    }
+}  // exhibition
+
+
+//=================== typography =================== 
+.typography {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+
+    .typo-box {
+        .typo1-box,
+        .typo2-box {
+            position: relative;
+            
+            p {
+                font: {
+                    weight: 700;
+                    size: 10.833rem;  // 137pt
+                }
+            }
+            .typo1 {
+                color: transparent;
+                -webkit-text-stroke: 4px #a6a6a6;
+            }
+            .no-stroke {
+                position: absolute;
+                left: 0; top: 0;
+                color: $color-second;
+                -webkit-text-stroke: 2px transparent;
+            }
+        }
+
+        .typo2-box {
+            .typo2 {
+                color: transparent;
+                -webkit-text-stroke: 4px #ffccac;
+            }
+        }
+    }  // typo-box
+}  // typography
+
+
+//=================== main-inform =================== 
+.main-inform {
+    .mian-inform-title {
+        font-size: 4.167rem;  //50pt
+
+    }
+}
+
+//=================== sns =================== 
+.sns {
+    .sns-button {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 80px;
+        height: 80px;
+        border-radius: 100%;
+
+        .circle-text {
+            position: absolute;
+            width: $width-wide;
+            height: $height-wide;
+            color: $color-main;
+            font: {
+                weight: $font-light;
+                size: 0.5625rem;  // 10pt
+            }
+            animation: textRotation 8s linear infinite;
+
+            @keyframes textRotation {
+                0% {
+                    transform: rotate(0deg);
+                }
+                100% {
+                    transform: rotate(360deg);
+                }
+            }
+
+            span {
+                position: absolute;
+                left: 50%;
+                font-size: 0.5625rem;
+                transform-origin: 0 40px;
+            }
+        }  // circle-text
+
+        .circle {
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 58px;
+            height: 58px;
+            border-radius: 100%;
+            border: 1px solid $color-main;
+        }  // button
+    }  // sns-button
+}
 
 //***********footer***********
 footer {

@@ -26,6 +26,9 @@ strong,
 span {
     display: block;
 }
+strong {
+    font-weight: $font-medium;
+}
 address {
     font-style: normal;
 }

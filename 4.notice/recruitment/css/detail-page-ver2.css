@@ -27,6 +27,10 @@ span {
   display: block;
 }
 
+strong {
+  font-weight: 500;
+}
+
 address {
   font-style: normal;
 }
@@ -86,10 +90,10 @@ footer {
   max-width: 1440px;
   margin: 0 auto;
   padding: 0 20px;
-  background-color: antiquewhite;
 }
 @media only screen and (min-width: 1024px) {
   .container {
+    position: relative;
     padding: 0;
   }
 }
@@ -100,7 +104,6 @@ header {
   width: 100%;
   height: 150px;
   padding: 0 20px;
-  background-color: pink;
 }
 header .logo-gnb-rightmenu .logo-gnb-menu-box {
   width: 100%;
@@ -221,40 +224,118 @@ header .logo-gnb-rightmenu .logo-gnb-menu-box .right-menu #mobile-menu.active .b
   transform: rotate(45deg) translate(-10px, -10px);
 }
 
-main {
-  width: 100%;
-}
-main .inform .inform-title {
+main .detail-page .inform-title {
   margin: 80px 0 35px;
   text-align: center;
 }
-main .inform .menu-list {
-  width: 465px;
-  margin: auto;
+@media only screen and (min-width: 1024px) {
+  main .detail-page .inform-title {
+    margin-bottom: 80px;
+    font-weight: 600;
+    font-size: 5rem;
+    text-align: left;
+  }
 }
-main .inform .menu-list ul {
+main .detail-page .menu-list {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  width: 350px;
+  margin: auto;
 }
-main .inform .menu-list ul li a {
+@media only screen and (min-width: 1024px) {
+  main .detail-page .menu-list {
+    position: absolute;
+    right: 0;
+    top: 50px;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    width: 360px;
+    height: 110px;
+  }
+}
+main .detail-page .menu-list ul {
+  display: flex;
+  justify-content: space-between;
+  width: 348px;
+}
+@media only screen and (min-width: 1024px) {
+  main .detail-page .menu-list ul {
+    margin-left: 150px;
+    width: 200px;
+  }
+}
+main .detail-page .menu-list ul li a {
   font-weight: 400;
   font-size: 2.667rem;
 }
-main .inform .menu-list ul li img {
-  width: 37px;
+@media only screen and (min-width: 1024px) {
+  main .detail-page .menu-list ul li a {
+    font-size: 1.667rem;
+  }
 }
-main .inform .list-box {
-  display: flex;
-  flex-direction: column;
+main .detail-page .menu-list ul .menu-title::after {
+  display: block;
+  content: "";
   width: 100%;
+  height: 2px;
+  background-color: #ff6000;
+  transform: scaleX(0);
+  transition: all 0.5s ease;
+}
+main .detail-page .menu-list ul .menu-title:hover::after {
+  transform: scaleX(1); /* 1 = 100% */
+}
+main .detail-page .content-box {
   margin-top: 45px;
 }
-main .inform .list-box div {
-  padding: 50px 0;
-  width: 100%;
+main .detail-page .content-box .title-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 200px;
+  border-top: 1px solid #d9d9d9;
+}
+@media only screen and (min-width: 1024px) {
+  main .detail-page .content-box .title-box {
+    height: 150px;
+  }
+}
+main .detail-page .content-box .title-box .title {
+  font-weight: 400;
+  font-size: 2.5rem;
+}
+main .detail-page .content-box .title-box p {
+  font-weight: 400;
+  font-size: 1.667rem;
+  color: #a1a1a1;
+}
+@media only screen and (min-width: 1024px) {
+  main .detail-page .content-box .title-box p {
+    font-size: 1.5rem;
+  }
+}
+main .detail-page .content-box .txt-box {
+  height: 1000px;
+  padding: 75px 0;
   border-top: 1px solid #d9d9d9;
   border-bottom: 1px solid #d9d9d9;
+}
+@media only screen and (min-width: 1024px) {
+  main .detail-page .content-box .txt-box {
+    padding: 50px 0;
+  }
+}
+main .detail-page .list-box {
+  margin: 80px 0 180px;
+}
+main .detail-page .list-box .list-btn {
+  width: 100%;
+  height: 80px;
+  border: 1px solid #d9d9d9;
+  font-size: 2rem;
+  background-color: #fff;
 }
 
 footer {
@@ -454,4 +535,4 @@ footer .fixed-menu a {
   text-align: center;
   color: #fff;
   background-color: #000;
-}/*# sourceMappingURL=notice.css.map */
+}/*# sourceMappingURL=detail-page-ver2.css.map */
