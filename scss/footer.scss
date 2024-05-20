@@ -33,14 +33,15 @@
             @include responsive(large-screens) {
                 display: flex;
                 width: 82%;  // 1180px  988
+                height: 176px;
             }
 
             .footer-logo {
                 margin-bottom: 30px;
 
                 @include responsive(large-screens) {
-                    margin: 7px 90px 50px 0;
-                    width: 25%;  
+                    margin: 15px 90px 50px 0;
+                    width: 32%;  
                     background-color: aquamarine;
                 }
 
@@ -52,7 +53,7 @@
                     @include responsive(large-screens) {
                         line-height: 1.2;
                         font: {
-                            size: 3.75rem;  // 53pt
+                            size: 3.333rem;  // 40pt
                         }
                     }
                 }
@@ -155,7 +156,7 @@
     
                 .copyright {
                     width: $width-wide;
-                    margin-top: 30px;
+                    margin-top: 15px;
     
                     @include responsive(large-screens) {
                         background-color: blanchedalmond;
