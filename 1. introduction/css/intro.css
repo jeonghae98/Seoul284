@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @import url(https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap);
 * {
   margin: 0;
@@ -211,7 +210,7 @@ header .logo-gnb-rightmenu .logo-gnb-menu-box .right-menu #mobile-menu.active .b
 main .container section.main-title h2 {
   margin: 120px 0 50px 0;
   font-weight: 400;
-  font-size: 3rem;
+  font-size: 2.5rem;
   text-align: center;
   animation-duration: 0.5s;
   animation-name: move;
@@ -224,11 +223,19 @@ main .container section.main-title h2 {
     opacity: 1;
   }
 }
+@media only screen and (min-width: 1024px) {
+  main .container section.main-title h2 {
+    font-size: 4rem;
+    font-weight: 400;
+  }
+}
 main .container section.main-title p {
+  text-align: center;
+  width: 60%;
+  margin: 0 auto;
   font-size: 1.3rem;
   font-weight: 400;
   color: #9b9b9b;
-  text-align: center;
   animation-duration: 2s;
   animation-name: move;
 }
@@ -240,9 +247,15 @@ main .container section.main-title p {
     opacity: 1;
   }
 }
+@media only screen and (min-width: 1024px) {
+  main .container section.main-title p {
+    width: 100%;
+    font-size: 1.5rem;
+  }
+}
 main .container section.main-title img {
-  width: 500px;
-  height: 375px;
+  width: 375px;
+  height: 310px;
   margin: 0 auto;
   animation-duration: 4s;
   animation-name: move;
@@ -255,63 +268,423 @@ main .container section.main-title img {
     opacity: 1;
   }
 }
+@media only screen and (min-width: 1024px) {
+  main .container section.main-title img {
+    width: 880px;
+    height: 665px;
+  }
+}
 main hr {
   width: 100%;
   height: 50px;
   margin-top: 100px;
   background-color: #000;
 }
-main section.box1 img {
-  height: 1150px;
+main section.box1 {
+  position: relative;
+  width: 100%;
+  height: auto;
+  border: 1px dashed black;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  background-image: url(../images/1900_bg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-x: -700px;
 }
-main section.box1 .container .box1-txt h2 {
-  width: 55%;
+main section.box1 .box1-line {
+  width: 100%;
+  margin-bottom: 2px;
+  border: 1px dashed black;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+}
+main section.box1 .box1-line .container .box1-txt {
+  height: 100%;
+}
+main section.box1 .box1-line .container .box1-txt .box1-title {
+  padding-top: 90px;
+}
+main section.box1 .box1-line .container .box1-txt .box1-title h2 {
+  width: 53%;
   margin: 0 auto;
-  padding-top: 15%;
-  padding-bottom: 6%;
+  padding-bottom: 20px;
   text-align: left;
-  font-size: 2rem;
+  font-size: 25px;
 }
-main section.box1 .container .box1-txt p {
-  width: 55%;
+main section.box1 .box1-line .container .box1-txt .box1-title p {
+  width: 53%;
   margin: 0 auto;
-  font-size: 1.2rem;
+  font-size: 17px;
   font-weight: 400;
   color: #565656;
 }
-main section.box1 .container .box1-txt div.vertical-dotted-line {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 15%; /* 세로 점선의 위치를 조정합니다. */
-  width: 1px;
-  background-image: linear-gradient(to bottom, black 70%, transparent 10%);
-  background-size: 1px 10px; /* 점선의 크기와 간격을 조정합니다. */
+main section.box1 .box1-line .container .box1-txt ul.years {
+  width: 53%;
+  margin: 0 auto;
+  font-weight: 400;
+  font-size: 1.2rem;
+  color: #565656;
 }
-main section.box1 .container .box1-txt div.vertical-dotted-line2 {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 15.4%; /* 세로 점선의 위치를 조정합니다. */
-  width: 1px;
-  background-image: linear-gradient(to bottom, black 70%, transparent 10%);
-  background-size: 1px 10px; /* 점선의 크기와 간격을 조정합니다. */
+main section.box1 .box1-line .container .box1-txt ul.years li {
+  list-style-type: circle;
+  color: black;
 }
-main section.box1 .container .box1-txt div.outer-cicle {
-  position: relative;
-  left: 14%;
-  width: 20px;
-  height: 20px;
+main section.box1 .box1-line .container .box1-txt ul.years li span.orange {
+  margin-top: 50px;
+  margin-bottom: 3px;
+  font-weight: 600;
+  color: #ff6000;
+}
+main section.box1 .box1-line .container .box1-txt ul.years li span.black {
+  margin-top: 50px;
+  margin-bottom: 3px;
+  font-weight: 600;
+  color: #000;
+}
+main section.box1 .box1-line .container .box1-txt ul.years li:last-child {
+  padding-bottom: 150px;
+}
+main section.box1 .box1-line .container .box1-txt div.line-circle div.vertical-dotted-line {
+  position: absolute;
+  left: 9%;
+  top: 0;
+  border: 0.5px dashed black;
+  height: 100%;
+}
+main section.box1 .box1-line .container .box1-txt div.line-circle div.vertical-dotted-line div.vertical-dotted-line2 {
+  position: absolute;
+  left: 2px;
+  top: 0;
+  height: 100%;
+  border: 0.5px dashed black;
+}
+main section.box1 .box1-line .container .box1-txt div.line-circle div.vertical-dotted-line div.vertical-dotted-line2 div.outer-cicle {
+  position: absolute;
+  left: -9px;
+  top: 110px;
+  width: 15px;
+  height: 15px;
   border: 1px solid #000;
   border-radius: 50%;
   background-color: white;
 }
-main section.box1 .container .box1-txt div.outer-cicle div.inner-cicle {
+main section.box1 .box1-line .container .box1-txt div.line-circle div.vertical-dotted-line div.vertical-dotted-line2 div.outer-cicle div.inner-cicle {
   position: absolute;
-  top: 30%;
-  left: 30%;
+  top: 3px;
+  left: 3px;
   width: 7px;
   height: 7px;
+  border: 1px solid #000;
+  border-radius: 50%;
+  background-color: #000;
+}
+main section.box1 .box1-line .container .box1-txt div.line-circle div.vertical-dotted-line img {
+  position: absolute;
+  bottom: -5px;
+  left: -28px;
+  width: 60px;
+  height: auto;
+}
+main section.box2 {
+  position: relative;
+  width: 100%;
+  height: auto;
+  border: 1px dashed black;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  background-image: url(../images/1925m_bg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+main section.box2 .box2-line {
+  width: 100%;
+  margin-bottom: 2px;
+  border: 1px dashed black;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+}
+main section.box2 .box2-line .container .box2-txt {
+  height: 100%;
+}
+main section.box2 .box2-line .container .box2-txt .box2-title {
+  padding-top: 90px;
+}
+main section.box2 .box2-line .container .box2-txt .box2-title h2 {
+  width: 53%;
+  margin: 0 auto;
+  padding-bottom: 20px;
+  text-align: left;
+  font-size: 25px;
+}
+main section.box2 .box2-line .container .box2-txt .box2-title p {
+  width: 53%;
+  margin: 0 auto;
+  font-size: 17px;
+  font-weight: 400;
+  color: #565656;
+}
+main section.box2 .box2-line .container .box2-txt ul.years {
+  width: 53%;
+  margin: 0 auto;
+  font-weight: 400;
+  font-size: 1.2rem;
+  color: #565656;
+}
+main section.box2 .box2-line .container .box2-txt ul.years li {
+  list-style-type: circle;
+  color: black;
+}
+main section.box2 .box2-line .container .box2-txt ul.years li span.orange {
+  margin-top: 50px;
+  margin-bottom: 3px;
+  font-weight: 600;
+  color: #ff6000;
+}
+main section.box2 .box2-line .container .box2-txt ul.years li span.black {
+  margin-top: 50px;
+  margin-bottom: 3px;
+  font-weight: 600;
+  color: #000;
+}
+main section.box2 .box2-line .container .box2-txt ul.years li:last-child {
+  padding-bottom: 150px;
+}
+main section.box2 .box2-line .container .box2-txt div.line-circle div.vertical-dotted-line {
+  position: absolute;
+  left: 9%;
+  top: 0;
+  border: 0.5px dashed black;
+  height: 100%;
+}
+main section.box2 .box2-line .container .box2-txt div.line-circle div.vertical-dotted-line div.vertical-dotted-line2 {
+  position: absolute;
+  left: 2px;
+  top: 0;
+  height: 100%;
+  border: 0.5px dashed black;
+}
+main section.box2 .box2-line .container .box2-txt div.line-circle div.vertical-dotted-line div.vertical-dotted-line2 div.outer-cicle {
+  position: absolute;
+  left: -9px;
+  top: 110px;
+  width: 15px;
+  height: 15px;
+  border: 1px solid #000;
+  border-radius: 50%;
+  background-color: white;
+}
+main section.box2 .box2-line .container .box2-txt div.line-circle div.vertical-dotted-line div.vertical-dotted-line2 div.outer-cicle div.inner-cicle {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 7px;
+  height: 7px;
+  border: 1px solid #000;
+  border-radius: 50%;
+  background-color: #000;
+}
+main section.box3 {
+  position: relative;
+  width: 100%;
+  height: auto;
+  border: 1px dashed black;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  background-image: url(../images/2004m_bg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+main section.box3 .box3-line {
+  width: 100%;
+  margin-bottom: 2px;
+  border: 1px dashed black;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+}
+main section.box3 .box3-line .container .box3-txt {
+  height: 100%;
+}
+main section.box3 .box3-line .container .box3-txt .box3-title {
+  padding-top: 90px;
+}
+main section.box3 .box3-line .container .box3-txt .box3-title h2 {
+  width: 53%;
+  margin: 0 auto;
+  padding-bottom: 20px;
+  text-align: left;
+  font-size: 25px;
+}
+main section.box3 .box3-line .container .box3-txt .box3-title p {
+  width: 53%;
+  margin: 0 auto;
+  font-size: 17px;
+  font-weight: 400;
+  color: #565656;
+}
+main section.box3 .box3-line .container .box3-txt ul.years {
+  width: 53%;
+  margin: 0 auto;
+  font-weight: 400;
+  font-size: 1.2rem;
+  color: #565656;
+}
+main section.box3 .box3-line .container .box3-txt ul.years li {
+  list-style-type: circle;
+  color: black;
+}
+main section.box3 .box3-line .container .box3-txt ul.years li span.orange {
+  margin-top: 50px;
+  margin-bottom: 3px;
+  font-weight: 600;
+  color: #ff6000;
+}
+main section.box3 .box3-line .container .box3-txt ul.years li span.black {
+  margin-top: 50px;
+  margin-bottom: 3px;
+  font-weight: 600;
+  color: #000;
+}
+main section.box3 .box3-line .container .box3-txt ul.years li:last-child {
+  padding-bottom: 150px;
+}
+main section.box3 .box3-line .container .box3-txt div.line-circle div.vertical-dotted-line {
+  position: absolute;
+  left: 9%;
+  top: 0;
+  border: 0.5px dashed black;
+  height: 100%;
+}
+main section.box3 .box3-line .container .box3-txt div.line-circle div.vertical-dotted-line div.vertical-dotted-line2 {
+  position: absolute;
+  left: 2px;
+  top: 0;
+  height: 100%;
+  border: 0.5px dashed black;
+}
+main section.box3 .box3-line .container .box3-txt div.line-circle div.vertical-dotted-line div.vertical-dotted-line2 div.outer-cicle {
+  position: absolute;
+  left: -9px;
+  top: 110px;
+  width: 15px;
+  height: 15px;
+  border: 1px solid #000;
+  border-radius: 50%;
+  background-color: white;
+}
+main section.box3 .box3-line .container .box3-txt div.line-circle div.vertical-dotted-line div.vertical-dotted-line2 div.outer-cicle div.inner-cicle {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 7px;
+  height: 7px;
+  border: 1px solid #000;
+  border-radius: 50%;
+  background-color: #000;
+}
+main section.box4 {
+  position: relative;
+  width: 100%;
+  height: auto;
+  border: 1px dashed black;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  background-image: url(../images/2011m_bg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+main section.box4 .box4-line {
+  width: 100%;
+  margin-bottom: 2px;
+  border: 1px dashed black;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+}
+main section.box4 .box4-line .container .box4-txt {
+  height: 100%;
+}
+main section.box4 .box4-line .container .box4-txt .box4-title {
+  padding-top: 90px;
+}
+main section.box4 .box4-line .container .box4-txt .box4-title h2 {
+  width: 53%;
+  margin: 0 auto;
+  padding-bottom: 20px;
+  text-align: left;
+  font-size: 25px;
+}
+main section.box4 .box4-line .container .box4-txt .box4-title p {
+  width: 53%;
+  margin: 0 auto;
+  font-size: 17px;
+  font-weight: 400;
+  color: #565656;
+}
+main section.box4 .box4-line .container .box4-txt ul.years {
+  width: 53%;
+  margin: 0 auto;
+  font-weight: 400;
+  font-size: 1.2rem;
+  color: #565656;
+}
+main section.box4 .box4-line .container .box4-txt ul.years li {
+  list-style-type: circle;
+  color: black;
+}
+main section.box4 .box4-line .container .box4-txt ul.years li span.orange {
+  margin-top: 50px;
+  margin-bottom: 3px;
+  font-weight: 600;
+  color: #ff6000;
+}
+main section.box4 .box4-line .container .box4-txt ul.years li span.black {
+  margin-top: 50px;
+  margin-bottom: 3px;
+  font-weight: 600;
+  color: #000;
+}
+main section.box4 .box4-line .container .box4-txt ul.years li:last-child {
+  padding-bottom: 150px;
+}
+main section.box4 .box4-line .container .box4-txt div.line-circle div.vertical-dotted-line {
+  position: absolute;
+  left: 9%;
+  top: 0;
+  border: 0.5px dashed black;
+  height: 100%;
+}
+main section.box4 .box4-line .container .box4-txt div.line-circle div.vertical-dotted-line div.vertical-dotted-line2 {
+  position: absolute;
+  left: 2px;
+  top: 0;
+  height: 100%;
+  border: 0.5px dashed black;
+}
+main section.box4 .box4-line .container .box4-txt div.line-circle div.vertical-dotted-line div.vertical-dotted-line2 div.outer-cicle {
+  position: absolute;
+  left: -9px;
+  top: 110px;
+  width: 15px;
+  height: 15px;
+  border: 1px solid #000;
+  border-radius: 50%;
+  background-color: white;
+}
+main section.box4 .box4-line .container .box4-txt div.line-circle div.vertical-dotted-line div.vertical-dotted-line2 div.outer-cicle div.inner-cicle {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 7px;
+  height: 7px;
+  border: 1px solid #000;
   border-radius: 50%;
   background-color: #000;
 }
