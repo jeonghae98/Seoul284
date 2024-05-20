@@ -131,7 +131,6 @@ header .logo-gnb-rightmenu .logo-gnb-menu-box .main-menu {
   header .logo-gnb-rightmenu .logo-gnb-menu-box .main-menu .gnb li a.gnb-title {
     font-size: 1.1rem;
     font-weight: 400;
-    color: #fff;
   }
   header .logo-gnb-rightmenu .logo-gnb-menu-box .main-menu .gnb li a.gnb-title:hover {
     color: #ff6000;
