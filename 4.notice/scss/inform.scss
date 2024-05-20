@@ -115,7 +115,7 @@ main {
                     @include responsive(large-screens) {
                         padding-left: 10px;
                         display: block;
-                        width: 360px;
+                        width: $width-wide;
                         height: 40px;
                         border: 2px solid #727272;
                         border-radius: 10px;
@@ -222,7 +222,7 @@ main {
 
                         @include responsive(large-screens) {
                             // margin-right: 65px;
-                            width: 125px;
+                            width: 140px;
                         }
                     }
                 }  // ul

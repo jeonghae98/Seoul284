@@ -85,7 +85,13 @@ footer {
   width: 100%;
   max-width: 1440px;
   margin: 0 auto;
-  background-color: antiquewhite;
+  padding: 0 2.777%;
+}
+@media only screen and (min-width: 1024px) {
+  .container {
+    position: relative;
+    padding: 0;
+  }
 }
 
 header {
@@ -211,6 +217,159 @@ header .logo-gnb-rightmenu .logo-gnb-menu-box .right-menu #mobile-menu.active .b
 }
 header .logo-gnb-rightmenu .logo-gnb-menu-box .right-menu #mobile-menu.active .bar:nth-child(3) {
   transform: rotate(45deg) translate(-10px, -10px);
+}
+
+main .news {
+  width: 100%;
+}
+main .news .news-title {
+  margin: 80px 0 150px;
+  text-align: center;
+}
+@media only screen and (min-width: 1024px) {
+  main .news .news-title {
+    margin-bottom: 120px;
+    font-weight: 600;
+    font-size: 5rem;
+    text-align: left;
+  }
+}
+main .news .search {
+  position: relative;
+  width: 100%;
+}
+@media only screen and (min-width: 1024px) {
+  main .news .search {
+    width: 360px;
+  }
+}
+main .news .search #search-box {
+  width: 100%;
+  height: 50px;
+  padding-left: 10px;
+  border: 2px solid #727272;
+  border-radius: 10px;
+}
+@media only screen and (min-width: 1024px) {
+  main .news .search #search-box {
+    width: 100%;
+    height: 40px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  main .news .search #search-box:focus {
+    outline: none;
+  }
+}
+main .news .search img {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 32px;
+  cursor: pointer;
+}
+@media only screen and (min-width: 1024px) {
+  main .news .search img {
+    width: 20px;
+  }
+}
+main .news .news-content-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  margin: 60px 0 180px;
+}
+main .news .news-content-box div.row-box {
+  width: 100%;
+}
+main .news .news-content-box div.row-box .box {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-bottom: 33px;
+  cursor: pointer;
+}
+main .news .news-content-box div.row-box .box .news-image {
+  position: relative;
+  width: 100%;
+  height: 270px;
+  overflow: hidden;
+}
+main .news .news-content-box div.row-box .box .news-image img {
+  transition: transform 1s;
+}
+main .news .news-content-box div.row-box .box .news-txt {
+  padding: 33px 20px;
+  background-color: #d9d9d9;
+}
+main .news .news-content-box div.row-box .box .news-txt .news-content-title {
+  margin-bottom: 30px;
+  width: 100%;
+  font-weight: 300;
+  font-size: 2rem;
+}
+main .news .news-content-box div.row-box .box .news-txt time {
+  width: 17.647%;
+  font-weight: 400;
+  font-size: 1.5rem;
+  color: #a1a1a1;
+}
+main .news .news-content-box div.row-box .box:hover .news-image img {
+  transform: scale(1.05);
+}
+main .news .news-content-box div.row-box .box:hover .news-txt {
+  background-color: #ff6000;
+}
+main .news .news-content-box div.row-box .box:hover .news-txt .news-content-title,
+main .news .news-content-box div.row-box .box:hover .news-txt time {
+  color: #fff;
+}
+main .news .page-number {
+  margin: auto;
+  margin: -100px 0 180px;
+}
+@media only screen and (min-width: 1024px) {
+  main .news .page-number {
+    margin: -100px 0 160px;
+  }
+}
+main .news .page-number ul {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 245px;
+  margin: auto;
+  background-color: aquamarine;
+}
+@media only screen and (min-width: 1024px) {
+  main .news .page-number ul {
+    width: 215px;
+  }
+}
+main .news .page-number ul li a {
+  font-size: 1.667rem;
+}
+@media only screen and (min-width: 1024px) {
+  main .news .page-number ul li a {
+    font-size: 1.333rem;
+  }
+}
+main .news .page-number ul .single-left-arrow {
+  padding-right: 32px;
+}
+main .news .page-number ul .number a:hover {
+  color: #ff6000;
+  -webkit-text-decoration: underline #ff6000;
+          text-decoration: underline #ff6000;
+}
+main .news .page-number ul .num1 {
+  padding-right: 45px;
+}
+main .news .page-number ul .single-right-arrow {
+  padding-left: 32px;
 }
 
 footer {

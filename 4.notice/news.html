@@ -7,9 +7,11 @@
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/news.css">
     <script src="./js/jquery.js"></script>
+    <script src="./js/news.js"></script>
 
     <title>보도자료</title>
 </head>
+
 <body>
     <header>
         <div class="logo-gnb-rightmenu">
@@ -60,7 +62,7 @@
                             <li class="search"><img src=".././images/header_search.png" alt="search"></li>  
                         </ul>
                         
-                        <div class="mobile-menu">  <!-- 모바일(햄버거 메뉴) -->
+                        <div id="mobile-menu">  <!-- 모바일(햄버거 메뉴) -->
                             <div class="bar"></div>
                             <div class="bar"></div>
                             <div class="bar"></div>
@@ -70,13 +72,140 @@
             </div>  <!-- container -->
         </div>  <!-- logo-rightmenu -->
     </header>
+<!--======================================================================================================================================-->
+    
+
+
+
 
     <main>
-        <h1>test</h1>
+        <section class="news">
+            <div class="container">
+                <h1 class="news-title">보도자료</h1>
+
+                <div class="search">
+                    <input type="text" id="search-box" name="search-box">
+                    <img src="./images/main_search.png" alt="search icon">
+                </div>
+
+                <div class="news-content-box">
+                    <div class="row1 row-box">
+                        <div class="box">
+                            <div class="news-image"><img src="./images/news_1.jpg" alt="news image"></div>
+                            <div class="news-txt">
+                                <h2 class="news-content-title">타이포잔치 2023 : 국제 타이포그래피 비엔날레 《따옴표 열고 따옴표 닫고》개막</h2>
+                                <time datetime="2023-09-19">2023-09-19</time>
+                            </div>
+                        </div>
+                        <div class="box">
+                            <div class="news-image"><img src="./images/news_2.jpg" alt="news image"></div>
+                            <div class="news-txt">
+                                <h2 class="news-content-title">문화역서울284, 《RTO365 프로그램》 연간 일정 공개</h2>
+                                <time datetime="2023-05-17
+                                ">2023-05-17</time>
+                            </div>
+                        </div>
+                        <div class="box">
+                            <div class="news-image"><img src="./images/news_3.jpg" alt="news image"></div>
+                            <div class="news-txt">
+                                <h2 class="news-content-title">문화역서울284 공예기획전 다시, 자연에게 보내는 편지 개최</h2>
+                            <time datetime="2023-04-04">2023-04-04</time>
+                            </div>
+                        </div>
+                        <div class="box">
+                            <div class="news-image"><img src="./images/news_4.jpg" alt="news image"></div>
+                            <div class="news-txt">
+                                <h2 class="news-content-title">청년이 이끄는 전통문화, 제1회 뉴트로 페스티벌“오늘전통”에서 만나세요</h2>
+                            <time datetime="2023-01-19">2023-01-19</time>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="row2 row-box">
+                        <div class="box">
+                            <div class="news-image"><img src="./images/news_2.jpg" alt="news image"></div>
+                            <div class="news-txt">
+                                <h2 class="news-content-title">문화역서울284,《2023 공간투어 프로그램》재단장 ‘100년의 시간이 깃든 이야기 다채롭게 전달’</h2>
+                            <time datetime="2023-01-13">2023-01-13</time>
+                            </div>
+                        </div>
+                        <div class="box">
+                            <div class="news-image"><img src="./images/news_3.jpg" alt="news image"></div>
+                            <div class="news-txt">
+                                <h2 class="news-content-title">재즈 라이브 연주로 마무리하는 2022년 문화역서울284 <재즈살롱284 발견편> 공연 개최</h2>
+                            <time datetime="2022-12-08">2022-12-08</time>
+                            </div>
+                        </div>
+                        <div class="box">
+                            <div class="news-image"><img src="./images/news_4.jpg" alt="news image"></div>
+                            <div class="news-txt">
+                                <h2 class="news-content-title">프리츠한센, 한국 공예, 디자인과 함께 ‘영원한 아름다움’을 말하다</h2>
+                            <time datetime="2022-11-13">2022-11-13</time>
+                            </div>
+                        </div>
+                        <div class="box">
+                            <div class="news-image"><img src="./images/news_4.jpg" alt="news image"></div>
+                            <div class="news-txt">
+                                <h2 class="news-content-title">프리츠한센, 한국 공예, 디자인과 함께 ‘영원한 아름다움’을 말하다</h2>
+                            <time datetime="2022-11-13">2022-11-13</time>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row3 row-box">
+                        <div class="box">
+                            <div class="news-image"><img src="./images/news_2.jpg" alt="news image"></div>
+                            <div class="news-txt">
+                                <h2 class="news-content-title">눈으로 보고 해설로 듣는 옛 서울역의 역사, 문화역서울284 소장품 전시, 공간투어 진행</h2>
+                            <time datetime="2022-06-16">2022-06-16</time>
+                            </div>
+                        </div>
+                        <div class="box">
+                            <div class="news-image"><img src="./images/news_3.jpg" alt="news image"></div>
+                            <div class="news-txt">
+                                <h2 class="news-content-title">100년 전 경성역으로의 역사탐험 - 문화역서울284 어린이 공간투어</h2>
+                            <time datetime="2022-05-03">2022-05-03</time>
+                            </div>
+                        </div>
+                        <div class="box">
+                            <div class="news-image"><img src="./images/news_4.jpg" alt="news image"></div>
+                            <div class="news-txt">
+                                <h2 class="news-content-title">문화역서울284 RTO365 〈바리스타와 강릉〉 개막</h2>
+                            <time datetime="2022-04-20">2022-04-20</time>
+                            </div>
+                        </div>
+                        <div class="box">
+                            <div class="news-image"><img src="./images/news_1.jpg" alt="news image"></div>
+                            <div class="news-txt">
+                                <h2 class="news-content-title">문화역서울284 RTO 공간에서 상설 프로그램 개막</h2>
+                            <time datetime="2022-03-23">2022-03-23</time>
+                            </div>
+                        </div>
+                    </div>
+                </div>  <!-- news-content-box -->
+
+
+                <div class="page-number">
+                    <ul>
+                        <li class="double-left-arrow"><a href="">《</a></li>
+                        <li class="single-left-arrow"><a href="">〈</a></li>
+                        <li class="number num1"><a href="">1</a></li>
+                        <li class="number num2"><a href="">2</a></li>
+                        <li class="single-right-arrow"><a href="">〉</a></li>
+                        <li class="double-right-arrow"><a href="">》</a></li>
+                    </ul>
+                </div>  <!-- page-number -->
+            </div>  <!-- container -->
+        </section>  <!-- news -->
     </main>
-    
+
+
+
+
+
+<!--======================================================================================================================================-->
     <footer>
-        <div class="footer-img"><img src="./images/footer_image.png" alt="footer image"></div>
+        <div class="footer-img"><img src=".././images/footer_image.png" alt="footer image"></div>
     
         <div class="footerlogo-info">
             <div class="container">

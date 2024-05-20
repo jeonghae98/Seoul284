@@ -298,7 +298,7 @@ main .inform .menu-list .search #search-box {
   main .inform .menu-list .search #search-box {
     padding-left: 10px;
     display: block;
-    width: 360px;
+    width: 100%;
     height: 40px;
     border: 2px solid #727272;
     border-radius: 10px;
@@ -396,7 +396,7 @@ main .inform .list-box .list ul .list-date {
 }
 @media only screen and (min-width: 1024px) {
   main .inform .list-box .list ul .list-date {
-    width: 125px;
+    width: 140px;
   }
 }
 main .inform .list-box .list:first-child {
