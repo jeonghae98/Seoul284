@@ -29,7 +29,7 @@ $(function() {
                   }, 3000);
             } else {  // pc 버전
                 $('.main-intro .intro-line').animate({
-                    height: '1417px'
+                    height: '1490px'
                   }, 3000);
             }
             
@@ -72,7 +72,7 @@ $(function() {
 
     $(window).resize(function() {
         updateFooterLogo();
-    });
+    })
 
     
     //--------------------- fixed-menu ---------------------

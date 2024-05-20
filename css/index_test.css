@@ -21,6 +21,9 @@ a {
   text-decoration: none;
   color: #000;
 }
+a:hover {
+  color: #ff6000;
+}
 
 strong,
 span {
@@ -44,11 +47,11 @@ select {
 }
 
 h1 {
-  font-weight: 400;
-  font-size: 4.167rem;
+  font-size: 30px;
 }
 
 h2 {
+  font-weight: 100;
   font-size: 24px;
 }
 
@@ -218,215 +221,363 @@ header .logo-gnb-rightmenu .logo-gnb-menu-box .right-menu #mobile-menu.active .b
   transform: rotate(45deg) translate(-10px, -10px);
 }
 
-main {
-  width: 100%;
-}
-main .inform .inform-title {
-  margin: 80px 0 150px;
-  text-align: center;
-}
-@media only screen and (min-width: 1024px) {
-  main .inform .inform-title {
-    margin-bottom: 120px;
-    font-weight: 600;
-    font-size: 5rem;
-    text-align: left;
-  }
-}
-main .inform .menu-list {
+main .detail-button {
+  position: relative;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
   align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  border-radius: 100%;
+}
+main .detail-button .circle-text {
+  position: absolute;
   width: 100%;
-  margin: auto;
+  height: 100%;
+  color: #000;
+  font-weight: 300;
+  font-size: 0.5625rem;
+  animation: textRotation 8s linear infinite;
 }
-@media only screen and (min-width: 1024px) {
-  main .inform .menu-list {
-    position: absolute;
-    right: 0;
-    top: 30px;
-    flex-direction: column-reverse;
-    justify-content: space-between;
-    width: 360px;
-    height: 110px;
+@keyframes textRotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
   }
 }
-main .inform .menu-list ul {
-  display: flex;
-  justify-content: space-between;
-  width: 250px;
+main .detail-button .circle-text span {
+  position: absolute;
+  left: 50%;
+  font-size: 0.5625rem;
+  transform-origin: 0 40px;
 }
-@media only screen and (min-width: 1024px) {
-  main .inform .menu-list ul {
-    margin-left: 150px;
-    width: 200px;
-  }
-}
-main .inform .menu-list ul li a {
-  font-weight: 400;
-  font-size: 2.167rem;
-}
-@media only screen and (min-width: 1024px) {
-  main .inform .menu-list ul li a {
-    font-size: 1.667rem;
-  }
-}
-main .inform .menu-list ul .menu-title::after {
-  display: block;
-  content: "";
-  width: 100%;
-  height: 2px;
-  background-color: #ff6000;
-  transform: scaleX(0);
-  transition: all 0.5s ease;
-}
-main .inform .menu-list ul .menu-title:hover::after {
-  transform: scaleX(1); /* 1 = 100% */
-}
-@media only screen and (min-width: 1024px) {
-  main .inform .menu-list .search {
-    position: relative;
-    width: 360px;
-  }
-}
-main .inform .menu-list .search #search-box {
-  display: none;
-}
-@media only screen and (min-width: 1024px) {
-  main .inform .menu-list .search #search-box {
-    padding-left: 10px;
-    display: block;
-    width: 360px;
-    height: 40px;
-    border: 2px solid #727272;
-    border-radius: 10px;
-  }
-}
-@media only screen and (min-width: 1024px) {
-  main .inform .menu-list .search #search-box:focus {
-    outline: none;
-  }
-}
-main .inform .menu-list .search img {
-  width: 32px;
-  cursor: pointer;
-}
-@media only screen and (min-width: 1024px) {
-  main .inform .menu-list .search img {
-    position: absolute;
-    right: 10px;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 20px;
-  }
-}
-main .inform .list-box {
+main .detail-button .button {
+  position: absolute;
   display: flex;
   flex-direction: column;
-  width: 100%;
-  margin: 45px 0 180px;
-}
-@media only screen and (min-width: 1024px) {
-  main .inform .list-box {
-    margin-top: 0;
-    margin-bottom: 160px;
-    align-items: center;
-  }
-}
-main .inform .list-box .list {
-  display: flex;
+  justify-content: center;
   align-items: center;
+  width: 58px;
+  height: 58px;
+  border-radius: 100%;
+  border: 1px solid #000;
+}
+main .detail-button .button .btn-line {
+  width: 16px;
+  height: 2px;
+  margin-bottom: 5px;
+  border-radius: 2px;
+  background-color: #000;
+}
+main .detail-button .button .btn-line:last-child {
+  margin-bottom: 0;
+}
+main .main-video h2 {
+  font-size: 0;
+}
+main .main-video video {
+  position: absolute;
+  left: 0;
+  top: 0;
   width: 100%;
-  padding: 50px 0;
-  border-top: 1px solid #d9d9d9;
-  border-bottom: 1px solid #d9d9d9;
-  cursor: pointer;
-  transition: box-shadow 0.3s ease;
 }
-main .inform .list-box .list:hover {
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-}
-@media only screen and (min-width: 1024px) {
-  main .inform .list-box .list {
-    padding: 40px 0;
-  }
-}
-main .inform .list-box .list .list-number {
-  margin-left: 3.67%;
-  margin-right: 5.9%;
-  font-weight: 500;
-  font-size: 1.667rem;
+main section.main-intro {
+  position: relative;
+  z-index: 1;
+  margin-top: 229px;
+  height: 1072px;
+  background-image: url(/images/intro-bg.png);
+  background-repeat: no-repeat;
+  background-position-x: -100px;
+  background-position-y: 500px;
+  background-size: 1170px 788px;
+  background-color: aqua;
 }
 @media only screen and (min-width: 1024px) {
-  main .inform .list-box .list .list-number {
-    margin-left: 65px;
-    margin-right: 100px;
-    font-weight: 400;
+  main section.main-intro {
+    margin-top: 900px;
+    height: 1572px;
+    background-position-x: 220px;
+    background-position-y: 600px;
+    background-size: 1826px 1231px;
   }
 }
-main .inform .list-box .list .list-content {
-  display: inline;
-  width: 73.53%;
+main section.main-intro .intro-text-box {
+  padding-top: 280px;
+  margin-left: 30px;
+  background-color: beige;
 }
 @media only screen and (min-width: 1024px) {
-  main .inform .list-box .list .list-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 1180px;
+  main section.main-intro .intro-text-box {
+    padding-top: 530px;
+    margin-left: 0;
   }
 }
-main .inform .list-box .list .list-content .list-title {
-  font-size: 1.833rem;
+main section.main-intro .intro-text-box .intro-title {
+  font-weight: 400;
+  font-size: 3.333rem;
 }
 @media only screen and (min-width: 1024px) {
-  main .inform .list-box .list .list-content .list-title {
-    width: 700px;
-    font-size: 1.667rem;
+  main section.main-intro .intro-text-box .intro-title {
+    font-size: 6.25rem;
   }
 }
-main .inform .list-box .list .list-content .receipt ul {
-  display: flex;
-  align-items: center;
+main section.main-intro .intro-text-box .intro-text {
   margin-top: 20px;
-  width: 100%;
+  width: 385px;
+  height: 58px;
+  font-weight: 100;
+  font-size: 1.5rem;
 }
 @media only screen and (min-width: 1024px) {
-  main .inform .list-box .list .list-content .receipt ul {
-    width: 457px;
-    margin-top: 0;
+  main section.main-intro .intro-text-box .intro-text {
+    width: 560px;
+    font-size: 2.167rem;
   }
 }
-main .inform .list-box .list .list-content .receipt ul .status {
+main section.main-intro .intro-text-box .intro-text .num {
+  display: inline;
+  color: #ff6000;
+}
+main section.main-intro .main-line1 {
+  position: absolute;
+  z-index: 4;
+  right: 30px;
+  top: 0;
+  width: 350px;
+  height: 2200px;
+  margin-left: 336px;
+}
+main section.main-intro .main-line1 .intro-collection-line {
+  position: absolute;
+  z-index: 100;
+  width: 1px;
+  height: 2220px;
+  right: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  border: 1px solid #000;
+}
+main section.main-intro .main-line1 .year {
+  font-weight: 600;
+}
+main section.main-intro .main-line1 .past-circle,
+main section.main-intro .main-line1 .now-circle {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background-color: #000;
+}
+main section.main-intro .main-line1 .past-year {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 92px;
+  background-color: aquamarine;
+}
+main section.main-intro .main-line1 .past-year .past {
+  margin-left: 27px;
   margin-right: 15px;
-  width: 120px;
-  height: 35px;
-  line-height: 35px;
-  text-align: center;
-  font-weight: 400;
-  font-size: 1.5rem;
-  color: #fff;
-  background-color: #ff6000;
+  font-size: 3.333rem;
 }
-main .inform .list-box .list .list-content .receipt ul .receipt-term {
-  width: 430px;
+main section.main-intro .main-line1 .now-year {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  margin-top: 444px;
+  background-color: aquamarine;
 }
-main .inform .list-box .list .list-content .receipt ul .receipt-term p {
-  font-weight: 400;
-  font-size: 1.5rem;
-  color: #a1a1a1;
+main section.main-intro .main-line1 .now-year .now {
+  margin-left: 15px;
+  font-size: 4.167rem;
+}
+main section.main-intro .detail-button {
+  margin-top: 65px;
+  margin-left: 35px;
 }
 @media only screen and (min-width: 1024px) {
-  main .inform .list-box .list .list-content .receipt ul .receipt-term p {
-    width: 346px;
+  main section.main-intro .detail-button {
+    margin-top: -45px;
+    margin-left: 580px;
   }
 }
-main .inform .list-box .list:first-child {
-  border-top: 2px solid #d9d9d9;
+main .main-collection {
+  position: relative;
+  width: 100%;
+  height: 1345px;
 }
-main .inform .list-box .list:last-child {
-  border-bottom: 2px solid #d9d9d9;
+main .main-collection .collection-background {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  height: 1345px;
+}
+main .main-collection .collection-background .parallelogram {
+  position: absolute;
+  left: 0;
+  top: -60px;
+  z-index: 3;
+  width: 99.5%;
+  height: 100%;
+  background-color: #fb7829;
+  transform: skew(8deg) rotate(8deg);
+}
+main .main-collection .main-collection-row-line {
+  position: absolute;
+  z-index: 4;
+  width: 100%;
+  height: 1px;
+  left: 0;
+  top: 268px;
+  border: 1px solid #fff;
+}
+
+.exhibition {
+  position: relative;
+  width: 100%;
+  background-color: lightcyan;
+}
+.exhibition .exhibition-title {
+  margin: 110px 0 60px;
+  font-size: 4.167rem;
+}
+.exhibition .exhibition-content {
+  margin: auto;
+}
+.exhibition .exhibition-content div {
+  padding: 65px 0 48px;
+  border-top: 1px solid #dbdbdb;
+}
+.exhibition .exhibition-content div img {
+  margin: auto;
+}
+.exhibition .exhibition-content div .title {
+  margin-top: 50px;
+  font-size: 2.333rem;
+}
+.exhibition .exhibition-content .exhibition1 img {
+  width: 650px;
+}
+.exhibition .exhibition-content .exhibition2 img {
+  width: 645px;
+}
+.exhibition .exhibition-content .exhibition3 img {
+  width: 460px;
+}
+.exhibition .exhibition-content .exhibition4 img {
+  width: 652px;
+}
+.exhibition .exhibition-content .arrow-button {
+  padding: 0;
+  margin: 0;
+  border-bottom: 1px solid #dbdbdb;
+}
+.exhibition .exhibition-content .arrow-button ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  width: 100%;
+  height: 70px;
+}
+.exhibition .exhibition-content .arrow-button ul .empty {
+  width: 560px;
+  height: 100%;
+}
+.exhibition .exhibition-content .arrow-button ul .arrow {
+  width: 120px;
+  height: 70px;
+  align-items: center;
+  line-height: 70px;
+}
+.exhibition .exhibition-content .arrow-button ul .arrow a {
+  border-left: 1px solid #dbdbdb;
+  font-weight: 100;
+  font-size: 2.5rem;
+  text-align: center;
+  color: #dbdbdb;
+}
+
+.typography {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.typography .typo-box .typo1-box,
+.typography .typo-box .typo2-box {
+  position: relative;
+}
+.typography .typo-box .typo1-box p,
+.typography .typo-box .typo2-box p {
+  font-weight: 700;
+  font-size: 10.833rem;
+}
+.typography .typo-box .typo1-box .typo1,
+.typography .typo-box .typo2-box .typo1 {
+  color: transparent;
+  -webkit-text-stroke: 4px #a6a6a6;
+}
+.typography .typo-box .typo1-box .no-stroke,
+.typography .typo-box .typo2-box .no-stroke {
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #fff;
+  -webkit-text-stroke: 2px transparent;
+}
+.typography .typo-box .typo2-box .typo2 {
+  color: transparent;
+  -webkit-text-stroke: 4px #ffccac;
+}
+
+.main-inform .mian-inform-title {
+  font-size: 4.167rem;
+}
+
+.sns .sns-button {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  border-radius: 100%;
+}
+.sns .sns-button .circle-text {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  color: #000;
+  font-weight: 300;
+  font-size: 0.5625rem;
+  animation: textRotation 8s linear infinite;
+}
+@keyframes textRotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.sns .sns-button .circle-text span {
+  position: absolute;
+  left: 50%;
+  font-size: 0.5625rem;
+  transform-origin: 0 40px;
+}
+.sns .sns-button .circle {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 58px;
+  height: 58px;
+  border-radius: 100%;
+  border: 1px solid #000;
 }
 
 footer {
@@ -595,4 +746,4 @@ footer .fixed-menu a {
   text-align: center;
   color: #fff;
   background-color: #000;
-}/*# sourceMappingURL=inform_contest.css.map */
+}/*# sourceMappingURL=index_test.css.map */

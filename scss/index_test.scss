@@ -133,78 +133,11 @@ main {
             }
         }
 
-        .intro-line {
-            position: absolute;
-            width: 1px;
-            height: 0px;
-            right: 200px; top: 0;
-            border: 1px solid $line-black;
 
-            @include responsive(large-screens) {
-                right: 404px;
-            }
-        }
-
-        .year,
-        .now-year {
-            position: absolute;
-            font-weight: $font-semibold;
-        }
-
-        .year {
-            right: 215px; top: 92px;
-            font-size: 3.333rem;  // 40pt;
-            // opacity: 0;
-
-            @include responsive(large-screens) {
-                right: 429px; top: 200px;
-                font-size: 6.25rem;  // 75pt
-            }
-        }
-
-        .now-year {
-            right: 30px; top: 444px;
-            font-size: 4.167rem;  // 50pt
-
-            @include responsive(large-screens) {
-                right: 85px; top: 675px;
-                font-size: 7.917rem;  // 95pt
-            }
-        }
-
-        .first-circle,
-        .second-circle {
-            position: absolute;
-            right: 194px;
-            z-index: 2;
-            width: 14px;
-            height: 14px;
-            border-radius: 50%;
-            background-color: $color-main;
-
-            @include responsive(large-screens) {
-                right: 398px;
-            }
-        }
-
-        .first-circle {
-            top: 130px;
-
-            @include responsive(large-screens) {
-                top: 275px;
-            }
-        }
-        .second-circle {
-            top: 491px;
-
-            @include responsive(large-screens) {
-                top: 770px;
-            }
-        }
         .intro-text-box {
             padding-top: 280px;
             margin-left: 30px;
-            // background-color: beige;
+            background-color: beige;
 
             @include responsive(large-screens) {
                 padding-top: 530px;
@@ -243,7 +176,73 @@ main {
                 }
             }
         }  // imtro-text-box
+
+
+        .main-line1 {
+            position: absolute;
+            z-index: 4;
+            right: 30px;; top: 0;
+            width: 350px;height: 2200px;
+            margin-left: 336px;
+            // background-color: lightsalmon;
+            
+            .intro-collection-line {
+                position: absolute;
+                z-index: 100;
+                width: 1px;
+                height: 2220px;
+                right: 50%; top: 0;
+                transform: translateX(-50%);
+                border: 1px solid $line-black;
+            }
+
+            .year {
+                font-weight: $font-semibold;
+            }
+
+            .past-circle,
+            .now-circle {
+                width: 14px;
+                height: 14px;
+                border-radius: 50%;
+                background-color: $color-main;
+
+                // @include responsive(large-screens) {
+                //     right: 398px;
+                // }
+            }
+
+            .past-year {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                margin-top: 92px;
+                // justify-content: space-between;
+                background-color: aquamarine;
+
+                .past {
+                    margin-left: 27px;
+                    margin-right: 15px;
+                    font-size: 3.333rem;  // 40pt;
+                }
+            }
+
+            .now-year {
+                display: flex;
+                flex-direction: row-reverse;
+                align-items: center;
+                margin-top: 444px;
+                // justify-content: space-between;
+                background-color: aquamarine;
+
+                .now {
+                    margin-left: 15px;
+                    font-size: 4.167rem;  // 50pt
+                }
+            }
+        }
         
+
         .detail-button {
             margin-top: 65px;
             margin-left: 35px;
@@ -260,37 +259,44 @@ main {
     //=================== collection =================== 
     .main-collection {
         position:relative;
-        z-index: 3;
+        // z-index: 2;
         width: $width-wide;
         height: 1345px;
-        background-color: bisque;
+        // background-color: bisque;
         
-        @include responsive(large-screens) {
-            height: 1900px;
-        }
+        // @include responsive(large-screens) {
+        //     height: 1900px;
+        // }
+        .collection-background {
+            position: relative;
+            z-index: 2;
+            width: $width-wide;
+            height: 1345px;
 
-        .parallelogram {
-            position: absolute;
-            left: 0; top: -60px; 
-            width: 99.5%;
-            height: $height-wide;
-            background: {
-                color: #fb7829;
+            .parallelogram {
+                position: absolute;
+                left: 0; top: -60px; 
+                z-index: 3;
+                width: 99.5%;
+                height: $height-wide;
+                background: {
+                    color: #fb7829;
+                }
+                transform: skew(8deg) rotate(8deg);
+    
+                // @include responsive(large-screens) {
+                //     top: -140px;
+                // }
             }
-            transform: skew(8deg) rotate(8deg);
-
-            @include responsive(large-screens) {
-                top: -140px;
-            }
         }
 
-        .collection-title {
-            margin-left: 40px;
-            margin-bottom: 60px;
-            font-size: 4.167rem;  //50pt
-            line-height: 1.2;
-            color: $color-second;
-        }
+        // .collection-title {
+        //     margin-left: 40px;
+        //     margin-bottom: 60px;
+        //     font-size: 4.167rem;  //50pt
+        //     line-height: 1.2;
+        //     color: $color-second;
+        // }
 
         .main-collection-row-line {
             position: absolute;
@@ -301,84 +307,84 @@ main {
             border: 1px solid $line-white;
         }
 
-        .main-collection-col-line {
-            position: absolute;
-            right: 200px; top: -55px;
-            width: 1px;
-            height: 300px;
-            border: 1px solid $line-white;
+        // .main-collection-col-line {
+        //     position: absolute;
+        //     right: 200px; top: -55px;
+        //     width: 1px;
+        //     height: 300px;
+        //     border: 1px solid $line-white;
 
-            @include responsive(large-screens) {
-                right: 404px; top: -111px;
-                height: 355px;
-            }
-        }
+        //     @include responsive(large-screens) {
+        //         right: 404px; top: -111px;
+        //         height: 355px;
+        //     }
+        // }
 
-        .main-collection-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin: auto;
-            width: 600px;
-            background-color: aquamarine;
+        // .main-collection-content {
+        //     display: flex;
+        //     justify-content: space-between;
+        //     align-items: center;
+        //     margin: auto;
+        //     width: 600px;
+        //     background-color: aquamarine;
 
-            .collection-text {
-                p {
-                    font-weight: $font-regular;
-                    font-size: 2.167rem;  // 26pt
-                    color: $color-second;
-                }
-            }
+        //     .collection-text {
+        //         p {
+        //             font-weight: $font-regular;
+        //             font-size: 2.167rem;  // 26pt
+        //             color: $color-second;
+        //         }
+        //     }
     
-            .main-collection-list {
-                display: none;
-            }
+        //     .main-collection-list {
+        //         display: none;
+        //     }
 
-            .detail-button {
-                .circle-text {
-                    color: $color-second;
-                }
+        //     .detail-button {
+        //         .circle-text {
+        //             color: $color-second;
+        //         }
 
-                .button {
-                    border: 0;
-                    background-color: $color-second;
-                }
-            }
-        }  // maiin-collection-content
+        //         .button {
+        //             border: 0;
+        //             background-color: $color-second;
+        //         }
+        //     }
+        // }  // maiin-collection-content
 
-        .collection-image {
-            display: flex;
-            justify-content: space-between;
-            margin: auto;
-            margin-top: 35px;
-            width: 600px;
-            height: 863px;
-            overflow: hidden;
+        // .collection-image {
+        //     display: flex;
+        //     justify-content: space-between;
+        //     margin: auto;
+        //     margin-top: 35px;
+        //     width: 600px;
+        //     height: 863px;
+        //     overflow: hidden;
 
-            div {
-                height: $height-wide;
-                ul {
-                    display: flex;
-                    flex-direction: column;
-                    // justify-content: space-between;
-                    align-items: center;
+        //     div {
+        //         height: $height-wide;
+        //         ul {
+        //             display: flex;
+        //             flex-direction: column;
+        //             // justify-content: space-between;
+        //             align-items: center;
 
-                    li {
-                        img {
-                            width: 260px;
-                            height: 260px;
-                            margin-bottom: 40px;
-                        }
-                    }
-                }
-            }
+        //             li {
+        //                 img {
+        //                     width: 260px;
+        //                     height: 260px;
+        //                     margin-bottom: 40px;
+        //                 }
+        //             }
+        //         }
+        //     }
 
-            .image-row3 {
-                display: none;
-            }
+        //     .image-row3 {
+        //         display: none;
+        //     }
         }
     }  // collection
-}  // main
+
 
 
 //=================== exhibition =================== 

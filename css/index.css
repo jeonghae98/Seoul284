@@ -293,10 +293,11 @@ main section.main-intro {
   background-position-x: -100px;
   background-position-y: 500px;
   background-size: 1170px 788px;
+  background-color: aqua;
 }
 @media only screen and (min-width: 1024px) {
   main section.main-intro {
-    margin-top: 894px;
+    margin-top: 900px;
     height: 1572px;
     background-position-x: 220px;
     background-position-y: 600px;
@@ -430,6 +431,11 @@ main .main-collection {
   height: 1345px;
   background-color: bisque;
 }
+@media only screen and (min-width: 1024px) {
+  main .main-collection {
+    height: 1900px;
+  }
+}
 main .main-collection .parallelogram {
   position: absolute;
   left: 0;
@@ -438,6 +444,11 @@ main .main-collection .parallelogram {
   height: 100%;
   background-color: #fb7829;
   transform: skew(8deg) rotate(8deg);
+}
+@media only screen and (min-width: 1024px) {
+  main .main-collection .parallelogram {
+    top: -140px;
+  }
 }
 main .main-collection .collection-title {
   margin-left: 40px;
@@ -457,11 +468,18 @@ main .main-collection .main-collection-row-line {
 }
 main .main-collection .main-collection-col-line {
   position: absolute;
-  width: 1px;
-  height: 300px;
   right: 200px;
   top: -55px;
+  width: 1px;
+  height: 300px;
   border: 1px solid #fff;
+}
+@media only screen and (min-width: 1024px) {
+  main .main-collection .main-collection-col-line {
+    right: 404px;
+    top: -111px;
+    height: 355px;
+  }
 }
 main .main-collection .main-collection-content {
   display: flex;
@@ -689,6 +707,7 @@ footer .footerlogo-info .footer-content-box .footer-logo {
   footer .footerlogo-info .footer-content-box .footer-logo {
     margin: 15px 90px 50px 0;
     width: 32%;
+    background-color: aquamarine;
   }
 }
 footer .footerlogo-info .footer-content-box .footer-logo h2 {

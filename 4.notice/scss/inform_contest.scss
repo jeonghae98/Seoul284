@@ -28,7 +28,7 @@ main {
     width: $width-wide;
     .inform {
         .inform-title {
-            margin: 80px 0 35px;
+            margin: 80px 0 150px;
             text-align: center;
             // background-color: aquamarine;
             
@@ -47,7 +47,7 @@ main {
             flex-direction: row;
             justify-content: space-between;
             align-items: center;
-            width: 464px;
+            width: $width-wide;
             margin: auto;
             
             @include responsive(large-screens) {
@@ -63,7 +63,7 @@ main {
             ul {
                 display: flex;
                 justify-content: space-between;
-                width: 348px;
+                width: 250px;
 
                 @include responsive(large-screens) {
                     margin-left: 150px;
@@ -74,7 +74,7 @@ main {
                     a {
                         font: {
                             weight: $font-regular;
-                            size: 2.667rem;  // 32pt
+                            size: 2.167rem;  // 26pt
                         }
 
                         @include responsive(large-screens) {
@@ -111,27 +111,35 @@ main {
                     display: none;
 
                     @include responsive(large-screens) {
+                        padding-left: 10px;
                         display: block;
                         width: 360px;
                         height: 40px;
-                        border: 1px solid #727272;
+                        border: 2px solid #727272;
                         border-radius: 10px;
+                    }
+
+                    &:focus {
+                        @include responsive(large-screens) {
+                            outline: none;
+                        }
                     }
                 }
 
-
                 img {
-                    width: 37px;
+                    width: 32px;
+                    cursor: pointer;
 
                     @include responsive(large-screens) {
                         position: absolute;
                         right: 10px; top: 50%;
                         transform: translateY(-50%);
-                        width: 26px;
+                        width: 20px;
                     }
                 }
             }
         }  // menu-list
+
 
         .list-box {
             display: flex;
@@ -149,7 +157,7 @@ main {
                 display: flex;
                 align-items: center;
                 width: $width-wide;
-                height: 250px;
+                padding: 50px 0;
                 border-top: 1px solid $inform-line-gray;
                 border-bottom: 1px solid $inform-line-gray;
                 cursor: pointer;
@@ -160,15 +168,15 @@ main {
                 }
 
                 @include responsive(large-screens) {
-                    height: 170px;
+                    padding: 40px 0;
                 }
 
                 .list-number {
-                    margin-left: 25px;
-                    margin-right: 40px;
+                    margin-left: 3.67%;  // 25px
+                    margin-right: 5.9%;  // 40px
                     font: {
-                        weight: $font-semibold;
-                        size: 2rem;  // 24pt
+                        weight: $font-medium;
+                        size: 1.667rem;  // 20pt
                     }
 
                     @include responsive(large-screens) {
@@ -179,7 +187,9 @@ main {
                 }
 
                 .list-content {
-                    width: 500px;
+                    display: inline;
+                    // width: 500px;
+                    width: 73.53%;  // 500px
 
                     @include responsive(large-screens) {
                         display: flex;
@@ -190,7 +200,7 @@ main {
                     }
 
                     .list-title {
-                        font-size: 2.333rem;  // 28pt
+                        font-size: 1.833rem;  // 22pt
 
                         @include responsive(large-screens) {
                             width: 700px;
@@ -205,28 +215,29 @@ main {
                             display: flex;
                             align-items: center;
                             margin-top: 20px;
+                            width: $width-wide;
                             // background-color: lightgoldenrodyellow;
 
                             @include responsive(large-screens) {
-                                width: 457px;
+                                width: 457px;  // 457px
                                 margin-top: 0;
                             }
                              .status {
                                 margin-right: 15px;
-                                width: 120px;
+                                width: 120px;  // 120px
                                 height: 35px;
                                 line-height: 35px;
                                 text-align: center;
                                 font: {
                                     weight: $font-regular;
-                                    size: 1.667rem;  // 20pt
+                                    size: 1.5rem;  // 18pt
                                 }
                                 color: $color-second;
                                 background-color: $color-point;
 
-                                @include responsive(large-screens) {
-                                    font-size: 1.5rem;  // 18pt
-                                }
+                                // @include responsive(large-screens) {
+                                //     font-size: 1.5rem;  // 18pt
+                                // }
                             }
     
                             .receipt-term {
@@ -234,13 +245,12 @@ main {
                                 p {
                                     font: {
                                         weight: $font-regular;
-                                        size: 1.667rem;  // 20pt
+                                        size: 1.5rem;  // 18pt
                                     }
                                     color: $color-gray;
 
                                     @include responsive(large-screens) {
                                         width: 346px;
-                                        font-size: 1.5rem;  // 18pt
                                         // background-color: lightsalmon;
                                     }
                                 }
