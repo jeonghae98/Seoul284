@@ -72,7 +72,7 @@ $(function() {
 
     $(window).resize(function() {
         updateFooterLogo();
-    })
+    });
 
     
     //--------------------- fixed-menu ---------------------
