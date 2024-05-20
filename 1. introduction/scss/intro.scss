@@ -1,0 +1,160 @@
+@import "./style.scss";
+@import "./reset.scss";
+@import "./mixin.scss";
+@import "../../scss/header.scss";
+@import "../../scss/footer.scss";
+
+
+.container {
+    width: $width-wide;
+    max-width: 1440px;
+    margin: 0 auto;
+    // background-color: antiquewhite;
+}
+
+//***********header***********
+header {
+    @include header-style();
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//***********main***********
+main {
+    .container {
+        section.main-title {
+            h2 {
+                margin: 120px 0 50px 0;
+                font: {
+                   weight : $font-regular;
+                   size : 3rem;
+                }
+                text-align: center;
+
+                animation-duration: 0.5s;
+                animation-name: move;
+
+                @keyframes move {
+                    from { opacity: 0; }
+                    to { opacity: 1; }
+                }
+                // background-color: aqua;
+            }
+            p {
+                font-size: 1.3rem;
+                font-weight: $font-regular;
+                color: $color-gray;
+                text-align: center;
+                // background-color: aliceblue
+
+                animation-duration: 2s;
+                animation-name: move;
+
+                @keyframes move {
+                    from { opacity: 0; }
+                    to { opacity: 1; }
+                }
+            }
+            img {
+                width: 500px; height: 375px;
+                margin: 0 auto;
+ 
+                animation-duration: 4s;
+                animation-name: move;
+
+                @keyframes move {
+                    from { opacity: 0; }
+                    to { opacity: 1; }
+                }
+            }
+
+            } // section.main-titles
+    } // container
+    hr {
+        width: 100%; height: 50px;
+        margin-top: 100px;
+        background-color:$color-main;
+    }
+
+    section.box1 {
+        // display: flex;
+        img {
+            position: absolute;
+            height: 100%;
+        }
+        .container {
+            .box1-txt {
+                // background-color: antiquewhite;
+                h2 {
+                    width: 70%;
+                    margin: 0 auto;
+                    padding-top: 15%;
+                    padding-bottom: 6%;
+                    text-align: left;
+
+                    font-size: 2rem;
+                    // background-color: aqua;
+                }
+                p {
+                    width: 70%;
+                    margin: 0 auto;
+                    font-size: 1.2rem;
+                    font-weight:$font-regular;
+                    color: #565656;
+                    
+                }
+            }
+        }
+    }
+    
+
+    
+} // main
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//***********footer***********
+footer {
+    @include footer-style();
+}

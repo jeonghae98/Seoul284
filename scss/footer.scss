@@ -1,0 +1,196 @@
+@import "./style.scss";
+@import "./mixin.scss";
+
+.container {
+    position: relative;
+    width: $width-wide;
+    max-width: 1440px;
+    margin: 0 auto;
+    // background-color: lightgreen;
+}
+
+@mixin footer-style() {
+    position: relative;
+    width: $width-wide;
+    background-color: coral;
+
+    .footer-img{
+        img {
+            width: $width-wide;
+        }
+    }
+
+    .footerlogo-info {
+        padding: 35px 20px;
+        // background-color: aquamarine;
+
+        .footer-content-box {
+            position: relative;
+            width: 84%;
+            margin: 0 auto;
+            background-color: lightpink;
+
+            @include responsive(large-screens) {
+                display: flex;
+                width: 82%;  // 1180px  988
+            }
+
+            .footer-logo {
+                margin-bottom: 30px;
+
+                @include responsive(large-screens) {
+                    margin: 7px 90px 50px 0;
+                    width: 25%;  
+                    background-color: aquamarine;
+                }
+
+                h2 {
+                    font: {
+                        weight: $font-thin;
+                        size: 2.5rem;  // 30pt 40px
+                    }
+                    @include responsive(large-screens) {
+                        line-height: 1.2;
+                        font: {
+                            size: 3.75rem;  // 53pt
+                        }
+                    }
+                }
+            }
+
+
+            .footer-info-box {
+                width: $width-wide;
+
+                @include responsive(large-screens) {
+                    display: flex;
+                    flex-direction: column;
+                }
+
+                .info {
+                    width: $width-wide;
+                    display: flex;
+                    justify-content: space-between;
+                    // align-items: center;
+                    background-color: lightblue;
+    
+                    @include responsive(large-screens) {
+                        width: 100%;  // 900px
+                    }
+    
+                    div {
+                        strong {
+                            font: {
+                                weight: $font-regular;
+                                size: 1rem;
+                            }
+                            color: $footer-darkgray;
+                            
+                            @include responsive(large-screens) {
+                                margin-bottom: 15px;
+                                font: {
+                                    size: 1.5rem;  // 18pt
+                                }
+                            }
+                        }
+    
+                        .long-line {
+                            position: relative;
+                            z-index: 1;
+                            width: $width-wide;
+                            height: 1px;
+                            margin: 10px 0;
+                            background-color: $footer-gray; 
+    
+                            .line {
+                                position: absolute;
+                                left: 0; top: 0;
+                                z-index: 2;
+                                width: 41px;
+                                height: $height-wide;
+                                background-color: $footer-darkgray;
+
+                                @include responsive(large-screens) {
+                                    width: 33px;
+                                }
+                            }
+                        }
+                    }
+                    
+                    .address {
+                        width: 45%;
+                        @include responsive(large-screens) {
+                            width: 40%;
+                        }
+                    }
+                    .tel {
+                        width: 40%;
+                        @include responsive(large-screens) {
+                            width: 35%;
+                        }
+                    }
+                    .sns {
+                        width: 15%;
+                        @include responsive(large-screens) {
+                            width: 25%;
+                        }
+                    }
+    
+                    
+                    
+                    .txt {
+                        width: 80%;
+                        font: {
+                            weight: $font-regular;
+                            size: 0.83rem;  // 10pt 13px
+                        }
+                        color: $footer-gray;
+
+                        @include responsive(large-screens) {
+                            width: 75%;
+                            font-size: 1.167rem;  // 14pt
+                        }
+                    }
+                }  // info
+    
+                .copyright {
+                    width: $width-wide;
+                    margin-top: 30px;
+    
+                    @include responsive(large-screens) {
+                        background-color: blanchedalmond;
+                    }
+    
+                    p {
+                        font: {
+                            weight: $font-regular;
+                            size: 0.83rem;  // 10pt 13px;
+                        }
+                        color: $footer-gray;
+                        @include responsive(large-screens) {
+                            font: {
+                                size: 0.833rem;  // 10pt
+                            }
+                        }
+                    }
+                }  // copyright
+            }
+        }  // footer-content-box
+    }  // footerlogo-info
+
+    .fixed-menu {
+        position: fixed;
+        right: 60px; bottom: 100px;
+        z-index: 10;
+
+        a {
+            width: 50px; 
+            height: 50px;
+            line-height: 50px;
+            border-radius: 50%;
+            text-align: center;
+            color: $color-second;
+            background-color: $color-main;
+        }
+    }  // fixed-menu
+}  // footer-style()
