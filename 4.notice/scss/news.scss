@@ -1,0 +1,27 @@
+@import "./style.scss";
+@import "./reset.scss";
+@import "./mixin.scss";
+@import "../../scss/header.scss";
+@import "../../scss/footer.scss";
+
+
+.container {
+    width: $width-wide;
+    max-width: 1440px;
+    margin: 0 auto;
+    background-color: antiquewhite;
+}
+
+//***********header***********
+header {
+    @include header-style();
+}
+
+
+//***********main***********
+
+
+//***********footer***********
+footer {
+    @include footer-style();
+}
