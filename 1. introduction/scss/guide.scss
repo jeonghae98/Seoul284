@@ -12,9 +12,9 @@
 }
 
 //***********header***********
-header {
-    @include header-style();
-}
+// header {
+//     @include header-style();
+// }
 
 
 
@@ -42,7 +42,7 @@ main {
                 position: relative;
             }
             h2 {
-                padding-bottom: 60px;
+                padding-bottom: 2000px;
                 text-align: center;
                 
             }
