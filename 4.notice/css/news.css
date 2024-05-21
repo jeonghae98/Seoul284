@@ -315,7 +315,7 @@ main .news .news-content-box div.row-box .box {
 @media only screen and (min-width: 1024px) {
   main .news .news-content-box div.row-box .box {
     margin-right: 26.6px;
-    margin-bottom: 26.6px;
+    margin-bottom: 50px;
     width: 340px;
   }
 }
@@ -363,7 +363,7 @@ main .news .news-content-box div.row-box .box .news-txt .news-content-title {
   main .news .news-content-box div.row-box .box .news-txt .news-content-title {
     margin-bottom: 0;
     font-weight: 400;
-    font-size: 1.333rem;
+    font-size: 1.167rem;
   }
 }
 main .news .news-content-box div.row-box .box .news-txt time {
