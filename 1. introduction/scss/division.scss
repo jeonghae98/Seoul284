@@ -1,0 +1,69 @@
+@import "./style.scss";
+@import "./reset.scss";
+@import "./mixin.scss";
+@import "../../scss/header.scss";
+@import "../../scss/footer.scss";
+
+.container {
+    width: $width-wide;
+    max-width: 1440px;
+    margin: 0 auto;
+    // background-color: antiquewhite;
+}
+
+//***********header***********
+
+header {
+    @include header-style();
+}
+
+//********************main********************
+
+main {
+    .container {
+        h2 {
+            margin: 50px;
+            text-align: center;
+        }
+        table {
+            width: 100%;
+            margin: 0 auto;
+            border-collapse: collapse;
+            thead {
+                border: 1px solid #e9e9e9;
+                background-color: #f3f3f3;
+                th {
+                    font-size: 0.8rem;
+                }
+                th:first-child {
+                    width: 30%; height: 50px;
+                }
+                th:nth-child(2) {
+                    width: 20%; height: 50px;
+                }
+                
+            } // thead 
+
+            tbody {
+                // background-color: aqua;
+                tr {
+                    border: 1px solid #e9e9e9;
+                    text-align: center;
+                    width: 20%; height: 100px;
+                    font-weight: $font-semibold;
+                    font-size: 0.8rem;
+                }
+            }
+            tfoot {
+                width: 100%;
+                font-size: 0.7rem;
+                text-align: center;
+                color: $color-second;
+                background-color: $color-a;
+                td {
+                    padding: 20px;
+                }
+            }
+        } // table
+    } // container
+} // main

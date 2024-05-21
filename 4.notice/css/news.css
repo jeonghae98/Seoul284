@@ -350,7 +350,7 @@ main .news .news-content-box div.row-box .box .news-txt {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 220px;
+    height: 210px;
   }
 }
 main .news .news-content-box div.row-box .box .news-txt .news-content-title {
@@ -361,8 +361,9 @@ main .news .news-content-box div.row-box .box .news-txt .news-content-title {
 }
 @media only screen and (min-width: 1024px) {
   main .news .news-content-box div.row-box .box .news-txt .news-content-title {
+    margin-bottom: 0;
     font-weight: 400;
-    font-size: 1.5rem;
+    font-size: 1.333rem;
   }
 }
 main .news .news-content-box div.row-box .box .news-txt time {
@@ -410,6 +411,7 @@ main .news .page-number ul {
   }
 }
 main .news .page-number ul li a {
+  font-weight: 400;
   font-size: 1.667rem;
 }
 @media only screen and (min-width: 1024px) {

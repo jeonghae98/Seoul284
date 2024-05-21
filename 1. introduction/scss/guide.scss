@@ -1,0 +1,325 @@
+@import "./style.scss";
+@import "./reset.scss";
+@import "./mixin.scss";
+@import "../../scss/header.scss";
+@import "../../scss/footer.scss";
+
+.container {
+    width: $width-wide;
+    max-width: 1440px;
+    margin: 0 auto;
+    // background-color: antiquewhite;
+}
+
+//***********header***********
+header {
+    @include header-style();
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//***********main***********
+main {
+    .container {
+        .map-box {
+            margin-top: 80px;
+            @include responsive(large-screens) {
+                position: relative;
+            }
+            h2 {
+                padding-bottom: 60px;
+                text-align: center;
+                @include responsive(large-screens) {
+                    font-size: 2rem;
+                    font-weight: $font-semibold;
+                }
+            }
+            iframe {
+                display: block;
+                width: 96%;
+                margin: 0 auto;
+                @include responsive(large-screens) {
+                    width: 90%;
+                    height: 660px;
+                    margin-bottom: 250px;
+                }
+            }
+            .orange-box {
+                width: 96%;
+                height: 180px;
+                margin: 0 auto;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                
+                background-color:$color-point;
+                @include responsive(large-screens) {
+                    position: absolute; top: 680px; left: 180px;
+                    width: 75%;  height: 250px;
+                    margin: 0 auto;
+                }
+                .map-info {
+                    padding-left: 6%;
+                    // padding-right: 5%;
+                    // background-color: aqua;
+                    h3 {
+                        padding-top: 20px;
+                        padding-bottom: 10px;
+                        color: $color-second;
+
+                        @include responsive(large-screens) {
+                            width: 200px;
+                            font-size: 1.7rem;
+                            // background-color: aqua;
+                        }
+                    }
+                    p {
+                        padding-bottom: 20px;
+                        font-size: 0.8rem;
+                        color: $color-second;
+                        @include responsive(large-screens) {
+
+                            font-size: 1rem;
+                            
+                        }
+                    }
+                }
+                .map-txt {
+                    padding-right: 5%;
+                    width: 80%;
+                    // background-color: aquamarine;
+                    p {
+                        font-size: 0.8rem;
+                        padding: 20px 20px 0 0;
+                        color: $color-second;
+                        @include responsive(large-screens) {
+                            font-size: 1.1rem;
+                            
+                        }
+                    }
+                    strong {
+                        padding-top: 10px;
+                        padding-right: 20px;
+                        padding-bottom: 20px;
+                        font-size: 0.7rem;
+                        color: $color-second;
+                        @include responsive(large-screens) {
+                            font-size: 0.8rem;
+                            
+                        }
+                    }
+                } // map-txt
+            } // orange-box
+        } // map-box
+        .bus-subway {
+
+            .bus {
+                display: flex;
+                align-items: center;
+                width: 96%;
+                margin: 0 auto;
+                padding: 20px 0 20px 0;
+                border: 1px solid #c2c2c2;
+                border-left: none; border-right: none;
+                // background-color: aqua;
+                @include responsive(large-screens) {
+                    height: 350px;
+                    padding: 10px 0 10px 0;
+                    // background-color: antiquewhite;
+                }
+                 
+                img {
+                    width: 80px; height: auto;
+                    margin-left: 8%;
+                    margin-right: 8%;
+                    @include responsive(large-screens) {
+                       width: 14%;
+                    }
+                }
+                .bus-num {
+                    margin-right: 40px;
+                    flex-direction: column;
+                    padding-bottom: 20px;
+                    // background-color: antiquewhite;
+                   
+                    div {
+                        font-weight:$font-regular;
+                        // background-color: aqua;
+                        @include responsive(large-screens) {
+                            font-size: 1.2rem;
+                            padding-left: 50px;
+                        }
+                        span {
+                            padding-top: 20px;
+                        }
+                        .green {
+                            // background-color: aquamarine;
+                            color: green;
+                            @include responsive(large-screens) {
+                                font-weight: $font-regular;
+
+                            }
+                        }
+                        .blue {
+                            color: blue;
+                            @include responsive(large-screens) {
+                                font-weight: $font-regular;
+
+                            }
+                        }
+                        .red {
+                            color: red;
+                            @include responsive(large-screens) {
+                                font-weight: $font-regular;
+                            }
+                        }
+                    }
+                }
+            }
+    
+            .subway {
+                display: flex;
+                align-items: center;
+                width: 96%;
+                margin: 0 auto;
+                border: 1px solid #c2c2c2;
+                border-left: none; 
+                border-right: none;
+                border-top: none;
+                // margin: 0px 0 20px 0;
+                padding: 20px 0 20px 0;
+                // background-color: aqua;
+                @include responsive(large-screens) {
+                    height: 350px;
+                    padding: 50px 0 50px 0;
+                    // background-color: aqua;
+                }
+                
+                img {
+                    width: 80px; height: auto;
+                    margin-left: 8%;
+                    margin-right: 8%;
+                    @include responsive(large-screens) {
+                        width: 14%;
+                     }
+                }
+                .subway-num {
+                    flex-direction: column;
+                    padding-bottom: 20px;
+                    // background-color: antiquewhite;
+                    margin-right: 40px;
+                    div {
+                        font-weight:$font-regular;
+                        // background-color: aqua;
+                        @include responsive(large-screens) {
+                            font-size: 1.2rem;
+                            padding-left: 50px;
+                            // background-color: aqua;
+                        }
+                        span {
+                            padding-top: 20px;
+                        }
+                        .orange {
+                            // background-color: aquamarine;
+                            color: #ff6000;
+                            @include responsive(large-screens) {
+                                font-weight: $font-regular;
+                            }
+                        }
+                    }
+                } //subwaynum
+            } //subway
+        } // bus-subway
+
+        .store {
+            width: 96%;
+            margin: 0 auto;
+            padding-bottom: 80px;
+            border: 1px solid #c2c2c2;
+            border-top: none;
+            border-right:none;
+            border-left: none;
+            @include responsive(large-screens) {
+                display: flex;
+                align-items: center;
+            }
+            img {
+                width: 90%;
+                height: 100%;
+                margin: 0 auto;
+                margin-top: 80px;
+                margin-bottom: 20px;
+                @include responsive(large-screens) {
+                    width: 40%;
+                }
+              
+            }
+            .store-txt {
+                h3 {   
+                    font-size: 1.8rem;
+                    font-weight: $font-regular;
+                    margin-left: 5%;
+                    @include responsive(large-screens) {
+                        width: 600px; height: 100px;
+                        padding-top: 50px;
+                        font-weight: $font-semibold;
+                        line-height: 100px;
+                        // background-color: aqua;
+                    }
+                }
+                strong {
+                    margin-top: 8%;
+                    margin-bottom: 1%;
+                    margin-left: 5%;
+                }
+                p {
+                    width: 50%;
+                    margin-left: 5%;
+                    margin-right: 5%;
+    
+                }
+                .time {
+                    padding-top: 20px;
+                    @include responsive(large-screens) {
+                        font-weight: $font-semibold;
+                        margin-bottom: 30px;
+                    }
+                }            
+            }
+        } // store
+    } //container
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//***********footer***********
+footer {
+    @include footer-style();
+}
