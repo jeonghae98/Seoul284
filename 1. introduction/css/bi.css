@@ -220,6 +220,11 @@ header .logo-gnb-rightmenu .logo-gnb-menu-box .right-menu #mobile-menu.active .b
 main .sec1 {
   padding-top: 100px;
 }
+@media only screen and (min-width: 1024px) {
+  main .sec1 {
+    margin-bottom: 150px;
+  }
+}
 main .sec1 .container .sec1-title {
   text-align: center;
 }
@@ -229,7 +234,9 @@ main .sec1 .container .sec1-title h2 {
 }
 @media only screen and (min-width: 1024px) {
   main .sec1 .container .sec1-title h2 {
-    font-size: 2.8rem;
+    margin-top: 80px;
+    font-size: 2rem;
+    color: #8d8f8e;
   }
 }
 main .sec1 .container .sec1-title p {
@@ -239,9 +246,8 @@ main .sec1 .container .sec1-title p {
 }
 @media only screen and (min-width: 1024px) {
   main .sec1 .container .sec1-title p {
-    font-weight: 300;
-    font-size: 2.8rem;
-    padding: 20px 0 30px 0;
+    font-weight: 400;
+    font-size: 3rem;
   }
 }
 main .sec1 .container .sec1-title img {
@@ -251,7 +257,8 @@ main .sec1 .container .sec1-title img {
 }
 @media only screen and (min-width: 1024px) {
   main .sec1 .container .sec1-title img {
-    width: 30%;
+    padding: 20px 0 20px 0;
+    width: 20%;
   }
 }
 main .sec1 .container .sec1-info {
@@ -263,7 +270,7 @@ main .sec1 .container .sec1-info strong {
   margin: 0 auto;
   padding: 30px 0 3px 0;
   font-size: 1.1rem;
-  border-top: 2px solid #c2c2c2;
+  border-top: 2px solid #f1f1f1;
 }
 @media only screen and (min-width: 1024px) {
   main .sec1 .container .sec1-info strong {
@@ -296,7 +303,7 @@ main .sec1 .container .sec1-menu {
 }
 @media only screen and (min-width: 1024px) {
   main .sec1 .container .sec1-menu {
-    width: 100%;
+    width: 50%;
   }
 }
 main .sec1 .container .sec1-menu div:first-child {
@@ -311,9 +318,10 @@ main .sec1 .container .sec1-menu div:first-child {
 }
 @media only screen and (min-width: 1024px) {
   main .sec1 .container .sec1-menu div:first-child {
-    height: 70px;
-    line-height: 70px;
-    font-size: 1.3rem;
+    height: 60px;
+    line-height: 60px;
+    font-size: 1rem;
+    font-weight: 600;
   }
 }
 main .sec1 .container .sec1-menu div:first-child a:hover {
@@ -332,9 +340,10 @@ main .sec1 .container .sec1-menu div:nth-child(2) {
 }
 @media only screen and (min-width: 1024px) {
   main .sec1 .container .sec1-menu div:nth-child(2) {
-    height: 70px;
-    line-height: 70px;
-    font-size: 1.3rem;
+    height: 60px;
+    line-height: 60px;
+    font-size: 1rem;
+    font-weight: 600;
   }
 }
 main .sec1 .container .sec1-menu div:nth-child(2) a {
@@ -351,9 +360,10 @@ main .sec1 .container .sec1-menu div:last-child {
 }
 @media only screen and (min-width: 1024px) {
   main .sec1 .container .sec1-menu div:last-child {
-    height: 70px;
-    line-height: 70px;
-    font-size: 1.3rem;
+    height: 60px;
+    line-height: 60px;
+    font-size: 1rem;
+    font-weight: 600;
   }
 }
 main .sec1 .container .sec1-menu div:last-child a:hover {
@@ -386,12 +396,13 @@ main .sec2 .container .sec2-title p {
   width: 70%;
   margin: auto;
   padding-bottom: 20px;
+  font-size: rem;
   font-weight: 400;
   color: #565656;
 }
 @media only screen and (min-width: 1024px) {
   main .sec2 .container .sec2-title p {
-    font-size: 1.1rem;
+    font-size: 1rem;
   }
 }
 main .sec2 .container .img-box {
@@ -405,10 +416,9 @@ main .sec2 .container .img-box img {
 }
 @media only screen and (min-width: 1024px) {
   main .sec2 .container .img-box img {
-    width: 60%;
+    width: 50%;
     padding-bottom: 80px;
     padding-top: 50px;
-    padding-right: 20px;
   }
 }
 main .sec2 .container .img-box .img-box-inner {
@@ -425,7 +435,7 @@ main .sec2 .container .img-box .img-box-inner p {
     width: 300px;
     height: 60px;
     line-height: 150px;
-    padding-left: 108px;
+    padding-left: 135px;
   }
 }
 main .sec3 {
@@ -481,15 +491,23 @@ main .sec3 .container .sec3-box3 strong {
   font-size: 1.2rem;
   padding: 100px 0 30px 0;
 }
+@media only screen and (min-width: 1024px) {
+  main .sec3 .container .sec3-box3 strong {
+    font-size: 1.2rem;
+    line-height: 150px;
+  }
+}
 main .sec3 .container .sec3-box3 img {
   width: 60%;
   margin: 0 auto;
 }
 @media only screen and (min-width: 1024px) {
   main .sec3 .container .sec3-box3 img {
-    padding-bottom: 50px;
-    background-color: #914c21;
+    padding-bottom: 200px;
   }
+}
+main .sec4 {
+  margin-bottom: 200px;
 }
 main .sec4 .sec4-title {
   text-align: center;
@@ -517,6 +535,13 @@ main .sec4 .wrap {
   /* 메뉴 버튼 디자인 */
   /*  메뉴 버튼에 들어갈 아이콘을 100px * 100px, 투명한 PNG 로 저장하여 아래의 경로에 연동해주면 됨 
       위쪽 코드 .label.a 부터 맨 아래코드 .label.e 까지가 메뉴버튼 오른쪽-> 왼쪽 순서 */
+}
+@media only screen and (min-width: 1024px) {
+  main .sec4 .wrap {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
 }
 main .sec4 .wrap input.button {
   display: none;
@@ -562,6 +587,11 @@ main .sec4 .wrap .label {
 main .sec4 .wrap .color1 {
   /* 컨텐츠 본문 */
 }
+@media only screen and (min-width: 1024px) {
+  main .sec4 .wrap .color1 {
+    width: 60%;
+  }
+}
 main .sec4 .wrap .color1 .label.d {
   width: 100%;
   height: 100px;
@@ -580,6 +610,11 @@ main .sec4 .wrap .color1 .label.d .rotate p {
   left: 40%;
   font-weight: 500;
   color: #fff;
+}
+@media only screen and (min-width: 1024px) {
+  main .sec4 .wrap .color1 .label.d .rotate p {
+    width: 100%;
+  }
 }
 main .sec4 .wrap .color1 .contents {
   position: relative;
@@ -647,6 +682,11 @@ main .sec4 .wrap .color1 .contents .inner5 {
 }
 main .sec4 .wrap .color2 {
   /* 컨텐츠 본문 */
+}
+@media only screen and (min-width: 1024px) {
+  main .sec4 .wrap .color2 {
+    width: 30%;
+  }
 }
 main .sec4 .wrap .color2 .label.d {
   width: 100%;
@@ -732,6 +772,11 @@ main .sec4 .wrap .color2 .contents .inner5 {
 }
 main .sec4 .wrap .color3 {
   /* 컨텐츠 본문 */
+}
+@media only screen and (min-width: 1024px) {
+  main .sec4 .wrap .color3 {
+    width: 30%;
+  }
 }
 main .sec4 .wrap .color3 .label.d {
   width: 100%;
