@@ -437,7 +437,6 @@ main .inform .list-box .list:last-child {
 footer {
   position: relative;
   width: 100%;
-  background-color: coral;
 }
 footer .footer-img img {
   width: 100%;
@@ -449,7 +448,6 @@ footer .footerlogo-info .footer-content-box {
   position: relative;
   width: 84%;
   margin: 0 auto;
-  background-color: lightpink;
 }
 @media only screen and (min-width: 1024px) {
   footer .footerlogo-info .footer-content-box {
@@ -465,7 +463,6 @@ footer .footerlogo-info .footer-content-box .footer-logo {
   footer .footerlogo-info .footer-content-box .footer-logo {
     margin: 15px 90px 50px 0;
     width: 32%;
-    background-color: aquamarine;
   }
 }
 footer .footerlogo-info .footer-content-box .footer-logo h2 {
@@ -491,7 +488,6 @@ footer .footerlogo-info .footer-content-box .footer-info-box .info {
   width: 100%;
   display: flex;
   justify-content: space-between;
-  background-color: lightblue;
 }
 @media only screen and (min-width: 1024px) {
   footer .footerlogo-info .footer-content-box .footer-info-box .info {
@@ -570,11 +566,6 @@ footer .footerlogo-info .footer-content-box .footer-info-box .info .txt {
 footer .footerlogo-info .footer-content-box .footer-info-box .copyright {
   width: 100%;
   margin-top: 15px;
-}
-@media only screen and (min-width: 1024px) {
-  footer .footerlogo-info .footer-content-box .footer-info-box .copyright {
-    background-color: blanchedalmond;
-  }
 }
 footer .footerlogo-info .footer-content-box .footer-info-box .copyright p {
   font-weight: 400;
