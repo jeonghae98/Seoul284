@@ -154,7 +154,7 @@ main {
                             display: flex;
                             flex-direction: column;
                             justify-content: space-between;
-                            height: 220px;
+                            height: 210px;
                         }
                         .news-content-title {
                             margin-bottom: 30px;
@@ -166,9 +166,10 @@ main {
                             // background-color: bisque;
 
                             @include responsive(large-screens) {
+                                margin-bottom: 0;
                                 font: {
                                     weight: $font-regular;
-                                    size: 1.5rem;  // 18pt
+                                    size: 1.333rem;  // 16pt
                                 }
                             }
                         }
@@ -234,8 +235,10 @@ main {
 
                 li {
                     a {
-                        font-size: 1.667rem;  // 20pt
-
+                        font: {
+                            weight: $font-regular;   
+                            size: 1.667rem;  // 20pt
+                        }
                         // font-size: 2.333rem;  // 28pt
 
                         @include responsive(large-screens) {
