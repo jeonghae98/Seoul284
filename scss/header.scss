@@ -55,6 +55,7 @@
                     margin-left: -43px;
                     width: 616px;  // 616px 47.8%
                     display: block;
+                }
 
                     .gnb {
                         display: flex;
@@ -73,12 +74,18 @@
                                     color: $color-point;
                                 }
                             }
+
                             .sub-menu {
                                 display: none;
                             }
+
+                            .sub-menu-hover {
+                                display: block;
+                                display: flex;
+                                flex-direction: column;
+                            }
                         }
                     }  // gnb
-                }
             }  // main-menu
     
             .right-menu {

@@ -4,6 +4,10 @@ $(function() {
         $(this).toggleClass('active');
     });
 
+    // $('.gnb .gnb-title').on('mouseover', function() {
+    //     $('.gnb .sub-menu').addclass('sub-menu-hover');
+    // })
+
 
 
     //===================== main =====================

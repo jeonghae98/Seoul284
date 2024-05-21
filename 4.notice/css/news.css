@@ -86,6 +86,7 @@ footer {
   max-width: 1440px;
   margin: 0 auto;
   padding: 0 2.777%;
+  background-color: antiquewhite;
 }
 @media only screen and (min-width: 1024px) {
   .container {
@@ -131,20 +132,25 @@ header .logo-gnb-rightmenu .logo-gnb-menu-box .main-menu {
     width: 616px;
     display: block;
   }
-  header .logo-gnb-rightmenu .logo-gnb-menu-box .main-menu .gnb {
-    display: flex;
-    justify-content: space-between;
-  }
-  header .logo-gnb-rightmenu .logo-gnb-menu-box .main-menu .gnb li a.gnb-title {
-    font-size: 1.1rem;
-    font-weight: 400;
-  }
-  header .logo-gnb-rightmenu .logo-gnb-menu-box .main-menu .gnb li a.gnb-title:hover {
-    color: #ff6000;
-  }
-  header .logo-gnb-rightmenu .logo-gnb-menu-box .main-menu .gnb li .sub-menu {
-    display: none;
-  }
+}
+header .logo-gnb-rightmenu .logo-gnb-menu-box .main-menu .gnb {
+  display: flex;
+  justify-content: space-between;
+}
+header .logo-gnb-rightmenu .logo-gnb-menu-box .main-menu .gnb li a.gnb-title {
+  font-size: 1.1rem;
+  font-weight: 400;
+}
+header .logo-gnb-rightmenu .logo-gnb-menu-box .main-menu .gnb li a.gnb-title:hover {
+  color: #ff6000;
+}
+header .logo-gnb-rightmenu .logo-gnb-menu-box .main-menu .gnb li .sub-menu {
+  display: none;
+}
+header .logo-gnb-rightmenu .logo-gnb-menu-box .main-menu .gnb li .sub-menu-hover {
+  display: block;
+  display: flex;
+  flex-direction: column;
 }
 header .logo-gnb-rightmenu .logo-gnb-menu-box .right-menu {
   display: flex;
@@ -240,6 +246,9 @@ main .news .search {
 }
 @media only screen and (min-width: 1024px) {
   main .news .search {
+    position: absolute;
+    right: 0;
+    top: 105px;
     width: 360px;
   }
 }
@@ -281,8 +290,20 @@ main .news .news-content-box {
   width: 100%;
   margin: 60px 0 180px;
 }
+@media only screen and (min-width: 1024px) {
+  main .news .news-content-box {
+    margin-top: 0;
+    margin-bottom: 60px;
+  }
+}
 main .news .news-content-box div.row-box {
   width: 100%;
+}
+@media only screen and (min-width: 1024px) {
+  main .news .news-content-box div.row-box {
+    display: flex;
+    flex-direction: row;
+  }
 }
 main .news .news-content-box div.row-box .box {
   position: relative;
@@ -292,6 +313,18 @@ main .news .news-content-box div.row-box .box {
   margin-bottom: 33px;
   cursor: pointer;
 }
+@media only screen and (min-width: 1024px) {
+  main .news .news-content-box div.row-box .box {
+    margin-right: 26.6px;
+    margin-bottom: 26.6px;
+    width: 340px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  main .news .news-content-box div.row-box .box:last-child {
+    margin-right: 0;
+  }
+}
 main .news .news-content-box div.row-box .box .news-image {
   position: relative;
   width: 100%;
@@ -299,11 +332,27 @@ main .news .news-content-box div.row-box .box .news-image {
   overflow: hidden;
 }
 main .news .news-content-box div.row-box .box .news-image img {
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
   transition: transform 1s;
+}
+@media only screen and (min-width: 1024px) {
+  main .news .news-content-box div.row-box .box .news-image {
+    height: 290px;
+  }
 }
 main .news .news-content-box div.row-box .box .news-txt {
   padding: 33px 20px;
   background-color: #d9d9d9;
+}
+@media only screen and (min-width: 1024px) {
+  main .news .news-content-box div.row-box .box .news-txt {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 220px;
+  }
 }
 main .news .news-content-box div.row-box .box .news-txt .news-content-title {
   margin-bottom: 30px;
@@ -311,11 +360,24 @@ main .news .news-content-box div.row-box .box .news-txt .news-content-title {
   font-weight: 300;
   font-size: 2rem;
 }
+@media only screen and (min-width: 1024px) {
+  main .news .news-content-box div.row-box .box .news-txt .news-content-title {
+    font-weight: 400;
+    font-size: 1.5rem;
+  }
+}
 main .news .news-content-box div.row-box .box .news-txt time {
   width: 17.647%;
   font-weight: 400;
   font-size: 1.5rem;
   color: #a1a1a1;
+}
+@media only screen and (min-width: 1024px) {
+  main .news .news-content-box div.row-box .box .news-txt time {
+    width: 100px;
+    font-weight: 400;
+    font-size: 1.167rem;
+  }
 }
 main .news .news-content-box div.row-box .box:hover .news-image img {
   transform: scale(1.05);
@@ -333,7 +395,7 @@ main .news .page-number {
 }
 @media only screen and (min-width: 1024px) {
   main .news .page-number {
-    margin: -100px 0 160px;
+    margin: 0 0 160px;
   }
 }
 main .news .page-number ul {
@@ -342,7 +404,6 @@ main .news .page-number ul {
   align-items: center;
   width: 245px;
   margin: auto;
-  background-color: aquamarine;
 }
 @media only screen and (min-width: 1024px) {
   main .news .page-number ul {
