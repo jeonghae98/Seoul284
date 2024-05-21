@@ -565,9 +565,12 @@ main section.box2 {
 }
 @media only screen and (min-width: 1024px) {
   main section.box2 {
+    border: none;
+    border-bottom: 1px solid black;
     background-image: url(../images/1925_bg.jpg);
     background-position-x: 500px;
     background-size: cover;
+    background-color: #c2c2c2;
   }
 }
 main section.box2 .box2-line {
@@ -578,8 +581,19 @@ main section.box2 .box2-line {
   border-right: none;
   border-top: none;
 }
+@media only screen and (min-width: 1024px) {
+  main section.box2 .box2-line {
+    border: none;
+  }
+}
 main section.box2 .box2-line .container .box2-txt {
   height: 100%;
+}
+@media only screen and (min-width: 1024px) {
+  main section.box2 .box2-line .container .box2-txt {
+    border-left: 2px solid black;
+    background-color: aqua;
+  }
 }
 main section.box2 .box2-line .container .box2-txt .box2-title {
   padding-top: 90px;
@@ -619,9 +633,21 @@ main section.box2 .box2-line .container .box2-txt ul.years {
   font-size: 1.2rem;
   color: #565656;
 }
+@media only screen and (min-width: 1024px) {
+  main section.box2 .box2-line .container .box2-txt ul.years {
+    text-align: right;
+  }
+}
 main section.box2 .box2-line .container .box2-txt ul.years li {
   list-style-type: circle;
   color: black;
+}
+@media only screen and (min-width: 1024px) {
+  main section.box2 .box2-line .container .box2-txt ul.years li {
+    padding-right: 58%;
+    text-align: right;
+    list-style: none;
+  }
 }
 main section.box2 .box2-line .container .box2-txt ul.years li span.orange {
   margin-top: 50px;

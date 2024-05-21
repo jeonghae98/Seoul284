@@ -392,10 +392,13 @@ main {
         background-size: cover;
         background-repeat: no-repeat;
         // background-position-x: -500px;
-        @include responsive(large-screens) {
+        @include responsive(large-screens) {       
+            border: none;
+            border-bottom: 1px solid black;
             background-image: url(../images/1925_bg.jpg);
             background-position-x: 500px;
             background-size: cover;
+            background-color: #c2c2c2;
         }
         .box2-line {
             width: 100%;
@@ -404,10 +407,19 @@ main {
             border-left: none;
             border-right: none;
             border-top: none;
+            // background-color: antiquewhite;
+            @include responsive(large-screens) {
+                border: none;
+            }
             .container {
                 .box2-txt {
                     height: 100%;
-                    // border: 1px dashed black;
+                    @include responsive(large-screens) {
+                        // margin: auto;
+                        border-left: 2px solid black;
+                        
+                        background-color: aqua;
+                    }
                     // background-color: antiquewhite;
                     .box2-title {
                         padding-top: 90px;
@@ -446,10 +458,19 @@ main {
                         font-weight: $font-regular;
                         font-size: 1.2rem;
                         color: #565656;
+                        @include responsive(large-screens) {
+                            text-align: right;
+                            // background-color: aqua;
+                        }
                         li {
                             list-style-type: circle;
                             color: black;
-                            // background-color: antiquewhite;    
+                            // background-color: antiquewhite; 
+                            @include responsive(large-screens) {
+                                padding-right: 58%;
+                                text-align: right; // 대형 화면에서 텍스트를 오른쪽으로 정렬
+                                list-style: none;
+                            }   
                             span.orange {
                                 margin-top: 50px;
                                 margin-bottom: 3px;
