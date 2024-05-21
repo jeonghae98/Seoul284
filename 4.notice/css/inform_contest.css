@@ -130,21 +130,25 @@ header .logo-gnb-rightmenu .logo-gnb-menu-box .main-menu {
     width: 616px;
     display: block;
   }
-  header .logo-gnb-rightmenu .logo-gnb-menu-box .main-menu .gnb {
-    display: flex;
-    justify-content: space-between;
-  }
-  header .logo-gnb-rightmenu .logo-gnb-menu-box .main-menu .gnb li a.gnb-title {
-    font-size: 1.1rem;
-    font-weight: 400;
-    color: #fff;
-  }
-  header .logo-gnb-rightmenu .logo-gnb-menu-box .main-menu .gnb li a.gnb-title:hover {
-    color: #ff6000;
-  }
-  header .logo-gnb-rightmenu .logo-gnb-menu-box .main-menu .gnb li .sub-menu {
-    display: none;
-  }
+}
+header .logo-gnb-rightmenu .logo-gnb-menu-box .main-menu .gnb {
+  display: flex;
+  justify-content: space-between;
+}
+header .logo-gnb-rightmenu .logo-gnb-menu-box .main-menu .gnb li a.gnb-title {
+  font-size: 1.1rem;
+  font-weight: 400;
+}
+header .logo-gnb-rightmenu .logo-gnb-menu-box .main-menu .gnb li a.gnb-title:hover {
+  color: #ff6000;
+}
+header .logo-gnb-rightmenu .logo-gnb-menu-box .main-menu .gnb li .sub-menu {
+  display: none;
+}
+header .logo-gnb-rightmenu .logo-gnb-menu-box .main-menu .gnb li .sub-menu-hover {
+  display: block;
+  display: flex;
+  flex-direction: column;
 }
 header .logo-gnb-rightmenu .logo-gnb-menu-box .right-menu {
   display: flex;
@@ -223,7 +227,7 @@ main {
   width: 100%;
 }
 main .inform .inform-title {
-  margin: 80px 0 35px;
+  margin: 80px 0 150px;
   text-align: center;
 }
 @media only screen and (min-width: 1024px) {
@@ -239,7 +243,7 @@ main .inform .menu-list {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  width: 464px;
+  width: 100%;
   margin: auto;
 }
 @media only screen and (min-width: 1024px) {
@@ -256,7 +260,7 @@ main .inform .menu-list {
 main .inform .menu-list ul {
   display: flex;
   justify-content: space-between;
-  width: 348px;
+  width: 250px;
 }
 @media only screen and (min-width: 1024px) {
   main .inform .menu-list ul {
@@ -266,7 +270,7 @@ main .inform .menu-list ul {
 }
 main .inform .menu-list ul li a {
   font-weight: 400;
-  font-size: 2.667rem;
+  font-size: 2.167rem;
 }
 @media only screen and (min-width: 1024px) {
   main .inform .menu-list ul li a {
@@ -296,15 +300,22 @@ main .inform .menu-list .search #search-box {
 }
 @media only screen and (min-width: 1024px) {
   main .inform .menu-list .search #search-box {
+    padding-left: 10px;
     display: block;
     width: 360px;
     height: 40px;
-    border: 1px solid #727272;
+    border: 2px solid #727272;
     border-radius: 10px;
   }
 }
+@media only screen and (min-width: 1024px) {
+  main .inform .menu-list .search #search-box:focus {
+    outline: none;
+  }
+}
 main .inform .menu-list .search img {
-  width: 37px;
+  width: 32px;
+  cursor: pointer;
 }
 @media only screen and (min-width: 1024px) {
   main .inform .menu-list .search img {
@@ -312,7 +323,7 @@ main .inform .menu-list .search img {
     right: 10px;
     top: 50%;
     transform: translateY(-50%);
-    width: 26px;
+    width: 20px;
   }
 }
 main .inform .list-box {
@@ -332,7 +343,7 @@ main .inform .list-box .list {
   display: flex;
   align-items: center;
   width: 100%;
-  height: 250px;
+  padding: 50px 0;
   border-top: 1px solid #d9d9d9;
   border-bottom: 1px solid #d9d9d9;
   cursor: pointer;
@@ -343,14 +354,14 @@ main .inform .list-box .list:hover {
 }
 @media only screen and (min-width: 1024px) {
   main .inform .list-box .list {
-    height: 170px;
+    padding: 40px 0;
   }
 }
 main .inform .list-box .list .list-number {
-  margin-left: 25px;
-  margin-right: 40px;
-  font-weight: 600;
-  font-size: 2rem;
+  margin-left: 3.67%;
+  margin-right: 5.9%;
+  font-weight: 500;
+  font-size: 1.667rem;
 }
 @media only screen and (min-width: 1024px) {
   main .inform .list-box .list .list-number {
@@ -360,7 +371,8 @@ main .inform .list-box .list .list-number {
   }
 }
 main .inform .list-box .list .list-content {
-  width: 500px;
+  display: inline;
+  width: 73.53%;
 }
 @media only screen and (min-width: 1024px) {
   main .inform .list-box .list .list-content {
@@ -371,7 +383,7 @@ main .inform .list-box .list .list-content {
   }
 }
 main .inform .list-box .list .list-content .list-title {
-  font-size: 2.333rem;
+  font-size: 1.833rem;
 }
 @media only screen and (min-width: 1024px) {
   main .inform .list-box .list .list-content .list-title {
@@ -383,6 +395,7 @@ main .inform .list-box .list .list-content .receipt ul {
   display: flex;
   align-items: center;
   margin-top: 20px;
+  width: 100%;
 }
 @media only screen and (min-width: 1024px) {
   main .inform .list-box .list .list-content .receipt ul {
@@ -397,27 +410,21 @@ main .inform .list-box .list .list-content .receipt ul .status {
   line-height: 35px;
   text-align: center;
   font-weight: 400;
-  font-size: 1.667rem;
+  font-size: 1.5rem;
   color: #fff;
   background-color: #ff6000;
-}
-@media only screen and (min-width: 1024px) {
-  main .inform .list-box .list .list-content .receipt ul .status {
-    font-size: 1.5rem;
-  }
 }
 main .inform .list-box .list .list-content .receipt ul .receipt-term {
   width: 430px;
 }
 main .inform .list-box .list .list-content .receipt ul .receipt-term p {
   font-weight: 400;
-  font-size: 1.667rem;
+  font-size: 1.5rem;
   color: #a1a1a1;
 }
 @media only screen and (min-width: 1024px) {
   main .inform .list-box .list .list-content .receipt ul .receipt-term p {
     width: 346px;
-    font-size: 1.5rem;
   }
 }
 main .inform .list-box .list:first-child {
@@ -430,7 +437,6 @@ main .inform .list-box .list:last-child {
 footer {
   position: relative;
   width: 100%;
-  background-color: coral;
 }
 footer .footer-img img {
   width: 100%;
@@ -448,17 +454,17 @@ footer .footerlogo-info .footer-content-box {
   footer .footerlogo-info .footer-content-box {
     display: flex;
     width: 82%;
-    height: 176px;
+    height: 150px;
   }
 }
 footer .footerlogo-info .footer-content-box .footer-logo {
   margin-bottom: 30px;
+  background-color: aquamarine;
 }
 @media only screen and (min-width: 1024px) {
   footer .footerlogo-info .footer-content-box .footer-logo {
-    margin: 15px 90px 50px 0;
-    width: 32%;
-    background-color: aquamarine;
+    margin: 0 6% 0 0;
+    width: 290px;
   }
 }
 footer .footerlogo-info .footer-content-box .footer-logo h2 {
@@ -468,7 +474,7 @@ footer .footerlogo-info .footer-content-box .footer-logo h2 {
 @media only screen and (min-width: 1024px) {
   footer .footerlogo-info .footer-content-box .footer-logo h2 {
     line-height: 1.2;
-    font-size: 3.333rem;
+    font-size: 3.75rem;
   }
 }
 footer .footerlogo-info .footer-content-box .footer-info-box {
@@ -499,14 +505,14 @@ footer .footerlogo-info .footer-content-box .footer-info-box .info div strong {
 @media only screen and (min-width: 1024px) {
   footer .footerlogo-info .footer-content-box .footer-info-box .info div strong {
     margin-bottom: 15px;
-    font-size: 1.5rem;
+    font-size: 1.167rem;
   }
 }
 footer .footerlogo-info .footer-content-box .footer-info-box .info div .long-line {
   position: relative;
   z-index: 1;
   width: 100%;
-  height: 1px;
+  height: 2px;
   margin: 10px 0;
   background-color: #b0afaf;
 }
@@ -557,27 +563,17 @@ footer .footerlogo-info .footer-content-box .footer-info-box .info .txt {
 @media only screen and (min-width: 1024px) {
   footer .footerlogo-info .footer-content-box .footer-info-box .info .txt {
     width: 75%;
-    font-size: 1.167rem;
+    font-size: 1rem;
   }
 }
 footer .footerlogo-info .footer-content-box .footer-info-box .copyright {
   width: 100%;
-  margin-top: 15px;
-}
-@media only screen and (min-width: 1024px) {
-  footer .footerlogo-info .footer-content-box .footer-info-box .copyright {
-    background-color: blanchedalmond;
-  }
+  margin-top: 0;
 }
 footer .footerlogo-info .footer-content-box .footer-info-box .copyright p {
   font-weight: 400;
   font-size: 0.83rem;
   color: #b0afaf;
-}
-@media only screen and (min-width: 1024px) {
-  footer .footerlogo-info .footer-content-box .footer-info-box .copyright p {
-    font-size: 0.833rem;
-  }
 }
 footer .fixed-menu {
   position: fixed;

@@ -9,7 +9,7 @@
     width: $width-wide;
     max-width: 1440px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 2.777%;
     // background-color: antiquewhite;
 
     @include responsive(large-screens) {
@@ -30,7 +30,7 @@ main {
 
     .inform {
         .inform-title {
-            margin: 80px 0 35px;
+            margin: 80px 0 150px;
             text-align: center;
             // background-color: aquamarine;
             
@@ -49,7 +49,7 @@ main {
             flex-direction: row;
             justify-content: space-between;
             align-items: center;
-            width: 464px;
+            width: $width-wide;
             margin: auto;
             
             @include responsive(large-screens) {
@@ -65,7 +65,7 @@ main {
             ul {
                 display: flex;
                 justify-content: space-between;
-                width: 348px;
+                width: 250px;
 
                 @include responsive(large-screens) {
                     margin-left: 150px;
@@ -76,7 +76,7 @@ main {
                     a {
                         font: {
                             weight: $font-regular;
-                            size: 2.667rem;  // 32pt
+                            size: 2.167rem;  // 26pt
                         }
 
                         @include responsive(large-screens) {
@@ -115,7 +115,7 @@ main {
                     @include responsive(large-screens) {
                         padding-left: 10px;
                         display: block;
-                        width: 360px;
+                        width: $width-wide;
                         height: 40px;
                         border: 2px solid #727272;
                         border-radius: 10px;
@@ -129,7 +129,7 @@ main {
                 }
 
                 img {
-                    width: 37px;
+                    width: 32px;
                     cursor: pointer;
 
                     @include responsive(large-screens) {
@@ -141,6 +141,7 @@ main {
                 }
             }
         }  // menu-list
+
 
         .list-box {
             display: flex;
@@ -166,23 +167,22 @@ main {
 
                 ul {
                     display: flex;
-                    // justify-content: space-around;
                     align-items: center;
                     width: $width-wide;
-                    height: 250px;
+                    padding: 50px 0;
 
                     @include responsive(large-screens) {
-                        height: 170px;
+                        padding: 40px 0;
                     }
         
                     .fixed-number,
                     .list-number {
-                        margin-left: 25px;
-                        margin-right: 40px;
-                        width: 70px;
+                        margin-left: 3.67%;  // 25px
+                        margin-right: 5.9%;  // 40px
+                        width: 10.3%;  // 70px
                         font: {
-                            weight: $font-semibold;
-                            size: 2rem;  // 24pt
+                            weight: $font-medium;
+                            size: 1.667rem;  // 20pt
                         }
                         text-align: center;
                         // background-color: aquamarine;
@@ -199,9 +199,9 @@ main {
                     }
                     
                     .list-title {
-                        width: 430px;
-                        margin-right: 40px;
-                        font-size: 2.333rem;  // 28pt
+                        width: 63.235%;  // 430px
+                        margin-right: 5.9%;  // 40px
+                        font-size: 1.833rem;  // 22pt
                         // background-color: aquamarine;
 
                         @include responsive(large-screens) {
@@ -211,19 +211,18 @@ main {
                     }
 
                     .list-date {
-                        margin-right: 15px;
+                        margin-right: 2.205%;  //15px
                         width: 150px;
                         font: {
                             weight: $font-regular;
-                            size: 1.667rem;  // 20pt
+                            size: 1.5rem;  // 18pt
                         }
                         color: $color-gray;
                         // background-color: aquamarine;
 
                         @include responsive(large-screens) {
                             // margin-right: 65px;
-                            width: 125px;
-                            font-size: 1.5rem;  // 18pt
+                            width: 140px;
                         }
                     }
                 }  // ul
@@ -236,6 +235,8 @@ main {
             }
         }  // list-box
 
+
+        
         .page-number {
             margin: auto;
             margin: -100px 0 180px;
@@ -248,9 +249,9 @@ main {
                 display: flex;
                 justify-content: flex-start;
                 align-items: center;
-                width: 300px;
+                width: 245px;
                 margin: auto;
-                // background-color: aquamarine;
+                background-color: aquamarine;
 
                 @include responsive(large-screens) {
                     width: 215px;
@@ -258,7 +259,9 @@ main {
 
                 li {
                     a {
-                        font-size: 2.333rem;  // 28pt
+                        font-size: 1.667rem;  // 20pt
+
+                        // font-size: 2.333rem;  // 28pt
 
                         @include responsive(large-screens) {
                             font-size: 1.333rem;  // 16pt
@@ -283,34 +286,6 @@ main {
                 .single-right-arrow {
                     padding-left: 32px;
                 }
-                // .left-arrow,
-                // .right-arrow {
-                //     ul {
-                //         // display: flex;
-                //         width: 55px;
-                //         // background-color: lightblue;
-                //     }
-                // }
-
-                // .left-arrow {
-                //     .double-left-arrow {
-                //         margin-right: 25px;
-                //     }
-                // }
-                // .num1 {
-                //     margin-left: 32px;
-                //     margin-right: 45px;
-                // }
-                // .num2 {
-                //     margin-right: 32px;
-                // }
-
-                // .right-arrow {
-                //     .single-right-arrow {
-                //         margin-right: 25px;
-                //     }
-                // }
-
             }
         }  // page-number
     }  // inform

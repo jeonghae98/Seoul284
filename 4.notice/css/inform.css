@@ -85,7 +85,7 @@ footer {
   width: 100%;
   max-width: 1440px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 2.777%;
 }
 @media only screen and (min-width: 1024px) {
   .container {
@@ -131,21 +131,25 @@ header .logo-gnb-rightmenu .logo-gnb-menu-box .main-menu {
     width: 616px;
     display: block;
   }
-  header .logo-gnb-rightmenu .logo-gnb-menu-box .main-menu .gnb {
-    display: flex;
-    justify-content: space-between;
-  }
-  header .logo-gnb-rightmenu .logo-gnb-menu-box .main-menu .gnb li a.gnb-title {
-    font-size: 1.1rem;
-    font-weight: 400;
-    color: #fff;
-  }
-  header .logo-gnb-rightmenu .logo-gnb-menu-box .main-menu .gnb li a.gnb-title:hover {
-    color: #ff6000;
-  }
-  header .logo-gnb-rightmenu .logo-gnb-menu-box .main-menu .gnb li .sub-menu {
-    display: none;
-  }
+}
+header .logo-gnb-rightmenu .logo-gnb-menu-box .main-menu .gnb {
+  display: flex;
+  justify-content: space-between;
+}
+header .logo-gnb-rightmenu .logo-gnb-menu-box .main-menu .gnb li a.gnb-title {
+  font-size: 1.1rem;
+  font-weight: 400;
+}
+header .logo-gnb-rightmenu .logo-gnb-menu-box .main-menu .gnb li a.gnb-title:hover {
+  color: #ff6000;
+}
+header .logo-gnb-rightmenu .logo-gnb-menu-box .main-menu .gnb li .sub-menu {
+  display: none;
+}
+header .logo-gnb-rightmenu .logo-gnb-menu-box .main-menu .gnb li .sub-menu-hover {
+  display: block;
+  display: flex;
+  flex-direction: column;
 }
 header .logo-gnb-rightmenu .logo-gnb-menu-box .right-menu {
   display: flex;
@@ -224,7 +228,7 @@ main {
   width: 100%;
 }
 main .inform .inform-title {
-  margin: 80px 0 35px;
+  margin: 80px 0 150px;
   text-align: center;
 }
 @media only screen and (min-width: 1024px) {
@@ -240,7 +244,7 @@ main .inform .menu-list {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  width: 464px;
+  width: 100%;
   margin: auto;
 }
 @media only screen and (min-width: 1024px) {
@@ -257,7 +261,7 @@ main .inform .menu-list {
 main .inform .menu-list ul {
   display: flex;
   justify-content: space-between;
-  width: 348px;
+  width: 250px;
 }
 @media only screen and (min-width: 1024px) {
   main .inform .menu-list ul {
@@ -267,7 +271,7 @@ main .inform .menu-list ul {
 }
 main .inform .menu-list ul li a {
   font-weight: 400;
-  font-size: 2.667rem;
+  font-size: 2.167rem;
 }
 @media only screen and (min-width: 1024px) {
   main .inform .menu-list ul li a {
@@ -299,7 +303,7 @@ main .inform .menu-list .search #search-box {
   main .inform .menu-list .search #search-box {
     padding-left: 10px;
     display: block;
-    width: 360px;
+    width: 100%;
     height: 40px;
     border: 2px solid #727272;
     border-radius: 10px;
@@ -311,7 +315,7 @@ main .inform .menu-list .search #search-box {
   }
 }
 main .inform .menu-list .search img {
-  width: 37px;
+  width: 32px;
   cursor: pointer;
 }
 @media only screen and (min-width: 1024px) {
@@ -349,20 +353,20 @@ main .inform .list-box .list ul {
   display: flex;
   align-items: center;
   width: 100%;
-  height: 250px;
+  padding: 50px 0;
 }
 @media only screen and (min-width: 1024px) {
   main .inform .list-box .list ul {
-    height: 170px;
+    padding: 40px 0;
   }
 }
 main .inform .list-box .list ul .fixed-number,
 main .inform .list-box .list ul .list-number {
-  margin-left: 25px;
-  margin-right: 40px;
-  width: 70px;
-  font-weight: 600;
-  font-size: 2rem;
+  margin-left: 3.67%;
+  margin-right: 5.9%;
+  width: 10.3%;
+  font-weight: 500;
+  font-size: 1.667rem;
   text-align: center;
 }
 @media only screen and (min-width: 1024px) {
@@ -378,9 +382,9 @@ main .inform .list-box .list ul .fixed-number {
   color: #ff6000;
 }
 main .inform .list-box .list ul .list-title {
-  width: 430px;
-  margin-right: 40px;
-  font-size: 2.333rem;
+  width: 63.235%;
+  margin-right: 5.9%;
+  font-size: 1.833rem;
 }
 @media only screen and (min-width: 1024px) {
   main .inform .list-box .list ul .list-title {
@@ -389,16 +393,15 @@ main .inform .list-box .list ul .list-title {
   }
 }
 main .inform .list-box .list ul .list-date {
-  margin-right: 15px;
+  margin-right: 2.205%;
   width: 150px;
   font-weight: 400;
-  font-size: 1.667rem;
+  font-size: 1.5rem;
   color: #a1a1a1;
 }
 @media only screen and (min-width: 1024px) {
   main .inform .list-box .list ul .list-date {
-    width: 125px;
-    font-size: 1.5rem;
+    width: 140px;
   }
 }
 main .inform .list-box .list:first-child {
@@ -420,8 +423,9 @@ main .inform .page-number ul {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  width: 300px;
+  width: 245px;
   margin: auto;
+  background-color: aquamarine;
 }
 @media only screen and (min-width: 1024px) {
   main .inform .page-number ul {
@@ -429,7 +433,7 @@ main .inform .page-number ul {
   }
 }
 main .inform .page-number ul li a {
-  font-size: 2.333rem;
+  font-size: 1.667rem;
 }
 @media only screen and (min-width: 1024px) {
   main .inform .page-number ul li a {
@@ -454,7 +458,6 @@ main .inform .page-number ul .single-right-arrow {
 footer {
   position: relative;
   width: 100%;
-  background-color: coral;
 }
 footer .footer-img img {
   width: 100%;
@@ -472,17 +475,17 @@ footer .footerlogo-info .footer-content-box {
   footer .footerlogo-info .footer-content-box {
     display: flex;
     width: 82%;
-    height: 176px;
+    height: 150px;
   }
 }
 footer .footerlogo-info .footer-content-box .footer-logo {
   margin-bottom: 30px;
+  background-color: aquamarine;
 }
 @media only screen and (min-width: 1024px) {
   footer .footerlogo-info .footer-content-box .footer-logo {
-    margin: 15px 90px 50px 0;
-    width: 32%;
-    background-color: aquamarine;
+    margin: 0 6% 0 0;
+    width: 290px;
   }
 }
 footer .footerlogo-info .footer-content-box .footer-logo h2 {
@@ -492,7 +495,7 @@ footer .footerlogo-info .footer-content-box .footer-logo h2 {
 @media only screen and (min-width: 1024px) {
   footer .footerlogo-info .footer-content-box .footer-logo h2 {
     line-height: 1.2;
-    font-size: 3.333rem;
+    font-size: 3.75rem;
   }
 }
 footer .footerlogo-info .footer-content-box .footer-info-box {
@@ -523,14 +526,14 @@ footer .footerlogo-info .footer-content-box .footer-info-box .info div strong {
 @media only screen and (min-width: 1024px) {
   footer .footerlogo-info .footer-content-box .footer-info-box .info div strong {
     margin-bottom: 15px;
-    font-size: 1.5rem;
+    font-size: 1.167rem;
   }
 }
 footer .footerlogo-info .footer-content-box .footer-info-box .info div .long-line {
   position: relative;
   z-index: 1;
   width: 100%;
-  height: 1px;
+  height: 2px;
   margin: 10px 0;
   background-color: #b0afaf;
 }
@@ -581,27 +584,17 @@ footer .footerlogo-info .footer-content-box .footer-info-box .info .txt {
 @media only screen and (min-width: 1024px) {
   footer .footerlogo-info .footer-content-box .footer-info-box .info .txt {
     width: 75%;
-    font-size: 1.167rem;
+    font-size: 1rem;
   }
 }
 footer .footerlogo-info .footer-content-box .footer-info-box .copyright {
   width: 100%;
-  margin-top: 15px;
-}
-@media only screen and (min-width: 1024px) {
-  footer .footerlogo-info .footer-content-box .footer-info-box .copyright {
-    background-color: blanchedalmond;
-  }
+  margin-top: 0;
 }
 footer .footerlogo-info .footer-content-box .footer-info-box .copyright p {
   font-weight: 400;
   font-size: 0.83rem;
   color: #b0afaf;
-}
-@media only screen and (min-width: 1024px) {
-  footer .footerlogo-info .footer-content-box .footer-info-box .copyright p {
-    font-size: 0.833rem;
-  }
 }
 footer .fixed-menu {
   position: fixed;
