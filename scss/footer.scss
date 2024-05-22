@@ -28,21 +28,21 @@
             position: relative;
             width: 84%;
             margin: 0 auto;
-            // background-color: lightpink;
+            background-color: lightpink;
 
             @include responsive(large-screens) {
                 display: flex;
                 width: 82%;  // 1180px  988
-                height: 176px;
+                height: 150px;
             }
 
             .footer-logo {
                 margin-bottom: 30px;
+                background-color: aquamarine;
 
                 @include responsive(large-screens) {
-                    margin: 15px 90px 50px 0;
-                    width: 32%;  
-                    // background-color: aquamarine;
+                    margin: 0 6% 0 0;
+                    width: 290px;  
                 }
 
                 h2 {
@@ -53,7 +53,7 @@
                     @include responsive(large-screens) {
                         line-height: 1.2;
                         font: {
-                            size: 3.333rem;  // 40pt
+                            size: 3.75rem;  // 40pt
                         }
                     }
                 }
@@ -73,7 +73,7 @@
                     display: flex;
                     justify-content: space-between;
                     // align-items: center;
-                    // background-color: lightblue;
+                    background-color: lightblue;
     
                     @include responsive(large-screens) {
                         width: 100%;  // 900px
@@ -90,7 +90,7 @@
                             @include responsive(large-screens) {
                                 margin-bottom: 15px;
                                 font: {
-                                    size: 1.5rem;  // 18pt
+                                    size: 1.167rem;  // 14pt
                                 }
                             }
                         }
@@ -99,7 +99,7 @@
                             position: relative;
                             z-index: 1;
                             width: $width-wide;
-                            height: 1px;
+                            height: 2px;
                             margin: 10px 0;
                             background-color: $footer-gray; 
     
@@ -141,6 +141,7 @@
                     
                     .txt {
                         width: 80%;
+                        // background-color: aqua;
                         font: {
                             weight: $font-regular;
                             size: 0.83rem;  // 10pt 13px
@@ -149,14 +150,14 @@
 
                         @include responsive(large-screens) {
                             width: 75%;
-                            font-size: 1.167rem;  // 14pt
+                            font-size: 1rem;  // 12pt
                         }
                     }
                 }  // info
     
                 .copyright {
                     width: $width-wide;
-                    margin-top: 15px;
+                    margin-top: 0;
                     // background-color: blanchedalmond;
                     
                     p {
@@ -165,11 +166,11 @@
                             size: 0.83rem;  // 10pt 13px;
                         }
                         color: $footer-gray;
-                        @include responsive(large-screens) {
-                            font: {
-                                size: 0.833rem;  // 10pt
-                            }
-                        }
+                        // @include responsive(large-screens) {
+                        //     font: {
+                        //         size: 0.833rem;  // 10pt
+                        //     }
+                        // }
                     }
                 }  // copyright
             }  // footer-info-box

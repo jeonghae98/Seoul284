@@ -10,7 +10,7 @@
     max-width: 1440px;
     margin: 0 auto;
     padding: 0 20px;
-    // background-color: antiquewhite;
+    background-color: antiquewhite;
 
     @include responsive(large-screens) {
         padding: 0;
@@ -388,93 +388,222 @@ main {
     // height: 3250px;
     background-color: lightcyan;
 
-    // .exhibition-row-line {
-    //     div {
-    //         position: absolute;
-    //         left: 0; top: 118px;
-    //         width: 94.44%;
-    //         height: 1px;
-    //         border: 1px solid $line-gray;
-    //     }
-    // }
-
     .exhibition-title {
         margin: 110px 0 60px;
-        font-size: 4.167rem;  //50pt
+        font-size: 3.333rem;  //40pt
+
+        @include responsive(large-screens) {
+            margin-bottom: 65px;
+            font-size: 5rem;  // 60pt
+        }
     }
 
     .exhibition-content {
-        margin: auto;
         
-        div {
-            padding: 65px 0 48px;
-            border-top: 1px solid $line-gray;
-            img {
-                margin: auto;
+        div.ex {
+            @include responsive(large-screens) {
+                border-top: 2px solid $line-gray;
             }
-            .title {
-                margin-top: 50px;
-                font-size: 2.333rem; // 28pt
-            }
-        }
+
+            .content-box {
+                display: flex;
+                border-top: 2px solid $line-gray;
+
+                @include responsive(large-screens) {
+                    padding: 0;
+                    border: 0;
+                }
+
+                .ex-img {
+                    img {
+                        margin: auto;
+                    }
+                }
+
+                .ex-txt {
+                    @include responsive(large-screens) {
+                        position: relative;
+                        background-color: lightgoldenrodyellow;
+                        margin: 50px 30px 50px;
+                    }
+
+                    .title {
+                        margin-top: 50px;
+                        font-size: 1.5rem; // 18pt
+                        background-color: #ffccac;
+    
+                        @include responsive(large-screens) {
+                            position: absolute;
+                            bottom: 0;
+                        }
+                    }
+                }
+            }  // content-box
+        }  //div.ex
+
 
         .exhibition1 {
-            img {
-                width: 650px;
-            }
-        }
+            .content-box {
+                flex-direction: row-reverse;
+                .ex-img {
+                    @include responsive(large-screens) {
+                        padding: 50px 0 50px;
+                        width: 900px;
+                        border-left: 2px solid $line-gray;
+                    }
+                    img {
+                        width: 650px;
+                        
+                        @include responsive(large-screens) {
+                            width: 840px;
+                        }
+                    }
+                }
+
+                .ex-txt {
+                    @include responsive(large-screens) {
+                        width: 500px;
+                    }
+
+                    .title {
+                        @include responsive(large-screens) {
+                            right: 0;
+                        }
+                    }
+                }
+            }  // content-box
+        }  // exhibition1
 
         .exhibition2 {
-            img {
-                width: 645px;
-            }
-        }
+            .content-box {
+                .ex-img {
+                    @include responsive(large-screens) {
+                        padding: 50px 0 50px;
+                        width: 705px;
+                        border-right: 2px solid $line-gray;
+                    }
+
+                    img {
+                        width: 645px;
+                    }
+                }
+
+                .ex-txt {
+                    @include responsive(large-screens) {
+                        width: 580px;
+                    }
+
+                    .title {
+                        @include responsive(large-screens) {
+                            left: 0;
+                        }
+                    }
+                }
+            }  //content-box
+        }  // exhibition2
 
         .exhibition3 {
-            img {
-                width: 460px;
-            }
-        }
+            .content-box {
+                flex-direction: row-reverse;
+                .ex-img {
+                    @include responsive(large-screens) {
+                        padding: 50px 0 50px;
+                        width: 420px;
+                        border-left: 2px solid $line-gray;
+                    }
+
+                    img {
+                        width: 460px;
+                        
+                        @include responsive(large-screens) {
+                            width: 360px;
+                        }
+                    }
+                }
+
+                .ex-txt {
+                    @include responsive(large-screens) {
+                        width: 540px;
+                    }
+
+                    .title {
+                        @include responsive(large-screens) {
+                            right: 0;
+                        }
+                    }
+                }
+            }  // content-box
+        }   // exhibition3
 
         .exhibition4 {
-            // border-bottom: 1px solid $line-gray;
-            img {
-                width: 652px;
-            }
-        }
+            .content-box {
+                flex-direction: row-reverse;
+                border-bottom: 2px solid $line-gray;
+
+                .ex-img {
+                    @include responsive(large-screens) {
+                        padding: 50px 0 50px;
+                        width: 930px;
+                        border-left: 2px solid $line-gray;
+                    }
+
+                    img {
+                        width: 652px;
+
+                        @include responsive(large-screens) {
+                            width: 870px;
+                        }
+                    }
+                }
+
+                .ex-txt {
+                    @include responsive(large-screens) {
+                        width: 500px;
+                    }
+
+                    .title {
+                        @include responsive(large-screens) {
+                            right: 0;
+                        }
+                    }
+                }
+            }  // content-box
+        }  // exhibition4
 
         .arrow-button {
-            padding: 0;
-            margin: 0;
-            border-bottom: 1px solid $line-gray;
-
-            ul {
-                display: flex;
-                flex-direction: row;
-                flex-wrap: nowrap;
-                // align-items: center;
-                width: $width-wide;
-                height: 70px;
+            .detail-btn {
+                padding: 0;
+                margin: 0;
+                border-bottom: 2px solid $line-gray;
     
-                .empty {
-                    width: 560px;
-                    height: $height-wide;
-                }
-                .arrow {
-                    width: 120px;
+                ul {
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: nowrap;
+                    // align-items: center;
+                    width: $width-wide;
                     height: 70px;
-                    align-items: center;
-                    line-height: 70px;
-                    // background-color: lightcoral;
-                    
-                    a {
-                        border-left: 1px solid $line-gray;
-                        font: {
-                            weight: $font-thin;
-                            size: 2.5rem;  // 30pt
+        
+                    .empty {
+                        width: 560px;
+                        height: $height-wide;
+                    }
+                    .arrow {
+                        width: 120px;
+                        height: 70px;
+                        align-items: center;
+                        line-height: 70px;
+                        // background-color: lightcoral;
+                        
+                        a {
+                            border-left: 2px solid $line-gray;
+                            font: {
+                                weight: $font-thin;
+                                size: 2.5rem;  // 30pt
+                            }
+                            text-align: center;
+                            color: $line-gray;
                         }
-                        text-align: center;
-                        color: $line-gray;
                     }
                 }
             }

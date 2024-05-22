@@ -86,7 +86,6 @@ footer {
   max-width: 1440px;
   margin: 0 auto;
   padding: 0 2.777%;
-  background-color: antiquewhite;
 }
 @media only screen and (min-width: 1024px) {
   .container {
@@ -316,7 +315,7 @@ main .news .news-content-box div.row-box .box {
 @media only screen and (min-width: 1024px) {
   main .news .news-content-box div.row-box .box {
     margin-right: 26.6px;
-    margin-bottom: 26.6px;
+    margin-bottom: 50px;
     width: 340px;
   }
 }
@@ -351,7 +350,7 @@ main .news .news-content-box div.row-box .box .news-txt {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 220px;
+    height: 210px;
   }
 }
 main .news .news-content-box div.row-box .box .news-txt .news-content-title {
@@ -362,8 +361,9 @@ main .news .news-content-box div.row-box .box .news-txt .news-content-title {
 }
 @media only screen and (min-width: 1024px) {
   main .news .news-content-box div.row-box .box .news-txt .news-content-title {
+    margin-bottom: 0;
     font-weight: 400;
-    font-size: 1.5rem;
+    font-size: 1.167rem;
   }
 }
 main .news .news-content-box div.row-box .box .news-txt time {
@@ -411,6 +411,7 @@ main .news .page-number ul {
   }
 }
 main .news .page-number ul li a {
+  font-weight: 400;
   font-size: 1.667rem;
 }
 @media only screen and (min-width: 1024px) {
@@ -436,7 +437,6 @@ main .news .page-number ul .single-right-arrow {
 footer {
   position: relative;
   width: 100%;
-  background-color: coral;
 }
 footer .footer-img img {
   width: 100%;
@@ -454,17 +454,17 @@ footer .footerlogo-info .footer-content-box {
   footer .footerlogo-info .footer-content-box {
     display: flex;
     width: 82%;
-    height: 176px;
+    height: 150px;
   }
 }
 footer .footerlogo-info .footer-content-box .footer-logo {
   margin-bottom: 30px;
+  background-color: aquamarine;
 }
 @media only screen and (min-width: 1024px) {
   footer .footerlogo-info .footer-content-box .footer-logo {
-    margin: 15px 90px 50px 0;
-    width: 32%;
-    background-color: aquamarine;
+    margin: 0 6% 0 0;
+    width: 290px;
   }
 }
 footer .footerlogo-info .footer-content-box .footer-logo h2 {
@@ -474,7 +474,7 @@ footer .footerlogo-info .footer-content-box .footer-logo h2 {
 @media only screen and (min-width: 1024px) {
   footer .footerlogo-info .footer-content-box .footer-logo h2 {
     line-height: 1.2;
-    font-size: 3.333rem;
+    font-size: 3.75rem;
   }
 }
 footer .footerlogo-info .footer-content-box .footer-info-box {
@@ -505,14 +505,14 @@ footer .footerlogo-info .footer-content-box .footer-info-box .info div strong {
 @media only screen and (min-width: 1024px) {
   footer .footerlogo-info .footer-content-box .footer-info-box .info div strong {
     margin-bottom: 15px;
-    font-size: 1.5rem;
+    font-size: 1.167rem;
   }
 }
 footer .footerlogo-info .footer-content-box .footer-info-box .info div .long-line {
   position: relative;
   z-index: 1;
   width: 100%;
-  height: 1px;
+  height: 2px;
   margin: 10px 0;
   background-color: #b0afaf;
 }
@@ -563,27 +563,17 @@ footer .footerlogo-info .footer-content-box .footer-info-box .info .txt {
 @media only screen and (min-width: 1024px) {
   footer .footerlogo-info .footer-content-box .footer-info-box .info .txt {
     width: 75%;
-    font-size: 1.167rem;
+    font-size: 1rem;
   }
 }
 footer .footerlogo-info .footer-content-box .footer-info-box .copyright {
   width: 100%;
-  margin-top: 15px;
-}
-@media only screen and (min-width: 1024px) {
-  footer .footerlogo-info .footer-content-box .footer-info-box .copyright {
-    background-color: blanchedalmond;
-  }
+  margin-top: 0;
 }
 footer .footerlogo-info .footer-content-box .footer-info-box .copyright p {
   font-weight: 400;
   font-size: 0.83rem;
   color: #b0afaf;
-}
-@media only screen and (min-width: 1024px) {
-  footer .footerlogo-info .footer-content-box .footer-info-box .copyright p {
-    font-size: 0.833rem;
-  }
 }
 footer .fixed-menu {
   position: fixed;

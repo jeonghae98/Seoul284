@@ -89,6 +89,7 @@ footer {
   max-width: 1440px;
   margin: 0 auto;
   padding: 0 20px;
+  background-color: antiquewhite;
 }
 @media only screen and (min-width: 1024px) {
   .container {
@@ -542,58 +543,179 @@ main .main-collection .collection-image .image-row3 {
 }
 .exhibition .exhibition-title {
   margin: 110px 0 60px;
-  font-size: 4.167rem;
+  font-size: 3.333rem;
 }
-.exhibition .exhibition-content {
+@media only screen and (min-width: 1024px) {
+  .exhibition .exhibition-title {
+    margin-bottom: 65px;
+    font-size: 5rem;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .exhibition .exhibition-content div.ex {
+    border-top: 2px solid #dbdbdb;
+  }
+}
+.exhibition .exhibition-content div.ex .content-box {
+  display: flex;
+  border-top: 2px solid #dbdbdb;
+}
+@media only screen and (min-width: 1024px) {
+  .exhibition .exhibition-content div.ex .content-box {
+    padding: 0;
+    border: 0;
+  }
+}
+.exhibition .exhibition-content div.ex .content-box .ex-img img {
   margin: auto;
 }
-.exhibition .exhibition-content div {
-  padding: 65px 0 48px;
-  border-top: 1px solid #dbdbdb;
+@media only screen and (min-width: 1024px) {
+  .exhibition .exhibition-content div.ex .content-box .ex-txt {
+    position: relative;
+    background-color: lightgoldenrodyellow;
+    margin: 50px 30px 50px;
+  }
 }
-.exhibition .exhibition-content div img {
-  margin: auto;
-}
-.exhibition .exhibition-content div .title {
+.exhibition .exhibition-content div.ex .content-box .ex-txt .title {
   margin-top: 50px;
-  font-size: 2.333rem;
+  font-size: 1.5rem;
+  background-color: #ffccac;
 }
-.exhibition .exhibition-content .exhibition1 img {
+@media only screen and (min-width: 1024px) {
+  .exhibition .exhibition-content div.ex .content-box .ex-txt .title {
+    position: absolute;
+    bottom: 0;
+  }
+}
+.exhibition .exhibition-content .exhibition1 .content-box {
+  flex-direction: row-reverse;
+}
+@media only screen and (min-width: 1024px) {
+  .exhibition .exhibition-content .exhibition1 .content-box .ex-img {
+    padding: 50px 0 50px;
+    width: 900px;
+    border-left: 2px solid #dbdbdb;
+  }
+}
+.exhibition .exhibition-content .exhibition1 .content-box .ex-img img {
   width: 650px;
 }
-.exhibition .exhibition-content .exhibition2 img {
+@media only screen and (min-width: 1024px) {
+  .exhibition .exhibition-content .exhibition1 .content-box .ex-img img {
+    width: 840px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .exhibition .exhibition-content .exhibition1 .content-box .ex-txt {
+    width: 500px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .exhibition .exhibition-content .exhibition1 .content-box .ex-txt .title {
+    right: 0;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .exhibition .exhibition-content .exhibition2 .content-box .ex-img {
+    padding: 50px 0 50px;
+    width: 705px;
+    border-right: 2px solid #dbdbdb;
+  }
+}
+.exhibition .exhibition-content .exhibition2 .content-box .ex-img img {
   width: 645px;
 }
-.exhibition .exhibition-content .exhibition3 img {
+@media only screen and (min-width: 1024px) {
+  .exhibition .exhibition-content .exhibition2 .content-box .ex-txt {
+    width: 580px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .exhibition .exhibition-content .exhibition2 .content-box .ex-txt .title {
+    left: 0;
+  }
+}
+.exhibition .exhibition-content .exhibition3 .content-box {
+  flex-direction: row-reverse;
+}
+@media only screen and (min-width: 1024px) {
+  .exhibition .exhibition-content .exhibition3 .content-box .ex-img {
+    padding: 50px 0 50px;
+    width: 420px;
+    border-left: 2px solid #dbdbdb;
+  }
+}
+.exhibition .exhibition-content .exhibition3 .content-box .ex-img img {
   width: 460px;
 }
-.exhibition .exhibition-content .exhibition4 img {
+@media only screen and (min-width: 1024px) {
+  .exhibition .exhibition-content .exhibition3 .content-box .ex-img img {
+    width: 360px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .exhibition .exhibition-content .exhibition3 .content-box .ex-txt {
+    width: 540px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .exhibition .exhibition-content .exhibition3 .content-box .ex-txt .title {
+    right: 0;
+  }
+}
+.exhibition .exhibition-content .exhibition4 .content-box {
+  flex-direction: row-reverse;
+  border-bottom: 2px solid #dbdbdb;
+}
+@media only screen and (min-width: 1024px) {
+  .exhibition .exhibition-content .exhibition4 .content-box .ex-img {
+    padding: 50px 0 50px;
+    width: 930px;
+    border-left: 2px solid #dbdbdb;
+  }
+}
+.exhibition .exhibition-content .exhibition4 .content-box .ex-img img {
   width: 652px;
 }
-.exhibition .exhibition-content .arrow-button {
+@media only screen and (min-width: 1024px) {
+  .exhibition .exhibition-content .exhibition4 .content-box .ex-img img {
+    width: 870px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .exhibition .exhibition-content .exhibition4 .content-box .ex-txt {
+    width: 500px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .exhibition .exhibition-content .exhibition4 .content-box .ex-txt .title {
+    right: 0;
+  }
+}
+.exhibition .exhibition-content .arrow-button .detail-btn {
   padding: 0;
   margin: 0;
-  border-bottom: 1px solid #dbdbdb;
+  border-bottom: 2px solid #dbdbdb;
 }
-.exhibition .exhibition-content .arrow-button ul {
+.exhibition .exhibition-content .arrow-button .detail-btn ul {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   width: 100%;
   height: 70px;
 }
-.exhibition .exhibition-content .arrow-button ul .empty {
+.exhibition .exhibition-content .arrow-button .detail-btn ul .empty {
   width: 560px;
   height: 100%;
 }
-.exhibition .exhibition-content .arrow-button ul .arrow {
+.exhibition .exhibition-content .arrow-button .detail-btn ul .arrow {
   width: 120px;
   height: 70px;
   align-items: center;
   line-height: 70px;
 }
-.exhibition .exhibition-content .arrow-button ul .arrow a {
-  border-left: 1px solid #dbdbdb;
+.exhibition .exhibition-content .arrow-button .detail-btn ul .arrow a {
+  border-left: 2px solid #dbdbdb;
   font-weight: 100;
   font-size: 2.5rem;
   text-align: center;
@@ -684,7 +806,6 @@ main .main-collection .collection-image .image-row3 {
 footer {
   position: relative;
   width: 100%;
-  background-color: coral;
 }
 footer .footer-img img {
   width: 100%;
@@ -702,17 +823,17 @@ footer .footerlogo-info .footer-content-box {
   footer .footerlogo-info .footer-content-box {
     display: flex;
     width: 82%;
-    height: 176px;
+    height: 150px;
   }
 }
 footer .footerlogo-info .footer-content-box .footer-logo {
   margin-bottom: 30px;
+  background-color: aquamarine;
 }
 @media only screen and (min-width: 1024px) {
   footer .footerlogo-info .footer-content-box .footer-logo {
-    margin: 15px 90px 50px 0;
-    width: 32%;
-    background-color: aquamarine;
+    margin: 0 6% 0 0;
+    width: 290px;
   }
 }
 footer .footerlogo-info .footer-content-box .footer-logo h2 {
@@ -722,7 +843,7 @@ footer .footerlogo-info .footer-content-box .footer-logo h2 {
 @media only screen and (min-width: 1024px) {
   footer .footerlogo-info .footer-content-box .footer-logo h2 {
     line-height: 1.2;
-    font-size: 3.333rem;
+    font-size: 3.75rem;
   }
 }
 footer .footerlogo-info .footer-content-box .footer-info-box {
@@ -753,14 +874,14 @@ footer .footerlogo-info .footer-content-box .footer-info-box .info div strong {
 @media only screen and (min-width: 1024px) {
   footer .footerlogo-info .footer-content-box .footer-info-box .info div strong {
     margin-bottom: 15px;
-    font-size: 1.5rem;
+    font-size: 1.167rem;
   }
 }
 footer .footerlogo-info .footer-content-box .footer-info-box .info div .long-line {
   position: relative;
   z-index: 1;
   width: 100%;
-  height: 1px;
+  height: 2px;
   margin: 10px 0;
   background-color: #b0afaf;
 }
@@ -811,27 +932,17 @@ footer .footerlogo-info .footer-content-box .footer-info-box .info .txt {
 @media only screen and (min-width: 1024px) {
   footer .footerlogo-info .footer-content-box .footer-info-box .info .txt {
     width: 75%;
-    font-size: 1.167rem;
+    font-size: 1rem;
   }
 }
 footer .footerlogo-info .footer-content-box .footer-info-box .copyright {
   width: 100%;
-  margin-top: 15px;
-}
-@media only screen and (min-width: 1024px) {
-  footer .footerlogo-info .footer-content-box .footer-info-box .copyright {
-    background-color: blanchedalmond;
-  }
+  margin-top: 0;
 }
 footer .footerlogo-info .footer-content-box .footer-info-box .copyright p {
   font-weight: 400;
   font-size: 0.83rem;
   color: #b0afaf;
-}
-@media only screen and (min-width: 1024px) {
-  footer .footerlogo-info .footer-content-box .footer-info-box .copyright p {
-    font-size: 0.833rem;
-  }
 }
 footer .fixed-menu {
   position: fixed;

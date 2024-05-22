@@ -462,7 +462,6 @@ main .detail-page .list-box .list-btn a {
 footer {
   position: relative;
   width: 100%;
-  background-color: coral;
 }
 footer .footer-img img {
   width: 100%;
@@ -480,17 +479,17 @@ footer .footerlogo-info .footer-content-box {
   footer .footerlogo-info .footer-content-box {
     display: flex;
     width: 82%;
-    height: 176px;
+    height: 150px;
   }
 }
 footer .footerlogo-info .footer-content-box .footer-logo {
   margin-bottom: 30px;
+  background-color: aquamarine;
 }
 @media only screen and (min-width: 1024px) {
   footer .footerlogo-info .footer-content-box .footer-logo {
-    margin: 15px 90px 50px 0;
-    width: 32%;
-    background-color: aquamarine;
+    margin: 0 6% 0 0;
+    width: 290px;
   }
 }
 footer .footerlogo-info .footer-content-box .footer-logo h2 {
@@ -500,7 +499,7 @@ footer .footerlogo-info .footer-content-box .footer-logo h2 {
 @media only screen and (min-width: 1024px) {
   footer .footerlogo-info .footer-content-box .footer-logo h2 {
     line-height: 1.2;
-    font-size: 3.333rem;
+    font-size: 3.75rem;
   }
 }
 footer .footerlogo-info .footer-content-box .footer-info-box {
@@ -531,14 +530,14 @@ footer .footerlogo-info .footer-content-box .footer-info-box .info div strong {
 @media only screen and (min-width: 1024px) {
   footer .footerlogo-info .footer-content-box .footer-info-box .info div strong {
     margin-bottom: 15px;
-    font-size: 1.5rem;
+    font-size: 1.167rem;
   }
 }
 footer .footerlogo-info .footer-content-box .footer-info-box .info div .long-line {
   position: relative;
   z-index: 1;
   width: 100%;
-  height: 1px;
+  height: 2px;
   margin: 10px 0;
   background-color: #b0afaf;
 }
@@ -589,27 +588,17 @@ footer .footerlogo-info .footer-content-box .footer-info-box .info .txt {
 @media only screen and (min-width: 1024px) {
   footer .footerlogo-info .footer-content-box .footer-info-box .info .txt {
     width: 75%;
-    font-size: 1.167rem;
+    font-size: 1rem;
   }
 }
 footer .footerlogo-info .footer-content-box .footer-info-box .copyright {
   width: 100%;
-  margin-top: 15px;
-}
-@media only screen and (min-width: 1024px) {
-  footer .footerlogo-info .footer-content-box .footer-info-box .copyright {
-    background-color: blanchedalmond;
-  }
+  margin-top: 0;
 }
 footer .footerlogo-info .footer-content-box .footer-info-box .copyright p {
   font-weight: 400;
   font-size: 0.83rem;
   color: #b0afaf;
-}
-@media only screen and (min-width: 1024px) {
-  footer .footerlogo-info .footer-content-box .footer-info-box .copyright p {
-    font-size: 0.833rem;
-  }
 }
 footer .fixed-menu {
   position: fixed;
