@@ -43,11 +43,10 @@ main {
             h2 {
                 margin: 120px 0 50px 0;
                 font: {
-                   weight : $font-regular;
+                    font-weight: $font-semibold;
                    size : 2.5rem;
                 }
                 text-align: center;
-
                 animation-duration: 0.5s;
                 animation-name: move;
 
@@ -59,7 +58,7 @@ main {
 
                 @include responsive(large-screens) {
                     font-size: 3rem;
-                    font-weight: $font-regular;
+                    font-weight: $font-semibold;
                     // background-color: aqua;
                 }
             }
@@ -82,7 +81,7 @@ main {
 
                 @include responsive(large-screens) {
                     width: 100%;
-                    font-size: 1.2rem;
+                    font-size: 1rem;
                     // background-color: antiquewhite;
                 }
             }
@@ -162,9 +161,9 @@ main {
         margin-top: 50px;
         background-color:$color-main;
     }
-
+////////////////////////////////////////////////////
     section.box1 {
-        position: relative;
+        // position: relative;
         width: 100%; height:auto;
         border: 1px dashed black;
         border-left: none;
@@ -175,7 +174,9 @@ main {
         background-repeat: no-repeat;
         background-position-x: -700px;
         @include responsive(large-screens) {
+            position: relative;
             width: 100%;
+            height:1000px;
             // height: 880px;
             background-image: url(../images/1900_bg.png);
             background-position-x: -200px;
@@ -190,13 +191,19 @@ main {
             border-right: none;
             border-top: none;
             @include responsive(large-screens) {
-                // height: 878px;
+                width: 100%;
+                height: 997px;
+                margin-bottom: 2px;
+                border: 1px dashed black;
+                border-left: none;
+                border-right: none;
+                border-top: none;
             }
             .container {
                 .box1-txt {
                     height: 100%;
                     @include responsive(large-screens) {
-                        // height: 500px;
+                        height: 996px;
                         // background-color: aqua;
                     }
                     // border: 1px dashed black;
@@ -204,6 +211,10 @@ main {
                     .box1-title {
                         padding-top: 90px;
                         // background-color: aqua;
+                        @include responsive(large-screens) {
+                            padding-top: 130px;
+                            // background-color: antiquewhite;
+                        }
                         h2 {
                             width: 53%; 
                             margin: 0 auto;
@@ -212,8 +223,12 @@ main {
                             font-size: 25px;
                             // background-color: gray;
                             @include responsive(large-screens) {
+                                width: 100%;
+                                font-size: 2.5rem;
                                 margin-top: 3%;
                                 margin-left: 54%;
+
+                                background-color: #c2c2c2;
                             }
                         }
                         p {
@@ -227,6 +242,8 @@ main {
                                 width: 30%;
                                 margin-bottom: 1%;
                                 margin-left: 54%;
+                                color: #adadad;
+                                background-color: aqua;
                             }
                     }
                     }
@@ -238,7 +255,7 @@ main {
                         color: #565656;
                       
                         li {
-                            list-style-type: circle;
+                            list-style-type: none;
                             color: black;
                             // background-color: antiquewhite;  
                             @include responsive(large-screens) {
@@ -247,8 +264,12 @@ main {
                                 text-align: left;
                                 font-size: 1.1rem;
                                 font-weight: $font-semibold;
+                                 background-color: antiquewhite;
                             }  
                             span.orange {
+                                
+                                display: flex;
+                                align-items: center;
                                 margin-top: 50px;
                                 margin-bottom: 3px;
                                 font-weight: $font-semibold;
@@ -258,8 +279,14 @@ main {
                                     margin-top: 0;
                                     padding-top: 30px;
                                 }  
+                                span {
+                                    margin-right: 8px;
+                                    font-size: 0.5rem;
+                                }
                             }
                             span.black {
+                                display: flex;
+                                align-items: center;
                                 margin-top: 50px;
                                 margin-bottom: 3px;
                                 font-weight: $font-semibold;
@@ -267,16 +294,28 @@ main {
                                 @include responsive(large-screens) {
                                     margin-top: 0;
                                     padding-top: 30px;
+                                    padding-left: 4px;
                                     // background-color: aqua;
                                 }  
+                                span {
+                                    margin-right: 8px;
+                                    font-size: 0.5rem;
+                                }
                             }
                         }
                         li:last-child {
                             padding-bottom: 150px;
+                            @include responsive(large-screens) {
+                    
+                                // background-color: antiquewhite;
+                            }
                         }
                     }
             
                     div.line-circle {
+                        @include responsive(large-screens) {
+                        
+                        }
                         div.vertical-dotted-line {
                             position: absolute; left: 9%; top: 0;
                             border: 0.5px dashed black;
@@ -292,6 +331,7 @@ main {
                                 position: absolute; left: 2px; top: 0;
                                 height: 100%;
                                 border: 0.5px dashed black;
+                                
                                 div.outer-cicle {
                                     position: absolute; 
                                     left: -9px; top: 110px;
@@ -300,7 +340,7 @@ main {
                                     border-radius: 50%;
                                     background-color: white; 
                                     @include responsive(large-screens) {
-                                        top: 145px;
+                                        top: 193px;
                                     }
                     
                                     div.inner-cicle {
@@ -380,25 +420,27 @@ main {
         } // box1-line
     } // section.box1
 
-
+////////////////////////////////////////////////////////////////////////////////
     section.box2 {
         position: relative;
-        width: 100%; height:auto;
-        border: 1px dashed black;
-        border-left: none;
-        border-right: none;
-        border-top: none;
-        background-image: url(../images/1925m_bg.png);
+        width: 100%;
+        height:auto;
+        border: none;
+        background-image: url(../images/1925_bg.jpg);
         background-size: cover;
+        background-position-x: -700px;
         background-repeat: no-repeat;
-        // background-position-x: -500px;
+        // background-color: #c2c2c2;
         @include responsive(large-screens) {       
+            // border-bottom: 1px solid black;
+            width: 100%;
+            height:1000px;
             border: none;
-            border-bottom: 1px solid black;
             background-image: url(../images/1925_bg.jpg);
             background-position-x: 500px;
             background-size: cover;
-            background-color: #c2c2c2;
+            background-repeat: no-repeat;
+            // background-color: #c2c2c2;
         }
         .box2-line {
             width: 100%;
@@ -408,17 +450,24 @@ main {
             border-right: none;
             border-top: none;
             // background-color: antiquewhite;
+            overflow: hidden;
             @include responsive(large-screens) {
                 border: none;
             }
-            .container {
+           
                 .box2-txt {
                     height: 100%;
                     @include responsive(large-screens) {
-                        // margin: auto;
-                        border-left: 2px solid black;
                         
-                        background-color: aqua;
+                        border: none;
+                        border-left: 2px solid #c2c2c2;
+                        border-bottom: 2px solid #c2c2c2;
+
+                        margin-left: 230px;
+                        width: 100%;
+                        height: 1000px;
+                        
+                        // background-color: aqua;
                     }
                     // background-color: antiquewhite;
                     .box2-title {
@@ -432,9 +481,12 @@ main {
                             font-size: 25px;
                             // background-color: gray;
                             @include responsive(large-screens) {
-                                margin-left: 0%;
-                                padding-right: 7%;
+                                width: 100%;
+                                padding-right: 67.5%;
+                                margin-top: 3%;
+                                font-size: 2.5rem;
                                 text-align: right;
+                                background-color: #c2c2c2;
                             }
                         }
                         p {
@@ -445,10 +497,13 @@ main {
                             color: #565656;
                             // background-color: aquamarine;
                             @include responsive(large-screens) {
-                                width: 28%;
-                                margin-left: 17.8%;
                                 text-align: right;
-                                // background-color: antiquewhite;
+                                width: 85%;
+                                padding-right: 67%;
+                                margin-bottom: 1%;
+                                // margin-left: 54%;
+                                color: #adadad;
+                                background-color: aquamarine;
                             }
                     }
                     }
@@ -459,30 +514,68 @@ main {
                         font-size: 1.2rem;
                         color: #565656;
                         @include responsive(large-screens) {
+                            width: 100%;
+                            padding-right: 65%;
                             text-align: right;
-                            // background-color: aqua;
+                            background-color: aqua;
                         }
                         li {
-                            list-style-type: circle;
+                            list-style-type: none;
                             color: black;
                             // background-color: antiquewhite; 
-                            @include responsive(large-screens) {
-                                padding-right: 58%;
-                                text-align: right; // 대형 화면에서 텍스트를 오른쪽으로 정렬
-                                list-style: none;
-                            }   
+                            p {
+                                @include responsive(large-screens) {
+                                    width: 62%;
+                                    margin-left: 29.9%;
+                                    font-size: 1.1rem;
+                                    font-weight: $font-semibold;
+                                    text-align: right;
+                                    // background-color: #adadad;
+                                }   
+                            }
+
                             span.orange {
+                                display: flex;
+                                align-items: center;
                                 margin-top: 50px;
                                 margin-bottom: 3px;
                                 font-weight: $font-semibold;
                                 color: $color-point;
                                 // background-color: antiquewhite;
+                                @include responsive(large-screens) {
+                                    text-align: right;
+                                    margin-top: 0;
+                                    padding-top: 30px;
+                                    padding-left: 447px;
+                                }  
+                                span {
+                                    margin-right: 8px;
+                                    font-size: 0.5rem;
+                                    text-align: right;
+
+                                }
                             }
                             span.black {
+                                display: flex;
+                                align-items: center;
                                 margin-top: 50px;
                                 margin-bottom: 3px;
                                 font-weight: $font-semibold;
                                 color: $color-main;
+                                @include responsive(large-screens) {
+                                    
+                                    margin-top: 0;
+                                    padding-top: 30px;
+
+                                    padding-left: 447px;
+                                    text-align: right;
+
+                                    // background-color: aqua;
+                                }  
+                                span {
+                                    margin-right: 8px;
+                                    font-size: 0.5rem;
+                                }
                             }
                         }
                         li:last-child {
@@ -491,6 +584,7 @@ main {
                     }
             
                     div.line-circle {
+                        // position: relative;
                         div.vertical-dotted-line {
                             position: absolute; left: 9%; top: 0;
                             border: 0.5px dashed black;
@@ -527,230 +621,12 @@ main {
                             } // vertical-dotted-line2      
                         } // vertical-dotted-line
                     } // line-circle        
-                } // .box2-txt
-            } // container
-        
+                } // .box2-txt 
         } // box2-line
     } // section.box2
  
 
-    section.box3 {
-        position: relative;
-        width: 100%; height:auto;
-        border: 1px dashed black;
-        border-left: none;
-        border-right: none;
-        border-top: none;
-        background-image: url(../images/2004m_bg.png);
-        background-size: cover;
-        background-repeat: no-repeat;
-        // background-position-x: -500px;
-        .box3-line {
-            width: 100%;
-            margin-bottom: 2px;
-            border: 1px dashed black;
-            border-left: none;
-            border-right: none;
-            border-top: none;
-            .container {
-                .box3-txt {
-                    height: 100%;
-                    // border: 1px dashed black;
-                    // background-color: antiquewhite;
-                    .box3-title {
-                        padding-top: 90px;
-                        // background-color: aqua;
-                        h2 {
-                            width: 53%; 
-                            margin: 0 auto;
-                            padding-bottom: 20px;
-                            text-align: left;
-                            font-size: 25px;
-                            // background-color: gray;
-                        }
-                        p {
-                            width: 53%;
-                            margin: 0 auto;
-                            font-size: 17px;
-                            font-weight:$font-regular;
-                            color: #565656;
-                            // background-color: aquamarine;
-                    }
-                    }
-                    ul.years {
-                        width: 53%;
-                        margin: 0 auto;
-                        font-weight: $font-regular;
-                        font-size: 1.2rem;
-                        color: #565656;
-                        li {
-                            list-style-type: circle;
-                            color: black;
-                            // background-color: antiquewhite;    
-                            span.orange {
-                                margin-top: 50px;
-                                margin-bottom: 3px;
-                                font-weight: $font-semibold;
-                                color: $color-point;
-                                // background-color: antiquewhite;
-                            }
-                            span.black {
-                                margin-top: 50px;
-                                margin-bottom: 3px;
-                                font-weight: $font-semibold;
-                                color: $color-main;
-                            }
-                        }
-                        li:last-child {
-                            padding-bottom: 150px;
-                        }
-                    }
-            
-                    div.line-circle {
-                        div.vertical-dotted-line {
-                            position: absolute; left: 9%; top: 0;
-                            border: 0.5px dashed black;
-                            height: 100%;
-                            // background-color: black;
-                            div.vertical-dotted-line2 {
-                                position: absolute; left: 2px; top: 0;
-                                height: 100%;
-                                border: 0.5px dashed black;
-                                div.outer-cicle {
-                                    position: absolute; 
-                                    left: -9px; top: 110px;
-                                    width: 15px; height: 15px;
-                                    border: 1px solid $color-main;
-                                    border-radius: 50%;
-                                    background-color: white; 
-                    
-                                    div.inner-cicle {
-                                        position: absolute; 
-                                        top: 3px; left: 3px;
-                                        width: 7px; height: 7px;
-                                        
-                                        border: 1px solid $color-main;
-                                        border-radius: 50%;
-                                        background-color: $color-main; 
-                                    }
-                                } // outer-cicle
-                            } // vertical-dotted-line2      
-                        } // vertical-dotted-line
-                    } // line-circle        
-                } // .box3-txt
-            } // container
-        
-        } // box3-line
-    } // section.box3
 
-    section.box4 {
-        position: relative;
-        width: 100%; height:auto;
-        border: 1px dashed black;
-        border-left: none;
-        border-right: none;
-        border-top: none;
-        background-image: url(../images/2011m_bg.png);
-        background-size: cover;
-        background-repeat: no-repeat;
-        // background-position-x: -500px;
-        .box4-line {
-            width: 100%;
-            margin-bottom: 2px;
-            border: 1px dashed black;
-            border-left: none;
-            border-right: none;
-            border-top: none;
-            .container {
-                .box4-txt {
-                    height: 100%;
-                    // border: 1px dashed black;
-                    // background-color: antiquewhite;
-                    .box4-title {
-                        padding-top: 90px;
-                        // background-color: aqua;
-                        h2 {
-                            width: 53%; 
-                            margin: 0 auto;
-                            padding-bottom: 20px;
-                            text-align: left;
-                            font-size: 25px;
-                            // background-color: gray;
-                        }
-                        p {
-                            width: 53%;
-                            margin: 0 auto;
-                            font-size: 17px;
-                            font-weight:$font-regular;
-                            color: #565656;
-                            // background-color: aquamarine;
-                    }
-                    }
-                    ul.years {
-                        width: 53%;
-                        margin: 0 auto;
-                        font-weight: $font-regular;
-                        font-size: 1.2rem;
-                        color: #565656;
-                        li {
-                            list-style-type: circle;
-                            color: black;
-                            // background-color: antiquewhite;    
-                            span.orange {
-                                margin-top: 50px;
-                                margin-bottom: 3px;
-                                font-weight: $font-semibold;
-                                color: $color-point;
-                                // background-color: antiquewhite;
-                            }
-                            span.black {
-                                margin-top: 50px;
-                                margin-bottom: 3px;
-                                font-weight: $font-semibold;
-                                color: $color-main;
-                            }
-                        }
-                        li:last-child {
-                            padding-bottom: 150px;
-                        }
-                    }
-            
-                    div.line-circle {
-                        div.vertical-dotted-line {
-                            position: absolute; left: 9%; top: 0;
-                            border: 0.5px dashed black;
-                            height: 100%;
-                            // background-color: black;
-                            div.vertical-dotted-line2 {
-                                position: absolute; left: 2px; top: 0;
-                                height: 100%;
-                                border: 0.5px dashed black;
-                                div.outer-cicle {
-                                    position: absolute; 
-                                    left: -9px; top: 110px;
-                                    width: 15px; height: 15px;
-                                    border: 1px solid $color-main;
-                                    border-radius: 50%;
-                                    background-color: white; 
-                    
-                                    div.inner-cicle {
-                                        position: absolute; 
-                                        top: 3px; left: 3px;
-                                        width: 7px; height: 7px;
-                                        
-                                        border: 1px solid $color-main;
-                                        border-radius: 50%;
-                                        background-color: $color-main; 
-                                    }
-                                } // outer-cicle
-                            } // vertical-dotted-line2      
-                        } // vertical-dotted-line
-                    } // line-circle        
-                } // .box4-txt
-            } // container
-        
-        } // box3-line
-    } // section.box4
 
 } // main
 
@@ -782,7 +658,7 @@ main {
 
 
 
-//***********footer***********
+***********footer***********
 footer {
     @include footer-style();
 }
