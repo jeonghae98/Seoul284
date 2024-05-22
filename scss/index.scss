@@ -399,17 +399,20 @@ main {
     }
 
     .exhibition-content {
-        
+        @include responsive(large-screens) {
+            position: relative;
+        }
         div.ex {
             @include responsive(large-screens) {
                 border-top: 2px solid $line-gray;
             }
 
             .content-box {
-                display: flex;
+                padding: 65px 0 48px;
                 border-top: 2px solid $line-gray;
-
+                
                 @include responsive(large-screens) {
+                    display: flex;
                     padding: 0;
                     border: 0;
                 }
@@ -444,7 +447,9 @@ main {
 
         .exhibition1 {
             .content-box {
-                flex-direction: row-reverse;
+                   @include responsive(large-screens) {
+                    flex-direction: row-reverse;
+                }
                 .ex-img {
                     @include responsive(large-screens) {
                         padding: 50px 0 50px;
@@ -504,7 +509,9 @@ main {
 
         .exhibition3 {
             .content-box {
-                flex-direction: row-reverse;
+                @include responsive(large-screens) {
+                    flex-direction: row-reverse;
+                }
                 .ex-img {
                     @include responsive(large-screens) {
                         padding: 50px 0 50px;
@@ -537,9 +544,11 @@ main {
 
         .exhibition4 {
             .content-box {
-                flex-direction: row-reverse;
                 border-bottom: 2px solid $line-gray;
 
+                @include responsive(large-screens) {
+                    flex-direction: row-reverse;
+                }
                 .ex-img {
                     @include responsive(large-screens) {
                         padding: 50px 0 50px;
@@ -558,7 +567,8 @@ main {
 
                 .ex-txt {
                     @include responsive(large-screens) {
-                        width: 500px;
+                        width: 460px;
+                        height: 400px;
                     }
 
                     .title {
@@ -571,11 +581,22 @@ main {
         }  // exhibition4
 
         .arrow-button {
+            @include responsive(large-screens) {
+               position: absolute;
+                left: 0; bottom: 0;
+                width: 39.0625%;  // 750px
+            }
             .detail-btn {
                 padding: 0;
                 margin: 0;
                 border-bottom: 2px solid $line-gray;
-    
+               background-color: aqua;
+                
+                @include responsive(large-screens) {
+                    width: $width-wide;
+                    height: 120px;
+                 }
+
                 ul {
                     display: flex;
                     flex-direction: row;
@@ -583,7 +604,11 @@ main {
                     // align-items: center;
                     width: $width-wide;
                     height: 70px;
-        
+
+                    @include responsive(large-screens) {
+                        height: $height-wide;
+                     }
+
                     .empty {
                         width: 560px;
                         height: $height-wide;
@@ -595,6 +620,11 @@ main {
                         line-height: 70px;
                         // background-color: lightcoral;
                         
+                        @include responsive(large-screens) {
+                            width: 90px;
+                            height: $height-wide;
+                            line-height: 120px;
+                        }
                         a {
                             border-left: 2px solid $line-gray;
                             font: {
