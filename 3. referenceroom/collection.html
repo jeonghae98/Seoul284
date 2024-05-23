@@ -6,7 +6,9 @@
     <link rel="shortcut icon" type="image/png" href=".././images/favicon.png">
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/collection.css">
-    <title>공지사항</title>
+    <script src="./js/jquery.js"></script>
+    <script src="./js/referenceroom.js"></script>
+    <title>소장품</title>
 </head>
 <body>
     <header>
@@ -69,10 +71,190 @@
         </div>  <!-- logo-rightmenu -->
     </header>
 
+
+
+    <!--=========================================================================================================================-->
     <main>
-        <h1>test</h1>
+        <section class="collection">
+            <div class="container">
+                <h2 class="collection-title">소장품</h2>
+
+                <!-- <div class="category">
+                    <ul>
+                        <li class="menu-title"><a href="./notice.html">공지</a></li>
+                        <li class="menu-title"><a href="./contest.html">공모</a></li>
+                        <li class="menu-title"><a href="./recruitment.html">채용</a></li>
+                    </ul>
+                    <div class="search">
+                        <input type="text" id="search-box" name="search-box">
+                        <img src="./images/main_search.png" alt="search icon">
+                    </div>
+                </div>  category -->
+
+                <div class="collection-content">
+                    <div class="content-box">
+                        <div class="box">
+                            <div class="collection-img">
+                                <div class="hover-box">
+                                    <div class="plus"><span class="btn">+</span></div>
+                                </div>
+                                <img src="./images/1page/1_station.png" alt="collection image">
+                            </div>
+                            <div class="content-title-txt">
+                                <ul>
+                                    <li class="content-title">서울역 사진</li>
+                                    <li class="content-txt">1995 | 윤상철 기증 <span>| 12.6x10.1 | 사진</span></li>
+                                </ul>
+                            </div>  <!-- content-title-txt -->
+                        </div>  <!-- box -->
+
+                        <div class="box">
+                            <div class="collection-img">
+                                <div class="hover-box">
+                                    <div class="plus"><span class="btn">+</span></div>
+                                </div><img src="./images/1page/2_memento.png" alt="collection image"></div>
+                            <div class="content-title-txt">
+                                <ul>
+                                    <li class="content-title">93 대전 엑스포 기념 승차권</li>
+                                    <li class="content-txt">1993 | 김영대 기증 <span>| 14.0x7.0 | 지류</span></li>
+                                </ul>
+                            </div>  <!-- content-title-txt -->
+                        </div>  <!-- box -->
+
+                        <div class="box">
+                            <div class="collection-img">
+                                <div class="hover-box">
+                                    <div class="plus"><span class="btn">+</span></div>
+                                </div>
+                                <img src="./images/1page/3_stamp.png" alt="collection image"></div>
+                            <div class="content-title-txt">
+                                <ul>
+                                    <li class="content-title">제24회 88 서울 올림픽 우표첩</li>
+                                    <li class="content-txt">1988 | 대한민국 체신부 <span>| 68.0,x23.2 | 지류</span></li>
+                                </ul>
+                            </div>  <!-- content-title-txt -->
+                        </div>  <!-- box -->
+
+                        <div class="box">
+                            <div class="collection-img">
+                                <div class="hover-box">
+                                    <div class="plus"><span class="btn">+</span></div>
+                                </div>
+                                <img src="./images/1page/5_train.jpg" alt="collection image"></div>
+                            <div class="content-title-txt">
+                                <ul>
+                                    <li class="content-title">서울역 광장 집회 사진</li>
+                                    <li class="content-txt">1999 | 박부원 기증 <span>| 25.4x20.2 | 사진</span></li>
+                                </ul>
+                            </div>  <!-- content-title-txt -->
+                        </div>  <!-- box -->
+
+                        <div class="box">
+                            <div class="collection-img">
+                                <div class="hover-box">
+                                    <div class="plus"><span class="btn">+</span></div>
+                                </div>
+                                <img src="./images/1page/6_station.jpg" alt="collection image"></div>
+                            <div class="content-title-txt">
+                                <ul>
+                                    <li class="content-title">기차 내부 사진</li>
+                                    <li class="content-txt">1982 | 8.1x11.6 <span>| 사진</span></li>
+                                </ul>
+                            </div>  <!-- content-title-txt -->
+                        </div>  <!-- box -->
+
+                        <div class="box">
+                            <div class="collection-img">
+                                <div class="hover-box">
+                                    <div class="plus"><span class="btn">+</span></div>
+                                </div>
+                                <img src="./images/1page/7_station.jpg" alt="collection image"></div>
+                            <div class="content-title-txt">
+                                <ul>
+                                    <li class="content-title">서울역 사진</li>
+                                    <li class="content-txt">1980년대 | 박부원 기증 <span>| 25.4x20.2 | 사진</span></li>
+                                </ul>
+                            </div>  <!-- content-title-txt -->
+                        </div>  <!-- box -->
+
+                        <div class="box">
+                            <div class="collection-img">
+                                <div class="hover-box">
+                                    <div class="plus"><span class="btn">+</span></div>
+                                </div>
+                                <img src="./images/1page/8_station.jpg" alt="collection image"></div>
+                            <div class="content-title-txt">
+                                <ul>
+                                    <li class="content-title">서울역 사진</li>
+                                    <li class="content-txt">1960~70년대 | 10.4x14.5 <span>| 사진</span></li>
+                                </ul>
+                            </div>  <!-- content-title-txt -->
+                        </div>  <!-- box -->
+
+                        <div class="box">
+                            <div class="collection-img">
+                                <div class="hover-box">
+                                    <div class="plus"><span class="btn">+</span></div>
+                                </div>
+                                <img src="./images/1page/9_station.jpg" alt="collection image"></div>
+                            <div class="content-title-txt">
+                                <ul>
+                                    <li class="content-title">서울역 사진</li>
+                                    <li class="content-txt">1963 | 박정자 기증 <span>| 12.9x9.9 | 사진</span></li>
+                                </ul>
+                            </div>  <!-- content-title-txt -->
+                        </div>  <!-- box -->
+
+                        <div class="box">
+                            <div class="collection-img">
+                                <div class="hover-box">
+                                    <div class="plus"><span class="btn">+</span></div>
+                                </div>
+                                <img src="" alt="collection image"></div>
+                            <div class="content-title-txt">
+                                <ul>
+                                    <li class="content-title">서울역 사진</li>
+                                    <li class="content-txt">1950년대 | 8.8x12.6 <span>| 사진</span></li>
+                                </ul>
+                            </div>  <!-- content-title-txt -->
+                        </div>  <!-- box -->
+
+                        <div class="content-box">  <!-- 모바일에서만 보임 -->
+                            <div class="box">
+                                <div class="collection-img">
+                                    <div class="hover-box">
+                                        <div class="plus"><span class="btn">+</span></div>
+                                    </div>
+                                    <img src="" alt="collection image"></div>
+                                <div class="content-title-txt">
+                                    <ul>
+                                        <li class="content-title">겨울 한강 사진</li>
+                                        <li class="content-txt">1950년대 | 8.8x12.6 <span>| 사진</span></li>
+                                    </ul>
+                                </div>  <!-- content-title-txt -->
+                            </div>  <!-- box -->
+                    </div>  <!-- content-box -->
+                </div>  <!-- collection-content-box -->
+
+
+                <div class="page-number">
+                    <ul>
+                        <li class="double-left-arrow"><a href="">《</a></li>
+                        <li class="single-left-arrow"><a href="">〈</a></li>
+                        <li class="number num1"><a href="">1</a></li>
+                        <li class="number num2"><a href="">2</a></li>
+                        <li class="single-right-arrow"><a href="">〉</a></li>
+                        <li class="double-right-arrow"><a href="">》</a></li>
+                    </ul>
+                </div>  <!-- page-number -->
+            </div>  <!-- container -->
+        </section>  <!-- collection -->
     </main>
+    <!--=========================================================================================================================-->
     
+    
+
+
     <footer>
         <div class="footer-img"><img src=".././images/footer_image.png" alt="footer image"></div>
     

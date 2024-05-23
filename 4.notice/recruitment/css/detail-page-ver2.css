@@ -396,7 +396,6 @@ footer .footerlogo-info .footer-content-box .footer-info-box .info {
   width: 100%;
   display: flex;
   justify-content: space-between;
-  background-color: lightblue;
 }
 @media only screen and (min-width: 1024px) {
   footer .footerlogo-info .footer-content-box .footer-info-box .info {
@@ -475,7 +474,6 @@ footer .footerlogo-info .footer-content-box .footer-info-box .info .txt {
 footer .footerlogo-info .footer-content-box .footer-info-box .copyright {
   width: 100%;
   margin-top: 0;
-  background-color: blanchedalmond;
 }
 footer .footerlogo-info .footer-content-box .footer-info-box .copyright p {
   font-weight: 400;
