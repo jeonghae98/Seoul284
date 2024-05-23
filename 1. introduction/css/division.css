@@ -220,27 +220,48 @@ main .container h2 {
   margin: 50px;
   text-align: center;
 }
-main .container table {
+main .container img {
+  width: 50%;
+  height: auto;
+}
+main .container .tb table {
   width: 100%;
   margin: 0 auto;
   border-collapse: collapse;
 }
-main .container table thead {
+@media only screen and (min-width: 1024px) {
+  main .container .tb table {
+    width: 100%;
+    height: 100px;
+  }
+}
+main .container .tb table thead {
   border: 1px solid #e9e9e9;
   background-color: #f3f3f3;
 }
-main .container table thead th {
+main .container .tb table thead th {
   font-size: 0.8rem;
 }
-main .container table thead th:first-child {
+@media only screen and (min-width: 1024px) {
+  main .container .tb table thead th {
+    font-size: 1.3rem;
+  }
+}
+main .container .tb table thead th:first-child {
   width: 30%;
   height: 50px;
 }
-main .container table thead th:nth-child(2) {
+@media only screen and (min-width: 1024px) {
+  main .container .tb table thead th:first-child {
+    width: 30%;
+    height: 10px;
+  }
+}
+main .container .tb table thead th:nth-child(2) {
   width: 20%;
   height: 50px;
 }
-main .container table tbody tr {
+main .container .tb table tbody tr {
   border: 1px solid #e9e9e9;
   text-align: center;
   width: 20%;
@@ -248,13 +269,26 @@ main .container table tbody tr {
   font-weight: 600;
   font-size: 0.8rem;
 }
-main .container table tfoot {
+@media only screen and (min-width: 1024px) {
+  main .container .tb table tbody tr {
+    font-size: 1.2rem;
+    border-radius: 5%;
+  }
+}
+main .container .tb table tfoot {
   width: 100%;
   font-size: 0.7rem;
   text-align: center;
   color: #fff;
   background-color: #000;
 }
-main .container table tfoot td {
+@media only screen and (min-width: 1024px) {
+  main .container .tb table tfoot {
+    width: 100%;
+    height: 10px;
+    font-size: 1.2rem;
+  }
+}
+main .container .tb table tfoot td {
   padding: 20px;
 }/*# sourceMappingURL=division.css.map */
