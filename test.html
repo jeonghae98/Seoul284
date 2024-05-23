@@ -1,79 +1,57 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>평행사변형 안에 이미지와 텍스트 배치</title>
     <style>
-        .type-box {
-        width: 100%;
-        overflow: hidden;
+        .image-slider {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            overflow: hidden;
+            white-space: nowrap;
         }
 
-        .typo1-box {
-        white-space: nowrap;
-        overflow: hidden;
-        display: inline-block;
-        animation: marquee 30s linear infinite;
+        .image-slider li {
+            display: inline-block;
         }
 
-        .typo1-box p {
-        display: inline-block;
+        .image-slider li img {
+            max-width: 100%;
+            height: auto;
         }
 
-        .typo1-box .typo1 {
-                color: transparent;
-                -webkit-text-stroke: 4px #a6a6a6;
-            }
-
-        .typo1-box .no-stroke {
-            position: absolute;
-            left: 0; top: 0;
-            color: white;
-            -webkit-text-stroke: 2px transparent;
-        }
-
-        @keyframes marquee {
-        0% {
-            transform: translate3d(0, 0, 0);
-        }
-        100% {
-            transform: translate3d(-50%, 0, 0);
-        }
-        }
     </style>
 </head>
 <body>
-    <div class="wrapper">
-        <div class="marquee">
-          <p>
-            MOVING TEXT MOVING TEXT MOVING TEXT MOVING TEXT MOVING TEXT MOVING TEXT MOVING TEXT MOVING TEXT MOVING TEXT MOVING TEXT MOVING TEXT MOVING TEXT MOVING TEXT MOVING TEXT MOVING TEXT MOVING TEXT MOVING TEXT
-          </p>
-          <p>
-            MOVING TEXT MOVING TEXT MOVING TEXT MOVING TEXT MOVING TEXT MOVING TEXT MOVING TEXT MOVING TEXT MOVING TEXT MOVING TEXT MOVING TEXT MOVING TEXT MOVING TEXT MOVING TEXT MOVING TEXT MOVING TEXT MOVING TEXT
-          </p>
-        </div>
-      </div>
+    <div class="image-row1">
+        <ul class="image-slider">
+            <li><img src="./images/main_collection_1.jpg" alt="collection image"></li>
+            <li><img src="./images/main_collection_2.jpg" alt="collection image"></li>
+            <li><img src="./images/main_collection_3.jpg" alt="collection image"></li>
+            <li><img src="./images/main_collection_4.jpg" alt="collection image"></li>
+            <li><img src="./images/main_collection_5.jpg" alt="collection image"></li>
+        </ul>
+    </div>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const slider = document.querySelector('.image-slider');
+            const images = document.querySelectorAll('.image-slider li');
+            let currentIndex = 0;
 
-      <section class="typography">
-        <div class="typo-box">
-            <div class="typo1-box">
-                <p class="typo1">문화역서울284. 문화역서울284. 문화역서울284. 문화역서울284. 문화역서울284. 문화역서울284. 문화역서울284. 문화역서울284. 문화역서울284. 문화역서울284. 문화역서울284. 문화역서울284. 문화역서울284. 문화역서울284. 문화역서울284. 문화역서울284. 문화역서울284. 문화역서울284. 문화역서울284.
-                문화역서울284. 문화역서울284. 문화역서울284. 문화역서울284. 문화역서울284. 문화역서울284. 문화역서울284. 문화역서울284. 문화역서울284. 문화역서울284. 문화역서울284. 문화역서울284. 문화역서울284. 문화역서울284. 문화역서울284. 문화역서울284. 문화역서울284. 문화역서울284. 문화역서울284.
-                </p>
-                <p class="no-stroke">문화역서울284. 문화역서울284. 문화역서울284. 문화역서울284. 문화역서울284. 문화역서울284. 문화역서울284. 문화역서울284. 문화역서울284. 문화역서울284. 문화역서울284. 문화역서울284. 문화역서울284. 문화역서울284. 문화역서울284. 문화역서울284. 문화역서울284. 문화역서울284. 문화역서울284.
-                문화역서울284. 문화역서울284. 문화역서울284. 문화역서울284. 문화역서울284. 문화역서울284. 문화역서울284. 문화역서울284. 문화역서울284. 문화역서울284. 문화역서울284. 문화역서울284. 문화역서울284. 문화역서울284. 문화역서울284. 문화역서울284. 문화역서울284. 문화역서울284. 문화역서울284.
-                </p>
-            </div>
-            <div class="typo2-box">
-                <p class="typo2">문화역서울284. 문화역서울284. 문화역서울284. 문화역서울284. 문화역서울284. 문화역서울284. 문화역서울284. 문화역서울284. 문화역서울284. 문화역서울284. 문화역서울284. 문화역서울284. 문화역서울284. 문화역서울284. 문화역서울284. 문화역서울284. 문화역서울284. 문화역서울284. 문화역서울284.
-                문화역서울284. 문화역서울284. 문화역서울284. 문화역서울284. 문화역서울284. 문화역서울284. 문화역서울284. 문화역서울284. 문화역서울284. 문화역서울284. 문화역서울284. 문화역서울284. 문화역서울284. 문화역서울284. 문화역서울284. 문화역서울284. 문화역서울284. 문화역서울284. 문화역서울284.
-                </p>
-                <p class="no-stroke">문화역서울284. 문화역서울284. 문화역서울284. 문화역서울284. 문화역서울284. 문화역서울284. 문화역서울284. 문화역서울284. 문화역서울284. 문화역서울284. 문화역서울284. 문화역서울284. 문화역서울284. 문화역서울284. 문화역서울284. 문화역서울284. 문화역서울284. 문화역서울284. 문화역서울284.
-                문화역서울284. 문화역서울284. 문화역서울284. 문화역서울284. 문화역서울284. 문화역서울284. 문화역서울284. 문화역서울284. 문화역서울284. 문화역서울284. 문화역서울284. 문화역서울284. 문화역서울284. 문화역서울284. 문화역서울284. 문화역서울284. 문화역서울284. 문화역서울284. 문화역서울284.
-                </p>
-            </div>
-        </div>
-    </section>  <!-- typography -->
+            setInterval(() => {
+                // Hide the current image
+                images[currentIndex].style.display = 'none';
+                
+                // Increment the index or reset to 0 if it exceeds the number of images
+                currentIndex = (currentIndex + 1) % images.length;
+                
+                // Show the next image
+                images[currentIndex].style.display = 'inline-block';
+            }, 3000); // Change slide every 3 seconds (adjust as needed)
+        });
+    </script>
 </body>
 </html>

@@ -29,11 +29,11 @@ $(function() {
         if (scrollPosition > (elementOffset - windowHeight)) {
             if(windowWidth <768 ) {  // 모바일 버전
                 $('.main-intro .intro-line').animate({
-                    height: '1072px'
+                    height: '1200px'
                   }, 3000);
             } else {  // pc 버전
                 $('.main-intro .intro-line').animate({
-                    height: '1490px'
+                    height: '1500px'
                   }, 3000);
             }
             
