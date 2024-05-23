@@ -226,9 +226,9 @@ main {
                                 width: 100%;
                                 font-size: 2.5rem;
                                 margin-top: 3%;
-                                margin-left: 54%;
+                                padding-left: 58%;
 
-                                background-color: #c2c2c2;
+                                // background-color: #c2c2c2;
                             }
                         }
                         p {
@@ -241,9 +241,9 @@ main {
                             @include responsive(large-screens) {
                                 width: 30%;
                                 margin-bottom: 1%;
-                                margin-left: 54%;
+                                margin-left: 58%;
                                 color: #adadad;
-                                background-color: aqua;
+                                // background-color: aqua;
                             }
                     }
                     }
@@ -259,12 +259,12 @@ main {
                             color: black;
                             // background-color: antiquewhite;  
                             @include responsive(large-screens) {
-                                margin-left: 58%;
+                                margin-left: 65%;
                                 // list-style-type: none;
                                 text-align: left;
                                 font-size: 1.1rem;
                                 font-weight: $font-semibold;
-                                 background-color: antiquewhite;
+                                //  background-color: antiquewhite;
                             }  
                             span.orange {
                                 
@@ -313,9 +313,6 @@ main {
                     }
             
                     div.line-circle {
-                        @include responsive(large-screens) {
-                        
-                        }
                         div.vertical-dotted-line {
                             position: absolute; left: 9%; top: 0;
                             border: 0.5px dashed black;
