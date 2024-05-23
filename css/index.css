@@ -967,8 +967,14 @@ main .main-collection .collection-image .image-row3 {
   font-size: 1rem;
 }
 
-.sns .sns-button {
+.sns {
   position: relative;
+  margin-bottom: 195px;
+}
+.sns .sns-button {
+  position: absolute;
+  right: 20.4166%;
+  top: 547px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1009,6 +1015,121 @@ main .main-collection .collection-image .image-row3 {
   height: 58px;
   border-radius: 100%;
   border: 1px solid #000;
+}
+.sns .deco {
+  position: absolute;
+  border-radius: 50%;
+}
+.sns .deco-circle1 {
+  left: 23.9%;
+  top: 205px;
+  width: 48px;
+  height: 48px;
+  background-color: #ff8665;
+}
+.sns .deco-circle2 {
+  left: 14.861%;
+  top: 530px;
+  width: 60px;
+  height: 60px;
+  border: 2px solid #ff8665;
+}
+.sns .deco-circle3 {
+  right: 38.472%;
+  bottom: 250px;
+  width: 100px;
+  height: 100px;
+  background-color: #ff8665;
+}
+.sns .deco-circle4 {
+  left: 9.5%;
+  bottom: 370px;
+  width: 60px;
+  height: 60px;
+  border: 2px solid #ff8665;
+}
+.sns .sns-content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.sns .sns-content div {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  margin: 0 auto;
+}
+.sns .sns-content div .content-txt {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 40%;
+  text-align: left;
+}
+.sns .sns-content div .content-txt .sns-title {
+  font-weight: 300;
+  font-size: 2.667rem;
+}
+.sns .sns-content div .content-txt .sns-txt {
+  font-weight: 400;
+  font-size: 1.333rem;
+  color: #787878;
+}
+.sns .sns-content div .sns-img {
+  position: relative;
+  overflow: hidden;
+}
+.sns .sns-content div .sns-img img {
+  position: absolute;
+}
+.sns .sns-content div.youtube {
+  margin-top: 244px;
+  margin-bottom: 60px;
+}
+.sns .sns-content div.youtube .sns-img {
+  width: 332px;
+  height: 252px;
+  margin-left: 50px;
+  border-top-right-radius: 50%;
+  border-bottom-right-radius: 50%;
+  background-color: aqua;
+}
+.sns .sns-content div.youtube .sns-img img {
+  left: 0;
+  top: -120px;
+  transform: scale(1.05);
+}
+.sns .sns-content div.instagram {
+  flex-direction: row-reverse;
+  margin-bottom: 60px;
+}
+.sns .sns-content div.instagram .sns-img {
+  width: 330px;
+  height: 342px;
+  margin-right: 50px;
+  border-bottom-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+  background-color: lightblue;
+}
+.sns .sns-content div.instagram .sns-img img {
+  top: -50px;
+}
+.sns .sns-content div.facebook {
+  margin-bottom: 0;
+}
+.sns .sns-content div.facebook .sns-img {
+  width: 327px;
+  height: 327px;
+  margin-left: 50px;
+  border-radius: 50%;
+  background-color: lightskyblue;
+}
+.sns .sns-content div.facebook .sns-img img {
+  left: -90px;
+  top: 260px;
+  transform: scale(3.5);
 }
 
 footer {

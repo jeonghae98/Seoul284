@@ -592,6 +592,8 @@ main {
             }  // content-box
         }  // exhibition4
 
+
+        
         .arrow-button {
             @include responsive(large-screens) {
                 position: absolute;
@@ -610,7 +612,7 @@ main {
                     height: 120px;
                     border-bottom: 0;
 
-                 }
+                    }
 
                 ul {
                     display: flex;
@@ -622,7 +624,7 @@ main {
 
                     @include responsive(large-screens) {
                         height: $height-wide;
-                     }
+                        }
 
                     .empty {
                         width: 560px;
@@ -659,9 +661,10 @@ main {
                     }
                 }
             }
-        }
+        }  // arrow-button
     }
 }  // exhibition
+
 
 
 //=================== typography =================== 
@@ -870,8 +873,11 @@ main {
 
 //=================== sns =================== 
 .sns {
+    position: relative;
+    margin-bottom: 195px;
     .sns-button {
-        position: relative;
+        position: absolute;
+        right: 20.4166%;  top: 547px;// right-147px
         display: flex;
         align-items: center;
         justify-content: center;
@@ -919,7 +925,149 @@ main {
             border: 1px solid $color-main;
         }  // button
     }  // sns-button
-}
+
+
+    //====== deco-circle ======
+    .deco {
+        position: absolute;
+        // left: 0; top: 0;
+        border-radius: 50%;
+
+    }
+    .deco-circle1 {
+        left: 23.9%; top: 205px;  // 172px-left-23.9%
+        width: 48px;
+        height: 48px;
+        background-color: #ff8665;
+    }
+
+    .deco-circle2 {
+        left: 14.861%; top: 530px;  // left-107px
+        width: 60px;
+        height: 60px;
+        border: 2px solid #ff8665;
+    }
+
+    .deco-circle3 {
+        right: 38.472%; bottom: 250px;  // left-277px
+        width: 100px;
+        height: 100px;
+        background-color: #ff8665;
+    }
+
+    .deco-circle4 {
+        left:9.5%; bottom: 370px;  
+        width: 60px;
+        height: 60px;
+        border: 2px solid #ff8665;
+    }
+
+
+    //====== sns-content ======
+    .sns-content {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        width: $width-wide;
+    
+        div {
+            display: flex;
+            flex-direction: row;
+            width: $width-wide;
+            margin: 0 auto;
+            // background-color: lightgoldenrodyellow;
+
+            .content-txt {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                width: 40%; 
+                text-align: left;
+                // background-color: lightcyan;
+
+                .sns-title {
+                    font: {
+                        weight: $font-light;
+                        size: 2.667rem;  // 32pt
+                    }
+                }
+
+                .sns-txt {
+                    font: {
+                        weight: $font-regular;
+                        size: 1.333rem;  // 16pt
+                    }
+                    color: #787878;
+                }
+            }
+
+            .sns-img {
+                position: relative;
+                overflow: hidden;
+                // background-color: lightpink;
+
+                img {
+                    position: absolute;
+                }
+            }
+        }
+
+
+        div.youtube {
+            margin-top: 244px;
+            margin-bottom: 60px;
+            
+            .sns-img {
+                width: 332px;
+                height: 252px;
+                margin-left: 50px;  // 7.353%
+                border-top-right-radius: 50%;
+                border-bottom-right-radius: 50%;
+                background-color: aqua;
+
+                img {
+                    left:0; top: -120px;
+                    transform: scale(1.05);
+                }
+            }
+        }
+
+        div.instagram {
+            flex-direction: row-reverse;
+            margin-bottom: 60px;
+            .sns-img {
+                width: 330px;
+                height: 342px;
+                margin-right: 50px;
+                border-bottom-left-radius: 50%;
+                border-bottom-right-radius: 50%;
+                background-color: lightblue;
+
+                img {
+                    top: -50px;
+                }
+            }
+        }
+
+        div.facebook {
+            margin-bottom: 0;
+
+            .sns-img {
+                width: 327px;
+                height: 327px;
+                margin-left: 50px;
+                border-radius: 50%;
+                background-color: lightskyblue;
+
+                img {
+                    left: -90px; top: 260px;
+                    transform: scale(3.5);
+                }
+            }
+        }
+    }
+}  //sns
 
 //***********footer***********
 footer {
