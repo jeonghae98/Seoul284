@@ -263,8 +263,8 @@ main .container section.main-title p {
   }
 }
 main .container section.main-title img {
-  width: 375px;
-  height: 310px;
+  width: 330px;
+  height: auto;
   margin: 0 auto;
   animation-duration: 4s;
   animation-name: move;
@@ -411,7 +411,7 @@ main section.box1 .box1-line .container .box1-txt .box1-title h2 {
 main section.box1 .box1-line .container .box1-txt .box1-title p {
   width: 53%;
   margin: 0 auto;
-  font-size: 17px;
+  font-size: 16px;
   font-weight: 400;
   color: #565656;
 }
@@ -601,6 +601,7 @@ main section.box2 {
 }
 @media only screen and (min-width: 1024px) {
   main section.box2 {
+    position: relative;
     width: 100%;
     height: 1000px;
     border: none;
@@ -608,6 +609,7 @@ main section.box2 {
     background-position-x: 500px;
     background-size: cover;
     background-repeat: no-repeat;
+    overflow: hidden;
   }
 }
 main section.box2 .box2-line {
@@ -624,23 +626,15 @@ main section.box2 .box2-line {
     border: none;
   }
 }
-main section.box2 .box2-line .box2-txt {
-  height: 100%;
-}
-@media only screen and (min-width: 1024px) {
-  main section.box2 .box2-line .box2-txt {
-    border: none;
-    border-left: 2px solid #c2c2c2;
-    border-bottom: 2px solid #c2c2c2;
-    margin-left: 230px;
-    width: 100%;
-    height: 1000px;
-  }
-}
-main section.box2 .box2-line .box2-txt .box2-title {
+main section.box2 .box2-line .box2-title {
   padding-top: 90px;
 }
-main section.box2 .box2-line .box2-txt .box2-title h2 {
+@media only screen and (min-width: 1024px) {
+  main section.box2 .box2-line .box2-title {
+    padding-top: 130px;
+  }
+}
+main section.box2 .box2-line .box2-title h2 {
   width: 53%;
   margin: 0 auto;
   padding-bottom: 20px;
@@ -648,33 +642,31 @@ main section.box2 .box2-line .box2-txt .box2-title h2 {
   font-size: 25px;
 }
 @media only screen and (min-width: 1024px) {
-  main section.box2 .box2-line .box2-txt .box2-title h2 {
-    width: 100%;
-    padding-right: 67.5%;
+  main section.box2 .box2-line .box2-title h2 {
+    width: 73%;
+    padding-right: 44.6%;
     margin-top: 3%;
     font-size: 2.5rem;
     text-align: right;
-    background-color: #c2c2c2;
   }
 }
-main section.box2 .box2-line .box2-txt .box2-title p {
+main section.box2 .box2-line .box2-title p {
   width: 53%;
   margin: 0 auto;
-  font-size: 17px;
+  font-size: 16px;
   font-weight: 400;
   color: #565656;
 }
 @media only screen and (min-width: 1024px) {
-  main section.box2 .box2-line .box2-txt .box2-title p {
+  main section.box2 .box2-line .box2-title p {
     text-align: right;
-    width: 85%;
-    padding-right: 67%;
+    width: 60%;
+    padding-right: 38.3%;
     margin-bottom: 1%;
     color: #adadad;
-    background-color: aquamarine;
   }
 }
-main section.box2 .box2-line .box2-txt ul.years {
+main section.box2 .box2-line ul.years {
   width: 53%;
   margin: 0 auto;
   font-weight: 400;
@@ -682,27 +674,26 @@ main section.box2 .box2-line .box2-txt ul.years {
   color: #565656;
 }
 @media only screen and (min-width: 1024px) {
-  main section.box2 .box2-line .box2-txt ul.years {
+  main section.box2 .box2-line ul.years {
     width: 100%;
-    padding-right: 65%;
+    padding-right: 68%;
     text-align: right;
-    background-color: aqua;
   }
 }
-main section.box2 .box2-line .box2-txt ul.years li {
+main section.box2 .box2-line ul.years li {
   list-style-type: none;
   color: black;
 }
 @media only screen and (min-width: 1024px) {
-  main section.box2 .box2-line .box2-txt ul.years li p {
+  main section.box2 .box2-line ul.years li p {
     width: 62%;
-    margin-left: 29.9%;
+    margin-left: 68%;
     font-size: 1.1rem;
     font-weight: 600;
     text-align: right;
   }
 }
-main section.box2 .box2-line .box2-txt ul.years li span.orange {
+main section.box2 .box2-line ul.years li span.orange {
   display: flex;
   align-items: center;
   margin-top: 50px;
@@ -711,19 +702,20 @@ main section.box2 .box2-line .box2-txt ul.years li span.orange {
   color: #ff6000;
 }
 @media only screen and (min-width: 1024px) {
-  main section.box2 .box2-line .box2-txt ul.years li span.orange {
+  main section.box2 .box2-line ul.years li span.orange {
     text-align: right;
     margin-top: 0;
+    margin-left: 19%;
     padding-top: 30px;
-    padding-left: 447px;
+    padding-left: 100%;
   }
 }
-main section.box2 .box2-line .box2-txt ul.years li span.orange span {
+main section.box2 .box2-line ul.years li span.orange span {
   margin-right: 8px;
   font-size: 0.5rem;
   text-align: right;
 }
-main section.box2 .box2-line .box2-txt ul.years li span.black {
+main section.box2 .box2-line ul.years li span.black {
   display: flex;
   align-items: center;
   margin-top: 50px;
@@ -732,21 +724,22 @@ main section.box2 .box2-line .box2-txt ul.years li span.black {
   color: #000;
 }
 @media only screen and (min-width: 1024px) {
-  main section.box2 .box2-line .box2-txt ul.years li span.black {
+  main section.box2 .box2-line ul.years li span.black {
     margin-top: 0;
+    margin-left: 19%;
     padding-top: 30px;
-    padding-left: 447px;
+    padding-left: 100%;
     text-align: right;
   }
 }
-main section.box2 .box2-line .box2-txt ul.years li span.black span {
+main section.box2 .box2-line ul.years li span.black span {
   margin-right: 8px;
   font-size: 0.5rem;
 }
-main section.box2 .box2-line .box2-txt ul.years li:last-child {
+main section.box2 .box2-line ul.years li:last-child {
   padding-bottom: 150px;
 }
-main section.box2 .box2-line .box2-txt div.line-circle div.vertical-dotted-line {
+main section.box2 .box2-line div.line-circle div.vertical-dotted-line {
   position: absolute;
   left: 9%;
   top: 0;
@@ -754,21 +747,234 @@ main section.box2 .box2-line .box2-txt div.line-circle div.vertical-dotted-line 
   height: 100%;
 }
 @media only screen and (min-width: 1024px) {
-  main section.box2 .box2-line .box2-txt div.line-circle div.vertical-dotted-line {
+  main section.box2 .box2-line div.line-circle div.vertical-dotted-line {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
   }
 }
-main section.box2 .box2-line .box2-txt div.line-circle div.vertical-dotted-line div.vertical-dotted-line2 {
+main section.box2 .box2-line div.line-circle div.vertical-dotted-line div.vertical-dotted-line2 {
   position: absolute;
   left: 2px;
   top: 0;
   height: 100%;
   border: 0.5px dashed black;
 }
-main section.box2 .box2-line .box2-txt div.line-circle div.vertical-dotted-line div.vertical-dotted-line2 div.outer-cicle {
+main section.box2 .box2-line div.line-circle div.vertical-dotted-line div.vertical-dotted-line2 div.outer-cicle {
+  position: absolute;
+  left: -9px;
+  top: 200px;
+  width: 15px;
+  height: 15px;
+  border: 1px solid #000;
+  border-radius: 50%;
+  background-color: white;
+}
+main section.box2 .box2-line div.line-circle div.vertical-dotted-line div.vertical-dotted-line2 div.outer-cicle div.inner-cicle {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 7px;
+  height: 7px;
+  border: 1px solid #000;
+  border-radius: 50%;
+  background-color: #000;
+}
+main section.box2 .box2-line div.line-circle2 div.vertical-dotted-line2 {
+  position: absolute;
+  left: 9%;
+  top: 0;
+  border: 0.5px dashed black;
+  height: 100%;
+}
+@media only screen and (min-width: 1024px) {
+  main section.box2 .box2-line div.line-circle2 div.vertical-dotted-line2 {
+    position: absolute;
+    top: 50%;
+    left: 13.4%;
+    transform: translate(-50%, -50%);
+    border: 1px solid #c2c2c2;
+    height: 100%;
+  }
+}
+main section.box2 .box2-line hr {
+  display: none;
+}
+@media only screen and (min-width: 1024px) {
+  main section.box2 .box2-line hr {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 949px;
+    width: 86.6%;
+    height: 2px;
+    background-color: #c2c2c2;
+  }
+}
+main section.box3 {
+  position: relative;
+  width: 100%;
+  height: auto;
+  border: none;
+  background-image: url(../images/2004m_bg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+@media only screen and (min-width: 1024px) {
+  main section.box3 {
+    background-image: none;
+    width: 100%;
+    height: 600px;
+    border: none;
+  }
+}
+main section.box3 .box3-line {
+  width: 100%;
+  margin-bottom: 2px;
+  border-top: 1px dashed black;
+}
+@media only screen and (min-width: 1024px) {
+  main section.box3 .box3-line {
+    height: 600px;
+    border: none;
+    background-repeat: no-repeat;
+    background-position-x: 255px;
+    background-size: 900px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  main section.box3 .box3-line .box-txt {
+    width: 100%;
+    height: 600px;
+  }
+}
+main section.box3 .box3-line .box-txt .box3-title {
+  padding-top: 90px;
+}
+@media only screen and (min-width: 1024px) {
+  main section.box3 .box3-line .box-txt .box3-title {
+    width: 100%;
+    padding-left: 55%;
+    padding-top: 110px;
+  }
+}
+main section.box3 .box3-line .box-txt .box3-title h2 {
+  width: 53%;
+  margin: 0 auto;
+  padding-bottom: 20px;
+  text-align: left;
+  font-size: 25px;
+}
+@media only screen and (min-width: 1024px) {
+  main section.box3 .box3-line .box-txt .box3-title h2 {
+    width: 100%;
+    margin-top: 3%;
+    font-size: 2.5rem;
+  }
+}
+main section.box3 .box3-line .box-txt .box3-title p {
+  width: 53%;
+  margin: 0 auto;
+  font-size: 16px;
+  font-weight: 400;
+  color: #565656;
+}
+@media only screen and (min-width: 1024px) {
+  main section.box3 .box3-line .box-txt .box3-title p {
+    width: 80%;
+    padding-right: 30%;
+    margin-right: 20%;
+    margin-bottom: 1%;
+    color: #adadad;
+  }
+}
+main section.box3 .box3-line .box-txt ul.years {
+  width: 53%;
+  margin: 0 auto;
+  font-weight: 400;
+  font-size: 1.2rem;
+  color: #565656;
+}
+@media only screen and (min-width: 1024px) {
+  main section.box3 .box3-line .box-txt ul.years {
+    width: 100%;
+    padding-left: 55%;
+  }
+}
+main section.box3 .box3-line .box-txt ul.years li {
+  list-style-type: none;
+  color: black;
+}
+@media only screen and (min-width: 1024px) {
+  main section.box3 .box3-line .box-txt ul.years li p {
+    width: 62%;
+    font-size: 1.1rem;
+    font-weight: 600;
+  }
+}
+main section.box3 .box3-line .box-txt ul.years li span.orange {
+  display: flex;
+  align-items: center;
+  margin-top: 50px;
+  margin-bottom: 3px;
+  font-weight: 600;
+  color: #ff6000;
+}
+@media only screen and (min-width: 1024px) {
+  main section.box3 .box3-line .box-txt ul.years li span.orange {
+    margin-top: 0;
+    padding-top: 30px;
+  }
+}
+main section.box3 .box3-line .box-txt ul.years li span.orange span {
+  margin-right: 8px;
+  font-size: 0.5rem;
+}
+main section.box3 .box3-line .box-txt ul.years li span.black {
+  display: flex;
+  align-items: center;
+  margin-top: 50px;
+  margin-bottom: 3px;
+  font-weight: 600;
+  color: #000;
+}
+@media only screen and (min-width: 1024px) {
+  main section.box3 .box3-line .box-txt ul.years li span.black {
+    margin-top: 0;
+    padding-top: 30px;
+  }
+}
+main section.box3 .box3-line .box-txt ul.years li span.black span {
+  margin-right: 8px;
+  font-size: 0.5rem;
+}
+main section.box3 .box3-line .box-txt ul.years li:last-child {
+  padding-bottom: 150px;
+}
+main section.box3 .box3-line div.line-circle div.vertical-dotted-line {
+  position: absolute;
+  left: 9%;
+  top: 0;
+  border: 0.5px dashed black;
+  height: 100%;
+}
+@media only screen and (min-width: 1024px) {
+  main section.box3 .box3-line div.line-circle div.vertical-dotted-line {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+main section.box3 .box3-line div.line-circle div.vertical-dotted-line div.vertical-dotted-line2 {
+  position: absolute;
+  left: 2px;
+  top: 0;
+  height: 100%;
+  border: 0.5px dashed black;
+}
+main section.box3 .box3-line div.line-circle div.vertical-dotted-line div.vertical-dotted-line2 div.outer-cicle {
   position: absolute;
   left: -9px;
   top: 110px;
@@ -778,7 +984,7 @@ main section.box2 .box2-line .box2-txt div.line-circle div.vertical-dotted-line 
   border-radius: 50%;
   background-color: white;
 }
-main section.box2 .box2-line .box2-txt div.line-circle div.vertical-dotted-line div.vertical-dotted-line2 div.outer-cicle div.inner-cicle {
+main section.box3 .box3-line div.line-circle div.vertical-dotted-line div.vertical-dotted-line2 div.outer-cicle div.inner-cicle {
   position: absolute;
   top: 3px;
   left: 3px;
@@ -787,6 +993,249 @@ main section.box2 .box2-line .box2-txt div.line-circle div.vertical-dotted-line 
   border: 1px solid #000;
   border-radius: 50%;
   background-color: #000;
+}
+main section.box3 .box3-line div.line-circle2 div.vertical-dotted-line2 {
+  position: absolute;
+  left: 9%;
+  top: 0;
+  border: 0.5px dashed black;
+  height: 100%;
+}
+@media only screen and (min-width: 1024px) {
+  main section.box3 .box3-line div.line-circle2 div.vertical-dotted-line2 {
+    position: absolute;
+    top: 50%;
+    left: 13.4%;
+    transform: translate(-50%, -50%);
+    border: 1px solid #c2c2c2;
+    height: 100%;
+  }
+}
+main section.box4 {
+  position: relative;
+  border-top: 1px dashed black;
+  border-bottom: 1px dashed black;
+  width: 100%;
+  height: auto;
+  background-image: url(../images/2011m_bg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+@media only screen and (min-width: 1024px) {
+  main section.box4 {
+    border-top: 2px solid #c2c2c2;
+    border-bottom: 2px solid #c2c2c2;
+    position: relative;
+    width: 100%;
+    height: 600px;
+    background-image: url(../images/2011_bg.png);
+    background-position-y: -200px;
+    background-position-x: 10px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+  }
+}
+main section.box4 .box4-line {
+  width: 100%;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  border-top: 1px dashed black;
+  border: 1px dashed black;
+  border-left: none;
+  border-right: none;
+  overflow: hidden;
+}
+@media only screen and (min-width: 1024px) {
+  main section.box4 .box4-line {
+    border: none;
+  }
+}
+main section.box4 .box4-line .box4-title {
+  padding-top: 90px;
+}
+@media only screen and (min-width: 1024px) {
+  main section.box4 .box4-line .box4-title {
+    padding-top: 67px;
+  }
+}
+main section.box4 .box4-line .box4-title h2 {
+  width: 53%;
+  margin: 0 auto;
+  padding-bottom: 20px;
+  text-align: left;
+  font-size: 25px;
+}
+@media only screen and (min-width: 1024px) {
+  main section.box4 .box4-line .box4-title h2 {
+    width: 73%;
+    padding-right: 44.6%;
+    margin-top: 3%;
+    font-size: 2.5rem;
+    text-align: right;
+  }
+}
+main section.box4 .box4-line .box4-title p {
+  width: 53%;
+  margin: 0 auto;
+  font-size: 16px;
+  font-weight: 400;
+  color: #565656;
+}
+@media only screen and (min-width: 1024px) {
+  main section.box4 .box4-line .box4-title p {
+    text-align: right;
+    width: 60%;
+    padding-right: 38.3%;
+    margin-bottom: 1%;
+    color: #adadad;
+  }
+}
+main section.box4 .box4-line ul.years {
+  width: 53%;
+  margin: 0 auto;
+  font-weight: 400;
+  font-size: 1.2rem;
+  color: #565656;
+}
+@media only screen and (min-width: 1024px) {
+  main section.box4 .box4-line ul.years {
+    width: 100%;
+    padding-right: 68%;
+    text-align: right;
+  }
+}
+main section.box4 .box4-line ul.years li {
+  list-style-type: none;
+  color: black;
+}
+@media only screen and (min-width: 1024px) {
+  main section.box4 .box4-line ul.years li p {
+    width: 62%;
+    margin-left: 68%;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-align: right;
+  }
+}
+main section.box4 .box4-line ul.years li span.orange {
+  display: flex;
+  align-items: center;
+  margin-top: 50px;
+  margin-bottom: 3px;
+  font-weight: 600;
+  color: #ff6000;
+}
+@media only screen and (min-width: 1024px) {
+  main section.box4 .box4-line ul.years li span.orange {
+    text-align: right;
+    margin-top: 0;
+    margin-left: 17%;
+    padding-top: 30px;
+    padding-left: 100%;
+  }
+}
+main section.box4 .box4-line ul.years li span.orange span {
+  margin-right: 8px;
+  font-size: 0.5rem;
+  text-align: right;
+}
+main section.box4 .box4-line ul.years li span.black {
+  display: flex;
+  align-items: center;
+  margin-top: 50px;
+  margin-bottom: 3px;
+  font-weight: 600;
+  color: #000;
+}
+@media only screen and (min-width: 1024px) {
+  main section.box4 .box4-line ul.years li span.black {
+    margin-top: 0;
+    margin-left: 19%;
+    padding-top: 30px;
+    padding-left: 100%;
+    text-align: right;
+  }
+}
+main section.box4 .box4-line ul.years li span.black span {
+  margin-right: 8px;
+  font-size: 0.5rem;
+}
+main section.box4 .box4-line ul.years li:last-child {
+  padding-bottom: 150px;
+}
+main section.box4 .box4-line div.line-circle div.vertical-dotted-line {
+  position: absolute;
+  left: 9%;
+  top: 0;
+  border: 0.5px dashed black;
+  height: 100%;
+}
+@media only screen and (min-width: 1024px) {
+  main section.box4 .box4-line div.line-circle div.vertical-dotted-line {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+main section.box4 .box4-line div.line-circle div.vertical-dotted-line div.vertical-dotted-line2 {
+  position: absolute;
+  left: 2px;
+  top: 0;
+  height: 100%;
+  border: 0.5px dashed black;
+}
+main section.box4 .box4-line div.line-circle div.vertical-dotted-line div.vertical-dotted-line2 div.outer-cicle {
+  position: absolute;
+  left: -9px;
+  top: 200px;
+  width: 15px;
+  height: 15px;
+  border: 1px solid #000;
+  border-radius: 50%;
+  background-color: white;
+}
+main section.box4 .box4-line div.line-circle div.vertical-dotted-line div.vertical-dotted-line2 div.outer-cicle div.inner-cicle {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 7px;
+  height: 7px;
+  border: 1px solid #000;
+  border-radius: 50%;
+  background-color: #000;
+}
+main section.box4 .box4-line div.line-circle2 div.vertical-dotted-line2 {
+  position: absolute;
+  left: 9%;
+  top: 0;
+  border: 0.5px dashed black;
+  height: 100%;
+}
+@media only screen and (min-width: 1024px) {
+  main section.box4 .box4-line div.line-circle2 div.vertical-dotted-line2 {
+    position: absolute;
+    top: 50%;
+    left: 13.4%;
+    transform: translate(-50%, -50%);
+    border: 1px solid #c2c2c2;
+    height: 100%;
+  }
+}
+main section.box4 .box4-line hr {
+  display: none;
+}
+@media only screen and (min-width: 1024px) {
+  main section.box4 .box4-line hr {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 949px;
+    width: 86.6%;
+    height: 2px;
+    background-color: #c2c2c2;
+  }
 }
 
 *********** footer*********** footer {

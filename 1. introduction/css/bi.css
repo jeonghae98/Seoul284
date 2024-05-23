@@ -388,7 +388,7 @@ main .sec2 .container .sec2-title h2 {
 @media only screen and (min-width: 1024px) {
   main .sec2 .container .sec2-title h2 {
     font-size: 2.1rem;
-    font-weight: 400;
+    font-weight: 600;
   }
 }
 main .sec2 .container .sec2-title p {
@@ -441,8 +441,6 @@ main .sec2 .container .img-box .img-box-inner p {
 main .sec3 {
   padding: 100px 0 100px 0;
   text-align: center;
-  background-color: rgb(255, 251, 243);
-  background: linear-gradient(to bottom, #ffffff, #ffffff, #fffbf9, #ffffff);
 }
 @media only screen and (min-width: 1024px) {
   main .sec3 .container {

@@ -181,7 +181,7 @@ main {
                     padding: 0 0 50px 0;
                     @include responsive (large-screens) {
                         font-size: 2.1rem;
-                        font-weight: $font-regular;
+                        font-weight: $font-semibold;
                         // background-color: #8d8f8e;
                     }
                 }
@@ -241,8 +241,8 @@ main {
     .sec3 {
         padding: 100px 0 100px 0;
         text-align: center;
-        background-color: rgb(255, 251, 243);
-        background: linear-gradient(to bottom, #ffffff,#ffffff,#fffbf9,#ffffff,);
+        // background-color: rgb(255, 251, 243);
+        // background: linear-gradient(to bottom, #ffffff,#ffffff,#fffbf9,#ffffff,);
 
    
         .container {
