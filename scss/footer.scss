@@ -28,7 +28,7 @@
             position: relative;
             width: 84%;
             margin: 0 auto;
-            background-color: lightpink;
+            // background-color: lightpink;
 
             @include responsive(large-screens) {
                 display: flex;
@@ -38,7 +38,7 @@
 
             .footer-logo {
                 margin-bottom: 30px;
-                background-color: aquamarine;
+                // background-color: aquamarine;
 
                 @include responsive(large-screens) {
                     margin: 0 6% 0 0;
@@ -73,8 +73,8 @@
                     display: flex;
                     justify-content: space-between;
                     // align-items: center;
-                    background-color: lightblue;
-    
+                    // background-color: lightblue;
+                    
                     @include responsive(large-screens) {
                         width: 100%;  // 900px
                     }

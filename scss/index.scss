@@ -872,12 +872,19 @@ main {
 }  // inform
 
 //=================== sns =================== 
-.sns {
+.main-sns {
     position: relative;
+    margin-top: 244px;
     margin-bottom: 195px;
+
+    @include responsive(large-screens) {
+        margin-top: 265px;
+        margin-bottom: 275px;
+    }
+
     .sns-button {
         position: absolute;
-        right: 20.4166%;  top: 547px;// right-147px
+        right: 16%;  top: 300px;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -885,6 +892,9 @@ main {
         height: 80px;
         border-radius: 100%;
 
+        @include responsive(large-screens) {
+            left: 50px; top: -50px;
+        }
         .circle-text {
             position: absolute;
             width: $width-wide;
@@ -927,7 +937,7 @@ main {
     }  // sns-button
 
 
-    //====== deco-circle ======
+    //----- deco-circle -----
     .deco {
         position: absolute;
         // left: 0; top: 0;
@@ -935,17 +945,29 @@ main {
 
     }
     .deco-circle1 {
-        left: 23.9%; top: 205px;  // 172px-left-23.9%
+        left: 20%; top: -30px;  // 
         width: 48px;
         height: 48px;
         background-color: #ff8665;
+
+        @include responsive(large-screens) {
+            left: 180px; top: 500px;
+            width: 100px;
+            height: 100px;
+        }
     }
 
     .deco-circle2 {
-        left: 14.861%; top: 530px;  // left-107px
+        left: 14.861%; top: 285px;  // left-107px
         width: 60px;
         height: 60px;
         border: 2px solid #ff8665;
+
+        @include responsive(large-screens) {
+            left: 450px; top: 55px;
+            width: 100px;
+            height: 100px;
+        }
     }
 
     .deco-circle3 {
@@ -953,6 +975,12 @@ main {
         width: 100px;
         height: 100px;
         background-color: #ff8665;
+
+        @include responsive(large-screens) {
+            right: 200px; bottom: 540px;
+            width: 70px;
+            height: 70px;
+        }
     }
 
     .deco-circle4 {
@@ -960,10 +988,16 @@ main {
         width: 60px;
         height: 60px;
         border: 2px solid #ff8665;
+
+        @include responsive(large-screens) {
+            left: 560px; bottom: 360px;
+            width: 100px;
+            height: 100px;
+        }
     }
 
 
-    //====== sns-content ======
+    //----- sns-content -----
     .sns-content {
         position: relative;
         z-index: 1;
@@ -977,6 +1011,10 @@ main {
             width: $width-wide;
             margin: 0 auto;
             // background-color: lightgoldenrodyellow;
+            
+            @include responsive(large-screens) {
+                // justify-content: space-between;
+            }
 
             .content-txt {
                 display: flex;
@@ -985,11 +1023,20 @@ main {
                 width: 40%; 
                 text-align: left;
                 // background-color: lightcyan;
-
+                
                 .sns-title {
+                    margin-bottom: 15px;
                     font: {
                         weight: $font-light;
                         size: 2.667rem;  // 32pt
+                    }
+
+                    @include responsive(large-screens) {
+                        margin-bottom: 35px;
+                        font: {
+                            weight: $font-regular;
+                            size: 3.75rem;  // 45pt
+                        }
                     }
                 }
 
@@ -999,13 +1046,16 @@ main {
                         size: 1.333rem;  // 16pt
                     }
                     color: #787878;
+                    
+                    @include responsive(large-screens) {
+                        font-size: 1.5rem;
+                    }
                 }
             }
 
             .sns-img {
                 position: relative;
                 overflow: hidden;
-                // background-color: lightpink;
 
                 img {
                     position: absolute;
@@ -1015,16 +1065,29 @@ main {
 
 
         div.youtube {
-            margin-top: 244px;
             margin-bottom: 60px;
             
+            .content-txt {
+                padding-left: 30px;
+
+                @include responsive(large-screens) {
+                    width: 50%; 
+                    padding-left: 60px;
+                }
+            }
+
             .sns-img {
                 width: 332px;
                 height: 252px;
                 margin-left: 50px;  // 7.353%
                 border-top-right-radius: 50%;
                 border-bottom-right-radius: 50%;
-                background-color: aqua;
+
+                @include responsive(large-screens) {
+                    width: 696px;
+                    height: 510px;
+                    margin-left: 0;
+                }
 
                 img {
                     left:0; top: -120px;
@@ -1036,13 +1099,27 @@ main {
         div.instagram {
             flex-direction: row-reverse;
             margin-bottom: 60px;
+
+            .content-txt {
+                @include responsive(large-screens) {
+                    width: 60%; 
+                    padding-left: 150px;
+                }
+            }
+
             .sns-img {
                 width: 330px;
                 height: 342px;
                 margin-right: 50px;
                 border-bottom-left-radius: 50%;
                 border-bottom-right-radius: 50%;
-                background-color: lightblue;
+
+                @include responsive(large-screens) {
+                    width: 593px;
+                    height: 615px;
+                    margin-right: 0;
+
+                }
 
                 img {
                     top: -50px;
@@ -1053,20 +1130,40 @@ main {
         div.facebook {
             margin-bottom: 0;
 
+            .content-txt {
+                padding-left: 30px;
+
+                @include responsive(large-screens) {
+                    width: 40%; 
+                    padding-left: 0;
+                    margin-left: 60px;
+                }
+            }
+
             .sns-img {
                 width: 327px;
                 height: 327px;
                 margin-left: 50px;
                 border-radius: 50%;
-                background-color: lightskyblue;
 
+                @include responsive(large-screens) {
+                    width: 400px;
+                    height: 400px;
+                    margin-left: -150px;
+                }
+                
                 img {
-                    left: -90px; top: 260px;
+                    left: -95px; top: 270px;
                     transform: scale(3.5);
+
+                    @include responsive(large-screens) {
+                        left: -125px; top: 350px;
+                        transform: scale(3.75);
+                    }
                 }
             }
         }
-    }
+    }  // sns-content
 }  //sns
 
 //***********footer***********
