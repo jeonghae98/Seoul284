@@ -442,62 +442,244 @@ main .main-collection .main-collection-row-line {
 .exhibition {
   position: relative;
   width: 100%;
-  background-color: lightcyan;
 }
 .exhibition .exhibition-title {
   margin: 110px 0 60px;
-  font-size: 4.167rem;
+  font-size: 3.333rem;
 }
-.exhibition .exhibition-content {
-  margin: auto;
+@media only screen and (min-width: 1024px) {
+  .exhibition .exhibition-title {
+    margin-bottom: 65px;
+    font-size: 5rem;
+  }
 }
-.exhibition .exhibition-content div {
+@media only screen and (min-width: 1024px) {
+  .exhibition .exhibition-content {
+    position: relative;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .exhibition .exhibition-content div.ex {
+    border-top: 2px solid #dbdbdb;
+  }
+}
+.exhibition .exhibition-content div.ex .content-box {
   padding: 65px 0 48px;
-  border-top: 1px solid #dbdbdb;
+  border-top: 2px solid #dbdbdb;
 }
-.exhibition .exhibition-content div img {
+@media only screen and (min-width: 1024px) {
+  .exhibition .exhibition-content div.ex .content-box {
+    display: flex;
+    padding: 0;
+    border: 0;
+  }
+}
+.exhibition .exhibition-content div.ex .content-box .ex-img img {
   margin: auto;
 }
-.exhibition .exhibition-content div .title {
+@media only screen and (min-width: 1024px) {
+  .exhibition .exhibition-content div.ex .content-box .ex-txt {
+    position: relative;
+    margin: 50px 0;
+  }
+}
+.exhibition .exhibition-content div.ex .content-box .ex-txt .title {
   margin-top: 50px;
-  font-size: 2.333rem;
+  font-size: 1.5rem;
 }
-.exhibition .exhibition-content .exhibition1 img {
-  width: 650px;
+@media only screen and (min-width: 1024px) {
+  .exhibition .exhibition-content div.ex .content-box .ex-txt .title {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+  }
 }
-.exhibition .exhibition-content .exhibition2 img {
-  width: 645px;
+@media only screen and (min-width: 1024px) {
+  .exhibition .exhibition-content .exhibition1 .content-box {
+    flex-direction: row-reverse;
+  }
 }
-.exhibition .exhibition-content .exhibition3 img {
-  width: 460px;
+@media only screen and (min-width: 1024px) {
+  .exhibition .exhibition-content .exhibition1 .content-box .ex-img {
+    padding: 50px 0 50px;
+    width: 880px;
+    border-left: 2px solid #dbdbdb;
+  }
 }
-.exhibition .exhibition-content .exhibition4 img {
-  width: 652px;
+.exhibition .exhibition-content .exhibition1 .content-box .ex-img img {
+  width: 95.588%;
 }
-.exhibition .exhibition-content .arrow-button {
+@media only screen and (min-width: 1024px) {
+  .exhibition .exhibition-content .exhibition1 .content-box .ex-img img {
+    width: 93.333%;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .exhibition .exhibition-content .exhibition1 .content-box .ex-txt {
+    width: 545px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .exhibition .exhibition-content .exhibition1 .content-box .ex-txt .title {
+    padding-right: 30px;
+    right: 0;
+    text-align: right;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .exhibition .exhibition-content .exhibition2 .content-box .ex-img {
+    padding: 50px 0 50px;
+    width: 705px;
+    border-right: 2px solid #dbdbdb;
+  }
+}
+.exhibition .exhibition-content .exhibition2 .content-box .ex-img img {
+  width: 91.5%;
+}
+@media only screen and (min-width: 1024px) {
+  .exhibition .exhibition-content .exhibition2 .content-box .ex-txt {
+    width: 620px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .exhibition .exhibition-content .exhibition2 .content-box .ex-txt .title {
+    padding-left: 30px;
+    left: 0;
+    text-align: left;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .exhibition .exhibition-content .exhibition3 .content-box {
+    flex-direction: row-reverse;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .exhibition .exhibition-content .exhibition3 .content-box .ex-img {
+    padding: 50px 0 50px;
+    width: 420px;
+    border-left: 2px solid #dbdbdb;
+  }
+}
+.exhibition .exhibition-content .exhibition3 .content-box .ex-img img {
+  width: 67.647%;
+}
+@media only screen and (min-width: 1024px) {
+  .exhibition .exhibition-content .exhibition3 .content-box .ex-img img {
+    width: 85.714%;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .exhibition .exhibition-content .exhibition3 .content-box .ex-txt {
+    width: 540px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .exhibition .exhibition-content .exhibition3 .content-box .ex-txt .title {
+    padding-right: 30px;
+    right: 0;
+    text-align: right;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .exhibition .exhibition-content .exhibition4 {
+    border-bottom: 2px solid #dbdbdb;
+  }
+}
+.exhibition .exhibition-content .exhibition4 .content-box {
+  border-bottom: 2px solid #dbdbdb;
+}
+@media only screen and (min-width: 1024px) {
+  .exhibition .exhibition-content .exhibition4 .content-box {
+    flex-direction: row-reverse;
+    border-bottom: 0;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .exhibition .exhibition-content .exhibition4 .content-box .ex-img {
+    padding: 50px 0 50px;
+    width: 930px;
+    border-left: 2px solid #dbdbdb;
+  }
+}
+.exhibition .exhibition-content .exhibition4 .content-box .ex-img img {
+  width: 95.882%;
+}
+@media only screen and (min-width: 1024px) {
+  .exhibition .exhibition-content .exhibition4 .content-box .ex-img img {
+    width: 93.548%;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .exhibition .exhibition-content .exhibition4 .content-box .ex-txt {
+    width: 500px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .exhibition .exhibition-content .exhibition4 .content-box .ex-txt .title {
+    padding-right: 30px;
+    margin-bottom: 100px;
+    right: 0;
+    text-align: right;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .exhibition .exhibition-content .exhibition4 .arrow-button {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    border-top: 2px solid #dbdbdb;
+  }
+}
+.exhibition .exhibition-content .exhibition4 .arrow-button .detail-btn {
   padding: 0;
   margin: 0;
-  border-bottom: 1px solid #dbdbdb;
+  border-bottom: 2px solid #dbdbdb;
 }
-.exhibition .exhibition-content .arrow-button ul {
+@media only screen and (min-width: 1024px) {
+  .exhibition .exhibition-content .exhibition4 .arrow-button .detail-btn {
+    width: 100%;
+    height: 120px;
+    border-bottom: 0;
+  }
+}
+.exhibition .exhibition-content .exhibition4 .arrow-button .detail-btn ul {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   width: 100%;
   height: 70px;
 }
-.exhibition .exhibition-content .arrow-button ul .empty {
+@media only screen and (min-width: 1024px) {
+  .exhibition .exhibition-content .exhibition4 .arrow-button .detail-btn ul {
+    height: 100%;
+  }
+}
+.exhibition .exhibition-content .exhibition4 .arrow-button .detail-btn ul .empty {
   width: 560px;
   height: 100%;
 }
-.exhibition .exhibition-content .arrow-button ul .arrow {
+@media only screen and (min-width: 1024px) {
+  .exhibition .exhibition-content .exhibition4 .arrow-button .detail-btn ul .empty {
+    width: 87%;
+  }
+}
+.exhibition .exhibition-content .exhibition4 .arrow-button .detail-btn ul .arrow {
   width: 120px;
   height: 70px;
   align-items: center;
   line-height: 70px;
+  background-color: lightcoral;
 }
-.exhibition .exhibition-content .arrow-button ul .arrow a {
-  border-left: 1px solid #dbdbdb;
+@media only screen and (min-width: 1024px) {
+  .exhibition .exhibition-content .exhibition4 .arrow-button .detail-btn ul .arrow {
+    width: 13%;
+    height: 100%;
+    line-height: 120px;
+  }
+}
+.exhibition .exhibition-content .exhibition4 .arrow-button .detail-btn ul .arrow a {
+  border-left: 2px solid #dbdbdb;
   font-weight: 100;
   font-size: 2.5rem;
   text-align: center;
