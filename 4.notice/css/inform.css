@@ -469,13 +469,16 @@ main .inform .page-number ul li a {
     font-size: 1.333rem;
   }
 }
-main .inform .page-number ul .single-left-arrow {
-  padding-right: 32px;
+main .inform .page-number ul .arrow a:hover {
+  font-weight: 600;
 }
 main .inform .page-number ul .number a:hover {
   color: #ff6000;
   -webkit-text-decoration: underline #ff6000;
           text-decoration: underline #ff6000;
+}
+main .inform .page-number ul .single-left-arrow {
+  padding-right: 32px;
 }
 main .inform .page-number ul .num1 {
   padding-right: 45px;

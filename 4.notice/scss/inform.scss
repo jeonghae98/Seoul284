@@ -269,16 +269,25 @@ main {
                     }
                 }
 
-                .single-left-arrow {
-                    padding-right: 32px;
+                .arrow {
+                    a {
+                        &:hover {
+                           font-weight: $font-semibold;
+                        }
+                    }
                 }
                 .number {
                    a {
-                    &:hover {
-                        color: $color-point;
-                        text-decoration: underline $color-point;
-                    }
-                } 
+                        &:hover {
+                            color: $color-point;
+                            text-decoration: underline $color-point;
+                        }
+                    } 
+                }
+    
+    
+                .single-left-arrow {
+                    padding-right: 32px;
                 }
                 .num1 {
                     padding-right: 45px;

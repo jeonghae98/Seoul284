@@ -150,12 +150,30 @@ main {
 
         .list-box {
             margin: 80px 0 180px;
+
+            @include responsive(large-screens) {
+                margin: auto;
+                width: 150px;
+            }
             .list-btn {
                 width: $width-wide;
                 height: 80px;
                 border: 1px solid $inform-line-gray;
-                font-size: 2rem;  // 24pt
                 background-color: $color-second;
+
+                @include responsive(large-screens) {
+                    margin: 60px 0 160px;
+                    width: $width-wide;
+                    height: 55px;
+                }
+
+                a {
+                    font-size: 2rem;  // 24pt
+
+                    @include responsive(large-screens) {
+                        font-size: 1.333rem;  // 16pt 
+                    }
+                }
             }
         }
     }  // detail-page

@@ -1,0 +1,184 @@
+@import "./style.scss";
+@import "./reset.scss";
+@import "./mixin.scss";
+@import "../../scss/header.scss";
+@import "../../scss/footer.scss";
+
+
+.container {
+    width: $width-wide;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 2.777%;
+    // background-color: antiquewhite;
+
+    @include responsive(large-screens) {
+        position: relative;
+        padding: 0;
+    }
+}
+
+//***********header***********
+header {
+    @include header-style();
+}
+
+
+//***********main***********
+.collection-detail-page {
+    position: relative;
+    width: $width-wide;
+
+    .collection-title {
+        margin: 80px 0 150px;
+        text-align: center;
+        // background-color: aquamarine;
+        font: {
+            weight: $font-regular;
+            size: 4.167rem;  // 50pt
+        }
+        
+        @include responsive(large-screens) {
+            margin-bottom: 120px;
+            font: {
+                weight: $font-semibold;
+                size: 3rem;  // 36pt
+            }
+            text-align: left;
+        }
+    }
+
+
+    .collec-image-desc-box {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "a"
+        "c"
+        "b"
+        "d"
+        ;
+        width: $width-wide;
+        border-top: 2px solid $collection-line-gray;
+
+
+        .main-image { grid-area: a; }
+        .collec-data { grid-area: b; }
+        .other-images-box { grid-area: c; }
+        .detail-desc-box { grid-area: d; }
+
+        
+        .main-image {
+            position: relative;
+            width: $width-wide;
+            height: 470px;
+            margin: 30px 0 35px;
+            // border: 2px solid $collection-line-lightgray;
+            background-color: #e7e7e7;
+
+            img {
+                position: absolute;
+                left: 50%; top: 50%;
+                width: 70%;
+                height: auto;
+                transform: translate(-50%, -50%);
+            }
+        }
+
+        .collec-data {
+            .collec-title {
+                margin-top: 60px;
+                margin-bottom: 10px;
+                padding-bottom: 15px;
+                font: {
+                    weight: $font-semibold;
+                    size: 2rem;
+                }
+                border-bottom: 2px solid $collection-line-lightgray;
+            }
+
+            table {
+                tr {
+                    td {
+                        font-size: 1.5rem;
+                    }
+
+                    .cat-title {
+                        font-weight: $font-regular;
+                    }
+                }
+            }
+        }  // collec-data
+        
+        .other-images-box {
+            display: flex;
+
+            .arrow {
+                font: {
+                    weight: $font-regular;
+                    size: 3rem;
+                }
+            }
+
+            .other-images {
+                width: 290px;
+                // height: ;
+            }
+        }
+    
+        .detail-desc-box {
+            margin-top: 60px;
+
+            .detail-content {
+                margin-bottom: 15px;
+                font: {
+                    weight: $font-medium;
+                    size: 1.677rem;
+                }
+                color: $color-point;
+            }
+
+            .content-desc {
+                padding: 20px;
+                border: 2px solid $collection-line-lightgray;
+                font-size: 1.333rem;
+            }
+        }
+    }  // collec-image-desc-box
+
+
+
+    .list-box {
+        margin: 80px 0 180px;
+
+        @include responsive(large-screens) {
+            margin: auto;
+            width: 150px;
+        }
+        .list-btn {
+            width: $width-wide;
+            height: 80px;
+            border: 1px solid $collection-line-gray;
+            background-color: $color-second;
+
+            @include responsive(large-screens) {
+                margin: 60px 0 160px;
+                width: $width-wide;
+                height: 55px;
+            }
+
+            a {
+                font-size: 1.677rem;  // 24pt
+
+                @include responsive(large-screens) {
+                    font-size: 1.333rem;  // 16pt 
+                }
+            }
+        }
+    }
+}  // collection
+
+//***********footer***********
+footer {
+    @include footer-style();
+}
