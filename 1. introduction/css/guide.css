@@ -528,7 +528,6 @@ footer .footerlogo-info .footer-content-box {
   position: relative;
   width: 84%;
   margin: 0 auto;
-  background-color: lightpink;
 }
 @media only screen and (min-width: 1024px) {
   footer .footerlogo-info .footer-content-box {
@@ -539,7 +538,6 @@ footer .footerlogo-info .footer-content-box {
 }
 footer .footerlogo-info .footer-content-box .footer-logo {
   margin-bottom: 30px;
-  background-color: aquamarine;
 }
 @media only screen and (min-width: 1024px) {
   footer .footerlogo-info .footer-content-box .footer-logo {
@@ -570,7 +568,6 @@ footer .footerlogo-info .footer-content-box .footer-info-box .info {
   width: 100%;
   display: flex;
   justify-content: space-between;
-  background-color: lightblue;
 }
 @media only screen and (min-width: 1024px) {
   footer .footerlogo-info .footer-content-box .footer-info-box .info {
