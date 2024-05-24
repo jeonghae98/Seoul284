@@ -1,9 +1,10 @@
 $(function() {
     //===================== header =====================
-    $('#mobile-menu').click(function() {
+    $('#mobile-menu').on('click', function() {
         $(this).toggleClass('active');
     });
 
+    
     // $('.gnb .gnb-title').on('mouseover', function() {
     //     $('.gnb .sub-menu').addclass('sub-menu-hover');
     // })
@@ -18,31 +19,31 @@ $(function() {
 
 
     //--------------------- intro ---------------------
-    $(window).scroll(function() {
-        var scrollPosition = $(this).scrollTop();  // 수직 스크롤바의 위치 인식
-        var elementOffset = $('.main-intro').offset().top;
-        var windowHeight = $(window).height();
-        var windowWidth = $(window).width();
-        // console.log(elementOffset);
-        // console.log(windowHeight);
+    // $(window).scroll(function() {
+    //     var scrollPosition = $(this).scrollTop();  // 수직 스크롤바의 위치 인식
+    //     var elementOffset = $('.main-intro').offset().top;
+    //     var windowHeight = $(window).height();
+    //     var windowWidth = $(window).width();
+    //     // console.log(elementOffset);
+    //     // console.log(windowHeight);
 
-        if (scrollPosition > (elementOffset - windowHeight)) {
-            if(windowWidth <768 ) {  // 모바일 버전
-                $('.main-intro .intro-line').animate({
-                    height: '1200px'
-                  }, 3000);
-            } else {  // pc 버전
-                $('.main-intro .intro-line').animate({
-                    height: '1500px'
-                  }, 3000);
-            }
-            
-            
-            //   $('.main-intro .year').animate({
-            //     opacity: '1'
-            //   }, 3000)
-        }
-    });
+    //     if (scrollPosition > (elementOffset - windowHeight)) {
+    //         if(windowWidth <768 ) {  // 모바일 버전
+    //             $('.main-intro .intro-line').animate({
+    //                 height: '1020px'
+    //               }, 3000);
+    //         } else {  // pc 버전
+    //             $('.main-intro .intro-line').animate({
+    //                 height: '1472px'
+    //               }, 3000);
+    //         }
+    //     }
+    // });
+
+        // ****intro-btn*****
+        $('.intro-btn').click(function() {
+            window.location.href = '.././1. introduction/intro.html'
+        });
     //--------------------- collection ---------------------
     function updateCollectionTxt() {
         var mainWindowWidth = $(window).width();

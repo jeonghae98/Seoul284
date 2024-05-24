@@ -44,9 +44,8 @@
                 // position: fixed;
                 // z-index: 1;
                 // top: 0;
-                // left: 0;
-                // background-color: rgb(0,0,0);
-                // background-color: rgba(0,0,0, 0.9);
+                // right: 0;
+                // background-color: black;
                 // overflow-x: hidden;
                 // transition: 0.5s;
 
@@ -59,34 +58,40 @@
 
                     .gnb {
                         display: flex;
-                        justify-content: space-between;
-                        // background-color: aquamarine;
-        
+                        flex-direction: column;
+
+                        @include responsive(large-screens) {
+                            flex-direction: row;
+                            justify-content: space-between;
+                            // background-color: aquamarine;
+                        }
+                        
                         li {
                             a.gnb-title {
-                                font: {
-                                    size: 1.1rem;  // 16pt 21px
-                                    weight: $font-regular;
-                                }
-                                // color: $color-second;
-
-                                &:hover {
-                                    color: $color-point;
+                                color: $color-main;
+                                @include responsive(large-screens) {
+                                    font: {
+                                        size: 1.1rem;  // 16pt 21px
+                                        weight: $font-regular;
+                                    }
+                                    // color: $color-second;
+    
+                                    &:hover {
+                                        color: $color-point;
+                                    }
                                 }
                             }
 
                             .sub-menu {
                                 display: none;
                             }
-
-                            .sub-menu-hover {
-                                display: block;
-                                display: flex;
-                                flex-direction: column;
-                            }
                         }
                     }  // gnb
             }  // main-menu
+
+            // .active-menu {  // 모바일 햄버거 바 눌렀을 때
+            //     width: 100%;
+            // }
     
             .right-menu {
                 display: flex;
@@ -163,5 +168,5 @@
                 
             }  // right-menu
         }  //logo-gnb-menu-box
-    }  // logo-gnb-rightmen
+    }  // logo-gnb-rightmenu
 }  // header-style()
