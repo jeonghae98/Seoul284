@@ -19,7 +19,7 @@
                         <h1><a href="./index.html"><img src="./images/logo.png" alt="logo"></a></h1>
                     </div>
 
-                    <nav class="main-menu">
+                    <nav class="main-menu" id="mainMenu">
                         <ul class="gnb">
                             <li>
                                 <a href="./1. introduction/intro.html" class="gnb-title">소개</a>
@@ -60,12 +60,13 @@
                             <li class="search"><img src="./images/header_search.png" alt="search"></li>  
                         </ul>
                         
-                        <div id="mobile-menu">  <!-- 모바일(햄버거 메뉴) -->
+                        <div class="mobile-menu" id="mobileBar">  <!-- 모바일(햄버거 메뉴) -->
                             <div class="bar"></div>
                             <div class="bar"></div>
                             <div class="bar"></div>
                         </div>
                     </div>
+
                 </div>  <!-- logo-menu-box -->
             </div>  <!-- container -->
         </div>  <!-- logo-rightmenu -->
@@ -82,9 +83,17 @@
         <video src="./main_video.mp4" atl="main video"autoplay loop></video>
     </article>  <!-- main-video -->
 
+
+    <!-- ****************** main-intro ****************** -->
     <section class="main-intro">
         <div class="container">
-            <div class="intro-line"></div>
+            <!-- <div class="intro-line"></div> -->
+            <div class="intro-collection-exhibition-line-box">
+                <div class="intro-line"></div>
+                <div class="collection-line-top"></div>
+                <div class="collection-line-bottom"></div>
+                <div class="exhibition-line"></div>
+            </div>
 
             <p class="year">1900</p>    
             <p class="now-year">2024</p> 
@@ -98,7 +107,7 @@
                 <p class="intro-text">: 역사(歷史)와 역사(驛舍)가 공존하는 문화역서울<span class="num">284</span>에 오신것을 환영합니다</p>
             </div>
             
-            <div class="detail-button">
+            <div class="detail-button intro-btn">
                 <p class="circle-text">자세히보기 자세히보기 자세히보기 자세히보기</p>
                 <div class="button">
                         <div class="btn-line"></div>
@@ -109,10 +118,13 @@
         </div>  <!-- container -->
     </section>  <!-- intro -->
 
+
+
+    <!-- ****************** main-collection ****************** -->
     <section class="main-collection">
         <div class="parallelogram">
             <div class="main-collection-row-line"></div>
-            <div class="row-line-circle"></div>s
+            <div class="row-line-circle"></div>
     
             <div class="container col-container">
                 <h2 class="collection-title">소장품<br>문화역서울<br>284</h2>

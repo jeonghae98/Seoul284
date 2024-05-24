@@ -1,57 +1,106 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>평행사변형 안에 이미지와 텍스트 배치</title>
-    <style>
-        .image-slider {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            overflow: hidden;
-            white-space: nowrap;
-        }
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>fullButton</title>
+    <link rel="stylesheet" href="./css/test.css">
+    <script src="./js/jquery.js"></script>
+    <script>
+        $(function() {
+            var ham = $('#ham');
+            var menu = $('#menu');
+            ham.on('click', function() {
+            if(menu.toggleClass('active')) {
+                menu.removeClass('active');
+            } else {
+                menu.addClass('active');
+            }
+            
+            if(ham.toggleClass('active')) {
+                ham.removeClass('active');
+            } else {
+                ham.addClass('active');
+            }
+            
+            })
+        })
 
-        .image-slider li {
-            display: inline-block;
-        }
+        $(function() {
+            var mobile = $('#mobileBar');
+            var menu = $('#mainMenu');
+            
+            mobile.on('click', function() {
+                mainMenu.toggleClass('active');
+                mobile.toggleClass('active');
+            });
+        });
 
-        .image-slider li img {
-            max-width: 100%;
-            height: auto;
-        }
-
-    </style>
+    </script>
 </head>
 <body>
-    <div class="image-row1">
-        <ul class="image-slider">
-            <li><img src="./images/main_collection_1.jpg" alt="collection image"></li>
-            <li><img src="./images/main_collection_2.jpg" alt="collection image"></li>
-            <li><img src="./images/main_collection_3.jpg" alt="collection image"></li>
-            <li><img src="./images/main_collection_4.jpg" alt="collection image"></li>
-            <li><img src="./images/main_collection_5.jpg" alt="collection image"></li>
-        </ul>
-    </div>
     
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            const slider = document.querySelector('.image-slider');
-            const images = document.querySelectorAll('.image-slider li');
-            let currentIndex = 0;
+      
+      <nav class="menu" id="menu">
+        <ul class="gnb">
+              <li>
+                  <a href="./1. introduction/intro.html" class="gnb-title">소개</a>
+                  <ul class="sub-menu">
+                      <li><a href="./1. introduction/intro.html">문화역서울284 소개</a></li>
+                      <li><a href="./1. introduction/visit.html">방문안내</a></li>
+                      <li><a href="./1. introduction/space.html">공간안내</a></li>
+                      <li><a href="./1. introduction/division.html">조직도</a></li>
+                  </ul>
+              </li>
+              <li>
+                  <a href="./2. program/exhibition.html" class="gnb-title">프로그램</a>
+                  <ul class="sub-menu">
+                      <li><a href="./2. program/exhibition.html">전시</a></li>
+                      <li><a href="./2. program/event.html">공연/행사</a></li>
+                      <li><a href="./2. program/tour.html">공간투어</a></li>
+                  </ul>
+              </li>
+              <li>
+                  <a href="./3. referenceroom/collection.html" class="gnb-title">자료실</a>
+                  <ul class="sub-menu">
+                      <li><a href="./3. referenceroom/collection.html">소장품</a></li>
+                  </ul>
+              </li>
+              <li>
+                  <a href="./4.notice/notice.html" class="gnb-title">알림/소식</a>
+                  <ul class="sub-menu">
+                      <li><a href="./4.notice/notice.html">공지사항</a></li>
+                      <li><a href="./4.notice/news.html">보도자료</a></li>
+                  </ul>
+              </li>
+          </ul> 
+      </nav>
+        
+      <div class="hamberger" id="ham">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+<!-- <script>
+    var ham = document.getElementById('ham');
+    var menu = document.getElementById('menu');
+    ham.addEventListener('click', function() {
+    if(menu.classList.contains('active')) {
+        menu.classList.remove('active');
+    } else {
+        menu.className += ' active';
+    }
+    
+    if(ham.classList.contains('active')) {
+        ham.classList.remove('active');
+    } else {
+        ham.className += ' active';
+    }
+    
+    })
 
-            setInterval(() => {
-                // Hide the current image
-                images[currentIndex].style.display = 'none';
-                
-                // Increment the index or reset to 0 if it exceeds the number of images
-                currentIndex = (currentIndex + 1) % images.length;
-                
-                // Show the next image
-                images[currentIndex].style.display = 'inline-block';
-            }, 3000); // Change slide every 3 seconds (adjust as needed)
-        });
-    </script>
+    
+
+
+</script> -->
 </body>
 </html>
