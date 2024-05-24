@@ -44,7 +44,7 @@ main {
             color: $color-main;
             font: {
                 weight: $font-light;
-                size: 0.5625rem;  // 10ptW
+                size: 0.5625rem;  // 10pt
             }
             animation: textRotation 8s linear infinite;
 
@@ -109,7 +109,7 @@ main {
     }
 
 
-    //----- main-intro ----- 
+    //=================== main-intro =================== 
     section.main-intro {
         position: relative;
         // z-index: 1;
@@ -121,7 +121,7 @@ main {
             position-x: -100px;
             position-y: 500px;
             size: 1170px 788px;
-            color: aqua;
+            // color: aqua;
         }
 
         @include responsive(large-screens) {
@@ -319,8 +319,8 @@ main {
                 }
                 
                 @include responsive(large-screens) {
-                    width: 560px;
-                    font-size: 2.167rem;  // 30pt
+                    width: 520px;
+                    font-size: 2rem;  // 30pt
                 }
                 .num {
                     display: inline;
@@ -434,10 +434,11 @@ main {
 
                 @include responsive(large-screens) {
                     position: absolute;
-                    right: 0; top: 160px;
+                    right: 0; top: 180px;
                     flex-direction: column;
-                    align-items: flex-end;
-                    width: 400px;
+                    // align-items: flex-end;
+                    align-items: flex-start;
+                    width: 390px;
                 }
 
                 .collection-text {
@@ -448,7 +449,7 @@ main {
                         
                         @include responsive(large-screens) {
                             font-size:2.167rem;  // 26pt
-                            margin-bottom: 70px;
+                            margin-bottom: 50px;
                         }
                     }
 
@@ -459,7 +460,6 @@ main {
 
                     @include responsive(large-screens) {
                         display: block;
-                        margin-right: 95px;
                         margin-bottom: 45px;
                         // background-color: lightgreen;
                     }

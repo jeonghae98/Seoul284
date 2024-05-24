@@ -28,6 +28,8 @@
             }
 
             .logo img {
+                position: relative;
+                z-index: 5;
                 margin-top: 36px;
                 width: 182px;  // 182px
 
@@ -37,62 +39,62 @@
                 }
             }
 
-            .main-menu {
-                display: none;
-                // height: 100%;
-                // width: 0;
-                // position: fixed;
-                // z-index: 1;
-                // top: 0;
-                // right: 0;
-                // background-color: black;
-                // overflow-x: hidden;
-                // transition: 0.5s;
 
+
+            .main-menu {
+                position: absolute;
+                top:0;
+                right:-20px;
+                bottom:0px;
+                overflow-x: hidden;
+                width:0px;
+                height: 800%;
+                background: $color-second;
+                transition: width 0.5s ease;
+                
                 @include responsive(large-screens) {
+                    position: static;
                     margin-top: 70px;
                     margin-left: -43px;
                     width: 616px;  // 616px 47.8%
-                    display: block;
+                    background-color: transparent;
                 }
 
-                    .gnb {
+                .gnb {
+                    @include responsive(large-screens) {
                         display: flex;
-                        flex-direction: column;
+                        flex-direction: row;
+                        justify-content: space-between;
+                        // background-color: aquamarine;
+                    }
 
-                        @include responsive(large-screens) {
-                            flex-direction: row;
-                            justify-content: space-between;
-                            // background-color: aquamarine;
-                        }
-                        
-                        li {
-                            a.gnb-title {
-                                color: $color-main;
-                                @include responsive(large-screens) {
-                                    font: {
-                                        size: 1.1rem;  // 16pt 21px
-                                        weight: $font-regular;
-                                    }
-                                    // color: $color-second;
-    
-                                    &:hover {
-                                        color: $color-point;
-                                    }
+                    li {
+                        a.gnb-title {
+                            color: $color-main;
+                            @include responsive(large-screens) {
+                                font: {
+                                    size: 1.1rem;  // 16pt 21px
+                                    weight: $font-regular;
+                                }
+                                // color: $color-second;
+
+                                &:hover {
+                                    color: $color-point;
                                 }
                             }
-
-                            .sub-menu {
-                                display: none;
-                            }
                         }
-                    }  // gnb
-            }  // main-menu
+                    }
 
-            // .active-menu {  // 모바일 햄버거 바 눌렀을 때
-            //     width: 100%;
-            // }
+                    .sub-menu {
+                        display: none;
+                    }
+              }
+              &.active {
+                width: 100%;
+              }
+            } 
     
+
             .right-menu {
                 display: flex;
                 justify-content: space-between;
@@ -132,40 +134,58 @@
                     }
                 }
     
-                #mobile-menu {
-                    position: relative;
-                    width: 40px;  
-                    height: 32px; 
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: space-between;
-                    align-items: center;
+
+                .mobile-menu {
+                    margin-top: -10px;
+                    cursor:pointer;
+                    background-color: aqua;
 
                     @include responsive(large-screens) {
                         display: none;
                     }
 
                     .bar {
-                        width: $width-wide;
-                        height: 3px;
-                        border-radius: 10px;
-                        background-color: $color-main;
-                        transition: transform 0.3s ease;
-                        transform-origin: center;
+                      display:block;  
+                      width: 40px;
+                      height:3px;
+                      margin:10px 10px;
+                      border-radius: 10px;
+                      background:$color-main;
+                      transition: transform 0.5s ease;
+
+                      &:first-child {
+                        // margin-top: 0;
+                        transform:rotate(0deg);
+                      }
+
+                      &:last-child {
+                        // margin-bottom: 0;
+                        transform:rotate(0deg);
+                      }
                     }
+
                     &.active {
-                        .bar:nth-child(1) {
-                            transform: rotate(-45deg) translate(-10px, 10px);
+                      height:50px;
+                    //   background-color: greenyellow;
+                      position:relative;
+
+                      div{
+                        position:absolute;
+                        top: 10px; right: 0;
+                        display:none;
+
+                        &:first-child {
+                          transform:rotate(-45deg);
+                            display:block;
                         }
-                        .bar:nth-child(2) {
-                            transform: scale(0);
+
+                        &:last-child {
+                          transform:rotate(45deg);
+                          display:block;
                         }
-                        .bar:nth-child(3) {
-                            transform: rotate(45deg) translate(-10px, -10px);
-                        }
+                      }
                     }
-                }
-                
+                  }
             }  // right-menu
         }  //logo-gnb-menu-box
     }  // logo-gnb-rightmenu

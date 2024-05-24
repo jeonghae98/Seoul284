@@ -1,7 +1,16 @@
 $(function() {
     //===================== header =====================
-    $('#mobile-menu').on('click', function() {
-        $(this).toggleClass('active');
+    // $('#mobile-menu').click(function() {
+    //     $(this).toggleClass('active');
+    //     // $('#main-menu').addClass('move');
+    // });
+
+    var mobile = $('#mobileBar');
+    var mainMenu = $('#mainMenu');
+    
+    mobile.on('click', function() {
+        mainMenu.toggleClass('active');
+        mobile.toggleClass('active');
     });
 
     
@@ -86,3 +95,4 @@ $(function() {
         $('html').animate({ scrollTop: 0 }, 500)
     });
 });
+
