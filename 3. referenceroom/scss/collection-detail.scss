@@ -39,7 +39,7 @@ header {
         }
         
         @include responsive(large-screens) {
-            margin-bottom: 120px;
+            margin-bottom: 80px;
             font: {
                 weight: $font-semibold;
                 size: 3rem;  // 36pt
@@ -67,21 +67,37 @@ header {
         .other-images-box { grid-area: c; }
         .detail-desc-box { grid-area: d; }
 
-        
+        @include responsive(large-screens) {
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-areas: 
+            "a b"
+            "a c"
+            "d d"
+            ;
+        }
+
         .main-image {
             position: relative;
             width: $width-wide;
             height: 470px;
-            margin: 30px 0 35px;
-            // border: 2px solid $collection-line-lightgray;
-            background-color: #e7e7e7;
+            margin: 30px 0 40px;
 
+            @include responsive(large-screens) {
+                overflow: hidden;
+                width: 633px;
+                height: 404px;
+                margin: 45px 0;;
+                background-color: #e7e7e7;
+            }
+
+            
             img {
                 position: absolute;
                 left: 50%; top: 50%;
-                width: 70%;
-                height: auto;
                 transform: translate(-50%, -50%);
+                width: 80%;
+                height: auto;
+                background-color: #e7e7e7;
             }
         }
 
@@ -95,6 +111,10 @@ header {
                     size: 2rem;
                 }
                 border-bottom: 2px solid $collection-line-lightgray;
+
+                @include responsive(large-screens) {
+                    margin-top: 45px;
+                }
             }
 
             table {
@@ -102,9 +122,10 @@ header {
                     td {
                         font-size: 1.5rem;
                     }
-
+                    
                     .cat-title {
-                        font-weight: $font-regular;
+                        width: 140px;
+                        font-weight: $font-medium;
                     }
                 }
             }
@@ -112,7 +133,15 @@ header {
         
         .other-images-box {
             display: flex;
+            // justify-content: space-between;
+            align-items: center;
+            background-color: aqua;
 
+            @include responsive(large-screens) {
+                // position: relative;
+                height: 120px;
+                margin-top: 20px;
+            }
             .arrow {
                 font: {
                     weight: $font-regular;
@@ -120,9 +149,32 @@ header {
                 }
             }
 
+            .left-arrow {
+                // @include responsive(large-screens) {
+                //   s
+                // }
+            }
             .other-images {
+                position: relative;
+                overflow: hidden;
                 width: 290px;
-                // height: ;
+                height: 205px;
+
+
+                @include responsive(large-screens) {
+                    width: 200px;
+                    height: $height-wide;
+
+                }
+
+                img {
+                    position: absolute;
+                    left: 50%; top: 50%;
+                    transform: translate((-50%, -50%));
+                    width: 70%;
+                    height: auto;
+                    background-color: #e7e7e7;
+                }
             }
         }
     
