@@ -1,0 +1,69 @@
+@import "./style.scss";
+@import "./reset.scss";
+@import "./mixin.scss";
+@import "../../../scss/header.scss";
+@import "../../../scss/footer.scss";
+
+
+.container {
+    width: $width-wide;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 20px;
+    // background-color: antiquewhite;
+
+    @include responsive(large-screens) {
+        position: relative;
+        padding: 0;
+    }
+}
+
+//***********header***********
+header {
+    @include header-style();
+}
+
+
+//***********main***********
+main {
+    .detail-page {
+        @include title-menu-list();
+
+        .content-box {
+            margin-top: 45px;
+
+            @include main-title-box();
+
+            .txt-box {
+                // height: 1000px;
+                padding: 75px 0;
+                border-top: 1px solid $inform-line-gray;
+                border-bottom: 1px solid $inform-line-gray;
+
+                @include responsive(large-screens) {
+                    padding: 50px 0;
+                }
+
+                @include txt-box();
+
+                .paragraph_1 {
+                    p {
+                        .topic {
+                            font-weight: $font-regular;
+                            color: blue;
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }  // txt-box
+        }  // content-box
+
+        @include list-box();
+    }  // detail-page
+}  // main
+
+
+//***********footer***********
+footer {
+    @include footer-style();
+}

@@ -1,0 +1,185 @@
+@import "./style.scss";
+@import "./reset.scss";
+@import "./mixin.scss";
+@import "../../../scss/header.scss";
+@import "../../../scss/footer.scss";
+
+
+.container {
+    width: $width-wide;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 20px;
+    // background-color: antiquewhite;
+
+    @include responsive(large-screens) {
+        position: relative;
+        padding: 0;
+    }
+}
+
+//***********header***********
+header {
+    @include header-style();
+}
+
+
+//***********main***********
+main {
+    .detail-page {
+        .inform-title {
+            margin: 80px 0 35px;
+            text-align: center;
+            // background-color: aquamarine;
+            
+            @include responsive(large-screens) {
+                margin-bottom: 80px;
+                font: {
+                    weight: $font-semibold;
+                    size: 5rem;  // 60pt
+                }
+                text-align: left;
+            }
+        }
+
+        .menu-list {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            width: 350px;
+            margin: auto;
+            // background-color: aqua;
+            
+            @include responsive(large-screens) {
+                position: absolute;
+                right: 0; top: 50px;
+                flex-direction: column-reverse;
+                justify-content: space-between;
+                width: 360px;
+                height: 110px;
+            }
+
+            ul {
+                display: flex;
+                justify-content: space-between;
+                width: 348px;
+
+                @include responsive(large-screens) {
+                    margin-left: 150px;
+                    width: 200px;
+                }
+
+                li {
+                    a {
+                        font: {
+                            weight: $font-regular;
+                            size: 2.667rem;  // 32pt
+                        }
+
+                        @include responsive(large-screens) {
+                            font-size: 1.667rem;  // 20pt
+                        }
+                    }
+                }
+
+                .menu-title {
+                    &::after {
+                        display: block;
+                        content: '';
+                        width: $width-wide;
+                        height: 2px;
+                        background-color: $color-point;
+                        transform: scaleX(0);
+                        transition: all 0.5s ease;
+                    }
+
+                    &:hover::after {
+                        transform: scaleX(1);  /* 1 = 100% */
+                    }
+                }
+
+            }
+        }  // menu-list
+
+        .content-box {
+            margin-top: 45px;
+
+            .title-box {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                height: 200px;
+                border-top: 1px solid $inform-line-gray;
+
+                @include responsive(large-screens) {
+                    height: 150px; 
+                }
+
+                .title {
+                    font: {
+                        weight: $font-regular;
+                        size: 2.5rem;  // 30pt
+                    }
+                }
+
+                p {
+                    font: {
+                        weight: $font-regular;
+                        size: 1.667rem;  // 20pt
+                    }
+                    color: $color-gray;
+
+                    @include responsive(large-screens) {
+                        font-size: 1.5rem;  // 18pt 
+                    }
+                }
+            }
+            .txt-box {
+                height: 1000px;
+                padding: 75px 0;
+                border-top: 1px solid $inform-line-gray;
+                border-bottom: 1px solid $inform-line-gray;
+
+                @include responsive(large-screens) {
+                    padding: 50px 0;
+                }
+            }
+            
+        }  // content-box
+
+        .list-box {
+            margin: 80px 0 180px;
+
+            @include responsive(large-screens) {
+                margin: auto;
+                width: 150px;
+            }
+            .list-btn {
+                width: $width-wide;
+                height: 80px;
+                border: 1px solid $inform-line-gray;
+                background-color: $color-second;
+
+                @include responsive(large-screens) {
+                    margin: 60px 0 160px;
+                    width: $width-wide;
+                    height: 55px;
+                }
+
+                a {
+                    font-size: 2rem;  // 24pt
+
+                    @include responsive(large-screens) {
+                        font-size: 1.333rem;  // 16pt 
+                    }
+                }
+            }
+        }
+    }  // detail-page
+}  // main
+
+//***********footer***********
+footer {
+    @include footer-style();
+}
