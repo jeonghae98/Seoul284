@@ -95,7 +95,7 @@ header {
                 position: absolute;
                 left: 50%; top: 50%;
                 transform: translate(-50%, -50%);
-                width: 80%;
+                width: 70%;
                 height: auto;
                 background-color: #e7e7e7;
             }
@@ -135,14 +135,15 @@ header {
             display: flex;
             // justify-content: space-between;
             align-items: center;
-            background-color: aqua;
+            // background-color: aqua;
 
             @include responsive(large-screens) {
-                // position: relative;
+                position: relative;
                 height: 120px;
                 margin-top: 20px;
             }
             .arrow {
+                cursor: pointer;
                 font: {
                     weight: $font-regular;
                     size: 3rem;
@@ -150,18 +151,23 @@ header {
             }
 
             .left-arrow {
-                // @include responsive(large-screens) {
-                //   s
-                // }
+                @include responsive(large-screens) {
+                    position: absolute;
+                    left: 0;
+                    // background-color: beige;
+                }
             }
             .other-images {
                 position: relative;
                 overflow: hidden;
                 width: 290px;
                 height: 205px;
+                cursor: pointer;
 
 
                 @include responsive(large-screens) {
+                    position: absolute;
+                    left: 50px;
                     width: 200px;
                     height: $height-wide;
 
@@ -174,6 +180,14 @@ header {
                     width: 70%;
                     height: auto;
                     background-color: #e7e7e7;
+                }
+            }
+
+            .right-arrow {
+                @include responsive(large-screens) {
+                    position: absolute;
+                    right: 0;
+                    // background-color: beige;
                 }
             }
         }
@@ -220,10 +234,10 @@ header {
             }
 
             a {
-                font-size: 1.677rem;  // 24pt
+                font-size: 1.667rem;  
 
                 @include responsive(large-screens) {
-                    font-size: 1.333rem;  // 16pt 
+                    font-size: 1.333rem;   
                 }
             }
         }

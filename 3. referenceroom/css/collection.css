@@ -284,7 +284,7 @@ header .logo-gnb-rightmenu .logo-gnb-menu-box .right-menu .mobile-menu.active di
   }
 }
 .collection .collection-content .content-box .box {
-  width: 320px;
+  width: 92%;
   height: 415px;
   border: 1px solid #000;
   cursor: pointer;
@@ -336,7 +336,7 @@ header .logo-gnb-rightmenu .logo-gnb-menu-box .right-menu .mobile-menu.active di
   position: absolute;
   left: 50%;
   top: 50%;
-  width: 90%;
+  width: 110%;
   height: auto;
   transform: translate(-50%, -50%);
 }
@@ -409,8 +409,7 @@ header .logo-gnb-rightmenu .logo-gnb-menu-box .right-menu .mobile-menu.active di
 }
 @media only screen and (min-width: 1024px) {
   .collection .page-number {
-    margin-top: 0;
-    margin-bottom: 160px;
+    margin: 60px 0 160px;
   }
 }
 .collection .page-number ul {

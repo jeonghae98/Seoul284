@@ -7,8 +7,13 @@ $(function() {
 
 
     //===================== main =====================
-    $('.list:eq(0)').on('click', function() {
-        window.location.href = './recruitment/detail-page_05.html';
+    let i = 0;
+
+    $('.list').each(function(i) {
+        $(this).on('click', function() {
+            let num = 5 - i;
+            window.location.href = `./recruitment/detail-page_0${num}.html`;
+        });
     });
 
     
