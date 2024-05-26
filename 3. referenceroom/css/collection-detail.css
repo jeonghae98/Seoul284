@@ -305,7 +305,7 @@ header .logo-gnb-rightmenu .logo-gnb-menu-box .right-menu .mobile-menu.active di
   .collection-detail-page .collec-image-desc-box .main-image {
     overflow: hidden;
     width: 633px;
-    height: 404px;
+    height: 440px;
     margin: 45px 0;
     background-color: #e7e7e7;
   }
@@ -318,6 +318,9 @@ header .logo-gnb-rightmenu .logo-gnb-menu-box .right-menu .mobile-menu.active di
   width: 70%;
   height: auto;
   background-color: #e7e7e7;
+}
+.collection-detail-page .collec-image-desc-box .main-image .main-column-img {
+  width: 50%;
 }
 .collection-detail-page .collec-image-desc-box .collec-data .collec-title {
   margin-top: 60px;

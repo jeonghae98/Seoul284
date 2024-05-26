@@ -85,7 +85,7 @@ header {
             @include responsive(large-screens) {
                 overflow: hidden;
                 width: 633px;
-                height: 404px;
+                height: 440px;
                 margin: 45px 0;;
                 background-color: #e7e7e7;
             }
@@ -98,6 +98,10 @@ header {
                 width: 70%;
                 height: auto;
                 background-color: #e7e7e7;
+            }
+
+            .main-column-img {
+                width: 50%;
             }
 
         }
