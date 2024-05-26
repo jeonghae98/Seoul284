@@ -99,6 +99,7 @@ header {
                 height: auto;
                 background-color: #e7e7e7;
             }
+
         }
 
         .collec-data {
@@ -135,11 +136,13 @@ header {
             display: flex;
             // justify-content: space-between;
             align-items: center;
-            // background-color: aqua;
+            width: $width-wide;
+            background-color: aqua;
 
             @include responsive(large-screens) {
                 position: relative;
-                height: 120px;
+                height: 110px;
+                width: 620px;
                 margin-top: 20px;
             }
             .arrow {
@@ -150,13 +153,6 @@ header {
                 }
             }
 
-            .left-arrow {
-                @include responsive(large-screens) {
-                    position: absolute;
-                    left: 0;
-                    // background-color: beige;
-                }
-            }
             .other-images {
                 position: relative;
                 overflow: hidden;
@@ -166,28 +162,23 @@ header {
 
 
                 @include responsive(large-screens) {
-                    position: absolute;
-                    left: 50px;
                     width: 200px;
                     height: $height-wide;
-
                 }
 
                 img {
-                    position: absolute;
-                    left: 50%; top: 50%;
-                    transform: translate((-50%, -50%));
                     width: 70%;
                     height: auto;
+                    margin-left: 50px;
                     background-color: #e7e7e7;
                 }
-            }
 
-            .right-arrow {
-                @include responsive(large-screens) {
-                    position: absolute;
-                    right: 0;
-                    // background-color: beige;
+                .last-image {
+                    display: none;
+
+                    @include responsive(large-screens) {
+                        display: block;
+                    }
                 }
             }
         }

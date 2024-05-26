@@ -342,11 +342,14 @@ header .logo-gnb-rightmenu .logo-gnb-menu-box .right-menu .mobile-menu.active di
 .collection-detail-page .collec-image-desc-box .other-images-box {
   display: flex;
   align-items: center;
+  width: 100%;
+  background-color: aqua;
 }
 @media only screen and (min-width: 1024px) {
   .collection-detail-page .collec-image-desc-box .other-images-box {
     position: relative;
-    height: 120px;
+    height: 110px;
+    width: 620px;
     margin-top: 20px;
   }
 }
@@ -354,12 +357,6 @@ header .logo-gnb-rightmenu .logo-gnb-menu-box .right-menu .mobile-menu.active di
   cursor: pointer;
   font-weight: 400;
   font-size: 3rem;
-}
-@media only screen and (min-width: 1024px) {
-  .collection-detail-page .collec-image-desc-box .other-images-box .left-arrow {
-    position: absolute;
-    left: 0;
-  }
 }
 .collection-detail-page .collec-image-desc-box .other-images-box .other-images {
   position: relative;
@@ -370,25 +367,22 @@ header .logo-gnb-rightmenu .logo-gnb-menu-box .right-menu .mobile-menu.active di
 }
 @media only screen and (min-width: 1024px) {
   .collection-detail-page .collec-image-desc-box .other-images-box .other-images {
-    position: absolute;
-    left: 50px;
     width: 200px;
     height: 100%;
   }
 }
 .collection-detail-page .collec-image-desc-box .other-images-box .other-images img {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
   width: 70%;
   height: auto;
+  margin-left: 50px;
   background-color: #e7e7e7;
 }
+.collection-detail-page .collec-image-desc-box .other-images-box .other-images .last-image {
+  display: none;
+}
 @media only screen and (min-width: 1024px) {
-  .collection-detail-page .collec-image-desc-box .other-images-box .right-arrow {
-    position: absolute;
-    right: 0;
+  .collection-detail-page .collec-image-desc-box .other-images-box .other-images .last-image {
+    display: block;
   }
 }
 .collection-detail-page .collec-image-desc-box .detail-desc-box {

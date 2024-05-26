@@ -387,35 +387,21 @@ main .detail-page .content-box .txt-box div strong {
   text-decoration: underline;
   line-height: 2;
 }
-main .detail-page .content-box .txt-box .paragraph_1 {
-  margin-top: 100px;
-}
-@media only screen and (min-width: 1024px) {
-  main .detail-page .content-box .txt-box .paragraph_1 {
-    margin-top: 100px;
-  }
-}
 main .detail-page .content-box .txt-box .paragraph_2,
-main .detail-page .content-box .txt-box .paragraph_7 {
-  margin-top: 300px;
-}
-@media only screen and (min-width: 1024px) {
-  main .detail-page .content-box .txt-box .paragraph_2,
-  main .detail-page .content-box .txt-box .paragraph_7 {
-    margin-top: 160px;
-  }
-}
 main .detail-page .content-box .txt-box .paragraph_3,
 main .detail-page .content-box .txt-box .paragraph_4,
 main .detail-page .content-box .txt-box .paragraph_5,
-main .detail-page .content-box .txt-box .paragraph_6 {
+main .detail-page .content-box .txt-box .paragraph_6,
+main .detail-page .content-box .txt-box .paragraph_7 {
   margin-top: 150px;
 }
 @media only screen and (min-width: 1024px) {
+  main .detail-page .content-box .txt-box .paragraph_2,
   main .detail-page .content-box .txt-box .paragraph_3,
   main .detail-page .content-box .txt-box .paragraph_4,
   main .detail-page .content-box .txt-box .paragraph_5,
-  main .detail-page .content-box .txt-box .paragraph_6 {
+  main .detail-page .content-box .txt-box .paragraph_6,
+  main .detail-page .content-box .txt-box .paragraph_7 {
     margin-top: 80px;
   }
 }
