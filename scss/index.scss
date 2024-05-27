@@ -139,7 +139,7 @@ main {
             position: absolute;
             width: 1px;
             // height: 2000px;
-            right: 201px; top: 0;
+            right: 29.558%; top: 0;  // 201px
             // z-index: 6;
 
             @include responsive(large-screens) {
@@ -237,7 +237,7 @@ main {
         }
 
         .year {
-            right: 215px; top: 92px;
+            right: 31.617%; top: 92px;  // 215px
             font-size: 3.333rem;  // 40pt;
             // opacity: 0;
 
@@ -248,7 +248,7 @@ main {
         }
 
         .now-year {
-            right: 30px; top: 444px;
+            left: 73%; top: 444px;  // 30px
             font-size: 4.167rem;  // 50pt
 
             @include responsive(large-screens) {
@@ -260,7 +260,8 @@ main {
         .first-circle,
         .second-circle {
             position: absolute;
-            right: 194px;
+            // left: 69.4%;
+            right: 28.6%;  // 194px
             z-index: 3;
             width: 14px;
             height: 14px;
@@ -268,7 +269,7 @@ main {
             background-color: $color-main;
 
             @include responsive(large-screens) {
-                right: 398px;
+                right: 397px;
             }
         }
 
@@ -297,6 +298,7 @@ main {
             }
 
             .intro-title {
+                width: 65%;
                 font: {
                     weight: $font-regular;
                     size: 3.333rem;   // 40pt origin 56pt
@@ -311,8 +313,7 @@ main {
     
             .intro-text {
                 margin-top: 20px;
-                width: 385px;
-                height: 58px;
+                width: 60%;  // 385px
                 font: {
                     weight: $font-thin;
                     size: 1.5rem;   // 24pt
@@ -330,7 +331,7 @@ main {
         }  // imtro-text-box
         
         .detail-button {
-            margin-top: 65px;
+            margin-top: 60px;
             margin-left: 35px;
             
             @include responsive(large-screens) {
@@ -914,6 +915,11 @@ main {
         padding: 100px 0 150px;
         background-color: #fb7829;
 
+        @include responsive(large-screens) {
+            overflow: hidden;
+            height: 1300px;
+            padding: 0;
+        }
         .main-inform-line {
             margin: 0 2.777%;
             div{
@@ -940,6 +946,10 @@ main {
 
                     }
                 }
+
+                @include responsive(large-screens) {
+                    top: 170px;
+                }
             }
 
             .info-line2 {
@@ -959,6 +969,10 @@ main {
 
                     }
                 }
+
+                @include responsive(large-screens) {
+                    bottom: 153px;
+                }
             }
         }  // main-inform-line
 
@@ -966,6 +980,11 @@ main {
             display: flex;
             width: $width-wide;
             justify-content: space-between;
+
+            @include responsive(large-screens) {
+                position: absolute;
+                width: $width-wide;
+            }
             .main-inform-title {
                 margin-bottom: 130px;
                 font-size: 4.167rem;  //50pt
@@ -987,6 +1006,10 @@ main {
         .container-none {
             padding: 0;
 
+            // @include responsive(large-screens) {
+            //     width: 90%;
+            // }
+
             .inform-content-box {
                 display: grid;
                 grid-gap: 30px;
@@ -999,12 +1022,32 @@ main {
                 overflow: hidden;
                 width: $width-wide;
                 
+
+                @include responsive(large-screens) {
+                    position: absolute;
+                    left: 0; top: 130px;
+                    grid-row-gap: 20px;
+                    grid-column-gap: 20px;
+                    grid-template-columns: repeat(2, 1fr);
+                    grid-template-areas: 
+                    "a e"
+                    "d c"
+                    "b f"
+                    ;
+
+                    justify-content: center;
+                    width: $width-wide;
+                    height: 1250px;
+                    background-color: antiquewhite;
+                    // align-items: center;
+                }
+
                 .news-content1 { grid-area: a; }
                 .news-content2 { grid-area: b; }
                 .news-content3 { grid-area: c; }
-                .notice-content1 { grid-area: d; }
-                .notice-content2 { grid-area: e; }
-                .notice-content3 { grid-area: f; }
+                .notice-content1 { grid-area: d; background-color: #999494;}
+                .notice-content2 { grid-area: e; background-color: #999494;}
+                .notice-content3 { grid-area: f; background-color: #999494;}
         
         
                 .news,
@@ -1046,7 +1089,7 @@ main {
                         }
 
                         time {
-                            width: 100%;
+                            width: $width-wide;
                             font: {
                                 weight: $font-regular;
                                 size: 1rem;
@@ -1073,29 +1116,49 @@ main {
                             border: 1px solid $line-gray;
                         }
                     }
-                }  // enws, notice
+                }  // news, notice
                 
                 .notice {
+                    @include responsive(large-screens) {
+                        width: 430px;
+                        // height: 420px;
+                    }
                     .txt-box {
                         background-color: $color-second;
                     }
                 }
 
                 .news {
+                    @include responsive(large-screens) {
+                        width: 710px;
+                        height: 375px;
+                    }
+
                     .bg-img {
                         width: $width-wide;
+                        
+                        @include responsive(large-screens) {
+                            height: $height-wide;
+                        }
+
                         background: {
                             repeat: no-repeat;
                             size: cover;
                          }
                          .news-txt {
+                             opacity: 0;
                              visibility: hidden;
                              background-color: rgba(0, 0, 0, 0);
-                             transition: background-color 0.3s, visibility 0.3s;
+                             transition: background-color 0.3s, opacity 0.3s;
+
+                             @include responsive(large-screens) {
+                                height: $height-wide;
                             }
+                        }
                         
                         &:hover {
                             .news-txt {
+                                opacity: 1;
                                 visibility: visible;
                                 color: $color-second;
                                 background-color: rgba(0, 0, 0, 0.7);
@@ -1106,28 +1169,101 @@ main {
                             }
                         }
                     }
+
+
                     .main-news-title {
                         margin-top: 30px;
                         font-size: 1.667rem;
                         color: $color-second;
+
+                        @include responsive(large-screens) {
+                            margin-top: 0;
+                            padding: 0;
+                            font-size: 1rem;
+                        }
                     }
                 }
                         
                 .news-content1 {
+                    @include responsive(large-screens) {
+                        position: relative;
+                    }
+
                     .bg-img {
                         background-image: url(../images/news_1.jpg);
+                        
+                        @include responsive(large-screens) {
+                            position:absolute;
+                            right: 0; bottom: 0;
+                            width: 660px;
+                        }
+                    }
+
+                    .main-news-title {
+                        @include responsive(large-screens) {
+                            position: absolute;
+                            left: -170px; bottom: 177px;
+                            transform: rotate(-90deg);
+                            
+                            width: 380px;
+                            height: 25px;
+                            background-color: lightblue;
+                        }
                     }
                 }
 
                 .news-content2 {
+                    @include responsive(large-screens) {
+                        position: relative;
+                    }
+
                     .bg-img {
                         background-image: url(../images/news_2.jpg);
+
+                        @include responsive(large-screens) {
+                            position:absolute;
+                            right: 0; bottom: 0;
+                            width: 660px;
+                            height: $height-wide;
+                        }
+                    }
+
+                    .main-news-title {
+                        @include responsive(large-screens) {
+                            position: absolute;
+                            left: -155px; bottom: 163px;
+                            transform: rotate(-90deg);
+                            width: 350px;
+                            height: 25px;
+                            background-color: lightblue;
+                        }
                     }
                 }
 
                 .news-content3 {
+                    @include responsive(large-screens) {
+                        position: relative;
+                    }
                     .bg-img {
                         background-image: url(../images/news_3.jpg);
+                        
+                        @include responsive(large-screens) {
+                            position:absolute;
+                            left: 0; bottom: 0;
+                            width: 660px;
+                            height: $height-wide;
+                        }
+                    }
+                    .main-news-title {
+                        @include responsive(large-screens) {
+                            position: absolute;
+                            right: -40px; bottom: 48px;
+                            transform: rotate(90deg);
+                            
+                            width: 120px;
+                            height: 25px;
+                            background-color: lightblue;
+                        }
                     }
                 }
             }  // inform-content-box
