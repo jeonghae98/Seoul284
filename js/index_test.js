@@ -53,7 +53,49 @@ $(function() {
         $('.intro-btn').click(function() {
             window.location.href = '.././1. introduction/intro.html'
         });
+
+
+        function chgBox() {
+            var mainWindowWidth = $(window).width();
         
+            if (mainWindowWidth < 768) {
+                $('.content-box1').insertAfter('.content-box2');
+                const notice1 = $('.content-box1 .notice-content1').clone();
+                $('.content-box1 .notice-content1').remove();
+                $('.content-box2').append(notice1);
+        
+                const news3 = $('.content-box2 .news-content3').clone();
+                $('.content-box2 .news-content3').remove();
+                $('.content-box1').append(news3); 
+            } else {
+                // 768 이상이면 원상복귀
+                $('.content-box1').insertBefore('.content-box2');
+
+                const notice1 = $('.content-box2 .notice-content1').clone();
+                $('.content-box2 .notice-content1').remove();
+                $('.content-box1').append(notice1)
+                notice1.insertAfter('.news-content1');
+        
+                const news3 = $('.content-box1 .news-content3').clone();
+                $('.content-box1 .news-content3').remove();
+                $('.content-box2').append(news3);
+                news3.insertAfter('.notice-content2');
+
+            }
+        }
+        
+        $(document).ready(function() {
+            chgBox(); // 페이지 로드 시 실행
+        });
+        
+        // 윈도우 크기가 변경될 때마다 chgBox 함수 호출
+        $(window).resize(function() {
+            chgBox();
+        });
+        
+        
+
+
     //--------------------- collection ---------------------
     function updateCollectionTxt() {
         var mainWindowWidth = $(window).width();
@@ -72,44 +114,6 @@ $(function() {
     });
 
 
-    //--------------------- inform ---------------------
-    function chgBox() {
-        var informWindowWidth = $(window).width();
-    
-        if (informWindowWidth < 768) {
-            $('.content-box1').insertAfter('.content-box2');
-            const notice1 = $('.content-box1 .notice-content1').clone();
-            $('.content-box1 .notice-content1').remove();
-            $('.content-box2').append(notice1);
-    
-            const news3 = $('.content-box2 .news-content3').clone();
-            $('.content-box2 .news-content3').remove();
-            $('.content-box1').append(news3); 
-        } else {
-            // 768 이상이면 원상복귀
-            $('.content-box1').insertBefore('.content-box2');
-
-            const notice1 = $('.content-box2 .notice-content1').clone();
-            $('.content-box2 .notice-content1').remove();
-            $('.content-box1').append(notice1)
-            notice1.insertAfter('.news-content1');
-    
-            const news3 = $('.content-box1 .news-content3').clone();
-            $('.content-box1 .news-content3').remove();
-            $('.content-box2').append(news3);
-            news3.insertAfter('.notice-content2');
-
-        }
-    }
-    
-    $(document).ready(function() {
-        chgBox(); // 페이지 로드 시 실행
-    });
-    
-    // 윈도우 크기가 변경될 때마다 chgBox 함수 호출
-    $(window).resize(function() {
-        chgBox();
-    });
     //===================== footer =====================
     function updateFooterLogo() {
         var footerWindowWidth = $(window).width();

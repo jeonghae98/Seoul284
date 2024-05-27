@@ -1,106 +1,23 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>fullButton</title>
-    <link rel="stylesheet" href="./css/test.css">
-    <script src="./js/jquery.js"></script>
-    <script>
-        $(function() {
-            var ham = $('#ham');
-            var menu = $('#menu');
-            ham.on('click', function() {
-            if(menu.toggleClass('active')) {
-                menu.removeClass('active');
-            } else {
-                menu.addClass('active');
-            }
-            
-            if(ham.toggleClass('active')) {
-                ham.removeClass('active');
-            } else {
-                ham.addClass('active');
-            }
-            
-            })
-        })
-
-        $(function() {
-            var mobile = $('#mobileBar');
-            var menu = $('#mainMenu');
-            
-            mobile.on('click', function() {
-                mainMenu.toggleClass('active');
-                mobile.toggleClass('active');
-            });
-        });
-
-    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .box {
+            width: 200px; /* 원하는 너비 설정 */
+            height: 50px; /* 원하는 높이 설정 */
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            border: 1px solid #000; /* 테두리 설정 (옵션) */
+        }
+    </style>
+    <title>Text Overflow Example</title>
 </head>
 <body>
-    
-      
-      <nav class="menu" id="menu">
-        <ul class="gnb">
-              <li>
-                  <a href="./1. introduction/intro.html" class="gnb-title">소개</a>
-                  <ul class="sub-menu">
-                      <li><a href="./1. introduction/intro.html">문화역서울284 소개</a></li>
-                      <li><a href="./1. introduction/visit.html">방문안내</a></li>
-                      <li><a href="./1. introduction/space.html">공간안내</a></li>
-                      <li><a href="./1. introduction/division.html">조직도</a></li>
-                  </ul>
-              </li>
-              <li>
-                  <a href="./2. program/exhibition.html" class="gnb-title">프로그램</a>
-                  <ul class="sub-menu">
-                      <li><a href="./2. program/exhibition.html">전시</a></li>
-                      <li><a href="./2. program/event.html">공연/행사</a></li>
-                      <li><a href="./2. program/tour.html">공간투어</a></li>
-                  </ul>
-              </li>
-              <li>
-                  <a href="./3. referenceroom/collection.html" class="gnb-title">자료실</a>
-                  <ul class="sub-menu">
-                      <li><a href="./3. referenceroom/collection.html">소장품</a></li>
-                  </ul>
-              </li>
-              <li>
-                  <a href="./4.notice/notice.html" class="gnb-title">알림/소식</a>
-                  <ul class="sub-menu">
-                      <li><a href="./4.notice/notice.html">공지사항</a></li>
-                      <li><a href="./4.notice/news.html">보도자료</a></li>
-                  </ul>
-              </li>
-          </ul> 
-      </nav>
-        
-      <div class="hamberger" id="ham">
-        <div></div>
-        <div></div>
-        <div></div>
-      </div>
-<!-- <script>
-    var ham = document.getElementById('ham');
-    var menu = document.getElementById('menu');
-    ham.addEventListener('click', function() {
-    if(menu.classList.contains('active')) {
-        menu.classList.remove('active');
-    } else {
-        menu.className += ' active';
-    }
-    
-    if(ham.classList.contains('active')) {
-        ham.classList.remove('active');
-    } else {
-        ham.className += ' active';
-    }
-    
-    })
-
-    
-
-
-</script> -->
+    <div class="box">
+        이 텍스트는 박스를 넘칠 경우 ...으로 표시됩니다.
+    </div>
 </body>
 </html>

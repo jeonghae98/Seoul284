@@ -24,455 +24,435 @@ header {
 
 
 //***********main***********
+.detail-button {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    border-radius: 100%;
+    cursor: pointer;
 
-main {
-    // 여러 section의 공통 스타일
-    .detail-button {
-        position: relative;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 80px;
-        height: 80px;
-        border-radius: 100%;
-
-        .circle-text {
-            position: absolute;
-            width: $width-wide;
-            height: $height-wide;
-            color: $color-main;
-            font: {
-                weight: $font-light;
-                size: 0.5625rem;  // 10ptW
-            }
-            animation: textRotation 8s linear infinite;
-
-            @keyframes textRotation {
-                0% {
-                    transform: rotate(0deg);
-                }
-                100% {
-                    transform: rotate(360deg);
-                }
-            }
-
-            span {
-                position: absolute;
-                left: 50%;
-                font-size: 0.5625rem;
-                transform-origin: 0 40px;
-            }
-        }  // circle-text
-
-        .button {
-            position: absolute;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            width: 58px;
-            height: 58px;
-            border-radius: 100%;
-            border: 1px solid $color-main;
-
-            .btn-line {
-                width: 16px;
-                height: 2px;
-                margin-bottom: 5px;
-                border-radius: 2px;
-                background-color: $color-main;
-                // transition: transform 0.3s ease;
-                // transform-origin: center;
-            }
-
-            .btn-line:last-child {
-                margin-bottom: 0;
-            }
-        }  // button
-    }  // detail-button
-
-
-    //=================== main-video ===================
-    .main-video {
-        h2 {
-            font-size: 0;
-        }
-        video {
-            position: absolute;
-            left: 0; top: 0;
-            width: $width-wide;
-        }
-    }
-    @include responsive(large-screens) {
-        
-    }
-
-
-    //----- main-intro ----- 
-    section.main-intro {
-        position: relative;
-        // z-index: 1;
-        margin-top: 229px;
-        height: 1072px;
-        background: {
-            image: url(/images/intro-bg.png);
-            repeat: no-repeat;
-            position-x: -100px;
-            position-y: 500px;
-            size: 1170px 788px;
-            color: aqua;
-        }
-
-        @include responsive(large-screens) {
-            margin-top: 900px;
-            height: 1572px;
-            background: {
-                position-x: 220px;
-                position-y: 600px;
-                size: 1826px 1231px;
-            }
-        }
-
-        .intro-collection-line-box {
-            position: absolute;
-            width: 1px;
-            height: 2000px;
-            right: 200px; top: 0;
-            z-index: 6;
-            @include responsive(large-screens) {
-                right: 404px;
-            }
-
-            .intro-line {
-                border: 1px solid $line-black;
-                width: $width-wide;
-                height: 800px;
-            }
-
-
-
-            .collection-line {
-                border: 1px solid $line-white;
-                height: 400px;
-                width: $width-wide;
-            }
-        }
-
-
-        .year,
-        .now-year {
-            position: absolute;
-            font-weight: $font-semibold;
-        }
-
-        .year {
-            right: 215px; top: 92px;
-            font-size: 3.333rem;  // 40pt;
-            // opacity: 0;
-
-            @include responsive(large-screens) {
-                right: 429px; top: 200px;
-                font-size: 6.25rem;  // 75pt
-            }
-        }
-
-        .now-year {
-            right: 30px; top: 444px;
-            font-size: 4.167rem;  // 50pt
-
-            @include responsive(large-screens) {
-                right: 85px; top: 675px;
-                font-size: 7.917rem;  // 95pt
-            }
-        }
-
-        .first-circle,
-        .second-circle {
-            position: absolute;
-            right: 194px;
-            z-index: 2;
-            width: 14px;
-            height: 14px;
-            border-radius: 50%;
-            background-color: $color-main;
-
-            @include responsive(large-screens) {
-                right: 398px;
-            }
-        }
-
-        .first-circle {
-            top: 130px;
-
-            @include responsive(large-screens) {
-                top: 275px;
-            }
-        }
-        .second-circle {
-            top: 491px;
-
-            @include responsive(large-screens) {
-                top: 770px;
-            }
-        }
-        .intro-text-box {
-            padding-top: 280px;
-            margin-left: 30px;
-            // background-color: beige;
-
-            @include responsive(large-screens) {
-                padding-top: 530px;
-                margin-left: 0;
-            }
-
-            .intro-title {
-                font: {
-                    weight: $font-regular;
-                    size: 3.333rem;   // 40pt origin 56pt
-                }
-
-                @include responsive(large-screens) {
-                    font: {
-                        size: 6.25rem;  // 75pt
-                    }
-                }
-            }
-    
-            .intro-text {
-                margin-top: 20px;
-                width: 385px;
-                height: 58px;
-                font: {
-                    weight: $font-thin;
-                    size: 1.5rem;   // 24pt
-                }
-                
-                @include responsive(large-screens) {
-                    width: 560px;
-                    font-size: 2.167rem;  // 30pt
-                }
-                .num {
-                    display: inline;
-                    color: $color-point;
-                }
-            }
-        }  // imtro-text-box
-        
-        .detail-button {
-            margin-top: 65px;
-            margin-left: 35px;
-            
-            @include responsive(large-screens) {
-                margin-top: -45px;
-                margin-left: 580px;
-            }
-        }
-        
-    }  // main-intro
-
-
-    //=================== collection =================== 
-    .main-collection {
-        position:relative;
-        // z-index: 1;
+    .circle-text {
+        position: absolute;
         width: $width-wide;
-        height: 1200px;
-        // background-color: bisque;
-        
-        @include responsive(large-screens) {
-            height: 1250px;
+        height: $height-wide;
+        color: $color-main;
+        font: {
+            weight: $font-light;
+            size: 0.5625rem;  // 10pt
+        }
+        animation: textRotation 8s linear infinite;
+
+        @keyframes textRotation {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
         }
 
-        .parallelogram {
+        span {
             position: absolute;
-            left: 0; top: -80px; 
-            overflow: hidden;
-            width: 99.5%;
-            height: $height-wide;
-            background: {
-                color: #fb7829;
-            }
-            transform: skew(8deg) rotate(8deg);
+            left: 50%;
+            font-size: 0.5625rem;
+            transform-origin: 0 40px;
+        }
+    }  // circle-text
 
-            @include responsive(large-screens) {
-                top: -150px;
-            }
+    .button {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 58px;
+        height: 58px;
+        border-radius: 100%;
+        border: 1px solid $color-main;
 
-            .main-collection-row-line {
-                position: absolute;
-                z-index: 4;
-                width: $width-wide;
-                height: 1.5px;
-                left: 0; top: 280px;
-                border: 1.5px solid $line-white;
-                transform: skew(-8deg) rotate(-8deg);
-                
-                @include responsive(large-screens) {
-                    top: 300px;
+        .btn-line {
+            width: 16px;
+            height: 2px;
+            margin-bottom: 5px;
+            border-radius: 2px;
+            background-color: $color-main;
+            // transition: transform 0.3s ease;
+            // transform-origin: center;
+        }
+
+        .btn-line:last-child {
+            margin-bottom: 0;
+        }
+    }  // button
+}  // detail-button
+
+ //=================== main-inform =================== 
+ .main-inform {
+    position: relative;
+    width: $width-wide;
+    padding: 100px 0 150px;
+    background-color: #fb7829;
+
+    @include responsive(large-screens) {
+        overflow: hidden;
+        height: 1300px;
+        padding: 0;
+    }
+    .main-inform-line {
+        margin: 0 2.777%;
+        div{
+            position: absolute;
+            width: 94.444%;
+            height: 2px;
+            border: 2px solid $color-second;
+        }
+
+        .info-line1 {
+            top: 250px;
+            animation: seesawTop 3s ease-in-out infinite;
+
+            @keyframes seesawTop {
+                0% {
+                    transform: rotate(2deg);
+                }
+                50% {
+                    transform: rotate(-2deg);
+                }
+
+                100% {
+                    transform: rotate(2deg);
+
                 }
             }
 
-            // .row-line-circle {
-            //     // display: none;
-
-            //     @include responsive(large-screens) {
-            //         position: absolute;
-            //         width: 24px;
-            //         height: 24px;
-            //         left: 300px; top: 418px;
-            //         border-radius: 50%;
-            //         transform: skew(-8deg) rotate(-8deg);
-            //         background-color: $color-second;
-            //     }
-            // }
-
-            
-
-
-            .col-container {
-                transform: skew(-8deg) rotate(-8deg);
+            @include responsive(large-screens) {
+                top: 170px;
             }
-            .collection-title {
-                margin-left: 40px;
-                margin-bottom: 60px;
-                font-size: 4.167rem;  //50pt
-                line-height: 1.2;
+        }
+
+        .info-line2 {
+            bottom : 130px;
+            animation: seesawBottom 3s ease-in-out infinite;
+
+            @keyframes seesawBottom {
+                0% {
+                    transform: rotate(-2deg);
+                }
+                50% {
+                    transform: rotate(2deg);
+                }
+
+                100% {
+                    transform: rotate(-2deg);
+
+                }
+            }
+
+            @include responsive(large-screens) {
+                bottom: 153px;
+            }
+        }
+    }  // main-inform-line
+
+    .title-btn-wrap {
+        display: flex;
+        width: $width-wide;
+        justify-content: space-between;
+
+        @include responsive(large-screens) {
+            position: absolute;
+            width: $width-wide;
+        }
+        .main-inform-title {
+            margin-bottom: 130px;
+            font-size: 4.167rem;  //50pt
+            color: $color-second;
+        }
+
+        .detail-button {
+            margin-right: 5.9%;
+            .circle-text {
                 color: $color-second;
             }
-    
-            .main-collection-col-line {
-                position: absolute;
-                right: 200px; top: -55px;
-                width: 1px;
-                height: 300px;
-                border: 1px solid $line-white;
-    
-                @include responsive(large-screens) {
-                    right: 404px; top: -111px;
-                    height: 355px;
-                }
+            .button {
+                border-color: $color-second;
+                background-color: $color-second;
             }
-    
-            .main-collection-content {
+        }
+    }
+
+    .container-none {
+        padding: 0;
+
+        .inform-content-box {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            overflow: hidden;
+            width: $width-wide;
+            height: auto;
+            align-items: center;
+            flex-shrink: 0;
+            background-color: aquamarine;            
+
+            @include responsive(large-screens) {
+                position: absolute;
+                top: 100px;
+                flex-direction: row;
+                gap: 0;
+                height: 1200px;
+            }
+
+           .content-box1,
+           .content-box2 {
                 display: flex;
-                justify-content: space-between;
-                align-items: center;
+                align-items: flex-start;
+                justify-content: center;
+                gap: 20px;
+                width: $width-wide;
+                height: auto;
                 margin: auto;
-                width: 88.235%;  // 60px
-                // background-color: aquamarine;
+                cursor: pointer;
 
                 @include responsive(large-screens) {
-                    position: absolute;
-                    right: 0; top: 160px;
                     flex-direction: column;
-                    align-items: flex-end;
-                    width: 400px;
+                    justify-content: center; 
+                    align-items: center; 
+                    // gap: -50px;
                 }
 
-                .collection-text {
-                    p {  // 자바스크립트로 호출
-                        font-weight: $font-regular;
-                        font-size:1.667rem;  // 20pt
-                        color: $color-second;
+                div {
+                    width: 72.222%;
+
+                    .txt-box {
+                        display: flex;
+                        flex-direction: row;
+                        flex-wrap: wrap;
+                        width: $width-wide;
+                        // height: 300px;
+                        padding: 50px 30px;
+    
+                        .txt-title {
+                            width: 80%;
+                            overflow: hidden;
+                            white-space: nowrap;
+                            text-overflow: ellipsis;
+                            font: {
+                                weight: $font-regular;
+                                size: 1.5rem;
+                            }
+                            // background-color: antiquewhite;
+    
+                            @include responsive(large-screens) {
+                                font-size: 1.175rem;
+                                
+                            }
+                        }
+    
                         
-                        @include responsive(large-screens) {
-                            font-size:2.167rem;  // 26pt
-                            margin-bottom: 70px;
+                        time {
+                            width: 20%;
+                            padding-top: 15px;
+                            font: {
+                                weight: $font-regular;
+                                size: 0.875rem;
+                            }
+                            text-align: right;
+                            // background-color: lightcyan;
+    
+                            @include responsive(large-screens) {
+                                font-size: 0.875rem;
+                            }
+                        }
+    
+                        .txt {
+                            width: $width-wide;
+                            height: 250px;
+                            margin-top: 10px;
+                            padding: 20px 0 40px;
+                            border-top: 2px solid $line-gray;
+                            font-size: 1.333rem;
+                            // background-color: lightpink;
+    
+                            @include responsive(large-screens) {
+                                font-size: 1rem;
+                            }
+                        }
+    
+                        .detail-btn {
+                            width: $width-wide;
+                            padding-bottom: 20px;
+                            border-bottom: 2px solid $line-gray;
+                            text-align: right;
+                            font-size: 1rem;
+                            // background-color: lightgreen;
+                            @include responsive(large-screens) {
+                                font-size: 0.875rem;
+                            }
+                        }
+                    }  // txt-box
+                }  // div
+                
+
+                .news {
+                    // width: 300px;
+                    margin: auto;
+                    // background-color: navy;
+                    @include responsive(large-screens) {
+                        display: flex;
+                        align-items: center;
+                        width: 660px;
+                    }
+
+                    .bg-img {
+                        width: $width-wide;
+                        background: {
+                            repeat: no-repeat;
+                            size: cover;
                         }
                     }
 
-                }
-        
-                .main-collection-list {
-                    display: none;
+                    .news-txt {
+                        opacity: 0;
+                        visibility: hidden;
+                        background-color: rgba(0, 0, 0, 0);
+                        transition: background-color 0.3s, opacity 0.3s;
 
-                    @include responsive(large-screens) {
-                        display: block;
-                        margin-right: 95px;
-                        margin-bottom: 45px;
-                        // background-color: lightgreen;
-                    }
+                        @include responsive(large-screens) {
+                            height: $height-wide;
+                        }
 
-                    ul {
-                        li {
-                            @include responsive(large-screens) {
-                                font: {
-                                    weight: $font-regular;
-                                    size: 1.5rem;  // 18pt
-                                }
+                        .detail-btn {
+                            a {
                                 color: $color-second;
                             }
                         }
                     }
-                }
-    
-                .detail-button {
-                    @include responsive(large-screens) {
-                        margin-right: 300px;
-                    }
-                    .circle-text {
-                        color: $color-second;
-                    }
-    
-                    .button {
-                        border: 0;
-                        background-color: $color-second;
-                    }
-                }
-            }  // maiin-collection-content
-    
+                
+                    &:hover {
+                        .news-txt {
+                            opacity: 1;
+                            visibility: visible;
+                            color: $color-second;
+                            background-color: rgba(0, 0, 0, 0.7);
 
-
-            .collection-image {
-                display: flex;
-                justify-content: space-between;
-                margin: auto;
-                margin-top: 35px;
-                width: 88.235%;  // 600px
-                height: 863px;
-                overflow: hidden;
-                // background-color: lightblue;
-
-                @include responsive(large-screens) {
-                    position: absolute;
-                    left: 40px; top: 370px;
-                    width: 54%;  // 835px
-                    height: 1200px;
-                    margin: 0; 
-                }
-                div {
-                    height: $height-wide;
-                    ul {
-                        display: flex;
-                        flex-direction: column;
-                        // justify-content: space-between;
-                        align-items: center;
-    
-                        li {
-                            img {
-                                width: 270px;
-                                height: 270px;
-                                margin-bottom: 40px;
-
-                                @include responsive(large-screens) {
-                                    width: 220px;
-                                    height: 220px;
-                                    margin-bottom: 30px;
-                                }
+                            .txt {
+                                border-bottom-color: $color-second;
                             }
+                        }
+                    } 
+                    
+                    .main-news-title {
+                        width: 100%;
+                        margin-top: 15px;
+                        background-color: lightblue;
+                        
+
+                        @include responsive(large-screens) {
+                            margin-top: 0;
+                            padding: 0;
+                        }
+
+                        p {
+                            font-size: 1.333rem;
+                            color: $color-second;
+                            // background-color: lightgoldenrodyellow;
+
+                        @include responsive(large-screens) {
+                            font-size: 0.875rem;
+                        }
+                        }
+                    }
+                }
+
+                .news-content1 {
+                    @include responsive(large-screens) {
+                        position: relative;
+                        flex-direction: row-reverse;
+                    }
+                    .bg-img {
+                        background-image: url(../images/news_1.jpg);
+                    }
+
+                    .main-news-title {
+                        @include responsive(large-screens) {
+                            position: absolute;
+                            left: -220px; bottom: 190px;
+                            transform: rotate(-90deg);
+                            width: 400px;
+                            height: 20px;
+                            // transform-origin: right bottom;
                         }
                     }
                 }
     
-                .image-row3 {
-                    display: none;
-
+                .news-content2 {
                     @include responsive(large-screens) {
-                        display: block;
+                        position: relative;
+                        flex-direction: row-reverse;
+                    }
+
+                    .bg-img {
+                        background-image: url(../images/news_2.jpg);
+                    }
+                    
+                    .main-news-title {
+                        @include responsive(large-screens) {
+                            position: absolute;
+                            left: -235px; bottom: 190px;
+                            transform: rotate(-90deg);
+                            width: 430px;
+                            height: 20px;
+                            // transform-origin: right bottom;
+                        }
                     }
                 }
-            }
-        }
+    
+                .news-content3 {
+                    @include responsive(large-screens) {
+                        position: relative;
+                    }
 
-    }  // collection
-}
+                    .bg-img {
+                        background-image: url(../images/news_3.jpg);
+                    }
+
+                    .main-news-title {
+                        @include responsive(large-screens) {
+                            position: absolute;
+                            right: -235px; bottom: 205px;
+                            transform: rotate(90deg);
+                            width: 430px;
+                            height: 20px;
+                            text-align: right;
+                            // transform-origin: right bottom;
+                        }
+                    }
+                }
+                
+                .notice {
+                     background-color: $color-second;
+                     @include responsive(large-screens) {
+                        width: 450px;
+                    }
+                }
+
+                .notice-content1 {
+                    @include responsive(large-screens) {
+                        margin-left: 210px;
+                    }
+                }
+
+                .notice-content2,
+                .notice-content3 {
+                    @include responsive(large-screens) {
+                        margin-right: 210px;
+                    }
+                }
+           }  // content-box1/2
+        }  // inform-content-box
+    }  // container-none
+}  // inform

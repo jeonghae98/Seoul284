@@ -914,7 +914,7 @@ main {
         width: $width-wide;
         padding: 100px 0 150px;
         background-color: #fb7829;
-
+    
         @include responsive(large-screens) {
             overflow: hidden;
             height: 1300px;
@@ -928,11 +928,11 @@ main {
                 height: 2px;
                 border: 2px solid $color-second;
             }
-
+    
             .info-line1 {
                 top: 250px;
                 animation: seesawTop 3s ease-in-out infinite;
-
+    
                 @keyframes seesawTop {
                     0% {
                         transform: rotate(2deg);
@@ -940,22 +940,22 @@ main {
                     50% {
                         transform: rotate(-2deg);
                     }
-
+    
                     100% {
                         transform: rotate(2deg);
-
+    
                     }
                 }
-
+    
                 @include responsive(large-screens) {
                     top: 170px;
                 }
             }
-
+    
             .info-line2 {
                 bottom : 130px;
                 animation: seesawBottom 3s ease-in-out infinite;
-
+    
                 @keyframes seesawBottom {
                     0% {
                         transform: rotate(-2deg);
@@ -963,24 +963,24 @@ main {
                     50% {
                         transform: rotate(2deg);
                     }
-
+    
                     100% {
                         transform: rotate(-2deg);
-
+    
                     }
                 }
-
+    
                 @include responsive(large-screens) {
                     bottom: 153px;
                 }
             }
         }  // main-inform-line
-
+    
         .title-btn-wrap {
             display: flex;
             width: $width-wide;
             justify-content: space-between;
-
+    
             @include responsive(large-screens) {
                 position: absolute;
                 width: $width-wide;
@@ -1002,270 +1002,276 @@ main {
                 }
             }
         }
-
+    
         .container-none {
             padding: 0;
-
-            // @include responsive(large-screens) {
-            //     width: 90%;
-            // }
-
+    
             .inform-content-box {
-                display: grid;
-                grid-gap: 30px;
-                grid-template-columns: repeat(3, 1fr);
-                grid-template-areas: 
-                "d e f"
-                "a b c"
-                ;
-        
+                display: flex;
+                flex-direction: column;
+                gap: 30px;
                 overflow: hidden;
                 width: $width-wide;
-                
-
+                height: auto;
+                align-items: center;
+                flex-shrink: 0;
+                background-color: aquamarine;            
+    
                 @include responsive(large-screens) {
                     position: absolute;
-                    left: 0; top: 130px;
-                    grid-row-gap: 20px;
-                    grid-column-gap: 20px;
-                    grid-template-columns: repeat(2, 1fr);
-                    grid-template-areas: 
-                    "a e"
-                    "d c"
-                    "b f"
-                    ;
-
+                    top: 100px;
+                    flex-direction: row;
+                    gap: 0;
+                    height: 1200px;
+                }
+    
+               .content-box1,
+               .content-box2 {
+                    display: flex;
+                    align-items: flex-start;
                     justify-content: center;
+                    gap: 20px;
                     width: $width-wide;
-                    height: 1250px;
-                    background-color: antiquewhite;
-                    // align-items: center;
-                }
-
-                .news-content1 { grid-area: a; }
-                .news-content2 { grid-area: b; }
-                .news-content3 { grid-area: c; }
-                .notice-content1 { grid-area: d; background-color: #999494;}
-                .notice-content2 { grid-area: e; background-color: #999494;}
-                .notice-content3 { grid-area: f; background-color: #999494;}
-        
-        
-                .news,
-                .notice {
-                    width: 540px; 
+                    height: auto;
+                    margin: auto;
                     cursor: pointer;
-
-                    .txt-box {
-                        display: grid;
-                        grid-column-gap: 0;
-                        grid-row-gap: 10px;
-                        grid-template-columns: repeat(5, 1fr);
-                        grid-template-areas: 
-                        "a a a a ."
-                        "a a a a b"
-                        "c c c c c"
-                        ". . . . d"
-                        "e e e e e"
-                        ;
-                        width: $width-wide;
-                        // height: 400px;
-                        padding: 50px 30px;
-
-
-                        .txt-title { grid-area: a; }
-                        time { grid-area: b; }
-                        .txt { grid-area: c; }
-                        .detail-btn { grid-area: d; }
-                        .bottom-line { grid-area: e; }
-
-
-                        .txt-title {
-                            width: 125%;
-                            font: {
-                                weight: $font-regular;
-                                size: 1.5rem;
-                            }
-                            // background-color: antiquewhite;
-                        }
-
-                        time {
-                            width: $width-wide;
-                            font: {
-                                weight: $font-regular;
-                                size: 1rem;
-                            }
-                            text-align: right;
-                            // background-color: lightgreen;
-                        }
-
-                        .txt {
-                            border-top: 2px solid #d8d8d8;
-                            padding: 20px 0;
-                            font-size: 1.333rem;
-                        }
-
-                        .detail-btn {
-                            padding-bottom: 20px;
-                            text-align: right;
-                            font-size: 1rem;
-                        }
-
-                        .bottom-line {
-                            width: $width-wide;
-                            height: 1px;
-                            border: 1px solid $line-gray;
-                        }
-                    }
-                }  // news, notice
-                
-                .notice {
+    
                     @include responsive(large-screens) {
-                        width: 430px;
-                        // height: 420px;
+                        flex-direction: column;
+                        justify-content: center; 
+                        align-items: center; 
+                        // gap: -50px;
                     }
-                    .txt-box {
-                        background-color: $color-second;
-                    }
-                }
-
-                .news {
-                    @include responsive(large-screens) {
-                        width: 710px;
-                        height: 375px;
-                    }
-
-                    .bg-img {
-                        width: $width-wide;
-                        
+    
+                    div {
+                        width: 72.222%;
+    
+                        .txt-box {
+                            display: flex;
+                            flex-direction: row;
+                            flex-wrap: wrap;
+                            width: $width-wide;
+                            // height: 300px;
+                            padding: 50px 30px;
+        
+                            .txt-title {
+                                width: 80%;
+                                overflow: hidden;
+                                white-space: nowrap;
+                                text-overflow: ellipsis;
+                                font: {
+                                    weight: $font-regular;
+                                    size: 1.5rem;
+                                }
+                                // background-color: antiquewhite;
+        
+                                @include responsive(large-screens) {
+                                    font-size: 1.175rem;
+                                    
+                                }
+                            }
+        
+                            
+                            time {
+                                width: 20%;
+                                padding-top: 15px;
+                                font: {
+                                    weight: $font-regular;
+                                    size: 0.875rem;
+                                }
+                                text-align: right;
+                                // background-color: lightcyan;
+        
+                                @include responsive(large-screens) {
+                                    font-size: 0.875rem;
+                                }
+                            }
+        
+                            .txt {
+                                width: $width-wide;
+                                height: 250px;
+                                margin-top: 10px;
+                                padding: 20px 0 40px;
+                                border-top: 2px solid $line-gray;
+                                font-size: 1.333rem;
+                                // background-color: lightpink;
+        
+                                @include responsive(large-screens) {
+                                    font-size: 1rem;
+                                }
+                            }
+        
+                            .detail-btn {
+                                width: $width-wide;
+                                padding-bottom: 20px;
+                                border-bottom: 2px solid $line-gray;
+                                text-align: right;
+                                font-size: 1rem;
+                                // background-color: lightgreen;
+                                @include responsive(large-screens) {
+                                    font-size: 0.875rem;
+                                }
+                            }
+                        }  // txt-box
+                    }  // div
+                    
+    
+                    .news {
+                        // width: 300px;
+                        margin: auto;
+                        // background-color: navy;
                         @include responsive(large-screens) {
-                            height: $height-wide;
+                            display: flex;
+                            align-items: center;
+                            width: 660px;
                         }
-
-                        background: {
-                            repeat: no-repeat;
-                            size: cover;
-                         }
-                         .news-txt {
-                             opacity: 0;
-                             visibility: hidden;
-                             background-color: rgba(0, 0, 0, 0);
-                             transition: background-color 0.3s, opacity 0.3s;
-
-                             @include responsive(large-screens) {
+    
+                        .bg-img {
+                            width: $width-wide;
+                            background: {
+                                repeat: no-repeat;
+                                size: cover;
+                            }
+                        }
+    
+                        .news-txt {
+                            opacity: 0;
+                            visibility: hidden;
+                            background-color: rgba(0, 0, 0, 0);
+                            transition: background-color 0.3s, opacity 0.3s;
+    
+                            @include responsive(large-screens) {
                                 height: $height-wide;
                             }
+    
+                            .detail-btn {
+                                a {
+                                    color: $color-second;
+                                }
+                            }
                         }
-                        
+                    
                         &:hover {
                             .news-txt {
                                 opacity: 1;
                                 visibility: visible;
                                 color: $color-second;
                                 background-color: rgba(0, 0, 0, 0.7);
-
+    
                                 .txt {
                                     border-bottom-color: $color-second;
                                 }
                             }
-                        }
-                    }
-
-
-                    .main-news-title {
-                        margin-top: 30px;
-                        font-size: 1.667rem;
-                        color: $color-second;
-
-                        @include responsive(large-screens) {
-                            margin-top: 0;
-                            padding: 0;
-                            font-size: 1rem;
-                        }
-                    }
-                }
+                        } 
                         
-                .news-content1 {
-                    @include responsive(large-screens) {
-                        position: relative;
-                    }
-
-                    .bg-img {
-                        background-image: url(../images/news_1.jpg);
-                        
-                        @include responsive(large-screens) {
-                            position:absolute;
-                            right: 0; bottom: 0;
-                            width: 660px;
-                        }
-                    }
-
-                    .main-news-title {
-                        @include responsive(large-screens) {
-                            position: absolute;
-                            left: -170px; bottom: 177px;
-                            transform: rotate(-90deg);
+                        .main-news-title {
+                            width: 100%;
+                            margin-top: 15px;
+                            background-color: lightblue;
                             
-                            width: 380px;
-                            height: 25px;
-                            background-color: lightblue;
+    
+                            @include responsive(large-screens) {
+                                margin-top: 0;
+                                padding: 0;
+                            }
+    
+                            p {
+                                font-size: 1.333rem;
+                                color: $color-second;
+                                // background-color: lightgoldenrodyellow;
+    
+                            @include responsive(large-screens) {
+                                font-size: 0.875rem;
+                            }
+                            }
                         }
                     }
-                }
-
-                .news-content2 {
-                    @include responsive(large-screens) {
-                        position: relative;
-                    }
-
-                    .bg-img {
-                        background-image: url(../images/news_2.jpg);
-
+    
+                    .news-content1 {
                         @include responsive(large-screens) {
-                            position:absolute;
-                            right: 0; bottom: 0;
-                            width: 660px;
-                            height: $height-wide;
+                            position: relative;
+                            flex-direction: row-reverse;
+                        }
+                        .bg-img {
+                            background-image: url(../images/news_1.jpg);
+                        }
+    
+                        .main-news-title {
+                            @include responsive(large-screens) {
+                                position: absolute;
+                                left: -220px; bottom: 190px;
+                                transform: rotate(-90deg);
+                                width: 400px;
+                                height: 20px;
+                                // transform-origin: right bottom;
+                            }
                         }
                     }
-
-                    .main-news-title {
+        
+                    .news-content2 {
                         @include responsive(large-screens) {
-                            position: absolute;
-                            left: -155px; bottom: 163px;
-                            transform: rotate(-90deg);
-                            width: 350px;
-                            height: 25px;
-                            background-color: lightblue;
+                            position: relative;
+                            flex-direction: row-reverse;
                         }
-                    }
-                }
-
-                .news-content3 {
-                    @include responsive(large-screens) {
-                        position: relative;
-                    }
-                    .bg-img {
-                        background-image: url(../images/news_3.jpg);
+    
+                        .bg-img {
+                            background-image: url(../images/news_2.jpg);
+                        }
                         
-                        @include responsive(large-screens) {
-                            position:absolute;
-                            left: 0; bottom: 0;
-                            width: 660px;
-                            height: $height-wide;
+                        .main-news-title {
+                            @include responsive(large-screens) {
+                                position: absolute;
+                                left: -235px; bottom: 190px;
+                                transform: rotate(-90deg);
+                                width: 430px;
+                                height: 20px;
+                                // transform-origin: right bottom;
+                            }
                         }
                     }
-                    .main-news-title {
+        
+                    .news-content3 {
                         @include responsive(large-screens) {
-                            position: absolute;
-                            right: -40px; bottom: 48px;
-                            transform: rotate(90deg);
-                            
-                            width: 120px;
-                            height: 25px;
-                            background-color: lightblue;
+                            position: relative;
+                        }
+    
+                        .bg-img {
+                            background-image: url(../images/news_3.jpg);
+                        }
+    
+                        .main-news-title {
+                            @include responsive(large-screens) {
+                                position: absolute;
+                                right: -235px; bottom: 205px;
+                                transform: rotate(90deg);
+                                width: 430px;
+                                height: 20px;
+                                text-align: right;
+                                // transform-origin: right bottom;
+                            }
                         }
                     }
-                }
+                    
+                    .notice {
+                         background-color: $color-second;
+                         @include responsive(large-screens) {
+                            width: 450px;
+                        }
+                    }
+    
+                    .notice-content1 {
+                        @include responsive(large-screens) {
+                            margin-left: 210px;
+                        }
+                    }
+    
+                    .notice-content2,
+                    .notice-content3 {
+                        @include responsive(large-screens) {
+                            margin-right: 210px;
+                        }
+                    }
+               }  // content-box1/2
             }  // inform-content-box
         }  // container-none
     }  // inform
