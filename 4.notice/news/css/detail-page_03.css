@@ -333,34 +333,24 @@ main .detail-page .content-box .title-box {
 }
 @media only screen and (min-width: 1024px) {
   main .detail-page .content-box .title-box {
-    height: 180px;
+    height: 200px;
   }
 }
 main .detail-page .content-box .title-box .title {
   font-weight: 400;
   font-size: 2.5rem;
 }
-@media only screen and (min-width: 1024px) {
-  main .detail-page .content-box .title-box .title {
-    font-size: 2rem;
-  }
-}
 main .detail-page .content-box .title-box p {
   font-weight: 400;
   font-size: 1.5rem;
   color: #a1a1a1;
-}
-@media only screen and (min-width: 1024px) {
-  main .detail-page .content-box .title-box p {
-    font-size: 1.333rem;
-  }
 }
 main .detail-page .content-box .title-box p .hits {
   display: inline;
 }
 @media only screen and (min-width: 1024px) {
   main .detail-page .content-box .title-box p .hits {
-    font-size: 1.333rem;
+    font-size: 1.5rem;
   }
 }
 main .detail-page .content-box .txt-box {
@@ -397,20 +387,61 @@ main .detail-page .content-box .txt-box div strong {
   text-decoration: underline;
   line-height: 2;
 }
-main .detail-page .content-box .txt-box div .ex-plan {
-  text-decoration: none;
-}
 main .detail-page .content-box .txt-box .paragraph_2,
 main .detail-page .content-box .txt-box .paragraph_3,
-main .detail-page .content-box .txt-box .paragraph_4 {
+main .detail-page .content-box .txt-box .paragraph_4,
+main .detail-page .content-box .txt-box .paragraph_5,
+main .detail-page .content-box .txt-box .paragraph_6,
+main .detail-page .content-box .txt-box .paragraph_7 {
   margin-top: 150px;
 }
 @media only screen and (min-width: 1024px) {
   main .detail-page .content-box .txt-box .paragraph_2,
   main .detail-page .content-box .txt-box .paragraph_3,
-  main .detail-page .content-box .txt-box .paragraph_4 {
+  main .detail-page .content-box .txt-box .paragraph_4,
+  main .detail-page .content-box .txt-box .paragraph_5,
+  main .detail-page .content-box .txt-box .paragraph_6,
+  main .detail-page .content-box .txt-box .paragraph_7 {
     margin-top: 80px;
   }
+}
+main .detail-page .content-box .attachment-box {
+  display: flex;
+  padding: 45px 0;
+  border-bottom: 1px solid #d9d9d9;
+}
+@media only screen and (min-width: 1024px) {
+  main .detail-page .content-box .attachment-box {
+    padding: 35px 0;
+  }
+}
+main .detail-page .content-box .attachment-box .attachment-title {
+  margin-right: 35px;
+  width: 250px;
+  font-weight: 400;
+  font-size: 2rem;
+}
+@media only screen and (min-width: 1024px) {
+  main .detail-page .content-box .attachment-box .attachment-title {
+    margin-right: 45px;
+    width: 90px;
+    font-size: 1.5rem;
+  }
+}
+main .detail-page .content-box .attachment-box .attachment ul li a {
+  font-size: 1.667rem;
+  color: #a1a1a1;
+}
+main .detail-page .content-box .attachment-box .attachment ul li a:hover {
+  text-decoration: underline;
+}
+@media only screen and (min-width: 1024px) {
+  main .detail-page .content-box .attachment-box .attachment ul li a {
+    font-size: 1.333rem;
+  }
+}
+main .detail-page .content-box .attachment-box .attachment ul .attachment1 {
+  margin-bottom: 20px;
 }
 main .detail-page .list-box {
   margin: 80px 0 180px;
@@ -595,4 +626,4 @@ footer .fixed-menu a {
   text-align: center;
   color: #fff;
   background-color: #000;
-}/*# sourceMappingURL=ntc-detail-page_10.css.map */
+}/*# sourceMappingURL=detail-page_03.css.map */

@@ -333,24 +333,34 @@ main .detail-page .content-box .title-box {
 }
 @media only screen and (min-width: 1024px) {
   main .detail-page .content-box .title-box {
-    height: 200px;
+    height: 180px;
   }
 }
 main .detail-page .content-box .title-box .title {
   font-weight: 400;
   font-size: 2.5rem;
 }
+@media only screen and (min-width: 1024px) {
+  main .detail-page .content-box .title-box .title {
+    font-size: 2rem;
+  }
+}
 main .detail-page .content-box .title-box p {
   font-weight: 400;
   font-size: 1.5rem;
   color: #a1a1a1;
+}
+@media only screen and (min-width: 1024px) {
+  main .detail-page .content-box .title-box p {
+    font-size: 1.333rem;
+  }
 }
 main .detail-page .content-box .title-box p .hits {
   display: inline;
 }
 @media only screen and (min-width: 1024px) {
   main .detail-page .content-box .title-box p .hits {
-    font-size: 1.5rem;
+    font-size: 1.333rem;
   }
 }
 main .detail-page .content-box .txt-box {

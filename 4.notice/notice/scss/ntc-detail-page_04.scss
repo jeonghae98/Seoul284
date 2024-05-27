@@ -45,22 +45,29 @@ main {
                 }
 
                 @include txt-box();
+                
+                .paragraph_1 {
+                    img {
+                        width: $width-wide;
+                        margin-bottom: 150px;
 
-                .paragraph_2,
-                .paragraph_3,
-                .paragraph_4,
-                .paragraph_5,
-                .paragraph_6,
-                .paragraph_7 {
-                    margin-top: 150px;
+                        @include responsive(large-screens) {
+                            width: 70%;
+                            margin: auto;
+                            margin-bottom: 80px;
+                        }
+                    }
+                    a {
+                        display: inline-block;
+                        color: blue;
 
-                    @include responsive(large-screens) {
-                        margin-top: 80px;
+                        &:hover {
+                            color: blue;
+                            text-decoration: underline;
+                        }
                     }
                 }
             }  // txt-box
-
-            @include attachment-box();
         }  // content-box
 
         @include list-box();

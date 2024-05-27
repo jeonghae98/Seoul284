@@ -27,7 +27,7 @@ header {
 //***********main***********
 main {
     .detail-page {
-        @include title-menu-list();
+        @include title();
 
         .content-box {
             margin-top: 45px;
@@ -45,14 +45,20 @@ main {
                 }
 
                 @include txt-box();
-
+                
                 .paragraph_2,
+                .paragraph_7 {
+                    margin-top: 300px;
+
+                    @include responsive(large-screens) {
+                        margin-top: 160px;
+                    }
+                }
+
                 .paragraph_3,
                 .paragraph_4,
                 .paragraph_5,
-                .paragraph_6,
-                .paragraph_7,
-                .paragraph_8 {
+                .paragraph_6 {
                     margin-top: 150px;
 
                     @include responsive(large-screens) {
@@ -60,7 +66,6 @@ main {
                     }
                 }
             }  // txt-box
-
             @include attachment-box();
         }  // content-box
 

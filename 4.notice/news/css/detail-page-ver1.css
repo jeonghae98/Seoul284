@@ -274,14 +274,14 @@ main .detail-page .menu-list {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
+  width: 350px;
   margin: auto;
 }
 @media only screen and (min-width: 1024px) {
   main .detail-page .menu-list {
     position: absolute;
     right: 0;
-    top: 30px;
+    top: 50px;
     flex-direction: column-reverse;
     justify-content: space-between;
     width: 360px;
@@ -291,7 +291,7 @@ main .detail-page .menu-list {
 main .detail-page .menu-list ul {
   display: flex;
   justify-content: space-between;
-  width: 250px;
+  width: 348px;
 }
 @media only screen and (min-width: 1024px) {
   main .detail-page .menu-list ul {
@@ -301,7 +301,7 @@ main .detail-page .menu-list ul {
 }
 main .detail-page .menu-list ul li a {
   font-weight: 400;
-  font-size: 2.167rem;
+  font-size: 2.667rem;
 }
 @media only screen and (min-width: 1024px) {
   main .detail-page .menu-list ul li a {
@@ -333,34 +333,24 @@ main .detail-page .content-box .title-box {
 }
 @media only screen and (min-width: 1024px) {
   main .detail-page .content-box .title-box {
-    height: 180px;
+    height: 200px;
   }
 }
 main .detail-page .content-box .title-box .title {
   font-weight: 400;
   font-size: 2.5rem;
 }
-@media only screen and (min-width: 1024px) {
-  main .detail-page .content-box .title-box .title {
-    font-size: 2rem;
-  }
-}
 main .detail-page .content-box .title-box p {
   font-weight: 400;
-  font-size: 1.5rem;
+  font-size: 1.667rem;
   color: #a1a1a1;
-}
-@media only screen and (min-width: 1024px) {
-  main .detail-page .content-box .title-box p {
-    font-size: 1.333rem;
-  }
 }
 main .detail-page .content-box .title-box p .hits {
   display: inline;
 }
 @media only screen and (min-width: 1024px) {
   main .detail-page .content-box .title-box p .hits {
-    font-size: 1.333rem;
+    font-size: 1.5rem;
   }
 }
 main .detail-page .content-box .txt-box {
@@ -375,7 +365,7 @@ main .detail-page .content-box .txt-box {
 }
 main .detail-page .content-box .txt-box h2 {
   font-weight: 500;
-  font-size: 2rem;
+  font-size: 2.167rem;
   text-align: center;
 }
 @media only screen and (min-width: 1024px) {
@@ -385,7 +375,7 @@ main .detail-page .content-box .txt-box h2 {
 }
 main .detail-page .content-box .txt-box div p,
 main .detail-page .content-box .txt-box div strong {
-  font-size: 1.667rem;
+  font-size: 2.167rem;
 }
 @media only screen and (min-width: 1024px) {
   main .detail-page .content-box .txt-box div p,
@@ -397,20 +387,75 @@ main .detail-page .content-box .txt-box div strong {
   text-decoration: underline;
   line-height: 2;
 }
-main .detail-page .content-box .txt-box div .ex-plan {
-  text-decoration: none;
+main .detail-page .content-box .txt-box .paragraph_1 {
+  margin-top: 100px;
+}
+@media only screen and (min-width: 1024px) {
+  main .detail-page .content-box .txt-box .paragraph_1 {
+    margin-top: 100px;
+  }
 }
 main .detail-page .content-box .txt-box .paragraph_2,
-main .detail-page .content-box .txt-box .paragraph_3,
-main .detail-page .content-box .txt-box .paragraph_4 {
-  margin-top: 150px;
+main .detail-page .content-box .txt-box .paragraph_7 {
+  margin-top: 300px;
 }
 @media only screen and (min-width: 1024px) {
   main .detail-page .content-box .txt-box .paragraph_2,
+  main .detail-page .content-box .txt-box .paragraph_7 {
+    margin-top: 160px;
+  }
+}
+main .detail-page .content-box .txt-box .paragraph_3,
+main .detail-page .content-box .txt-box .paragraph_4,
+main .detail-page .content-box .txt-box .paragraph_5,
+main .detail-page .content-box .txt-box .paragraph_6 {
+  margin-top: 150px;
+}
+@media only screen and (min-width: 1024px) {
   main .detail-page .content-box .txt-box .paragraph_3,
-  main .detail-page .content-box .txt-box .paragraph_4 {
+  main .detail-page .content-box .txt-box .paragraph_4,
+  main .detail-page .content-box .txt-box .paragraph_5,
+  main .detail-page .content-box .txt-box .paragraph_6 {
     margin-top: 80px;
   }
+}
+main .detail-page .content-box .attachment-box {
+  display: flex;
+  padding: 45px 0;
+  border-bottom: 1px solid #d9d9d9;
+}
+@media only screen and (min-width: 1024px) {
+  main .detail-page .content-box .attachment-box {
+    padding: 35px 0;
+  }
+}
+main .detail-page .content-box .attachment-box .attachment-title {
+  margin-right: 35px;
+  width: 250px;
+  font-weight: 400;
+  font-size: 2.167rem;
+}
+@media only screen and (min-width: 1024px) {
+  main .detail-page .content-box .attachment-box .attachment-title {
+    margin-right: 45px;
+    width: 90px;
+    font-size: 1.5rem;
+  }
+}
+main .detail-page .content-box .attachment-box .attachment ul li a {
+  font-size: 2rem;
+  color: #a1a1a1;
+}
+main .detail-page .content-box .attachment-box .attachment ul li a:hover {
+  text-decoration: underline;
+}
+@media only screen and (min-width: 1024px) {
+  main .detail-page .content-box .attachment-box .attachment ul li a {
+    font-size: 1.333rem;
+  }
+}
+main .detail-page .content-box .attachment-box .attachment ul .attachment1 {
+  margin-bottom: 20px;
 }
 main .detail-page .list-box {
   margin: 80px 0 180px;
@@ -435,7 +480,7 @@ main .detail-page .list-box .list-btn {
   }
 }
 main .detail-page .list-box .list-btn a {
-  font-size: 1.667rem;
+  font-size: 2rem;
 }
 @media only screen and (min-width: 1024px) {
   main .detail-page .list-box .list-btn a {
@@ -595,4 +640,4 @@ footer .fixed-menu a {
   text-align: center;
   color: #fff;
   background-color: #000;
-}/*# sourceMappingURL=ntc-detail-page_10.css.map */
+}/*# sourceMappingURL=detail-page-ver1.css.map */

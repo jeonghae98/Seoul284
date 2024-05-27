@@ -45,6 +45,19 @@ main {
                 }
 
                 @include txt-box();
+                
+                .paragraph_1 {
+                    img {
+                        width: $width-wide;
+                        margin-bottom: 150px;
+
+                        @include responsive(large-screens) {
+                            width: 70%;
+                            margin: auto;
+                            margin-bottom: 80px;
+                        }
+                    }
+                }
 
                 .paragraph_2,
                 .paragraph_3,
@@ -52,16 +65,30 @@ main {
                 .paragraph_5,
                 .paragraph_6,
                 .paragraph_7,
-                .paragraph_8 {
+                .paragraph_8,
+                .paragraph_9 {
                     margin-top: 150px;
 
                     @include responsive(large-screens) {
                         margin-top: 80px;
                     }
                 }
-            }  // txt-box
 
-            @include attachment-box();
+                .paragraph_5 {
+                    .tag {
+                        color: blue;
+                    }
+
+                    a {
+                        display: inline-block;
+                        text-decoration: underline;
+
+                        &:hover {
+                            color: $color-main;
+                        }
+                    }
+                }
+            }  // txt-box
         }  // content-box
 
         @include list-box();

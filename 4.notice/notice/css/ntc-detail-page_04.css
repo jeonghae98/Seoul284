@@ -400,17 +400,24 @@ main .detail-page .content-box .txt-box div strong {
 main .detail-page .content-box .txt-box div .ex-plan {
   text-decoration: none;
 }
-main .detail-page .content-box .txt-box .paragraph_2,
-main .detail-page .content-box .txt-box .paragraph_3,
-main .detail-page .content-box .txt-box .paragraph_4 {
-  margin-top: 150px;
+main .detail-page .content-box .txt-box .paragraph_1 img {
+  width: 100%;
+  margin-bottom: 150px;
 }
 @media only screen and (min-width: 1024px) {
-  main .detail-page .content-box .txt-box .paragraph_2,
-  main .detail-page .content-box .txt-box .paragraph_3,
-  main .detail-page .content-box .txt-box .paragraph_4 {
-    margin-top: 80px;
+  main .detail-page .content-box .txt-box .paragraph_1 img {
+    width: 70%;
+    margin: auto;
+    margin-bottom: 80px;
   }
+}
+main .detail-page .content-box .txt-box .paragraph_1 a {
+  display: inline-block;
+  color: blue;
+}
+main .detail-page .content-box .txt-box .paragraph_1 a:hover {
+  color: blue;
+  text-decoration: underline;
 }
 main .detail-page .list-box {
   margin: 80px 0 180px;
@@ -595,4 +602,4 @@ footer .fixed-menu a {
   text-align: center;
   color: #fff;
   background-color: #000;
-}/*# sourceMappingURL=ntc-detail-page_10.css.map */
+}/*# sourceMappingURL=ntc-detail-page_04.css.map */

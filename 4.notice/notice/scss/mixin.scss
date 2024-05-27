@@ -104,13 +104,17 @@
         border-top: 1px solid $inform-line-gray;
 
         @include responsive(large-screens) {
-            height: 200px; 
+            height: 180px; 
         }
 
         .title {
             font: {
                 weight: $font-regular;
                 size: 2.5rem;  // 30pt
+            }
+
+            @include responsive(large-screens) {
+                font-size: 2rem; 
             }
         }
 
@@ -121,11 +125,15 @@
             }
             color: $color-gray;
 
+            @include responsive(large-screens) {
+                font-size: 1.333rem; 
+            }
+
             .hits {
                 display: inline;
 
                 @include responsive(large-screens) {
-                    font-size: 1.5rem;  // 18pt 
+                    font-size: 1.333rem;
                 }
             }
         }
