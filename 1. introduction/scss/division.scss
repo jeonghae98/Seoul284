@@ -20,90 +20,179 @@ header {
 //********************main********************
 
 main {
+    
     .container {
         h2 {
             margin: 50px;
             text-align: center;
         }
         img {
-            width: 50%; height: auto;
+            width: 20%; height: auto;
         }
         .div-box {
+            width: 100%;
+            margin: 0 auto;
+            
             .boss {
+                width: 70%;
+                margin: auto;
                 img {
-
+                    margin: 0 auto;
                 }   
                 p {
+                    width: 70%;
+                    margin: 0 auto;
+                    border: 1px solid #c2c2c2;
+                    border-radius: 30%;
+                    border-top-right-radius: 30%;
 
+                    text-align: center;
+                    font-weight: $font-regular;
+                    font-size: 0.8rem;
                 }       
             }
 
             .inner-box1 {
+                display: flex;
+                justify-content: space-between;
+                
                 .manager {
+                    width: 70%;
                     img {
-
+                        margin: 0 auto;
                     }
                     p {
-
+                        width: 70%;
+                        margin: 0 auto;
+                        border: 1px solid #c2c2c2;
+                        border-radius: 30%;
+                        border-top-right-radius: 30%;
+    
+                        text-align: center;
+                        font-weight: $font-regular;
+                        font-size: 0.8rem;
                     }
                 }
-                .manager {
+                .manager2 {
+                    width: 70%;
                     img {
-
+                        margin: 0 auto;
                     }
                     p {
-
+                        width: 70%;
+                        margin: 0 auto;
+                        border: 1px solid #c2c2c2;
+                        border-radius: 30%;
+                        border-top-right-radius: 30%;
+    
+                        text-align: center;
+                        font-weight: $font-regular;
+                        font-size: 0.8rem;
                     }
                 }
             }
 
             .inner-box2 {
+                display: flex;
+                justify-content: space-between;
                 .emp {
+                    width: 70%;
                     img {
-
+                        margin: 0 auto;
                     }
                     p {
-                        
+                        width: 70%;
+                        margin: 0 auto;
+                        border: 1px solid #c2c2c2;
+                        border-radius: 30%;
+                        border-top-right-radius: 30%;
+    
+                        text-align: center;
+                        font-weight: $font-regular;
                     }
                 }
 
                 .emp {
                     img {
-
+                        margin: 0 auto;
                     }
                     p {
-                        
+                        width: 70%;
+                        margin: 0 auto;
+                        border: 1px solid #c2c2c2;
+                        border-radius: 30%;
+                        border-top-right-radius: 30%;
+    
+                        text-align: center;
+                        font-weight: $font-regular;
                     }
                 }
 
                 .emp {
                     img {
-
+                        margin: 0 auto;
                     }
                     p {
-                        
+                        width: 70%;
+                        margin: 0 auto;
+                        border: 1px solid #c2c2c2;
+                        border-radius: 30%;
+                        border-top-right-radius: 30%;
+    
+                        text-align: center;
+                        font-weight: $font-regular;
                     }
                 }
             }
 
             .boss-curator {
+                width: 70%;
+                margin: auto;
+                img {
+                    margin: 0 auto;
+                }
+                p {
+                    width: 70%;
+                    margin: 0 auto;
+                    border: 1px solid #c2c2c2;
+                    border-radius: 30%;
+                    border-top-right-radius: 30%;
 
+                    text-align: center;
+                    font-weight: $font-regular;
+                }
             }
             .inner-box3 {
+                display: flex;
+                justify-content: space-between;
                 .curator {
                     img {
-
+                        margin: 0 auto;
                     }
                     p {
-
+                        width: 70%;
+                        margin: 0 auto;
+                        border: 1px solid #c2c2c2;
+                        border-radius: 30%;
+                        border-top-right-radius: 30%;
+    
+                        text-align: center;
+                        font-weight: $font-regular;
                     }
                 }
                 .curator {
                     img {
-
+                        margin: 0 auto;
                     }
                     p {
-                        
+                        width: 70%;
+                        margin: 0 auto;
+                        border: 1px solid #c2c2c2;
+                        border-radius: 30%;
+                        border-top-right-radius: 30%;
+    
+                        text-align: center;
+                        font-weight: $font-regular;
                     }
                 }
             }
