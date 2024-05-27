@@ -250,8 +250,152 @@ main .container h2 {
   text-align: center;
 }
 main .container img {
-  width: 50%;
+  width: 20%;
   height: auto;
+}
+main .container .div-box {
+  width: 100%;
+  margin: 0 auto;
+}
+main .container .div-box .boss {
+  width: 70%;
+  margin: auto;
+}
+main .container .div-box .boss img {
+  margin: 0 auto;
+}
+main .container .div-box .boss p {
+  width: 70%;
+  margin: 0 auto;
+  border: 1px solid #c2c2c2;
+  border-radius: 30%;
+  border-top-right-radius: 30%;
+  text-align: center;
+  font-weight: 400;
+  font-size: 0.8rem;
+}
+main .container .div-box .inner-box1 {
+  display: flex;
+  justify-content: space-between;
+}
+main .container .div-box .inner-box1 .manager {
+  width: 70%;
+}
+main .container .div-box .inner-box1 .manager img {
+  margin: 0 auto;
+}
+main .container .div-box .inner-box1 .manager p {
+  width: 70%;
+  margin: 0 auto;
+  border: 1px solid #c2c2c2;
+  border-radius: 30%;
+  border-top-right-radius: 30%;
+  text-align: center;
+  font-weight: 400;
+  font-size: 0.8rem;
+}
+main .container .div-box .inner-box1 .manager2 {
+  width: 70%;
+}
+main .container .div-box .inner-box1 .manager2 img {
+  margin: 0 auto;
+}
+main .container .div-box .inner-box1 .manager2 p {
+  width: 70%;
+  margin: 0 auto;
+  border: 1px solid #c2c2c2;
+  border-radius: 30%;
+  border-top-right-radius: 30%;
+  text-align: center;
+  font-weight: 400;
+  font-size: 0.8rem;
+}
+main .container .div-box .inner-box2 {
+  display: flex;
+  justify-content: space-between;
+}
+main .container .div-box .inner-box2 .emp {
+  width: 70%;
+}
+main .container .div-box .inner-box2 .emp img {
+  margin: 0 auto;
+}
+main .container .div-box .inner-box2 .emp p {
+  width: 70%;
+  margin: 0 auto;
+  border: 1px solid #c2c2c2;
+  border-radius: 30%;
+  border-top-right-radius: 30%;
+  text-align: center;
+  font-weight: 400;
+}
+main .container .div-box .inner-box2 .emp img {
+  margin: 0 auto;
+}
+main .container .div-box .inner-box2 .emp p {
+  width: 70%;
+  margin: 0 auto;
+  border: 1px solid #c2c2c2;
+  border-radius: 30%;
+  border-top-right-radius: 30%;
+  text-align: center;
+  font-weight: 400;
+}
+main .container .div-box .inner-box2 .emp img {
+  margin: 0 auto;
+}
+main .container .div-box .inner-box2 .emp p {
+  width: 70%;
+  margin: 0 auto;
+  border: 1px solid #c2c2c2;
+  border-radius: 30%;
+  border-top-right-radius: 30%;
+  text-align: center;
+  font-weight: 400;
+}
+main .container .div-box .boss-curator {
+  width: 70%;
+  margin: auto;
+}
+main .container .div-box .boss-curator img {
+  margin: 0 auto;
+}
+main .container .div-box .boss-curator p {
+  width: 70%;
+  margin: 0 auto;
+  border: 1px solid #c2c2c2;
+  border-radius: 30%;
+  border-top-right-radius: 30%;
+  text-align: center;
+  font-weight: 400;
+}
+main .container .div-box .inner-box3 {
+  display: flex;
+  justify-content: space-between;
+}
+main .container .div-box .inner-box3 .curator img {
+  margin: 0 auto;
+}
+main .container .div-box .inner-box3 .curator p {
+  width: 70%;
+  margin: 0 auto;
+  border: 1px solid #c2c2c2;
+  border-radius: 30%;
+  border-top-right-radius: 30%;
+  text-align: center;
+  font-weight: 400;
+}
+main .container .div-box .inner-box3 .curator img {
+  margin: 0 auto;
+}
+main .container .div-box .inner-box3 .curator p {
+  width: 70%;
+  margin: 0 auto;
+  border: 1px solid #c2c2c2;
+  border-radius: 30%;
+  border-top-right-radius: 30%;
+  text-align: center;
+  font-weight: 400;
 }
 main .container .tb table {
   width: 100%;

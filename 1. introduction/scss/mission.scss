@@ -17,3 +17,383 @@ header {
     @include header-style();
 }
 
+/////////////////////
+main {
+    .bi {
+        .container {
+            h2 {
+                text-align: center;
+                margin-bottom: 25px;
+            }
+            .bi-menu {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width: 70%;
+                margin: 0 auto;
+                padding-top: 20px;
+                // background-color: #914c21;
+                @include responsive (large-screens) {
+                    width: 50%;
+                }
+                div:first-child {
+                    width: 100%; height: 40px;
+                    text-align: center;
+                    line-height: 40px;
+                    font-size: 0.9rem;
+                    font-weight: $font-regular;
+                    border: 1px solid #c2c2c2;
+                    border-right: none;
+                    // background-color: #ADB4B0;
+                    @include responsive (large-screens) {
+                        height: 60px;
+                        line-height: 60px;
+                        font-size: 1rem;
+                        font-weight: $font-semibold;
+                    }
+                    a:hover {
+                        color: $color-point;
+                    }
+                }
+                div:nth-child(2) {
+                    width: 100%; height: 40px;
+                    text-align: center;
+                    line-height: 40px;
+                    font-size: 0.9rem;
+                    font-weight: $font-regular;
+                    border: 1px solid #c2c2c2;
+                    border-right: none; 
+                    background-color: $color-point;
+                    @include responsive (large-screens) {
+                        height: 60px; 
+                        line-height: 60px;
+                        font-size: 1rem;
+                        font-weight: $font-semibold;
+                    }
+        
+                    a {
+                        color: $color-second;
+                    }
+                }
+                div:last-child {
+                    width: 100%; height: 40px;
+                    text-align: center;
+                    line-height: 40px;
+                    font-size: 0.9rem;
+                    font-weight: $font-regular;
+                    border: 1px solid #c2c2c2;
+                    // background-color: #ADB4B0;
+                    @include responsive (large-screens) {
+                        height: 60px;
+                        line-height: 60px;
+                        font-size: 1rem;
+                        font-weight: $font-semibold;
+                    }
+                     a:hover {
+                        color: $color-point;
+                     }
+                }
+            } //bi-menu
+
+            .sec-box {
+              
+                @include responsive (large-screens) {
+                    display: flex;
+                    justify-content: center;
+                  
+                    width: 100%; height: 700px;
+                    
+                    
+                    
+                }
+                .sec1 {
+                    width: 100%;
+                   
+                    @include responsive (large-screens) {
+                        width: 100%;
+                    }
+                    .sec1-box { 
+                        width: 100%;
+                        margin-top: 70px;
+
+                        @include responsive (large-screens) {
+                           
+                          
+                        }
+                     
+                          
+                        img {    
+                            width: 25%;
+                            margin: 0 auto;
+                        }
+                        .line {
+                            width: 2px;
+                            margin: 0 auto;
+                            height: 80px;
+                            background-color: rgb(146, 146, 146);
+                        }
+                        .og-box {
+                            width: 70%; height: 60px;
+                            margin: 0 auto;
+                            border-radius: 25px;
+                            background-color: $color-point;
+                            @include responsive (large-screens) {
+                                width: 100%; height: 80px;
+                            }
+                            strong {
+                                font-size: 1.3rem;
+                                text-align: center;
+                                line-height: 60px;
+                                color: $color-second;
+                                @include responsive (large-screens) {
+                                    line-height: 80px
+                                    
+                                }
+                            };
+                        }
+                        p {
+                            text-align: center;
+                            width: 50%;
+                            margin: 0 auto;
+                            padding-top: 30px;
+                            padding-bottom: 50px;
+                            font-size: 1.3rem;
+                            font-weight: $font-semibold;
+                        };
+                    }// sec1-box
+                    .plus {
+                        position: relative;
+                        width: 60px; height: 60px;
+                        margin: 0 auto;
+                        background-color: #9a6241;
+                        border-radius: 50%;
+                        @include responsive (large-screens) {
+                            width: 80px; height: 80px;
+                            top: -220px; left: 240px;
+                        }
+                        .line1 {
+                            position: absolute; top: 50%; left: 50%;
+                            transform: translate(-50%, -50%);
+                            width: 50%; height: 2px;
+                            background-color: $color-second;
+                        }
+                        .line2 {
+                            position: absolute; top: 50%; left: 50%;
+                            transform: translate(-50%, -50%);
+                            width: 2px; height: 50%;
+                            background-color: $color-second;
+                        }
+                    } // plus
+                } // sec1
+    
+                .sec2 {
+                    @include responsive (large-screens) {
+                        width: 100%;
+                    }
+                    .sec2-box {
+                        margin-top: 70px;
+                        
+                        @include responsive (large-screens) {}
+                   ;
+                        img {    
+                            width: 25%;
+                            margin: 0 auto;
+                            @include responsive (large-screens) {
+                                width: 25%;
+                            }
+                        }
+                        .line {
+                            width: 2px;
+                            margin: 0 auto;
+                            height: 80px;
+                            background-color: rgb(146, 146, 146);
+                        }
+                        .og-box {
+                            width: 70%; height: 60px;
+                            margin: 0 auto;
+                            border-radius: 25px;
+                            background-color: #ff8665;
+                            @include responsive (large-screens) {
+                                width: 100%; height: 80px;
+                            }
+                            strong {
+                                font-size: 1.3rem;
+                                text-align: center;
+                                line-height: 60px;
+                                color: $color-second;
+                                @include responsive (large-screens) {
+                                    line-height: 80px
+                                    
+                                }
+                            };
+                        }
+                        p {
+                            text-align: center;
+                            width: 50%;
+                            margin: 0 auto;
+                            padding-top: 30px;
+                            padding-bottom: 50px;
+                            font-size: 1.3rem;
+                            font-weight: $font-semibold;
+                        };
+                    }// sec1-box
+                    .plus2 {
+                        position: relative;
+                        width: 60px; height: 60px;
+                        margin: 0 auto;
+                        background-color: #9a6241;
+                        border-radius: 50%;
+                        @include responsive (large-screens) {
+                            width: 80px; height: 80px;
+                            top: -220px; left: 240px;
+                        }
+                        .line1 {
+                            position: absolute; top: 50%; left: 50%;
+                            transform: translate(-50%, -50%);
+                            width: 50%; height: 2px;
+                            background-color: $color-second;
+                        }
+                        .line2 {
+                            position: absolute; top: 50%; left: 50%;
+                            transform: translate(-50%, -50%);
+                            width: 2px; height: 50%;
+                            background-color: $color-second;
+                        }
+                    } // plus2
+                } // sec2
+    
+                .sec3 {
+                    @include responsive (large-screens) {
+                        width: 100%;
+                    }
+                    .sec3-box {
+                        margin-top: 70px;
+                        @include responsive (large-screens) {}
+                      
+                        img {    
+                            width: 25%;
+                            margin: 0 auto;
+                            @include responsive (large-screens) {
+                                width: 25%;
+                            }
+                        }
+                        .line {
+                            width: 2px;
+                            margin: 0 auto;
+                            height: 80px;
+                            background-color: rgb(146, 146, 146);
+                        }
+                        .og-box {
+                            width: 70%; height: 60px;
+                            margin: 0 auto;
+                            border-radius: 25px;
+                            background-color: #d89f90;
+                            @include responsive (large-screens) {
+                                width: 100%; height: 80px;
+                                
+                            }
+                            strong {
+                                font-size: 1.3rem;
+                                text-align: center;
+                                line-height: 60px;
+                                color: $color-second;
+                                @include responsive (large-screens) {
+                                    line-height: 80px
+                                    
+                                }
+                            };
+                        }
+                        p {
+                            text-align: center;
+                            width: 50%;
+                            margin: 0 auto;
+                            padding-top: 30px;
+                            padding-bottom: 50px;
+                            font-size: 1.3rem;
+                            font-weight: $font-semibold;
+                        };
+                    }// sec3-box 
+                } // sec3
+            } // sec-box
+        } //container
+    } // bi
+
+    .vission-box {
+        .container {
+            .vission {
+                h2 {
+                    font-size: 2rem;
+                    padding-bottom:40px;
+                    text-align: center;
+                }
+                p {
+                    width: 90%;
+                    height: 150px;
+                    margin: 0 auto;
+                    line-height: 150px;
+                    text-align: center;
+
+                    font-size: 1.3rem;
+                    font-weight: $font-semibold;
+                    color: $color-second;
+                    border-top-left-radius: 80px;
+                    border-end-end-radius: 80px;
+                    background-color: $color-point;
+                    @include responsive (large-screens) {
+                        width: 100%;
+                        font-size: 1.5rem;
+                    }
+                }
+
+            } // vission
+
+            .vission2 {
+                margin-top: 100px;
+                strong {
+                    text-align: center;
+                    font-size: 2rem;
+                }
+                h2 {
+                    text-align: center;
+                    font-size: 2.5rem;
+                }
+       
+                .flex-box {
+                    display: flex;
+                    justify-content: space-around;
+                    margin-top: 50px;
+                    margin-bottom: 100px;
+                    p {
+                        width: 100px; height: 100px;
+                        line-height: 100px;
+                        text-align: center;
+                        font-weight: $font-semibold;
+                        font-size: 1.2rem;
+                        color: $color-second;
+                        border-radius: 50%;
+                        background-color: $color-point;
+                        @include responsive (large-screens) {
+                            width: 200px; height: 200px;
+                            line-height: 200px;
+                            font-size: 1.8rem;
+                        }
+                    }
+                    p:nth-child(3) {
+                        background-color: #ff8665;
+                    }
+                    p:last-child {
+                        background-color: #d89f90;
+                    }
+                    .plus-ic {
+                        font-size: 2rem;
+                        line-height: 100px;
+                        @include responsive (large-screens) {
+                            line-height: 200px;
+                            font-size: 4rem;
+                        }
+                    }
+                }
+            } // vission2
+        } //container
+    } // vission-box
+}
