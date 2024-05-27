@@ -440,6 +440,73 @@ main .space .sec2 p {
     text-align: left;
   }
 }
+main .space .slide2 {
+  position: relative;
+  width: 100%;
+  margin-bottom: 200px;
+  background-color: aqua;
+}
+main .space .slide2 .bg-box {
+  width: 100%;
+  height: 100%;
+}
+main .space .slide2 .bg-box img {
+  width: 100%;
+  height: 100%;
+}
+main .space .slide2 .bg-box .shadow-bg {
+  position: absolute;
+  top: 0;
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+main .space .slide2 .bg-box .shadow-bg .floor {
+  display: flex;
+  justify-content: space-between;
+  width: 35%;
+  margin: 0 auto;
+  padding-top: 20px;
+}
+main .space .slide2 .bg-box .shadow-bg .floor h2 a {
+  font-size: 3rem;
+  color: #dddddd;
+}
+main .space .slide2 .bg-box .shadow-bg .img-box {
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+main .space .slide2 .bg-box .shadow-bg .img-box img {
+  width: 90%;
+  height: auto;
+  margin: 0 auto;
+  padding-top: 30px;
+}
+main .space .slide2 .bg-box .shadow-bg .btn {
+  width: 100%;
+}
+main .space .slide2 .bg-box .shadow-bg .btn p {
+  width: 100%;
+  display: flex;
+  color: white;
+}
+main .space .slide2 .bg-box .shadow-bg .btn p .white {
+  font-weight: bold;
+}
+main .space .slide2 .bg-box .shadow-bg .txt-box {
+  width: 90%;
+  height: auto;
+  margin: 0 auto;
+}
+main .space .slide2 .bg-box .shadow-bg .txt-box h2 {
+  font-size: 1rem;
+  color: white;
+}
+main .space .slide2 .bg-box .shadow-bg .txt-box p {
+  color: white;
+}
 
 footer {
   position: relative;

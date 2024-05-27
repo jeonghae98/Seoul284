@@ -204,6 +204,75 @@ main {
                 }
             }
         } // sec2
+            .slide2 {
+                position: relative;
+                width: 100%; 
+                margin-bottom:200px;
+                background-color: aqua;
+                .bg-box {
+                    width: 100%;
+                    height:100%;
+                    img {
+                        width: 100%; height:100%;
+                    }
+                    .shadow-bg {
+                        position: absolute; top: 0;
+                        z-index: 100;
+                        width: 100%; height:100%;   
+                        background-color: rgba(0,0,0,0.8);
+    
+                        .floor{
+                            display: flex;
+                            justify-content: space-between;
+                            width: 35%;
+                            margin: 0 auto;
+                            padding-top: 20px;
+                            h2 {
+                                a {
+                                    font-size: 3rem;
+                                    color:#dddddd;
+                                }
+                            }
+                        }
+                        .img-box {
+                            width: 100%; height: auto;
+                            margin: 0 auto;
+                            
+                            img {
+                                width: 90%; height: auto;
+                                margin: 0 auto;
+                                padding-top: 30px;
+                            }
+                        } 
+                        .btn {
+                            width: 100%;
+                            p {
+                                width: 100%;
+                                display: flex;
+                               
+                                .white  {
+                                    font-weight: bold;
+                                }
+                                color: white;
+                            }
+                        }
+                        .txt-box {
+                            width: 90%; height: auto;
+                            margin: 0 auto;
+                            
+                            
+                            h2 {
+                                font-size:1rem;
+                                color: white;
+                            }
+                            p {
+                                color: white;
+                            }
+                        }
+                    } // shadow-bg
+                } //bg-box
+            } // slide2
+          
     } // space
 }
 
