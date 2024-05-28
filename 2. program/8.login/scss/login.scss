@@ -9,6 +9,7 @@
     width: $width-wide;
     max-width: 1440px;
     margin: 0 auto;
+    padding: 0 10px;
     background-color: antiquewhite;
 }
 
@@ -19,7 +20,32 @@ header {
 
 
 //***********main***********
+main {
+    width: $width-wide;
+    section.login {
 
+        .orange-box {
+            position: relative;
+            width: 700px;
+            height: 500px;
+            margin: 0 auto;
+            background-color: $background-orange;
+
+            .login-box {
+                width: 400px;
+                height: 350px;
+                margin: 0 auto;
+                background-color: white
+            }
+
+            .login-image{
+                img {
+                    
+                }
+            }
+        }
+    }
+}
 
 //***********footer***********
 footer {

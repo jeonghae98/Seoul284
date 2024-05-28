@@ -84,6 +84,7 @@ footer {
   width: 100%;
   max-width: 1440px;
   margin: 0 auto;
+  padding: 0 10px;
   background-color: antiquewhite;
 }
 
@@ -246,6 +247,22 @@ header .logo-gnb-rightmenu .logo-gnb-menu-box .right-menu .mobile-menu.active di
   display: block;
 }
 
+main {
+  width: 100%;
+}
+main section.login .orange-box {
+  position: relative;
+  width: 700px;
+  height: 500px;
+  margin: 0 auto;
+  background-color: #ff6000;
+}
+main section.login .orange-box .login-box {
+  width: 400px;
+  height: 350px;
+  margin: 0 auto;
+  background-color: white;
+}
 footer {
   position: relative;
   width: 100%;
