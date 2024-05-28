@@ -6,187 +6,205 @@
     width: $width-wide;
     max-width: 1440px;
     margin: 0 auto;
-    // background-color: lightgreen;
-}
+    padding: 0 20px;
+    background-color: antiquewhite;
+
+    @include responsive(large-screens) {
+        padding: 0 10px;
+    }
+} 
 
 @mixin header-style() {
     position: relative;
     z-index: 1;
     width: $width-wide;
     height: 150px;
-    padding: 0 20px;
-    // background-color: pink;
+    background-color: pink;
 
     .logo-gnb-rightmenu {
-        .logo-gnb-menu-box {
-            width: $width-wide;
-            display: flex;
-            justify-content: space-between;
-            // background-color: brown;
-            @include responsive(large-screens) {
-                position: relative;
-            }
-
-            .logo img {
-                position: relative;
-                z-index: 5;
-                margin-top: 36px;
-                width: 182px;  // 182px
-
+        height: $height-wide;
+        .container {
+            height: $height-wide;
+            
+            .logo-gnb-menu-box {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width: $width-wide;
+                height: $height-wide;
+                background-color: brown;
                 @include responsive(large-screens) {
-                    margin-top: 41px;
-                    width: 191px; // 
+                    position: relative;
                 }
-            }
-
-
-
-            .main-menu {
-                position: absolute;
-                top:0;
-                right:-20px;
-                bottom:0px;
-                overflow-x: hidden;
-                width:0px;
-                height: 800%;
-                background: $color-second;
-                transition: width 0.5s ease;
-                
-                @include responsive(large-screens) {
-                    position: static;
-                    margin-top: 70px;
-                    margin-left: -43px;
-                    width: 616px;  // 616px 47.8%
-                    background-color: transparent;
-                }
-
-                .gnb {
-                    @include responsive(large-screens) {
-                        display: flex;
-                        flex-direction: row;
-                        justify-content: space-between;
-                        // background-color: aquamarine;
+    
+                .logo {
+                        width: 120px;
+                        img {
+                        position: relative;
+                        z-index: 5;
+                        // margin-top: 36px;
+                        width: 100%;  // 182px
+        
+                        @include responsive(large-screens) {
+                            margin-top: 41px;
+                            width: 191px; // 
+                        }
                     }
-
-                    li {
-                        a.gnb-title {
-                            color: $color-main;
-                            @include responsive(large-screens) {
-                                font: {
-                                    size: 1.1rem;  // 16pt 21px
-                                    weight: $font-regular;
+                }
+    
+    
+    
+                .main-menu {
+                    position: absolute;
+                    top:0;
+                    right:-20px;
+                    bottom:0px;
+                    overflow-x: hidden;
+                    width:0px;
+                    height: 800%;
+                    background: $color-second;
+                    transition: width 0.5s ease;
+                    
+                    @include responsive(large-screens) {
+                        position: static;
+                        margin-top: 70px;
+                        margin-left: -43px;
+                        width: 616px;  // 616px 47.8%
+                        background-color: transparent;
+                    }
+    
+                    .gnb {
+                        @include responsive(large-screens) {
+                            display: flex;
+                            flex-direction: row;
+                            justify-content: space-between;
+                            // background-color: aquamarine;
+                        }
+    
+                        li {
+                            a.gnb-title {
+                                color: $color-main;
+                                @include responsive(large-screens) {
+                                    font: {
+                                        size: 1.1rem;  // 16pt 21px
+                                        weight: $font-regular;
+                                    }
+                                    // color: $color-second;
+    
+                                    &:hover {
+                                        color: $color-point;
+                                    }
                                 }
-                                // color: $color-second;
+                            }
+                        }
+    
+                        .sub-menu {
+                            display: none;
+                        }
+                  }
+                  &.active {
+                    width: 100%;
+                  }
+                } 
+        
+    
+                .right-menu {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    width: 90px;
+                    height: 35px;
+                    // margin-top: 65px;
+                    background-color: aquamarine;
+    
+                    @include responsive(large-screens) {
+                        display: block;
+                        margin-top: 70px;
+                        margin-right: 35px;
+                        width: 85px;  
+                        height: 21px;
+                    }
+        
+                    ul {
+                        @include responsive(large-screens) {
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                        }
+                        .login {
+                            display: none;
+    
+                            @include responsive(large-screens) {
+                                display: block;
+                                width: 27px;
+                            }
+                        }
 
-                                &:hover {
-                                    color: $color-point;
+                        .search {
+                            // margin-right: 10px;
+                            background-color: lightblue;
+                            img {
+                                width: 30px;  
+                                @include responsive(large-screens) {
+                                    width: 21px;
                                 }
                             }
                         }
                     }
-
-                    .sub-menu {
-                        display: none;
-                    }
-              }
-              &.active {
-                width: 100%;
-              }
-            } 
+        
     
-
-            .right-menu {
-                display: flex;
-                justify-content: space-between;
-                width: 100px;
-                height: 35px;
-                margin-top: 65px;
-                // background-color: aquamarine;
-
-                @include responsive(large-screens) {
-                    display: block;
-                    margin-top: 70px;
-                    margin-right: 35px;
-                    width: 85px;  // 85px 6%
-                    height: 21px;
-                }
+                    .mobile-menu {
+                        cursor:pointer;
+                        background-color: aqua;
     
-                ul {
-                    @include responsive(large-screens) {
-                        display: flex;
-                        justify-content: space-between;
-                        align-items: center;
-                    }
-                    .login {
-                        display: none;
-
                         @include responsive(large-screens) {
-                            display: block;
-                            width: 27px;
+                            display: none;
                         }
-                    }
-                    .search {
-                        width: 32px;  
-                        margin-right: 10px;
-                        @include responsive(large-screens) {
-                            width: 21px;
-                        }
-                    }
-                }
     
-
-                .mobile-menu {
-                    margin-top: -10px;
-                    cursor:pointer;
-                    background-color: aqua;
-
-                    @include responsive(large-screens) {
-                        display: none;
-                    }
-
-                    .bar {
-                      display:block;  
-                      width: 40px;
-                      height:3px;
-                      margin:10px 10px;
-                      border-radius: 10px;
-                      background:$color-main;
-                      transition: transform 0.5s ease;
-
-                      &:first-child {
-                        // margin-top: 0;
-                        transform:rotate(0deg);
-                      }
-
-                      &:last-child {
-                        // margin-bottom: 0;
-                        transform:rotate(0deg);
-                      }
-                    }
-
-                    &.active {
-                      height:50px;
-                    //   background-color: greenyellow;
-                      position:relative;
-
-                      div{
-                        position:absolute;
-                        top: 10px; right: 0;
-                        display:none;
-
-                        &:first-child {
-                          transform:rotate(-45deg);
-                            display:block;
+                        .bar {
+                          display:block;  
+                          width: 35px;
+                          height:2px;
+                          margin:8px 0;
+                          border-radius: 10px;
+                          background:$color-main;
+                          transition: transform 0.5s ease;
+    
+                          &:first-child {
+                            // margin-top: 0;
+                            transform:rotate(0deg);
+                          }
+    
+                          &:last-child {
+                            // margin-bottom: 0;
+                            transform:rotate(0deg);
+                          }
                         }
-
-                        &:last-child {
-                          transform:rotate(45deg);
-                          display:block;
+    
+                        &.active {
+                          height:50px;
+                        //   background-color: greenyellow;
+                          position:relative;
+    
+                          div{
+                            position:absolute;
+                            top: 10px; right: 0;
+                            display:none;
+    
+                            &:first-child {
+                              transform:rotate(-45deg);
+                                display:block;
+                            }
+    
+                            &:last-child {
+                              transform:rotate(45deg);
+                              display:block;
+                            }
+                          }
                         }
                       }
-                    }
-                  }
-            }  // right-menu
-        }  //logo-gnb-menu-box
+                }  // right-menu
+            }  //logo-gnb-menu-box
+        } 
     }  // logo-gnb-rightmenu
 }  // header-style()

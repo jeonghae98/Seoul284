@@ -20,10 +20,10 @@
         // background-color: aquamarine;
         
         @include responsive(large-screens) {
-            margin-bottom: 80px;
+            margin-bottom: 50px;
             font: {
                 weight: $font-semibold;
-                size: 5rem;  // 60pt
+                size: 2.5rem;  // 30pt
             }
             text-align: left;
         }

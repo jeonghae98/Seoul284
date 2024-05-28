@@ -157,9 +157,13 @@
     
                 .copyright {
                     width: $width-wide;
-                    margin-top: 0;
+                    margin-top: 20px;
                     // background-color: blanchedalmond;
                     
+                    @include responsive(large-screens) {
+                        margin-top: 0;
+                    }
+
                     p {
                         font: {
                             weight: $font-regular;

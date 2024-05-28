@@ -35,10 +35,10 @@ main {
             // background-color: aquamarine;
             
             @include responsive(large-screens) {
-                margin-bottom: 120px;
+                margin-bottom: 50px;
                 font: {
                     weight: $font-semibold;
-                    size: 5rem;  // 60pt
+                    size: 2.5rem
                 }
                 text-align: left;
             }
@@ -251,7 +251,7 @@ main {
                 align-items: center;
                 width: 245px;
                 margin: auto;
-                background-color: aquamarine;
+                // background-color: aquamarine;
 
                 @include responsive(large-screens) {
                     width: 215px;
