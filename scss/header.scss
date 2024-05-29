@@ -6,20 +6,20 @@
     width: $width-wide;
     max-width: 1440px;
     margin: 0 auto;
-    padding: 0 20px;
-    background-color: antiquewhite;
-
-    @include responsive(large-screens) {
-        padding: 0 10px;
-    }
+    padding: 0 10px;
+    // background-color: antiquewhite;
 } 
 
 @mixin header-style() {
     position: relative;
     z-index: 1;
     width: $width-wide;
-    height: 150px;
-    background-color: pink;
+    height: 20vw;
+    // background-color: pink;
+
+    @include responsive(large-screens) {
+        height: 150px;
+    }
 
     .logo-gnb-rightmenu {
         height: $height-wide;
@@ -32,22 +32,25 @@
                 align-items: center;
                 width: $width-wide;
                 height: $height-wide;
-                background-color: brown;
+                // background-color: brown;
                 @include responsive(large-screens) {
                     position: relative;
                 }
     
                 .logo {
-                        width: 120px;
+                        width: 30%;
+
+                        @include responsive(large-screens) {
+                            margin-top: 41px;
+                            width: 191px; 
+                        }
                         img {
                         position: relative;
                         z-index: 5;
-                        // margin-top: 36px;
-                        width: 100%;  // 182px
-        
+                        width: 100%;
+                        
                         @include responsive(large-screens) {
-                            margin-top: 41px;
-                            width: 191px; // 
+                           width: $width-wide;
                         }
                     }
                 }
@@ -55,21 +58,23 @@
     
     
                 .main-menu {
-                    position: absolute;
-                    top:0;
-                    right:-20px;
-                    bottom:0px;
-                    overflow-x: hidden;
-                    width:0px;
-                    height: 800%;
-                    background: $color-second;
-                    transition: width 0.5s ease;
+                    display: none;
+                    // position: absolute;
+                    // z-index: 1000;
+                    // top:0;
+                    // right:-20px;
+                    // bottom:0px;
+                    // overflow-x: hidden;
+                    // width:0px;
+                    // height: 100vw;
+                    // background: $color-second;
+                    // transition: width 0.5s ease;
                     
                     @include responsive(large-screens) {
                         position: static;
+                        display: block;
                         margin-top: 70px;
-                        margin-left: -43px;
-                        width: 616px;  // 616px 47.8%
+                        width: 616px; 
                         background-color: transparent;
                     }
     
@@ -112,25 +117,27 @@
                     display: flex;
                     justify-content: space-between;
                     align-items: center;
-                    width: 90px;
-                    height: 35px;
-                    // margin-top: 65px;
-                    background-color: aquamarine;
+                    width: 17%;
+                    // background-color: aquamarine;
     
                     @include responsive(large-screens) {
                         display: block;
-                        margin-top: 70px;
-                        margin-right: 35px;
+                        margin: 70px 35px 0 45px;
                         width: 85px;  
                         height: 21px;
                     }
         
                     ul {
+                        width: 40%;
+                        // margin-top: 5px;
+
                         @include responsive(large-screens) {
                             display: flex;
                             justify-content: space-between;
                             align-items: center;
+                            width: $width-wide;
                         }
+                        
                         .login {
                             display: none;
     
@@ -141,13 +148,13 @@
                         }
 
                         .search {
-                            // margin-right: 10px;
-                            background-color: lightblue;
+                            width: 90%;
+                            // background-color: lightblue;
+                            @include responsive(large-screens) {
+                                width: 21px;
+                            }
                             img {
-                                width: 30px;  
-                                @include responsive(large-screens) {
-                                    width: 21px;
-                                }
+                                width: $width-wide;
                             }
                         }
                     }
@@ -155,17 +162,18 @@
     
                     .mobile-menu {
                         cursor:pointer;
-                        background-color: aqua;
-    
+                        width: 35%;
+                        // background-color: aqua;
+
                         @include responsive(large-screens) {
                             display: none;
                         }
     
                         .bar {
                           display:block;  
-                          width: 35px;
-                          height:2px;
-                          margin:8px 0;
+                          width: $width-wide;
+                          height: 2px;
+                          margin: 2vw 0;
                           border-radius: 10px;
                           background:$color-main;
                           transition: transform 0.5s ease;
