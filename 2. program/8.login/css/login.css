@@ -72,6 +72,7 @@ footer {
   max-width: 1440px;
   margin: 0 auto;
   padding: 0 20px;
+  background-color: antiquewhite;
 }
 @media only screen and (min-width: 1024px) {
   .container {
@@ -97,13 +98,16 @@ footer {
   max-width: 1440px;
   margin: 0 auto;
   padding: 0 10px;
-  background-color: antiquewhite;
 }
 
 header {
   position: relative;
   z-index: 1;
   width: 100%;
+  height: 150px;
+  background-color: pink;
+}
+
   height: 20vw;
 }
 @media only screen and (min-width: 1024px) {
@@ -123,6 +127,7 @@ header .logo-gnb-rightmenu .container .logo-gnb-menu-box {
   align-items: center;
   width: 100%;
   height: 100%;
+  background-color: brown;
 }
 @media only screen and (min-width: 1024px) {
   header .logo-gnb-rightmenu .container .logo-gnb-menu-box {
@@ -130,6 +135,15 @@ header .logo-gnb-rightmenu .container .logo-gnb-menu-box {
   }
 }
 header .logo-gnb-rightmenu .container .logo-gnb-menu-box .logo {
+  width: 120px;
+}
+header .logo-gnb-rightmenu .container .logo-gnb-menu-box .logo img {
+  position: relative;
+  z-index: 5;
+  width: 100%;
+}
+@media only screen and (min-width: 1024px) {
+  header .logo-gnb-rightmenu .container .logo-gnb-menu-box .logo img {
   width: 30%;
 }
 @media only screen and (min-width: 1024px) {
@@ -138,6 +152,16 @@ header .logo-gnb-rightmenu .container .logo-gnb-menu-box .logo {
     width: 191px;
   }
 }
+header .logo-gnb-rightmenu .container .logo-gnb-menu-box .main-menu {
+  position: absolute;
+  top: 0;
+  right: -20px;
+  bottom: 0px;
+  overflow-x: hidden;
+  width: 0px;
+  height: 800%;
+  background: #fff;
+  transition: width 0.5s ease;
 header .logo-gnb-rightmenu .container .logo-gnb-menu-box .logo img {
   position: relative;
   z-index: 5;
@@ -189,6 +213,9 @@ header .logo-gnb-rightmenu .container .logo-gnb-menu-box .right-menu {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 90px;
+  height: 35px;
+  background-color: aquamarine;
   width: 17%;
 }
 @media only screen and (min-width: 1024px) {
@@ -220,6 +247,16 @@ header .logo-gnb-rightmenu .container .logo-gnb-menu-box .right-menu ul .login {
   }
 }
 header .logo-gnb-rightmenu .container .logo-gnb-menu-box .right-menu ul .search {
+  background-color: lightblue;
+}
+header .logo-gnb-rightmenu .container .logo-gnb-menu-box .right-menu ul .search img {
+  width: 30px;
+}
+@media only screen and (min-width: 1024px) {
+  header .logo-gnb-rightmenu .container .logo-gnb-menu-box .right-menu ul .search img {
+    width: 21px;
+  }
+}
   width: 90%;
 }
 @media only screen and (min-width: 1024px) {
@@ -241,6 +278,9 @@ header .logo-gnb-rightmenu .container .logo-gnb-menu-box .right-menu .mobile-men
 }
 header .logo-gnb-rightmenu .container .logo-gnb-menu-box .right-menu .mobile-menu .bar {
   display: block;
+  width: 35px;
+  height: 2px;
+  margin: 8px 0;
   width: 100%;
   height: 2px;
   margin: 2vw 0;
@@ -276,19 +316,103 @@ header .logo-gnb-rightmenu .container .logo-gnb-menu-box .right-menu .mobile-men
 main {
   width: 100%;
 }
+main section.login {
+  height: 531px;
+}
+@media only screen and (min-width: 1024px) {
+  main section.login {
+    background: url(../images/sketch2.png);
+    /* background-size: 2000px 800px; */
+    background-position: center;
+  }
+}
 main section.login .orange-box {
   position: relative;
+  top: 10px;
   width: 700px;
   height: 500px;
   margin: 0 auto;
   background-color: #ff6000;
+  border-radius: 5px;
+  box-shadow: 5px 5px 5px #8d8d8d;
 }
 main section.login .orange-box .login-box {
+  position: relative;
   width: 400px;
   height: 350px;
   margin: 0 auto;
+  z-index: 5;
   background-color: white;
+  transform: translateY(75px);
+  border-radius: 5px;
 }
+@media only screen and (min-width: 1024px) {
+  main section.login .orange-box .login-box {
+    transform: translateX(-250px) translateY(75px);
+  }
+}
+main section.login .orange-box .login-box form {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  text-align: center;
+}
+main section.login .orange-box .login-box form h1 {
+  font-weight: 300;
+  transform: translateY(10px);
+}
+main section.login .orange-box .login-box form .pw {
+  transform: translateY(-20px);
+}
+main section.login .orange-box .login-box form label {
+  display: block;
+  transform: translateX(-70px);
+}
+main section.login .orange-box .login-box form input {
+  width: 200px;
+  height: 40px;
+  border-radius: 5px;
+  font-size: 18px;
+  font-weight: 100;
+  padding-left: 5px;
+}
+main section.login .orange-box .login-box form button {
+  margin: 0 auto;
+  width: 150px;
+  height: 40px;
+  background-color: #ff6000;
+  color: white;
+  transform: translateY(-10px);
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 16px;
+}
+main section.login .orange-box .login-box form button:hover {
+  color: #ff6000;
+  background-color: white;
+  border: 2px solid;
+  font-weight: 600;
+  transition: all 0.3s;
+}
+main section.login .orange-box .login-image {
+  position: absolute;
+  z-index: 2;
+}
+main section.login .orange-box .login-image img {
+  z-index: 0;
+  margin: 0 auto;
+  height: 500px;
+  transform: translateY(-350px) translateX(175px);
+  opacity: 1;
+}
+@media only screen and (min-width: 1024px) {
+  main section.login .orange-box .login-image img {
+    transform: translateX(330px) translateY(-350px) scale(0.7);
+  }
+}
+
 footer {
   position: relative;
   width: 100%;
