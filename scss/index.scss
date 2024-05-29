@@ -115,25 +115,35 @@ main {
         // z-index: 1;
         margin-top: 229px;
         height: 1072px;
-        background: {
-            image: url(/images/intro-bg.png);
-            repeat: no-repeat;
-            position-x: 30%; // 성민 수정
-            position-y: 500px; // 성민 수정
-            size: 1170px 788px;
-            // color: aqua;
-        }
 
         @include responsive(large-screens) {
             margin-top: 900px;
             height: 1572px;
-            background: {
-                position-x: 220px;
-                position-y: 600px;
-                size: 1826px 1231px;
-            }
         }
 
+        .intro-bg-img {
+            position: absolute;
+            left: 0; top: 0;
+            width: 100%; height: 100%;
+            opacity: 0;
+            background: {
+                image: url(/images/intro-bg.png);
+                repeat: no-repeat;
+                position-x: 30%; // 성민 수정
+                position-y: 600px; // 성민 수정
+                size: 1170px 788px;
+                // color: aqua;
+            }
+            transition: opacity 1.5s ease 1.5s, background-position-y 1.5s ease 1.5s;
+            
+            @include responsive(large-screens) {
+                background: {
+                    position-x: 220px;
+                    position-y: 700px;
+                    size: 1826px 1231px;
+                }
+            }
+        }
 
         .intro-collection-exhibition-line-box {
             position: absolute;
@@ -148,15 +158,14 @@ main {
             }
             
             .intro-line {
-              
                 position: relative;
                 z-index: 1;
                 border: 1px solid $line-black;
                 width: $width-wide;
-                height: 1020px;   // 나중에 제이쿼리
+                height: 0;   // 나중에 제이쿼리
 
                 @include responsive(large-screens) {
-                    height: 1472px;
+                    height: 0;
                 }
 
                 .first-circle,
@@ -178,7 +187,10 @@ main {
                 }
         
                 .first-circle {
+                    // display: none;
                     top: 315px; left: -3.5px; // 성민 수정
+                    // opacity: 0;
+                    // transition: opacity 0.3s ease-in 1.2s;
                     
                     @include responsive(large-screens) {
                         top: 535px; left: -5px; // 성민 수정
@@ -280,10 +292,14 @@ main {
             background-image: url(../images/text_bg_1900.png);
             background-position-y: 600px;
             background-clip: text;
+            opacity: 0;
+            transition: opacity 0.3s ease-in 1.2s;
 
+            
             @include responsive(large-screens) {
                 right: 450px; top: 500px;
                 font-size: 3.5rem;  // 75pt  // 성민 수정
+                
             }
         }
 
@@ -294,7 +310,7 @@ main {
             background-image: url(../images/text_bg_2024.jpg);
             background-position-y: 600px;
             background-clip: text;
-
+ 
             @include responsive(large-screens) {
                 left: 75%; top: 900px;
                 font-size: 6rem;  // 95pt // 성민 수정
@@ -316,11 +332,15 @@ main {
                     weight: $font-regular;
                     size: 2.3rem;   // 40pt origin 56pt // 성민 수정
                 }
+                opacity: 0;
+                transform: translateX(-30px);
+                transition: opacity 1.5s ease 2.5s, transform 1.5s ease 2.5s;
 
                 @include responsive(large-screens) {
                     font: {
                         size: 4rem;  // 75pt // 성민 수정
                     }
+                    
                 }
             }
     
@@ -332,6 +352,10 @@ main {
                     size: 1rem;   // 24pt // 성민 수정
                 }
                 
+                opacity: 0;
+                transform: translateX(-20px);
+                transition: opacity 1.5s ease 3s, transform 1.5s ease 3s;
+
                 @include responsive(large-screens) {
                     width: 310px;
                     font-size: 1.2rem;  // 30pt // 성민 수정
@@ -347,6 +371,9 @@ main {
             margin-top: 30px;
             margin-left: 20px;
             
+            opacity: 0;
+            transition: opacity 1.5s ease 3.6s;
+
             @include responsive(large-screens) {
                 margin-top: -65px;// 성민 수정
                 margin-left: 480px; // 성민 수정
@@ -617,6 +644,7 @@ main {
                     }
                     .ex-img {
                         img {
+                            opacity: 0;
                             margin: auto;
                         }
                     }
@@ -630,6 +658,7 @@ main {
                         .title {
                             margin-top: 50px;
                             font-size: 1rem; // 18pt
+                            opacity: 0;
                             // background-color: #ffccac;
         
                             @include responsive(large-screens) {
@@ -654,12 +683,13 @@ main {
                             border-left: 2px solid $line-gray;
                         }
                         img {
-                            // width: 650px;
                             width: 95.588%;
-                            
+                                                        
                             @include responsive(large-screens) {
-                                // width: 840px;
                                 width: 93.333%;
+                                opacity: 0;
+                                transform: translateX(50px);
+                                transition: opacity 1.3s, transform 1.3s;
                             }
                         }
                     }
@@ -678,6 +708,7 @@ main {
                     }
                 }  // content-box
             }  // exhibition1
+
             .exhibition2 {
                 .content-box {
                     .ex-img {
@@ -687,8 +718,13 @@ main {
                             border-right: 2px solid $line-gray;
                         }
                         img {
-                            // width: 645px;
                             width: 91.5%;
+
+                            @include responsive(large-screens) {
+                                opacity: 0;
+                                transform: translateX(-50px);
+                                transition: opacity 1.3s, transform 1.3s;
+                            }
                         }
                     }
 
@@ -719,13 +755,16 @@ main {
                             width: 420px;
                             border-left: 2px solid $line-gray;
                         }
+
+
                         img {
-                            // width: 460px;
                             width: 67.647%;
                             
                             @include responsive(large-screens) {
-                                // width: 360px;
                                 width: 85.714%;
+                                opacity: 0;
+                                transform: translateX(50px);
+                                transition: opacity 1.3s, transform 1.3s;
                             }
                         }
                     }
@@ -733,6 +772,7 @@ main {
                         @include responsive(large-screens) {
                             width: 540px;
                         }
+
                         .title {
                             @include responsive(large-screens) {
                                 padding-right: 30px;
@@ -765,12 +805,13 @@ main {
                         }
 
                         img {
-                            // width: 652px;
                             width: 95.882%;
 
                             @include responsive(large-screens) {
-                                // width: 870px;
                                 width: 93.548%;
+                                opacity: 0;
+                                transform: translateX(50px);
+                                transition: opacity 1.3s, transform 1.3s;
                             }
                         }
                     }
@@ -1532,13 +1573,13 @@ main {
                 margin-bottom: 60px;
                 
                 .content-txt {
-                    padding-left: 20px;
                     // height: 220px; 
+                    text-align: right;
 
                     @include responsive(large-screens) {
                         width: 50%; 
                         height: auto;
-                        padding-left: 60px;
+                        padding-right: 140px;
                     }
                 }
 
@@ -1608,7 +1649,7 @@ main {
                 margin-bottom: 0;
 
                 .content-txt {
-                    padding-left: 30px;
+                    text-align: right;
 
                     @include responsive(large-screens) {
                         width: 40%; 

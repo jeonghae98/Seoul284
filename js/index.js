@@ -28,26 +28,218 @@ $(function() {
 
 
     //--------------------- intro ---------------------
+    $(window).scroll(function() {
+        var scrollPosition = $(this).scrollTop();  // 수직 스크롤바의 위치 인식
+        var elementOffset = $('.main-intro').offset().top;
+        var windowHeight = $(window).height();
+        var windowWidth = $(window).width();
+        // console.log(elementOffset);
+        // console.log(windowHeight);
+
+        if (scrollPosition > (elementOffset - windowHeight)) {
+            if(windowWidth < 768 ) {  // 모바일 버전
+                // <배경 사진>
+             $('.intro-bg-img')
+                .css({
+                    'opacity': 1,
+                    'background-position-y': '500px'
+                });
+
+                // <선>
+                // $('.main-intro .intro-line').animate({
+                //     height: '1020px'
+                //   }, 3000);
+
+            } else {  // pc 버전
+                // <배경 사진>
+                $('.intro-bg-img')
+                .css({
+                    'opacity': 1,
+                    'background-position-y': '600px'
+
+                });
+
+                // <선>
+                $('.main-intro .intro-line').animate({
+                    height: '1472px'
+                  }, 3000);
+            }
+            
+            // 모바일, pc 공통
+             // <txt>
+             $('.year').css('opacity', 1);
+
+            //  $('.first-circle').css('opacity', 1);
+
+             $('.intro-title')
+             .css({
+                 'opacity': 1,
+                 'transform': 'translateX(0)'
+             });
+
+             $('.intro-text')
+             .css({
+                 'opacity': 1,
+                 'transform': 'translateX(0)'
+             });
+            
+            
+             //--- 버튼 ---
+             $('.intro-btn').css('opacity', 1);
+             
+        }
+    });
+
     // $(window).scroll(function() {
     //     var scrollPosition = $(this).scrollTop();  // 수직 스크롤바의 위치 인식
     //     var elementOffset = $('.main-intro').offset().top;
     //     var windowHeight = $(window).height();
     //     var windowWidth = $(window).width();
-    //     // console.log(elementOffset);
-    //     // console.log(windowHeight);
+    
+    //     if (scrollPosition > (elementOffset - windowHeight)) {
+    //         if(windowWidth < 768 ) {  // 모바일 버전
+    //             $('.main-intro .intro-line').animate({
+    //                 height: '1020px'
+    //             }, 3000, function() {
+    //                 var introLineHeight = $('.intro-line').height();
+    //                 var firstCirclePosition = $('.first-circle').offset().top;
+    
+    //                 if (introLineHeight > firstCirclePosition) {
+    //                     $('.first-circle').css('display', 'block');
+    //                 }
+    //             });
+    //         } else {  // pc 버전
+    //             $('.main-intro .intro-line').animate({
+    //                 height: '1472px'
+    //             }, 3000, function() {
+    //                 var introLineHeight = $('.intro-line').height();
+    //                 var firstCirclePosition = $('.first-circle').offset().top;
+    
+    //                 if (introLineHeight > firstCirclePosition) {
+    //                     $('.first-circle').css('display', 'block');
+    //                 }
+    //             });
+    //         }
+    //     }
+    // });
+    
+    // $(window).scroll(function() {
+    //     var scrollPosition = $(this).scrollTop();  // 수직 스크롤바의 위치 인식
+    //     var elementOffset = $('.main-intro').offset().top;
+    //     var windowHeight = $(window).height();
+    //     var windowWidth = $(window).width();
+    //     var introLineHeight;
+    
+    //     if (scrollPosition > (elementOffset - windowHeight)) {
+    //         if(windowWidth < 768 ) {  // 모바일 버전
+    //             $('.main-intro .intro-line').animate({
+    //                 height: '1020px'
+    //             }, {
+    //                 duration: 3000,
+    //                 step: function(now, fx) {
+    //                     introLineHeight = now;
+    //                     if (introLineHeight > 40) { // 일정 길이 이상이면 원을 표시
+    //                         $('.first-circle').css('display', 'block');
+    //                     }
+    //                 }
+    //             });
+    //         } else {  // pc 버전
+    //             $('.main-intro .intro-line').animate({
+    //                 height: '1472px'
+    //             }, {
+    //                 duration: 3000,
+    //                 step: function(now, fx) {
+    //                     introLineHeight = now;
+    //                     if (introLineHeight > 40) { // 일정 길이 이상이면 원을 표시
+    //                         $('.first-circle').css('display', 'block');
+    //                     }
+    //                 }
+    //             });
+    //         }
+    //     }
+    // });
+    
+
+    // $(window).scroll(function() {
+    //     var scrollPosition = $(this).scrollTop();  // 수직 스크롤바의 위치 인식
+    //     var elementOffset = $('.main-intro').offset().top;
+    //     var windowHeight = $(window).height();
+    //     var windowWidth = $(window).width();
+    
+    //     if (scrollPosition > (elementOffset - windowHeight)) {
+    //         var targetHeight;
+    //         if(windowWidth < 768 ) {  // 모바일 버전
+    //             targetHeight = '1020px';
+    //         } else {  // pc 버전
+    //             targetHeight = '1472px';
+    //         }
+    
+    //         $('.main-intro .intro-line').animate({
+    //             height: targetHeight
+    //         }, {
+    //             duration: 3000,
+    //             step: function(now, fx) {
+    //                 var introLineHeight = $(this).height();
+    //                 if (introLineHeight > 40) { // 일정 길이 이상이면 원을 표시
+    //                     $('.first-circle').css('display', 'block');
+    //                 }
+    //             }
+    //         });
+    //     }
+    // });
+    
+
+    // $(window).scroll(function() {
+    //     var scrollPosition = $(this).scrollTop();  // 수직 스크롤바의 위치 인식
+    //     var elementOffset = $('.main-intro').offset().top;
+    //     var windowHeight = $(window).height();
+    //     var windowWidth = $(window).width();
+    //     var introLineHeight = $('.intro-line').height();
+    //     var firstCircle = $('.first-circle').offset().top;
 
     //     if (scrollPosition > (elementOffset - windowHeight)) {
-    //         if(windowWidth <768 ) {  // 모바일 버전
+    //         if(windowWidth < 768 ) {  // 모바일 버전
     //             $('.main-intro .intro-line').animate({
     //                 height: '1020px'
     //               }, 3000);
+
+    //               if (introLineHeight > firstCircle) {
+    //                 $('.first-circle').css('display', 'block');
+    //               }
     //         } else {  // pc 버전
     //             $('.main-intro .intro-line').animate({
     //                 height: '1472px'
     //               }, 3000);
+
+    //               if (introLineHeight > firstCircle) {
+    //                 $('.first-circle').css('display', 'block');
+    //               }
     //         }
     //     }
     // });
+
+    // $(window).scroll(function() {
+    //     var scrollPosition = $(this).scrollTop();  
+    //     var elementOffset = $('.main-intro').offset().top;
+    //     var windowHeight = $(window).height();
+    //     var windowWidth = $(window).width();
+    
+    //     if (scrollPosition > (elementOffset - windowHeight)) {
+    //         if(windowWidth < 768 ) {  
+    //             $('.main-intro .intro-line').animate({
+    //                 height: '1020px'
+    //               }, 3000);
+    //         } else {  
+    //             $('.main-intro .intro-line').animate({
+    //                 height: '1472px'
+    //               }, 3000);
+    //         }
+    
+    //         // 원이 나타나도록 표시
+    //         $('.main-intro .first-circle, .main-intro .second-circle').fadeIn();
+    //     }
+    // });
+    
 
         // ****intro-btn*****
         $('.intro-btn').click(function() {
@@ -71,6 +263,49 @@ $(function() {
         updateCollectionTxt();
     });
 
+
+
+
+    //--------------------- exhibition ---------------------
+    $(window).scroll(function() {
+        animateScroll();
+
+        function animateScroll() {
+            var scrollPos = $(this).scrollTop();
+            var windowHeight = $(window).height();
+            var windowMiddle = scrollPos + windowHeight / 2;
+            var mainWindowWidth = $(window).width();
+
+
+            $('.exhibition-content .ex').each(function() {
+                var $img = $(this).find('.ex-img > img');
+                var imgOffset = $img.offset().top;
+                
+                if (windowMiddle > imgOffset && $img.css('opacity') == 0) {
+                    if(mainWindowWidth < 786) {
+                        $img.animate({
+                            opacity: 1
+                        }, 1300);
+
+                        $(this).find('.ex-txt .title').animate({
+                            opacity: 1
+                        }, 1300);
+                    } else {
+                        $img.css({
+                            'opacity': '1',
+                            'transform': 'translateX(0)'
+                        });
+        
+                        $(this).find('.ex-txt .title').animate({
+                            opacity: 1
+                        }, 1300);
+                    }
+                }
+
+            });
+        }  // animateScroll
+    }); 
+    
 
     //--------------------- inform ---------------------
     function chgBox() {
@@ -125,7 +360,7 @@ $(function() {
 
     $(window).resize(function() {
         updateFooterLogo();
-    })
+    });
 
     
     //--------------------- fixed-menu ---------------------

@@ -348,18 +348,31 @@ main section.main-intro {
   position: relative;
   margin-top: 229px;
   height: 1072px;
-  background-image: url(/images/intro-bg.png);
-  background-repeat: no-repeat;
-  background-position-x: 30%;
-  background-position-y: 500px;
-  background-size: 1170px 788px;
 }
 @media only screen and (min-width: 1024px) {
   main section.main-intro {
     margin-top: 900px;
     height: 1572px;
+  }
+}
+main section.main-intro .intro-bg-img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  background-image: url(/images/intro-bg.png);
+  background-repeat: no-repeat;
+  background-position-x: 30%;
+  background-position-y: 600px;
+  background-size: 1170px 788px;
+  transition: opacity 1.5s ease 1.5s, background-position-y 1.5s ease 1.5s;
+}
+@media only screen and (min-width: 1024px) {
+  main section.main-intro .intro-bg-img {
     background-position-x: 220px;
-    background-position-y: 600px;
+    background-position-y: 700px;
     background-size: 1826px 1231px;
   }
 }
@@ -379,11 +392,11 @@ main section.main-intro .intro-collection-exhibition-line-box .intro-line {
   z-index: 1;
   border: 1px solid #000;
   width: 100%;
-  height: 1020px;
+  height: 0;
 }
 @media only screen and (min-width: 1024px) {
   main section.main-intro .intro-collection-exhibition-line-box .intro-line {
-    height: 1472px;
+    height: 0;
   }
 }
 main section.main-intro .intro-collection-exhibition-line-box .intro-line .first-circle,
@@ -484,6 +497,8 @@ main section.main-intro .year {
   background-position-y: 600px;
   -webkit-background-clip: text;
           background-clip: text;
+  opacity: 0;
+  transition: opacity 0.3s ease-in 1.2s;
 }
 @media only screen and (min-width: 1024px) {
   main section.main-intro .year {
@@ -523,6 +538,9 @@ main section.main-intro .intro-text-box .intro-title {
   width: 65%;
   font-weight: 400;
   font-size: 2.3rem;
+  opacity: 0;
+  transform: translateX(-30px);
+  transition: opacity 1.5s ease 2.5s, transform 1.5s ease 2.5s;
 }
 @media only screen and (min-width: 1024px) {
   main section.main-intro .intro-text-box .intro-title {
@@ -534,6 +552,9 @@ main section.main-intro .intro-text-box .intro-text {
   width: 60%;
   font-weight: 100;
   font-size: 1rem;
+  opacity: 0;
+  transform: translateX(-20px);
+  transition: opacity 1.5s ease 3s, transform 1.5s ease 3s;
 }
 @media only screen and (min-width: 1024px) {
   main section.main-intro .intro-text-box .intro-text {
@@ -548,6 +569,8 @@ main section.main-intro .intro-text-box .intro-text .num {
 main section.main-intro .detail-button {
   margin-top: 30px;
   margin-left: 20px;
+  opacity: 0;
+  transition: opacity 1.5s ease 3.6s;
 }
 @media only screen and (min-width: 1024px) {
   main section.main-intro .detail-button {
@@ -765,6 +788,7 @@ main .exhibition .exhibition-content div.ex .content-box {
   }
 }
 main .exhibition .exhibition-content div.ex .content-box .ex-img img {
+  opacity: 0;
   margin: auto;
 }
 @media only screen and (min-width: 1024px) {
@@ -776,6 +800,7 @@ main .exhibition .exhibition-content div.ex .content-box .ex-img img {
 main .exhibition .exhibition-content div.ex .content-box .ex-txt .title {
   margin-top: 50px;
   font-size: 1rem;
+  opacity: 0;
 }
 @media only screen and (min-width: 1024px) {
   main .exhibition .exhibition-content div.ex .content-box .ex-txt .title {
@@ -802,6 +827,9 @@ main .exhibition .exhibition-content .exhibition1 .content-box .ex-img img {
 @media only screen and (min-width: 1024px) {
   main .exhibition .exhibition-content .exhibition1 .content-box .ex-img img {
     width: 93.333%;
+    opacity: 0;
+    transform: translateX(50px);
+    transition: opacity 1.3s, transform 1.3s;
   }
 }
 @media only screen and (min-width: 1024px) {
@@ -825,6 +853,13 @@ main .exhibition .exhibition-content .exhibition1 .content-box .ex-img img {
 }
 main .exhibition .exhibition-content .exhibition2 .content-box .ex-img img {
   width: 91.5%;
+}
+@media only screen and (min-width: 1024px) {
+  main .exhibition .exhibition-content .exhibition2 .content-box .ex-img img {
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: opacity 1.3s, transform 1.3s;
+  }
 }
 @media only screen and (min-width: 1024px) {
   main .exhibition .exhibition-content .exhibition2 .content-box .ex-txt {
@@ -856,6 +891,9 @@ main .exhibition .exhibition-content .exhibition3 .content-box .ex-img img {
 @media only screen and (min-width: 1024px) {
   main .exhibition .exhibition-content .exhibition3 .content-box .ex-img img {
     width: 85.714%;
+    opacity: 0;
+    transform: translateX(50px);
+    transition: opacity 1.3s, transform 1.3s;
   }
 }
 @media only screen and (min-width: 1024px) {
@@ -897,6 +935,9 @@ main .exhibition .exhibition-content .exhibition4 .content-box .ex-img img {
 @media only screen and (min-width: 1024px) {
   main .exhibition .exhibition-content .exhibition4 .content-box .ex-img img {
     width: 93.548%;
+    opacity: 0;
+    transform: translateX(50px);
+    transition: opacity 1.3s, transform 1.3s;
   }
 }
 @media only screen and (min-width: 1024px) {
@@ -1609,13 +1650,13 @@ main .main-sns .sns-content div.youtube {
   margin-bottom: 60px;
 }
 main .main-sns .sns-content div.youtube .content-txt {
-  padding-left: 20px;
+  text-align: right;
 }
 @media only screen and (min-width: 1024px) {
   main .main-sns .sns-content div.youtube .content-txt {
     width: 50%;
     height: auto;
-    padding-left: 60px;
+    padding-right: 140px;
   }
 }
 main .main-sns .sns-content div.youtube .sns-img {
@@ -1670,7 +1711,7 @@ main .main-sns .sns-content div.facebook {
   margin-bottom: 0;
 }
 main .main-sns .sns-content div.facebook .content-txt {
-  padding-left: 30px;
+  text-align: right;
 }
 @media only screen and (min-width: 1024px) {
   main .main-sns .sns-content div.facebook .content-txt {
