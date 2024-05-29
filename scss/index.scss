@@ -115,30 +115,41 @@ main {
         // z-index: 1;
         margin-top: 229px;
         height: 1072px;
-        background: {
-            image: url(/images/intro-bg.png);
-            repeat: no-repeat;
-            position-x: -100px;
-            position-y: 500px;
-            size: 1170px 788px;
-            // color: aqua;
-        }
 
         @include responsive(large-screens) {
             margin-top: 900px;
             height: 1572px;
-            background: {
-                position-x: 220px;
-                position-y: 600px;
-                size: 1826px 1231px;
-            }
         }
 
+        .intro-bg-img {
+            position: absolute;
+            left: 0; top: 0;
+            width: 100%; height: 100%;
+            opacity: 0;
+            background: {
+                image: url(/images/intro-bg.png);
+                repeat: no-repeat;
+                position-x: 30%; // 성민 수정
+                position-y: 600px; // 성민 수정
+                size: 1170px 788px;
+                // color: aqua;
+            }
+            transition: opacity 1.5s ease 1.5s, background-position-y 1.5s ease 1.5s;
+            
+            @include responsive(large-screens) {
+                background: {
+                    position-x: 220px;
+                    position-y: 700px;
+                    size: 1826px 1231px;
+                }
+            }
+        }
 
         .intro-collection-exhibition-line-box {
             position: absolute;
             width: 1px;
             // height: 2000px;
+            
             right: 29.558%; top: 0;  // 201px
             // z-index: 6;
 
@@ -148,25 +159,63 @@ main {
             
             .intro-line {
                 position: relative;
-                z-index: 0;
+                z-index: 1;
                 border: 1px solid $line-black;
                 width: $width-wide;
-                height: 1020px;   // 나중에 제이쿼리
+                height: 0;   // 나중에 제이쿼리
 
                 @include responsive(large-screens) {
-                    height: 1472px;
+                    height: 0;
+                }
+
+                .first-circle,
+                .second-circle {
+                    position: absolute; top: 0; 
+                    // left: 69.4%;
+                    right: 28.6%;  // 194px // 
+                    z-index: 3;
+                    width: 7px; // 성민 수정
+                    height: 7px; // 성민 수정
+                    border-radius: 50%;
+                    background-color: $color-main;
+        
+                    @include responsive(large-screens) {
+                        right: 397px;
+                        width: 10px; // 성민 수정
+                        height: 10px; // 성민 수정
+                    }
+                }
+        
+                .first-circle {
+                    // display: none;
+                    top: 315px; left: -3.5px; // 성민 수정
+                    // opacity: 0;
+                    // transition: opacity 0.3s ease-in 1.2s;
+                    
+                    @include responsive(large-screens) {
+                        top: 535px; left: -5px; // 성민 수정
+                    }
+                }
+                .second-circle {
+                    top: 527px; left: -3.5px; // 성민 수정
+        
+                    @include responsive(large-screens) {
+                        top: 975px; left: -5px;
+                    }
                 }
             }
 
             .collection-line-top {
                 // display: none;
-                position: relative;
+                position: relative; top: -10px;
                 z-index: 5;
-                height: 257px;  // 나중에 제이쿼리
+                height: 246px;  // 나중에 제이쿼리
                 width: $width-wide;
+               
                 border: 1px solid $line-white;
 
                 @include responsive(large-screens) {
+                    top: 0px;
                     height: 255px;
                 }
             }
@@ -186,8 +235,8 @@ main {
             }
 
             .exhibition-line {
-                display: none;
                 position: relative;
+                display: none;
                 z-index: 5;
                 height: 1000px;  // 나중에 제이쿼리
                 width: $width-wide;
@@ -197,7 +246,7 @@ main {
                     position: relative;
                     z-index: 5;
                     display: block;
-                    height: 405px;  // 나중에 제이쿼리
+                    height: 295px;  // 나중에 제이쿼리
                     width: $width-wide;
                     border: 1px solid $line-gray;
                 }
@@ -237,77 +286,61 @@ main {
         }
 
         .year {
-            right: 31.617%; top: 92px;  // 215px
-            font-size: 3.333rem;  // 40pt;
-            // opacity: 0;
+            right: 31.617%; top: 290px;  // 215px
+            font-size: 2.2rem;  // 40pt; // 성민 수정
+            color: transparent;
+            background-image: url(../images/text_bg_1900.png);
+            background-position-y: 600px;
+            background-clip: text;
+            opacity: 0;
+            transition: opacity 0.3s ease-in 1.2s;
 
+            
             @include responsive(large-screens) {
-                right: 429px; top: 200px;
-                font-size: 6.25rem;  // 75pt
+                right: 450px; top: 500px;
+                font-size: 3.5rem;  // 75pt  // 성민 수정
+                
             }
         }
 
         .now-year {
-            left: 73%; top: 444px;  // 30px
-            font-size: 4.167rem;  // 50pt
-
+            left: 72%; top: 500px;  // 30px // 성민 수정
+            font-size: 2.5rem;  // 50pt // 성민 수정
+            color: transparent;
+            background-image: url(../images/text_bg_2024.jpg);
+            background-position-y: 600px;
+            background-clip: text;
+ 
             @include responsive(large-screens) {
-                right: 85px; top: 675px;
-                font-size: 7.917rem;  // 95pt
-            }
-        }
-
-        .first-circle,
-        .second-circle {
-            position: absolute;
-            // left: 69.4%;
-            right: 28.6%;  // 194px
-            z-index: 3;
-            width: 14px;
-            height: 14px;
-            border-radius: 50%;
-            background-color: $color-main;
-
-            @include responsive(large-screens) {
-                right: 397px;
-            }
-        }
-
-        .first-circle {
-            top: 130px;
-
-            @include responsive(large-screens) {
-                top: 275px;
-            }
-        }
-        .second-circle {
-            top: 491px;
-
-            @include responsive(large-screens) {
-                top: 770px;
+                left: 75%; top: 900px;
+                font-size: 6rem;  // 95pt // 성민 수정
             }
         }
         .intro-text-box {
-            padding-top: 280px;
-            margin-left: 30px;
+            padding-top: 420px;
+            margin-left: 5%; // 성민 수정
             // background-color: beige;
 
             @include responsive(large-screens) {
-                padding-top: 530px;
-                margin-left: 0;
+                padding-top: 700px; // 성민 수정
+                margin-left: 10%; // 성민 수정
             }
 
             .intro-title {
                 width: 65%;
                 font: {
                     weight: $font-regular;
-                    size: 3.333rem;   // 40pt origin 56pt
+                    size: 2.3rem;   // 40pt origin 56pt // 성민 수정
                 }
+                opacity: 0;
+                transform: translateX(-30px);
+                transition: opacity 1.5s ease 2.5s, transform 1.5s ease 2.5s;
 
                 @include responsive(large-screens) {
                     font: {
-                        size: 6.25rem;  // 75pt
+                        size: 4rem;  // 75pt // 성민 수정
                     }
+                    
                 }
             }
     
@@ -316,12 +349,16 @@ main {
                 width: 60%;  // 385px
                 font: {
                     weight: $font-thin;
-                    size: 1.5rem;   // 24pt
+                    size: 1rem;   // 24pt // 성민 수정
                 }
                 
+                opacity: 0;
+                transform: translateX(-20px);
+                transition: opacity 1.5s ease 3s, transform 1.5s ease 3s;
+
                 @include responsive(large-screens) {
-                    width: 520px;
-                    font-size: 2rem;  // 30pt
+                    width: 310px;
+                    font-size: 1.2rem;  // 30pt // 성민 수정
                 }
                 .num {
                     display: inline;
@@ -331,12 +368,15 @@ main {
         }  // imtro-text-box
         
         .detail-button {
-            margin-top: 60px;
-            margin-left: 35px;
+            margin-top: 30px;
+            margin-left: 20px;
             
+            opacity: 0;
+            transition: opacity 1.5s ease 3.6s;
+
             @include responsive(large-screens) {
-                margin-top: -45px;
-                margin-left: 580px;
+                margin-top: -65px;// 성민 수정
+                margin-left: 480px; // 성민 수정
             }
         }
         
@@ -348,7 +388,7 @@ main {
         position:relative;
         // z-index: 1;
         width: $width-wide;
-        height: 1200px;
+        height: 925px;
         // background-color: bisque;
         
         @include responsive(large-screens) {
@@ -375,7 +415,7 @@ main {
                 z-index: 4;
                 width: $width-wide;
                 height: 1.5px;
-                left: 0; top: 280px;
+                left: 0; top: 260px;
                 border: 1.5px solid $line-white;
                 transform: skew(-8deg) rotate(-8deg);
                 
@@ -405,11 +445,18 @@ main {
                 transform: skew(-8deg) rotate(-8deg);
             }
             .collection-title {
-                margin-left: 40px;
-                margin-bottom: 60px;
-                font-size: 4.167rem;  //50pt
+                margin-top: 20px; // 성민수정
+                margin-left: 6%; // 성민 수정
+                // margin-bottom: 20px; // 성민 수정 
+                font-size: 2.5rem;  //50pt // 성민 수정
                 line-height: 1.2;
                 color: $color-second;
+                @include responsive(large-screens) {
+                    margin-left: 9%;
+                    margin-top: 5px;
+                    padding-top: 15px;
+                    font-size: 4.5rem;
+                }
             }
     
             // .main-collection-col-line {
@@ -443,14 +490,18 @@ main {
                 }
 
                 .collection-text {
+                    @include responsive(large-screens) {
+                        padding-left: 10px;
+                    }
                     p {  // 자바스크립트로 호출
                         font-weight: $font-regular;
-                        font-size:1.667rem;  // 20pt
+                        font-size:0.9rem;  // 20pt // 성민 수정
                         color: $color-second;
                         
                         @include responsive(large-screens) {
-                            font-size:2.167rem;  // 26pt
-                            margin-bottom: 50px;
+                            font-size:1.4rem;  // 26pt
+                            padding-top: 30px;
+                            margin-bottom: 90px;
                         }
                     }
 
@@ -466,11 +517,14 @@ main {
                     }
 
                     ul {
+                        @include responsive(large-screens) {
+                            padding-left: 10px;
+                        }
                         li {
                             @include responsive(large-screens) {
                                 font: {
-                                    weight: $font-regular;
-                                    size: 1.5rem;  // 18pt
+                                    weight: 320;
+                                    size: 1rem;  // 18pt
                                 }
                                 color: $color-second;
                             }
@@ -479,6 +533,7 @@ main {
                 }
     
                 .detail-button {
+                    margin-right: -15px;
                     @include responsive(large-screens) {
                         margin-right: 300px;
                     }
@@ -497,17 +552,15 @@ main {
 
             .collection-image {
                 display: flex;
-                justify-content: space-between;
-                margin: auto;
                 margin-top: 35px;
-                width: 88.235%;  // 600px
-                height: 863px;
-                overflow: hidden;
+                width: 100%;  // 600px
+                height: 100%;
+              
                 // background-color: lightblue;
 
                 @include responsive(large-screens) {
                     position: absolute;
-                    left: 40px; top: 370px;
+                    left: 110px; top: 370px;
                     width: 54%;  // 835px
                     height: 1200px;
                     margin: 0; 
@@ -522,16 +575,20 @@ main {
     
                         li {
                             img {
-                                width: 270px;
-                                height: 270px;
-                                margin-bottom: 40px;
+                                width: 90%;
+                                margin: 0 auto;
+                                margin-bottom: 25px;
 
                                 @include responsive(large-screens) {
                                     width: 220px;
                                     height: 220px;
+                                    margin-left: 25px;
                                     margin-bottom: 30px;
                                 }
                             }
+                            // img:first-child { // 성민 수정
+                            //     margin-top: 40px;
+                            // }
                         }
                     }
                 }
@@ -558,8 +615,9 @@ main {
         // background-color: lightcyan;
 
         .exhibition-title {
-            margin: 110px 0 60px;
-            font-size: 3.333rem;  //40pt
+            margin-left: 5%;
+            margin-bottom: 5%;
+            font-size: 2.5rem;  //40pt
             @include responsive(large-screens) {
                 margin-bottom: 65px;
                 font-size: 5rem;  // 60pt
@@ -576,7 +634,7 @@ main {
                 }
 
                 .content-box {
-                    padding: 65px 0 48px;
+                    padding: 50px 0 20px;
                     border-top: 2px solid $line-gray;
                     
                     @include responsive(large-screens) {
@@ -586,6 +644,7 @@ main {
                     }
                     .ex-img {
                         img {
+                            opacity: 0;
                             margin: auto;
                         }
                     }
@@ -598,7 +657,8 @@ main {
                         }
                         .title {
                             margin-top: 50px;
-                            font-size: 1.5rem; // 18pt
+                            font-size: 1rem; // 18pt
+                            opacity: 0;
                             // background-color: #ffccac;
         
                             @include responsive(large-screens) {
@@ -623,16 +683,18 @@ main {
                             border-left: 2px solid $line-gray;
                         }
                         img {
-                            // width: 650px;
                             width: 95.588%;
-                            
+                                                        
                             @include responsive(large-screens) {
-                                // width: 840px;
                                 width: 93.333%;
+                                opacity: 0;
+                                transform: translateX(50px);
+                                transition: opacity 1.3s, transform 1.3s;
                             }
                         }
                     }
                     .ex-txt {
+                        
                         @include responsive(large-screens) {
                             width: 545px;
                         }
@@ -646,6 +708,7 @@ main {
                     }
                 }  // content-box
             }  // exhibition1
+
             .exhibition2 {
                 .content-box {
                     .ex-img {
@@ -655,8 +718,13 @@ main {
                             border-right: 2px solid $line-gray;
                         }
                         img {
-                            // width: 645px;
                             width: 91.5%;
+
+                            @include responsive(large-screens) {
+                                opacity: 0;
+                                transform: translateX(-50px);
+                                transition: opacity 1.3s, transform 1.3s;
+                            }
                         }
                     }
 
@@ -687,13 +755,16 @@ main {
                             width: 420px;
                             border-left: 2px solid $line-gray;
                         }
+
+
                         img {
-                            // width: 460px;
                             width: 67.647%;
                             
                             @include responsive(large-screens) {
-                                // width: 360px;
                                 width: 85.714%;
+                                opacity: 0;
+                                transform: translateX(50px);
+                                transition: opacity 1.3s, transform 1.3s;
                             }
                         }
                     }
@@ -701,6 +772,7 @@ main {
                         @include responsive(large-screens) {
                             width: 540px;
                         }
+
                         .title {
                             @include responsive(large-screens) {
                                 padding-right: 30px;
@@ -733,12 +805,13 @@ main {
                         }
 
                         img {
-                            // width: 652px;
                             width: 95.882%;
 
                             @include responsive(large-screens) {
-                                // width: 870px;
                                 width: 93.548%;
+                                opacity: 0;
+                                transform: translateX(50px);
+                                transition: opacity 1.3s, transform 1.3s;
                             }
                         }
                     }
@@ -907,9 +980,8 @@ main {
         }  // typo-box
     }  // typography
 
-
-    //=================== main-inform =================== 
-    .main-inform {
+     //=================== main-inform =================== 
+     .main-inform {
         position: relative;
         width: $width-wide;
         padding: 100px 0 150px;
@@ -1501,13 +1573,13 @@ main {
                 margin-bottom: 60px;
                 
                 .content-txt {
-                    padding-left: 20px;
                     // height: 220px; 
+                    text-align: right;
 
                     @include responsive(large-screens) {
                         width: 50%; 
                         height: auto;
-                        padding-left: 60px;
+                        padding-right: 140px;
                     }
                 }
 
@@ -1577,7 +1649,7 @@ main {
                 margin-bottom: 0;
 
                 .content-txt {
-                    padding-left: 30px;
+                    text-align: right;
 
                     @include responsive(large-screens) {
                         width: 40%; 

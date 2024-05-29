@@ -6,7 +6,12 @@
     width: $width-wide;
     max-width: 1440px;
     margin: 0 auto;
-    // background-color: lightgreen;
+    padding: 0 20px;
+    // background-color: antiquewhite;
+
+    @include responsive(large-screens) {
+        padding: 0 10px;
+    }
 }
 
 @mixin footer-style() {
@@ -32,28 +37,29 @@
 
             @include responsive(large-screens) {
                 display: flex;
-                width: 82%;  // 1180px  988
+                width: 82%;  
                 height: 150px;
             }
 
             .footer-logo {
                 margin-bottom: 30px;
+                width: $width-wide;
                 // background-color: aquamarine;
 
                 @include responsive(large-screens) {
-                    margin: 0 6% 0 0;
+                    margin-right: 6%;
                     width: 290px;  
                 }
 
                 h2 {
                     font: {
                         weight: $font-thin;
-                        size: 2.5rem;  // 30pt 40px
+                        size: 2.333rem;  
                     }
                     @include responsive(large-screens) {
                         line-height: 1.2;
                         font: {
-                            size: 3.75rem;  // 40pt
+                            size: 3.75rem;  
                         }
                     }
                 }
@@ -72,11 +78,10 @@
                     width: $width-wide;
                     display: flex;
                     justify-content: space-between;
-                    // align-items: center;
                     // background-color: lightblue;
                     
                     @include responsive(large-screens) {
-                        width: 100%;  // 900px
+                        width: 100%; 
                     }
     
                     div {
@@ -90,7 +95,7 @@
                             @include responsive(large-screens) {
                                 margin-bottom: 15px;
                                 font: {
-                                    size: 1.167rem;  // 14pt
+                                    size: 1.167rem;  
                                 }
                             }
                         }
@@ -141,16 +146,16 @@
                     
                     .txt {
                         width: 80%;
-                        // background-color: aqua;
                         font: {
                             weight: $font-regular;
-                            size: 0.83rem;  // 10pt 13px
+                            size: 0.83rem;  
                         }
                         color: $footer-gray;
+                        // background-color: aqua;
 
                         @include responsive(large-screens) {
                             width: 75%;
-                            font-size: 1rem;  // 12pt
+                            font-size: 1rem;  
                         }
                     }
                 }  // info
@@ -167,14 +172,9 @@
                     p {
                         font: {
                             weight: $font-regular;
-                            size: 0.83rem;  // 10pt 13px;
+                            size: 0.83rem;  
                         }
                         color: $footer-gray;
-                        // @include responsive(large-screens) {
-                        //     font: {
-                        //         size: 0.833rem;  // 10pt
-                        //     }
-                        // }
                     }
                 }  // copyright
             }  // footer-info-box
