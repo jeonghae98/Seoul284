@@ -6,8 +6,12 @@
     width: $width-wide;
     max-width: 1440px;
     margin: 0 auto;
-    padding: 0 10px;
+    padding: 0 20px;
     // background-color: antiquewhite;
+
+    @include responsive(large-screens) {
+        padding: 0 10px;
+    }
 } 
 
 @mixin header-style() {
