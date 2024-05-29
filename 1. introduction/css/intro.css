@@ -71,8 +71,12 @@ footer {
   width: 100%;
   max-width: 1440px;
   margin: 0 auto;
-  padding: 0 10px;
-  background-color: antiquewhite;
+  padding: 0 20px;
+}
+@media only screen and (min-width: 1024px) {
+  .container {
+    padding: 0 10px;
+  }
 }
 
 .container {
@@ -80,7 +84,12 @@ footer {
   width: 100%;
   max-width: 1440px;
   margin: 0 auto;
-  padding: 0 10px;
+  padding: 0 20px;
+}
+@media only screen and (min-width: 1024px) {
+  .container {
+    padding: 0 10px;
+  }
 }
 
 .container {
@@ -1318,7 +1327,7 @@ main section.box4 .box4-line hr {
 }
 *********** footer*********** footer .footerlogo-info .footer-content-box .footer-logo h2 {
   font-weight: 100;
-  font-size: 2.5rem;
+  font-size: 2.333rem;
 }
 @media only screen and (min-width: 1024px) {
   *********** footer*********** footer .footerlogo-info .footer-content-box .footer-logo h2 {

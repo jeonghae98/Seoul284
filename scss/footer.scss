@@ -54,7 +54,7 @@
                 h2 {
                     font: {
                         weight: $font-thin;
-                        size: 2.5rem;  
+                        size: 2.333rem;  
                     }
                     @include responsive(large-screens) {
                         line-height: 1.2;
