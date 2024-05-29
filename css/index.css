@@ -104,7 +104,7 @@ footer {
 }
 @media only screen and (min-width: 1024px) {
   .container {
-    padding: 0 10px;
+    padding: 0;
   }
 }
 
@@ -350,7 +350,7 @@ main section.main-intro {
   height: 1072px;
   background-image: url(/images/intro-bg.png);
   background-repeat: no-repeat;
-  background-position-x: -100px;
+  background-position-x: 30%;
   background-position-y: 500px;
   background-size: 1170px 788px;
 }
@@ -376,7 +376,7 @@ main section.main-intro .intro-collection-exhibition-line-box {
 }
 main section.main-intro .intro-collection-exhibition-line-box .intro-line {
   position: relative;
-  z-index: 0;
+  z-index: 1;
   border: 1px solid #000;
   width: 100%;
   height: 1020px;
@@ -386,15 +386,56 @@ main section.main-intro .intro-collection-exhibition-line-box .intro-line {
     height: 1472px;
   }
 }
+main section.main-intro .intro-collection-exhibition-line-box .intro-line .first-circle,
+main section.main-intro .intro-collection-exhibition-line-box .intro-line .second-circle {
+  position: absolute;
+  top: 0;
+  right: 28.6%;
+  z-index: 3;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: #000;
+}
+@media only screen and (min-width: 1024px) {
+  main section.main-intro .intro-collection-exhibition-line-box .intro-line .first-circle,
+  main section.main-intro .intro-collection-exhibition-line-box .intro-line .second-circle {
+    right: 397px;
+    width: 10px;
+    height: 10px;
+  }
+}
+main section.main-intro .intro-collection-exhibition-line-box .intro-line .first-circle {
+  top: 315px;
+  left: -3.5px;
+}
+@media only screen and (min-width: 1024px) {
+  main section.main-intro .intro-collection-exhibition-line-box .intro-line .first-circle {
+    top: 535px;
+    left: -5px;
+  }
+}
+main section.main-intro .intro-collection-exhibition-line-box .intro-line .second-circle {
+  top: 527px;
+  left: -3.5px;
+}
+@media only screen and (min-width: 1024px) {
+  main section.main-intro .intro-collection-exhibition-line-box .intro-line .second-circle {
+    top: 975px;
+    left: -5px;
+  }
+}
 main section.main-intro .intro-collection-exhibition-line-box .collection-line-top {
   position: relative;
+  top: -10px;
   z-index: 5;
-  height: 257px;
+  height: 246px;
   width: 100%;
   border: 1px solid #fff;
 }
 @media only screen and (min-width: 1024px) {
   main section.main-intro .intro-collection-exhibition-line-box .collection-line-top {
+    top: 0px;
     height: 255px;
   }
 }
@@ -412,8 +453,8 @@ main section.main-intro .intro-collection-exhibition-line-box .collection-line-b
   }
 }
 main section.main-intro .intro-collection-exhibition-line-box .exhibition-line {
-  display: none;
   position: relative;
+  display: none;
   z-index: 5;
   height: 1000px;
   width: 100%;
@@ -424,7 +465,7 @@ main section.main-intro .intro-collection-exhibition-line-box .exhibition-line {
     position: relative;
     z-index: 5;
     display: block;
-    height: 405px;
+    height: 295px;
     width: 100%;
     border: 1px solid #dbdbdb;
   }
@@ -436,90 +477,68 @@ main section.main-intro .now-year {
 }
 main section.main-intro .year {
   right: 31.617%;
-  top: 92px;
-  font-size: 3.333rem;
+  top: 290px;
+  font-size: 2.2rem;
+  color: transparent;
+  background-image: url(../images/text_bg_1900.png);
+  background-position-y: 600px;
+  -webkit-background-clip: text;
+          background-clip: text;
 }
 @media only screen and (min-width: 1024px) {
   main section.main-intro .year {
-    right: 429px;
-    top: 200px;
-    font-size: 6.25rem;
+    right: 450px;
+    top: 500px;
+    font-size: 3.5rem;
   }
 }
 main section.main-intro .now-year {
-  left: 73%;
-  top: 444px;
-  font-size: 4.167rem;
+  left: 72%;
+  top: 500px;
+  font-size: 2.5rem;
+  color: transparent;
+  background-image: url(../images/text_bg_2024.jpg);
+  background-position-y: 600px;
+  -webkit-background-clip: text;
+          background-clip: text;
 }
 @media only screen and (min-width: 1024px) {
   main section.main-intro .now-year {
-    right: 85px;
-    top: 675px;
-    font-size: 7.917rem;
-  }
-}
-main section.main-intro .first-circle,
-main section.main-intro .second-circle {
-  position: absolute;
-  right: 28.6%;
-  z-index: 3;
-  width: 14px;
-  height: 14px;
-  border-radius: 50%;
-  background-color: #000;
-}
-@media only screen and (min-width: 1024px) {
-  main section.main-intro .first-circle,
-  main section.main-intro .second-circle {
-    right: 397px;
-  }
-}
-main section.main-intro .first-circle {
-  top: 130px;
-}
-@media only screen and (min-width: 1024px) {
-  main section.main-intro .first-circle {
-    top: 275px;
-  }
-}
-main section.main-intro .second-circle {
-  top: 491px;
-}
-@media only screen and (min-width: 1024px) {
-  main section.main-intro .second-circle {
-    top: 770px;
+    left: 75%;
+    top: 900px;
+    font-size: 6rem;
   }
 }
 main section.main-intro .intro-text-box {
-  padding-top: 280px;
-  margin-left: 30px;
+  padding-top: 420px;
+  margin-left: 5%;
 }
 @media only screen and (min-width: 1024px) {
   main section.main-intro .intro-text-box {
-    padding-top: 530px;
-    margin-left: 0;
+    padding-top: 700px;
+    margin-left: 10%;
   }
 }
 main section.main-intro .intro-text-box .intro-title {
   width: 65%;
   font-weight: 400;
-  font-size: 3.333rem;
+  font-size: 2.3rem;
 }
 @media only screen and (min-width: 1024px) {
   main section.main-intro .intro-text-box .intro-title {
-    font-size: 6.25rem;
+    font-size: 4rem;
   }
 }
 main section.main-intro .intro-text-box .intro-text {
   margin-top: 20px;
   width: 60%;
   font-weight: 100;
-  font-size: 1.5rem;
+  font-size: 1rem;
 }
 @media only screen and (min-width: 1024px) {
   main section.main-intro .intro-text-box .intro-text {
-    width: 520px;
-    font-size: 2rem;
+    width: 310px;
+    font-size: 1.2rem;
   }
 }
 main section.main-intro .intro-text-box .intro-text .num {
@@ -527,19 +546,19 @@ main section.main-intro .intro-text-box .intro-text .num {
   color: #ff6000;
 }
 main section.main-intro .detail-button {
-  margin-top: 60px;
-  margin-left: 35px;
+  margin-top: 30px;
+  margin-left: 20px;
 }
 @media only screen and (min-width: 1024px) {
   main section.main-intro .detail-button {
-    margin-top: -45px;
-    margin-left: 580px;
+    margin-top: -65px;
+    margin-left: 480px;
   }
 }
 main .main-collection {
   position: relative;
   width: 100%;
-  height: 1200px;
+  height: 925px;
 }
 @media only screen and (min-width: 1024px) {
   main .main-collection {
@@ -567,7 +586,7 @@ main .main-collection .parallelogram .main-collection-row-line {
   width: 100%;
   height: 1.5px;
   left: 0;
-  top: 280px;
+  top: 260px;
   border: 1.5px solid #fff;
   transform: skew(-8deg) rotate(-8deg);
 }
@@ -580,11 +599,19 @@ main .main-collection .parallelogram .col-container {
   transform: skew(-8deg) rotate(-8deg);
 }
 main .main-collection .parallelogram .collection-title {
-  margin-left: 40px;
-  margin-bottom: 60px;
-  font-size: 4.167rem;
+  margin-top: 20px;
+  margin-left: 6%;
+  font-size: 2.5rem;
   line-height: 1.2;
   color: #fff;
+}
+@media only screen and (min-width: 1024px) {
+  main .main-collection .parallelogram .collection-title {
+    margin-left: 9%;
+    margin-top: 5px;
+    padding-top: 15px;
+    font-size: 4.5rem;
+  }
 }
 main .main-collection .parallelogram .main-collection-content {
   display: flex;
@@ -603,15 +630,21 @@ main .main-collection .parallelogram .main-collection-content {
     width: 390px;
   }
 }
+@media only screen and (min-width: 1024px) {
+  main .main-collection .parallelogram .main-collection-content .collection-text {
+    padding-left: 10px;
+  }
+}
 main .main-collection .parallelogram .main-collection-content .collection-text p {
   font-weight: 400;
-  font-size: 1.667rem;
+  font-size: 0.9rem;
   color: #fff;
 }
 @media only screen and (min-width: 1024px) {
   main .main-collection .parallelogram .main-collection-content .collection-text p {
-    font-size: 2.167rem;
-    margin-bottom: 50px;
+    font-size: 1.4rem;
+    padding-top: 30px;
+    margin-bottom: 90px;
   }
 }
 main .main-collection .parallelogram .main-collection-content .main-collection-list {
@@ -624,11 +657,19 @@ main .main-collection .parallelogram .main-collection-content .main-collection-l
   }
 }
 @media only screen and (min-width: 1024px) {
+  main .main-collection .parallelogram .main-collection-content .main-collection-list ul {
+    padding-left: 10px;
+  }
+}
+@media only screen and (min-width: 1024px) {
   main .main-collection .parallelogram .main-collection-content .main-collection-list ul li {
-    font-weight: 400;
-    font-size: 1.5rem;
+    font-weight: 320;
+    font-size: 1rem;
     color: #fff;
   }
+}
+main .main-collection .parallelogram .main-collection-content .detail-button {
+  margin-right: -15px;
 }
 @media only screen and (min-width: 1024px) {
   main .main-collection .parallelogram .main-collection-content .detail-button {
@@ -644,17 +685,14 @@ main .main-collection .parallelogram .main-collection-content .detail-button .bu
 }
 main .main-collection .parallelogram .collection-image {
   display: flex;
-  justify-content: space-between;
-  margin: auto;
   margin-top: 35px;
-  width: 88.235%;
-  height: 863px;
-  overflow: hidden;
+  width: 100%;
+  height: 100%;
 }
 @media only screen and (min-width: 1024px) {
   main .main-collection .parallelogram .collection-image {
     position: absolute;
-    left: 40px;
+    left: 110px;
     top: 370px;
     width: 54%;
     height: 1200px;
@@ -670,14 +708,15 @@ main .main-collection .parallelogram .collection-image div ul {
   align-items: center;
 }
 main .main-collection .parallelogram .collection-image div ul li img {
-  width: 270px;
-  height: 270px;
-  margin-bottom: 40px;
+  width: 90%;
+  margin: 0 auto;
+  margin-bottom: 25px;
 }
 @media only screen and (min-width: 1024px) {
   main .main-collection .parallelogram .collection-image div ul li img {
     width: 220px;
     height: 220px;
+    margin-left: 25px;
     margin-bottom: 30px;
   }
 }
@@ -694,8 +733,9 @@ main .exhibition {
   width: 100%;
 }
 main .exhibition .exhibition-title {
-  margin: 110px 0 60px;
-  font-size: 3.333rem;
+  margin-left: 5%;
+  margin-bottom: 5%;
+  font-size: 2.5rem;
 }
 @media only screen and (min-width: 1024px) {
   main .exhibition .exhibition-title {
@@ -714,7 +754,7 @@ main .exhibition .exhibition-title {
   }
 }
 main .exhibition .exhibition-content div.ex .content-box {
-  padding: 65px 0 48px;
+  padding: 50px 0 20px;
   border-top: 2px solid #dbdbdb;
 }
 @media only screen and (min-width: 1024px) {
@@ -735,7 +775,7 @@ main .exhibition .exhibition-content div.ex .content-box .ex-img img {
 }
 main .exhibition .exhibition-content div.ex .content-box .ex-txt .title {
   margin-top: 50px;
-  font-size: 1.5rem;
+  font-size: 1rem;
 }
 @media only screen and (min-width: 1024px) {
   main .exhibition .exhibition-content div.ex .content-box .ex-txt .title {
