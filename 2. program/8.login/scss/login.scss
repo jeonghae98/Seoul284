@@ -23,7 +23,7 @@ header {
 main {
     width: $width-wide;
     section.login {
-        height: 531px;
+        height: 600px;
 
         @include responsive(large-screens) {
             background: url(../images/sketch2.png);
