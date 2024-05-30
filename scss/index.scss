@@ -159,7 +159,7 @@ main {
             
             .intro-line {
                 position: relative;
-                z-index: 1;
+                // z-index: 1;
                 border: 1px solid $line-black;
                 width: $width-wide;
                 height: 0;   // 나중에 제이쿼리
@@ -173,7 +173,7 @@ main {
                     position: absolute; top: 0; 
                     // left: 69.4%;
                     right: 28.6%;  // 194px // 
-                    z-index: 3;
+                    z-index: 1;
                     width: 7px; // 성민 수정
                     height: 7px; // 성민 수정
                     border-radius: 50%;
@@ -208,7 +208,7 @@ main {
             .collection-line-top {
                 // display: none;
                 position: relative; top: -10px;
-                z-index: 5;
+                z-index: 1;
                 height: 246px;  // 나중에 제이쿼리
                 width: $width-wide;
                
@@ -237,7 +237,7 @@ main {
             .exhibition-line {
                 position: relative;
                 display: none;
-                z-index: 5;
+                // z-index: 5;
                 height: 1000px;  // 나중에 제이쿼리
                 width: $width-wide;
                 border: 1px solid $line-white;

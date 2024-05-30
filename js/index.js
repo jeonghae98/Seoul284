@@ -1,22 +1,50 @@
 $(function() {
     //===================== header =====================
-    // $('#mobile-menu').click(function() {
-    //     $(this).toggleClass('active');
-    //     // $('#main-menu').addClass('move');
-    // });
-
     var mobile = $('#mobileBar');
-    var mainMenu = $('#mainMenu');
     
     mobile.on('click', function() {
-        mainMenu.toggleClass('active');
-        mobile.toggleClass('active');
-    });
+        var mainMenu = $('#mainMenu');
 
-    
-    // $('.gnb .gnb-title').on('mouseover', function() {
-    //     $('.gnb .sub-menu').addclass('sub-menu-hover');
-    // })
+        // <햄버거 메뉴 -> X 모양>
+        mobile.toggleClass('active');  
+        
+        
+
+        // <모바일 메뉴>
+        mainMenu.toggleClass('active');
+        
+        if ($('.main-menu').hasClass('active')) {
+            $('body').addClass('stop-scroll');
+            $('.main-menu').css({
+                'display': 'block',
+                'position': 'fixed',
+                'top': '12vh',
+                'right': 0,
+                'border-top': '1px solid #dbdbdb',
+                'width': '100%',
+                'height': '100%',
+                'background-color': '#fff'
+            });
+        } else {
+            $('body').removeClass('stop-scroll');
+            $('.main-menu').css('display', 'none');
+        }
+        
+        // #sub-menu 나오게 하기
+        $('.gnb-title').click(function(e) {
+            e.preventDefault();
+        
+            // 클릭된 메뉴의 부모 li 요소 찾기
+            var $parentLi = $(this).parent('li');
+        
+            // 클릭된 메뉴의 하위 메뉴를 슬라이드 토글
+            $parentLi.find('.sub-menu').stop(true, true).slideToggle(1000);
+        
+            // 다른 모든 하위 메뉴를 슬라이드 업
+            $('.gnb li').not($parentLi).find('.sub-menu').stop(true, true).slideUp(1000);
+        });
+        
+    });
 
 
 
@@ -46,9 +74,9 @@ $(function() {
                 });
 
                 // <선>
-                // $('.main-intro .intro-line').animate({
-                //     height: '1020px'
-                //   }, 3000);
+                $('.main-intro .intro-line').animate({
+                    height: '1020px'
+                  }, 3000);
 
             } else {  // pc 버전
                 // <배경 사진>
@@ -268,45 +296,102 @@ $(function() {
 
     //--------------------- exhibition ---------------------
     $(window).scroll(function() {
-        animateScroll();
+        var scrollPos = $(this).scrollTop();
+        var exTitleTop = $('.exhibition-title').offset().top;
+        var windowHeight = $(window).height(); 
+        var scrollLimit = exTitleTop - windowHeight; // 초기화할 스크롤 위치
+        var mainWindowWidth = $(window).width();
+ 
+        // console.log(scrollPos);
+        // console.log(scrollLimit);
 
-        function animateScroll() {
-            var scrollPos = $(this).scrollTop();
-            var windowHeight = $(window).height();
-            var windowMiddle = scrollPos + windowHeight / 2;
-            var mainWindowWidth = $(window).width();
-
-
+        if (scrollPos <= scrollLimit) {  // 애니메이션 초기화
+            
             $('.exhibition-content .ex').each(function() {
-                var $img = $(this).find('.ex-img > img');
-                var imgOffset = $img.offset().top;
-                
-                if (windowMiddle > imgOffset && $img.css('opacity') == 0) {
-                    if(mainWindowWidth < 786) {
-                        $img.animate({
-                            opacity: 1
-                        }, 1300);
+                var $img = $(this).find('.ex-img img');
+                var $title = $(this).find('.ex-txt .title');
+                if(mainWindowWidth < 768) {
+                    $img.stop().css({
+                        'opacity': 0,
+                        'transition': 'opacity 0.5s'
+                    });
 
-                        $(this).find('.ex-txt .title').animate({
-                            opacity: 1
-                        }, 1300);
-                    } else {
-                        $img.css({
-                            'opacity': '1',
-                            'transform': 'translateX(0)'
-                        });
+                    $title.stop().css({
+                        'opacity': 0,
+                        'transition': 'opacity 0.5s'
+                    });
+                } else {
+                    $('.exhibition1').find('.ex-img > img').stop().css({
+                        'transform': 'translateX(50px)',
+                        'opacity': 0,
+                        'transition': 'transform 0.5s opacity 0.5s'
+                    });  
         
-                        $(this).find('.ex-txt .title').animate({
-                            opacity: 1
-                        }, 1300);
-                    }
-                }
+                    $('.exhibition2').find('.ex-img > img').stop().css({
+                        'transform': 'translateX(-50px)',
+                        'opacity': 0,
+                        'transition': 'transform 0.5s opacity 0.5s'
+                    });
+        
+                    $('.exhibition3').find('.ex-img > img').stop().css({
+                        'transform': 'translateX(50px)',
+                        'opacity': 0,
+                        'transition': 'transform 0.5s opacity 0.5s'
+                    });
+        
+                    $('.exhibition4').find('.ex-img > img').stop().css({
+                        'transform': 'translateX(50px)',
+                        'opacity': 0,
+                        'transition': 'transform 0.5s opacity 0.5s'
+                    });
 
+                    $title.stop().css({
+                        'opacity': 0,
+                        'transition': 'opacity 0.5s'
+                    });
+                }
             });
-        }  // animateScroll
-    }); 
+        }
+        else {  // 애니메이션 실행
+            animateScroll();
+        }
+    });
+    
+    function animateScroll() {
+        var windowHeight = $(window).height();
+        var windowMiddle = $(window).scrollTop() + windowHeight / 2;
+        var mainWindowWidth = $(window).width();
+    
+        $('.exhibition-content .ex').each(function() {
+            var $img = $(this).find('.ex-img > img');
+            var imgOffset = $img.offset().top;
+    
+            if (windowMiddle > imgOffset && $img.css('opacity') == 0) {
+                if (mainWindowWidth < 786) {
+                    $img.animate({
+                        opacity: 1
+                    }, 1300);
+    
+                    $(this).find('.ex-txt .title').animate({
+                        opacity: 1
+                    }, 500);
+                } else {
+                    $img.css({
+                        'opacity': '1',
+                        'transform': 'translateX(0)'
+                    });
+    
+                    $(this).find('.ex-txt .title').animate({
+                        opacity: 1
+                    }, 500);
+                }
+            }
+        });
+    }
     
 
+
+    
     //--------------------- inform ---------------------
     function chgBox() {
         var informWindowWidth = $(window).width();

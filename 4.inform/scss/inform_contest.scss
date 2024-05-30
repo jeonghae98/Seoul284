@@ -13,7 +13,7 @@
     // background-color: antiquewhite;
 
     @include responsive(large-screens) {
-        padding: 0;
+        padding: 0 10px;
     }
 }
 
@@ -27,137 +27,28 @@ header {
 main {
     width: $width-wide;
     .inform {
-        .inform-title {
-            margin: 80px 0 150px;
-            text-align: center;
-            // background-color: aquamarine;
-            
-            @include responsive(large-screens) {
-                margin-bottom: 120px;
-                font: {
-                    weight: $font-semibold;
-                    size: 5rem;  // 60pt
-                }
-                text-align: left;
-            }
-        }
-
-        .menu-list {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            align-items: center;
-            width: $width-wide;
-            margin: auto;
-            
-            @include responsive(large-screens) {
-                position: absolute;
-                right: 0; top: 30px;
-                flex-direction: column-reverse;
-                justify-content: space-between;
-                width: 360px;
-                height: 110px;
-                // background-color: aqua;
-            }
-
-            ul {
-                display: flex;
-                justify-content: space-between;
-                width: 250px;
-
-                @include responsive(large-screens) {
-                    margin-left: 150px;
-                    width: 200px;
-                }
-
-                li {
-                    a {
-                        font: {
-                            weight: $font-regular;
-                            size: 2.167rem;  // 26pt
-                        }
-
-                        @include responsive(large-screens) {
-                            font-size: 1.667rem;  // 20pt
-                        }
-                    }
-                }
-
-                .menu-title {
-                    &::after {
-                        display: block;
-                        content: '';
-                        width: $width-wide;
-                        height: 2px;
-                        background-color: $color-point;
-                        transform: scaleX(0);
-                        transition: all 0.5s ease;
-                    }
-
-                    &:hover::after {
-                        transform: scaleX(1);  /* 1 = 100% */
-                    }
-                }
-
-            }
-            
-            .search {
-                @include responsive(large-screens) {
-                    position: relative;
-                    width: 360px;
-                }
-
-                #search-box {
-                    display: none;
-
-                    @include responsive(large-screens) {
-                        padding-left: 10px;
-                        display: block;
-                        width: 360px;
-                        height: 40px;
-                        border: 2px solid #727272;
-                        border-radius: 10px;
-                    }
-
-                    &:focus {
-                        @include responsive(large-screens) {
-                            outline: none;
-                        }
-                    }
-                }
-
-                img {
-                    width: 32px;
-                    cursor: pointer;
-
-                    @include responsive(large-screens) {
-                        position: absolute;
-                        right: 10px; top: 50%;
-                        transform: translateY(-50%);
-                        width: 20px;
-                    }
-                }
-            }
-        }  // menu-list
+        @include inform-title();
+        
+        @include menu-list();
 
 
         .list-box {
             display: flex;
             flex-direction: column;
             width: $width-wide;
-            margin: 45px 0 180px;
+            margin: 20px 0 180px;
             
             @include responsive(large-screens) {
                 margin-top: 0;
                 margin-bottom: 160px;
-                align-items: center;
             }
 
             .list {
                 display: flex;
+                justify-content: space-between;
                 align-items: center;
                 width: $width-wide;
-                padding: 50px 0;
+                padding: 40px 0;
                 border-top: 1px solid $inform-line-gray;
                 border-bottom: 1px solid $inform-line-gray;
                 cursor: pointer;
@@ -167,48 +58,24 @@ main {
                     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
                 }
 
-                @include responsive(large-screens) {
-                    padding: 40px 0;
-                }
-
-                .list-number {
-                    margin-left: 3.67%;  // 25px
-                    margin-right: 5.9%;  // 40px
-                    font: {
-                        weight: $font-medium;
-                        size: 1.667rem;  // 20pt
-                    }
-
-                    @include responsive(large-screens) {
-                        margin-left: 65px;
-                        margin-right: 100px;
-                        font-weight: $font-regular; 
-                    }
-                }
+                @include number();
 
                 .list-content {
-                    display: inline;
-                    // width: 500px;
-                    width: 73.53%;  // 500px
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    width: $width-wide; 
+                    margin-right: 15px;
+                    // background-color: aquamarine;
 
                     @include responsive(large-screens) {
-                        display: flex;
+                        flex-direction: row;
                         justify-content: space-between;
                         align-items: center;
-                        width: 1180px;
-                        // background-color: aqua;
+                        margin-right: 35px;
                     }
 
-                    .list-title {
-                        font-size: 1.833rem;  // 22pt
-
-                        @include responsive(large-screens) {
-                            width: 700px;
-                            font-size: 1.667rem;  // 20pt
-                            // background-color: lightgreen;
-                        }
-                    }
-
+                    @include list-title();
 
                     .receipt {
                         ul {
@@ -219,39 +86,45 @@ main {
                             // background-color: lightgoldenrodyellow;
 
                             @include responsive(large-screens) {
-                                width: 457px;  // 457px
+                                justify-content: space-between;
+                                width: 350px;
                                 margin-top: 0;
                             }
                              .status {
                                 margin-right: 15px;
-                                width: 120px;  // 120px
-                                height: 35px;
-                                line-height: 35px;
+                                width: 80px;  // 120px
+                                height: 20px;
+                                line-height: 20px;
                                 text-align: center;
                                 font: {
                                     weight: $font-regular;
-                                    size: 1.5rem;  // 18pt
+                                    size: 0.875rem; 
                                 }
                                 color: $color-second;
                                 background-color: $color-point;
 
-                                // @include responsive(large-screens) {
-                                //     font-size: 1.5rem;  // 18pt
-                                // }
+                                @include responsive(large-screens) {
+                                    width: 100px;
+                                    height: 25px;
+                                    line-height: 25px;
+                                    margin-right: 0;
+                                    font-size: 1rem;
+                                }
                             }
     
                             .receipt-term {
-                                width: 430px;
+                                // width: 430px;
                                 p {
                                     font: {
                                         weight: $font-regular;
-                                        size: 1.5rem;  // 18pt
+                                        size: 0.875rem;
                                     }
                                     color: $color-gray;
+                                    // background-color: lightsalmon;
 
                                     @include responsive(large-screens) {
-                                        width: 346px;
-                                        // background-color: lightsalmon;
+                                        width: 230px;
+                                        font-size: 1rem;
                                     }
                                 }
                             }

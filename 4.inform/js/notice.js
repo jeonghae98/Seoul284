@@ -7,6 +7,13 @@ $(function() {
 
 
     //===================== main =====================
+    // <menu-list 현재 페이지에 hover 고정>
+    
+      
+
+
+
+    // <fixed-number 부분 상세페이지 연결>
     let i = 0;
     $('.list:eq(0)').click(function() {
         window.location.href = `./notice/ntc-detail-page_10.html`;
@@ -18,6 +25,9 @@ $(function() {
     });
 
 
+
+
+    // <list-number 부분 상세페이지 연결>
     $('.ntc-list').each(function(i) {
         $(this).on('click', function() {
 

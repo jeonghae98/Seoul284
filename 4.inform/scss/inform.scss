@@ -9,12 +9,12 @@
     width: $width-wide;
     max-width: 1440px;
     margin: 0 auto;
-    padding: 0 2.777%;
+    padding: 0 20px;
     // background-color: antiquewhite;
 
     @include responsive(large-screens) {
         position: relative;
-        padding: 0;
+        padding: 0 10px;
     }
 }
 
@@ -29,125 +29,16 @@ main {
     width: $width-wide;
 
     .inform {
-        .inform-title {
-            margin: 80px 0 150px;
-            text-align: center;
-            // background-color: aquamarine;
-            
-            @include responsive(large-screens) {
-                margin-bottom: 50px;
-                font: {
-                    weight: $font-semibold;
-                    size: 2.5rem
-                }
-                text-align: left;
-            }
-        }
+        @include inform-title();
 
-        .menu-list {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            align-items: center;
-            width: $width-wide;
-            margin: auto;
-            
-            @include responsive(large-screens) {
-                position: absolute;
-                right: 0; top: 30px;
-                flex-direction: column-reverse;
-                justify-content: space-between;
-                width: 360px;
-                height: 110px;
-                // background-color: aqua;
-            }
-
-            ul {
-                display: flex;
-                justify-content: space-between;
-                width: 250px;
-
-                @include responsive(large-screens) {
-                    margin-left: 150px;
-                    width: 200px;
-                }
-
-                li {
-                    a {
-                        font: {
-                            weight: $font-regular;
-                            size: 2.167rem;  // 26pt
-                        }
-
-                        @include responsive(large-screens) {
-                            font-size: 1.667rem;  // 20pt
-                        }
-                    }
-                }
-
-                .menu-title {
-                    &::after {
-                        display: block;
-                        content: '';
-                        width: $width-wide;
-                        height: 2px;
-                        background-color: $color-point;
-                        transform: scaleX(0);
-                        transition: all 0.5s ease;
-                    }
-
-                    &:hover::after {
-                        transform: scaleX(1);  /* 1 = 100% */
-                    }
-                }
-
-            }
-            
-            .search {
-                @include responsive(large-screens) {
-                    position: relative;
-                    width: 360px;
-                }
-
-                #search-box {
-                    display: none;
-
-                    @include responsive(large-screens) {
-                        padding-left: 10px;
-                        display: block;
-                        width: $width-wide;
-                        height: 40px;
-                        border: 2px solid #727272;
-                        border-radius: 10px;
-                    }
-
-                    &:focus {
-                        @include responsive(large-screens) {
-                            outline: none;
-                        }
-                    }
-                }
-
-                img {
-                    width: 32px;
-                    cursor: pointer;
-
-                    @include responsive(large-screens) {
-                        position: absolute;
-                        right: 10px; top: 50%;
-                        transform: translateY(-50%);
-                        width: 20px;
-                    }
-                }
-            }
-        }  // menu-list
+        @include menu-list();
 
 
         .list-box {
             display: flex;
             flex-direction: column;
             width: $width-wide;
-            margin: 45px 0 180px;
+            margin: 20px 0 180px;
             
             @include responsive(large-screens) {
                 margin-top: 0;
@@ -156,6 +47,7 @@ main {
 
             .list {
                 width: $width-wide;
+                padding: 40px 0;
                 border-top: 1px solid $inform-line-gray;
                 border-bottom: 1px solid $inform-line-gray;
                 cursor: pointer;
@@ -165,68 +57,46 @@ main {
                     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
                 }
 
+
                 ul {
                     display: flex;
                     align-items: center;
-                    width: $width-wide;
-                    padding: 50px 0;
 
-                    @include responsive(large-screens) {
-                        padding: 40px 0;
-                    }
-        
-                    .fixed-number,
-                    .list-number {
-                        margin-left: 3.67%;  // 25px
-                        margin-right: 5.9%;  // 40px
-                        width: 10.3%;  // 70px
-                        font: {
-                            weight: $font-medium;
-                            size: 1.667rem;  // 20pt
-                        }
-                        text-align: center;
+                    @include number();
+
+                    .list-content {
+                        width: $width-wide; 
+                        margin-right: 10px;
                         // background-color: aquamarine;
-
+    
                         @include responsive(large-screens) {
-                            margin-left: 65px;
-                            margin-right: 100px;
-                            width: 60px;
-                            font-weight: $font-regular; 
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                            margin-right: 35px;
                         }
-                    }
-                    .fixed-number {
-                        color: $color-point;
-                    }
-                    
-                    .list-title {
-                        width: 63.235%;  // 430px
-                        margin-right: 5.9%;  // 40px
-                        font-size: 1.833rem;  // 22pt
-                        // background-color: aquamarine;
+    
+                        @include list-title();
+                        
 
-                        @include responsive(large-screens) {
-                            width: 1000px;
-                            font-size: 1.667rem;  // 20pt
-                        }
-                    }
+                        .list-date {
+                            margin-top: 10px;
+                            time {
+                                font: {
+                                    weight: $font-regular;
+                                    size: 0.875rem;
+                                }
+                                color: $color-gray;
+                            }
 
-                    .list-date {
-                        margin-right: 2.205%;  //15px
-                        width: 150px;
-                        font: {
-                            weight: $font-regular;
-                            size: 1.5rem;  // 18pt
+                            @include responsive(large-screens) {
+                                margin-top: 0;
+                                font-size: 1rem;
+                            }
                         }
-                        color: $color-gray;
-                        // background-color: aquamarine;
-
-                        @include responsive(large-screens) {
-                            // margin-right: 65px;
-                            width: 140px;
-                        }
-                    }
+                    } // list-content
                 }  // ul
-            }
+            }  // list
             .list:first-child {
                 border-top: 2px solid $inform-line-gray;
             }
@@ -235,68 +105,7 @@ main {
             }
         }  // list-box
 
-
-        
-        .page-number {
-            margin: auto;
-            margin: -100px 0 180px;
-            // background-color: aqua;
-
-            @include responsive(large-screens) {
-                margin: -100px 0 160px;
-            }
-            ul {
-                display: flex;
-                justify-content: flex-start;
-                align-items: center;
-                width: 245px;
-                margin: auto;
-                // background-color: aquamarine;
-
-                @include responsive(large-screens) {
-                    width: 215px;
-                }
-
-                li {
-                    a {
-                        font-size: 1.667rem;  // 20pt
-
-                        // font-size: 2.333rem;  // 28pt
-
-                        @include responsive(large-screens) {
-                            font-size: 1.333rem;  // 16pt
-                        }
-                    }
-                }
-
-                .arrow {
-                    a {
-                        &:hover {
-                           font-weight: $font-semibold;
-                        }
-                    }
-                }
-                .number {
-                   a {
-                        &:hover {
-                            color: $color-point;
-                            text-decoration: underline $color-point;
-                        }
-                    } 
-                }
-    
-    
-                .single-left-arrow {
-                    padding-right: 32px;
-                }
-                .num1 {
-                    padding-right: 45px;
-                }
-                .single-right-arrow {
-                    padding-left: 32px;
-                }
-            }
-        }  // page-number
+        @include page-number();        
     }  // inform
 }  // main
 

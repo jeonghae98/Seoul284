@@ -16,10 +16,10 @@
 
 @mixin header-style() {
     position: relative;
-    z-index: 1;
+    z-index: 2;
     width: $width-wide;
-    height: 20vw;
-    // background-color: pink;
+    height: 12vh;
+    background-color: pink;
 
     @include responsive(large-screens) {
         height: 150px;
@@ -37,11 +37,20 @@
                 width: $width-wide;
                 height: $height-wide;
                 // background-color: brown;
+
+                &.active {
+                    position: relative;
+                    z-index: 2000;
+                    border-bottom: 2px solid $line-gray;
+                }
+
                 @include responsive(large-screens) {
                     position: relative;
                 }
     
                 .logo {
+                        position: relative;
+                        z-index: 2000;
                         width: 30%;
 
                         @include responsive(large-screens) {
@@ -63,37 +72,38 @@
     
                 .main-menu {
                     display: none;
-                    // position: absolute;
-                    // z-index: 1000;
-                    // top:0;
-                    // right:-20px;
-                    // bottom:0px;
-                    // overflow-x: hidden;
-                    // width:0px;
-                    // height: 100vw;
-                    // background: $color-second;
-                    // transition: width 0.5s ease;
-                    
                     @include responsive(large-screens) {
-                        position: static;
                         display: block;
+                        position: static;
                         margin-top: 70px;
                         width: 616px; 
                         background-color: transparent;
                     }
     
                     .gnb {
+                        margin-top: 50px;
+                        padding-left: 30px;
+
                         @include responsive(large-screens) {
+                            position: static;
                             display: flex;
                             flex-direction: row;
                             justify-content: space-between;
+                            margin-top: 0;
+                            padding-left: 0;
                             // background-color: aquamarine;
                         }
     
                         li {
                             a.gnb-title {
-                                color: $color-main;
+                                padding: 10px 0;
+                                font: {
+                                    weight: $font-medium;
+                                    size: 1.667rem;
+                                }
+                                
                                 @include responsive(large-screens) {
+                                    padding: 0;
                                     font: {
                                         size: 1.1rem;  // 16pt 21px
                                         weight: $font-regular;
@@ -112,7 +122,8 @@
                         }
                   }
                   &.active {
-                    width: 100%;
+                    display: block;
+                    width: $width-wide;
                   }
                 } 
         
@@ -165,8 +176,10 @@
         
     
                     .mobile-menu {
-                        cursor:pointer;
+                        position: relative;
+                        z-index: 2000;
                         width: 35%;
+                        cursor:pointer;
                         // background-color: aqua;
 
                         @include responsive(large-screens) {
@@ -200,7 +213,7 @@
     
                           div{
                             position:absolute;
-                            top: 10px; right: 0;
+                            top: 15px; right: 0;
                             display:none;
     
                             &:first-child {
