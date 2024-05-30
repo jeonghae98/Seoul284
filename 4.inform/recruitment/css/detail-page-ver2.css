@@ -112,7 +112,7 @@ footer {
 
 header {
   position: relative;
-  z-index: 2;
+  z-index: 1;
   width: 100%;
   height: 12vh;
   background-color: pink;
@@ -147,12 +147,11 @@ header .logo-gnb-rightmenu .container .logo-gnb-menu-box.active {
 }
 header .logo-gnb-rightmenu .container .logo-gnb-menu-box .logo {
   position: relative;
-  z-index: 2000;
+  z-index: 10;
   width: 30%;
 }
 @media only screen and (min-width: 1024px) {
   header .logo-gnb-rightmenu .container .logo-gnb-menu-box .logo {
-    margin-top: 41px;
     width: 191px;
   }
 }
@@ -172,9 +171,7 @@ header .logo-gnb-rightmenu .container .logo-gnb-menu-box .main-menu {
 @media only screen and (min-width: 1024px) {
   header .logo-gnb-rightmenu .container .logo-gnb-menu-box .main-menu {
     display: block;
-    position: static;
-    margin-top: 70px;
-    width: 616px;
+    margin-top: 30px;
     background-color: transparent;
   }
 }
@@ -184,31 +181,63 @@ header .logo-gnb-rightmenu .container .logo-gnb-menu-box .main-menu .gnb {
 }
 @media only screen and (min-width: 1024px) {
   header .logo-gnb-rightmenu .container .logo-gnb-menu-box .main-menu .gnb {
-    position: static;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     margin-top: 0;
     padding-left: 0;
+    width: 640px;
+    background-color: aquamarine;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  header .logo-gnb-rightmenu .container .logo-gnb-menu-box .main-menu .gnb li {
+    position: relative;
+    width: 160px;
+    height: 25px;
   }
 }
 header .logo-gnb-rightmenu .container .logo-gnb-menu-box .main-menu .gnb li a.gnb-title {
   padding: 10px 0;
   font-weight: 500;
   font-size: 1.667rem;
+  background-color: lightskyblue;
+}
+header .logo-gnb-rightmenu .container .logo-gnb-menu-box .main-menu .gnb li a.gnb-title.highlight {
+  color: #ff6000;
+  text-decoration: underline;
 }
 @media only screen and (min-width: 1024px) {
   header .logo-gnb-rightmenu .container .logo-gnb-menu-box .main-menu .gnb li a.gnb-title {
+    display: flex;
+    flex-direction: column;
     padding: 0;
     font-size: 1.1rem;
     font-weight: 400;
+    text-align: center;
   }
   header .logo-gnb-rightmenu .container .logo-gnb-menu-box .main-menu .gnb li a.gnb-title:hover {
     color: #ff6000;
   }
 }
-header .logo-gnb-rightmenu .container .logo-gnb-menu-box .main-menu .gnb .sub-menu {
+header .logo-gnb-rightmenu .container .logo-gnb-menu-box .main-menu .gnb li .sub-menu {
   display: none;
+}
+@media only screen and (min-width: 1024px) {
+  header .logo-gnb-rightmenu .container .logo-gnb-menu-box .main-menu .gnb li .sub-menu.active {
+    position: absolute;
+    left: 0;
+    top: 73px;
+    width: 100%;
+    height: 150px;
+    background-color: lightcyan;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  header .logo-gnb-rightmenu .container .logo-gnb-menu-box .main-menu .gnb li .sub-menu.active .li a {
+    padding: 20px;
+    text-align: center;
+  }
 }
 header .logo-gnb-rightmenu .container .logo-gnb-menu-box .main-menu.active {
   display: block;
@@ -223,7 +252,7 @@ header .logo-gnb-rightmenu .container .logo-gnb-menu-box .right-menu {
 @media only screen and (min-width: 1024px) {
   header .logo-gnb-rightmenu .container .logo-gnb-menu-box .right-menu {
     display: block;
-    margin: 70px 35px 0 45px;
+    margin: 20px 35px 0 45px;
     width: 85px;
     height: 21px;
   }
@@ -250,6 +279,9 @@ header .logo-gnb-rightmenu .container .logo-gnb-menu-box .right-menu ul .login {
 }
 header .logo-gnb-rightmenu .container .logo-gnb-menu-box .right-menu ul .search {
   width: 90%;
+}
+header .logo-gnb-rightmenu .container .logo-gnb-menu-box .right-menu ul .search.hide {
+  display: none;
 }
 @media only screen and (min-width: 1024px) {
   header .logo-gnb-rightmenu .container .logo-gnb-menu-box .right-menu ul .search {

@@ -16,7 +16,7 @@
 
 @mixin header-style() {
     position: relative;
-    z-index: 2;
+    z-index: 1;
     width: $width-wide;
     height: 12vh;
     background-color: pink;
@@ -50,11 +50,11 @@
     
                 .logo {
                         position: relative;
-                        z-index: 2000;
+                        z-index: 10;
                         width: 30%;
 
                         @include responsive(large-screens) {
-                            margin-top: 41px;
+                            // margin-top: 41px;
                             width: 191px; 
                         }
                         img {
@@ -72,11 +72,10 @@
     
                 .main-menu {
                     display: none;
+                    
                     @include responsive(large-screens) {
                         display: block;
-                        position: static;
-                        margin-top: 70px;
-                        width: 616px; 
+                        margin-top: 30px;
                         background-color: transparent;
                     }
     
@@ -85,29 +84,45 @@
                         padding-left: 30px;
 
                         @include responsive(large-screens) {
-                            position: static;
                             display: flex;
                             flex-direction: row;
                             justify-content: space-between;
                             margin-top: 0;
                             padding-left: 0;
-                            // background-color: aquamarine;
+                            width: 640px;
+                            background-color: aquamarine;
                         }
     
                         li {
+                            @include responsive(large-screens) {
+                                position: relative;
+                                width: 160px;
+                                height: 25px;
+                            }
+                            
                             a.gnb-title {
                                 padding: 10px 0;
                                 font: {
                                     weight: $font-medium;
                                     size: 1.667rem;
                                 }
-                                
+                                background-color: lightskyblue;
+
+
+                                &.highlight {
+                                    color: $color-point;
+                                    text-decoration: underline;
+                                }
+
                                 @include responsive(large-screens) {
+                                    display: flex;
+                                    flex-direction: column;
                                     padding: 0;
                                     font: {
                                         size: 1.1rem;  // 16pt 21px
                                         weight: $font-regular;
                                     }
+                                    text-align: center;
                                     // color: $color-second;
     
                                     &:hover {
@@ -115,12 +130,44 @@
                                     }
                                 }
                             }
+                            .sub-menu {
+                                display: none;
+
+                                &.active {
+                                    @include responsive(large-screens) {
+                                        position: absolute;
+                                        left: 0; top: 73px;
+                                        // display: flex;
+                                        // flex-direction: column;
+                                        // // margin-top: 73px;
+                                        width: $width-wide;
+                                        height: 150px;
+                                        // text-align: center;
+                                        background-color: lightcyan;
+                                    }
+
+                                    .li {
+                                        @include responsive(large-screens) {
+                                        }
+                                        a {
+                                            @include responsive(large-screens) {
+                                                padding: 20px;
+                                                text-align: center;
+                                            }
+                                        }
+                                }
+                                
+                                }    
+                                // &.active {
+                                //     @include responsive(large-screens) {
+                                //         display: block;
+                                //         margin-top: 122px;
+                                //         background-color: transparent;
+                                //     }
+                                // }
+                            }
                         }
-    
-                        .sub-menu {
-                            display: none;
-                        }
-                  }
+                    }
                   &.active {
                     display: block;
                     width: $width-wide;
@@ -137,7 +184,7 @@
     
                     @include responsive(large-screens) {
                         display: block;
-                        margin: 70px 35px 0 45px;
+                        margin: 20px 35px 0 45px;
                         width: 85px;  
                         height: 21px;
                     }
@@ -164,7 +211,12 @@
 
                         .search {
                             width: 90%;
-                            // background-color: lightblue;
+                            // background-color: lightblue;\
+
+                            &.hide {
+                                display: none;
+                            }
+
                             @include responsive(large-screens) {
                                 width: 21px;
                             }
