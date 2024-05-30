@@ -107,9 +107,10 @@ footer {
 
 header {
   position: relative;
-  z-index: 1;
+  z-index: 2;
   width: 100%;
-  height: 20vw;
+  height: 12vh;
+  background-color: pink;
 }
 @media only screen and (min-width: 1024px) {
   header {
@@ -129,12 +130,19 @@ header .logo-gnb-rightmenu .container .logo-gnb-menu-box {
   width: 100%;
   height: 100%;
 }
+header .logo-gnb-rightmenu .container .logo-gnb-menu-box.active {
+  position: relative;
+  z-index: 2000;
+  border-bottom: 2px solid #dbdbdb;
+}
 @media only screen and (min-width: 1024px) {
   header .logo-gnb-rightmenu .container .logo-gnb-menu-box {
     position: relative;
   }
 }
 header .logo-gnb-rightmenu .container .logo-gnb-menu-box .logo {
+  position: relative;
+  z-index: 2000;
   width: 30%;
 }
 @media only screen and (min-width: 1024px) {
@@ -158,25 +166,35 @@ header .logo-gnb-rightmenu .container .logo-gnb-menu-box .main-menu {
 }
 @media only screen and (min-width: 1024px) {
   header .logo-gnb-rightmenu .container .logo-gnb-menu-box .main-menu {
-    position: static;
     display: block;
+    position: static;
     margin-top: 70px;
     width: 616px;
     background-color: transparent;
   }
 }
+header .logo-gnb-rightmenu .container .logo-gnb-menu-box .main-menu .gnb {
+  margin-top: 50px;
+  padding-left: 30px;
+}
 @media only screen and (min-width: 1024px) {
   header .logo-gnb-rightmenu .container .logo-gnb-menu-box .main-menu .gnb {
+    position: static;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    margin-top: 0;
+    padding-left: 0;
   }
 }
 header .logo-gnb-rightmenu .container .logo-gnb-menu-box .main-menu .gnb li a.gnb-title {
-  color: #000;
+  padding: 10px 0;
+  font-weight: 500;
+  font-size: 1.667rem;
 }
 @media only screen and (min-width: 1024px) {
   header .logo-gnb-rightmenu .container .logo-gnb-menu-box .main-menu .gnb li a.gnb-title {
+    padding: 0;
     font-size: 1.1rem;
     font-weight: 400;
   }
@@ -188,6 +206,7 @@ header .logo-gnb-rightmenu .container .logo-gnb-menu-box .main-menu .gnb .sub-me
   display: none;
 }
 header .logo-gnb-rightmenu .container .logo-gnb-menu-box .main-menu.active {
+  display: block;
   width: 100%;
 }
 header .logo-gnb-rightmenu .container .logo-gnb-menu-box .right-menu {
@@ -236,8 +255,10 @@ header .logo-gnb-rightmenu .container .logo-gnb-menu-box .right-menu ul .search 
   width: 100%;
 }
 header .logo-gnb-rightmenu .container .logo-gnb-menu-box .right-menu .mobile-menu {
-  cursor: pointer;
+  position: relative;
+  z-index: 2000;
   width: 35%;
+  cursor: pointer;
 }
 @media only screen and (min-width: 1024px) {
   header .logo-gnb-rightmenu .container .logo-gnb-menu-box .right-menu .mobile-menu {
@@ -265,7 +286,7 @@ header .logo-gnb-rightmenu .container .logo-gnb-menu-box .right-menu .mobile-men
 }
 header .logo-gnb-rightmenu .container .logo-gnb-menu-box .right-menu .mobile-menu.active div {
   position: absolute;
-  top: 10px;
+  top: 15px;
   right: 0;
   display: none;
 }

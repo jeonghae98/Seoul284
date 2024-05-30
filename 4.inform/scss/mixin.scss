@@ -10,3 +10,227 @@
         };
     }
 }
+
+@mixin inform-title() {
+    .inform-title {
+        margin: 80px 0 50px;
+        text-align: center;
+        font-size: 2.667rem;
+        // background-color: aquamarine;
+        
+        @include responsive(large-screens) {
+            margin-bottom: 30px;
+            font: {
+                weight: $font-semibold;
+                size: 3rem;
+            }
+            text-align: left;
+        }
+    }
+}
+
+
+
+@mixin menu-list() {
+    .menu-list {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: $width-wide;
+        margin: auto;
+        
+        @include responsive(large-screens) {
+            height: 110px;
+        }
+
+        ul {
+            display: flex;
+            justify-content: space-between;
+            width: 150px;
+
+            @include responsive(large-screens) {
+                width: 200px;
+            }
+
+            li {
+                a {
+                    font: {
+                        weight: $font-regular;
+                        size: 1.167rem;
+                    }
+
+                    @include responsive(large-screens) {
+                        font-size: 1.667rem;  // 20pt
+                    }
+                }
+            }
+
+            .menu-title {
+                &::after {
+                    display: block;
+                    content: '';
+                    width: $width-wide;
+                    height: 2px;
+                    background-color: $color-point;
+                    transform: scaleX(0);
+                    transition: all 0.5s ease;
+                }
+
+                &:hover::after {   
+                    transform: scaleX(1);  /* 1 = 100% */
+                }
+            }
+            .selected::after { // selected : 현재 페이지 고정 시 활성화
+                transform: scaleX(1);
+              }
+
+        }
+        
+        .search {
+            @include responsive(large-screens) {
+                position: relative;
+                width: 360px;
+            }
+
+            #search-box {
+                display: none;
+
+                @include responsive(large-screens) {
+                    padding-left: 10px;
+                    display: block;
+                    width: $width-wide;
+                    height: 40px;
+                    border: 2px solid #727272;
+                    border-radius: 10px;
+                }
+
+                &:focus {
+                    @include responsive(large-screens) {
+                        outline: none;
+                    }
+                }
+            }
+
+            img {
+                width: 20px;
+                cursor: pointer;
+
+                @include responsive(large-screens) {
+                    position: absolute;
+                    right: 10px; top: 50%;
+                    transform: translateY(-50%);
+                    width: 20px;
+                }
+            }
+        }
+    }  // menu-list
+}
+
+
+
+@mixin number() {
+    .fixed-number,
+    .list-number {
+        width: 15%;
+        margin-left: 10px;
+        margin-right: 10px;  
+        // background-color: bisque;
+        font: {
+            weight: $font-medium;
+            size: 1rem; 
+        }
+        text-align: center;
+
+        @include responsive(large-screens) {
+            margin-left: 65px;
+            margin-right: 80px;
+            width: 70px;
+            font: {
+                weight: $font-regular; 
+                size: 1.333rem;
+            }
+        }
+    }
+    
+    .fixed-number {
+        
+        color: $color-point;
+    }
+}
+
+
+
+
+@mixin list-title() {
+    font-size: 1.167rem; 
+    
+    @include responsive(large-screens) {
+        font-size: 1.5rem; 
+        // background-color: lightgreen;
+    }
+}
+
+@mixin page-number() {
+    .page-number {
+        margin: auto;
+        margin: -100px 0 180px;
+        // background-color: aqua;
+
+        @include responsive(large-screens) {
+            margin: -80px 0 160px;
+        }
+        ul {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            width: 205px;
+            margin: auto;
+
+            // background-color: aquamarine;
+
+            @include responsive(large-screens) {
+                width: 215px;
+            }
+
+            li {
+                a {
+                    font-size: 1.167rem; 
+
+                    @include responsive(large-screens) {
+                        font-size: 1.333rem;  // 16pt
+                    }
+                }
+            }
+
+            .arrow {
+                a {
+                    &:hover {
+                       font-weight: $font-semibold;
+                    }
+                }
+            }
+            .number {
+               a {
+                    &:hover,
+                    &.num-selected {
+                        font-weight: $font-regular;
+                        color: $color-point;
+                        text-decoration: underline $color-point;
+                    }
+                } 
+            }
+
+
+            .single-left-arrow {
+                padding-right: 32px;
+            }
+            .num1 {
+                padding-right: 45px;
+            }
+            .single-right-arrow {
+                padding-left: 32px;
+            }
+        }
+    }  // page-number
+}
