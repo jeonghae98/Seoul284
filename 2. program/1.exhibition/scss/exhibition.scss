@@ -1,0 +1,63 @@
+@import "./style.scss";
+@import "./reset.scss";
+@import "./mixin.scss";
+@import "../../../scss/header.scss";
+@import "../../../scss/footer.scss";
+
+
+.container {
+    width: $width-wide;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 10px;
+    // background-color: antiquewhite;
+}
+
+//***********header***********
+header {
+    @include header-style();
+}
+
+
+//***********main***********
+main {
+    .intro-page {
+        width: $width-wide;
+        height: 795px;
+        background-color: azure;
+        .intro-text {
+            padding-top: 100px;
+
+            h1 {
+                font-size: 150px;
+                font-weight: $font-semibold;
+                text-align: center;
+            }
+            h2 {
+                font-size: 150px;
+                opacity: 0.2;
+                transform: translateX(180px) translateY(-280px);
+                text-align: center;
+            }
+        }
+
+        p {
+            font-size: 30px;
+            text-align: center;
+            transform: translateY(-100px)
+        }
+    }
+/* 2222222222222222222222222222 */
+    .content-page {
+        #form {
+            .btn {
+                
+            }
+        }
+    }
+}
+
+//***********footer***********
+footer {
+    @include footer-style();
+}

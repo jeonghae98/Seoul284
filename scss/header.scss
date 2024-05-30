@@ -19,7 +19,7 @@
     z-index: 1;
     width: $width-wide;
     height: 20vw;
-    // background-color: pink;
+    background-color: pink;
 
     @include responsive(large-screens) {
         height: 150px;
