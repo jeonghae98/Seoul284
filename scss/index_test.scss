@@ -89,6 +89,53 @@ header {
     }  // button
 }  // detail-button
 
+    .intro-line {
+        position: relative;
+        top: 0;
+        // z-index: 1;
+        border: 1px solid $line-black;
+        width: 1px;
+        height: 0;   // 나중에 제이쿼리
+    
+        @include responsive(large-screens) {
+            height: 1472px;
+        }
+    }
+    .first-circle,
+        .second-circle {
+            position: absolute; top: 0; 
+            // left: 69.4%;
+            right: 28.6%;  // 194px // 
+            z-index: 1;
+            width: 7px; // 성민 수정
+            height: 7px; // 성민 수정
+            border-radius: 50%;
+            background-color: $color-main;
+    
+            @include responsive(large-screens) {
+                right: 397px;
+                width: 10px; // 성민 수정
+                height: 10px; // 성민 수정
+            }
+        }
+    
+        .first-circle {
+            // display: none;
+            top: 315px; left: -3.5px; // 성민 수정
+            // opacity: 0;
+            // transition: opacity 0.3s ease-in 1.2s;
+            
+            @include responsive(large-screens) {
+                top: 535px; left: -5px; // 성민 수정
+            }
+        }
+        .second-circle {
+            top: 527px; left: -3.5px; // 성민 수정
+    
+            @include responsive(large-screens) {
+                top: 975px; left: -5px;
+            }
+        }
  //=================== main-inform =================== 
  .main-inform {
     position: relative;

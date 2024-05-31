@@ -117,7 +117,6 @@ header {
   z-index: 1;
   width: 100%;
   height: 12vh;
-  background-color: pink;
 }
 @media only screen and (min-width: 1024px) {
   header {
@@ -189,7 +188,6 @@ header .logo-gnb-rightmenu .container .logo-gnb-menu-box .main-menu .gnb {
     margin-top: 0;
     padding-left: 0;
     width: 640px;
-    background-color: aquamarine;
   }
 }
 @media only screen and (min-width: 1024px) {
@@ -203,7 +201,6 @@ header .logo-gnb-rightmenu .container .logo-gnb-menu-box .main-menu .gnb li a.gn
   padding: 10px 0;
   font-weight: 500;
   font-size: 1.667rem;
-  background-color: lightskyblue;
 }
 header .logo-gnb-rightmenu .container .logo-gnb-menu-box .main-menu .gnb li a.gnb-title.highlight {
   color: #ff6000;
@@ -392,6 +389,12 @@ main .detail-button .button .btn-line {
 main .detail-button .button .btn-line:last-child {
   margin-bottom: 0;
 }
+main .main-video {
+  overflow: hidden;
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 100vh;
+}
 main .main-video h2 {
   font-size: 0;
 }
@@ -400,6 +403,9 @@ main .main-video video {
   left: 0;
   top: 0;
   width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 main section.main-intro {
   position: relative;
@@ -424,7 +430,7 @@ main section.main-intro .intro-bg-img {
   background-position-x: 30%;
   background-position-y: 600px;
   background-size: 1170px 788px;
-  transition: opacity 1.5s ease 1.5s, background-position-y 1.5s ease 1.5s;
+  transition: opacity 1.5s ease 2.5s, background-position-y 1.5s ease 2s;
 }
 @media only screen and (min-width: 1024px) {
   main section.main-intro .intro-bg-img {
@@ -444,19 +450,31 @@ main section.main-intro .intro-collection-exhibition-line-box {
     right: 404px;
   }
 }
-main section.main-intro .intro-collection-exhibition-line-box .intro-line {
+main section.main-intro .intro-collection-exhibition-line-box .introsec {
   position: relative;
+  right: 29%;
+  top: 0;
+  width: 100%;
+}
+@media only screen and (min-width: 1024px) {
+  main section.main-intro .intro-collection-exhibition-line-box .introsec {
+    height: 1472px;
+  }
+}
+main section.main-intro .intro-collection-exhibition-line-box .introsec .intro-line {
+  position: absolute;
+  top: 0;
   border: 1px solid #000;
   width: 100%;
   height: 0;
 }
 @media only screen and (min-width: 1024px) {
-  main section.main-intro .intro-collection-exhibition-line-box .intro-line {
+  main section.main-intro .intro-collection-exhibition-line-box .introsec .intro-line {
     height: 0;
   }
 }
-main section.main-intro .intro-collection-exhibition-line-box .intro-line .first-circle,
-main section.main-intro .intro-collection-exhibition-line-box .intro-line .second-circle {
+main section.main-intro .intro-collection-exhibition-line-box .introsec .first-circle,
+main section.main-intro .intro-collection-exhibition-line-box .introsec .second-circle {
   position: absolute;
   top: 0;
   right: 28.6%;
@@ -467,45 +485,44 @@ main section.main-intro .intro-collection-exhibition-line-box .intro-line .secon
   background-color: #000;
 }
 @media only screen and (min-width: 1024px) {
-  main section.main-intro .intro-collection-exhibition-line-box .intro-line .first-circle,
-  main section.main-intro .intro-collection-exhibition-line-box .intro-line .second-circle {
+  main section.main-intro .intro-collection-exhibition-line-box .introsec .first-circle,
+  main section.main-intro .intro-collection-exhibition-line-box .introsec .second-circle {
     right: 397px;
     width: 10px;
     height: 10px;
   }
 }
-main section.main-intro .intro-collection-exhibition-line-box .intro-line .first-circle {
+main section.main-intro .intro-collection-exhibition-line-box .introsec .first-circle {
+  display: none;
   top: 315px;
-  left: -3.5px;
+  left: -3px;
 }
 @media only screen and (min-width: 1024px) {
-  main section.main-intro .intro-collection-exhibition-line-box .intro-line .first-circle {
+  main section.main-intro .intro-collection-exhibition-line-box .introsec .first-circle {
     top: 535px;
-    left: -5px;
+    left: -4px;
   }
 }
-main section.main-intro .intro-collection-exhibition-line-box .intro-line .second-circle {
+main section.main-intro .intro-collection-exhibition-line-box .introsec .second-circle {
+  display: none;
   top: 527px;
-  left: -3.5px;
+  left: -3px;
 }
 @media only screen and (min-width: 1024px) {
-  main section.main-intro .intro-collection-exhibition-line-box .intro-line .second-circle {
+  main section.main-intro .intro-collection-exhibition-line-box .introsec .second-circle {
     top: 975px;
-    left: -5px;
+    left: -4px;
   }
 }
 main section.main-intro .intro-collection-exhibition-line-box .collection-line-top {
   position: relative;
-  top: -10px;
-  z-index: 1;
-  height: 246px;
-  width: 100%;
-  border: 1px solid #fff;
+  z-index: 5;
+  width: 1px;
+  border: 1px solid lightblue;
 }
 @media only screen and (min-width: 1024px) {
   main section.main-intro .intro-collection-exhibition-line-box .collection-line-top {
-    top: 0px;
-    height: 255px;
+    right: 1px;
   }
 }
 main section.main-intro .intro-collection-exhibition-line-box .collection-line-bottom {
@@ -553,13 +570,14 @@ main section.main-intro .year {
   -webkit-background-clip: text;
           background-clip: text;
   opacity: 0;
-  transition: opacity 0.3s ease-in 1.2s;
+  transition: opacity 0.3s ease-in 1s;
 }
 @media only screen and (min-width: 1024px) {
   main section.main-intro .year {
     right: 450px;
     top: 500px;
     font-size: 3.5rem;
+    transition: opacity 0.3s ease-in 1.5s;
   }
 }
 main section.main-intro .now-year {
@@ -571,12 +589,15 @@ main section.main-intro .now-year {
   background-position-y: 600px;
   -webkit-background-clip: text;
           background-clip: text;
+  opacity: 0;
+  transition: opacity 0.3s ease-in 1.5s;
 }
 @media only screen and (min-width: 1024px) {
   main section.main-intro .now-year {
     left: 75%;
     top: 900px;
     font-size: 6rem;
+    transition: opacity 0.3s ease-in 2s;
   }
 }
 main section.main-intro .intro-text-box {
@@ -595,7 +616,7 @@ main section.main-intro .intro-text-box .intro-title {
   font-size: 2.3rem;
   opacity: 0;
   transform: translateX(-30px);
-  transition: opacity 1.5s ease 2.5s, transform 1.5s ease 2.5s;
+  transition: opacity 1.5s ease 3s, transform 1.5s ease 2.5s;
 }
 @media only screen and (min-width: 1024px) {
   main section.main-intro .intro-text-box .intro-title {
@@ -609,7 +630,7 @@ main section.main-intro .intro-text-box .intro-text {
   font-size: 1rem;
   opacity: 0;
   transform: translateX(-20px);
-  transition: opacity 1.5s ease 3s, transform 1.5s ease 3s;
+  transition: opacity 1.5s ease 3.5s, transform 1.5s ease 3s;
 }
 @media only screen and (min-width: 1024px) {
   main section.main-intro .intro-text-box .intro-text {
@@ -625,7 +646,7 @@ main section.main-intro .detail-button {
   margin-top: 30px;
   margin-left: 20px;
   opacity: 0;
-  transition: opacity 1.5s ease 3.6s;
+  transition: opacity 1.5s ease 4s;
 }
 @media only screen and (min-width: 1024px) {
   main section.main-intro .detail-button {
@@ -763,6 +784,7 @@ main .main-collection .parallelogram .main-collection-content .detail-button .bu
 }
 main .main-collection .parallelogram .collection-image {
   display: flex;
+  overflow-y: hidden;
   margin-top: 35px;
   width: 100%;
   height: 100%;
@@ -796,6 +818,28 @@ main .main-collection .parallelogram .collection-image div ul li img {
     height: 220px;
     margin-left: 25px;
     margin-bottom: 30px;
+  }
+}
+main .main-collection .parallelogram .collection-image div .img-animation1 {
+  animation: move1 20s linear infinite;
+}
+@keyframes move1 {
+  0% {
+    transform: translateY(0%);
+  }
+  100% {
+    transform: translateY(-50%);
+  }
+}
+main .main-collection .parallelogram .collection-image div .img-animation2 {
+  animation: move2 20s linear infinite;
+}
+@keyframes move2 {
+  0% {
+    transform: translateY(-50%);
+  }
+  100% {
+    transform: translateY(0%);
   }
 }
 main .main-collection .parallelogram .collection-image .image-row3 {
