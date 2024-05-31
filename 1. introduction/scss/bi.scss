@@ -31,12 +31,28 @@ main {
         .container {
             .sec1-title {
                 text-align: center;
+                animation-duration: 2s;
+                animation-name: move;
+
+                @keyframes move {
+                    from { opacity: 0; }
+                    to { opacity: 1; }
+                }
                 h2 {
+                    text-align: center;
+                    animation-duration: 1s;
+                    animation-name: move;
+    
+                    @keyframes move {
+                        from { opacity: 0; }
+                        to { opacity: 1; }
+                    }
+
                     font-size: 1.8rem;
                     font-weight: $font-regular;
                     @include responsive (large-screens) {
                         margin-top: 80px;
-                        font-size: 2rem;
+                        font-size: 2.5rem;
                         color: #8d8f8e;
                     }
                 }
@@ -45,7 +61,7 @@ main {
                     font-size: 2.3rem;
                     font-weight: $font-regular;
                     @include responsive (large-screens) {
-                        font-weight: $font-regular;
+                        font-weight: $font-semibold;
                         font-size: 3rem;
                         
                     }
@@ -62,6 +78,13 @@ main {
             .sec1-info {
                 margin-top: 30px;
                 text-align: center;
+                animation-duration: 1s;
+                animation-name: move;
+
+                @keyframes move {
+                    from { opacity: 0; }
+                    to { opacity: 1; }
+                }
                 strong {
                     width: 70%;
                     margin: 0 auto;
@@ -80,13 +103,7 @@ main {
                    padding-bottom: 10px;
                    font-size: 0.9rem;
                    color: #565656;
-                   @include responsive (large-screens) {
-                    padding-bottom: 30px;
-                    font-size: 1rem;
-                    font-weight: $font-regular;
-                    color: #ADB4B0;
-                   }
-                   
+   
                 }
             } //sec1-info
             .sec1-menu {
@@ -97,6 +114,14 @@ main {
                 margin: 0 auto;
                 padding-top: 20px;
                 // background-color: #914c21;
+                text-align: center;
+                animation-duration: 1s;
+                animation-name: move;
+
+                @keyframes move {
+                    from { opacity: 0; }
+                    to { opacity: 1; }
+                }
                 @include responsive (large-screens) {
                     width: 50%;
                 }
@@ -165,8 +190,7 @@ main {
         margin-top: 100px;
         padding: 100px 0 100px 0;
         background-image: url(../images/overlay_bg.png);
-        // background-position-y: 100px;
-        // background-position-x: -100px;
+        background-attachment: fixed;
         background-repeat: no-repeat;
         background-size: cover;
         .container {
@@ -190,7 +214,7 @@ main {
                     width: 70%;
                     margin: auto;
                     padding-bottom: 20px;
-                    font-size: rem;
+                    font-size: 1rem;
                     font-weight: $font-regular;
                     color: #565656;
 
@@ -329,359 +353,300 @@ main {
     }
 
     .sec4 {
-        margin-bottom: 200px;
+        margin-bottom: 50px;
+        // background-color: #8d8f8e;
+        @include responsive (large-screens) {
+            margin-bottom: 200px;
+        }
         .sec4-title {
-            // border-top: 1px solid #c2c2c2;
-            text-align: center;
             h2 {
-                // font-weight:$font-regular;
-                padding: 100px 0 20px 0;
+                padding-bottom: 50px;
+                text-align: center;
+                @include responsive (large-screens) {
+                    font-size: 2.1rem;
+                }
             }
             p {
-                width: 70%;
+                width: 80%;
                 margin: auto;
-                padding-bottom: 50px;
-                font-weight: $font-regular;
+                font-size: 0.87rem;
+                text-align: center;
+                color: #565656;
+                @include responsive (large-screens) {
+                    width: 20%;
+                    font-size: 1rem;
+                    font-weight: $font-regular;
+                    margin-bottom: 50px;
+                }
             }
-        }
-        .wrap {
-            position:relative;
-            top:0;
-            left:0;
-            right:0;
-            bottom:0;
-            overflow:hidden;
-            /* 라디오 인풋을 이용했으며 인풋에 라벨을 이어 버튼으로 사용하므로 인풋 자체는 보여질 필요가 없음, 인풋 자체는 보이지 않게 가림 */
+        } // sec4-title
+        .color {
+            width: 100%; height: 100%;
             @include responsive (large-screens) {
                 display: flex;
-                justify-content: space-between;
-                width: 100%;
-                // background-color: #8d8f8e;
             }
-            input.button {
-                display:none;
-            }
-            
-            /* 라디오 인풋에 체크가 되면, 인접한 .contents 상자를 보이게 함 */
-            input[type=radio]:checked + .contents { 
-                visibility: visible;
-                max-height:500px;
-                transform:scale(1,1);
-                opacity:1;
-            }
-            /* 라디오 인풋, 모두 닫는 버튼 */
-            .closer {
-                position:absolute;
-                top:0;
-                right:0;
-                display:inline-block;
-                width:20px;
-                height:20px;
-                line-height:20px;
-                background:#ADB4B0;
-                text-align:center;
-                font-size:16px;
-                color:#fff;
-                box-shadow:1px 1px 3px 5px rgba(0,0,0,0.02);
-                cursor:pointer;
-            }
-            
-            /* 닫기 버튼 애니메이션 효과, 삭제시 기능상 무방함 */
-            input[type=radio].close:checked + .closer {
-                transform:translate(0,-100%);
-                -webkit-transition:transform .2s ease;
-                transition:transform .2s ease;
-            }
-            input[type=radio].close:not(:checked) + .closer {
-                transform:translate(0,0);
-                -webkit-transition:transform .2s ease;
-                transition:transform .2s ease;
-            }
-            
-            /* 메뉴 버튼 디자인 */
-            .label {
-                height:200px;
-                line-height:50px;
-                width:100%;
-                display:inline-block;
-                float:left;
-                overflow:hidden;
-                cursor:pointer;
-            }
-            /*  메뉴 버튼에 들어갈 아이콘을 100px * 100px, 투명한 PNG 로 저장하여 아래의 경로에 연동해주면 됨 
-                위쪽 코드 .label.a 부터 맨 아래코드 .label.e 까지가 메뉴버튼 오른쪽-> 왼쪽 순서 */
             .color1 {
-                @include responsive (large-screens) {
-                    width: 60%; 
-                }
-                .label.d {
-                    width: 100%; height:100px;
-                    background: linear-gradient(to bottom,#ff6000,#ff6000,#ff9b59,);
-                    .rotate {
-                        display:inline-block;
-                        // background-color: #fff;
-                        p {
-                            position:relative;
-                            width: 80%;
-                            font-size:1rem;
-                            padding-top: 20%;
-                            line-height: 25px;
-                            white-space: nowrap;
-                            left:40%;
-                            font-weight:500;
-                            color:#fff;
-                            @include responsive (large-screens) {
-                                width: 100%
-                            }
+                width: 100%;
+                .orange {
+                    width: 100%; height: 400px;
+                    margin-top: 40px;
+
+                    // background-color: $color-point;
+                    @include responsive (large-screens) {
+                        width: 100%; height: 600px;
+                        margin-top: 0px;
+                      
+                    }
+                    .inner-box1{
+                        width: 100%; height: 20%;
+                        padding-top: 20px;
+                        font-size: 0.9rem;
+                        font-weight: $font-semibold;
+                        padding-left: 30px;
+                        color: white;
+                        background-color: rgba(240,100,0,1);
+                        @include responsive (large-screens) {
+                            padding-left: 80px;
+                            padding-top: 40px;
+                            font-size: 1rem;
+                        }
+                    }
+                    .inner-box2{
+                        width: 100%; height: 20%;
+                        padding-top: 30px;
+                        font-size: 0.8rem;
+                        font-weight: $font-semibold;
+                        padding-left: 30px;
+                        color: white;
+                        background-color: rgba(240,100,0,0.9);
+                        @include responsive (large-screens) {
+                            padding-left: 80px;
+                            padding-top: 50px;
+                            font-size: 1rem;
+                        }
+                    }
+                    .inner-box3{
+                        width: 100%; height: 20%;
+                        padding-top: 30px;
+                        font-weight: $font-semibold;
+                        font-size: 0.8rem;
+                        padding-left: 30px;
+                        color: white;
+                        background-color: rgba(240,100,0,0.8);
+                        @include responsive (large-screens) {
+                            padding-left: 80px;
+                            padding-top: 50px;
+                            font-size: 1rem;
+                        }
+                    }
+                    .inner-box4{
+                        width: 100%; height: 20%;
+                        padding-top: 30px;
+                        font-weight: $font-semibold;
+                        font-size: 0.8rem;
+                        padding-left: 30px;
+                        color: white;
+                        background-color: rgba(240,100,0,0.7);
+                        @include responsive (large-screens) {
+                            padding-left: 80px;
+                            padding-top: 50px;
+                            font-size: 1rem;
+                        }
+                    }
+                    .inner-box5{
+                        width: 100%; height: 20%;
+                        padding-top: 30px;
+                        font-weight: $font-semibold;
+                        font-size: 0.8rem;
+                        padding-left: 30px;
+                        color: white;
+                        background-color: rgba(240,100,0,0.6);
+                        @include responsive (large-screens) {
+                            padding-left: 80px;
+                            padding-top: 50px;
+                            font-size: 1rem;
                         }
                     }
                 }
-                /* 컨텐츠 본문 */
-                .contents {
-                    position:relative;
-                    visibility: collapse;
-                    float:left;
-                    height:auto;
-                    width:100%;
-                    transform:scale(1,0);
-                    transform-origin:top;  
-                    max-height:0;
-                    transition:transform 0.2s ease-out, opacity 0.2s ease-out, max-height 0.1s ease-out;
-                    opacity:0;
-                    z-index:-1;
-                    overflow:hidden;
-                    // background-color: #ff6000;
-                    .inner1 {
-                        display: table;
-                        width:100%;
-                        height:75px; line-height: 75px;
-                        padding-left: 11%;
-                        font-weight: $font-regular;
-                        color: #fff;
-                        background-color: rgba(255, 96, 0, 0.9);
-                    }
-                    .inner2 {
-                        display: table;
-                        width:100%;
-                        height:75px; line-height: 75px; 
-                        padding-left: 11%;
-                        font-weight: $font-regular; 
-                        color: #fff;
-                        background-color: rgba(255, 96, 0, 0.8); 
-                        
-                    }
-                    .inner3 {
-                        display: table;
-                        width:100%;
-                        height:75px; line-height: 75px;
-                        padding-left: 11%;
-                        font-weight: $font-regular; 
-                        color: #fff; 
-                        background-color: rgba(255, 96, 0, 0.7); 
-                        
-                    }
-                    .inner4 {
-                        display: table;
-                        width:100%;
-                        height:75px; line-height: 75px;
-                        padding-left: 11%;
-                        font-weight: $font-regular; 
-                        color: #fff; 
-                        background-color: rgba(255, 96, 0, 0.6); 
-                        
-                    }
-                    .inner5 {
-                        display: table;
-                        width:100%;
-                        height:75px; line-height: 75px;
-                        padding-left: 11%;
-                        font-weight: $font-regular; 
-                        color: #fff;   
-                        background-color: rgba(255, 96, 0, 0.5); 
-                        
-                    }
-                } // contents
-            } // color1
+            }
+    
+    
+    
     
             .color2 {
+                width: 100%;
                 @include responsive (large-screens) {
-                    width: 30%; 
+                    width: 50%;
                 }
-                .label.d {
-                    width: 100%; height:100px;
-                    background:#914c21;
-                    .rotate {
-                        display:inline-block;
-                        // background-color: #fff;
-                        p {
-                            position:relative;
-                            font-size:1rem;
-                            white-space: nowrap;
-                            padding-top: 20%;
-                            line-height: 25px;
-                            left:40%;
-                            font-weight:500;
-                            color:#fff;
+                .orange {
+                    width: 100%; height: 400px;
+                    @include responsive (large-screens) {
+                        height: 600px;
+                    }
+                    // background-color: $color-point;
+                    .inner-box1{
+                        width: 100%; height: 20%;
+                        padding-top: 20px;
+                        font-size: 0.9rem;
+                        font-weight: $font-semibold;
+                        padding-left: 30px;
+                        color: white;
+                        background-color: rgba(255,134,101,1);
+                        @include responsive (large-screens) {
+                            padding-left: 60px;
+                            padding-top: 40px;
+                            font-size: 1rem;
+                        }
+                    }
+                    .inner-box2{
+                        width: 100%; height: 20%;
+                        padding-top: 30px;
+                        font-size: 0.8rem;
+                        font-weight: $font-semibold;
+                        padding-left: 30px;
+                        color: white;
+                        background-color: rgba(255,134,101,0.9);
+                        @include responsive (large-screens) {
+                            padding-left: 60px;
+                            padding-top: 50px;
+                            font-size: 1rem;
+                        }
+                    }
+                    .inner-box3{
+                        width: 100%; height: 20%;
+                        padding-top: 30px;
+                        font-weight: $font-semibold;
+                        font-size: 0.8rem;
+                        padding-left: 30px;
+                        color: white;
+                        background-color: rgba(255,134,101,0.8);
+                        @include responsive (large-screens) {
+                            padding-left: 60px;
+                            padding-top: 50px;
+                            font-size: 1rem;
+                        }
+                    }
+                    .inner-box4{
+                        width: 100%; height: 20%;
+                        padding-top: 30px;
+                        font-weight: $font-semibold;
+                        font-size: 0.8rem;
+                        padding-left: 30px;
+                        color: white;
+                        background-color: rgba(255,134,101,0.7);
+                        @include responsive (large-screens) {
+                            padding-left: 60px;
+                            padding-top: 50px;
+                            font-size: 1rem;
+                        }
+                    }
+                    .inner-box5{
+                        width: 100%; height: 20%;
+                        padding-top: 30px;
+                        font-weight: $font-semibold;
+                        font-size: 0.8rem;
+                        padding-left: 30px;
+                        color: white;
+                        background-color: rgba(255,134,101,0.6);
+                        @include responsive (large-screens) {
+                            padding-left: 60px;
+                            padding-top: 50px;
+                            font-size: 1rem;
                         }
                     }
                 }
-                /* 컨텐츠 본문 */
-                .contents {
-                    position:relative;
-                    visibility: collapse;
-                    float:left;
-                    height:auto;
-                    width:100%;
-                    transform:scale(1,0);
-                    transform-origin:top;  
-                    max-height:0;
-                    transition:transform 0.2s ease-out, opacity 0.2s ease-out, max-height 0.1s ease-out;
-                    opacity:0;
-                    z-index:-1;
-                    overflow:hidden;
-                    // background-color: #ff6000;
-                    .inner1 {
-                        display: table;
-                        width:100%;
-                        height:75px; line-height: 75px;
-                        padding-left: 11%;
-                        font-weight: $font-regular;
-                        color: #fff;
-                        background-color: rgba(255, 96, 0, 0.9);
-                    }
-                    .inner2 {
-                        display: table;
-                        width:100%;
-                        height:75px; line-height: 75px;
-                        padding-left: 11%;
-                        font-weight: $font-regular; 
-                        color: #fff;
-                        background-color: rgba(255, 96, 0, 0.8); 
-                        
-                    }
-                    .inner3 {
-                        display: table;
-                        width:100%;
-                        height:75px; line-height: 75px;
-                        padding-left: 11%;
-                        font-weight: $font-regular; 
-                        color: #fff;
-                        background-color: rgba(255, 96, 0, 0.7); 
-                        
-                    }
-                    .inner4 {
-                        display: table;
-                        width:100%;
-                        height:75px; line-height: 75px;
-                        padding-left: 11%;
-                        font-weight: $font-regular; 
-                        color: #fff;  
-                        background-color: rgba(255, 96, 0, 0.6); 
-                        
-                    }
-                    .inner5 {
-                        display: table;
-                        width:100%;
-                        height:75px; line-height: 75px;
-                        padding-left: 11%;
-                        font-weight: $font-regular; 
-                        color: #fff;
-                        background-color: rgba(255, 96, 0, 0.5); 
-                        
-                    }
-                } // contents
-            } // color2
+            }
+    
+    
     
             .color3 {
+                width: 100%;
                 @include responsive (large-screens) {
-                    width: 30%; 
+                    width: 50%;
                 }
-                .label.d {
-                    width: 100%; height:100px;
-                    background:#db9061;
-                    .rotate {
-                        display:inline-block;
-                        // background-color: #fff;
-                        p {
-                            position:relative;
-                            font-size:1rem;
-                            padding-top: 20%;
-                            line-height: 25px;
-                            white-space: nowrap;
-                            left:40%;
-                            font-family: "arial";
-                            font-weight:500;
-                            color:#fff;
+                .orange {
+                    width: 100%; height: 400px;
+                    margin-bottom: 90px;
+                    // background-color: $color-point;
+                    @include responsive (large-screens) {
+                        height: 400px; height: 600px;
+                    }
+                    .inner-box1{
+                        width: 100%; height: 20%;
+                        padding-top: 20px;
+                        font-size: 0.9rem;
+                        font-weight: $font-semibold;
+                        padding-left: 30px;
+                        color: white;
+                        background-color: rgba(216,159,144,1);
+                        @include responsive (large-screens) {
+                            padding-left: 60px;
+                            padding-top: 40px;
+                            font-size: 1rem;
+                        }
+                    }
+                    .inner-box2{
+                        width: 100%; height: 20%;
+                        padding-top: 30px;
+                        font-size: 0.8rem;
+                        font-weight: $font-semibold;
+                        padding-left: 30px;
+                        color: white;
+                        background-color: rgba(216,159,144,0.9);
+                        @include responsive (large-screens) {
+                            padding-left: 60px;
+                            padding-top: 50px;
+                            font-size: 1rem;
+                        }
+                    }
+                    .inner-box3{
+                        width: 100%; height: 20%;
+                        padding-top: 30px;
+                        font-weight: $font-semibold;
+                        font-size: 0.8rem;
+                        padding-left: 30px;
+                        color: white;
+                        background-color: rgba(216,159,144,0.8);
+                        @include responsive (large-screens) {
+                            padding-left: 60px;
+                            padding-top: 50px;
+                            font-size: 1rem;
+                        }
+                    }
+                    .inner-box4{
+                        width: 100%; height: 20%;
+                        padding-top: 30px;
+                        font-weight: $font-semibold;
+                        font-size: 0.8rem;
+                        padding-left: 30px;
+                        color: white;
+                        background-color: rgba(216,159,144,0.7);
+                        @include responsive (large-screens) {
+                            padding-left: 60px;
+                            padding-top: 50px;
+                            font-size: 1rem;
+                        }
+                    }
+                    .inner-box5{
+                        width: 100%; height: 20%;
+                        padding-top: 30px;
+                        font-weight: $font-semibold;
+                        font-size: 0.8rem;
+                        padding-left: 30px;
+                        color: white;
+                        background-color: rgba(216,159,144,0.6);
+                        @include responsive (large-screens) {
+                            padding-left: 60px;
+                            padding-top: 50px;
+                            font-size: 1rem;
                         }
                     }
                 }
-                /* 컨텐츠 본문 */
-                .contents {
-                    position:relative;
-                    visibility: collapse;
-                    float:left;
-                    height:auto;
-                    width:100%;
-                    transform:scale(1,0);
-                    transform-origin:top;  
-                    max-height:0;
-                    transition:transform 0.2s ease-out, opacity 0.2s ease-out, max-height 0.1s ease-out;
-                    opacity:0;
-                    z-index:-1;
-                    overflow:hidden;
-                    // background-color: #ff6000;
-                    .inner1 {
-                        display: table;
-                        width:100%;
-                        height:75px; line-height: 75px;
-                        padding-left: 11%;
-                        font-weight: $font-regular; 
-                        color: #fff;
-                        background-color: rgba(255, 96, 0, 0.9);
-                    }
-                    .inner2 {
-                        display: table;
-                        width:100%;
-                        height:75px; line-height: 75px;
-                        padding-left: 11%;
-                        font-weight: $font-regular; 
-                        color: #fff; 
-                        background-color: rgba(255, 96, 0, 0.8); 
-                        
-                    }
-                    .inner3 {
-                        display: table;
-                        width:100%;
-                        height:75px; line-height: 75px;
-                        padding-left: 11%;
-                        font-weight: $font-regular; 
-                        color: #fff;
-                        background-color: rgba(255, 96, 0, 0.7); 
-                        
-                    }
-                    .inner4 {
-                        display: table;
-                        width:100%;
-                        height:75px; line-height: 75px;
-                        padding-left: 11%;
-                        font-weight: $font-regular; 
-                        color: #fff;  
-                        background-color: rgba(255, 96, 0, 0.6); 
-                        
-                    }
-                    .inner5 {
-                        display: table;
-                        width:100%;
-                        height:75px; line-height: 75px;
-                        padding-left: 11%;
-                        font-weight: $font-regular; 
-                        color: #fff; 
-                        background-color: rgba(255, 96, 0, 0.5); 
-                    }
-                } // contents
-            } // color3
-        } // wrap
+            }
+        }
     } // sec4
+ 
+    
 } // main
 
 
