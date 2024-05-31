@@ -336,6 +336,8 @@ main .inform .inform-title {
   margin: 80px 0 50px;
   text-align: center;
   font-size: 2.667rem;
+  opacity: 0;
+  transition: opacity 2s ease;
 }
 @media only screen and (min-width: 1024px) {
   main .inform .inform-title {
@@ -352,11 +354,8 @@ main .inform .menu-list {
   align-items: center;
   width: 100%;
   margin: auto;
-}
-@media only screen and (min-width: 1024px) {
-  main .inform .menu-list {
-    height: 110px;
-  }
+  opacity: 0;
+  transition: opacity 2s ease;
 }
 main .inform .menu-list ul {
   display: flex;
@@ -437,8 +436,7 @@ main .inform .list-box {
 }
 @media only screen and (min-width: 1024px) {
   main .inform .list-box {
-    margin-top: 0;
-    margin-bottom: 160px;
+    margin: 30px 0 180px;
   }
 }
 main .inform .list-box .list {
@@ -447,7 +445,13 @@ main .inform .list-box .list {
   border-top: 1px solid #d9d9d9;
   border-bottom: 1px solid #d9d9d9;
   cursor: pointer;
-  transition: box-shadow 0.3s ease;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 1s ease, transform 1s ease, box-shadow 0.3s ease;
+}
+main .inform .list-box .list.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 main .inform .list-box .list:hover {
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);

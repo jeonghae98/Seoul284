@@ -17,6 +17,8 @@
         text-align: center;
         font-size: 2.667rem;
         // background-color: aquamarine;
+        opacity: 0;
+        transition: opacity 2s ease;
         
         @include responsive(large-screens) {
             margin-bottom: 30px;
@@ -39,10 +41,9 @@
         align-items: center;
         width: $width-wide;
         margin: auto;
-        
-        @include responsive(large-screens) {
-            height: 110px;
-        }
+        opacity: 0;
+        transition: opacity 2s ease;
+
 
         ul {
             display: flex;
@@ -61,7 +62,7 @@
                     }
 
                     @include responsive(large-screens) {
-                        font-size: 1.667rem;  // 20pt
+                        font-size: 1.667rem;
                     }
                 }
             }
