@@ -95,6 +95,10 @@ main {
 
     //=================== main-video ===================
     .main-video {
+        overflow: hidden;
+        object-fit: cover;
+        height: 100vh;
+
         h2 {
             font-size: 0;
         }
@@ -102,11 +106,11 @@ main {
             position: absolute;
             left: 0; top: 0;
             width: $width-wide;
+            height: $height-wide;
+            object-fit: cover;
         }
     }
-    @include responsive(large-screens) {
-        
-    }
+  
 
 
     //=================== main-intro =================== 
@@ -134,7 +138,7 @@ main {
                 size: 1170px 788px;
                 // color: aqua;
             }
-            transition: opacity 1.5s ease 1.5s, background-position-y 1.5s ease 1.5s;
+            transition: opacity 1.5s ease 2.5s, background-position-y 1.5s ease 2s;
             
             @include responsive(large-screens) {
                 background: {
@@ -157,17 +161,28 @@ main {
                 right: 404px;
             }
             
-            .intro-line {
+            .introsec {
                 position: relative;
-                // z-index: 1;
-                border: 1px solid $line-black;
+                right: 29%; top: 0;
+                // margin-left: 500px;
                 width: $width-wide;
-                height: 0;   // 나중에 제이쿼리
 
                 @include responsive(large-screens) {
-                    height: 0;
+                    height: 1472px;
                 }
 
+                .intro-line {
+                    position: absolute;
+                    top: 0;
+                    // z-index: 1;
+                    border: 1px solid $line-black;
+                    width: $width-wide;
+                    height: 0;   // 나중에 제이쿼리
+                
+                    @include responsive(large-screens) {
+                        height: 0;
+                    }
+                }
                 .first-circle,
                 .second-circle {
                     position: absolute; top: 0; 
@@ -178,45 +193,98 @@ main {
                     height: 7px; // 성민 수정
                     border-radius: 50%;
                     background-color: $color-main;
-        
+            
                     @include responsive(large-screens) {
                         right: 397px;
                         width: 10px; // 성민 수정
                         height: 10px; // 성민 수정
                     }
                 }
-        
+            
                 .first-circle {
-                    // display: none;
-                    top: 315px; left: -3.5px; // 성민 수정
+                    display: none;
+                    top: 315px; left: -3px; // 성민 수정
                     // opacity: 0;
                     // transition: opacity 0.3s ease-in 1.2s;
                     
                     @include responsive(large-screens) {
-                        top: 535px; left: -5px; // 성민 수정
+                        top: 535px; left: -4px; // 성민 수정
                     }
                 }
                 .second-circle {
-                    top: 527px; left: -3.5px; // 성민 수정
-        
+                    display: none;
+                    top: 527px; left: -3px; // 성민 수정
+            
                     @include responsive(large-screens) {
-                        top: 975px; left: -5px;
+                        top: 975px; left: -4px;
                     }
                 }
             }
+            // .intro-line {
+            //     position: relative;
+            //     // z-index: 1;
+            //     border: 1px solid $line-black;
+            //     width: $width-wide;
+            //     height: 0;   // 나중에 제이쿼리
+
+            //     @include responsive(large-screens) {
+            //         height: 0;
+            //     }
+
+            //     .first-circle,
+            //     .second-circle {
+            //         position: absolute; top: 0; 
+            //         // left: 69.4%;
+            //         right: 28.6%;  // 194px // 
+            //         z-index: 1;
+            //         width: 7px; // 성민 수정
+            //         height: 7px; // 성민 수정
+            //         border-radius: 50%;
+            //         background-color: $color-main;
+        
+            //         @include responsive(large-screens) {
+            //             right: 397px;
+            //             width: 10px; // 성민 수정
+            //             height: 10px; // 성민 수정
+            //         }
+            //     }
+        
+            //     .first-circle {
+            //         // display: none;
+            //         top: 315px; left: -3.5px; // 성민 수정
+            //         // opacity: 0;
+            //         // transition: opacity 0.3s ease-in 1.2s;
+                    
+            //         @include responsive(large-screens) {
+            //             top: 535px; left: -5px; // 성민 수정
+            //         }
+            //     }
+            //     .second-circle {
+            //         top: 527px; left: -3.5px; // 성민 수정
+        
+            //         @include responsive(large-screens) {
+            //             top: 975px; left: -5px;
+            //         }
+            //     }
+            // }
 
             .collection-line-top {
                 // display: none;
-                position: relative; top: -10px;
-                z-index: 1;
-                height: 246px;  // 나중에 제이쿼리
-                width: $width-wide;
-               
-                border: 1px solid $line-white;
+                // position: relative; 
+                // z-index: 1;
+                // height: 246px;  // 나중에 제이쿼리
+                // width: $width-wide;
+                position: relative;
+                z-index: 5;
+                width: 1px;
+                // height: 0;
+                // background-color: black;
+                border: 1px solid lightblue;
 
                 @include responsive(large-screens) {
-                    top: 0px;
-                    height: 255px;
+                    // top: 0px;
+                    right: 1px;
+                    // height: 0;
                 }
             }
 
@@ -253,32 +321,6 @@ main {
             }
         }
 
-         // .main-collection-col-line {
-            //     position: absolute;
-            //     right: 200px; top: -55px;
-            //     width: 1px;
-            //     height: 300px;
-            //     border: 1px solid $line-white;
-    
-            //     @include responsive(large-screens) {
-            //         right: 404px; top: -111px;
-            //         height: 355px;
-            //     }
-            // }
-
-
-        // .intro-line {
-        //     position: absolute;
-        //     width: 1px;
-        //     height: 0px;
-        //     right: 200px; top: 0;
-        //     border: 1px solid $line-black;
-
-        //     @include responsive(large-screens) {
-        //         right: 404px;
-        //     }
-        // }
-
         .year,
         .now-year {
             position: absolute;
@@ -286,19 +328,21 @@ main {
         }
 
         .year {
-            right: 31.617%; top: 290px;  // 215px
-            font-size: 2.2rem;  // 40pt; // 성민 수정
+            right: 31.617%; top: 290px; 
+            font-size: 2.2rem;  
             color: transparent;
             background-image: url(../images/text_bg_1900.png);
             background-position-y: 600px;
             background-clip: text;
             opacity: 0;
-            transition: opacity 0.3s ease-in 1.2s;
+            transition: opacity 0.3s ease-in 1s;
 
             
             @include responsive(large-screens) {
                 right: 450px; top: 500px;
-                font-size: 3.5rem;  // 75pt  // 성민 수정
+                font-size: 3.5rem;  
+                transition: opacity 0.3s ease-in 1.5s;
+
                 
             }
         }
@@ -310,10 +354,13 @@ main {
             background-image: url(../images/text_bg_2024.jpg);
             background-position-y: 600px;
             background-clip: text;
+            opacity: 0;
+            transition: opacity 0.3s ease-in 1.5s;
  
             @include responsive(large-screens) {
                 left: 75%; top: 900px;
-                font-size: 6rem;  // 95pt // 성민 수정
+                font-size: 6rem;
+                transition: opacity 0.3s ease-in 2s;
             }
         }
         .intro-text-box {
@@ -334,7 +381,7 @@ main {
                 }
                 opacity: 0;
                 transform: translateX(-30px);
-                transition: opacity 1.5s ease 2.5s, transform 1.5s ease 2.5s;
+                transition: opacity 1.5s ease 3s, transform 1.5s ease 2.5s;
 
                 @include responsive(large-screens) {
                     font: {
@@ -354,7 +401,7 @@ main {
                 
                 opacity: 0;
                 transform: translateX(-20px);
-                transition: opacity 1.5s ease 3s, transform 1.5s ease 3s;
+                transition: opacity 1.5s ease 3.5s, transform 1.5s ease 3s;
 
                 @include responsive(large-screens) {
                     width: 310px;
@@ -372,7 +419,7 @@ main {
             margin-left: 20px;
             
             opacity: 0;
-            transition: opacity 1.5s ease 3.6s;
+            transition: opacity 1.5s ease 4s;
 
             @include responsive(large-screens) {
                 margin-top: -65px;// 성민 수정
@@ -552,6 +599,7 @@ main {
 
             .collection-image {
                 display: flex;
+                overflow-y: hidden;
                 margin-top: 35px;
                 width: 100%;  // 600px
                 height: 100%;
@@ -590,6 +638,32 @@ main {
                             //     margin-top: 40px;
                             // }
                         }
+                    }
+
+                    .img-animation1 {
+                        animation: move1 20s linear infinite;
+                    }
+
+                    @keyframes move1 {
+                        0% {
+                            transform: translateY(0%);
+                           }
+                           100% {
+                            transform: translateY(-50%);
+                           }
+                    }
+
+                    .img-animation2 {
+                        animation: move2 20s linear infinite;
+                    }
+
+                    @keyframes move2 {
+                        0% {
+                            transform: translateY(-50%);
+                           }
+                           100% {
+                            transform: translateY(0%);
+                           }
                     }
                 }
     
@@ -1128,7 +1202,8 @@ main {
                         // align-items: center; 
                         // gap: -50px;
                     }
-    
+                // .content-box1 {
+                //  }
                     div {
                         width: 72.222%;
     

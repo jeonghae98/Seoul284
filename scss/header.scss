@@ -19,7 +19,7 @@
     z-index: 1;
     width: $width-wide;
     height: 12vh;
-    background-color: pink;
+    // background-color: pink;
 
     @include responsive(large-screens) {
         height: 150px;
@@ -90,7 +90,7 @@
                             margin-top: 0;
                             padding-left: 0;
                             width: 640px;
-                            background-color: aquamarine;
+                            // background-color: aquamarine;
                         }
     
                         li {
@@ -106,7 +106,7 @@
                                     weight: $font-medium;
                                     size: 1.667rem;
                                 }
-                                background-color: lightskyblue;
+                                // background-color: lightskyblue;
 
 
                                 &.highlight {

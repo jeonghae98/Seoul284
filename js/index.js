@@ -81,28 +81,63 @@ $(function() {
     //     // 마우스가 벗어났을 때 서브메뉴를 올림
     //     $(this).next('.sub-menu').stop().slideUp(500);
     // });
-    var pcWindowWidth = $(window).width() > 768;
-    var $subMenu = $('.gnb-title').next('.sub-menu');
-
-    if (pcWindowWidth) {
-        $('.gnb-title').hover(function() {
-            // 마우스가 올라갔을 때 서브메뉴를 내림
-            $subMenu.stop().slideDown(500);
-            $subMenu.addClass('active');
-            $('.sub-menu > li > a').css('padding', '10px 0');
-        });
-
-        $('.gnb').hover(function() {
-            // gnb 내부에서는 아무것도 하지 않음
-        }, function() {
-            // 마우스가 gnb 영역을 벗어났을 때 모든 서브메뉴를 올림
-            $('.sub-menu').stop().slideUp(500);
-        });
-    }
 
 
+    // var pcWindowWidth = $(window).width() > 768;
+    // var $subMenu = $('.gnb-title').next('.sub-menu');
+
+    // if (pcWindowWidth) {
+    //     $('.gnb-title').hover(function() {
+    //         // 마우스가 올라갔을 때 서브메뉴를 내림
+    //         $subMenu.stop().slideDown(500);
+    //         $subMenu.addClass('active');
+    //         $('.sub-menu > li > a').css('padding', '10px 0');
+    //     });
+
+    //     $('.gnb').hover(function() {
+    //         // gnb 내부에서는 아무것도 하지 않음
+    //     }, function() {
+    //         // 마우스가 gnb 영역을 벗어났을 때 모든 서브메뉴를 올림
+    //         $('.sub-menu').stop().slideUp(500);
+    //     });
+    // }
 
 
+    var handlePCMode = function() {
+        var pcWindowWidth = window.matchMedia('(min-width: 769px)').matches;
+    
+        if (pcWindowWidth) {
+            $('.gnb-title').on('mouseenter', function() {
+                // 모든 서브메뉴를 내림
+                $('.sub-menu').stop().slideDown(500);
+                $('.sub-menu').addClass('active');
+            }).on('mouseleave', function() {
+                // 모든 서브메뉴를 올림
+                $('.sub-menu').stop().slideUp(500);
+            });
+            
+            $('.gnb').on('mouseenter', function() {
+                // gnb 내부에서는 아무것도 하지 않음
+            }).on('mouseleave', function() {
+                // 마우스가 gnb 영역을 벗어났을 때 모든 서브메뉴를 올림
+                $('.sub-menu').stop().slideUp(500);
+            });
+        } else {
+            // 모바일일 경우 PC용 hover 이벤트 제거
+            $('.gnb-title').off('mouseenter mouseleave');
+            $('.gnb').off('mouseenter mouseleave');
+            $('.sub-menu').removeClass('active').css('display', '');
+        }
+    };
+    
+    // 처음 로드 시 실행
+    handlePCMode();
+    
+    // 화면 크기 변경 시 다시 실행
+    $(window).resize(function() {
+        handlePCMode();
+    });
+    
 
 
     //===================== main =====================
@@ -110,6 +145,7 @@ $(function() {
     $(".circle-text").html(function() {
         return $(this).text().split("").map((char, i) => `<span style="transform:rotate(${i * 15}deg)">${char}</span>`).join("");
     });
+
 
 
     //--------------------- intro ---------------------
@@ -135,6 +171,14 @@ $(function() {
                     height: '1020px'
                   }, 3000);
 
+                setTimeout(function() {
+                    $('.first-circle').delay(700).fadeIn();
+                }, 300);
+
+                setTimeout(function() {
+                    $('.second-circle').delay(1200).fadeIn();
+                }, 300);
+
             } else {  // pc 버전
                 // <배경 사진>
                 $('.intro-bg-img')
@@ -144,15 +188,90 @@ $(function() {
 
                 });
 
-                // <선>
+                // <선&원>
+                // $('.main-intro .intro-line').animate({
+                //     height: '1472px'
+                //   }, 3000, function() {
+                //     // intro-line 애니메이션 완료 후 collection-line-top 애니메이션
+                //     var introLineEnd = $('.intro-line').offset().top + $('.intro-line').height();
+                //     var mainCollectionRowLineTop = $('.main-collection-row-line').offset().top;
+    
+                //     console.log(introLineEnd);
+                //     console.log(mainCollectionRowLineTop);
+
+
+                //     $('.collection-line-top').css({
+                //         'top': introLineEnd
+                //     }).animate({
+                //         height: mainCollectionRowLineTop - introLineEnd
+                //     }, 2000); // 애니메이션 시간 조정 가능
+                // });
+
                 $('.main-intro .intro-line').animate({
-                    height: '1472px'
-                  }, 3000);
+                        height: '1472px'
+                      }, 3000);
+
+
+
+                setHeights();
+
+                // 창 크기 변경 시 호출될 함수 등록
+                $(window).resize(function() {
+                    setHeights();
+                });
+            
+                // 초기 설정 및 창 크기 변경 시 호출될 함수 정의
+                function setHeights() {
+                    var introLineHeight = 1472; // intro-line의 초기 높이
+            
+                    // intro-line의 높이 설정
+                    $('.intro-line').height(introLineHeight);
+            
+                    // collection-line-top의 높이 계산 및 설정
+                    var introLineEnd = $('.intro-line').offset().top + introLineHeight;
+                    var mainCollectionRowLineTop = $('.main-collection-row-line').offset().top;
+                    var collectionLineTopHeight = mainCollectionRowLineTop - introLineEnd;
+            
+                    $('.collection-line-top').height(collectionLineTopHeight);
+                }      
+                    //   var introLineHeight = $('.intro-line').height(); // intro-line의 높이
+                    //   var introLineEnd = $('.intro-line').offset().top + introLineHeight; // intro-line의 세로 끝 위치
+                    //   var mainCollectionRowLineTop = $('.main-collection-row-line').offset().top; // main-collection-row-line의 위치
+                  
+                    //   var collectionLineTopHeight = mainCollectionRowLineTop - introLineEnd; // collection-line-top의 높이
+                  
+                    //   $('.collection-line-top').css('height', 0); // collection-line-top의 초기 높이를 0으로 설정
+                  
+                    //   // collection-line-top의 높이를 collectionLineTopHeight로 애니메이션 효과를 주면서 늘리기
+                    //   $('.collection-line-top').animate({
+                    //       height: collectionLineTopHeight
+                    //   }, 2000); // 애니메이션 시간 조정 가능
+
+                // function animateCollectionLineTop() {
+                //     var introLineEnd = $('.intro-line').offset().top + $('.intro-line').height();
+                //     var mainCollectionRowLineTop = $('.main-collection-row-line').offset().top;
+                
+                //     $('.collection-line-top').css({
+                //         'top': introLineEnd,
+                //         'backgroundColor': '#000',
+                //         'height': mainCollectionRowLineTop - introLineEnd
+                //     }); // 애니메이션 시간 조정 가능
+                // }
+                // animateCollectionLineTop();
+
+                setTimeout(function() {
+                    $('.first-circle').delay(1000).fadeIn();
+                }, 300);
+
+                setTimeout(function() {
+                    $('.second-circle').delay(1500).fadeIn();
+                }, 300);
             }
             
             // 모바일, pc 공통
              // <txt>
              $('.year').css('opacity', 1);
+             $('.now-year').css('opacity', 1);
 
             //  $('.first-circle').css('opacity', 1);
 
@@ -349,7 +468,9 @@ $(function() {
     });
 
 
+    var parallelogramTopMiddle = $('.parallelogram').offset().top + ($('.parallelogram').outerHeight() / 2);
 
+    console.log(parallelogramTopMiddle); // 콘솔에 출력하여 확인
 
     //--------------------- exhibition ---------------------
     $(window).scroll(function() {
@@ -478,15 +599,39 @@ $(function() {
 
         }
     }
-    
-    $(document).ready(function() {
-        chgBox(); // 페이지 로드 시 실행
-    });
+
+    chgBox(); 
+
     
     // 윈도우 크기가 변경될 때마다 chgBox 함수 호출
     $(window).resize(function() {
         chgBox();
     });
+
+
+    // <animation>
+    $('.inform').on('scroll', function() {
+
+        function moveBox() {
+            var informWindowWidth = $(window).width();
+            var $scrollTop = $(window).scrollTop();
+            var informOffset = $('.inform').offset().top;
+            
+            if($scrollTop > informOffset) {
+                if (informWindowWidth < 768) {
+               
+                } else {
+                   $('.content-box1').animate({
+                    
+                   }, 2000)
+                }
+            }
+            
+        }
+
+        moveBox();
+    });
+   
     //===================== footer =====================
     function updateFooterLogo() {
         var footerWindowWidth = $(window).width();
