@@ -739,6 +739,7 @@ main {
                                 position: absolute;
                                 bottom: 0;
                                 width: 100%;
+                                font-size: 1.3rem;
                             }
                         }
                     }
@@ -1133,11 +1134,12 @@ main {
             }
             .main-inform-title {
                 margin-bottom: 130px;
-                font-size: 4.167rem;  //50pt
+                font-size: 3rem;  //50pt
                 color: $color-second;
                 // background-color: aqua;
 
                 @include responsive(large-screens) {
+                    font-size: 4.167rem;
                     position: absolute;
                     left: 0; top: 870px;
                     transform: rotate(-90deg);
@@ -1258,7 +1260,7 @@ main {
                                 margin-top: 10px;
                                 padding: 20px 0 40px;
                                 border-top: 2px solid $line-gray;
-                                font-size: 1.333rem;
+                                font-size: 1rem;
                                 // background-color: lightpink;
         
                                 @include responsive(large-screens) {
@@ -1322,11 +1324,13 @@ main {
                     
                         &:hover {
                             .news-txt {
+                                
                                 opacity: 1;
                                 visibility: visible;
                                 color: $color-second;
                                 background-color: rgba(0, 0, 0, 0.7);
                                 .txt {
+                                    font-size: 1rem;
                                     border-bottom-color: $color-second;
                                 }
                             }
@@ -1344,7 +1348,7 @@ main {
                             }
     
                             p {
-                                font-size: 1.333rem;
+                                font-size: 0.95rem;
                                 color: $color-second;
                                 // background-color: lightgoldenrodyellow;
     
@@ -1422,10 +1426,12 @@ main {
                     
                     .notice {
                         // background-color: antiquewhite;
+                        
                          @include responsive(large-screens) {
                             width: 700px;
                         }
                         .txt-box {
+                            
                             background-color: $color-second;
 
                             @include responsive(large-screens) {
@@ -1445,6 +1451,7 @@ main {
     
                     .notice-content2,
                     .notice-content3 {
+                        
                         @include responsive(large-screens) {
                             padding-left: 10px;
                         }
@@ -1619,7 +1626,7 @@ main {
                             margin-bottom: 35px;
                             font: {
                                 weight: $font-regular;
-                                size: 3.75rem;  // 45pt
+                                size: 3rem;  // 45pt
                             }
                         }
                     }
@@ -1632,7 +1639,7 @@ main {
                         color: #787878;
                         
                         @include responsive(large-screens) {
-                            font-size: 1.5rem;
+                            font-size: 1.3rem;
                         }
                     }
                 }

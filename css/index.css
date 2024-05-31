@@ -906,6 +906,7 @@ main .exhibition .exhibition-content div.ex .content-box .ex-txt .title {
     position: absolute;
     bottom: 0;
     width: 100%;
+    font-size: 1.3rem;
   }
 }
 @media only screen and (min-width: 1024px) {
@@ -1255,11 +1256,12 @@ main .main-inform .title-btn-wrap {
 }
 main .main-inform .title-btn-wrap .main-inform-title {
   margin-bottom: 130px;
-  font-size: 4.167rem;
+  font-size: 3rem;
   color: #fff;
 }
 @media only screen and (min-width: 1024px) {
   main .main-inform .title-btn-wrap .main-inform-title {
+    font-size: 4.167rem;
     position: absolute;
     left: 0;
     top: 870px;
@@ -1377,7 +1379,7 @@ main .main-inform .container-none .inform-content-box .content-box2 div .txt-box
   margin-top: 10px;
   padding: 20px 0 40px;
   border-top: 2px solid #dbdbdb;
-  font-size: 1.333rem;
+  font-size: 1rem;
 }
 @media only screen and (min-width: 1024px) {
   main .main-inform .container-none .inform-content-box .content-box1 div .txt-box .txt,
@@ -1449,6 +1451,7 @@ main .main-inform .container-none .inform-content-box .content-box2 .news:hover 
 }
 main .main-inform .container-none .inform-content-box .content-box1 .news:hover .news-txt .txt,
 main .main-inform .container-none .inform-content-box .content-box2 .news:hover .news-txt .txt {
+  font-size: 1rem;
   border-bottom-color: #fff;
 }
 main .main-inform .container-none .inform-content-box .content-box1 .news .main-news-title,
@@ -1465,7 +1468,7 @@ main .main-inform .container-none .inform-content-box .content-box2 .news .main-
 }
 main .main-inform .container-none .inform-content-box .content-box1 .news .main-news-title p,
 main .main-inform .container-none .inform-content-box .content-box2 .news .main-news-title p {
-  font-size: 1.333rem;
+  font-size: 0.95rem;
   color: #fff;
 }
 @media only screen and (min-width: 1024px) {
@@ -1728,7 +1731,7 @@ main .main-sns .sns-content div .content-txt .sns-title {
   main .main-sns .sns-content div .content-txt .sns-title {
     margin-bottom: 35px;
     font-weight: 400;
-    font-size: 3.75rem;
+    font-size: 3rem;
   }
 }
 main .main-sns .sns-content div .content-txt .sns-txt {
@@ -1738,7 +1741,7 @@ main .main-sns .sns-content div .content-txt .sns-txt {
 }
 @media only screen and (min-width: 1024px) {
   main .main-sns .sns-content div .content-txt .sns-txt {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
   }
 }
 main .main-sns .sns-content div .sns-img {
