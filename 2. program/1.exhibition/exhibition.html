@@ -7,7 +7,9 @@
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/exhibition.css">
     <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
-    <title>공지사항</title>
+    <script src="./js/jquery.js"></script>
+    <script src="./js/exhibition.js"></script>
+    <title>전시</title>
 </head>
 <body>
     <header>
@@ -83,20 +85,32 @@
         <section class="content-page">
             <div class="container">
                 <form action="#" id="toggle-search-frm">
-                    <input type="radio" id="toggle-on" class="toggle toggle-left" name="toggle" value="false">
+                    <input type="radio" id="toggle-on" class="toggle toggle-left" name="toggle" value="false" checked>
                     <label for="toggle-on" class="btn">진행</label>
                     <input type="radio" id="toggle-off" class="toggle toggle-right" name="toggle" value="true">
                     <label for="toggle-off" class="btn">종료</label>
                     
-                    <input type="text">
-                    <button>
+                    <input type="text" class="search-txt">
+                    <button class="search-btn">
                         <img src="./images/search.png" alt="search-icon">
                     </button>
                 </form>
+                <div class="ex-scroll">
+                    <div class="scrollbar-track">
+                        <div class="scrollbar-thumb"></div>
+                    </div>
+                    <div class="years">
+                        <span class="year year-2024">2024</span>
+                        <span class="year year-2023">2023</span>
+                        <span class="year year-2022">2022</span>
+                        <span class="year year-2021">2021</span>
+                        <span class="year year-2020">2020</span>
+                    </div>
+                </div>
                 <div class="now-exhibition">
                     <div class="exhibition-list">
                         <a href="#">
-                            <h3>2024 문화역서울284 협력전시2 &lt;로컬 크리에이티브 2024: The Next Community&gt;</h3>
+                            <h3>2024 문화역서울284 협력전시2 <br>&lt;로컬 크리에이티브 2024: The Next Community&gt;</h3>
                             <p>운영기간 : 2024-05-17 ~ 2024-06-02</p>
                             <img src="./images/nowex1.jpg" alt="nowex1">
                         </a>
@@ -105,7 +119,7 @@
                 <div class="fin-exhibition">
                     <div class="exhibition-list">
                         <a href="#">
-                            <h3>2024 문화역서울284 협력전시1 KTX 개통 20주년 기념 철도문화전 <여정 그 너머></h3>
+                            <h3>2024 문화역서울284 협력전시1 KTX 개통 20주년 기념 철도문화전 <br><여정 그 너머></h3>
                             <p>운영기간 : 2024-03-29 ~ 2024-04-21</p>
                             <img src="./images/ex1.png" alt="ex1">
                         </a>
@@ -115,7 +129,7 @@
                             <img src="./images/ex2.jpg" alt="ex2">
                         </a>
                         <a href="#">
-                            <h3>문화역서울284 협력전시2 《서울융합예술페스티벌 언폴드엑스(Unfold X)》</h3>
+                            <h3>문화역서울284 협력전시2 <br>《서울융합예술페스티벌 언폴드엑스(Unfold X)》</h3>
                             <p>운영기간 : 2023-11-10 ~ 2023-12-13</p>
                             <img src="./images/ex3.jpg" alt="ex3">
                         </a>
@@ -125,22 +139,22 @@
                             <img src="./images/ex4.png" alt="ex4">
                         </a>
                         <a href="#">
-                            <h3>타이포잔치 2023 국제 타이포그래피 비엔날레 《따옴표 열고 따옴표 닫고》</h3>
+                            <h3>타이포잔치 2023 국제 타이포그래피 비엔날레<br> 《따옴표 열고 따옴표 닫고》</h3>
                             <p>운영기간 : 2023-09-19 ~ 2023-10-14</p>
                             <img src="./images/ex5.jpg" alt="ex5">
                         </a>
                         <a href="#">
-                            <h3>문화역서울284 협력전시1 《헤더윅 스튜디오: 감성을 빚다》</h3>
+                            <h3>문화역서울284 협력전시1 <br>《헤더윅 스튜디오: 감성을 빚다》</h3>
                             <p>운영기간 : 2023-06-29 ~ 2023-09-06</p>
                             <img src="./images/ex6.png" alt="ex6">
                         </a>
                         <a href="#">
-                            <h3>2023 공예주간 특별전시 《반짝반짝 작은손》</h3>
+                            <h3>2023 공예주간 특별전시 <br>《반짝반짝 작은손》</h3>
                             <p>운영기간 : 2023-05-19 ~ 2023-05-28</p>
                             <img src="./images/ex7.png" alt="ex7">
                         </a>
                         <a href="#">
-                            <h3>문화역서울284 공예기획전 《다시, 자연에게 보내는 편지》</h3>
+                            <h3>문화역서울284 공예기획전 <br>《다시, 자연에게 보내는 편지》</h3>
                             <p>운영기간 : 2023-04-04 ~ 2023-06-04</p>
                             <img src="./images/ex8.jpg" alt="ex8">
                         </a>
@@ -155,22 +169,22 @@
                             <img src="./images/ex10.jpg" alt="ex10">
                         </a>
                         <a href="#">
-                            <h3>프리츠한센 150주년 전시: Shaping the Extraordinary 영원한 아름다움</h3>
+                            <h3>프리츠한센 150주년 전시<br>: Shaping the Extraordinary 영원한 아름다움</h3>
                             <p>운영기간 : 2022-11-12 ~ 2023-01-05</p>
                             <img src="./images/ex11.jpg" alt="ex11">
                         </a>
                         <a href="#">
-                            <h3>OO디자인 어린이 프로그램 <우리 함께 걸어요!> 그림책 전시</h3>
+                            <h3>OO디자인 어린이 프로그램<br><우리 함께 걸어요!> 그림책 전시</h3>
                             <p>운영기간 : 2022-10-07 ~ 2022-10-14</p>
                             <img src="./images/ex12.jpg" alt="ex12">
                         </a>
                         <a href="#">
-                            <h3>길몸삶터 : 일상에서 누리는 널리 이로운 디자인 (공공디자인 페스티벌 2022)</h3>
+                            <h3>길몸삶터 : 일상에서 누리는 널리 이로운 디자인 <br>(공공디자인 페스티벌 2022)</h3>
                             <p>운영기간 : 2022-10-05 ~ 2022-10-30</p>
                             <img src="./images/ex13.jpg" alt="ex13">
                         </a>
                         <a href="#">
-                            <h3>코리안 프렌치 아트 커넥션 Ⅰ(Korean & French ART Connection 1) (전시/공연)</h3>
+                            <h3>코리안 프렌치 아트 커넥션 Ⅰ<br>(Korean & French ART Connection 1) (전시/공연)</h3>
                             <p>운영기간 : 2022-07-06 ~ 2022-07-08</p>
                             <img src="./images/ex14.png" alt="ex14">
                         </a>
@@ -185,7 +199,7 @@
                             <img src="./images/ex16.jpg" alt="ex16">
                         </a>
                         <a href="#">
-                            <h3>상설 프로그램 RTO365 문화역서울284 소장품 전시 <시대와 공간을 잇다></h3>
+                            <h3>상설 프로그램 RTO365 문화역서울284 소장품 전시 <br><시대와 공간을 잇다></h3>
                             <p>운영기간 : 2022-06-16 ~ 2022-07-03</p>
                             <img src="./images/ex17.jpg" alt="ex17">
                         </a>
@@ -195,7 +209,7 @@
                             <img src="./images/ex18.png" alt="ex18">
                         </a>
                         <a href="#">
-                            <h3>[대관 전시] 그림도시 The Last Scene: See You Again!</h3>
+                            <h3>[대관 전시] 그림도시 The Last Scene<br>: See You Again!</h3>
                             <p>운영기간 : 2022-06-17 ~ 2022-06-19</p>
                             <img src="./images/ex19.png" alt="ex19">
                         </a>
@@ -220,29 +234,29 @@
                             <img src="./images/ex23.jpg" alt="ex23">
                         </a>
                         <a href="#">
-                            <h3>2021 RTO 365 문화장(場) 프로그램 <사투리를 말하다></h3>
+                            <h3>2021 RTO 365 문화장(場) 프로그램 <br><사투리를 말하다></h3>
                             <p>운영기간 : 2021-11-14 ~ 2021-11-21</p>
                             <img src="./images/ex24.png" alt="ex24">
                         </a>
                         <a href="#">
-                            <h3>2021 RTO 365 문화장(場) 프로그램 <서울림 도심 속 불멍></h3>
+                            <h3>2021 RTO 365 문화장(場) 프로그램 <br><서울림 도심 속 불멍></h3>
                             <p>운영기간 : 2021-08-27 ~ 2021-08-31</p>
                             <img src="./images/ex25.png" alt="ex25">
                         </a>
                         <a href="#">
-                            <h3>2021 RTO 365 문화장(場) 프로그램 <나에게 보내는 서신></h3>
+                            <h3>2021 RTO 365 문화장(場) 프로그램 <br><나에게 보내는 서신></h3>
                             <p>운영기간 : 2021-08-13 ~ 2021-08-22</p>
                             <img src="./images/ex26.png" alt="ex26">
                         </a>
                         <a href="#">
-                            <h3>2021 RTO 365 문화장(場) 프로그램 <함창으로부터 명주로부터></h3>
+                            <h3>2021 RTO 365 문화장(場) 프로그램 <br><함창으로부터 명주로부터></h3>
                             <p>운영기간 : 2021-07-29 ~ 2021-08-08</p>
                             <img src="./images/ex27.png" alt="ex27">
                         </a>
                         <a href="#">
-                            <h3>2021 문화역서울 284 협력전시2 TRIPLE RINGS; 복각본들, 어제 글피로부터</h3>
+                            <h3>2021 문화역서울 284 협력전시2 TRIPLE RINGS <br>복각본들, 어제 글피로부터</h3>
                             <p>운영기간 : 2021-12-10 ~ 2022-01-02</p>
-                            <img src="./images/ex28.png" alt="ex28">
+                            <img src="./images/ex28.jpg" alt="ex28">
                         </a>
                         <a href="#">
                             <h3>2021 문화역서울 284 협력전시1 가상정거장</h3>
@@ -286,15 +300,6 @@
                         </a>
                     </div> <!-- exhibition-list -->
                 </div> <!-- fin-exhibition -->
-                <div class="ex-scroll">
-                    <div class="ex-scroll-line"></div>
-                    <p class="2024">2024</p>
-                    <p class="2023">2023</p>
-                    <p class="2022">2022</p>
-                    <p class="2021">2021</p>
-                    <p class="2020">2020</p>
-                    <div class="scroll-circle"></div>
-                </div>
             </div> <!-- container -->
         </section>
     </main>
