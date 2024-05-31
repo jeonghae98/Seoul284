@@ -122,23 +122,17 @@ header .logo-gnb-rightmenu .container .logo-gnb-menu-box {
   width: 100%;
   height: 100%;
 }
-header .logo-gnb-rightmenu .container .logo-gnb-menu-box.active {
-  position: relative;
-  z-index: 2000;
-  border-bottom: 2px solid #dbdbdb;
-}
 @media only screen and (min-width: 1024px) {
   header .logo-gnb-rightmenu .container .logo-gnb-menu-box {
     position: relative;
   }
 }
 header .logo-gnb-rightmenu .container .logo-gnb-menu-box .logo {
-  position: relative;
-  z-index: 10;
   width: 30%;
 }
 @media only screen and (min-width: 1024px) {
   header .logo-gnb-rightmenu .container .logo-gnb-menu-box .logo {
+    margin-top: 41px;
     width: 191px;
   }
 }
@@ -157,20 +151,22 @@ header .logo-gnb-rightmenu .container .logo-gnb-menu-box .main-menu {
 }
 @media only screen and (min-width: 1024px) {
   header .logo-gnb-rightmenu .container .logo-gnb-menu-box .main-menu {
+    position: static;
     display: block;
-    margin-top: 30px;
+    margin-top: 70px;
+    width: 616px;
     background-color: transparent;
   }
-}
-header .logo-gnb-rightmenu .container .logo-gnb-menu-box .main-menu .gnb {
-  margin-top: 50px;
-  padding-left: 30px;
 }
 @media only screen and (min-width: 1024px) {
   header .logo-gnb-rightmenu .container .logo-gnb-menu-box .main-menu .gnb {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+  }
+}
+header .logo-gnb-rightmenu .container .logo-gnb-menu-box .main-menu .gnb li a.gnb-title {
+  color: #000;
     margin-top: 0;
     padding-left: 0;
     width: 640px;
@@ -194,38 +190,17 @@ header .logo-gnb-rightmenu .container .logo-gnb-menu-box .main-menu .gnb li a.gn
 }
 @media only screen and (min-width: 1024px) {
   header .logo-gnb-rightmenu .container .logo-gnb-menu-box .main-menu .gnb li a.gnb-title {
-    display: flex;
-    flex-direction: column;
-    padding: 0;
     font-size: 1.1rem;
     font-weight: 400;
-    text-align: center;
   }
   header .logo-gnb-rightmenu .container .logo-gnb-menu-box .main-menu .gnb li a.gnb-title:hover {
     color: #ff6000;
   }
 }
-header .logo-gnb-rightmenu .container .logo-gnb-menu-box .main-menu .gnb li .sub-menu {
+header .logo-gnb-rightmenu .container .logo-gnb-menu-box .main-menu .gnb .sub-menu {
   display: none;
 }
-@media only screen and (min-width: 1024px) {
-  header .logo-gnb-rightmenu .container .logo-gnb-menu-box .main-menu .gnb li .sub-menu.active {
-    position: absolute;
-    left: 0;
-    top: 73px;
-    width: 100%;
-    height: 150px;
-    background-color: lightcyan;
-  }
-}
-@media only screen and (min-width: 1024px) {
-  header .logo-gnb-rightmenu .container .logo-gnb-menu-box .main-menu .gnb li .sub-menu.active .li a {
-    padding: 20px;
-    text-align: center;
-  }
-}
 header .logo-gnb-rightmenu .container .logo-gnb-menu-box .main-menu.active {
-  display: block;
   width: 100%;
 }
 header .logo-gnb-rightmenu .container .logo-gnb-menu-box .right-menu {
@@ -237,7 +212,7 @@ header .logo-gnb-rightmenu .container .logo-gnb-menu-box .right-menu {
 @media only screen and (min-width: 1024px) {
   header .logo-gnb-rightmenu .container .logo-gnb-menu-box .right-menu {
     display: block;
-    margin: 20px 35px 0 45px;
+    margin: 70px 35px 0 45px;
     width: 85px;
     height: 21px;
   }
@@ -265,9 +240,6 @@ header .logo-gnb-rightmenu .container .logo-gnb-menu-box .right-menu ul .login {
 header .logo-gnb-rightmenu .container .logo-gnb-menu-box .right-menu ul .search {
   width: 90%;
 }
-header .logo-gnb-rightmenu .container .logo-gnb-menu-box .right-menu ul .search.hide {
-  display: none;
-}
 @media only screen and (min-width: 1024px) {
   header .logo-gnb-rightmenu .container .logo-gnb-menu-box .right-menu ul .search {
     width: 21px;
@@ -277,10 +249,8 @@ header .logo-gnb-rightmenu .container .logo-gnb-menu-box .right-menu ul .search 
   width: 100%;
 }
 header .logo-gnb-rightmenu .container .logo-gnb-menu-box .right-menu .mobile-menu {
-  position: relative;
-  z-index: 2000;
-  width: 35%;
   cursor: pointer;
+  width: 35%;
 }
 @media only screen and (min-width: 1024px) {
   header .logo-gnb-rightmenu .container .logo-gnb-menu-box .right-menu .mobile-menu {
@@ -308,7 +278,7 @@ header .logo-gnb-rightmenu .container .logo-gnb-menu-box .right-menu .mobile-men
 }
 header .logo-gnb-rightmenu .container .logo-gnb-menu-box .right-menu .mobile-menu.active div {
   position: absolute;
-  top: 15px;
+  top: 10px;
   right: 0;
   display: none;
 }
@@ -399,7 +369,7 @@ main .container .map-box .orange-box .map-txt {
   width: 80%;
 }
 main .container .map-box .orange-box .map-txt p {
-  font-size: 0.8rem;
+  font-size: 0.7rem;
   padding: 20px 20px 0 0;
   color: #fff;
 }
@@ -412,7 +382,7 @@ main .container .map-box .orange-box .map-txt strong {
   padding-top: 10px;
   padding-right: 20px;
   padding-bottom: 20px;
-  font-size: 0.7rem;
+  font-size: 0.6rem;
   color: #fff;
 }
 @media only screen and (min-width: 1024px) {
@@ -550,7 +520,7 @@ main .container .bus-subway .subway .subway-num div .orange {
 main .container .store {
   width: 96%;
   margin: 0 auto;
-  padding-bottom: 80px;
+  margin-bottom: 80px;
   border: 1px solid #c2c2c2;
   border-top: none;
   border-right: none;
@@ -561,13 +531,16 @@ main .container .store {
     width: 90%;
     display: flex;
     align-items: center;
+    padding-left: 110px;
+    padding-bottom: 80px;
+    padding-left: 90px;
   }
 }
 main .container .store img {
   width: 90%;
   height: 100%;
   margin: 0 auto;
-  padding-top: 80px;
+  padding-top: 30px;
   padding-bottom: 20px;
 }
 @media only screen and (min-width: 1024px) {
@@ -582,7 +555,7 @@ main .container .store .store-txt {
 }
 main .container .store .store-txt h3 {
   width: 100%;
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   font-weight: 400;
 }
 @media only screen and (min-width: 1024px) {
@@ -590,24 +563,34 @@ main .container .store .store-txt h3 {
     font-size: 2rem;
     padding-top: 60px;
     padding-bottom: 30px;
-    padding-left: 40px;
+    padding-left: 80px;
   }
 }
 main .container .store .store-txt strong {
   width: 100%;
+  font-size: 1rem;
 }
 @media only screen and (min-width: 1024px) {
   main .container .store .store-txt strong {
     font-size: 1.3rem;
     margin-top: 0;
-    padding-left: 40px;
+    padding-left: 80px;
   }
+}
+main .container .store .store-txt p {
+  font-size: 0.8rem;
+  padding: 20px 0 5px 0;
 }
 @media only screen and (min-width: 1024px) {
   main .container .store .store-txt p {
     width: 75%;
-    padding-left: 40px;
+    padding-left: 80px;
   }
+}
+main .container .store .store-txt .time {
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding-bottom: 30px;
 }
 @media only screen and (min-width: 1024px) {
   main .container .store .store-txt .time {
@@ -615,7 +598,7 @@ main .container .store .store-txt strong {
     font-size: 0.8rem;
     font-weight: 600;
     padding-top: 20px;
-    padding-left: 40px;
+    padding-left: 80px;
   }
 }
 

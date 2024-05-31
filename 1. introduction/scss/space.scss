@@ -11,7 +11,17 @@
     margin: 0 auto;
     // background-color: antiquewhite;
 }
+html {
+    overflow: hidden;
+}
 
+html, body {
+    display: block;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    
+}
 //***********header***********
 header {
     @include header-style();
@@ -20,21 +30,31 @@ header {
 main {
     .space{
         .space-title {
+           
             text-align: center;
             // background-color: aqua;
+            @include responsive(large-screens) {
+                width: 100%;
+                height: 300px;
+                // padding-top: 50px;
+            //    background-color: #b6b6b6;
+            }
             h1 {
+                font-size: 1.5rem;
                 padding-bottom: 15px;
                 font-size: $font-semibold;
                 @include responsive(large-screens) {
-                    padding-top: 100px
+                    padding-top: 100px;
+                    font-size: 2.5rem;
                 }
             }
             p {
-                font-size: 0.8rem;
-                color: #c2c2c2;
+                font-size: 0.9rem;
+                color: #b6b6b6;
                 @include responsive(large-screens) {
-                    padding-top: 15px;
+                    // padding-top: 15px;
                     padding-bottom: 100px;
+                    font-size: 1rem;
                     // background-color: aqua;
                 }
             }
@@ -43,12 +63,22 @@ main {
 
         .sec1 {
             @include responsive(large-screens) {
-                height: 562px;
+                height: 1000px;
                 text-align: center;
-                border-top: 1px solid #dddddd;
+                margin: 0px 0 0px 0;
+                // border-top: 1px solid #dddddd;
                 background-image: url(../images/sec1_bg.png);
                 background-repeat: no-repeat;
+                background-size: cover;
+                background-attachment: fixed;
                 // background-color: #dddddd;
+                animation-duration: 4s;
+                animation-name: move;
+
+                @keyframes move {
+                    from { opacity: 0; }
+                    to { opacity: 1; }
+                }
             }
             img {
                 border-top: 1px solid #dddddd;
@@ -64,10 +94,10 @@ main {
                 font-size: $font-semibold;
                 @include responsive(large-screens) {
                     width: 100%;
-                    padding-left: 55%;
-                    padding-top: 170px;
-                    text-align: left;
-                    // background-color: aqua;
+                    font-size: 2.5rem;
+                    padding-right: 55%;
+                    padding-top: 360px;
+                    text-align: right;
                 }
             }
             p {
@@ -79,98 +109,38 @@ main {
                 font-size: 0.9rem;
                 @include responsive(large-screens) {
                     width: 30%;
-                    margin-left: 55%;
-                    text-align: left;
-                    // padding-bottom: 0px;
-                    // background-color: antiquewhite;
+                    margin-right: 55%;
+                    padding-bottom: 0px;
+
+                    color: #646464;
+                    font-size: 1.1rem;
+                    font-weight: $font-regular;
+                    text-align: right;
+                    // background-color: #b6b6b6;
+                }
+                span {
+                    display: inline;
+                    color: #ff6000;
                 }
             }
         } // sec1
 
-        .slide1 {
-            position: relative;
-            @include responsive(large-screens) {
-                margin: 0px 0 0px 0;
-                // background-color: #c2c2c2;
-            }
-            .img-box1 {
-                display: flex;
-                width: 100%;
-                padding: 50px 0 80px 0;
-                // border: 1px solid #dddddd;
-                border-left: none;
-                border-right: none;
-                overflow: hidden;
-
-                @include responsive(large-screens) {
-                    padding: 0px 0 0px 0;
-                    border: none;
-                }
-
-                img {
-                    @include responsive(large-screens) {
-                        
-                    }
-                }
-                .circles {
-                    position: absolute; bottom: 30px; left: 50%; 
-                    transform: translate(-50%);
-                    display: flex;
-                    margin: 0 auto;
-                    // background-color: antiquewhite;
-                    .cir1{
-                        width: 10px; height: 10px;
-                        margin-right: 8px;
-                        border: 1px solid black;
-                        border-radius: 50%;
-                        background-color: black;
-                        @include responsive(large-screens) {
-                            border: 1px solid white;
-                            background-color: white;
-                        }
-                    }
-                    .cir2{
-                        width: 10px; height: 10px;
-                        margin-right: 8px;
-                        border: 1px solid black;
-                        border-radius: 50%;
-                        // background-color: black;
-                        @include responsive(large-screens) {
-                            border: 1px solid white;
-                        }
-                    }
-                    .cir3{
-                        width: 10px; height: 10px;
-                        margin-right: 8px;
-                        border: 1px solid black;
-                        border-radius: 50%;
-                        // background-color: black;
-                        @include responsive(large-screens) {
-                            border: 1px solid white;
-                        }
-                    }
-                    .cir4{
-                        width: 10px; height: 10px;
-                        border: 1px solid black;
-                        border-radius: 50%;
-                        // background-color: black;
-                        @include responsive(large-screens) {
-                            border: 1px solid white;
-                        }
-                    }
-                } // circle
-            } // img-box
-        } // slide1
+        
 
         .sec2 {
             border-bottom: 1px solid #dddddd;
             @include responsive(large-screens) {
+                float: right;
+                width: 100%;
+                margin: 0px 0 100px 0;
                 text-align: center;
-                border-bottom: 1px solid #dddddd;
                 background-image: url(../images/sec2_bg.png);
+                background-size: cover;
                 background-repeat: no-repeat;
-                height: 563px;
+                background-attachment: fixed;
+                height: 1000px;
                 // background-color: #dddddd;
+                border-bottom: none;
             }
             img {
                 margin-top: 100px;
@@ -184,8 +154,9 @@ main {
                 font-size: $font-semibold;
                 @include responsive(large-screens) {
                     width: 100%;
+                    font-size: 2.5rem;
                     padding-left: 55%;
-                    padding-top: 170px;
+                    padding-top: 360px;
                     text-align: left;
                     // background-color: aqua;
                 }
@@ -198,12 +169,115 @@ main {
                 padding-bottom: 100px;
                 font-size: 0.9rem;
                 @include responsive(large-screens) {
-                    width: 30%;
+                    width: 32%;
+                    
+                    
                     margin-left: 55%;
+                    color: #646464;
+                    font-size: 1.1rem;
+                    font-weight: $font-regular;
                     text-align: left;
+                }
+                span {
+                    display: inline;
+                    color: #ff6000;
                 }
             }
         } // sec2
+
+        .slide1 {
+            position: relative;
+            @include responsive(large-screens) {
+                margin: 0px 0 100px 0;
+             
+                // background-color: #e2e2e2
+            }
+            .box1 {
+                display: flex;
+                width: 100%; height: 100%;
+                border-left: none;
+                border-right: none;
+                overflow: hidden;
+                // background-color: #ff6000;
+
+                @include responsive(large-screens) {
+                    padding: 0px 0 0px 0;
+                }
+                
+                .img-list1 {
+                    display: flex;
+                    width: 500px; 
+                    
+                    @include responsive(large-screens) {
+                        width: 5000px; height: 345px;
+                        animation-name: move1;
+                        animation-duration: 30s;
+                        animation-timing-function: linear;
+                        animation-iteration-count: infinite;
+                        
+                        background-color: transparent;
+                        @keyframes move1 {
+                            0% {
+                             transform: translateX(0%);
+                            }
+                            100% {
+                             transform: translateX(-50%);
+                            }
+                         }
+                    }
+                    
+                   
+                    img {
+                        width: 100%; height: 100%;
+                        @include responsive(large-screens) {
+                            width: 500px; height: 345px;
+                            padding: 0 10px 0 10px;
+                            // border: 2px solid white;
+                        }
+                    }         
+                }
+
+                .img-list2 {
+                    display: flex;
+                    // display: none;
+                    
+                    @include responsive(large-screens) {
+                        width: 5000px; height: 345px;
+                        animation-name: move1;
+                        animation-duration: 30s;
+                        animation-timing-function: linear;
+                        animation-iteration-count: infinite;
+                        
+                        background-color: transparent;
+                        @keyframes move1 {
+                            0% {
+                             transform: translateX(0%);
+                            }
+                            100% {
+                             transform: translateX(-50%);
+                            }
+                         }
+                    }
+                    
+                   
+                    img {
+                        width: 100%; height: 100%;
+                        display: none;
+                        @include responsive(large-screens) {
+                            width: 500px; height: 345px;
+                            padding: 0 10px 0 10px;
+                            display: block;
+                            // border: 2px solid white;
+                        }
+                    }
+                }
+            } // box1
+
+               
+        } // slide1
+
+
+
             .slide2 {
                 position: relative;
                 width: 100%; 
