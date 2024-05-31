@@ -14,7 +14,7 @@
 
     @include responsive(large-screens) {
         position: relative;
-        padding: 0;
+        padding: 0 10px;
     }
 }
 
@@ -30,7 +30,11 @@ main {
         @include title-menu-list();
 
         .content-box {
-            margin-top: 45px;
+            margin-top: 20px;
+
+            @include responsive(large-screens) {
+                 margin-top: 30px;
+            }
 
             @include main-title-box();
 
@@ -45,7 +49,7 @@ main {
                 }
 
                 @include txt-box();
-
+                
                 .paragraph_2,
                 .paragraph_3,
                 .paragraph_4,

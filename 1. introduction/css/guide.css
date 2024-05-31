@@ -399,7 +399,7 @@ main .container .map-box .orange-box .map-txt {
   width: 80%;
 }
 main .container .map-box .orange-box .map-txt p {
-  font-size: 0.8rem;
+  font-size: 0.7rem;
   padding: 20px 20px 0 0;
   color: #fff;
 }
@@ -412,7 +412,7 @@ main .container .map-box .orange-box .map-txt strong {
   padding-top: 10px;
   padding-right: 20px;
   padding-bottom: 20px;
-  font-size: 0.7rem;
+  font-size: 0.6rem;
   color: #fff;
 }
 @media only screen and (min-width: 1024px) {
@@ -550,7 +550,7 @@ main .container .bus-subway .subway .subway-num div .orange {
 main .container .store {
   width: 96%;
   margin: 0 auto;
-  padding-bottom: 80px;
+  margin-bottom: 80px;
   border: 1px solid #c2c2c2;
   border-top: none;
   border-right: none;
@@ -561,13 +561,16 @@ main .container .store {
     width: 90%;
     display: flex;
     align-items: center;
+    padding-left: 110px;
+    padding-bottom: 80px;
+    padding-left: 90px;
   }
 }
 main .container .store img {
   width: 90%;
   height: 100%;
   margin: 0 auto;
-  padding-top: 80px;
+  padding-top: 30px;
   padding-bottom: 20px;
 }
 @media only screen and (min-width: 1024px) {
@@ -582,7 +585,7 @@ main .container .store .store-txt {
 }
 main .container .store .store-txt h3 {
   width: 100%;
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   font-weight: 400;
 }
 @media only screen and (min-width: 1024px) {
@@ -590,24 +593,34 @@ main .container .store .store-txt h3 {
     font-size: 2rem;
     padding-top: 60px;
     padding-bottom: 30px;
-    padding-left: 40px;
+    padding-left: 80px;
   }
 }
 main .container .store .store-txt strong {
   width: 100%;
+  font-size: 1rem;
 }
 @media only screen and (min-width: 1024px) {
   main .container .store .store-txt strong {
     font-size: 1.3rem;
     margin-top: 0;
-    padding-left: 40px;
+    padding-left: 80px;
   }
+}
+main .container .store .store-txt p {
+  font-size: 0.8rem;
+  padding: 20px 0 5px 0;
 }
 @media only screen and (min-width: 1024px) {
   main .container .store .store-txt p {
     width: 75%;
-    padding-left: 40px;
+    padding-left: 80px;
   }
+}
+main .container .store .store-txt .time {
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding-bottom: 30px;
 }
 @media only screen and (min-width: 1024px) {
   main .container .store .store-txt .time {
@@ -615,7 +628,7 @@ main .container .store .store-txt strong {
     font-size: 0.8rem;
     font-weight: 600;
     padding-top: 20px;
-    padding-left: 40px;
+    padding-left: 80px;
   }
 }
 

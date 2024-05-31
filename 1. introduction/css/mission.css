@@ -321,9 +321,23 @@ header .logo-gnb-rightmenu .container .logo-gnb-menu-box .right-menu .mobile-men
   display: block;
 }
 
+main .bi {
+  margin-top: 100px;
+}
+@media only screen and (min-width: 1024px) {
+  main .bi {
+    margin-top: 200px;
+  }
+}
 main .bi .container h2 {
   text-align: center;
   margin-bottom: 25px;
+}
+@media only screen and (min-width: 1024px) {
+  main .bi .container h2 {
+    font-size: 2.5rem;
+    margin-bottom: 60px;
+  }
 }
 main .bi .container .bi-menu {
   display: flex;
@@ -406,7 +420,8 @@ main .bi .container .bi-menu div:last-child a:hover {
     display: flex;
     justify-content: center;
     width: 100%;
-    height: 700px;
+    height: 900px;
+    margin-top: 300px;
   }
 }
 main .bi .container .sec-box .sec1 {
@@ -419,7 +434,12 @@ main .bi .container .sec-box .sec1 {
 }
 main .bi .container .sec-box .sec1 .sec1-box {
   width: 100%;
-  margin-top: 70px;
+  margin-top: 110px;
+}
+@media only screen and (min-width: 1024px) {
+  main .bi .container .sec-box .sec1 .sec1-box {
+    margin-top: 70px;
+  }
 }
 main .bi .container .sec-box .sec1 .sec1-box img {
   width: 25%;
@@ -461,8 +481,14 @@ main .bi .container .sec-box .sec1 .sec1-box p {
   margin: 0 auto;
   padding-top: 30px;
   padding-bottom: 50px;
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   font-weight: 600;
+}
+@media only screen and (min-width: 1024px) {
+  main .bi .container .sec-box .sec1 .sec1-box p {
+    width: 55%;
+    font-size: 1.2rem;
+  }
 }
 main .bi .container .sec-box .sec1 .plus {
   position: relative;
@@ -476,7 +502,7 @@ main .bi .container .sec-box .sec1 .plus {
   main .bi .container .sec-box .sec1 .plus {
     width: 80px;
     height: 80px;
-    top: -220px;
+    top: -215px;
     left: 240px;
   }
 }
@@ -551,8 +577,14 @@ main .bi .container .sec-box .sec2 .sec2-box p {
   margin: 0 auto;
   padding-top: 30px;
   padding-bottom: 50px;
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   font-weight: 600;
+}
+@media only screen and (min-width: 1024px) {
+  main .bi .container .sec-box .sec2 .sec2-box p {
+    width: 55%;
+    font-size: 1.2rem;
+  }
 }
 main .bi .container .sec-box .sec2 .plus2 {
   position: relative;
@@ -566,7 +598,7 @@ main .bi .container .sec-box .sec2 .plus2 {
   main .bi .container .sec-box .sec2 .plus2 {
     width: 80px;
     height: 80px;
-    top: -220px;
+    top: -215px;
     left: 240px;
   }
 }
@@ -641,8 +673,14 @@ main .bi .container .sec-box .sec3 .sec3-box p {
   margin: 0 auto;
   padding-top: 30px;
   padding-bottom: 50px;
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   font-weight: 600;
+}
+@media only screen and (min-width: 1024px) {
+  main .bi .container .sec-box .sec3 .sec3-box p {
+    width: 55%;
+    font-size: 1.2rem;
+  }
 }
 main .vission-box .container .vission h2 {
   font-size: 2rem;
@@ -660,7 +698,7 @@ main .vission-box .container .vission p {
   color: #fff;
   border-top-left-radius: 80px;
   border-end-end-radius: 80px;
-  background-color: #ff6000;
+  background: linear-gradient(to right, #ff6000, #d89f90);
 }
 @media only screen and (min-width: 1024px) {
   main .vission-box .container .vission p {
@@ -670,6 +708,12 @@ main .vission-box .container .vission p {
 }
 main .vission-box .container .vission2 {
   margin-top: 100px;
+}
+@media only screen and (min-width: 1024px) {
+  main .vission-box .container .vission2 {
+    margin-top: 300px;
+    margin-bottom: 300px;
+  }
 }
 main .vission-box .container .vission2 strong {
   text-align: center;
@@ -694,7 +738,7 @@ main .vission-box .container .vission2 .flex-box p {
   font-size: 1.2rem;
   color: #fff;
   border-radius: 50%;
-  background-color: #ff6000;
+  background: linear-gradient(to right, #ff6000, #ff6000, #ffffff);
 }
 @media only screen and (min-width: 1024px) {
   main .vission-box .container .vission2 .flex-box p {
@@ -705,10 +749,10 @@ main .vission-box .container .vission2 .flex-box p {
   }
 }
 main .vission-box .container .vission2 .flex-box p:nth-child(3) {
-  background-color: #ff8665;
+  background: linear-gradient(to right, #ff8665, #ff8665, #ffffff);
 }
 main .vission-box .container .vission2 .flex-box p:last-child {
-  background-color: #d89f90;
+  background: linear-gradient(to right, #d89f90, #d89f90, #ffffff);
 }
 main .vission-box .container .vission2 .flex-box .plus-ic {
   font-size: 2rem;

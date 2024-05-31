@@ -108,9 +108,11 @@ main {
                 align-items: center;
                 width: 70%;
                 margin: 0 auto;
-                padding-top: 50px;
+                padding-top: 20px;
                 // background-color: #914c21;
-                
+                @include responsive (large-screens) {
+                    width: 50%;
+                }
                 div:first-child {
                     width: 100%; height: 40px;
                     text-align: center;
@@ -119,12 +121,15 @@ main {
                     font-weight: $font-regular;
                     border: 1px solid #c2c2c2;
                     border-right: none;
-                    background-color: $color-point;
-                    @include responsive(large-screens) {
-
+                    // background-color: #ADB4B0;
+                    @include responsive (large-screens) {
+                        height: 60px;
+                        line-height: 60px;
+                        font-size: 1rem;
+                        font-weight: $font-semibold;
                     }
-                    a {
-                        color: $color-second;
+                    a:hover {
+                        color: $color-point;
                     }
                 }
                 div:nth-child(2) {
@@ -135,10 +140,16 @@ main {
                     font-weight: $font-regular;
                     border: 1px solid #c2c2c2;
                     border-right: none; 
-                    
+                    background-color: $color-point;
+                    @include responsive (large-screens) {
+                        height: 60px; 
+                        line-height: 60px;
+                        font-size: 1rem;
+                        font-weight: $font-semibold;
+                    }
 
-                    a:hover {
-                        color: $color-point;
+                    a {
+                        color: $color-second;
                     }
                 }
                 div:last-child {
@@ -149,6 +160,12 @@ main {
                     font-weight: $font-regular;
                     border: 1px solid #c2c2c2;
                     // background-color: #ADB4B0;
+                    @include responsive (large-screens) {
+                        height: 60px;
+                        line-height: 60px;
+                        font-size: 1rem;
+                        font-weight: $font-semibold;
+                    }
                      a:hover {
                         color: $color-point;
                      }
@@ -172,7 +189,8 @@ main {
         background-image: url(../images/1900_bg.png);
         background-size: cover;
         background-repeat: no-repeat;
-        background-position-x: -700px;
+        background-attachment: fixed;
+        background-position-x: -300px;
         @include responsive(large-screens) {
             position: relative;
             width: 100%;
@@ -313,15 +331,16 @@ main {
                     }
             
                     div.line-circle {
+                      
                         div.vertical-dotted-line {
                             position: absolute; left: 9%; top: 0;
                             border: 0.5px dashed black;
+                           
                             height: 100%;
                             // background-color: black;
                             @include responsive(large-screens) {
-                                position: absolute; top: 50%; left: 50%;
-                                transform: translate(-50%, -50%);
-                                // height: 970px;
+                                position: absolute; left: 50%; 
+                                height: 100%;
                                 // background-color: aqua;
                             }
                             div.vertical-dotted-line2 {
@@ -428,6 +447,7 @@ main {
         background-size: cover;
         background-position-x: -700px;
         background-repeat: no-repeat;
+        background-attachment: fixed;
         // background-color: #c2c2c2;
         @include responsive(large-screens) {       
             // border-bottom: 1px solid black;
@@ -655,9 +675,11 @@ section.box3 {
     background-size: cover;
     // background-position-x: -700px;
     background-repeat: no-repeat;
-    // background-color: #c2c2c2;
+    background-attachment: fixed;
+   
     @include responsive(large-screens) {       
-        background-image: none;
+        background-image: url(../images/2004_bg.png);
+        background-position-x: 255px;
         width: 100%;
         height:600px;
         border: none;
@@ -881,9 +903,9 @@ section.box4 {
     height:auto;
     background-image: url(../images/2011m_bg.png);
     background-size: cover;
+    background-attachment: fixed;
     // background-position-x: -700px;
     background-repeat: no-repeat;
-    // background-color: #c2c2c2;
     @include responsive(large-screens) {       
         border-top: 2px solid #c2c2c2;
         border-bottom: 2px solid #c2c2c2;

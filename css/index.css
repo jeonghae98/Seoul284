@@ -409,12 +409,12 @@ main .main-video video {
 }
 main section.main-intro {
   position: relative;
-  margin-top: 229px;
+  margin-top: -12vh;
   height: 1072px;
 }
 @media only screen and (min-width: 1024px) {
   main section.main-intro {
-    margin-top: 900px;
+    margin-top: -150px;
     height: 1572px;
   }
 }
