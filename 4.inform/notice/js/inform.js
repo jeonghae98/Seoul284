@@ -7,14 +7,14 @@ $(function() {
 
 
     //===================== main =====================
-    let i = 0;
+     // <공통 애니메이션>
+     $('.inform-title').css('opacity', '1');
+     $('.menu-list').css('opacity', '1');
+     $('.content-box').css({
+        'opacity': 1,
+        'transform': 'translateY(0)'
+     });
 
-    $('.list').each(function(i) {
-        $(this).on('click', function() {
-            let num = 5 - i;
-            window.location.href = `./recruitment/detail-page_0${num}.html`;
-        });
-    });
 
     
     //===================== footer =====================

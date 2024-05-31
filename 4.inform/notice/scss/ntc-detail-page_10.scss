@@ -14,7 +14,7 @@
 
     @include responsive(large-screens) {
         position: relative;
-        padding: 0;
+        padding: 0 10px;
     }
 }
 
@@ -30,15 +30,22 @@ main {
         @include title-menu-list();
 
         .content-box {
-            margin-top: 45px;
+            margin-top: 20px;
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 1s ease, transform 1s ease;
+            
+            @include responsive(large-screens) {
+                 margin-top: 30px;
+            }
 
             @include main-title-box();
 
             .txt-box {
                 // height: 1000px;
                 padding: 75px 0;
-                border-top: 1px solid $inform-line-gray;
-                border-bottom: 1px solid $inform-line-gray;
+                border-top: 2px solid $inform-line-gray;
+                border-bottom: 2px solid $inform-line-gray;
 
                 @include responsive(large-screens) {
                     padding: 50px 0;
@@ -49,7 +56,7 @@ main {
                 .paragraph_2,
                 .paragraph_3,
                 .paragraph_4 {
-                    margin-top: 150px;
+                    margin-top: 70px;
 
                     @include responsive(large-screens) {
                         margin-top: 80px;
