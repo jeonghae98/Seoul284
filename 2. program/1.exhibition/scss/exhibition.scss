@@ -22,7 +22,7 @@ header {
 //***********main***********
 main {
     .intro-page {
-        width: $width-wide;
+        width: 100%;
         height: 795px;
         background-color: azure;
 
@@ -33,20 +33,28 @@ main {
                 font-size: 150px;
                 font-weight: $font-semibold;
                 text-align: center;
+                // background-color: blue;
+                @include responsive(large-screens) {
+                    
+                }
             }
 
+            
+
             h2 {
+                padding-left: 250px;
+                transform: translateY(-280px);
+                // background-color: #1a1a1a;
                 font-size: 150px;
                 opacity: 0.2;
-                transform: translateX(180px) translateY(-280px);
                 text-align: center;
+
             }
         }
 
         p {
             font-size: 30px;
             text-align: center;
-            transform: translateY(-100px)
         }
     }
 
