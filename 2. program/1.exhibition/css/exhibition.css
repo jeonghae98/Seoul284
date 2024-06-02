@@ -379,15 +379,15 @@ main .intro-page .intro-text h1 {
   text-align: center;
 }
 main .intro-page .intro-text h2 {
+  padding-left: 250px;
+  transform: translateY(-280px);
   font-size: 150px;
   opacity: 0.2;
-  transform: translateX(180px) translateY(-280px);
   text-align: center;
 }
 main .intro-page p {
   font-size: 30px;
   text-align: center;
-  transform: translateY(-100px);
 }
 main .content-page {
   /* form */
