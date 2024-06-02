@@ -31,6 +31,11 @@
         position: relative;
         z-index: 100;
         border-bottom: 1px solid $line-gray;
+
+        @include responsive(large-screens) {
+            height: 270px;
+            background-color: $color-second;
+        }
     }
 
 
