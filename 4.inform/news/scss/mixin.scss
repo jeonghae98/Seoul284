@@ -119,17 +119,15 @@
 
         .attachment-title {
             margin-right: 20px;
-            width: 200px;
             font: {
                 weight: $font-regular;
-                size: 1.333rem;
+                size: 1.167rem;
             }
             // background-color: aquamarine;
 
             @include responsive(large-screens) {
                 margin-right: 45px;
-                width: 90px;
-                font-size: 1.5rem; 
+                font-size: 1.333rem; 
             }
         }
 

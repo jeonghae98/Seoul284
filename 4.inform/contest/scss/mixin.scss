@@ -172,27 +172,24 @@
 @mixin attachment-box() {
     .attachment-box {
         display: flex;
-        // height: 200px;
-        padding: 45px 0;
-        border-bottom: 1px solid $inform-line-gray;
+        padding: 30px 0;
+        border-bottom: 2px solid $inform-line-gray;
 
         @include responsive(large-screens) {
             padding: 35px 0;
         }
 
         .attachment-title {
-            margin-right: 35px;
-            width: 250px;
+            margin-right: 20px;
             font: {
                 weight: $font-regular;
-                size: 2rem;  // 26pt
+                size: 1.167rem;
             }
             // background-color: aquamarine;
 
             @include responsive(large-screens) {
                 margin-right: 45px;
-                width: 90px;
-                font-size: 1.5rem;  // 18pt 
+                font-size: 1.333rem; 
             }
         }
 
@@ -200,7 +197,7 @@
             ul {
                 li {
                     a {
-                        font-size: 1.667rem;  // 20pt
+                        font-size: 1rem;
                         color: $color-gray;
 
                         &:hover {
@@ -208,7 +205,7 @@
                         }
 
                         @include responsive(large-screens) {
-                            font-size: 1.333rem;  // 16pt 
+                            font-size: 1.167rem;  // 16pt 
                         }
                     }
                 }

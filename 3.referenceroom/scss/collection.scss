@@ -115,7 +115,7 @@ header {
                     transform: scale(1.1);
                 }
                 .content-title-txt {
-                    padding: 20px 20px 25px;
+                    padding: 20px 10px;
 
                     @include responsive(large-screens) {
                         padding: 30px 30px 50px;
@@ -204,13 +204,13 @@ header {
             display: flex;
             justify-content: flex-start;
             align-items: center;
-            width: 205px;
+            width: 275px;
             margin: auto;
 
-            // background-color: aquamarine;
+            background-color: aquamarine;
 
             @include responsive(large-screens) {
-                width: 215px;
+                width: 290px;
             }
 
             li {
@@ -247,8 +247,10 @@ header {
             .single-left-arrow {
                 padding-right: 32px;
             }
-            .num1 {
-                padding-right: 45px;
+            .num1,
+            .num2,
+            .num3 {
+                padding-right: 32px;
             }
             .single-right-arrow {
                 padding-left: 32px;

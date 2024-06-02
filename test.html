@@ -43,13 +43,11 @@
         $owl.owlCarousel({
             center: true,
             loop: true,
-            items: 3,
-            startPosition: 1 // 처음 로드 시 2번 아이템이 가운데 오도록 설정
+            items: 5,
         });
 
         $(document).on('click', '.owl-item>div', function() {
-            var index = $(this).parent().attr('data-position');
-            $owl.trigger('to.owl.carousel', index);
+            $owl.trigger('to.owl.carousel', $(this).data('position'));
         });
     });
     </script>
@@ -57,10 +55,22 @@
     <title>Owl Carousel Example</title>
 </head>
 <body>
-    <div class="owl-carousel">
-        <div>Item 1</div>
-        <div>Item 2</div>
-        <div>Item 3</div>
-    </div>
+    <section class="owl-carousel-section">
+        <div class="owl-carousel">
+            <div>Item 1</div>
+            <div>Item 2</div>
+            <div>Item 3</div>
+            <div>Item 4</div>
+            <div>Item 5</div>
+            <div>Item 6</div>
+            <div>Item 7</div>
+            <div>Item 8</div>
+            <!-- Add more items as needed -->
+        </div>
+    </section>
+
+    <section>
+        <!-- Your other sections -->
+    </section>
 </body>
 </html>

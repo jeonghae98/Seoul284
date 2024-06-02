@@ -439,7 +439,9 @@ main {
                 font-size: 2.5rem; 
                 line-height: 1.2;
                 color: $color-second;
-
+                opacity: 0;
+                transition: opacity 1s ease 1s;
+                
                 @include responsive(large-screens) {
                     margin-left: 9%;
                     margin-top: 5px;
@@ -447,19 +449,6 @@ main {
                     font-size: 4.5rem;
                 }
             }
-    
-            // .main-collection-col-line {
-            //     position: absolute;
-            //     right: 200px; top: -55px;
-            //     width: 1px;
-            //     height: 300px;
-            //     border: 1px solid $line-white;
-    
-            //     @include responsive(large-screens) {
-            //         right: 404px; top: -111px;
-            //         height: 355px;
-            //     }
-            // }
     
             .main-collection-content {
                 display: flex;
@@ -479,6 +468,9 @@ main {
                 }
 
                 .collection-text {
+                    opacity: 0;
+                    transition: opacity 1s ease 1.5s;
+
                     @include responsive(large-screens) {
                         padding-left: 10px;
                     }
@@ -486,7 +478,8 @@ main {
                         font-weight: $font-regular;
                         font-size:0.9rem; 
                         color: $color-second;
-                        
+                       
+
                         @include responsive(large-screens) {
                             font-size:1.4rem;  // 26pt
                             padding-top: 30px;
@@ -502,6 +495,9 @@ main {
                     @include responsive(large-screens) {
                         display: block;
                         margin-bottom: 45px;
+                        opacity: 0;
+                        transition: opacity 1s ease 2s;
+
                         // background-color: lightgreen;
                     }
 
@@ -521,10 +517,14 @@ main {
                     }
                 }
     
-                .detail-button {
+                .col-btn {  // detail-button
                     margin-right: -15px;
+                    opacity: 0;
+                    transition: opacity 1s ease 2s;
+                    
                     @include responsive(large-screens) {
                         margin-right: 300px;
+                        transition: opacity 1s ease 2.5s;
                     }
                     .circle-text {
                         color: $color-second;
@@ -545,7 +545,8 @@ main {
                 margin-top: 35px;
                 width: 100%;  // 600px
                 height: 100%;
-              
+                opacity: 0;
+                transition: opacity 1s ease 2.2s;
                 // background-color: lightblue;
 
                 @include responsive(large-screens) {
@@ -633,6 +634,9 @@ main {
             margin-left: 5%;
             margin-bottom: 5%;
             font-size: 2.5rem; 
+            opacity: 0;
+            transition: opacity 1s;
+            
             @include responsive(large-screens) {
                 margin-bottom: 65px;
                 font-size: 5rem;  
@@ -1086,7 +1090,7 @@ main {
                 }
             }
     
-            .detail-button {
+            .info-btn {
                 margin-right: 5.9%;
 
                 @include responsive(large-screens) {
@@ -1397,6 +1401,13 @@ main {
                         }
                     }
                }  // content-box1/2
+
+               .content-box1 {
+                    @include responsive(large-screens) {
+                        position: relative;
+                        // top: -1400px;
+                    }
+               }
             }  // inform-content-box
         }  // container-none
     }  // inform
@@ -1553,7 +1564,7 @@ main {
                     width: 45%;
                     text-align: left;
                     // background-color: lightcyan;
-                    
+                   
                     .sns-title {
                         width: $width-wide;
                         margin-bottom: 15px;
@@ -1582,6 +1593,18 @@ main {
                             font-size: 1.3rem;
                         }
                     }
+                }
+
+                .left-txt {
+                    opacity: 0;
+                    transform: translateX(-15px);
+                    transition: opacity 1.5s ease, transform 1s ease;
+                }
+
+                .right-txt {
+                    opacity: 0;
+                    transform: translateX(15px);
+                    transition: opacity 1.5s ease, transform 1s ease;
                 }
 
                 .sns-img {

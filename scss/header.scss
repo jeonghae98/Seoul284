@@ -25,9 +25,25 @@
         height: 150px;
     }
 
+    &.active {
+        // position: absolute;
+        // top: 5vh;
+        position: relative;
+        z-index: 100;
+        border-bottom: 1px solid $line-gray;
+    }
+
+
     .logo-gnb-rightmenu {
         height: $height-wide;
+        @include responsive(large-screens) {
+            position: relative;
+        }
 
+        &.active {
+            background-color: $color-second;
+        }
+    
         .container {
             height: $height-wide;
             
@@ -38,12 +54,6 @@
                 width: $width-wide;
                 height: $height-wide;
                 // background-color: brown;
-
-                // &.active {
-                //     position: relative;
-                //     z-index: 2000;
-                //     border-bottom: 2px solid $line-gray;
-                // }
 
                 @include responsive(large-screens) {
                     position: relative;
@@ -77,7 +87,8 @@
                     @include responsive(large-screens) {
                         display: block;
                         position: absolute; 
-                        left: 0; top: 55px; 
+                        left: 0;
+                        top: 55px; 
                         z-index: 5;
                         width: $width-wide; 
                         height: 80px; 
@@ -98,7 +109,14 @@
 
                     .gnb {
                         margin-top: 50px;
+                        margin-bottom: 100px;
                         padding-left: 30px;
+
+                        // &.active {
+                        //     position: absolute;
+                        //     top: 5vh;
+                        //     border-top: 1px solid $line-gray;
+                        // }
 
                         @include responsive(large-screens) {
                             display: flex; 
@@ -132,7 +150,7 @@
                                         size: 1.1rem;  
                                         weight: $font-regular;
                                     }
-    
+                                    // color: $color-second;
                                 }
 
                                 

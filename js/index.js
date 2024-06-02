@@ -20,19 +20,25 @@ $(function() {
         
         if ($('.main-menu').hasClass('active')) {
             $('body').addClass('stop-scroll');
+            $('.logo-gnb-rightmenu').addClass('active');
             $('.main-menu').css({
                 'display': 'block',
                 'position': 'fixed',
-                'top': 0,
+                'top': '12vh',
                 'right': 0,
-                // 'borderTop': '1px solid #dbdbdb',
+                'borderTop': '1px solid #dbdbdb',
                 'width': '100%',
                 'height': '100%',
                 'background-color': '#fff'
             });
+            $('.fixed-menu').css('display', 'none');
         } else {
             $('body').removeClass('stop-scroll');
+            $('.logo-gnb-rightmenu').removeClass('active');
             $('.main-menu').css('display', 'none');
+            $('.fixed-menu').css('display', 'block');
+
+            // $('.gnb').removeClass('active');
         }
         
         // #sub-menu 나오게 하기
@@ -231,7 +237,7 @@ $(function() {
 
     // ****intro-btn*****
     $('.intro-btn').click(function() {
-        window.location.href = '.././1. introduction/intro.html'
+        window.location.href = '.././1.introduction/intro.html'
     });
         
     //--------------------- collection ---------------------
@@ -253,7 +259,7 @@ $(function() {
     });
 
 
-    // <line>
+    // <line&text>
     $(window).scroll(function() {
         var scrollPosition = $(this).scrollTop();  // 수직 스크롤바의 위치 인식
         var colOffset = $('.main-collection').offset().top;
@@ -261,23 +267,32 @@ $(function() {
         var windowWidth = $(window).width();
 
         if(scrollPosition > (colOffset - windowHeight)) {
-            if(windowWidth < 768) {
-
-            }
-            else {
+            if(windowWidth > 768) {
                 $('.collection-line').animate({
                     height: '1238px'
-                  }, 3000);
+                  }, 2000);
     
-                $('.main-collection-row-line').animate({
-                    width: '100%'
-                }, 3000);
+                $('.main-collection-list').css('opacity', '1');
             }
+
+
+            // <공통>
+            $('.main-collection-row-line').animate({
+                width: '100%'
+            }, 2000);
+            $('.collection-title').css('opacity', '1');
+            $('.collection-text').css('opacity', '1');
+            $('.col-btn').css('opacity', '1');
+            $('.collection-image').css('opacity', '1');
         }
     }); 
-    // var parallelogramTopMiddle = $('.parallelogram').offset().top + ($('.parallelogram').outerHeight() / 2);
+    
+    
+    // ****intro-btn*****
+    $('.col-btn').click(function() {
+        window.location.href = '.././3.referenceroom/collection.html'
+    });
 
-    // console.log(parallelogramTopMiddle); // 콘솔에 출력하여 확인
 
     //--------------------- exhibition ---------------------
     $(window).scroll(function() {
@@ -289,6 +304,7 @@ $(function() {
  
         // console.log(scrollPos);
         // console.log(scrollLimit);
+      
 
         if (scrollPos <= scrollLimit) {  // 애니메이션 초기화
             
@@ -346,6 +362,7 @@ $(function() {
         var windowHeight = $(window).height();
         var windowMiddle = $(window).scrollTop() + windowHeight / 2;
         var mainWindowWidth = $(window).width();
+        $('.exhibition-title').css('opacity', '1');
     
         $('.exhibition-content .ex').each(function() {
             var $img = $(this).find('.ex-img > img');
@@ -415,30 +432,86 @@ $(function() {
         chgBox();
     });
 
-
     // <animation>
-    $('.inform').on('scroll', function() {
+    // $(window).on('scroll', function() {
 
-        function moveBox() {
-            var informWindowWidth = $(window).width();
-            var $scrollTop = $(window).scrollTop();
-            var informOffset = $('.inform').offset().top;
+    //     function moveBox() {
+    //         var informWindowWidth = $(window).width();
+    //         var $scrollTop = $(window).scrollTop();
+    //         var informOffset = $('.inform').offset().top;
             
-            if($scrollTop > informOffset) {
-                if (informWindowWidth < 768) {
+    //         if($scrollTop > informOffset) {
+    //             if (informWindowWidth < 768) {
                
-                } else {
-                   $('.content-box1').animate({
-                    
-                   }, 2000)
-                }
-            }
+    //             } else {
+    //                $('.content-box1').css({
+    //                     'top': '1400px'
+    //                })
+    //             }
+    //         }
             
+    //     }
+
+    //     moveBox();
+    // });
+    // var $owl = $('.content-box1');
+
+    // $owl.children().each(function(index) {
+    //     $(this).attr('data-position', index); 
+    // });
+
+    // $owl.owlCarousel({
+    //     center: true,
+    //     loop: true,
+    //     items: 3,
+    //     startPosition: 1 // 처음 로드 시 2번 아이템이 가운데 오도록 설정
+    // });
+
+    // $(document).on('click', '.content-box1 > div', function() {
+    //     var index = $(this).parent().attr('data-position');
+    //     $owl.trigger('to.content-box1', index);
+    // });
+
+    
+    // ****info-btn*****
+    $('.info-btn').click(function() {
+        window.location.href = '.././4.inform/notice.html'
+    });
+
+    //--------------------- sns ---------------------
+       $(window).scroll(function() {
+        var scrollPos = $(this).scrollTop();
+        var snsOffset = $('.main-sns').offset().top;
+        var windowHeight = $(window).height(); 
+        var scrollLimit = snsOffset - windowHeight; // 초기화할 스크롤 위치
+
+        if(scrollPos > scrollLimit) {
+            $('.left-txt').css({
+                'opacity': 1,
+                'transform': 'translateX(0)'
+            });
+
+            $('.right-txt').css({
+                'opacity': 1,
+                'transform': 'translateX(0)'
+            });
         }
 
-        moveBox();
+       });
+
+
+    // <sns 연결>
+    $('.youtube .sns-img').click(function() {
+        window.location.href = 'https://www.youtube.com/seoul284official'
     });
-   
+
+    ('.instagram .sns-img').click(function() {
+        window.location.href = 'https://www.instagram.com/culturestationseoul284/'
+    });
+
+    ('.facebook .sns-img').click(function() {
+        window.location.href = 'https://www.facebook.com/seoul284/?locale=ko_KR'
+    });
     //===================== footer =====================
     function updateFooterLogo() {
         var footerWindowWidth = $(window).width();
