@@ -109,6 +109,18 @@ header {
     height: 150px;
   }
 }
+
+header.active {
+  position: relative;
+  z-index: 100;
+  border-bottom: 1px solid #dbdbdb;
+}
+@media only screen and (min-width: 1024px) {
+  header.active {
+    height: 270px;
+    background-color: #fff;
+  }
+}
 header .logo-gnb-rightmenu {
   height: 100%;
 }

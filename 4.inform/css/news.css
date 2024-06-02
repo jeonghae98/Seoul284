@@ -122,6 +122,12 @@ header.active {
   z-index: 100;
   border-bottom: 1px solid #dbdbdb;
 }
+@media only screen and (min-width: 1024px) {
+  header.active {
+    height: 270px;
+    background-color: #fff;
+  }
+}
 header .logo-gnb-rightmenu {
   height: 100%;
 }
@@ -426,7 +432,7 @@ main .news .news-content-box {
 }
 @media only screen and (min-width: 1024px) {
   main .news .news-content-box {
-    margin: 30px 0 60px;
+    margin: 30px 0 160px;
   }
 }
 main .news .news-content-box div.row-box {
@@ -528,49 +534,6 @@ main .news .news-content-box div.row-box .box:hover .news-txt {
 main .news .news-content-box div.row-box .box:hover .news-txt .news-content-title,
 main .news .news-content-box div.row-box .box:hover .news-txt time {
   color: #fff;
-}
-main .news .page-number {
-  margin: auto;
-  margin: -100px 0 180px;
-}
-@media only screen and (min-width: 1024px) {
-  main .news .page-number {
-    margin: 0 0 160px;
-  }
-}
-main .news .page-number ul {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  width: 205px;
-  margin: auto;
-}
-@media only screen and (min-width: 1024px) {
-  main .news .page-number ul {
-    width: 215px;
-  }
-}
-main .news .page-number ul li a {
-  font-size: 1.167rem;
-}
-@media only screen and (min-width: 1024px) {
-  main .news .page-number ul li a {
-    font-size: 1.333rem;
-  }
-}
-main .news .page-number ul .single-left-arrow {
-  padding-right: 32px;
-}
-main .news .page-number ul .number a:hover {
-  color: #ff6000;
-  -webkit-text-decoration: underline #ff6000;
-          text-decoration: underline #ff6000;
-}
-main .news .page-number ul .num1 {
-  padding-right: 45px;
-}
-main .news .page-number ul .single-right-arrow {
-  padding-left: 32px;
 }
 
 footer {

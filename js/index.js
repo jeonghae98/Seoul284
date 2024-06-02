@@ -444,26 +444,48 @@ $(function() {
     });
 
     //--------------------- sns ---------------------
-       $(window).scroll(function() {
-        var scrollPos = $(this).scrollTop();
-        var snsOffset = $('.main-sns').offset().top;
-        var windowHeight = $(window).height(); 
-        var scrollLimit = snsOffset - windowHeight; // 초기화할 스크롤 위치
+    //    $(window).scroll(function() {
+    //     var snsOffset = $('.main-sns').offset().top;
+    //     var windowHeight = $(window).height();
+    //     var windowMiddle = $(window).scrollTop() + windowHeight / 2;
 
-        if(scrollPos > scrollLimit) {
-            $('.left-txt').css({
-                'opacity': 1,
-                'transform': 'translateX(0)'
-            });
 
-            $('.right-txt').css({
-                'opacity': 1,
-                'transform': 'translateX(0)'
-            });
-        }
+    //     $('.content-txt').each(function() {
+    //         if (windowMiddle > snsOffset && $('.content-txt').css('opacity') == 0) {
+    //             $('.left-txt').css({
+    //                 'opacity': 1,
+    //                 'transform': 'translateX(0)'
+    //             });
+    
+    //             $('.right-txt').css({
+    //                 'opacity': 1,
+    //                 'transform': 'translateX(0)'
+    //             });
+    //         }
+    //     })
+    // });
 
-       });
-
+    $(window).scroll(function() {
+        var windowHeight = $(window).height();
+        var windowMiddle = $(window).scrollTop() + windowHeight / 2;
+    
+        $('.content-txt').each(function() {
+            var txtOffset = $(this).offset().top;
+            if (windowMiddle > txtOffset && $(this).css('opacity') == 0) {
+                $('.left-txt').css({
+                    'opacity': 1,
+                    'transform': 'translateX(0)'
+                });
+    
+                $('.right-txt').css({
+                    'opacity': 1,
+                    'transform': 'translateX(0)'
+                });
+            }
+        });
+    });
+    
+       
 
     // <sns 연결>
     $('.youtube .sns-img').click(function() {

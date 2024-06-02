@@ -98,7 +98,7 @@ main {
             margin: 60px 0 180px;
 
             @include responsive(large-screens) {
-                margin: 30px 0 60px;
+                margin: 30px 0 160px;
             }
 
             div.row-box {
@@ -218,57 +218,6 @@ main {
                 } // box  point             
             }  // row-box
         }  // news-content-box
-
-
-        .page-number {
-            margin: auto;
-            margin: -100px 0 180px;
-            // background-color: aqua;
-
-            @include responsive(large-screens) {
-                margin: 0 0 160px;
-            }
-            ul {
-                display: flex;
-                justify-content: flex-start;
-                align-items: center;
-                width: 205px;
-                margin: auto;
-                // background-color: aquamarine;
-
-                @include responsive(large-screens) {
-                    width: 215px;
-                }
-
-                li {
-                    a {
-                        font-size: 1.167rem; 
-    
-                        @include responsive(large-screens) {
-                            font-size: 1.333rem;  // 16pt
-                        }
-                    }
-                }
-
-                .single-left-arrow {
-                    padding-right: 32px;
-                }
-                .number {
-                   a {
-                    &:hover {
-                        color: $color-point;
-                        text-decoration: underline $color-point;
-                    }
-                } 
-                }
-                .num1 {
-                    padding-right: 45px;
-                }
-                .single-right-arrow {
-                    padding-left: 32px;
-                }
-            }
-        }  // page-number
     }  // news
 }  // main
 //***********footer***********
