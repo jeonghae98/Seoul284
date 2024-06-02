@@ -105,44 +105,9 @@ $(function() {
     }
 
 
-    // var handlePCMode = function() {
-    //     var pcWindowWidth = window.matchMedia('(min-width: 769px)').matches;
-    
-    //     if (pcWindowWidth) {
-    //         $('.gnb-title').on('mouseenter', function() {
-    //             // 모든 서브메뉴를 내림
-    //             $('.sub-menu').stop().slideDown(500);
-    //             $('.sub-menu').addClass('active');
-    //         }).on('mouseleave', function() {
-    //             // 모든 서브메뉴를 올림
-    //             $('.sub-menu').stop().slideUp(500);
-    //         });
-            
-    //         $('.gnb').on('mouseenter', function() {
-    //             // gnb 내부에서는 아무것도 하지 않음
-    //         }).on('mouseleave', function() {
-    //             // 마우스가 gnb 영역을 벗어났을 때 모든 서브메뉴를 올림
-    //             $('.sub-menu').stop().slideUp(500);
-    //         });
-    //     } else {
-    //         // 모바일일 경우 PC용 hover 이벤트 제거
-    //         $('.gnb-title').off('mouseenter mouseleave');
-    //         $('.gnb').off('mouseenter mouseleave');
-    //         $('.sub-menu').removeClass('active').css('display', '');
-    //     }
-    // };
-    
-    // // 처음 로드 시 실행
-    // handlePCMode();
-    
-    // // 화면 크기 변경 시 다시 실행
-    // $(window).resize(function() {
-    //     handlePCMode();
-    // });
-    
 
-   
 
+    
     //===================== main =====================
     //--------------------- main 공통 ---------------------
     $(".circle-text").html(function() {
@@ -472,7 +437,7 @@ $(function() {
     //     $owl.trigger('to.content-box1', index);
     // });
 
-    
+
     // ****info-btn*****
     $('.info-btn').click(function() {
         window.location.href = '.././4.inform/notice.html'
