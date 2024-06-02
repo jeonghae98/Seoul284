@@ -63,7 +63,7 @@ main {
 
         .sec1 {
             @include responsive(large-screens) {
-                height: 1000px;
+                height: 1050px;
                 text-align: center;
                 margin: 0px 0 0px 0;
                 // border-top: 1px solid #dddddd;
@@ -132,13 +132,13 @@ main {
             @include responsive(large-screens) {
                 float: right;
                 width: 100%;
-                margin: 0px 0 100px 0;
+                margin: 0px 0 0px 0;
                 text-align: center;
-                background-image: url(../images/sec2_bg.png);
+                background-image: url(../images/sec2_bg\ \(2\).png);
                 background-size: cover;
                 background-repeat: no-repeat;
                 background-attachment: fixed;
-                height: 1000px;
+                height: 1020px;
                 // background-color: #dddddd;
                 border-bottom: none;
             }
@@ -186,11 +186,125 @@ main {
         } // sec2
 
         .slide1 {
-            position: relative;
+           
             @include responsive(large-screens) {
-                margin: 0px 0 100px 0;
+                width: 100%;
+                margin: 0px 0 0px 0;
              
-                // background-color: #e2e2e2
+
+            }
+            .box1 {
+                display: flex;
+                width: 100%; height: 100%;
+                border-left: none;
+                border-right: none;
+                overflow: hidden;
+                margin-bottom: 300px;
+              
+              
+                @include responsive(large-screens) {
+                    padding: 0px 0 0px 0;
+                    background-image: url(../images/sd_bg.png);
+                    background-repeat: no-repeat;
+                    background-size: cover;
+    
+                }
+                .img-list {
+                    display: flex;
+                    width: 500px; 
+                    text-align: center;
+                    @include responsive(large-screens) {
+                        display: none;
+                    }
+
+                    img {
+                        width: 100%;
+                    }
+                
+                } 
+                
+                .img-list1 {
+                    display: none;
+                    width: 500px; 
+                    
+                    @include responsive(large-screens) {
+                        display: flex;
+                        width: 5000px; height: 1000px;
+                        padding-top: 300px;
+                      
+
+                        animation-name: move1;
+                        animation-duration: 30s;
+                        animation-timing-function: linear;
+                        animation-iteration-count: infinite;
+                    
+                        @keyframes move1 {
+                            0% {
+                             transform: translateX(0%);
+                            }
+                            100% {
+                             transform: translateX(-50%);
+                            }
+                         }
+                    }
+                    
+                   
+                    img {
+                        width: 100%; height: 100%;
+                        @include responsive(large-screens) {
+                            width: 500px; height: 345px;
+                            padding: 0 10px 0 10px;
+                            // border: 2px solid white;
+                        }
+                    }         
+                }
+
+                .img-list2 {
+                    display: none;
+                    
+                    @include responsive(large-screens) {
+                        display: flex;
+                        width: 5000px; height: 345px;
+                        animation-name: move1;
+                        animation-duration: 30s;
+                        animation-timing-function: linear;
+                        animation-iteration-count: infinite;
+                       
+                        @keyframes move1 {
+                            0% {
+                             transform: translateX(0%);
+                            }
+                            100% {
+                             transform: translateX(-50%);
+                            }
+                         }
+                    }
+                    
+                   
+                    img {
+                        width: 100%; height: 100%;
+                        display: none;
+                        @include responsive(large-screens) {
+                            width: 500px; height: 345px;
+                            padding: 0 10px 0 10px;
+                            display: block;
+                            // border: 2px solid white;
+                        }
+                    }
+                }
+            } // box1
+
+               
+        } // slide1
+
+
+        .slide1-2 {
+        
+            @include responsive(large-screens) {
+                width: 100%;
+                margin: 0px 0 1px 0;
+             
+
             }
             .box1 {
                 display: flex;
@@ -203,12 +317,20 @@ main {
                 @include responsive(large-screens) {
                     padding: 0px 0 0px 0;
                 }
+                .img-list {
+                    display: flex;
+                    width: 500px; 
+                    @include responsive(large-screens) {
+                        display: none;
+                    }
+                } 
                 
                 .img-list1 {
-                    display: flex;
+                    display: none;
                     width: 500px; 
                     
                     @include responsive(large-screens) {
+                        display: flex;
                         width: 5000px; height: 345px;
                         animation-name: move1;
                         animation-duration: 30s;
@@ -238,10 +360,10 @@ main {
                 }
 
                 .img-list2 {
-                    display: flex;
-                    // display: none;
+                    display: none;
                     
                     @include responsive(large-screens) {
+                        display: flex;
                         width: 5000px; height: 345px;
                         animation-name: move1;
                         animation-duration: 30s;
@@ -272,80 +394,38 @@ main {
                     }
                 }
             } // box1
+            
+        } // slide1-2
+        .btn {
+            position: absolute; top: 190%; left: 50%;
+            transform: translate(-50%);
+            width: 30%; height: 50px;
+            margin: 0 auto;
+            margin-bottom: 200px;
+            margin-top: 50px;
+            background-color: white;
+            border: 1px solid black;
+            @include responsive(large-screens) {
+                width: 20%;
+                top: 320%;
+            }
+            a {
+                font-size: 0.9rem;
+                font-weight: $font-semibold;
+                text-align: center;
+                line-height: 50px;
+                @include responsive(large-screens) {
 
-               
-        } // slide1
+                    font-size: 1rem;
+                }
+                
+            }
+        }
 
 
 
-            .slide2 {
-                position: relative;
-                width: 100%; 
-                margin-bottom:200px;
-                background-color: aqua;
-                .bg-box {
-                    width: 100%;
-                    height:100%;
-                    img {
-                        width: 100%; height:100%;
-                    }
-                    .shadow-bg {
-                        position: absolute; top: 0;
-                        z-index: 100;
-                        width: 100%; height:100%;   
-                        background-color: rgba(0,0,0,0.8);
-    
-                        .floor{
-                            display: flex;
-                            justify-content: space-between;
-                            width: 35%;
-                            margin: 0 auto;
-                            padding-top: 20px;
-                            h2 {
-                                a {
-                                    font-size: 3rem;
-                                    color:#dddddd;
-                                }
-                            }
-                        }
-                        .img-box {
-                            width: 100%; height: auto;
-                            margin: 0 auto;
-                            
-                            img {
-                                width: 90%; height: auto;
-                                margin: 0 auto;
-                                padding-top: 30px;
-                            }
-                        } 
-                        .btn {
-                            width: 100%;
-                            p {
-                                width: 100%;
-                                display: flex;
-                               
-                                .white  {
-                                    font-weight: bold;
-                                }
-                                color: white;
-                            }
-                        }
-                        .txt-box {
-                            width: 90%; height: auto;
-                            margin: 0 auto;
-                            
-                            
-                            h2 {
-                                font-size:1rem;
-                                color: white;
-                            }
-                            p {
-                                color: white;
-                            }
-                        }
-                    } // shadow-bg
-                } //bg-box
-            } // slide2
+                      
+        
           
     } // space
 }

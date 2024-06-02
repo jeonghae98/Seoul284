@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+    .owl-carousel {
+        display: flex;
+        overflow: hidden;
+    }
+
+    .owl-item {
+        width: 200px;
+        margin: 0 10px;
+    }
+
+    .owl-item>div {
+        width: 100%;
+        height: 100px;
+        background-color: #f3f3f3;
+        border: 1px solid #ccc;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    }
+    </style>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+    <script>
+    $(document).ready(function(){
+        var $owl = $('.owl-carousel');
+
+        $owl.children().each(function(index) {
+            $(this).attr('data-position', index); 
+        });
+
+        $owl.owlCarousel({
+            center: true,
+            loop: true,
+            items: 5,
+        });
+
+        $(document).on('click', '.owl-item>div', function() {
+            $owl.trigger('to.owl.carousel', $(this).data('position'));
+        });
+    });
+    </script>
+
+    <title>Owl Carousel Example</title>
+</head>
+<body>
+    <section class="owl-carousel-section">
+        <div class="owl-carousel">
+            <div>Item 1</div>
+            <div>Item 2</div>
+            <div>Item 3</div>
+            <div>Item 4</div>
+            <div>Item 5</div>
+            <div>Item 6</div>
+            <div>Item 7</div>
+            <div>Item 8</div>
+            <!-- Add more items as needed -->
+        </div>
+    </section>
+
+    <section>
+        <!-- Your other sections -->
+    </section>
+</body>
+</html>

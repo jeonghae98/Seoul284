@@ -29,6 +29,13 @@ main {
             h2 {
                 text-align: center;
                 margin-bottom: 25px;
+                animation-duration: 2s;
+                animation-name: move;
+
+                @keyframes move {
+                    from { opacity: 0; }
+                    to { opacity: 1; }
+                }
                 @include responsive (large-screens) {
                     font-size: 2.5rem;
                     margin-bottom: 60px;
@@ -42,6 +49,14 @@ main {
                 margin: 0 auto;
                 padding-top: 20px;
                 // background-color: #914c21;
+                animation-duration: 2s;
+                animation-name: move;
+
+                @keyframes move {
+                    from { opacity: 0; }
+                    to { opacity: 1; }
+                }
+
                 @include responsive (large-screens) {
                     width: 50%;
                 }
@@ -373,9 +388,10 @@ main {
 
             .vission2 {
                 margin-top: 100px;
+                margin-bottom: 200px;
                 @include responsive (large-screens) {
                     margin-top: 300px;
-                    margin-bottom: 300px;
+                    margin-bottom: 500px;
                     // background-color: #d89f90;
                 }
                 strong {

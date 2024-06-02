@@ -121,8 +121,27 @@ header {
     height: 150px;
   }
 }
+header.active {
+  position: relative;
+  z-index: 100;
+  border-bottom: 1px solid #dbdbdb;
+}
+@media only screen and (min-width: 1024px) {
+  header.active {
+    height: 270px;
+    background-color: #fff;
+  }
+}
 header .logo-gnb-rightmenu {
   height: 100%;
+}
+@media only screen and (min-width: 1024px) {
+  header .logo-gnb-rightmenu {
+    position: relative;
+  }
+}
+header .logo-gnb-rightmenu.active {
+  background-color: #fff;
 }
 header .logo-gnb-rightmenu .container {
   height: 100%;
@@ -187,6 +206,7 @@ header .logo-gnb-rightmenu .container .logo-gnb-menu-box .main-menu.active {
 }
 header .logo-gnb-rightmenu .container .logo-gnb-menu-box .main-menu .gnb {
   margin-top: 50px;
+  margin-bottom: 100px;
   padding-left: 30px;
 }
 @media only screen and (min-width: 1024px) {
@@ -704,16 +724,29 @@ footer .footerlogo-info .footer-content-box .footer-info-box .copyright p {
 }
 footer .fixed-menu {
   position: fixed;
-  right: 60px;
-  bottom: 100px;
+  right: 30px;
+  bottom: 50px;
   z-index: 10;
 }
+@media only screen and (min-width: 1024px) {
+  footer .fixed-menu {
+    right: 60px;
+    bottom: 100px;
+  }
+}
 footer .fixed-menu a {
-  width: 50px;
-  height: 50px;
-  line-height: 50px;
+  width: 35px;
+  height: 35px;
+  line-height: 35px;
   border-radius: 50%;
   text-align: center;
   color: #fff;
   background-color: #000;
+}
+@media only screen and (min-width: 1024px) {
+  footer .fixed-menu a {
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+  }
 }/*# sourceMappingURL=ntc-detail-page_07.css.map */
