@@ -30,15 +30,22 @@ main {
         @include title();
 
         .content-box {
-            margin-top: 45px;
+            margin-top: 20px;
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 1s ease, transform 1s ease;
+            
+            @include responsive(large-screens) {
+                 margin-top: 30px;
+            }
 
             @include main-title-box();
 
             .txt-box {
                 // height: 1000px;
                 padding: 75px 0;
-                border-top: 1px solid $inform-line-gray;
-                border-bottom: 1px solid $inform-line-gray;
+                border-top: 2px solid $inform-line-gray;
+                border-bottom: 2px solid $inform-line-gray;
 
                 @include responsive(large-screens) {
                     padding: 50px 0;
@@ -46,9 +53,8 @@ main {
 
                 @include txt-box();
                 
-                .paragraph_2,
-                .paragraph_7 {
-                    margin-top: 300px;
+                .paragraph_2 {
+                    margin-top: 150px;
 
                     @include responsive(large-screens) {
                         margin-top: 160px;
@@ -58,11 +64,13 @@ main {
                 .paragraph_3,
                 .paragraph_4,
                 .paragraph_5,
-                .paragraph_6 {
-                    margin-top: 150px;
+                .paragraph_6,
+                .paragraph_7,
+                .paragraph_8 {
+                    margin-top: 70px;
 
                     @include responsive(large-screens) {
-                        margin-top: 80px;
+                        margin-top: 60px;
                     }
                 }
             }  // txt-box

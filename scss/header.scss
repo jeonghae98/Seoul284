@@ -27,6 +27,7 @@
 
     .logo-gnb-rightmenu {
         height: $height-wide;
+
         .container {
             height: $height-wide;
             
@@ -38,11 +39,11 @@
                 height: $height-wide;
                 // background-color: brown;
 
-                &.active {
-                    position: relative;
-                    z-index: 2000;
-                    border-bottom: 2px solid $line-gray;
-                }
+                // &.active {
+                //     position: relative;
+                //     z-index: 2000;
+                //     border-bottom: 2px solid $line-gray;
+                // }
 
                 @include responsive(large-screens) {
                     position: relative;
@@ -75,29 +76,41 @@
                     
                     @include responsive(large-screens) {
                         display: block;
-                        margin-top: 30px;
-                        background-color: transparent;
+                        position: absolute; 
+                        left: 0; top: 55px; 
+                        z-index: 5;
+                        width: $width-wide; 
+                        height: 80px; 
+                        overflow: hidden; 
+                        text-align: center; 
+                        // background-color: #ddd; 
+                        transition: all 0.5s;
                     }
     
+                    &.active {
+                        display: block;
+                        width: $width-wide;
+
+                        @include responsive(large-screens) {
+                            height: 270px;
+                        }
+                    }
+
                     .gnb {
                         margin-top: 50px;
                         padding-left: 30px;
 
                         @include responsive(large-screens) {
-                            display: flex;
-                            flex-direction: row;
-                            justify-content: space-between;
+                            display: flex; 
+                            align-items: center; 
+                            justify-content: center;  
+                            padding: 0 20px;
                             margin-top: 0;
-                            padding-left: 0;
-                            width: 640px;
-                            // background-color: aquamarine;
                         }
     
                         li {
                             @include responsive(large-screens) {
                                 position: relative;
-                                width: 160px;
-                                height: 25px;
                             }
                             
                             a.gnb-title {
@@ -108,70 +121,74 @@
                                 }
                                 // background-color: lightskyblue;
 
-
-                                &.highlight {
-                                    color: $color-point;
-                                    text-decoration: underline;
-                                }
-
                                 @include responsive(large-screens) {
-                                    display: flex;
-                                    flex-direction: column;
+                                    display: block; 
+                                    width: 150px; 
+                                    height: 80px; 
+                                    line-height: 78px; 
+                                    margin-right: 20px;
                                     padding: 0;
                                     font: {
-                                        size: 1.1rem;  // 16pt 21px
+                                        size: 1.1rem;  
                                         weight: $font-regular;
                                     }
-                                    text-align: center;
-                                    // color: $color-second;
     
-                                    &:hover {
+                                }
+
+                                
+                                &:hover,
+                                &.active {
+                                    @include responsive(large-screens) {
                                         color: $color-point;
+                                        }
+                                }
+
+                            }
+
+                            &:last-child {
+                                a {
+                                    @include responsive(large-screens) {
+                                        margin-right: 0;
                                     }
                                 }
-                            }
+                            } 
+
                             .sub-menu {
                                 display: none;
 
-                                &.active {
-                                    @include responsive(large-screens) {
+                                @include responsive(large-screens) {
                                         position: absolute;
-                                        left: 0; top: 73px;
-                                        // display: flex;
-                                        // flex-direction: column;
-                                        // // margin-top: 73px;
+                                        display: block;
+                                        padding-top: 15px;
                                         width: $width-wide;
-                                        height: 150px;
-                                        // text-align: center;
-                                        background-color: lightcyan;
-                                    }
+                                        height: 270px;
+                                        background-color: $color-second;
+                                }
 
-                                    .li {
+                                li {
+                                    a {
                                         @include responsive(large-screens) {
+                                            display: block; 
+                                            width: 150px;
+                                            line-height: 2.2; 
+                                           
                                         }
-                                        a {
+
+                                        &:hover,
+                                        &:focus {
                                             @include responsive(large-screens) {
-                                                padding: 20px;
-                                                text-align: center;
+                                                text-decoration: underline;
+                                                color: $color-main;
                                             }
                                         }
+                                    }
+                                    
                                 }
-                                
-                                }    
-                                // &.active {
-                                //     @include responsive(large-screens) {
-                                //         display: block;
-                                //         margin-top: 122px;
-                                //         background-color: transparent;
-                                //     }
-                                // }
                             }
                         }
+
+                
                     }
-                  &.active {
-                    display: block;
-                    width: $width-wide;
-                  }
                 } 
         
     

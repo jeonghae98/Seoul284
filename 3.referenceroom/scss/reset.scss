@@ -1,4 +1,5 @@
 @import url(https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap);
+@import "./style.scss";
 
 * {
     margin: 0;
@@ -25,6 +26,9 @@ strong,
 span {
     display: block;
 }
+strong {
+    font-weight: $font-medium;
+}
 address {
     font-style: normal;
 }
@@ -39,7 +43,8 @@ select {
     vertical-align: middle;
 }
 h1 {
-    font-size: 30px;
+    font-weight: $font-regular;
+    font-size: 4.167rem;  // 50pt
 }
 h2 {
     font-size: 24px;

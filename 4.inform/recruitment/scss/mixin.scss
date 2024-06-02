@@ -146,16 +146,16 @@
         text-align: center;
 
         @include responsive(large-screens) {
-            font-size: 1.5rem;  // 16pt 
+            font-size: 1.5rem;
         }
     }
     div {
         p,
         strong {
-            font-size: 1rem;  // 20pt
+            font-size: 1rem;
 
             @include responsive(large-screens) {
-                font-size: 1.167rem;  // 16pt 
+                font-size: 1.167rem; 
             }
         }
         strong {
@@ -181,8 +181,8 @@
         }
 
         .attachment-title {
-            margin-right: 35px;
-            width: 180px;
+            margin-right: 20px;
+            width: 200px;
             font: {
                 weight: $font-regular;
                 size: 1.333rem;

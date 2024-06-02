@@ -1,10 +1,5 @@
 $(function() {
     //===================== header =====================
-    // $('#mobile-menu').click(function() {
-    //     $(this).toggleClass('active');
-    //     // $('#main-menu').addClass('move');
-    // });
-
     var mobile = $('#mobileBar');
     var mainMenu = $('#mainMenu');
     
@@ -12,13 +7,6 @@ $(function() {
         mainMenu.toggleClass('active');
         mobile.toggleClass('active');
     });
-
-    
-    // $('.gnb .gnb-title').on('mouseover', function() {
-    //     $('.gnb .sub-menu').addclass('sub-menu-hover');
-    // })
-
-
 
     //===================== main =====================
         //--------------------- main 공통 ---------------------

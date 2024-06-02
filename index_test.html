@@ -5,18 +5,114 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" type="image/png" href="./images/favicon.png">
     <link rel="stylesheet" href="./css/reset.css">
-    <link rel="stylesheet" href="./css/index_test.css">
+    <!-- <link rel="stylesheet" href="./css/index_test.css"> -->
     <script src="./js/jquery.js"></script>
-    <script src="./js/index_test.js"></script>
+    <!-- <script src="./js/index_test.js"></script> -->
     <title>문화역서울284</title>
+
+    <style>
+        #mainMenu {position: absolute; left: 0; top: 35px; width: 100%; height: 80px; overflow: hidden; text-align: center; background: #ddd; transition: all 0.5s;}
+        #mainMenu.active {height: 270px;}
+        #mainMenu > .gnb {display: flex; align-items: center; justify-content: center;  padding: 0 20px; box-sizing: border-box;}
+        #mainMenu > .gnb > li {position: relative;}
+        #mainMenu > .gnb > li > a {display: block; width: 150px; height: 80px; line-height: 78px; font-weight: bold; color: #555; margin-right: 20px;}
+        #mainMenu > .gnb > li:last-child > a {margin-right: 0;}
+        /* #mainMenu > .gnb > li > a::after {display: none; content: ''; position: absolute; width: 150px; left: 0; bottom: 7px; height: 4px; background: yellowgreen;}
+        #mainMenu > .gnb > li:hover > a::after,
+        #mainMenu > .gnb > li.active > a::after {display: block;} */
+        #mainMenu > .gnb > li > a:hover {color: #ff6000;}
+        #mainMenu > .gnb .sub-menu {position: absolute; width: 100%; padding-top: 15px;}
+        #mainMenu > .gnb .sub-menu a {display: block; width: 150px; line-height: 2.2; font-size: 15px; color: #555;}
+        #mainMenu > .gnb .sub-menu a:hover,
+        #mainMenu > .gnb .sub-menu a:focus {text-decoration: underline;}
+    </style>
+
+    <script>
+        $(function () {
+            $("#mainMenu > ul > li").hover(
+                function () {
+                    $("#mainMenu").addClass("active");
+                },
+                function () {
+                    $("#mainMenu").removeClass("active");
+                }
+            );
+            $("#mainMenu > ul > li:first-child > a").focusin(function () {
+                $("#mainMenu").addClass("active");
+            });
+            $("#mainMenu li:last-child li:last-child a").focusout(function () {
+                $("#mainMenu").removeClass("active");
+            });
+            $("#mainMenu > ul > li > a").focusin(function () {
+                $(this).parent().addClass("active");
+            });
+            $("#mainMenu li li:last-child a").focusout(function () {
+                $("#mainMenu > ul > li").removeClass("active");
+            });
+        });
+    </script>
 </head>
 
 
 <body>
-    <main>
-            <div class="intro-line"></div>
-            <div class="first-circle"></div> <!-- 성민 수정 -->
-            <div class="second-circle"></div> <!-- 성민 수정 -->
-    </main> 
+    <header>
+        <div class="logo-gnb-rightmenu">
+            <div class="container">
+                <div class="logo-gnb-menu-box">
+                    <div class="logo">
+                        <h1><a href="./index.html"><img src="./images/logo.png" alt="logo"></a></h1>
+                    </div>
+
+                    <nav class="main-menu" id="mainMenu">
+                        <ul class="gnb">
+                            <li>
+                                <a href="./1. introduction/intro.html" class="gnb-title">소개</a>
+                                <ul class="sub-menu">
+                                    <li><a href="./1. introduction/intro.html">문화역서울284 소개</a></li>
+                                    <li><a href="./1. introduction/visit.html">방문안내</a></li>
+                                    <li><a href="./1. introduction/space.html">공간안내</a></li>
+                                    <li><a href="./1. introduction/division.html">조직도</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="./2. program/exhibition.html" class="gnb-title">프로그램</a>
+                                <ul class="sub-menu">
+                                    <li><a href="./2. program/exhibition.html">전시</a></li>
+                                    <li><a href="./2. program/event.html">공연/행사</a></li>
+                                    <li><a href="./2. program/tour.html">공간투어</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="./3. referenceroom/collection.html" class="gnb-title">자료실</a>
+                                <ul class="sub-menu">
+                                    <li><a href="./3. referenceroom/collection.html">소장품</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="./4.notice/notice.html" class="gnb-title">알림/소식</a>
+                                <ul class="sub-menu">
+                                    <li><a href="./4.notice/notice.html">공지사항</a></li>
+                                    <li><a href="./4.notice/news.html">보도자료</a></li>
+                                </ul>
+                            </li>
+                        </ul>  <!-- gnb -->
+                    </nav>  <!-- main-menu -->
+
+                    <div class="right-menu">
+                        <ul>
+                            <li class="login"><a href="./login.html"><img src="./images/login.png" alt="login"></a></li>
+                            <li class="search"><img src="./images/header_search.png" alt="search"></li>  
+                        </ul>
+                        
+                        <div class="mobile-menu" id="mobileBar">  <!-- 모바일(햄버거 메뉴) -->
+                            <div class="bar"></div>
+                            <div class="bar"></div>
+                            <div class="bar"></div>
+                        </div>
+                    </div>
+                </div>  <!-- logo-menu-box -->
+            </div>  <!-- container -->
+        </div>  <!-- logo-rightmenu -->
+    </header>
 </body>
 </html>

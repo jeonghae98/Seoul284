@@ -13,7 +13,7 @@
     // background-color: antiquewhite;
 
     @include responsive(large-screens) {
-        padding: 0;
+        padding: 0 10px;
     }
 }
 
@@ -220,71 +220,27 @@ main {
                     }
                 }
             }
-            // .intro-line {
-            //     position: relative;
-            //     // z-index: 1;
-            //     border: 1px solid $line-black;
-            //     width: $width-wide;
-            //     height: 0;   // 나중에 제이쿼리
 
-            //     @include responsive(large-screens) {
-            //         height: 0;
-            //     }
-
-            //     .first-circle,
-            //     .second-circle {
-            //         position: absolute; top: 0; 
-            //         // left: 69.4%;
-            //         right: 28.6%;  // 194px // 
-            //         z-index: 1;
-            //         width: 7px; // 성민 수정
-            //         height: 7px; // 성민 수정
-            //         border-radius: 50%;
-            //         background-color: $color-main;
-        
-            //         @include responsive(large-screens) {
-            //             right: 397px;
-            //             width: 10px; // 성민 수정
-            //             height: 10px; // 성민 수정
-            //         }
-            //     }
-        
-            //     .first-circle {
-            //         // display: none;
-            //         top: 315px; left: -3.5px; // 성민 수정
-            //         // opacity: 0;
-            //         // transition: opacity 0.3s ease-in 1.2s;
-                    
-            //         @include responsive(large-screens) {
-            //             top: 535px; left: -5px; // 성민 수정
-            //         }
-            //     }
-            //     .second-circle {
-            //         top: 527px; left: -3.5px; // 성민 수정
-        
-            //         @include responsive(large-screens) {
-            //             top: 975px; left: -5px;
-            //         }
-            //     }
-            // }
-
-            .collection-line-top {
-                // display: none;
+            .collection-line {
+                display: none;
                 // position: relative; 
                 // z-index: 1;
                 // height: 246px;  // 나중에 제이쿼리
                 // width: $width-wide;
-                position: relative;
-                z-index: 5;
-                width: 1px;
-                // height: 0;
-                // background-color: black;
-                border: 1px solid lightblue;
+                // position: relative;
+                // z-index: 5;
+                // width: 1px;
+                // border: 1px solid $line-white;
 
                 @include responsive(large-screens) {
+                    display: block;
+                    position: relative;
+                    z-index: 5;
+                    width: 1px;
+                    border: 1px solid $line-white;
                     // top: 0px;
-                    right: 1px;
-                    // height: 0;
+                    // right: 1px;
+                    height: 0;
                 }
             }
 
@@ -460,7 +416,7 @@ main {
             .main-collection-row-line {
                 position: absolute;
                 z-index: 4;
-                width: $width-wide;
+                width: 0;
                 height: 1.5px;
                 left: 0; top: 260px;
                 border: 1.5px solid $line-white;
@@ -471,33 +427,19 @@ main {
                 }
             }
 
-            // .row-line-circle {
-            //     // display: none;
-
-            //     @include responsive(large-screens) {
-            //         position: absolute;
-            //         width: 24px;
-            //         height: 24px;
-            //         left: 300px; top: 418px;
-            //         border-radius: 50%;
-            //         transform: skew(-8deg) rotate(-8deg);
-            //         background-color: $color-second;
-            //     }
-            // }
-
-            
-
 
             .col-container {
                 transform: skew(-8deg) rotate(-8deg);
             }
+
             .collection-title {
-                margin-top: 20px; // 성민수정
-                margin-left: 6%; // 성민 수정
+                margin-top: 20px;
+                margin-left: 6%; 
                 // margin-bottom: 20px; // 성민 수정 
-                font-size: 2.5rem;  //50pt // 성민 수정
+                font-size: 2.5rem; 
                 line-height: 1.2;
                 color: $color-second;
+
                 @include responsive(large-screens) {
                     margin-left: 9%;
                     margin-top: 5px;
@@ -542,7 +484,7 @@ main {
                     }
                     p {  // 자바스크립트로 호출
                         font-weight: $font-regular;
-                        font-size:0.9rem;  // 20pt // 성민 수정
+                        font-size:0.9rem; 
                         color: $color-second;
                         
                         @include responsive(large-screens) {
@@ -685,16 +627,15 @@ main {
     .exhibition {
         position: relative;
         width: $width-wide;
-        // height: 3250px;
         // background-color: lightcyan;
 
         .exhibition-title {
             margin-left: 5%;
             margin-bottom: 5%;
-            font-size: 2.5rem;  //40pt
+            font-size: 2.5rem; 
             @include responsive(large-screens) {
                 margin-bottom: 65px;
-                font-size: 5rem;  // 60pt
+                font-size: 5rem;  
             }
         }
 
@@ -726,12 +667,11 @@ main {
                         @include responsive(large-screens) {
                             position: relative;
                             // background-color: lightgoldenrodyellow;
-                            // margin: 50px 30px 50px;
                             margin: 50px 0;
                         }
                         .title {
                             margin-top: 50px;
-                            font-size: 1rem; // 18pt
+                            font-size: 1rem;
                             opacity: 0;
                             // background-color: #ffccac;
         

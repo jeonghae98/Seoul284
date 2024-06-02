@@ -30,40 +30,46 @@ main {
         width: $width-wide;
 
         .news-title {
-            margin: 80px 0 150px;
+            margin: 80px 0 50px;
             text-align: center;
+            font-size: 2.667rem;
             // background-color: aquamarine;
+            opacity: 0;
+            transition: opacity 2s ease;
             
             @include responsive(large-screens) {
-                margin-bottom: 120px;
+                margin-bottom: 10px;
                 font: {
                     weight: $font-semibold;
-                    size: 5rem;  // 60pt
+                    size: 3rem;
                 }
                 text-align: left;
             }
-        }  // news-title
+        }
 
 
         .search {
             position: relative;
+            justify-content: right;
             width: $width-wide;
+            opacity: 0;
+            transition: opacity 2s ease;
 
             @include responsive(large-screens) {
-                position: absolute;
-                right: 0; top: 105px;
-                width: 360px;
+                display: flex;
+                justify-content: right;
+                width: $width-wide;
             }
 
             #search-box {
                 width: $width-wide;
-                height: 50px;
+                height: 35px;
                 padding-left: 10px;
                 border: 2px solid #727272;
                 border-radius: 10px;
 
                 @include responsive(large-screens) {
-                    width: $width-wide;                
+                    width: 360px;                
                     height: 40px;
                 }
 
@@ -78,12 +84,8 @@ main {
                 position: absolute;
                 right: 10px; top: 50%;
                 transform: translateY(-50%);
-                width: 32px;
+                width: 20px;
                 cursor: pointer;
-
-                @include responsive(large-screens) {
-                    width: 20px;
-                }
             }
         }  // search
 
@@ -96,8 +98,7 @@ main {
             margin: 60px 0 180px;
 
             @include responsive(large-screens) {
-                margin-top: 0;
-                margin-bottom: 60px;
+                margin: 30px 0 60px;
             }
 
             div.row-box {
@@ -117,6 +118,9 @@ main {
                     margin-bottom: 33px;
                     // height: 500px;
                     cursor: pointer;
+                    opacity: 0;
+                    transform: translateY(50px);
+                    transition: opacity 1s ease, transform 1s ease;
 
                     @include responsive(large-screens) {
                         margin-right: 26.6px;
@@ -124,6 +128,11 @@ main {
                         width: 340px;
                     }
                     
+                    &.visible {
+                        opacity: 1;
+                        transform: translateY(0);
+                    }
+
                     &:last-child {
                         @include responsive(large-screens) {
                             margin-right: 0;
@@ -154,31 +163,29 @@ main {
                             display: flex;
                             flex-direction: column;
                             justify-content: space-between;
-                            height: 210px;
+                            height: 200px;
                         }
+
                         .news-content-title {
                             margin-bottom: 30px;
                             width: $width-wide;
                             font: {
                                 weight: $font-light;
-                                size: 2rem;  // 26pt
+                                size: 1.167rem; 
                             }
                             // background-color: bisque;
 
                             @include responsive(large-screens) {
                                 margin-bottom: 0;
-                                font: {
-                                    weight: $font-regular;
-                                    size:  1.167rem;  // 14pt
-                                }
+                                font-weight: $font-regular;
                             }
                         }
 
                         time {
-                            width: 17.647%;  // 120px
+                            width: 17.647%;  
                             font: {
                                 weight: $font-regular;
-                                size: 1.5rem;  // 18pt
+                                size: 0.875rem;
                             }
                             color: $color-gray;
                             // background-color: aqua;
@@ -187,7 +194,7 @@ main {
                                 width: 100px;
                                 font: {
                                     weight: $font-regular;
-                                    size: 1.167rem;  // 14pt
+                                    font-size: 1rem;
                                 }
                             }
                         }
@@ -225,7 +232,7 @@ main {
                 display: flex;
                 justify-content: flex-start;
                 align-items: center;
-                width: 245px;
+                width: 205px;
                 margin: auto;
                 // background-color: aquamarine;
 
@@ -235,12 +242,8 @@ main {
 
                 li {
                     a {
-                        font: {
-                            weight: $font-regular;   
-                            size: 1.667rem;  // 20pt
-                        }
-                        // font-size: 2.333rem;  // 28pt
-
+                        font-size: 1.167rem; 
+    
                         @include responsive(large-screens) {
                             font-size: 1.333rem;  // 16pt
                         }

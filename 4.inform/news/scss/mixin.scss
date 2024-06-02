@@ -24,7 +24,7 @@
             margin-bottom: 30px;
             font: {
                 weight: $font-semibold;
-                size: 2.5rem;  // 30pt
+                size: 3rem;
             }
             text-align: left;
         }
@@ -37,43 +37,38 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        height: 250px;
-        padding: 35px 0;
-        border-top: 1px solid $inform-line-gray;
+        height: 170px;
+        padding: 30px 0;
+        border-top: 2px solid $inform-line-gray;
 
         @include responsive(large-screens) {
-            height: 180px; 
+            height: 160px;
         }
 
         .title {
             font: {
                 weight: $font-regular;
-                size: 2.5rem;  // 30pt
+                size: 1.333rem;  
             }
 
             @include responsive(large-screens) {
-                font-size: 2rem; 
+                font-size: 1.667rem; 
             }
         }
 
         p {
             font: {
                 weight: $font-regular;
-                size: 1.5rem;  // 18pt
+                size: 0.875rem; 
             }
             color: $color-gray;
 
-
             @include responsive(large-screens) {
-                font-size: 1.333rem; 
+                font-size: 1rem; 
             }
 
             .hits {
                 display: inline;
-
-                @include responsive(large-screens) {
-                    font-size: 1.5rem; 
-                }
             }
         }
     }
@@ -84,25 +79,25 @@
     h2 {
         font: {
             weight: $font-medium;
-            size: 2rem;  // 24pt
+            size: 1.167rem;
         }
         text-align: center;
 
         @include responsive(large-screens) {
-            font-size: 1.333rem;  // 16pt 
+            font-size: 1.5rem;
         }
     }
     div {
         p,
         strong {
-            font-size: 1.667rem;  // 20pt
+            font-size: 1rem;
 
             @include responsive(large-screens) {
-                font-size: 1.333rem;  // 16pt 
+                font-size: 1.167rem; 
             }
         }
         strong {
-            font-weight: $font-regular;
+            line-height: 2;
         }
     }
 
@@ -115,27 +110,26 @@
 @mixin attachment-box() {
     .attachment-box {
         display: flex;
-        // height: 200px;
-        padding: 45px 0;
-        border-bottom: 1px solid $inform-line-gray;
+        padding: 30px 0;
+        border-bottom: 2px solid $inform-line-gray;
 
         @include responsive(large-screens) {
             padding: 35px 0;
         }
 
         .attachment-title {
-            margin-right: 35px;
-            width: 250px;
+            margin-right: 20px;
+            width: 200px;
             font: {
                 weight: $font-regular;
-                size: 2rem;  // 26pt
+                size: 1.333rem;
             }
             // background-color: aquamarine;
 
             @include responsive(large-screens) {
                 margin-right: 45px;
                 width: 90px;
-                font-size: 1.5rem;  // 18pt 
+                font-size: 1.5rem; 
             }
         }
 
@@ -143,7 +137,7 @@
             ul {
                 li {
                     a {
-                        font-size: 1.667rem;  // 20pt
+                        font-size: 1rem;
                         color: $color-gray;
 
                         &:hover {
@@ -151,7 +145,7 @@
                         }
 
                         @include responsive(large-screens) {
-                            font-size: 1.333rem;  // 16pt 
+                            font-size: 1.167rem;  // 16pt 
                         }
                     }
                 }
@@ -171,7 +165,7 @@
 
 @mixin list-box() {
     .list-box {
-        margin: 80px 0 180px;
+        margin: 30px 0 180px;
 
         @include responsive(large-screens) {
             margin: auto;
@@ -179,8 +173,8 @@
         }
         .list-btn {
             width: $width-wide;
-            height: 80px;
-            border: 1px solid $inform-line-gray;
+            height: 50px;
+            border: 2px solid $inform-line-gray;
             background-color: $color-second;
 
             @include responsive(large-screens) {
@@ -190,10 +184,10 @@
             }
 
             a {
-                font-size: 1.667rem;  
+                font-size: 1rem;  
 
                 @include responsive(large-screens) {
-                    font-size: 1.333rem;   
+                    font-size: 1.167rem;   
                 }
             }
         }

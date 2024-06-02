@@ -23,9 +23,9 @@ $(function() {
             $('.main-menu').css({
                 'display': 'block',
                 'position': 'fixed',
-                'top': '12vh',
+                'top': 0,
                 'right': 0,
-                'borderTop': '1px solid #dbdbdb',
+                // 'borderTop': '1px solid #dbdbdb',
                 'width': '100%',
                 'height': '100%',
                 'background-color': '#fff'
@@ -51,7 +51,7 @@ $(function() {
     
             if (!$(this).hasClass('highlight')) {
                 $(this).addClass('highlight');
-            }  // 클릭한 요소의 현재 상태에 따라 highlight 클래스 추가 또는 제거
+            }  
            
         });
         
@@ -63,7 +63,6 @@ $(function() {
                 'textDecoration': ''
             });
     
-    
             $(this).css({  
                 'color': '#000',
                 'textDecoration': 'underline'
@@ -71,74 +70,72 @@ $(function() {
         });
     });
 
-
+ 
 
     //--------------------- PC ---------------------
-    // $('.gnb-title').hover(function() {
-    //     // 마우스가 올라갔을 때 서브메뉴를 내림
-    //     $(this).next('.sub-menu').stop().slideDown(500);
-    // }, function() {
-    //     // 마우스가 벗어났을 때 서브메뉴를 올림
-    //     $(this).next('.sub-menu').stop().slideUp(500);
-    // });
+    var pcWindowWidth = $(window).width() > 768;
+
+    if (pcWindowWidth) {
+        $("#mainMenu > ul > li").hover(
+            function () {
+                $("#mainMenu").addClass("active");
+            },
+            function () {
+                $("#mainMenu").removeClass("active");
+            }
+        );
+        $("#mainMenu > ul > li:first-child > a").focusin(function () {
+            $("#mainMenu").addClass("active");
+        });
+        $("#mainMenu li:last-child li:last-child a").focusout(function () {
+            $("#mainMenu").removeClass("active");
+        });
+        $("#mainMenu > ul > li > a").focusin(function () {
+            $(this).parent().addClass("active");
+        });
+        $("#mainMenu li li:last-child a").focusout(function () {
+            $("#mainMenu > ul > li").removeClass("active");
+        });
+    }
 
 
-    // var pcWindowWidth = $(window).width() > 768;
-    // var $subMenu = $('.gnb-title').next('.sub-menu');
-
-    // if (pcWindowWidth) {
-    //     $('.gnb-title').hover(function() {
-    //         // 마우스가 올라갔을 때 서브메뉴를 내림
-    //         $subMenu.stop().slideDown(500);
-    //         $subMenu.addClass('active');
-    //         $('.sub-menu > li > a').css('padding', '10px 0');
-    //     });
-
-    //     $('.gnb').hover(function() {
-    //         // gnb 내부에서는 아무것도 하지 않음
-    //     }, function() {
-    //         // 마우스가 gnb 영역을 벗어났을 때 모든 서브메뉴를 올림
-    //         $('.sub-menu').stop().slideUp(500);
-    //     });
-    // }
-
-
-    var handlePCMode = function() {
-        var pcWindowWidth = window.matchMedia('(min-width: 769px)').matches;
+    // var handlePCMode = function() {
+    //     var pcWindowWidth = window.matchMedia('(min-width: 769px)').matches;
     
-        if (pcWindowWidth) {
-            $('.gnb-title').on('mouseenter', function() {
-                // 모든 서브메뉴를 내림
-                $('.sub-menu').stop().slideDown(500);
-                $('.sub-menu').addClass('active');
-            }).on('mouseleave', function() {
-                // 모든 서브메뉴를 올림
-                $('.sub-menu').stop().slideUp(500);
-            });
+    //     if (pcWindowWidth) {
+    //         $('.gnb-title').on('mouseenter', function() {
+    //             // 모든 서브메뉴를 내림
+    //             $('.sub-menu').stop().slideDown(500);
+    //             $('.sub-menu').addClass('active');
+    //         }).on('mouseleave', function() {
+    //             // 모든 서브메뉴를 올림
+    //             $('.sub-menu').stop().slideUp(500);
+    //         });
             
-            $('.gnb').on('mouseenter', function() {
-                // gnb 내부에서는 아무것도 하지 않음
-            }).on('mouseleave', function() {
-                // 마우스가 gnb 영역을 벗어났을 때 모든 서브메뉴를 올림
-                $('.sub-menu').stop().slideUp(500);
-            });
-        } else {
-            // 모바일일 경우 PC용 hover 이벤트 제거
-            $('.gnb-title').off('mouseenter mouseleave');
-            $('.gnb').off('mouseenter mouseleave');
-            $('.sub-menu').removeClass('active').css('display', '');
-        }
-    };
+    //         $('.gnb').on('mouseenter', function() {
+    //             // gnb 내부에서는 아무것도 하지 않음
+    //         }).on('mouseleave', function() {
+    //             // 마우스가 gnb 영역을 벗어났을 때 모든 서브메뉴를 올림
+    //             $('.sub-menu').stop().slideUp(500);
+    //         });
+    //     } else {
+    //         // 모바일일 경우 PC용 hover 이벤트 제거
+    //         $('.gnb-title').off('mouseenter mouseleave');
+    //         $('.gnb').off('mouseenter mouseleave');
+    //         $('.sub-menu').removeClass('active').css('display', '');
+    //     }
+    // };
     
-    // 처음 로드 시 실행
-    handlePCMode();
+    // // 처음 로드 시 실행
+    // handlePCMode();
     
-    // 화면 크기 변경 시 다시 실행
-    $(window).resize(function() {
-        handlePCMode();
-    });
+    // // 화면 크기 변경 시 다시 실행
+    // $(window).resize(function() {
+    //     handlePCMode();
+    // });
     
 
+   
 
     //===================== main =====================
     //--------------------- main 공통 ---------------------
@@ -152,6 +149,7 @@ $(function() {
     $(window).scroll(function() {
         var scrollPosition = $(this).scrollTop();  // 수직 스크롤바의 위치 인식
         var elementOffset = $('.main-intro').offset().top;
+        var colLineOffset = $('.collection-line').offset().top;
         var windowHeight = $(window).height();
         var windowWidth = $(window).width();
         // console.log(elementOffset);
@@ -178,8 +176,8 @@ $(function() {
                 setTimeout(function() {
                     $('.second-circle').delay(1200).fadeIn();
                 }, 300);
-
-            } else {  // pc 버전
+            } 
+            else {  // pc 버전
                 // <배경 사진>
                 $('.intro-bg-img')
                 .css({
@@ -187,77 +185,12 @@ $(function() {
                     'background-position-y': '600px'
 
                 });
+               
 
-                // <선&원>
-                // $('.main-intro .intro-line').animate({
-                //     height: '1472px'
-                //   }, 3000, function() {
-                //     // intro-line 애니메이션 완료 후 collection-line-top 애니메이션
-                //     var introLineEnd = $('.intro-line').offset().top + $('.intro-line').height();
-                //     var mainCollectionRowLineTop = $('.main-collection-row-line').offset().top;
-    
-                //     console.log(introLineEnd);
-                //     console.log(mainCollectionRowLineTop);
-
-
-                //     $('.collection-line-top').css({
-                //         'top': introLineEnd
-                //     }).animate({
-                //         height: mainCollectionRowLineTop - introLineEnd
-                //     }, 2000); // 애니메이션 시간 조정 가능
-                // });
-
+                // <선>
                 $('.main-intro .intro-line').animate({
                         height: '1472px'
                       }, 3000);
-
-
-
-                setHeights();
-
-                // 창 크기 변경 시 호출될 함수 등록
-                $(window).resize(function() {
-                    setHeights();
-                });
-            
-                // 초기 설정 및 창 크기 변경 시 호출될 함수 정의
-                function setHeights() {
-                    var introLineHeight = 1472; // intro-line의 초기 높이
-            
-                    // intro-line의 높이 설정
-                    $('.intro-line').height(introLineHeight);
-            
-                    // collection-line-top의 높이 계산 및 설정
-                    var introLineEnd = $('.intro-line').offset().top + introLineHeight;
-                    var mainCollectionRowLineTop = $('.main-collection-row-line').offset().top;
-                    var collectionLineTopHeight = mainCollectionRowLineTop - introLineEnd;
-            
-                    $('.collection-line-top').height(collectionLineTopHeight);
-                }      
-                    //   var introLineHeight = $('.intro-line').height(); // intro-line의 높이
-                    //   var introLineEnd = $('.intro-line').offset().top + introLineHeight; // intro-line의 세로 끝 위치
-                    //   var mainCollectionRowLineTop = $('.main-collection-row-line').offset().top; // main-collection-row-line의 위치
-                  
-                    //   var collectionLineTopHeight = mainCollectionRowLineTop - introLineEnd; // collection-line-top의 높이
-                  
-                    //   $('.collection-line-top').css('height', 0); // collection-line-top의 초기 높이를 0으로 설정
-                  
-                    //   // collection-line-top의 높이를 collectionLineTopHeight로 애니메이션 효과를 주면서 늘리기
-                    //   $('.collection-line-top').animate({
-                    //       height: collectionLineTopHeight
-                    //   }, 2000); // 애니메이션 시간 조정 가능
-
-                // function animateCollectionLineTop() {
-                //     var introLineEnd = $('.intro-line').offset().top + $('.intro-line').height();
-                //     var mainCollectionRowLineTop = $('.main-collection-row-line').offset().top;
-                
-                //     $('.collection-line-top').css({
-                //         'top': introLineEnd,
-                //         'backgroundColor': '#000',
-                //         'height': mainCollectionRowLineTop - introLineEnd
-                //     }); // 애니메이션 시간 조정 가능
-                // }
-                // animateCollectionLineTop();
 
                 setTimeout(function() {
                     $('.first-circle').delay(1000).fadeIn();
@@ -266,6 +199,7 @@ $(function() {
                 setTimeout(function() {
                     $('.second-circle').delay(1500).fadeIn();
                 }, 300);
+
             }
             
             // 모바일, pc 공통
@@ -292,165 +226,16 @@ $(function() {
              $('.intro-btn').css('opacity', 1);
              
         }
+    }); 
+    
+
+    // ****intro-btn*****
+    $('.intro-btn').click(function() {
+        window.location.href = '.././1. introduction/intro.html'
     });
-
-    // $(window).scroll(function() {
-    //     var scrollPosition = $(this).scrollTop();  // 수직 스크롤바의 위치 인식
-    //     var elementOffset = $('.main-intro').offset().top;
-    //     var windowHeight = $(window).height();
-    //     var windowWidth = $(window).width();
-    
-    //     if (scrollPosition > (elementOffset - windowHeight)) {
-    //         if(windowWidth < 768 ) {  // 모바일 버전
-    //             $('.main-intro .intro-line').animate({
-    //                 height: '1020px'
-    //             }, 3000, function() {
-    //                 var introLineHeight = $('.intro-line').height();
-    //                 var firstCirclePosition = $('.first-circle').offset().top;
-    
-    //                 if (introLineHeight > firstCirclePosition) {
-    //                     $('.first-circle').css('display', 'block');
-    //                 }
-    //             });
-    //         } else {  // pc 버전
-    //             $('.main-intro .intro-line').animate({
-    //                 height: '1472px'
-    //             }, 3000, function() {
-    //                 var introLineHeight = $('.intro-line').height();
-    //                 var firstCirclePosition = $('.first-circle').offset().top;
-    
-    //                 if (introLineHeight > firstCirclePosition) {
-    //                     $('.first-circle').css('display', 'block');
-    //                 }
-    //             });
-    //         }
-    //     }
-    // });
-    
-    // $(window).scroll(function() {
-    //     var scrollPosition = $(this).scrollTop();  // 수직 스크롤바의 위치 인식
-    //     var elementOffset = $('.main-intro').offset().top;
-    //     var windowHeight = $(window).height();
-    //     var windowWidth = $(window).width();
-    //     var introLineHeight;
-    
-    //     if (scrollPosition > (elementOffset - windowHeight)) {
-    //         if(windowWidth < 768 ) {  // 모바일 버전
-    //             $('.main-intro .intro-line').animate({
-    //                 height: '1020px'
-    //             }, {
-    //                 duration: 3000,
-    //                 step: function(now, fx) {
-    //                     introLineHeight = now;
-    //                     if (introLineHeight > 40) { // 일정 길이 이상이면 원을 표시
-    //                         $('.first-circle').css('display', 'block');
-    //                     }
-    //                 }
-    //             });
-    //         } else {  // pc 버전
-    //             $('.main-intro .intro-line').animate({
-    //                 height: '1472px'
-    //             }, {
-    //                 duration: 3000,
-    //                 step: function(now, fx) {
-    //                     introLineHeight = now;
-    //                     if (introLineHeight > 40) { // 일정 길이 이상이면 원을 표시
-    //                         $('.first-circle').css('display', 'block');
-    //                     }
-    //                 }
-    //             });
-    //         }
-    //     }
-    // });
-    
-
-    // $(window).scroll(function() {
-    //     var scrollPosition = $(this).scrollTop();  // 수직 스크롤바의 위치 인식
-    //     var elementOffset = $('.main-intro').offset().top;
-    //     var windowHeight = $(window).height();
-    //     var windowWidth = $(window).width();
-    
-    //     if (scrollPosition > (elementOffset - windowHeight)) {
-    //         var targetHeight;
-    //         if(windowWidth < 768 ) {  // 모바일 버전
-    //             targetHeight = '1020px';
-    //         } else {  // pc 버전
-    //             targetHeight = '1472px';
-    //         }
-    
-    //         $('.main-intro .intro-line').animate({
-    //             height: targetHeight
-    //         }, {
-    //             duration: 3000,
-    //             step: function(now, fx) {
-    //                 var introLineHeight = $(this).height();
-    //                 if (introLineHeight > 40) { // 일정 길이 이상이면 원을 표시
-    //                     $('.first-circle').css('display', 'block');
-    //                 }
-    //             }
-    //         });
-    //     }
-    // });
-    
-
-    // $(window).scroll(function() {
-    //     var scrollPosition = $(this).scrollTop();  // 수직 스크롤바의 위치 인식
-    //     var elementOffset = $('.main-intro').offset().top;
-    //     var windowHeight = $(window).height();
-    //     var windowWidth = $(window).width();
-    //     var introLineHeight = $('.intro-line').height();
-    //     var firstCircle = $('.first-circle').offset().top;
-
-    //     if (scrollPosition > (elementOffset - windowHeight)) {
-    //         if(windowWidth < 768 ) {  // 모바일 버전
-    //             $('.main-intro .intro-line').animate({
-    //                 height: '1020px'
-    //               }, 3000);
-
-    //               if (introLineHeight > firstCircle) {
-    //                 $('.first-circle').css('display', 'block');
-    //               }
-    //         } else {  // pc 버전
-    //             $('.main-intro .intro-line').animate({
-    //                 height: '1472px'
-    //               }, 3000);
-
-    //               if (introLineHeight > firstCircle) {
-    //                 $('.first-circle').css('display', 'block');
-    //               }
-    //         }
-    //     }
-    // });
-
-    // $(window).scroll(function() {
-    //     var scrollPosition = $(this).scrollTop();  
-    //     var elementOffset = $('.main-intro').offset().top;
-    //     var windowHeight = $(window).height();
-    //     var windowWidth = $(window).width();
-    
-    //     if (scrollPosition > (elementOffset - windowHeight)) {
-    //         if(windowWidth < 768 ) {  
-    //             $('.main-intro .intro-line').animate({
-    //                 height: '1020px'
-    //               }, 3000);
-    //         } else {  
-    //             $('.main-intro .intro-line').animate({
-    //                 height: '1472px'
-    //               }, 3000);
-    //         }
-    
-    //         // 원이 나타나도록 표시
-    //         $('.main-intro .first-circle, .main-intro .second-circle').fadeIn();
-    //     }
-    // });
-    
-
-        // ****intro-btn*****
-        $('.intro-btn').click(function() {
-            window.location.href = '.././1. introduction/intro.html'
-        });
         
     //--------------------- collection ---------------------
+    // <title>
     function updateCollectionTxt() {
         var mainWindowWidth = $(window).width();
 
@@ -468,9 +253,31 @@ $(function() {
     });
 
 
-    var parallelogramTopMiddle = $('.parallelogram').offset().top + ($('.parallelogram').outerHeight() / 2);
+    // <line>
+    $(window).scroll(function() {
+        var scrollPosition = $(this).scrollTop();  // 수직 스크롤바의 위치 인식
+        var colOffset = $('.main-collection').offset().top;
+        var windowHeight = $(window).height();
+        var windowWidth = $(window).width();
 
-    console.log(parallelogramTopMiddle); // 콘솔에 출력하여 확인
+        if(scrollPosition > (colOffset - windowHeight)) {
+            if(windowWidth < 768) {
+
+            }
+            else {
+                $('.collection-line').animate({
+                    height: '1238px'
+                  }, 3000);
+    
+                $('.main-collection-row-line').animate({
+                    width: '100%'
+                }, 3000);
+            }
+        }
+    }); 
+    // var parallelogramTopMiddle = $('.parallelogram').offset().top + ($('.parallelogram').outerHeight() / 2);
+
+    // console.log(parallelogramTopMiddle); // 콘솔에 출력하여 확인
 
     //--------------------- exhibition ---------------------
     $(window).scroll(function() {

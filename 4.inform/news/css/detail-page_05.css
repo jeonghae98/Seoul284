@@ -342,57 +342,57 @@ main .detail-page .news-title {
   main .detail-page .news-title {
     margin-bottom: 30px;
     font-weight: 600;
-    font-size: 2.5rem;
+    font-size: 3rem;
     text-align: left;
   }
 }
 main .detail-page .content-box {
-  margin-top: 45px;
+  margin-top: 20px;
+}
+@media only screen and (min-width: 1024px) {
+  main .detail-page .content-box {
+    margin-top: 30px;
+  }
 }
 main .detail-page .content-box .title-box {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 250px;
-  padding: 35px 0;
-  border-top: 1px solid #d9d9d9;
+  height: 170px;
+  padding: 30px 0;
+  border-top: 2px solid #d9d9d9;
 }
 @media only screen and (min-width: 1024px) {
   main .detail-page .content-box .title-box {
-    height: 180px;
+    height: 160px;
   }
 }
 main .detail-page .content-box .title-box .title {
   font-weight: 400;
-  font-size: 2.5rem;
+  font-size: 1.333rem;
 }
 @media only screen and (min-width: 1024px) {
   main .detail-page .content-box .title-box .title {
-    font-size: 2rem;
+    font-size: 1.667rem;
   }
 }
 main .detail-page .content-box .title-box p {
   font-weight: 400;
-  font-size: 1.5rem;
+  font-size: 0.875rem;
   color: #a1a1a1;
 }
 @media only screen and (min-width: 1024px) {
   main .detail-page .content-box .title-box p {
-    font-size: 1.333rem;
+    font-size: 1rem;
   }
 }
 main .detail-page .content-box .title-box p .hits {
   display: inline;
 }
-@media only screen and (min-width: 1024px) {
-  main .detail-page .content-box .title-box p .hits {
-    font-size: 1.5rem;
-  }
-}
 main .detail-page .content-box .txt-box {
   padding: 75px 0;
-  border-top: 1px solid #d9d9d9;
-  border-bottom: 1px solid #d9d9d9;
+  border-top: 2px solid #d9d9d9;
+  border-bottom: 2px solid #d9d9d9;
 }
 @media only screen and (min-width: 1024px) {
   main .detail-page .content-box .txt-box {
@@ -401,34 +401,33 @@ main .detail-page .content-box .txt-box {
 }
 main .detail-page .content-box .txt-box h2 {
   font-weight: 500;
-  font-size: 2rem;
+  font-size: 1.167rem;
   text-align: center;
 }
 @media only screen and (min-width: 1024px) {
   main .detail-page .content-box .txt-box h2 {
-    font-size: 1.333rem;
+    font-size: 1.5rem;
   }
 }
 main .detail-page .content-box .txt-box div p,
 main .detail-page .content-box .txt-box div strong {
-  font-size: 1.667rem;
+  font-size: 1rem;
 }
 @media only screen and (min-width: 1024px) {
   main .detail-page .content-box .txt-box div p,
   main .detail-page .content-box .txt-box div strong {
-    font-size: 1.333rem;
+    font-size: 1.167rem;
   }
 }
 main .detail-page .content-box .txt-box div strong {
-  font-weight: 400;
+  text-decoration: underline;
+  line-height: 2;
 }
-main .detail-page .content-box .txt-box .paragraph_2,
-main .detail-page .content-box .txt-box .paragraph_7 {
-  margin-top: 300px;
+main .detail-page .content-box .txt-box .paragraph_2 {
+  margin-top: 150px;
 }
 @media only screen and (min-width: 1024px) {
-  main .detail-page .content-box .txt-box .paragraph_2,
-  main .detail-page .content-box .txt-box .paragraph_7 {
+  main .detail-page .content-box .txt-box .paragraph_2 {
     margin-top: 160px;
   }
 }
@@ -436,7 +435,7 @@ main .detail-page .content-box .txt-box .paragraph_3,
 main .detail-page .content-box .txt-box .paragraph_4,
 main .detail-page .content-box .txt-box .paragraph_5,
 main .detail-page .content-box .txt-box .paragraph_6 {
-  margin-top: 150px;
+  margin-top: 70px;
 }
 @media only screen and (min-width: 1024px) {
   main .detail-page .content-box .txt-box .paragraph_3,
@@ -448,8 +447,8 @@ main .detail-page .content-box .txt-box .paragraph_6 {
 }
 main .detail-page .content-box .attachment-box {
   display: flex;
-  padding: 45px 0;
-  border-bottom: 1px solid #d9d9d9;
+  padding: 30px 0;
+  border-bottom: 2px solid #d9d9d9;
 }
 @media only screen and (min-width: 1024px) {
   main .detail-page .content-box .attachment-box {
@@ -457,10 +456,10 @@ main .detail-page .content-box .attachment-box {
   }
 }
 main .detail-page .content-box .attachment-box .attachment-title {
-  margin-right: 35px;
-  width: 250px;
+  margin-right: 20px;
+  width: 200px;
   font-weight: 400;
-  font-size: 2rem;
+  font-size: 1.333rem;
 }
 @media only screen and (min-width: 1024px) {
   main .detail-page .content-box .attachment-box .attachment-title {
@@ -470,7 +469,7 @@ main .detail-page .content-box .attachment-box .attachment-title {
   }
 }
 main .detail-page .content-box .attachment-box .attachment ul li a {
-  font-size: 1.667rem;
+  font-size: 1rem;
   color: #a1a1a1;
 }
 main .detail-page .content-box .attachment-box .attachment ul li a:hover {
@@ -478,14 +477,14 @@ main .detail-page .content-box .attachment-box .attachment ul li a:hover {
 }
 @media only screen and (min-width: 1024px) {
   main .detail-page .content-box .attachment-box .attachment ul li a {
-    font-size: 1.333rem;
+    font-size: 1.167rem;
   }
 }
 main .detail-page .content-box .attachment-box .attachment ul .attachment1 {
   margin-bottom: 20px;
 }
 main .detail-page .list-box {
-  margin: 80px 0 180px;
+  margin: 30px 0 180px;
 }
 @media only screen and (min-width: 1024px) {
   main .detail-page .list-box {
@@ -495,8 +494,8 @@ main .detail-page .list-box {
 }
 main .detail-page .list-box .list-btn {
   width: 100%;
-  height: 80px;
-  border: 1px solid #d9d9d9;
+  height: 50px;
+  border: 2px solid #d9d9d9;
   background-color: #fff;
 }
 @media only screen and (min-width: 1024px) {
@@ -507,11 +506,11 @@ main .detail-page .list-box .list-btn {
   }
 }
 main .detail-page .list-box .list-btn a {
-  font-size: 1.667rem;
+  font-size: 1rem;
 }
 @media only screen and (min-width: 1024px) {
   main .detail-page .list-box .list-btn a {
-    font-size: 1.333rem;
+    font-size: 1.167rem;
   }
 }
 

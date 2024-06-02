@@ -9,12 +9,12 @@
     width: $width-wide;
     max-width: 1440px;
     margin: 0 auto;
-    padding: 0 2.777%;
+    padding: 0 20px;
     // background-color: antiquewhite;
 
     @include responsive(large-screens) {
         position: relative;
-        padding: 0;
+        padding: 0 10px;
     }
 }
 
@@ -30,19 +30,18 @@ header {
     width: $width-wide;
 
     .collection-title {
-        margin: 80px 0 150px;
+        margin: 80px 0 35px;
         text-align: center;
+        font-size: 2.667rem;
+        opacity: 0;
+        transition: opacity 2s ease;
         // background-color: aquamarine;
-        font: {
-            weight: $font-regular;
-            size: 4.167rem;  // 50pt
-        }
         
         @include responsive(large-screens) {
-            margin-bottom: 120px;
+            margin-bottom: 50px;
             font: {
                 weight: $font-semibold;
-                size: 3rem;  // 36pt
+                size: 3rem;
             }
             text-align: left;
         }
@@ -50,12 +49,13 @@ header {
 
 
     .collection-content {
-        // background-color: aqua;
         .content-box {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             grid-auto-rows: minmax(100px, auto);
             grid-row-gap: 30px;
+            grid-column-gap: 15px;
+
 
             @include responsive(large-screens) {
                 grid-template-columns: repeat(3, 1fr);
@@ -64,28 +64,23 @@ header {
             }
 
             .box {
-                width: 92%; 
-                height: 415px;
+                width: $width-wide; 
+                // height: 415px;
                 border: 1px solid $color-main;
                 cursor: pointer;
-                transition: box-shadow 0.3ss ease;
+                opacity: 0;
+                transform: translateY(50px);
+                transition: opacity 1s ease, transform 1s ease, box-shadow 0.3s ease;
                 // background-color: bisque;
-                
-            @include responsive(large-screens) {
-                width: 457px;
-                height: 567px;
+            
+            &.visible {
+                opacity: 1;
+                transform: translateY(0);
             }
-                
+
                 .collection-img {
                     position: relative;
                     width: $width-wide;
-                    height: 275px;
-                    overflow: hidden;
-                    // background-color: lightcyan;
-                    
-                    @include responsive(large-screens) {
-                        height: 375px;
-                    }
 
                     .hover-box {
                         position: absolute;
@@ -115,23 +110,10 @@ header {
                             
                         }
                     }
-
-                    img {
-                        position: absolute;
-                        left: 50%; top: 50%;
-                        width: 110%;
-                        height: auto;
-                        transform: translate(-50%, -50%);
-                        // object-fit: cover;
-
-                    }
- 
-                    .column-img {  // 세로 이미지
-                        width: auto;
-                        height: 90%;
-                    }
                 }
-
+                img {
+                    transform: scale(1.1);
+                }
                 .content-title-txt {
                     padding: 20px 20px 25px;
 
@@ -152,22 +134,23 @@ header {
                         .content-title {
                             font: {
                                 weight: $font-semibold;
-                                size: 1.5rem;
+                                size: 1rem;
                             }
 
                             @include responsive(large-screens) {
-                                font-size: 1.677rem;
+                                font-size: 1.667rem;
                             }
                         }
     
                         .content-txt {
+                            font: {
+                                weight: $font-regular;
+                                size: 0.875rem;
+                            }
                             // background-color: lightgreen;
                             
                             @include responsive(large-screens) {
-                                font: {
-                                    weight: $font-regular;
-                                    size: 1.167rem;
-                                }
+                                font-size: 1rem;
                             }
 
                             span {
@@ -221,8 +204,9 @@ header {
             display: flex;
             justify-content: flex-start;
             align-items: center;
-            width: 245px;
+            width: 205px;
             margin: auto;
+
             // background-color: aquamarine;
 
             @include responsive(large-screens) {
@@ -231,17 +215,14 @@ header {
 
             li {
                 a {
-                    font: {
-                        weight: $font-regular;
-                        size: 1.667rem;  // 20pt
-                    }
-                    // font-size: 2.333rem;  // 28pt
+                    font-size: 1.167rem; 
 
                     @include responsive(large-screens) {
                         font-size: 1.333rem;  // 16pt
                     }
                 }
             }
+
 
             .arrow {
                 a {
@@ -252,12 +233,15 @@ header {
             }
             .number {
                a {
-                    &:hover {
+                    &:hover,
+                    &.num-selected {
+                        font-weight: $font-regular;
                         color: $color-point;
                         text-decoration: underline $color-point;
                     }
                 } 
             }
+
 
 
             .single-left-arrow {
