@@ -394,7 +394,7 @@ main .space .space-title p {
 }
 @media only screen and (min-width: 1024px) {
   main .space .sec1 {
-    height: 1000px;
+    height: 1050px;
     text-align: center;
     margin: 0px 0 0px 0;
     background-image: url(../images/sec1_bg.png);
@@ -466,13 +466,13 @@ main .space .sec2 {
   main .space .sec2 {
     float: right;
     width: 100%;
-    margin: 0px 0 100px 0;
+    margin: 0px 0 0px 0;
     text-align: center;
-    background-image: url(../images/sec2_bg.png);
+    background-image: url(../images/sec2_bg\ \(2\).png);
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    height: 1000px;
+    height: 1020px;
     border-bottom: none;
   }
 }
@@ -520,12 +520,10 @@ main .space .sec2 p span {
   display: inline;
   color: #ff6000;
 }
-main .space .slide1 {
-  position: relative;
-}
 @media only screen and (min-width: 1024px) {
   main .space .slide1 {
-    margin: 0px 0 100px 0;
+    width: 100%;
+    margin: 0px 0 0px 0;
   }
 }
 main .space .slide1 .box1 {
@@ -535,25 +533,43 @@ main .space .slide1 .box1 {
   border-left: none;
   border-right: none;
   overflow: hidden;
+  margin-bottom: 300px;
 }
 @media only screen and (min-width: 1024px) {
   main .space .slide1 .box1 {
     padding: 0px 0 0px 0;
+    background-image: url(../images/sd_bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 }
-main .space .slide1 .box1 .img-list1 {
+main .space .slide1 .box1 .img-list {
   display: flex;
+  width: 500px;
+  text-align: center;
+}
+@media only screen and (min-width: 1024px) {
+  main .space .slide1 .box1 .img-list {
+    display: none;
+  }
+}
+main .space .slide1 .box1 .img-list img {
+  width: 100%;
+}
+main .space .slide1 .box1 .img-list1 {
+  display: none;
   width: 500px;
 }
 @media only screen and (min-width: 1024px) {
   main .space .slide1 .box1 .img-list1 {
+    display: flex;
     width: 5000px;
-    height: 345px;
+    height: 1000px;
+    padding-top: 300px;
     animation-name: move1;
     animation-duration: 30s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
-    background-color: transparent;
   }
   @keyframes move1 {
     0% {
@@ -576,17 +592,17 @@ main .space .slide1 .box1 .img-list1 img {
   }
 }
 main .space .slide1 .box1 .img-list2 {
-  display: flex;
+  display: none;
 }
 @media only screen and (min-width: 1024px) {
   main .space .slide1 .box1 .img-list2 {
+    display: flex;
     width: 5000px;
     height: 345px;
     animation-name: move1;
     animation-duration: 30s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
-    background-color: transparent;
   }
   @keyframes move1 {
     0% {
@@ -610,72 +626,134 @@ main .space .slide1 .box1 .img-list2 img {
     display: block;
   }
 }
-main .space .slide2 {
-  position: relative;
-  width: 100%;
-  margin-bottom: 200px;
-  background-color: aqua;
+@media only screen and (min-width: 1024px) {
+  main .space .slide1-2 {
+    width: 100%;
+    margin: 0px 0 1px 0;
+  }
 }
-main .space .slide2 .bg-box {
+main .space .slide1-2 .box1 {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  border-left: none;
+  border-right: none;
+  overflow: hidden;
+}
+@media only screen and (min-width: 1024px) {
+  main .space .slide1-2 .box1 {
+    padding: 0px 0 0px 0;
+  }
+}
+main .space .slide1-2 .box1 .img-list {
+  display: flex;
+  width: 500px;
+}
+@media only screen and (min-width: 1024px) {
+  main .space .slide1-2 .box1 .img-list {
+    display: none;
+  }
+}
+main .space .slide1-2 .box1 .img-list1 {
+  display: none;
+  width: 500px;
+}
+@media only screen and (min-width: 1024px) {
+  main .space .slide1-2 .box1 .img-list1 {
+    display: flex;
+    width: 5000px;
+    height: 345px;
+    animation-name: move1;
+    animation-duration: 30s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    background-color: transparent;
+  }
+  @keyframes move1 {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+}
+main .space .slide1-2 .box1 .img-list1 img {
   width: 100%;
   height: 100%;
 }
-main .space .slide2 .bg-box img {
+@media only screen and (min-width: 1024px) {
+  main .space .slide1-2 .box1 .img-list1 img {
+    width: 500px;
+    height: 345px;
+    padding: 0 10px 0 10px;
+  }
+}
+main .space .slide1-2 .box1 .img-list2 {
+  display: none;
+}
+@media only screen and (min-width: 1024px) {
+  main .space .slide1-2 .box1 .img-list2 {
+    display: flex;
+    width: 5000px;
+    height: 345px;
+    animation-name: move1;
+    animation-duration: 30s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    background-color: transparent;
+  }
+  @keyframes move1 {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+}
+main .space .slide1-2 .box1 .img-list2 img {
   width: 100%;
   height: 100%;
+  display: none;
 }
-main .space .slide2 .bg-box .shadow-bg {
+@media only screen and (min-width: 1024px) {
+  main .space .slide1-2 .box1 .img-list2 img {
+    width: 500px;
+    height: 345px;
+    padding: 0 10px 0 10px;
+    display: block;
+  }
+}
+main .space .btn {
   position: absolute;
-  top: 0;
-  z-index: 100;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.8);
-}
-main .space .slide2 .bg-box .shadow-bg .floor {
-  display: flex;
-  justify-content: space-between;
-  width: 35%;
+  top: 190%;
+  left: 50%;
+  transform: translate(-50%);
+  width: 30%;
+  height: 50px;
   margin: 0 auto;
-  padding-top: 20px;
+  margin-bottom: 200px;
+  margin-top: 50px;
+  background-color: white;
+  border: 1px solid black;
 }
-main .space .slide2 .bg-box .shadow-bg .floor h2 a {
-  font-size: 3rem;
-  color: #dddddd;
+@media only screen and (min-width: 1024px) {
+  main .space .btn {
+    width: 20%;
+    top: 320%;
+  }
 }
-main .space .slide2 .bg-box .shadow-bg .img-box {
-  width: 100%;
-  height: auto;
-  margin: 0 auto;
+main .space .btn a {
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-align: center;
+  line-height: 50px;
 }
-main .space .slide2 .bg-box .shadow-bg .img-box img {
-  width: 90%;
-  height: auto;
-  margin: 0 auto;
-  padding-top: 30px;
-}
-main .space .slide2 .bg-box .shadow-bg .btn {
-  width: 100%;
-}
-main .space .slide2 .bg-box .shadow-bg .btn p {
-  width: 100%;
-  display: flex;
-  color: white;
-}
-main .space .slide2 .bg-box .shadow-bg .btn p .white {
-  font-weight: bold;
-}
-main .space .slide2 .bg-box .shadow-bg .txt-box {
-  width: 90%;
-  height: auto;
-  margin: 0 auto;
-}
-main .space .slide2 .bg-box .shadow-bg .txt-box h2 {
-  font-size: 1rem;
-  color: white;
-}
-main .space .slide2 .bg-box .shadow-bg .txt-box p {
-  color: white;
+@media only screen and (min-width: 1024px) {
+  main .space .btn a {
+    font-size: 1rem;
+  }
 }
 
 footer {
