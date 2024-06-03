@@ -114,6 +114,11 @@ header {
                 img {
                     transform: scale(1.1);
                 }
+
+                .book-image {
+                    transform: scale(1);
+                }
+                
                 .content-title-txt {
                     padding: 20px 10px;
 
@@ -207,7 +212,7 @@ header {
             width: 275px;
             margin: auto;
 
-            background-color: aquamarine;
+            // background-color: aquamarine;
 
             @include responsive(large-screens) {
                 width: 290px;

@@ -635,7 +635,7 @@ main {
             margin-bottom: 5%;
             font-size: 2.5rem; 
             opacity: 0;
-            transition: opacity 1s;
+            transition: opacity 1.5s ease;
             
             @include responsive(large-screens) {
                 margin-bottom: 65px;
