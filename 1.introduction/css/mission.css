@@ -109,20 +109,21 @@ header {
     height: 150px;
   }
 }
-
 header.active {
   position: relative;
   z-index: 100;
   border-bottom: 1px solid #dbdbdb;
 }
-@media only screen and (min-width: 1024px) {
-  header.active {
-    height: 270px;
-    background-color: #fff;
-  }
-}
 header .logo-gnb-rightmenu {
   height: 100%;
+}
+@media only screen and (min-width: 1024px) {
+  header .logo-gnb-rightmenu {
+    position: relative;
+  }
+}
+header .logo-gnb-rightmenu.active {
+  background-color: #fff;
 }
 header .logo-gnb-rightmenu .container {
   height: 100%;
@@ -133,11 +134,6 @@ header .logo-gnb-rightmenu .container .logo-gnb-menu-box {
   align-items: center;
   width: 100%;
   height: 100%;
-}
-header .logo-gnb-rightmenu .container .logo-gnb-menu-box.active {
-  position: relative;
-  z-index: 2000;
-  border-bottom: 2px solid #dbdbdb;
 }
 @media only screen and (min-width: 1024px) {
   header .logo-gnb-rightmenu .container .logo-gnb-menu-box {
@@ -172,12 +168,15 @@ header .logo-gnb-rightmenu .container .logo-gnb-menu-box .main-menu {
     display: block;
     position: absolute;
     left: 0;
+    right: 0;
     top: 55px;
     z-index: 5;
     width: 100%;
+    padding: 0 20vw;
     height: 80px;
     overflow: hidden;
     text-align: center;
+    background-color: #ddd;
     transition: all 0.5s;
   }
 }
@@ -192,6 +191,7 @@ header .logo-gnb-rightmenu .container .logo-gnb-menu-box .main-menu.active {
 }
 header .logo-gnb-rightmenu .container .logo-gnb-menu-box .main-menu .gnb {
   margin-top: 50px;
+  margin-bottom: 100px;
   padding-left: 30px;
 }
 @media only screen and (min-width: 1024px) {
@@ -354,473 +354,467 @@ header .logo-gnb-rightmenu .container .logo-gnb-menu-box .right-menu .mobile-men
   display: block;
 }
 
-main .container .map-box {
-  margin-top: 80px;
+main .bi {
+  margin-top: 100px;
 }
 @media only screen and (min-width: 1024px) {
-  main .container .map-box {
-    position: relative;
+  main .bi {
+    margin-top: 200px;
   }
 }
-main .container .map-box h2 {
-  padding-bottom: 60px;
+main .bi .container h2 {
   text-align: center;
+  margin-bottom: 25px;
+  animation-duration: 2s;
+  animation-name: move;
+}
+@keyframes move {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 @media only screen and (min-width: 1024px) {
-  main .container .map-box h2 {
-    font-size: 2rem;
+  main .bi .container h2 {
+    font-size: 2.5rem;
+    margin-bottom: 60px;
+  }
+}
+main .bi .container .bi-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 70%;
+  margin: 0 auto;
+  padding-top: 20px;
+  animation-duration: 2s;
+  animation-name: move;
+}
+@keyframes move {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  main .bi .container .bi-menu {
+    width: 50%;
+  }
+}
+main .bi .container .bi-menu div:first-child {
+  width: 100%;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  font-size: 0.9rem;
+  font-weight: 400;
+  border: 1px solid #c2c2c2;
+  border-right: none;
+}
+@media only screen and (min-width: 1024px) {
+  main .bi .container .bi-menu div:first-child {
+    height: 60px;
+    line-height: 60px;
+    font-size: 1rem;
     font-weight: 600;
   }
 }
-main .container .map-box iframe {
-  display: block;
-  width: 96%;
-  margin: 0 auto;
+main .bi .container .bi-menu div:first-child a:hover {
+  color: #ff6000;
 }
-@media only screen and (min-width: 1024px) {
-  main .container .map-box iframe {
-    width: 90%;
-    height: 660px;
-    margin-bottom: 100px;
-  }
-}
-main .container .map-box .orange-box {
-  width: 96%;
-  height: 180px;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+main .bi .container .bi-menu div:nth-child(2) {
+  width: 100%;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  font-size: 0.9rem;
+  font-weight: 400;
+  border: 1px solid #c2c2c2;
+  border-right: none;
   background-color: #ff6000;
 }
 @media only screen and (min-width: 1024px) {
-  main .container .map-box .orange-box {
-    position: absolute;
-    top: 680px;
-    left: 180px;
-    width: 75%;
-    height: 180px;
-    margin: 0 auto;
-  }
-}
-main .container .map-box .orange-box .map-info {
-  padding-left: 6%;
-}
-main .container .map-box .orange-box .map-info h3 {
-  padding-top: 20px;
-  padding-bottom: 10px;
-  color: #fff;
-}
-@media only screen and (min-width: 1024px) {
-  main .container .map-box .orange-box .map-info h3 {
-    width: 200px;
-    font-size: 1.7rem;
-  }
-}
-main .container .map-box .orange-box .map-info p {
-  padding-bottom: 20px;
-  font-size: 0.8rem;
-  color: #fff;
-}
-@media only screen and (min-width: 1024px) {
-  main .container .map-box .orange-box .map-info p {
+  main .bi .container .bi-menu div:nth-child(2) {
+    height: 60px;
+    line-height: 60px;
     font-size: 1rem;
+    font-weight: 600;
   }
 }
-main .container .map-box .orange-box .map-txt {
-  padding-right: 5%;
-  width: 80%;
-}
-main .container .map-box .orange-box .map-txt p {
-  font-size: 0.7rem;
-  padding: 20px 20px 0 0;
+main .bi .container .bi-menu div:nth-child(2) a {
   color: #fff;
 }
+main .bi .container .bi-menu div:last-child {
+  width: 100%;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  font-size: 0.9rem;
+  font-weight: 400;
+  border: 1px solid #c2c2c2;
+}
 @media only screen and (min-width: 1024px) {
-  main .container .map-box .orange-box .map-txt p {
+  main .bi .container .bi-menu div:last-child {
+    height: 60px;
+    line-height: 60px;
     font-size: 1rem;
+    font-weight: 600;
   }
 }
-main .container .map-box .orange-box .map-txt strong {
-  padding-top: 10px;
-  padding-right: 20px;
-  padding-bottom: 20px;
-  font-size: 0.6rem;
-  color: #fff;
-}
-@media only screen and (min-width: 1024px) {
-  main .container .map-box .orange-box .map-txt strong {
-    font-size: 0.8rem;
-  }
-}
-main .container .bus-subway .bus {
-  display: flex;
-  align-items: center;
-  width: 95%;
-  margin: 0 auto;
-  padding: 0px 0 20px 0;
-  border: 1px solid #c2c2c2;
-  border-left: none;
-  border-right: none;
-}
-@media only screen and (min-width: 1024px) {
-  main .container .bus-subway .bus {
-    width: 90%;
-    margin: 0 auto;
-    height: 300px;
-    padding: 10px 0 10px 0;
-    font-size: 1.11rem;
-  }
-}
-main .container .bus-subway .bus img {
-  width: 80px;
-  height: auto;
-  margin-left: 8%;
-  margin-right: 8%;
-}
-@media only screen and (min-width: 1024px) {
-  main .container .bus-subway .bus img {
-    width: 13%;
-  }
-}
-main .container .bus-subway .bus .bus-num {
-  margin-right: 40px;
-  flex-direction: column;
-  padding-bottom: 20px;
-}
-main .container .bus-subway .bus .bus-num div {
-  font-weight: 400;
-}
-@media only screen and (min-width: 1024px) {
-  main .container .bus-subway .bus .bus-num div {
-    width: 100%;
-    margin: 0 auto;
-    font-size: 1.11rem;
-    padding-left: 50px;
-  }
-}
-main .container .bus-subway .bus .bus-num div span {
-  padding-top: 20px;
-}
-main .container .bus-subway .bus .bus-num div .green {
-  color: green;
-}
-@media only screen and (min-width: 1024px) {
-  main .container .bus-subway .bus .bus-num div .green {
-    font-weight: 400;
-  }
-}
-main .container .bus-subway .bus .bus-num div .blue {
-  color: blue;
-}
-@media only screen and (min-width: 1024px) {
-  main .container .bus-subway .bus .bus-num div .blue {
-    font-weight: 400;
-  }
-}
-main .container .bus-subway .bus .bus-num div .red {
-  color: red;
-}
-@media only screen and (min-width: 1024px) {
-  main .container .bus-subway .bus .bus-num div .red {
-    font-weight: 400;
-  }
-}
-main .container .bus-subway .subway {
-  display: flex;
-  align-items: center;
-  width: 96%;
-  margin: 0 auto;
-  border: 1px solid #c2c2c2;
-  border-left: none;
-  border-right: none;
-  border-top: none;
-  padding: 20px 0 20px 0;
-}
-@media only screen and (min-width: 1024px) {
-  main .container .bus-subway .subway {
-    width: 90%;
-    height: 300px;
-    padding: 50px 0 50px 0;
-  }
-}
-main .container .bus-subway .subway img {
-  width: 80px;
-  height: auto;
-  margin-left: 8%;
-  margin-right: 8%;
-}
-@media only screen and (min-width: 1024px) {
-  main .container .bus-subway .subway img {
-    width: 13%;
-  }
-}
-main .container .bus-subway .subway .subway-num {
-  flex-direction: column;
-  padding-bottom: 20px;
-  margin-right: 40px;
-}
-main .container .bus-subway .subway .subway-num div {
-  font-weight: 400;
-}
-@media only screen and (min-width: 1024px) {
-  main .container .bus-subway .subway .subway-num div {
-    font-size: 1.11rem;
-    padding-left: 50px;
-  }
-}
-main .container .bus-subway .subway .subway-num div span {
-  padding-top: 20px;
-}
-main .container .bus-subway .subway .subway-num div .orange {
+main .bi .container .bi-menu div:last-child a:hover {
   color: #ff6000;
 }
 @media only screen and (min-width: 1024px) {
-  main .container .bus-subway .subway .subway-num div .orange {
-    font-weight: 400;
+  main .bi .container .sec-box {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 900px;
+    margin-top: 300px;
   }
 }
-main .container .store {
-  width: 96%;
-  margin: 0 auto;
-  margin-bottom: 80px;
-  border: 1px solid #c2c2c2;
-  border-top: none;
-  border-right: none;
-  border-left: none;
+main .bi .container .sec-box .sec1 {
+  width: 100%;
 }
 @media only screen and (min-width: 1024px) {
-  main .container .store {
-    width: 90%;
-    display: flex;
-    align-items: center;
-    padding-left: 110px;
-    padding-bottom: 80px;
-    padding-left: 90px;
+  main .bi .container .sec-box .sec1 {
+    width: 100%;
   }
 }
-main .container .store img {
-  width: 90%;
-  height: 100%;
+main .bi .container .sec-box .sec1 .sec1-box {
+  width: 100%;
+  margin-top: 110px;
+}
+@media only screen and (min-width: 1024px) {
+  main .bi .container .sec-box .sec1 .sec1-box {
+    margin-top: 70px;
+  }
+}
+main .bi .container .sec-box .sec1 .sec1-box img {
+  width: 25%;
+  margin: 0 auto;
+}
+main .bi .container .sec-box .sec1 .sec1-box .line {
+  width: 2px;
+  margin: 0 auto;
+  height: 80px;
+  background-color: rgb(146, 146, 146);
+}
+main .bi .container .sec-box .sec1 .sec1-box .og-box {
+  width: 70%;
+  height: 60px;
+  margin: 0 auto;
+  border-radius: 25px;
+  background-color: #ff6000;
+}
+@media only screen and (min-width: 1024px) {
+  main .bi .container .sec-box .sec1 .sec1-box .og-box {
+    width: 100%;
+    height: 80px;
+  }
+}
+main .bi .container .sec-box .sec1 .sec1-box .og-box strong {
+  font-size: 1.3rem;
+  text-align: center;
+  line-height: 60px;
+  color: #fff;
+}
+@media only screen and (min-width: 1024px) {
+  main .bi .container .sec-box .sec1 .sec1-box .og-box strong {
+    line-height: 80px;
+  }
+}
+main .bi .container .sec-box .sec1 .sec1-box p {
+  text-align: center;
+  width: 50%;
   margin: 0 auto;
   padding-top: 30px;
-  padding-bottom: 20px;
-}
-@media only screen and (min-width: 1024px) {
-  main .container .store img {
-    width: 40%;
-    margin: 0 auto;
-  }
-}
-main .container .store .store-txt {
-  width: 90%;
-  margin: 0 auto;
-}
-main .container .store .store-txt h3 {
-  width: 100%;
-  font-size: 1.5rem;
-  font-weight: 400;
-}
-@media only screen and (min-width: 1024px) {
-  main .container .store .store-txt h3 {
-    font-size: 2rem;
-    padding-top: 60px;
-    padding-bottom: 30px;
-    padding-left: 80px;
-  }
-}
-main .container .store .store-txt strong {
-  width: 100%;
-  font-size: 1rem;
-}
-@media only screen and (min-width: 1024px) {
-  main .container .store .store-txt strong {
-    font-size: 1.3rem;
-    margin-top: 0;
-    padding-left: 80px;
-  }
-}
-main .container .store .store-txt p {
-  font-size: 0.8rem;
-  padding: 20px 0 5px 0;
-}
-@media only screen and (min-width: 1024px) {
-  main .container .store .store-txt p {
-    width: 75%;
-    padding-left: 80px;
-  }
-}
-main .container .store .store-txt .time {
-  font-size: 0.7rem;
+  padding-bottom: 50px;
+  font-size: 1.1rem;
   font-weight: 600;
-  padding-bottom: 30px;
 }
 @media only screen and (min-width: 1024px) {
-  main .container .store .store-txt .time {
-    width: 100%;
-    font-size: 0.8rem;
-    font-weight: 600;
-    padding-top: 20px;
-    padding-left: 80px;
+  main .bi .container .sec-box .sec1 .sec1-box p {
+    width: 55%;
+    font-size: 1.2rem;
   }
 }
-
-footer {
+main .bi .container .sec-box .sec1 .plus {
   position: relative;
-  width: 100%;
+  width: 60px;
+  height: 60px;
+  margin: 0 auto;
+  background-color: #9a6241;
+  border-radius: 50%;
 }
-footer .footer-img img {
-  width: 100%;
+@media only screen and (min-width: 1024px) {
+  main .bi .container .sec-box .sec1 .plus {
+    width: 80px;
+    height: 80px;
+    top: -215px;
+    left: 240px;
+  }
 }
-footer .footerlogo-info {
-  padding: 35px 20px;
+main .bi .container .sec-box .sec1 .plus .line1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50%;
+  height: 2px;
+  background-color: #fff;
 }
-footer .footerlogo-info .footer-content-box {
-  position: relative;
-  width: 84%;
+main .bi .container .sec-box .sec1 .plus .line2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 2px;
+  height: 50%;
+  background-color: #fff;
+}
+@media only screen and (min-width: 1024px) {
+  main .bi .container .sec-box .sec2 {
+    width: 100%;
+  }
+}
+main .bi .container .sec-box .sec2 .sec2-box {
+  margin-top: 70px;
+}
+main .bi .container .sec-box .sec2 .sec2-box img {
+  width: 25%;
   margin: 0 auto;
 }
 @media only screen and (min-width: 1024px) {
-  footer .footerlogo-info .footer-content-box {
-    display: flex;
-    width: 82%;
-    height: 150px;
-  }
-}
-footer .footerlogo-info .footer-content-box .footer-logo {
-  margin-bottom: 30px;
-  width: 100%;
-}
-@media only screen and (min-width: 1024px) {
-  footer .footerlogo-info .footer-content-box .footer-logo {
-    margin-right: 6%;
-    width: 290px;
-  }
-}
-footer .footerlogo-info .footer-content-box .footer-logo h2 {
-  font-weight: 100;
-  font-size: 2.333rem;
-}
-@media only screen and (min-width: 1024px) {
-  footer .footerlogo-info .footer-content-box .footer-logo h2 {
-    line-height: 1.2;
-    font-size: 3.75rem;
-  }
-}
-footer .footerlogo-info .footer-content-box .footer-info-box {
-  width: 100%;
-}
-@media only screen and (min-width: 1024px) {
-  footer .footerlogo-info .footer-content-box .footer-info-box {
-    display: flex;
-    flex-direction: column;
-  }
-}
-footer .footerlogo-info .footer-content-box .footer-info-box .info {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-}
-@media only screen and (min-width: 1024px) {
-  footer .footerlogo-info .footer-content-box .footer-info-box .info {
-    width: 100%;
-  }
-}
-footer .footerlogo-info .footer-content-box .footer-info-box .info div strong {
-  font-weight: 400;
-  font-size: 1rem;
-  color: #717171;
-}
-@media only screen and (min-width: 1024px) {
-  footer .footerlogo-info .footer-content-box .footer-info-box .info div strong {
-    margin-bottom: 15px;
-    font-size: 1.167rem;
-  }
-}
-footer .footerlogo-info .footer-content-box .footer-info-box .info div .long-line {
-  position: relative;
-  z-index: 1;
-  width: 100%;
-  height: 2px;
-  margin: 10px 0;
-  background-color: #b0afaf;
-}
-footer .footerlogo-info .footer-content-box .footer-info-box .info div .long-line .line {
-  position: absolute;
-  left: 0;
-  top: 0;
-  z-index: 2;
-  width: 41px;
-  height: 100%;
-  background-color: #717171;
-}
-@media only screen and (min-width: 1024px) {
-  footer .footerlogo-info .footer-content-box .footer-info-box .info div .long-line .line {
-    width: 33px;
-  }
-}
-footer .footerlogo-info .footer-content-box .footer-info-box .info .address {
-  width: 45%;
-}
-@media only screen and (min-width: 1024px) {
-  footer .footerlogo-info .footer-content-box .footer-info-box .info .address {
-    width: 40%;
-  }
-}
-footer .footerlogo-info .footer-content-box .footer-info-box .info .tel {
-  width: 40%;
-}
-@media only screen and (min-width: 1024px) {
-  footer .footerlogo-info .footer-content-box .footer-info-box .info .tel {
-    width: 35%;
-  }
-}
-footer .footerlogo-info .footer-content-box .footer-info-box .info .sns {
-  width: 15%;
-}
-@media only screen and (min-width: 1024px) {
-  footer .footerlogo-info .footer-content-box .footer-info-box .info .sns {
+  main .bi .container .sec-box .sec2 .sec2-box img {
     width: 25%;
   }
 }
-footer .footerlogo-info .footer-content-box .footer-info-box .info .txt {
-  width: 80%;
-  font-weight: 400;
-  font-size: 0.83rem;
-  color: #b0afaf;
+main .bi .container .sec-box .sec2 .sec2-box .line {
+  width: 2px;
+  margin: 0 auto;
+  height: 80px;
+  background-color: rgb(146, 146, 146);
+}
+main .bi .container .sec-box .sec2 .sec2-box .og-box {
+  width: 70%;
+  height: 60px;
+  margin: 0 auto;
+  border-radius: 25px;
+  background-color: #ff8665;
 }
 @media only screen and (min-width: 1024px) {
-  footer .footerlogo-info .footer-content-box .footer-info-box .info .txt {
-    width: 75%;
-    font-size: 1rem;
+  main .bi .container .sec-box .sec2 .sec2-box .og-box {
+    width: 100%;
+    height: 80px;
   }
 }
-footer .footerlogo-info .footer-content-box .footer-info-box .copyright {
-  width: 100%;
-  margin-top: 20px;
-}
-@media only screen and (min-width: 1024px) {
-  footer .footerlogo-info .footer-content-box .footer-info-box .copyright {
-    margin-top: 0;
-  }
-}
-footer .footerlogo-info .footer-content-box .footer-info-box .copyright p {
-  font-weight: 400;
-  font-size: 0.83rem;
-  color: #b0afaf;
-}
-footer .fixed-menu {
-  position: fixed;
-  right: 60px;
-  bottom: 100px;
-  z-index: 10;
-}
-footer .fixed-menu a {
-  width: 50px;
-  height: 50px;
-  line-height: 50px;
-  border-radius: 50%;
+main .bi .container .sec-box .sec2 .sec2-box .og-box strong {
+  font-size: 1.3rem;
   text-align: center;
+  line-height: 60px;
   color: #fff;
-  background-color: #000;
-}/*# sourceMappingURL=guide.css.map */
+}
+@media only screen and (min-width: 1024px) {
+  main .bi .container .sec-box .sec2 .sec2-box .og-box strong {
+    line-height: 80px;
+  }
+}
+main .bi .container .sec-box .sec2 .sec2-box p {
+  text-align: center;
+  width: 50%;
+  margin: 0 auto;
+  padding-top: 30px;
+  padding-bottom: 50px;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+@media only screen and (min-width: 1024px) {
+  main .bi .container .sec-box .sec2 .sec2-box p {
+    width: 55%;
+    font-size: 1.2rem;
+  }
+}
+main .bi .container .sec-box .sec2 .plus2 {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  margin: 0 auto;
+  background-color: #9a6241;
+  border-radius: 50%;
+}
+@media only screen and (min-width: 1024px) {
+  main .bi .container .sec-box .sec2 .plus2 {
+    width: 80px;
+    height: 80px;
+    top: -215px;
+    left: 240px;
+  }
+}
+main .bi .container .sec-box .sec2 .plus2 .line1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50%;
+  height: 2px;
+  background-color: #fff;
+}
+main .bi .container .sec-box .sec2 .plus2 .line2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 2px;
+  height: 50%;
+  background-color: #fff;
+}
+@media only screen and (min-width: 1024px) {
+  main .bi .container .sec-box .sec3 {
+    width: 100%;
+  }
+}
+main .bi .container .sec-box .sec3 .sec3-box {
+  margin-top: 70px;
+}
+main .bi .container .sec-box .sec3 .sec3-box img {
+  width: 25%;
+  margin: 0 auto;
+}
+@media only screen and (min-width: 1024px) {
+  main .bi .container .sec-box .sec3 .sec3-box img {
+    width: 25%;
+  }
+}
+main .bi .container .sec-box .sec3 .sec3-box .line {
+  width: 2px;
+  margin: 0 auto;
+  height: 80px;
+  background-color: rgb(146, 146, 146);
+}
+main .bi .container .sec-box .sec3 .sec3-box .og-box {
+  width: 70%;
+  height: 60px;
+  margin: 0 auto;
+  border-radius: 25px;
+  background-color: #d89f90;
+}
+@media only screen and (min-width: 1024px) {
+  main .bi .container .sec-box .sec3 .sec3-box .og-box {
+    width: 100%;
+    height: 80px;
+  }
+}
+main .bi .container .sec-box .sec3 .sec3-box .og-box strong {
+  font-size: 1.3rem;
+  text-align: center;
+  line-height: 60px;
+  color: #fff;
+}
+@media only screen and (min-width: 1024px) {
+  main .bi .container .sec-box .sec3 .sec3-box .og-box strong {
+    line-height: 80px;
+  }
+}
+main .bi .container .sec-box .sec3 .sec3-box p {
+  text-align: center;
+  width: 50%;
+  margin: 0 auto;
+  padding-top: 30px;
+  padding-bottom: 50px;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+@media only screen and (min-width: 1024px) {
+  main .bi .container .sec-box .sec3 .sec3-box p {
+    width: 55%;
+    font-size: 1.2rem;
+  }
+}
+main .vission-box .container .vission h2 {
+  font-size: 2rem;
+  padding-bottom: 40px;
+  text-align: center;
+}
+main .vission-box .container .vission p {
+  width: 90%;
+  height: 150px;
+  margin: 0 auto;
+  line-height: 150px;
+  text-align: center;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #fff;
+  border-top-left-radius: 80px;
+  border-end-end-radius: 80px;
+  background: linear-gradient(to right, #ff6000, #d89f90);
+}
+@media only screen and (min-width: 1024px) {
+  main .vission-box .container .vission p {
+    width: 100%;
+    font-size: 1.5rem;
+  }
+}
+main .vission-box .container .vission2 {
+  margin-top: 100px;
+  margin-bottom: 200px;
+}
+@media only screen and (min-width: 1024px) {
+  main .vission-box .container .vission2 {
+    margin-top: 300px;
+    margin-bottom: 500px;
+  }
+}
+main .vission-box .container .vission2 strong {
+  text-align: center;
+  font-size: 2rem;
+}
+main .vission-box .container .vission2 h2 {
+  text-align: center;
+  font-size: 2.5rem;
+}
+main .vission-box .container .vission2 .flex-box {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 50px;
+  margin-bottom: 100px;
+}
+main .vission-box .container .vission2 .flex-box p {
+  width: 100px;
+  height: 100px;
+  line-height: 100px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 1.2rem;
+  color: #fff;
+  border-radius: 50%;
+  background: linear-gradient(to right, #ff6000, #ff6000, #ffffff);
+}
+@media only screen and (min-width: 1024px) {
+  main .vission-box .container .vission2 .flex-box p {
+    width: 200px;
+    height: 200px;
+    line-height: 200px;
+    font-size: 1.8rem;
+  }
+}
+main .vission-box .container .vission2 .flex-box p:nth-child(3) {
+  background: linear-gradient(to right, #ff8665, #ff8665, #ffffff);
+}
+main .vission-box .container .vission2 .flex-box p:last-child {
+  background: linear-gradient(to right, #d89f90, #d89f90, #ffffff);
+}
+main .vission-box .container .vission2 .flex-box .plus-ic {
+  font-size: 2rem;
+  line-height: 100px;
+}
+@media only screen and (min-width: 1024px) {
+  main .vission-box .container .vission2 .flex-box .plus-ic {
+    line-height: 200px;
+    font-size: 4rem;
+  }
+}/*# sourceMappingURL=mission.css.map */

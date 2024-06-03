@@ -859,7 +859,7 @@ main {
                 @include responsive(large-screens) {
                     position: absolute;
                     left: 0; bottom: 0;
-                    width: 39%;  // 750px
+                    width: 38.8%;  // 750px
                     border-top: 2px solid $line-gray;
                 }
                 .detail-btn {
@@ -898,8 +898,8 @@ main {
                         .arrow {
                             width: 120px;
                             height: 70px;
-                            align-items: center;
                             line-height: 70px;
+                            align-items: center;
                             // background-color: lightcoral;
 
                             @include responsive(large-screens) {
@@ -1607,9 +1607,15 @@ main {
                     transition: opacity 1.5s ease, transform 1s ease;
                 }
 
+                &.visible {
+                    opacity: 1;
+                    transform: translateX(0);
+                }
+
                 .sns-img {
                     overflow: hidden;
                     background-color: antiquewhite;
+                    cursor: pointer;
                 }
             }
 

@@ -465,6 +465,26 @@ $(function() {
     //     })
     // });
 
+    // $(window).scroll(function() {
+    //     var windowHeight = $(window).height();
+    //     var windowMiddle = $(window).scrollTop() + windowHeight / 2;
+    
+    //     $('.content-txt').each(function() {
+    //         var txtOffset = $(this).offset().top;
+    //         if (windowMiddle > txtOffset && $(this).css('opacity') == 0) {
+    //             $('.left-txt').css({
+    //                 'opacity': 1,
+    //                 'transform': 'translateX(0)'
+    //             });
+    
+    //             $('.right-txt').css({
+    //                 'opacity': 1,
+    //                 'transform': 'translateX(0)'
+    //             });
+    //         }
+    //     });
+    // });
+
     $(window).scroll(function() {
         var windowHeight = $(window).height();
         var windowMiddle = $(window).scrollTop() + windowHeight / 2;
@@ -472,18 +492,13 @@ $(function() {
         $('.content-txt').each(function() {
             var txtOffset = $(this).offset().top;
             if (windowMiddle > txtOffset && $(this).css('opacity') == 0) {
-                $('.left-txt').css({
-                    'opacity': 1,
-                    'transform': 'translateX(0)'
-                });
-    
-                $('.right-txt').css({
-                    'opacity': 1,
-                    'transform': 'translateX(0)'
-                });
+                $(this).addClass('visible');
             }
         });
     });
+
+    // 초기 로드 시 가시성 확인
+    $(window).scroll();
     
        
 
