@@ -96,6 +96,7 @@ footer {
   width: 100%;
   max-width: 1440px;
   margin: 0 auto;
+  padding: 0 10px;
 }
 
 header {
@@ -357,467 +358,275 @@ header .logo-gnb-rightmenu .container .logo-gnb-menu-box .right-menu .mobile-men
   display: block;
 }
 
-main .bi {
-  margin-top: 100px;
+main {
+  width: 100%;
+}
+main section.login {
+  height: 600px;
 }
 @media only screen and (min-width: 1024px) {
-  main .bi {
-    margin-top: 200px;
+  main section.login {
+    background: url(../images/sketch2.png);
+    /* background-size: 2000px 800px; */
+    background-position: center;
   }
 }
-main .bi .container h2 {
+main section.login .orange-box {
+  position: relative;
+  top: 10px;
+  width: 700px;
+  height: 500px;
+  margin: 0 auto;
+  background-color: #ff6000;
+  border-radius: 5px;
+  box-shadow: 5px 5px 5px #8d8d8d;
+}
+main section.login .orange-box .login-box {
+  position: relative;
+  width: 400px;
+  height: 350px;
+  margin: 0 auto;
+  z-index: 5;
+  background-color: white;
+  transform: translateY(75px);
+  border-radius: 5px;
+}
+@media only screen and (min-width: 1024px) {
+  main section.login .orange-box .login-box {
+    transform: translateX(-250px) translateY(75px);
+  }
+}
+main section.login .orange-box .login-box form {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
   text-align: center;
-  margin-bottom: 25px;
-  animation-duration: 2s;
-  animation-name: move;
 }
-@keyframes move {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+main section.login .orange-box .login-box form h1 {
+  font-weight: 300;
+  transform: translateY(10px);
+}
+main section.login .orange-box .login-box form .pw {
+  transform: translateY(-20px);
+}
+main section.login .orange-box .login-box form label {
+  display: block;
+  transform: translateX(-70px);
+}
+main section.login .orange-box .login-box form input {
+  width: 200px;
+  height: 40px;
+  border-radius: 5px;
+  font-size: 18px;
+  font-weight: 100;
+  padding-left: 5px;
+}
+main section.login .orange-box .login-box form button {
+  margin: 0 auto;
+  width: 150px;
+  height: 40px;
+  background-color: #ff6000;
+  color: white;
+  transform: translateY(-10px);
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 16px;
+}
+main section.login .orange-box .login-box form button:hover {
+  color: #ff6000;
+  background-color: white;
+  border: 2px solid;
+  font-weight: 600;
+  transition: all 0.3s;
+}
+main section.login .orange-box .login-image {
+  position: absolute;
+  z-index: 2;
+}
+main section.login .orange-box .login-image img {
+  z-index: 0;
+  margin: 0 auto;
+  height: 500px;
+  transform: translateY(-350px) translateX(175px);
+  opacity: 1;
 }
 @media only screen and (min-width: 1024px) {
-  main .bi .container h2 {
-    font-size: 2.5rem;
-    margin-bottom: 60px;
+  main section.login .orange-box .login-image img {
+    transform: translateX(330px) translateY(-350px) scale(0.7);
   }
 }
-main .bi .container .bi-menu {
+
+footer {
+  position: relative;
+  width: 100%;
+}
+footer .footer-img img {
+  width: 100%;
+}
+footer .footerlogo-info {
+  padding: 35px 20px;
+}
+footer .footerlogo-info .footer-content-box {
+  position: relative;
+  width: 84%;
+  margin: 0 auto;
+}
+@media only screen and (min-width: 1024px) {
+  footer .footerlogo-info .footer-content-box {
+    display: flex;
+    width: 82%;
+    height: 150px;
+  }
+}
+footer .footerlogo-info .footer-content-box .footer-logo {
+  margin-bottom: 30px;
+  width: 100%;
+}
+@media only screen and (min-width: 1024px) {
+  footer .footerlogo-info .footer-content-box .footer-logo {
+    margin-right: 6%;
+    width: 290px;
+  }
+}
+footer .footerlogo-info .footer-content-box .footer-logo h2 {
+  font-weight: 100;
+  font-size: 2.333rem;
+}
+@media only screen and (min-width: 1024px) {
+  footer .footerlogo-info .footer-content-box .footer-logo h2 {
+    line-height: 1.2;
+    font-size: 3.75rem;
+  }
+}
+footer .footerlogo-info .footer-content-box .footer-info-box {
+  width: 100%;
+}
+@media only screen and (min-width: 1024px) {
+  footer .footerlogo-info .footer-content-box .footer-info-box {
+    display: flex;
+    flex-direction: column;
+  }
+}
+footer .footerlogo-info .footer-content-box .footer-info-box .info {
+  width: 100%;
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  width: 70%;
-  margin: 0 auto;
-  padding-top: 20px;
-  animation-duration: 2s;
-  animation-name: move;
-}
-@keyframes move {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
 }
 @media only screen and (min-width: 1024px) {
-  main .bi .container .bi-menu {
-    width: 50%;
-  }
-}
-main .bi .container .bi-menu div:first-child {
-  width: 100%;
-  height: 40px;
-  text-align: center;
-  line-height: 40px;
-  font-size: 0.9rem;
-  font-weight: 400;
-  border: 1px solid #c2c2c2;
-  border-right: none;
-}
-@media only screen and (min-width: 1024px) {
-  main .bi .container .bi-menu div:first-child {
-    height: 60px;
-    line-height: 60px;
-    font-size: 1rem;
-    font-weight: 600;
-  }
-}
-main .bi .container .bi-menu div:first-child a:hover {
-  color: #ff6000;
-}
-main .bi .container .bi-menu div:nth-child(2) {
-  width: 100%;
-  height: 40px;
-  text-align: center;
-  line-height: 40px;
-  font-size: 0.9rem;
-  font-weight: 400;
-  border: 1px solid #c2c2c2;
-  border-right: none;
-  background-color: #ff6000;
-}
-@media only screen and (min-width: 1024px) {
-  main .bi .container .bi-menu div:nth-child(2) {
-    height: 60px;
-    line-height: 60px;
-    font-size: 1rem;
-    font-weight: 600;
-  }
-}
-main .bi .container .bi-menu div:nth-child(2) a {
-  color: #fff;
-}
-main .bi .container .bi-menu div:last-child {
-  width: 100%;
-  height: 40px;
-  text-align: center;
-  line-height: 40px;
-  font-size: 0.9rem;
-  font-weight: 400;
-  border: 1px solid #c2c2c2;
-}
-@media only screen and (min-width: 1024px) {
-  main .bi .container .bi-menu div:last-child {
-    height: 60px;
-    line-height: 60px;
-    font-size: 1rem;
-    font-weight: 600;
-  }
-}
-main .bi .container .bi-menu div:last-child a:hover {
-  color: #ff6000;
-}
-@media only screen and (min-width: 1024px) {
-  main .bi .container .sec-box {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    height: 900px;
-    margin-top: 300px;
-  }
-}
-main .bi .container .sec-box .sec1 {
-  width: 100%;
-}
-@media only screen and (min-width: 1024px) {
-  main .bi .container .sec-box .sec1 {
+  footer .footerlogo-info .footer-content-box .footer-info-box .info {
     width: 100%;
   }
 }
-main .bi .container .sec-box .sec1 .sec1-box {
-  width: 100%;
-  margin-top: 110px;
+footer .footerlogo-info .footer-content-box .footer-info-box .info div strong {
+  font-weight: 400;
+  font-size: 1rem;
+  color: #717171;
 }
 @media only screen and (min-width: 1024px) {
-  main .bi .container .sec-box .sec1 .sec1-box {
-    margin-top: 70px;
+  footer .footerlogo-info .footer-content-box .footer-info-box .info div strong {
+    margin-bottom: 15px;
+    font-size: 1.167rem;
   }
 }
-main .bi .container .sec-box .sec1 .sec1-box img {
-  width: 25%;
-  margin: 0 auto;
-}
-main .bi .container .sec-box .sec1 .sec1-box .line {
-  width: 2px;
-  margin: 0 auto;
-  height: 80px;
-  background-color: rgb(146, 146, 146);
-}
-main .bi .container .sec-box .sec1 .sec1-box .og-box {
-  width: 70%;
-  height: 60px;
-  margin: 0 auto;
-  border-radius: 25px;
-  background-color: #ff6000;
-}
-@media only screen and (min-width: 1024px) {
-  main .bi .container .sec-box .sec1 .sec1-box .og-box {
-    width: 100%;
-    height: 80px;
-  }
-}
-main .bi .container .sec-box .sec1 .sec1-box .og-box strong {
-  font-size: 1.3rem;
-  text-align: center;
-  line-height: 60px;
-  color: #fff;
-}
-@media only screen and (min-width: 1024px) {
-  main .bi .container .sec-box .sec1 .sec1-box .og-box strong {
-    line-height: 80px;
-  }
-}
-main .bi .container .sec-box .sec1 .sec1-box p {
-  text-align: center;
-  width: 50%;
-  margin: 0 auto;
-  padding-top: 30px;
-  padding-bottom: 50px;
-  font-size: 1.1rem;
-  font-weight: 600;
-}
-@media only screen and (min-width: 1024px) {
-  main .bi .container .sec-box .sec1 .sec1-box p {
-    width: 55%;
-    font-size: 1.2rem;
-  }
-}
-main .bi .container .sec-box .sec1 .plus {
+footer .footerlogo-info .footer-content-box .footer-info-box .info div .long-line {
   position: relative;
-  width: 60px;
-  height: 60px;
-  margin: 0 auto;
-  background-color: #9a6241;
-  border-radius: 50%;
-}
-@media only screen and (min-width: 1024px) {
-  main .bi .container .sec-box .sec1 .plus {
-    width: 80px;
-    height: 80px;
-    top: -215px;
-    left: 240px;
-  }
-}
-main .bi .container .sec-box .sec1 .plus .line1 {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 50%;
+  z-index: 1;
+  width: 100%;
   height: 2px;
-  background-color: #fff;
+  margin: 10px 0;
+  background-color: #b0afaf;
 }
-main .bi .container .sec-box .sec1 .plus .line2 {
+footer .footerlogo-info .footer-content-box .footer-info-box .info div .long-line .line {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 2px;
-  height: 50%;
-  background-color: #fff;
+  left: 0;
+  top: 0;
+  z-index: 2;
+  width: 41px;
+  height: 100%;
+  background-color: #717171;
 }
 @media only screen and (min-width: 1024px) {
-  main .bi .container .sec-box .sec2 {
-    width: 100%;
+  footer .footerlogo-info .footer-content-box .footer-info-box .info div .long-line .line {
+    width: 33px;
   }
 }
-main .bi .container .sec-box .sec2 .sec2-box {
-  margin-top: 70px;
-}
-main .bi .container .sec-box .sec2 .sec2-box img {
-  width: 25%;
-  margin: 0 auto;
+footer .footerlogo-info .footer-content-box .footer-info-box .info .address {
+  width: 45%;
 }
 @media only screen and (min-width: 1024px) {
-  main .bi .container .sec-box .sec2 .sec2-box img {
+  footer .footerlogo-info .footer-content-box .footer-info-box .info .address {
+    width: 40%;
+  }
+}
+footer .footerlogo-info .footer-content-box .footer-info-box .info .tel {
+  width: 40%;
+}
+@media only screen and (min-width: 1024px) {
+  footer .footerlogo-info .footer-content-box .footer-info-box .info .tel {
+    width: 35%;
+  }
+}
+footer .footerlogo-info .footer-content-box .footer-info-box .info .sns {
+  width: 15%;
+}
+@media only screen and (min-width: 1024px) {
+  footer .footerlogo-info .footer-content-box .footer-info-box .info .sns {
     width: 25%;
   }
 }
-main .bi .container .sec-box .sec2 .sec2-box .line {
-  width: 2px;
-  margin: 0 auto;
-  height: 80px;
-  background-color: rgb(146, 146, 146);
-}
-main .bi .container .sec-box .sec2 .sec2-box .og-box {
-  width: 70%;
-  height: 60px;
-  margin: 0 auto;
-  border-radius: 25px;
-  background-color: #ff8665;
+footer .footerlogo-info .footer-content-box .footer-info-box .info .txt {
+  width: 80%;
+  font-weight: 400;
+  font-size: 0.83rem;
+  color: #b0afaf;
 }
 @media only screen and (min-width: 1024px) {
-  main .bi .container .sec-box .sec2 .sec2-box .og-box {
-    width: 100%;
-    height: 80px;
+  footer .footerlogo-info .footer-content-box .footer-info-box .info .txt {
+    width: 75%;
+    font-size: 1rem;
   }
 }
-main .bi .container .sec-box .sec2 .sec2-box .og-box strong {
-  font-size: 1.3rem;
-  text-align: center;
-  line-height: 60px;
-  color: #fff;
+footer .footerlogo-info .footer-content-box .footer-info-box .copyright {
+  width: 100%;
+  margin-top: 20px;
 }
 @media only screen and (min-width: 1024px) {
-  main .bi .container .sec-box .sec2 .sec2-box .og-box strong {
-    line-height: 80px;
+  footer .footerlogo-info .footer-content-box .footer-info-box .copyright {
+    margin-top: 0;
   }
 }
-main .bi .container .sec-box .sec2 .sec2-box p {
-  text-align: center;
-  width: 50%;
-  margin: 0 auto;
-  padding-top: 30px;
-  padding-bottom: 50px;
-  font-size: 1.1rem;
-  font-weight: 600;
+footer .footerlogo-info .footer-content-box .footer-info-box .copyright p {
+  font-weight: 400;
+  font-size: 0.83rem;
+  color: #b0afaf;
+}
+footer .fixed-menu {
+  position: fixed;
+  right: 30px;
+  bottom: 50px;
+  z-index: 10;
 }
 @media only screen and (min-width: 1024px) {
-  main .bi .container .sec-box .sec2 .sec2-box p {
-    width: 55%;
-    font-size: 1.2rem;
+  footer .fixed-menu {
+    right: 60px;
+    bottom: 100px;
   }
 }
-main .bi .container .sec-box .sec2 .plus2 {
-  position: relative;
-  width: 60px;
-  height: 60px;
-  margin: 0 auto;
-  background-color: #9a6241;
+footer .fixed-menu a {
+  width: 35px;
+  height: 35px;
+  line-height: 35px;
   border-radius: 50%;
-}
-@media only screen and (min-width: 1024px) {
-  main .bi .container .sec-box .sec2 .plus2 {
-    width: 80px;
-    height: 80px;
-    top: -215px;
-    left: 240px;
-  }
-}
-main .bi .container .sec-box .sec2 .plus2 .line1 {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 50%;
-  height: 2px;
-  background-color: #fff;
-}
-main .bi .container .sec-box .sec2 .plus2 .line2 {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 2px;
-  height: 50%;
-  background-color: #fff;
-}
-@media only screen and (min-width: 1024px) {
-  main .bi .container .sec-box .sec3 {
-    width: 100%;
-  }
-}
-main .bi .container .sec-box .sec3 .sec3-box {
-  margin-top: 70px;
-}
-main .bi .container .sec-box .sec3 .sec3-box img {
-  width: 25%;
-  margin: 0 auto;
-}
-@media only screen and (min-width: 1024px) {
-  main .bi .container .sec-box .sec3 .sec3-box img {
-    width: 25%;
-  }
-}
-main .bi .container .sec-box .sec3 .sec3-box .line {
-  width: 2px;
-  margin: 0 auto;
-  height: 80px;
-  background-color: rgb(146, 146, 146);
-}
-main .bi .container .sec-box .sec3 .sec3-box .og-box {
-  width: 70%;
-  height: 60px;
-  margin: 0 auto;
-  border-radius: 25px;
-  background-color: #d89f90;
-}
-@media only screen and (min-width: 1024px) {
-  main .bi .container .sec-box .sec3 .sec3-box .og-box {
-    width: 100%;
-    height: 80px;
-  }
-}
-main .bi .container .sec-box .sec3 .sec3-box .og-box strong {
-  font-size: 1.3rem;
   text-align: center;
-  line-height: 60px;
   color: #fff;
+  background-color: #000;
 }
 @media only screen and (min-width: 1024px) {
-  main .bi .container .sec-box .sec3 .sec3-box .og-box strong {
-    line-height: 80px;
+  footer .fixed-menu a {
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
   }
-}
-main .bi .container .sec-box .sec3 .sec3-box p {
-  text-align: center;
-  width: 50%;
-  margin: 0 auto;
-  padding-top: 30px;
-  padding-bottom: 50px;
-  font-size: 1.1rem;
-  font-weight: 600;
-}
-@media only screen and (min-width: 1024px) {
-  main .bi .container .sec-box .sec3 .sec3-box p {
-    width: 55%;
-    font-size: 1.2rem;
-  }
-}
-main .vission-box .container .vission h2 {
-  font-size: 2rem;
-  padding-bottom: 40px;
-  text-align: center;
-}
-main .vission-box .container .vission p {
-  width: 90%;
-  height: 150px;
-  margin: 0 auto;
-  line-height: 150px;
-  text-align: center;
-  font-size: 1.3rem;
-  font-weight: 600;
-  color: #fff;
-  border-top-left-radius: 80px;
-  border-end-end-radius: 80px;
-  background: linear-gradient(to right, #ff6000, #d89f90);
-}
-@media only screen and (min-width: 1024px) {
-  main .vission-box .container .vission p {
-    width: 100%;
-    font-size: 1.5rem;
-  }
-}
-main .vission-box .container .vission2 {
-  margin-top: 100px;
-  margin-bottom: 200px;
-}
-@media only screen and (min-width: 1024px) {
-  main .vission-box .container .vission2 {
-    margin-top: 300px;
-    margin-bottom: 500px;
-  }
-}
-main .vission-box .container .vission2 strong {
-  text-align: center;
-  font-size: 2rem;
-}
-main .vission-box .container .vission2 h2 {
-  text-align: center;
-  font-size: 2.5rem;
-}
-main .vission-box .container .vission2 .flex-box {
-  display: flex;
-  justify-content: space-around;
-  margin-top: 50px;
-  margin-bottom: 100px;
-}
-main .vission-box .container .vission2 .flex-box p {
-  width: 100px;
-  height: 100px;
-  line-height: 100px;
-  text-align: center;
-  font-weight: 600;
-  font-size: 1.2rem;
-  color: #fff;
-  border-radius: 50%;
-  background: linear-gradient(to right, #ff6000, #ff6000, #ffffff);
-}
-@media only screen and (min-width: 1024px) {
-  main .vission-box .container .vission2 .flex-box p {
-    width: 200px;
-    height: 200px;
-    line-height: 200px;
-    font-size: 1.8rem;
-  }
-}
-main .vission-box .container .vission2 .flex-box p:nth-child(3) {
-  background: linear-gradient(to right, #ff8665, #ff8665, #ffffff);
-}
-main .vission-box .container .vission2 .flex-box p:last-child {
-  background: linear-gradient(to right, #d89f90, #d89f90, #ffffff);
-}
-main .vission-box .container .vission2 .flex-box .plus-ic {
-  font-size: 2rem;
-  line-height: 100px;
-}
-@media only screen and (min-width: 1024px) {
-  main .vission-box .container .vission2 .flex-box .plus-ic {
-    line-height: 200px;
-    font-size: 4rem;
-  }
-}/*# sourceMappingURL=mission.css.map */
+}/*# sourceMappingURL=ba.css.map */

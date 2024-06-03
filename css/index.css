@@ -1912,6 +1912,7 @@ main .main-sns .sns-content div.facebook .sns-img {
 footer {
   position: relative;
   width: 100%;
+  background-color: coral;
 }
 footer .footer-img img {
   width: 100%;
