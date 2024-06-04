@@ -483,6 +483,7 @@ main .content-page form .btn {
   padding: 10px;
   height: 50px;
   position: relative;
+  z-index: 10;
   text-align: center;
   transition: background 600ms ease, color 600ms ease;
 }
@@ -530,93 +531,52 @@ main .content-page form input[type=radio].toggle.toggle-right + label:after {
 main .content-page form input[type=radio].toggle:checked + label {
   cursor: default;
   color: #fff;
+  z-index: 60;
   transition: color 200ms;
 }
 main .content-page form input[type=radio].toggle:checked + label:after {
   left: 0;
 }
-main .content-page .search-box {
-  font-size: 20px;
-  border: solid 3px #000000;
-  display: inline-block;
-  position: relative;
-  border-radius: 2.5em;
+main .content-page form .searchform {
+  display: none;
+  margin-top: 50px;
+  width: 120%;
 }
 @media only screen and (min-width: 1024px) {
-  main .content-page .search-box {
-    transform: translate(-10px, 100px);
-    scale: 0.7;
+  main .content-page form .searchform {
+    display: block;
   }
 }
-main .content-page .search-box input[type=text] {
-  font-family: inherit;
-  font-weight: bold;
-  width: 2.5em;
-  height: 2.5em;
-  padding: 0.3em 2.1em 0.3em 0.4em;
-  border: none;
-  box-sizing: border-box;
-  border-radius: 2.5em;
-  transition: width 800ms cubic-bezier(0.68, -0.55, 0.27, 1.55) 150ms;
+main .content-page form .searchform label,
+main .content-page form .searchform input {
+  vertical-align: baseline;
+  color: #737373;
+}
+main .content-page form .searchform label {
+  position: relative;
+  margin: 0.125em 0.125em 0 0;
+  float: right;
+}
+main .content-page form .searchform label img {
+  position: absolute;
+  top: -10px;
+  left: -85px;
+  width: 40px;
   cursor: pointer;
 }
-main .content-page .search-box input[type=text]:focus {
-  outline: none;
-}
-main .content-page .search-box input[type=text]:not(:-moz-placeholder-shown) {
-  width: 250px;
-  -moz-transition: width 800ms cubic-bezier(0.68, -0.55, 0.27, 1.55);
-  transition: width 800ms cubic-bezier(0.68, -0.55, 0.27, 1.55);
-}
-main .content-page .search-box input[type=text]:focus, main .content-page .search-box input[type=text]:not(:placeholder-shown) {
-  width: 250px;
-  transition: width 800ms cubic-bezier(0.68, -0.55, 0.27, 1.55);
-}
-main .content-page .search-box input[type=text]:not(:-moz-placeholder-shown) + button[type=reset] {
-  transform: rotate(-45deg) translateY(0);
-  -moz-transition: transform 150ms ease-out 800ms;
-  transition: transform 150ms ease-out 800ms;
-}
-main .content-page .search-box input[type=text]:focus + button[type=reset], main .content-page .search-box input[type=text]:not(:placeholder-shown) + button[type=reset] {
-  transform: rotate(-45deg) translateY(0);
-  transition: transform 150ms ease-out 800ms;
-}
-main .content-page .search-box input[type=text]:not(:-moz-placeholder-shown) + button[type=reset]:after {
-  opacity: 1;
-  -moz-transition: top 150ms ease-out 950ms, right 150ms ease-out 950ms, opacity 150ms ease 950ms;
-  transition: top 150ms ease-out 950ms, right 150ms ease-out 950ms, opacity 150ms ease 950ms;
-}
-main .content-page .search-box input[type=text]:focus + button[type=reset]:after, main .content-page .search-box input[type=text]:not(:placeholder-shown) + button[type=reset]:after {
-  opacity: 1;
-  transition: top 150ms ease-out 950ms, right 150ms ease-out 950ms, opacity 150ms ease 950ms;
-}
-main .content-page .search-box button[type=reset] {
+main .content-page form .searchform input[type=search] {
+  border: 1px solid #000;
+  border-width: 0 0 1px;
   background-color: transparent;
-  width: 1.4em;
-  height: 1.4em;
-  border: 0;
-  padding: 0;
-  outline: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  top: 0.55em;
-  right: 0.55em;
-  transform: rotate(-45deg) translateY(2.2em);
-  transition: transform 150ms ease-out 150ms;
+  font: 20px "Open Sans", sans-serif;
+  padding: 0.125em 0.225em;
+  width: 85%;
+  float: left;
 }
-main .content-page .search-box button[type=reset]:before, main .content-page .search-box button[type=reset]:after {
-  content: "";
-  background-color: #000000;
-  width: 3px;
-  height: 1.4em;
-  position: absolute;
-}
-main .content-page .search-box button[type=reset]:after {
-  transform: rotate(90deg);
-  opacity: 0;
-  transition: transform 150ms ease-out, opacity 150ms ease-out;
+main .content-page form .searchform input[type=search]:focus {
+  color: #000;
+  border-color: #000;
+  outline: none;
 }
 @media only screen and (min-width: 1024px) {
   main .content-page .scrollbar {
@@ -663,7 +623,8 @@ main .content-page .ex-scroll .scrollbar-track .scrollbar-thumb {
 }
 @media only screen and (min-width: 1024px) {
   main .content-page .ex-scroll .scrollbar-track .scrollbar-thumb {
-    left: -14px; /* 썸을 트랙 중심에 맞춤 */
+    left: -14px;
+    /* 썸을 트랙 중심에 맞춤 */
     top: 0;
   }
 }
@@ -688,13 +649,17 @@ main .content-page .ex-scroll .years span {
 main .content-page .now-exhibition,
 main .content-page .fin-exhibition {
   margin: 100px auto;
-  width: 60%;
+  width: 80%;
 }
 @media only screen and (min-width: 1024px) {
   main .content-page .now-exhibition,
   main .content-page .fin-exhibition {
-    width: 80%;
+    width: 70%;
+    transform: translateX(50px);
   }
+}
+main .content-page .fin-exhibition {
+  display: none;
 }
 main .content-page .exhibition-list {
   display: flex;
@@ -708,6 +673,7 @@ main .content-page .exhibition-list a {
 }
 @media only screen and (min-width: 1024px) {
   main .content-page .exhibition-list a {
+    overflow: hidden;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
   }
@@ -734,11 +700,11 @@ main .content-page .exhibition-list a h3 {
 }
 @media only screen and (min-width: 1024px) {
   main .content-page .exhibition-list a h3 {
-    margin: 0 15px 0 150px;
+    margin: 0 15px 0 0;
     font-size: 18px;
     text-wrap: pretty;
     text-align: right;
-    padding-top: 110px;
+    padding-top: 90px;
   }
 }
 main .content-page .exhibition-list a p {
@@ -749,7 +715,7 @@ main .content-page .exhibition-list a p {
   main .content-page .exhibition-list a p {
     font-size: 16px;
     text-align: right;
-    margin-top: -50px;
+    margin-top: -30px;
     margin-right: 15px;
   }
 }
