@@ -1,115 +1,6 @@
 $(function() {
-    //===================== header =====================
-    //--------------------- 모바일 ---------------------
-    var mobile = $('#mobileBar');
-    
-    mobile.on('click', function() {
-        var mainMenu = $('#mainMenu');
-
-        // <햄버거 메뉴 -> X 모양>
-        mobile.toggleClass('active');  
-        
-        
-        // <search 없애기>
-        $('.search').toggleClass('hide');
-
-
-
-        // <모바일 메뉴>
-        mainMenu.toggleClass('active');
-        
-        if ($('.main-menu').hasClass('active')) {
-            $('body').addClass('stop-scroll');
-            $('.logo-gnb-rightmenu').addClass('active');
-            $('.main-menu').css({
-                'display': 'block',
-                'position': 'fixed',
-                'top': '12vh',
-                'right': 0,
-                'borderTop': '1px solid #dbdbdb',
-                'width': '100%',
-                'height': '100%',
-                'background-color': '#fff'
-            });
-            $('.fixed-menu').css('display', 'none');
-        } else {
-            $('body').removeClass('stop-scroll');
-            $('.logo-gnb-rightmenu').removeClass('active');
-            $('.main-menu').css('display', 'none');
-            $('.fixed-menu').css('display', 'block');
-
-            // $('.gnb').removeClass('active');
-        }
-        
-        // #sub-menu 나오게 하기
-        $('.gnb-title').on('click', function(e) {
-            e.preventDefault();
-        
-            var $parentLi = $(this).parent('li');  // 클릭된 메뉴의 부모 li 요소 찾기
-        
-            $parentLi.find('.sub-menu').stop().slideToggle(500);  // 클릭된 메뉴의 하위 메뉴를 슬라이드 토글
-        
-            $('.gnb li').not($parentLi).find('.sub-menu').stop().slideUp(500);  // 다른 모든 하위 메뉴를 슬라이드 업
-        
-        
-            // #gnb-title 눌렀을 때 모습
-            $('.gnb-title').removeClass('highlight');  // 모든 .gnb-title 요소에서 highlight 클래스 제거
-    
-            if (!$(this).hasClass('highlight')) {
-                $(this).addClass('highlight');
-            }  
-           
-        });
-        
-
-        // #sub-menu 눌렀을 때 모습
-        $('.sub-menu a').click(function() {
-            $('.sub-menu a').css({  
-                'color': '',
-                'textDecoration': ''
-            });
-    
-            $(this).css({  
-                'color': '#000',
-                'textDecoration': 'underline'
-            });
-        });
-    });
-
- 
-
-    //--------------------- PC ---------------------
-    var pcWindowWidth = $(window).width() > 768;
-
-    if (pcWindowWidth) {
-        $("#mainMenu > ul > li").hover(
-            function () {
-                $("#mainMenu").addClass("active");
-            },
-            function () {
-                $("#mainMenu").removeClass("active");
-            }
-        );
-        $("#mainMenu > ul > li:first-child > a").focusin(function () {
-            $("#mainMenu").addClass("active");
-        });
-        $("#mainMenu li:last-child li:last-child a").focusout(function () {
-            $("#mainMenu").removeClass("active");
-        });
-        $("#mainMenu > ul > li > a").focusin(function () {
-            $(this).parent().addClass("active");
-        });
-        $("#mainMenu li li:last-child a").focusout(function () {
-            $("#mainMenu > ul > li").removeClass("active");
-        });
-    }
-
-
-
-
-    
     //===================== main =====================
-    //--------------------- main 공통 ---------------------
+    //--------------------- 공통 ---------------------
     $(".circle-text").html(function() {
         return $(this).text().split("").map((char, i) => `<span style="transform:rotate(${i * 15}deg)">${char}</span>`).join("");
     });
@@ -444,27 +335,6 @@ $(function() {
     });
 
     //--------------------- sns ---------------------
-    //    $(window).scroll(function() {
-    //     var snsOffset = $('.main-sns').offset().top;
-    //     var windowHeight = $(window).height();
-    //     var windowMiddle = $(window).scrollTop() + windowHeight / 2;
-
-
-    //     $('.content-txt').each(function() {
-    //         if (windowMiddle > snsOffset && $('.content-txt').css('opacity') == 0) {
-    //             $('.left-txt').css({
-    //                 'opacity': 1,
-    //                 'transform': 'translateX(0)'
-    //             });
-    
-    //             $('.right-txt').css({
-    //                 'opacity': 1,
-    //                 'transform': 'translateX(0)'
-    //             });
-    //         }
-    //     })
-    // });
-
     $(window).scroll(function() {
         var windowHeight = $(window).height();
         var windowMiddle = $(window).scrollTop() + windowHeight / 2;
@@ -472,18 +342,13 @@ $(function() {
         $('.content-txt').each(function() {
             var txtOffset = $(this).offset().top;
             if (windowMiddle > txtOffset && $(this).css('opacity') == 0) {
-                $('.left-txt').css({
-                    'opacity': 1,
-                    'transform': 'translateX(0)'
-                });
-    
-                $('.right-txt').css({
-                    'opacity': 1,
-                    'transform': 'translateX(0)'
-                });
+                $(this).addClass('visible');
             }
         });
     });
+
+    // 초기 로드 시 가시성 확인
+    $(window).scroll();
     
        
 
@@ -492,35 +357,12 @@ $(function() {
         window.location.href = 'https://www.youtube.com/seoul284official'
     });
 
-    ('.instagram .sns-img').click(function() {
+    $('.instagram .sns-img').click(function() {
         window.location.href = 'https://www.instagram.com/culturestationseoul284/'
     });
 
-    ('.facebook .sns-img').click(function() {
+    $('.facebook .sns-img').click(function() {
         window.location.href = 'https://www.facebook.com/seoul284/?locale=ko_KR'
-    });
-    //===================== footer =====================
-    function updateFooterLogo() {
-        var footerWindowWidth = $(window).width();
-
-        if(footerWindowWidth < 768) {
-            $('.footer-logo').html('<h2>문화역서울284</h2>');
-        } else {
-            $('.footer-logo').html('<h2>문화역<br>서울284</h2>');
-        }
-    }
-
-    updateFooterLogo();
-
-    $(window).resize(function() {
-        updateFooterLogo();
-    });
-
-    
-    //--------------------- fixed-menu ---------------------
-    $('.fixed-menu a').click(function(e) {
-        e.preventDefault();
-        $('html').animate({ scrollTop: 0 }, 500)
     });
 });
 

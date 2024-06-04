@@ -127,6 +127,7 @@ header {
 
                         @include responsive(large-screens) {
                             font-size: 1.167rem;
+                            padding: 5px 0;
                         }
                     }
                     
@@ -144,6 +145,12 @@ header {
             align-items: center;
             width: $width-wide;
             // background-color: aqua;
+
+            @include responsive(large-screens) {
+                position: absolute;
+                bottom: 44px;
+               height: 178px;
+            }
 
             .arrow {
                 position: absolute;

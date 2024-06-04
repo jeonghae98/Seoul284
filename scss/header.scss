@@ -19,7 +19,7 @@
     z-index: 1;
     width: $width-wide;
     height: 12vh;
-    // background-color: pink;
+    // background-color: rgba(255,255,255,0.5);
 
     @include responsive(large-screens) {
         height: 150px;
@@ -31,10 +31,29 @@
         position: relative;
         z-index: 100;
         border-bottom: 1px solid $line-gray;
+    }
 
+    &:after {
         @include responsive(large-screens) {
-            height: 270px;
+            content: "";
+            position: absolute;
+            top: 150px;
+            width: $width-wide;
+            height: 0;
+            background-color: rgba(0, 0, 0, 0.3);
+            transition: all 0.5s;
+        }
+    }
+
+    &.sub-bg:after {
+        @include responsive(large-screens) {
             background-color: $color-second;
+        }
+    }
+
+    &.active:after {
+        @include responsive(large-screens) {
+            height: 220px;
         }
     }
 
@@ -92,14 +111,14 @@
                     @include responsive(large-screens) {
                         display: block;
                         position: absolute; 
-                        left: 0;
+                        left: 0; right: 0;
                         top: 55px; 
                         z-index: 5;
                         width: $width-wide; 
+                        padding: 0 20vw;
                         height: 80px; 
                         overflow: hidden; 
                         text-align: center; 
-                        // background-color: #ddd; 
                         transition: all 0.5s;
                     }
     
@@ -113,8 +132,7 @@
                     }
 
                     .gnb {
-                        margin-top: 50px;
-                        margin-bottom: 100px;
+                        margin-top: 10vh;
                         padding-left: 30px;
 
                         // &.active {
@@ -152,10 +170,10 @@
                                     margin-right: 20px;
                                     padding: 0;
                                     font: {
-                                        size: 1.1rem;  
-                                        weight: $font-regular;
+                                        size: 1.167rem;  
+                                        weight: $font-semibold;
                                     }
-                                    // color: $color-second;
+                                    color: $color-second;
                                 }
 
                                 
@@ -182,10 +200,11 @@
                                 @include responsive(large-screens) {
                                         position: absolute;
                                         display: block;
-                                        padding-top: 15px;
+                                        padding-top: 30px;
                                         width: $width-wide;
                                         height: 270px;
-                                        background-color: $color-second;
+                                        font-weight: $font-regular;
+                                        // background-color: $color-second;
                                 }
 
                                 li {
@@ -194,14 +213,14 @@
                                             display: block; 
                                             width: 150px;
                                             line-height: 2.2; 
-                                           
+                                            color: $color-second;
                                         }
 
                                         &:hover,
                                         &:focus {
                                             @include responsive(large-screens) {
                                                 text-decoration: underline;
-                                                color: $color-main;
+                                                color: $color-second;
                                             }
                                         }
                                     }
@@ -209,10 +228,43 @@
                                 }
                             }
                         }
+                    }  // gnb
 
-                
+                    // <햄버거 메뉴 눌렀을 때만 나타남>
+                    .only-mobile {
+                        position: absolute;
+                        bottom: 12vh;
+                        display: flex;
+                        justify-content: space-between;
+                        padding: 20px 30px;
+                        width: $width-wide;
+                        height: 15vh;
+                        border-top: 1px solid $line-gray;
+                        // background-color: aqua;
+
+                        .small-title {
+                            font: {
+                                weight: $font-semibold;
+                                size: 1rem;
+                            }
+                            color: $color-point;
+                        }
+
+                        .login-txt {
+                            a {
+                                font: {
+                                    weight: $font-regular;
+                                    size: 1rem;
+                                }
+
+                                &:hover {
+                                    text-decoration: underline;
+                                    color: $color-main;
+                                }
+                            }
+                        }
                     }
-                } 
+                } // main-menu
         
     
                 .right-menu {
@@ -223,6 +275,8 @@
                     // background-color: aquamarine;
     
                     @include responsive(large-screens) {
+                        position: relative;
+                        z-index: 6;
                         display: block;
                         margin: 20px 35px 0 45px;
                         width: 85px;  

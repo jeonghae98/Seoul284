@@ -96,6 +96,7 @@ footer {
   width: 100%;
   max-width: 1440px;
   margin: 0 auto;
+  padding: 0 10px;
 }
 
 header {
@@ -113,12 +114,6 @@ header.active {
   position: relative;
   z-index: 100;
   border-bottom: 1px solid #dbdbdb;
-}
-@media only screen and (min-width: 1024px) {
-  header.active {
-    height: 270px;
-    background-color: #fff;
-  }
 }
 header .logo-gnb-rightmenu {
   height: 100%;
@@ -174,12 +169,15 @@ header .logo-gnb-rightmenu .container .logo-gnb-menu-box .main-menu {
     display: block;
     position: absolute;
     left: 0;
+    right: 0;
     top: 55px;
     z-index: 5;
     width: 100%;
+    padding: 0 20vw;
     height: 80px;
     overflow: hidden;
     text-align: center;
+    background-color: #ddd;
     transition: all 0.5s;
   }
 }
@@ -357,314 +355,103 @@ header .logo-gnb-rightmenu .container .logo-gnb-menu-box .right-menu .mobile-men
   display: block;
 }
 
-main .container .map-box {
-  margin-top: 80px;
+main {
+  width: 100%;
+}
+main section.login {
+  height: 600px;
 }
 @media only screen and (min-width: 1024px) {
-  main .container .map-box {
-    position: relative;
+  main section.login {
+    background: url(../images/sketch2.png);
+    /* background-size: 2000px 800px; */
+    background-position: center;
   }
 }
-main .container .map-box h2 {
-  padding-bottom: 60px;
+main section.login .orange-box {
+  position: relative;
+  top: 10px;
+  width: 700px;
+  height: 500px;
+  margin: 0 auto;
+  background-color: #ff6000;
+  border-radius: 5px;
+  box-shadow: 5px 5px 5px #8d8d8d;
+}
+main section.login .orange-box .login-box {
+  position: relative;
+  width: 400px;
+  height: 350px;
+  margin: 0 auto;
+  z-index: 5;
+  background-color: white;
+  transform: translateY(75px);
+  border-radius: 5px;
+}
+@media only screen and (min-width: 1024px) {
+  main section.login .orange-box .login-box {
+    transform: translateX(-250px) translateY(75px);
+  }
+}
+main section.login .orange-box .login-box form {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
   text-align: center;
 }
-@media only screen and (min-width: 1024px) {
-  main .container .map-box h2 {
-    font-size: 2rem;
-    font-weight: 600;
-  }
+main section.login .orange-box .login-box form h1 {
+  font-weight: 300;
+  transform: translateY(10px);
 }
-main .container .map-box iframe {
+main section.login .orange-box .login-box form .pw {
+  transform: translateY(-20px);
+}
+main section.login .orange-box .login-box form label {
   display: block;
-  width: 96%;
-  margin: 0 auto;
+  transform: translateX(-70px);
 }
-@media only screen and (min-width: 1024px) {
-  main .container .map-box iframe {
-    width: 90%;
-    height: 660px;
-    margin-bottom: 100px;
-  }
+main section.login .orange-box .login-box form input {
+  width: 200px;
+  height: 40px;
+  border-radius: 5px;
+  font-size: 18px;
+  font-weight: 100;
+  padding-left: 5px;
 }
-main .container .map-box .orange-box {
-  width: 96%;
-  height: 180px;
+main section.login .orange-box .login-box form button {
   margin: 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  width: 150px;
+  height: 40px;
   background-color: #ff6000;
+  color: white;
+  transform: translateY(-10px);
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 16px;
 }
-@media only screen and (min-width: 1024px) {
-  main .container .map-box .orange-box {
-    position: absolute;
-    top: 680px;
-    left: 180px;
-    width: 75%;
-    height: 180px;
-    margin: 0 auto;
-  }
-}
-main .container .map-box .orange-box .map-info {
-  padding-left: 6%;
-}
-main .container .map-box .orange-box .map-info h3 {
-  padding-top: 20px;
-  padding-bottom: 10px;
-  color: #fff;
-}
-@media only screen and (min-width: 1024px) {
-  main .container .map-box .orange-box .map-info h3 {
-    width: 200px;
-    font-size: 1.7rem;
-  }
-}
-main .container .map-box .orange-box .map-info p {
-  padding-bottom: 20px;
-  font-size: 0.8rem;
-  color: #fff;
-}
-@media only screen and (min-width: 1024px) {
-  main .container .map-box .orange-box .map-info p {
-    font-size: 1rem;
-  }
-}
-main .container .map-box .orange-box .map-txt {
-  padding-right: 5%;
-  width: 80%;
-}
-main .container .map-box .orange-box .map-txt p {
-  font-size: 0.7rem;
-  padding: 20px 20px 0 0;
-  color: #fff;
-}
-@media only screen and (min-width: 1024px) {
-  main .container .map-box .orange-box .map-txt p {
-    font-size: 1rem;
-  }
-}
-main .container .map-box .orange-box .map-txt strong {
-  padding-top: 10px;
-  padding-right: 20px;
-  padding-bottom: 20px;
-  font-size: 0.6rem;
-  color: #fff;
-}
-@media only screen and (min-width: 1024px) {
-  main .container .map-box .orange-box .map-txt strong {
-    font-size: 0.8rem;
-  }
-}
-main .container .bus-subway .bus {
-  display: flex;
-  align-items: center;
-  width: 95%;
-  margin: 0 auto;
-  padding: 0px 0 20px 0;
-  border: 1px solid #c2c2c2;
-  border-left: none;
-  border-right: none;
-}
-@media only screen and (min-width: 1024px) {
-  main .container .bus-subway .bus {
-    width: 90%;
-    margin: 0 auto;
-    height: 300px;
-    padding: 10px 0 10px 0;
-    font-size: 1.11rem;
-  }
-}
-main .container .bus-subway .bus img {
-  width: 80px;
-  height: auto;
-  margin-left: 8%;
-  margin-right: 8%;
-}
-@media only screen and (min-width: 1024px) {
-  main .container .bus-subway .bus img {
-    width: 13%;
-  }
-}
-main .container .bus-subway .bus .bus-num {
-  margin-right: 40px;
-  flex-direction: column;
-  padding-bottom: 20px;
-}
-main .container .bus-subway .bus .bus-num div {
-  font-weight: 400;
-}
-@media only screen and (min-width: 1024px) {
-  main .container .bus-subway .bus .bus-num div {
-    width: 100%;
-    margin: 0 auto;
-    font-size: 1.11rem;
-    padding-left: 50px;
-  }
-}
-main .container .bus-subway .bus .bus-num div span {
-  padding-top: 20px;
-}
-main .container .bus-subway .bus .bus-num div .green {
-  color: green;
-}
-@media only screen and (min-width: 1024px) {
-  main .container .bus-subway .bus .bus-num div .green {
-    font-weight: 400;
-  }
-}
-main .container .bus-subway .bus .bus-num div .blue {
-  color: blue;
-}
-@media only screen and (min-width: 1024px) {
-  main .container .bus-subway .bus .bus-num div .blue {
-    font-weight: 400;
-  }
-}
-main .container .bus-subway .bus .bus-num div .red {
-  color: red;
-}
-@media only screen and (min-width: 1024px) {
-  main .container .bus-subway .bus .bus-num div .red {
-    font-weight: 400;
-  }
-}
-main .container .bus-subway .subway {
-  display: flex;
-  align-items: center;
-  width: 96%;
-  margin: 0 auto;
-  border: 1px solid #c2c2c2;
-  border-left: none;
-  border-right: none;
-  border-top: none;
-  padding: 20px 0 20px 0;
-}
-@media only screen and (min-width: 1024px) {
-  main .container .bus-subway .subway {
-    width: 90%;
-    height: 300px;
-    padding: 50px 0 50px 0;
-  }
-}
-main .container .bus-subway .subway img {
-  width: 80px;
-  height: auto;
-  margin-left: 8%;
-  margin-right: 8%;
-}
-@media only screen and (min-width: 1024px) {
-  main .container .bus-subway .subway img {
-    width: 13%;
-  }
-}
-main .container .bus-subway .subway .subway-num {
-  flex-direction: column;
-  padding-bottom: 20px;
-  margin-right: 40px;
-}
-main .container .bus-subway .subway .subway-num div {
-  font-weight: 400;
-}
-@media only screen and (min-width: 1024px) {
-  main .container .bus-subway .subway .subway-num div {
-    font-size: 1.11rem;
-    padding-left: 50px;
-  }
-}
-main .container .bus-subway .subway .subway-num div span {
-  padding-top: 20px;
-}
-main .container .bus-subway .subway .subway-num div .orange {
+main section.login .orange-box .login-box form button:hover {
   color: #ff6000;
-}
-@media only screen and (min-width: 1024px) {
-  main .container .bus-subway .subway .subway-num div .orange {
-    font-weight: 400;
-  }
-}
-main .container .store {
-  width: 96%;
-  margin: 0 auto;
-  margin-bottom: 80px;
-  border: 1px solid #c2c2c2;
-  border-top: none;
-  border-right: none;
-  border-left: none;
-}
-@media only screen and (min-width: 1024px) {
-  main .container .store {
-    width: 90%;
-    display: flex;
-    align-items: center;
-    padding-left: 110px;
-    padding-bottom: 80px;
-    padding-left: 90px;
-  }
-}
-main .container .store img {
-  width: 90%;
-  height: 100%;
-  margin: 0 auto;
-  padding-top: 30px;
-  padding-bottom: 20px;
-}
-@media only screen and (min-width: 1024px) {
-  main .container .store img {
-    width: 40%;
-    margin: 0 auto;
-  }
-}
-main .container .store .store-txt {
-  width: 90%;
-  margin: 0 auto;
-}
-main .container .store .store-txt h3 {
-  width: 100%;
-  font-size: 1.5rem;
-  font-weight: 400;
-}
-@media only screen and (min-width: 1024px) {
-  main .container .store .store-txt h3 {
-    font-size: 2rem;
-    padding-top: 60px;
-    padding-bottom: 30px;
-    padding-left: 80px;
-  }
-}
-main .container .store .store-txt strong {
-  width: 100%;
-  font-size: 1rem;
-}
-@media only screen and (min-width: 1024px) {
-  main .container .store .store-txt strong {
-    font-size: 1.3rem;
-    margin-top: 0;
-    padding-left: 80px;
-  }
-}
-main .container .store .store-txt p {
-  font-size: 0.8rem;
-  padding: 20px 0 5px 0;
-}
-@media only screen and (min-width: 1024px) {
-  main .container .store .store-txt p {
-    width: 75%;
-    padding-left: 80px;
-  }
-}
-main .container .store .store-txt .time {
-  font-size: 0.7rem;
+  background-color: white;
+  border: 2px solid;
   font-weight: 600;
-  padding-bottom: 30px;
+  transition: all 0.3s;
+}
+main section.login .orange-box .login-image {
+  position: absolute;
+  z-index: 2;
+}
+main section.login .orange-box .login-image img {
+  z-index: 0;
+  margin: 0 auto;
+  height: 500px;
+  transform: translateY(-350px) translateX(175px);
+  opacity: 1;
 }
 @media only screen and (min-width: 1024px) {
-  main .container .store .store-txt .time {
-    width: 100%;
-    font-size: 0.8rem;
-    font-weight: 600;
-    padding-top: 20px;
-    padding-left: 80px;
+  main section.login .orange-box .login-image img {
+    transform: translateX(330px) translateY(-350px) scale(0.7);
   }
 }
 
@@ -839,4 +626,4 @@ footer .fixed-menu a {
     height: 50px;
     line-height: 50px;
   }
-}/*# sourceMappingURL=guide.css.map */
+}/*# sourceMappingURL=ba.css.map */
