@@ -27,6 +27,8 @@ $(function() {
 
     // <상세페이지 연결>
     let i = 0;
+    
+
     $('.box').each(function(i) {
         $(this).on('click', function() {
             let num = i + 1;

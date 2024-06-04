@@ -2,6 +2,7 @@ $(function() {
     //===================== main =====================
      // <공통 애니메이션>
      $('.collection-title').css('opacity', '1');
+     $('.search').css('opacity', '1');
 
 
      function Visibility() {  // 리스트 애니메이션
@@ -32,5 +33,5 @@ $(function() {
 
             window.location.href = `./collection-detail-page${num}.html`;
         })
-    })
+    });
 });

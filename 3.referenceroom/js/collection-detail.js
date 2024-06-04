@@ -31,4 +31,18 @@ $(function() {
         mainImg.attr('src', clickedSrc);
         clickedImg.attr('src', mainSrc);
     });
+
+
+
+    // <모바일 위치 다른 상세페이지 목록 연결>
+    var windowWidth = $(window).width();
+        if(windowWidth < 768) {
+            $('.mobile-list-btn4 a').attr('href', './collection_3.html');
+            $('.mobile-list-btn3 a').attr('href', './collection_2.html');
+            $('.mobile-list-btn2 a').attr('href', './collection.html');
+        } else {
+            $('.mobile-list-btn4 a').attr('href', './collection_4.html');
+            $('.mobile-list-btn3 a').attr('href', './collection_3.html');
+            $('.mobile-list-btn2 a').attr('href', './collection_2.html');
+        }
 });

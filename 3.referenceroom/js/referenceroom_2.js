@@ -2,7 +2,7 @@ $(function() {
     //===================== main =====================
      // <공통 애니메이션>
      $('.collection-title').css('opacity', '1');
-
+     $('.search').css('opacity', '1');
 
      function Visibility() {  // 리스트 애니메이션
         $('.box').each(function() {
@@ -32,5 +32,18 @@ $(function() {
 
             window.location.href = `./collection-detail-page${num}.html`;
         })
-    })
+    });
+
+
+
+    // <모바일 1번 div 숨기기>
+    var windowWidth = $(window).width();
+
+    if(windowWidth < 768) {
+        $('.box1').css('display', 'none');
+    } else {
+        $('.box1').css('display', 'block');
+
+    }
 });
+
