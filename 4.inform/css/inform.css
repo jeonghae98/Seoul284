@@ -412,7 +412,7 @@ main {
   width: 100%;
 }
 main .inform .inform-title {
-  margin: 80px 0 50px;
+  margin: 80px 0 35px;
   text-align: center;
   font-size: 2.667rem;
   opacity: 0;
@@ -763,6 +763,9 @@ footer .footerlogo-info .footer-content-box .footer-info-box .info .sns {
   footer .footerlogo-info .footer-content-box .footer-info-box .info .sns {
     width: 25%;
   }
+}
+footer .footerlogo-info .footer-content-box .footer-info-box .info .sns li a:hover {
+  color: #000;
 }
 footer .footerlogo-info .footer-content-box .footer-info-box .info .txt {
   width: 80%;

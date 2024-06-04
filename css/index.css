@@ -1960,7 +1960,6 @@ main .main-sns .sns-content div.facebook .sns-img {
 footer {
   position: relative;
   width: 100%;
-  background-color: coral;
 }
 footer .footer-img img {
   width: 100%;
@@ -2075,6 +2074,9 @@ footer .footerlogo-info .footer-content-box .footer-info-box .info .sns {
   footer .footerlogo-info .footer-content-box .footer-info-box .info .sns {
     width: 25%;
   }
+}
+footer .footerlogo-info .footer-content-box .footer-info-box .info .sns li a:hover {
+  color: #000;
 }
 footer .footerlogo-info .footer-content-box .footer-info-box .info .txt {
   width: 80%;

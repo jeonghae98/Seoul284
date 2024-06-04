@@ -5,9 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" type="image/png" href="../../../images/favicon.png">
     <link rel="stylesheet" href="./css/reset.css">
-    <link rel="stylesheet" href="./css/detail-page_03.css">
+    <link rel="stylesheet" href="./css/contest-detail-page_01.css">
     <script src="./js/jquery.js"></script>
-    <script src="./js/inform.js"></script>
+    <script src="../js/header_footer.js"></script>
+    <script src="./js/contest.js"></script>
     <title>공지사항</title>
 </head>
 <body>
@@ -19,29 +20,29 @@
                         <h1><a href="../../index.html"><img src="../../images/logo.png" alt="logo"></a></h1>
                     </div>
 
-                    <nav class="main-menu">
+                    <nav class="main-menu" id="mainMenu">
                         <ul class="gnb">
                             <li>
-                                <a href="../../1. introduction/intro.html" class="gnb-title">소개</a>
+                                <a href="../../1.introduction/intro.html" class="gnb-title">소개</a>
                                 <ul class="sub-menu">
-                                    <li><a href="../../1. introduction/intro.html">문화역서울284 소개</a></li>
-                                    <li><a href="../../1. introduction/visit.html">방문안내</a></li>
-                                    <li><a href="../../1. introduction/space.html">공간안내</a></li>
-                                    <li><a href="../../1. introduction/division.html">조직도</a></li>
+                                    <li><a href="../../1.introduction/intro.html">문화역서울284 소개</a></li>
+                                    <li><a href="../../1.introduction/guide.html">방문안내</a></li>
+                                    <li><a href="../../1.introduction/space.html">공간안내</a></li>
+                                    <li><a href="../../1.introduction/division.html">조직도</a></li>
                                 </ul>
                             </li>
                             <li>
-                                <a href="../../2. program/exhibition.html" class="gnb-title">프로그램</a>
+                                <a href="../../2.program/1.exhibition/exhibition.html" class="gnb-title">프로그램</a>
                                 <ul class="sub-menu">
-                                    <li><a href="../../2. program/exhibition.html">전시</a></li>
-                                    <li><a href="../../2. program/event.html">공연/행사</a></li>
-                                    <li><a href="../../2. program/tour.html">공간투어</a></li>
+                                    <li><a href="../../2.program/1.exhibition/exhibition.html">전시</a></li>
+                                    <li><a href="../../2.program/3.event/event.html">공연/행사</a></li>
+                                    <li><a href="../../2.program/5.tour/tour.html">공간투어</a></li>
                                 </ul>
                             </li>
                             <li>
-                                <a href="../../3. referenceroom/collection.html" class="gnb-title">자료실</a>
+                                <a href="../../3.referenceroom/collection.html" class="gnb-title">자료실</a>
                                 <ul class="sub-menu">
-                                    <li><a href="../../3. referenceroom/collection.html">소장품</a></li>
+                                    <li><a href="../../3.referenceroom/collection.html">소장품</a></li>
                                 </ul>
                             </li>
                             <li>
@@ -56,11 +57,11 @@
 
                     <div class="right-menu">
                         <ul>
-                            <li class="login"><a href="../../login.html"><img src="../../images/login.png" alt="login"></a></li>
+                            <li class="login"><a href="../../2.program/8.login/base.html"><img src="../../images/login.png" alt="login"></a></li>
                             <li class="search"><img src="../../images/header_search.png" alt="search"></li>  
                         </ul>
                         
-                        <div id="mobile-menu">  <!-- 모바일(햄버거 메뉴) -->
+                        <div class="mobile-menu" id="mobileBar">  <!-- 모바일(햄버거 메뉴) -->
                             <div class="bar"></div>
                             <div class="bar"></div>
                             <div class="bar"></div>
@@ -84,7 +85,7 @@
                 <div class="menu-list">
                     <ul>
                         <li class="menu-title"><a href="../notice.html">공지</a></li>
-                        <li class="menu-title"><a href="../contest.html">공모</a></li>
+                        <li class="menu-title selected"><a href="../contest.html">공모</a></li>
                         <li class="menu-title"><a href="../recruitment.html">채용</a></li>
                     </ul>
                 </div>
@@ -92,7 +93,9 @@
                 <div class="content-box">
                     <div class="title-box">
                         <h2 class="title">문화예술 창작·유통 지원 공모 결과 발표</h2>
-                        <p>작성일&nbsp;&nbsp;<time datetime="2021-06-10">2021-09-24</time>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;접수기간&nbsp;&nbsp;<time datetime="2018-06-01">2018-06-01</time> ~ <time datetime="2018-12-31T00:00">2018-12-31 24:00</p>
+                        <p>
+                            접수기간&nbsp;&nbsp;<time datetime="2018-06-01">2018-06-01</time> ~ <time datetime="2018-12-31T00:00">2018-12-31 24:00</time>
+                        </p>
                     </div>
 
                     <div class="txt-box">
@@ -112,85 +115,42 @@
                         
                         <div class="paragraph_3">
                             <strong>심사 결과 및 선정자</strong>
-                            <p>
-                                사전미팅: 2018년 5월 중 개별 연락 안내<br>
-                                사업기간: 2018년 6월 - 12월 예정<br>
-                            </p>
+                            <table>
+                                <tr class="tb-title">
+                                    <th>선정자명(단체명)</th>
+                                    <th>대표자</th>
+                                    <th>사업분야</th>
+                                    <th>사업명</th>
+                                </tr>
+
+                                <tr class="tb-txt">
+                                    <td>송전동</td>
+                                    <td>동준모</td>
+                                    <td>디자인</td>
+                                    <td>경성-서울역 복각</td>
+                                </tr>
+
+                                <tr class="tb-txt">
+                                    <td>불도저 프레스</td>
+                                    <td>양민영</td>
+                                    <td>출판, 디자인</td>
+                                    <td>옷정리</td>
+                                </tr>
+                            </table>
                         </div>
 
                         <div class="paragraph_4">
                             <strong>향후 추진 계획</strong>
                             <p>
-                                ○ 만 20세 이상 성인 남녀로 책임감 있게 문화역서울284 공간 관련 해설 업무를 담당할 수 있는 자<br>
-                                ○ 우대사항<br>
-                                - 역사학, 국사학, 역사교육학, 박물관학, 예술경영학, 미술사학, 미술교육학, 교육학, 건축학 등 관련학과 학위를 취득한 자<br>
-                                - 전시 및 문화예술, 역사 관련 해설 경력자<br>
-                                - 유사기관 근무 또는 해설 경험이 있는 자<br>
-                                - 미술관, 박물관 등 이에 준하는 기관에서 전시해설 및 미술교육 이수 또는 수강자<br>
-                                - 외국어(영어)해설이 가능자
+                                사전미팅: 2018년 5월 중 개별 연락 안내<br>
+                                사업기간: 2018년 6월 - 12월 예정<br>
                             </p>
-                        </div>
-
-                        <div class="paragraph_5">
-                            <strong>채용방법</strong>
-                            <p>
-                                ○ 1차 서류전형 : 제출서류에 의한 자격요건 및 전문경력 등 심사<br>
-                                ○ 2차 면접 : 서류전형 합격자에 한하여 실시 (개별 연락 예정)<br>
-                                ○ 최종합격자 개별통보
-                            </p>
-                        </div>
-
-
-                        <div class="paragraph_6">
-                            <strong>지원서 접수</strong>
-                            <p>
-                                1) 지원방법<br>
-                                ○ 접수기간 : 2021년 06월10일(목) ~ 06월30일(수) / 24:00시까지 접수<br>
-                                ○ 제출서류 : 이력서 및 자기소개서 (첨부파일, 양식준수)<br>
-                                ○ 제출방법 : 이메일 접수 (우편, 방문접수 불가)<br>
-                                - 파일명 : ‘성명_문화역서울284 공간투어 해설사 지원’으로 제출<br>
-                                (예: 홍길동_문화역서울284 공간투어 해설사 지원)<br>
-                                - 제출처 : artup@weenu.com<br>
-                                <br>
-                                2) 면접 및 전형방법<br>
-                                ○ 면접 일시 : 서류 통과 시 개별 통보하여 시행 / 2021년 07월12일(월) 예정<br>
-                                * 시간은 추후 통보<br>
-                                ○ 면접 방식 : 개별 면접<br>
-                                ○ 면접 시 제출서류<br>
-                                - 주민등록등본 1부<br>
-                                - 최종학교 졸업 증명서 1부<br>
-                                - 경력증명서 (기관 발행) 각 1부씩 (해당자에 한함)<br>
-                                - 자격증 사본 각 1부씩 (해당자에 한함)<br>
-                                ○ 문의사항 : 02-550-2514<br>
-                                <br>
-                                <br>
-                                3) 문의 : 070-4236-5140, artup@weenu.com
-                            </p>
-                        </div>
-
-                        
-                        <div class="paragraph_7">
-                            <strong>필수사항</strong>
-                            <p>
-                                - 근무 일자 전 문화역서울284 내 공간투어 해설 사전교육(6회) 수료 필수<br>
-                                (사전교육기간에는 오리엔테이션을 제외한 소정의 교육실습비가 지급됩니다.)<br>
-                                - 기재된 사항이 사실과 다르거나 허위로 작성된 경우에는 합격이 취소될 수 있습니다.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="attachment-box">
-                        <div class="attachment-title">첨부파일</div>
-                        <div class="attachment">
-                            <ul>
-                                <li class="attachment1"><a href="./files/detail-page_03/양식지원서_공간투어해설사.hwp">
-                                    양식지원서_공간투어해설사.hwp (22.5 kB)</a></li>
-                            </ul>
                         </div>
                     </div>
                 </div>  <!-- content-box -->
                
                 <div class="list-box">
-                    <button class="list-btn"><a href="../recruitment.html">목록</a></button>
+                    <button class="list-btn"><a href="../contest.html">목록</a></button>
                 </div>
             </div>  <!-- container -->
         </section>  <!-- inform -->
@@ -237,9 +197,9 @@
                                     <div class="line"></div>
                                 </div>
                                 <ul>
-                                    <li><a href="" class="txt">Facebook</a></li>
-                                    <li><a href="" class="txt">YouTube</a></li>
-                                    <li><a href="" class="txt">Instagram</a></li>
+                                    <li><a href="https://www.facebook.com/seoul284/?locale=ko_KR" class="txt">Facebook</a></li>
+                                    <li><a href="https://www.youtube.com/seoul284official" class="txt">YouTube</a></li>
+                                    <li><a href="https://www.instagram.com/culturestationseoul284/" class="txt">Instagram</a></li>
                                 </ul>
                             </div>
                         </div>  <!-- info -->

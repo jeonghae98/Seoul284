@@ -74,9 +74,7 @@ main {
                 }
 
                 &:focus {
-                    @include responsive(large-screens) {
-                        outline: none;
-                    }
+                    outline: none;
                 }
             }
 

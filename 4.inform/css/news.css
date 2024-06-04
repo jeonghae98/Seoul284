@@ -453,10 +453,8 @@ main .news .search #search-box {
     height: 40px;
   }
 }
-@media only screen and (min-width: 1024px) {
-  main .news .search #search-box:focus {
-    outline: none;
-  }
+main .news .search #search-box:focus {
+  outline: none;
 }
 main .news .search img {
   position: absolute;
@@ -696,6 +694,9 @@ footer .footerlogo-info .footer-content-box .footer-info-box .info .sns {
   footer .footerlogo-info .footer-content-box .footer-info-box .info .sns {
     width: 25%;
   }
+}
+footer .footerlogo-info .footer-content-box .footer-info-box .info .sns li a:hover {
+  color: #000;
 }
 footer .footerlogo-info .footer-content-box .footer-info-box .info .txt {
   width: 80%;

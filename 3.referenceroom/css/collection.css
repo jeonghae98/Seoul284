@@ -417,7 +417,7 @@ header .logo-gnb-rightmenu .container .logo-gnb-menu-box .right-menu .mobile-men
   width: 100%;
 }
 .collection .collection-title {
-  margin: 80px 0 35px;
+  margin: 80px 0 50px;
   text-align: center;
   font-size: 2.667rem;
   opacity: 0;
@@ -425,11 +425,52 @@ header .logo-gnb-rightmenu .container .logo-gnb-menu-box .right-menu .mobile-men
 }
 @media only screen and (min-width: 1024px) {
   .collection .collection-title {
-    margin-bottom: 50px;
+    margin-bottom: 10px;
     font-weight: 600;
     font-size: 3rem;
     text-align: left;
   }
+}
+.collection .search {
+  position: relative;
+  justify-content: right;
+  width: 100%;
+  opacity: 0;
+  transition: opacity 2s ease;
+}
+@media only screen and (min-width: 1024px) {
+  .collection .search {
+    display: flex;
+    justify-content: right;
+    width: 100%;
+  }
+}
+.collection .search #search-box {
+  width: 100%;
+  height: 35px;
+  padding-left: 10px;
+  border: 2px solid #727272;
+  border-radius: 10px;
+}
+@media only screen and (min-width: 1024px) {
+  .collection .search #search-box {
+    width: 360px;
+    height: 40px;
+  }
+}
+.collection .search #search-box:focus {
+  outline: none;
+}
+.collection .search img {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  cursor: pointer;
+}
+.collection .collection-content {
+  margin-top: 30px;
 }
 .collection .collection-content .content-box {
   display: grid;
@@ -460,6 +501,7 @@ header .logo-gnb-rightmenu .container .logo-gnb-menu-box .right-menu .mobile-men
 .collection .collection-content .content-box .box .collection-img {
   position: relative;
   width: 100%;
+  overflow: hidden;
 }
 .collection .collection-content .content-box .box .collection-img .hover-box {
   position: absolute;
@@ -550,7 +592,7 @@ header .logo-gnb-rightmenu .container .logo-gnb-menu-box .right-menu .mobile-men
   transform: rotate(0deg);
 }
 @media only screen and (min-width: 1024px) {
-  .collection .collection-content .content-box .box:last-child {
+  .collection .collection-content .content-box .box-mobile {
     display: none;
   }
 }
@@ -721,6 +763,9 @@ footer .footerlogo-info .footer-content-box .footer-info-box .info .sns {
   footer .footerlogo-info .footer-content-box .footer-info-box .info .sns {
     width: 25%;
   }
+}
+footer .footerlogo-info .footer-content-box .footer-info-box .info .sns li a:hover {
+  color: #000;
 }
 footer .footerlogo-info .footer-content-box .footer-info-box .info .txt {
   width: 80%;
