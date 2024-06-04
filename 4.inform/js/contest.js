@@ -29,11 +29,12 @@ $(function() {
     
     // <상세페이지 연결>
     let i = 0;
+    const $list = $('.list');
 
-    $('.list').each(function(i) {
+    $list.each(function(i) {
         $(this).on('click', function() {
-            let num = 3 - i;
-            window.location.href = `./recruitment/detail-page_0${num}.html`;
+            let num = i + 1;
+            window.location.href = `./contest/contest-detail-page_0${num}.html`;
         });
     });
 });

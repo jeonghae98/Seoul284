@@ -1548,6 +1548,9 @@ main section.box4 .box4-line hr {
     width: 25%;
   }
 }
+*********** footer*********** footer .footerlogo-info .footer-content-box .footer-info-box .info .sns li a:hover {
+  color: #000;
+}
 *********** footer*********** footer .footerlogo-info .footer-content-box .footer-info-box .info .txt {
   width: 80%;
   font-weight: 400;

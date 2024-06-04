@@ -1145,6 +1145,9 @@ footer .footerlogo-info .footer-content-box .footer-info-box .info .sns {
     width: 25%;
   }
 }
+footer .footerlogo-info .footer-content-box .footer-info-box .info .sns li a:hover {
+  color: #000;
+}
 footer .footerlogo-info .footer-content-box .footer-info-box .info .txt {
   width: 80%;
   font-weight: 400;

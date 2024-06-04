@@ -140,6 +140,14 @@
                         @include responsive(large-screens) {
                             width: 25%;
                         }
+
+                        li {
+                            a {
+                                &:hover {
+                                    color: $color-main;
+                                }
+                            }
+                        }
                     }
     
                     

@@ -482,14 +482,9 @@ main .detail-page .content-box .title-box {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 170px;
+  height: 160px;
   padding: 30px 0;
   border-top: 2px solid #d9d9d9;
-}
-@media only screen and (min-width: 1024px) {
-  main .detail-page .content-box .title-box {
-    height: 160px;
-  }
 }
 main .detail-page .content-box .title-box .title {
   font-weight: 400;
@@ -509,9 +504,6 @@ main .detail-page .content-box .title-box p {
   main .detail-page .content-box .title-box p {
     font-size: 1rem;
   }
-}
-main .detail-page .content-box .title-box p .hits {
-  display: inline;
 }
 main .detail-page .content-box .txt-box {
   padding: 75px 0;
@@ -707,6 +699,9 @@ footer .footerlogo-info .footer-content-box .footer-info-box .info .sns {
   footer .footerlogo-info .footer-content-box .footer-info-box .info .sns {
     width: 25%;
   }
+}
+footer .footerlogo-info .footer-content-box .footer-info-box .info .sns li a:hover {
+  color: #000;
 }
 footer .footerlogo-info .footer-content-box .footer-info-box .info .txt {
   width: 80%;

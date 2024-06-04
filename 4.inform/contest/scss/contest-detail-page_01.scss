@@ -1,0 +1,110 @@
+@import "./style.scss";
+@import "./reset.scss";
+@import "./mixin.scss";
+@import "../../../scss/header.scss";
+@import "../../../scss/footer.scss";
+
+
+.container {
+    width: $width-wide;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 20px;
+    // background-color: antiquewhite;
+
+    @include responsive(large-screens) {
+        position: relative;
+        padding: 0 10px;
+    }
+}
+
+//***********header***********
+header {
+    @include header-style();
+}
+
+
+//***********main***********
+main {
+    .detail-page {
+        @include title-menu-list();
+
+        .content-box {
+            margin-top: 20px;
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 1s ease, transform 1s ease;
+
+            @include responsive(large-screens) {
+                 margin-top: 30px;
+            }
+
+            @include main-title-box();
+
+            .txt-box {
+                // height: 1000px;
+                padding: 75px 0;
+                border-top: 2px solid $inform-line-gray;
+                border-bottom: 2px solid $inform-line-gray;
+
+                @include responsive(large-screens) {
+                    padding: 50px 0;
+                }
+
+                @include txt-box();
+                
+                .paragraph_2,
+                .paragraph_3,
+                .paragraph_4 {
+                    margin-top: 100px;
+
+                    @include responsive(large-screens) {
+                        margin-top: 80px;
+                    }
+                }
+
+                .paragraph_3 {
+                    table {
+                        border-collapse: collapse;
+                        width: $width-wide;
+                        text-align: center;
+                        tr {
+                            th,
+                            td {
+                                border-bottom: 1px solid $inform-line-gray;
+                                border-right: 1px solid $inform-line-gray;
+                                padding: 10px;
+                                font-size: 0.875rem;
+
+                                @include responsive(large-screens) {
+                                    font-size: 1rem;
+                                }
+                            }
+
+                            th {
+                                border-top: 3px solid #000;
+                                font: {
+                                    weight: $font-medium;
+                                }
+                                background-color: #f9f9f9;
+                            }
+
+                            th:last-child,
+                            td:last-child {
+                                border-right: 0;
+                            }
+                        }
+                    }
+                }
+            }  // txt-box
+        }  // content-box
+
+        @include list-box();
+    }  // detail-page
+}  // main
+
+
+//***********footer***********
+footer {
+    @include footer-style();
+}
