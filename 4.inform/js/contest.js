@@ -24,7 +24,32 @@ $(function() {
     
     
     
-    
+     // <모바일 search>
+     const searchBox = $('#search-box');
+     function toggleSearchBox() {
+         if (searchBox.css('display') === 'none') {
+             searchBox.css('display', 'block');
+         } else {
+             searchBox.css('display', 'none');
+         }
+     }
+ 
+     if ($(window).width() < 768) {
+         searchBox.css('display', 'none');
+         $('.menu-list > .search > img').click(toggleSearchBox);
+     } else {
+         searchBox.css('display', 'block');
+     }
+ 
+     $(window).resize(function () {  // 창의 크기 변경 이벤트 처리
+         if ($(window).width() < 768) {
+             searchBox.css('display', 'none');
+             $('.menu-list > .search > img').off('click').on('click', toggleSearchBox);
+         } else {
+             searchBox.css('display', 'block');
+             $('.menu-list > .search > img').off('click');
+         }
+     });
     
     
     // <상세페이지 연결>

@@ -43,6 +43,11 @@ $(function() {
             // $('.gnb').removeClass('active');
         }
         
+
+        // <모바일 로그인 연결>
+        $('.login-txt a').attr('href', '../../2.program/8.login/login.html');
+
+        
         // #sub-menu 나오게 하기
         $('.gnb-title').on('click', function(e) {
             e.preventDefault();

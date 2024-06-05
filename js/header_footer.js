@@ -2,12 +2,19 @@ $(function() {
     //===================== header =====================
     //--------------------- 모바일 ---------------------
     var mobile = $('#mobileBar');
+
+    // --------------------- 공통 ---------------------
+    $('.right-menu .search > img').attr('src', './images/header_search_white.png');
+    $('.right-menu .login  img').attr('src', './images/login_white.png');
+    mobile.find('.bar').css('backgroundColor', '#fff');
     
     mobile.on('click', function() {
         var mainMenu = $('#mainMenu');
 
         // <햄버거 메뉴 -> X 모양>
         mobile.toggleClass('active');  
+        
+
         
         
         // <search 없애기>
@@ -32,19 +39,21 @@ $(function() {
                 'background-color': '#fff'
             });
             $('.main-menu').append('<div class="only-mobile"><div class="small-title">서울284</div><div class="login-txt"><a>로그인</a></div></div>');
+            mobile.find('.bar').css('backgroundColor', '#000');
             $('.fixed-menu').css('display', 'none');
         } else {
             $('body').removeClass('stop-scroll');
             $('.logo-gnb-rightmenu').removeClass('active');
             $('.main-menu').css('display', 'none');
             $('.main-menu .only-mobile').remove();
+            mobile.find('.bar').css('backgroundColor', '#fff');
             $('.fixed-menu').css('display', 'block');
 
             // $('.gnb').removeClass('active');
         }
         
         // <모바일 로그인 연결>
-        $('.login-txt a').attr('href', '../2.program/8.login/base.html');
+        $('.login-txt a').attr('href', '../2.program/8.login/login.html');
 
         // #sub-menu 나오게 하기
         $('.gnb-title').on('click', function(e) {
