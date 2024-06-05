@@ -304,7 +304,7 @@
                         }
 
                         .search {
-                            width: 90%;
+                            width: $width-wide;
                             // background-color: lightblue;\
 
                             &.hide {
@@ -312,7 +312,7 @@
                             }
 
                             @include responsive(large-screens) {
-                                width: 21px;
+                                width: 27px;
                             }
                             img {
                                 width: $width-wide;
@@ -338,7 +338,7 @@
                           height: 2px;
                           margin: 2vw 0;
                           border-radius: 10px;
-                          background:$color-main;
+                          background-color: $color-main;
                           transition: transform 0.5s ease;
     
                           &:first-child {
@@ -356,11 +356,12 @@
                           height:50px;
                         //   background-color: greenyellow;
                           position:relative;
-    
+
                           div{
                             position:absolute;
                             top: 15px; right: 0;
                             display:none;
+                            background-color: $color-main;  
     
                             &:first-child {
                               transform:rotate(-45deg);
