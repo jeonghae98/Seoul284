@@ -1411,6 +1411,7 @@ main .main-inform .container-none .inform-content-box .content-box2 {
   justify-content: center;
   gap: 20px;
   width: 100%;
+  overflow: hidden;
   height: auto;
   margin: auto;
   cursor: pointer;
@@ -1420,6 +1421,7 @@ main .main-inform .container-none .inform-content-box .content-box2 {
   main .main-inform .container-none .inform-content-box .content-box2 {
     flex-direction: column;
     justify-content: center;
+    overflow-x: none;
   }
 }
 main .main-inform .container-none .inform-content-box .content-box1 div,
@@ -1670,6 +1672,9 @@ main .main-inform .container-none .inform-content-box .content-box2 .notice .txt
   main .main-inform .container-none .inform-content-box .content-box2 .notice-content3 {
     padding-left: 10px;
   }
+}
+main .main-inform .container-none .inform-content-box .content-box1 {
+  transform: translate(0, 0);
 }
 @media only screen and (min-width: 1024px) {
   main .main-inform .container-none .inform-content-box .content-box1 {

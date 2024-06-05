@@ -1,76 +1,172 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-    .owl-carousel {
-        display: flex;
-        overflow: hidden;
-    }
+  <meta charset="UTF-8">
+  <title>Click and Drag</title>
+  <style>
+    html {
+  box-sizing: border-box;
+  background-size: cover;
+}
 
-    .owl-item {
-        width: 200px;
-        margin: 0 10px;
-    }
+/* *, *:before, *:after {
+  box-sizing: inherit;
+} */
 
-    .owl-item>div {
-        width: 100%;
-        height: 100px;
-        background-color: #f3f3f3;
-        border: 1px solid #ccc;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        cursor: pointer;
-    }
-    </style>
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: sans-serif;
+  font-size: 20px;
+  margin: 0;
+}
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+.items {
+  height: 800px;
+  padding: 100px;
+  width: 400px;
+  border: 1px solid white;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+  user-select: none;
+  cursor: pointer;
+  transition: all 0.2s;
+  transform: scale(0.98);
+  /* will-change: transform; */
+  position: relative;
+  background: rgba(255,255,255,0.1);
+  font-size: 0;
+  perspective: 500px;
+}
 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+.items.active {
+  background: rgba(255,255,255,0.3);
+  cursor: grabbing;
+  /* cursor: -webkit-grabbing; */
+  transform: scale(1);
+}
 
-    <script>
-    $(document).ready(function(){
-        var $owl = $('.owl-carousel');
+.item {
+  width: 200px;
+  height: calc(100% - 40px);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 80px;
+  font-weight: 100;
+  color: rgba(0,0,0,0.15);
+  box-shadow: inset 0 0 0 10px rgba(0,0,0,0.15);
+}
 
-        $owl.children().each(function(index) {
-            $(this).attr('data-position', index); 
-        });
+.item:nth-child(9n+1) { background: dodgerblue;}
+.item:nth-child(9n+2) { background: goldenrod;}
+.item:nth-child(9n+3) { background: paleturquoise;}
+.item:nth-child(9n+4) { background: gold;}
+.item:nth-child(9n+5) { background: cadetblue;}
+.item:nth-child(9n+6) { background: tomato;}
+.item:nth-child(9n+7) { background: lightcoral;}
+.item:nth-child(9n+8) { background: darkslateblue;}
+.item:nth-child(9n+9) { background: rebeccapurple;}
 
-        $owl.owlCarousel({
-            center: true,
-            loop: true,
-            items: 5,
-        });
-
-        $(document).on('click', '.owl-item>div', function() {
-            $owl.trigger('to.owl.carousel', $(this).data('position'));
-        });
-    });
-    </script>
-
-    <title>Owl Carousel Example</title>
+  </style>
+  <script src="./js/jquery.js"></script>
 </head>
 <body>
-    <section class="owl-carousel-section">
-        <div class="owl-carousel">
-            <div>Item 1</div>
-            <div>Item 2</div>
-            <div>Item 3</div>
-            <div>Item 4</div>
-            <div>Item 5</div>
-            <div>Item 6</div>
-            <div>Item 7</div>
-            <div>Item 8</div>
-            <!-- Add more items as needed -->
-        </div>
-    </section>
+  <div class="items">
+    <div class="item item1">01</div>
+    <div class="item item2">02</div>
+    <div class="item item3">03</div>
+    <!-- <div class="item item4">04</div>
+    <div class="item item5">05</div>
+    <div class="item item6">06</div>
+    <div class="item item7">07</div>
+    <div class="item item8">08</div>
+    <div class="item item9">09</div>
+    <div class="item item10">10</div>
+    <div class="item item11">11</div>
+    <div class="item item12">12</div>
+    <div class="item item13">13</div>
+    <div class="item item14">14</div>
+    <div class="item item15">15</div>
+    <div class="item item16">16</div>
+    <div class="item item17">17</div>
+    <div class="item item18">18</div>
+    <div class="item item19">19</div>
+    <div class="item item20">20</div>
+    <div class="item item21">21</div>
+    <div class="item item22">22</div>
+    <div class="item item23">23</div>
+    <div class="item item24">24</div>
+    <div class="item item25">25</div> -->
+  </div>
 
-    <section>
-        <!-- Your other sections -->
-    </section>
-</body>
+<script>
+    
+    // $(function() {
+    //     const slider = $('.items');
+    //     let isMouseDown = false;
+    //     let startX, scrollLeft;
+
+    //     slider.on('mousedown', (e) => {
+    //         isMouseDown = true;
+    //         slider.addClass('active');
+
+    //         startX = e.pageX - slider.offsetLeft;
+    //         scrollLeft = slider.scrollLeft;
+    //     });
+
+    //     slider.on('mouseleave', () => {
+    //         isMouseDown = false;
+    //         slider.removeClass('active');
+    //     });
+
+    //     slider.on('mouseup', () => {
+    //         isMouseDown = false;
+    //         slider.removeClass('active');
+    //     });
+
+    //     slider.on('mousemove', (e) => {
+    //         if (!isMouseDown) return;
+
+    //         e.preventDefault();
+    //         const x = e.pageX - slider.offsetLeft;
+    //         const walk = (x - startX) * 1;
+    //         slider.scrollLeft = scrollLeft - walk;
+    //     });
+    // });
+  const slider = document.querySelector('.items');
+  let isMouseDown = false;
+  let startX, scrollLeft;
+
+  slider.addEventListener('mousedown', (e) => {
+    isMouseDown = true;
+    slider.classList.add('active');
+
+    startX = e.pageX - slider.offsetLeft;
+    scrollLeft = slider.scrollLeft;
+  });
+  
+  slider.addEventListener('mouseleave', () => {
+    isMouseDown = false;
+    slider.classList.remove('active');
+  });
+  
+  slider.addEventListener('mouseup', () => {
+    isMouseDown = false;
+    slider.classList.remove('active');
+  });
+
+  slider.addEventListener('mousemove', (e) => {
+    if (!isMouseDown) return;
+
+    e.preventDefault();
+    const x = e.pageX - slider.offsetLeft;
+    const walk = (x - startX) * 1;
+    slider.scrollLeft = scrollLeft - walk;
+  });
+</script>
+  </body>
 </html>

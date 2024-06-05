@@ -289,46 +289,123 @@ $(function() {
     });
 
     // <animation>
-    // $(window).on('scroll', function() {
+    // css translate 속성을 이용해 움직이기
 
-    //     function moveBox() {
-    //         var informWindowWidth = $(window).width();
-    //         var $scrollTop = $(window).scrollTop();
-    //         var informOffset = $('.inform').offset().top;
-            
-    //         if($scrollTop > informOffset) {
-    //             if (informWindowWidth < 768) {
-               
-    //             } else {
-    //                $('.content-box1').css({
-    //                     'top': '1400px'
-    //                })
-    //             }
-    //         }
-            
+    // const $box = $('.content-box1');
+    // const boxScrollWidth = $box.scrollWidth;  // 가려진 영역(스크롤 영역)을 포함한 요소의 가로 사이즈
+    // const boxClientWidth = $box.clientWidth;  // 가려진 영역 제외한 현재 화면에 보이는 요소에 대한 가로 사이즈
+
+    // let startX = 0;
+    // let nowX = 0;
+    // let endX =0;
+    // let boxX = 0;
+
+    // const getClientX = (e) => {  // 터치 이벤트인지 확인
+    //     const isTouches = e.originalEvent.touches ? true : false;
+    //     return isTouches ? e.originalEvent.touches[0].clientX : e.clientX;
+    //   };
+
+    //   const getTranslateX = () => {
+    //     return parseInt($box.css('transform').split(/[^\-0-9]+/g)[5]);
+    //   };
+
+    //   const setTranslateX = (x) => {
+    //     $box.css('transform', `translateX(${x}px)`);
+    //   };
+
+
+    //   const $event = () => {  // 이벤트 연결
+    //     $box.on('mousedown', onScrollStart);
+    //     $box.on('touchstart', onScrollStart);
+    //     $box.on('click', onClick);
+    //   };
+
+    //   $event();
+
+
+    //   const onScrollStart = (e) => {
+    //     startX = getClientX(e);  // 스크롤을 시작했을 때 마우스 또는 터치한 지점을 startX 변수에 저장
+    //     $(window).on('mousemove', onScrollMove);
+    //     $(window).on('touchmove', onScrollMove);
+    //     $(window).on('mouseup', onScrollEnd);
+    //     $(window).on('touchend', onScrollEnd);
+
+    //     console.log(startX);
+    //   };
+
+    //  const onScrollMove = (e) => {
+    //     nowX = getClientX;
+    //     setTranslateX(boxX + nowX - startX);  // boxX에 translateX 값이 저장되어 있으며, 스크롤 종료 이벤트 함수 안에서 할당함
+    //  }
+
+
+    // const $list = $('.content-box1');
+    // const listScrollWidth = $list.get(0).scrollWidth;
+    // const listClientWidth = $list.get(0).clientWidth;
+    // let startX = 0;
+    // let nowX = 0;
+    // let endX = 0;
+    // let listX = 0;
+
+    // const getClientX = (e) => {
+    //     const isTouches = e.touches ? true : false;
+    //     return isTouches ? e.touches[0].clientX : e.clientX;
+    // };
+    
+    // const getTranslateX = () => {
+    //     const matrix = $list.css('transform').replace(/[^0-9\-.,]/g, '').split(',');
+    //     return parseInt(matrix[4]);
+    // };
+    
+    // const setTranslateX = (x) => {
+    //     $list.css('transform', `translateX(${x}px)`);
+    // };
+
+    // const bindEvents = () => {
+    //     $list.off('mousedown touchstart', onScrollStart);
+    //     $list.off('click', onClick);
+        
+    //     $list.on('mousedown touchstart', onScrollStart);
+    //     $list.on('click', onClick);
+    // };
+
+    // const onScrollStart = (e) => {
+    //     startX = getClientX(e);
+    //     $(window).on('mousemove touchmove', onScrollMove);
+    //     $(window).on('mouseup touchend', onScrollEnd);
+    // };
+
+    // const onScrollMove = (e) => {
+    //     nowX = getClientX(e);
+    //     setTranslateX(listX + nowX - startX);
+    // };
+
+    // const onScrollEnd = (e) => {
+    //     endX = getClientX(e);
+    //     listX = getTranslateX();
+    //     if (listX > 0) {
+    //         setTranslateX(0);
+    //         $list.css('transition', 'all 0.3s ease');
+    //         listX = 0;
+    //     } else if (listX < listClientWidth - listScrollWidth) {
+    //         setTranslateX(listClientWidth - listScrollWidth);
+    //         $list.css('transition', 'all 0.3s ease');
+    //         listX = listClientWidth - listScrollWidth;
     //     }
+    
+    //     $(window).off('mousemove touchmove', onScrollMove);
+    //     $(window).off('mouseup touchend', onScrollEnd);
+    
+    //     setTimeout(() => {
+    //         bindEvents();
+    //         $list.css('transition', '');
+    //     }, 300);
+    // };
 
-    //     moveBox();
-    // });
-    // var $owl = $('.content-box1');
-
-    // $owl.children().each(function(index) {
-    //     $(this).attr('data-position', index); 
-    // });
-
-    // $owl.owlCarousel({
-    //     center: true,
-    //     loop: true,
-    //     items: 3,
-    //     startPosition: 1 // 처음 로드 시 2번 아이템이 가운데 오도록 설정
-    // });
-
-    // $(document).on('click', '.content-box1 > div', function() {
-    //     var index = $(this).parent().attr('data-position');
-    //     $owl.trigger('to.content-box1', index);
-    // });
-
-
+    // const onClick = (e) => {
+    //     // 클릭 이벤트 처리
+    // };
+      
     // ****info-btn*****
     $('.info-btn').click(function() {
         window.location.href = '.././4.inform/notice.html'
@@ -366,3 +443,189 @@ $(function() {
     });
 });
 
+
+// window.load = function() {
+//   const slider = document.querySelector('.content-box1');
+//   let isMouseDown = false;
+//   let startX, scrollLeft;
+
+//   slider.addEventListener('mousedown', (e) => {
+//     isMouseDown = true;
+//     slider.classList.add('active');
+
+//     startX = e.pageX - slider.offsetLeft;
+//     scrollLeft = slider.scrollLeft;
+//   });
+  
+//   slider.addEventListener('mouseleave', () => {
+//     isMouseDown = false;
+//     slider.classList.remove('active');
+//   });
+  
+//   slider.addEventListener('mouseup', () => {
+//     isMouseDown = false;
+//     slider.classList.remove('active');
+//   });
+
+//   slider.addEventListener('mousemove', (e) => {
+//     if (!isMouseDown) return;
+
+//     e.preventDefault();
+//     const x = e.pageX - slider.offsetLeft;
+//     const walk = (x - startX) * 1;
+//     slider.scrollLeft = scrollLeft - walk;
+//   });
+// }
+
+// window.onload = function() {
+//     // 요소 & 사이즈
+//     const list = document.querySelector('.content-box1');
+//     const listScrollWidth = list.scrollWidth;
+//     const listClientWidth = list.clientWidth;
+//     // 이벤트마다 갱신될 값
+//     let startX = 0;
+//     let nowX = 0;
+//     let endX = 0;
+//     let listX = 0;
+
+//     const getClientX = (e) => {
+//         const isTouches = e.touches ? true : false;
+//         return isTouches ? e.touches[0].clientX : e.clientX;
+//       };
+      
+//       const getTranslateX = () => {
+//         return parseInt(getComputedStyle(list).transform.split(/[^\-0-9]+/g)[5]);
+//       };
+      
+//       const setTranslateX = (x) => {
+//         list.style.transform = `translateX(${x}px)`;
+//       };
+
+//       const bindEvents = () => {
+//         list.addEventListener('mousedown', onScrollStart);
+//         list.addEventListener('touchstart', onScrollStart);
+//         list.addEventListener('click', onClick);
+//       };
+//       bindEvents();
+
+//       const onScrollStart = (e) => {
+//         startX = getClientX(e);
+//         window.addEventListener('mousemove', onScrollMove);
+//         window.addEventListener('touchmove', onScrollMove);
+//         window.addEventListener('mouseup', onScrollEnd);
+//         window.addEventListener('touchend', onScrollEnd);
+//       };
+
+//       const onScrollMove = (e) => {
+//         nowX = getClientX(e);
+//         setTranslateX(listX + nowX - startX);
+//       };
+//       const onScrollEnd = (e) => {
+//         endX = getClientX(e);
+//         listX = getTranslateX();
+//         if (listX > 0) {
+//           setTranslateX(0);
+//           list.style.transition = `all 0.3s ease`;
+//           listX = 0;
+//         } else if (listX < listClientWidth - listScrollWidth) {
+//           setTranslateX(listClientWidth - listScrollWidth);
+//           list.style.transition = `all 0.3s ease`;
+//           listX = listClientWidth - listScrollWidth;
+//         }
+      
+//         window.removeEventListener('mousedown', onScrollStart);
+//         window.removeEventListener('touchstart', onScrollStart);
+//         window.removeEventListener('mousemove', onScrollMove);
+//         window.removeEventListener('touchmove', onScrollMove);
+//         window.removeEventListener('mouseup', onScrollEnd);
+//         window.removeEventListener('touchend', onScrollEnd);
+//         window.removeEventListener('click', onClick);
+      
+//         setTimeout(() => {
+//           bindEvents();
+//           list.style.transition = '';
+//         }, 300);
+//       };
+// }
+
+
+// window.onload = function() {
+//     // 요소 & 사이즈
+//     const list = document.querySelector('.content-box1');
+//     const listScrollWidth = list.scrollWidth;
+//     const listClientWidth = list.clientWidth;
+//     // 이벤트마다 갱신될 값
+//     let startX = 0;
+//     let nowX = 0;
+//     let endX = 0;
+//     let listX = 0;
+
+//     const getClientX = (e) => {
+//         if (!e) return 0; // e 객체가 없으면 0을 반환하도록 수정
+//         const isTouches = e.touches ? true : false;
+//         return isTouches ? e.touches[0].clientX : e.clientX;
+//     };
+    
+    
+//     const getTranslateX = () => {
+//         return parseInt(getComputedStyle(list).transform.split(/[^\-0-9]+/g)[5]);
+//     };
+    
+//     const setTranslateX = (x) => {
+//         list.style.transform = `translateX(${x}px)`;
+//     };
+
+//     const bindEvents = () => {
+//         list.addEventListener('mousedown', onScrollStart);
+//         list.addEventListener('touchstart', onScrollStart);
+//         list.addEventListener('click', onClick);
+//     };
+
+//     const onScrollStart = (e) => {
+//         startX = getClientX(e);
+//         window.addEventListener('mousemove', onScrollMove);
+//         window.addEventListener('touchmove', onScrollMove);
+//         window.addEventListener('mouseup', onScrollEnd);
+//         window.addEventListener('touchend', onScrollEnd);
+//     };
+
+//     const onScrollMove = (e) => {
+//         nowX = getClientX(e);
+//         setTranslateX(listX + nowX - startX);
+//     };
+
+//     const onScrollEnd = (e) => {
+//         if (e === undefined) return; // 이벤트 객체가 없는 경우 함수를 종료합니다.
+    
+//         endX = getClientX(e);
+//         listX = getTranslateX();
+//         if (listX > 0) {
+//             setTranslateX(0);
+//             list.style.transition = `all 0.3s ease`;
+//             listX = 0;
+//         } else if (listX < listClientWidth - listScrollWidth) {
+//             setTranslateX(listClientWidth - listScrollWidth);
+//             list.style.transition = `all 0.3s ease`;
+//             listX = listClientWidth - listScrollWidth;
+//         }
+      
+//         window.removeEventListener('mousedown', onScrollStart);
+//         window.removeEventListener('touchstart', onScrollStart);
+//         window.removeEventListener('mousemove', onScrollMove);
+//         window.removeEventListener('touchmove', onScrollMove);
+//         window.removeEventListener('mouseup', onScrollEnd);
+//         window.removeEventListener('touchend', onScrollEnd);
+//         window.removeEventListener('click', onClick);
+      
+//         setTimeout(() => {
+//             bindEvents();
+//             list.style.transition = '';
+//         }, 300);
+//     };
+
+//     const onClick = (e) => {
+//         // 클릭 이벤트 처리 (필요에 따라 구현)
+//     };
+
+//     bindEvents();
+// };

@@ -1134,10 +1134,13 @@ main {
                .content-box1,
                .content-box2 {
                     display: flex;
-                    align-items: flex-start;
+                    align-items: flex-start; 
                     justify-content: center;
                     gap: 20px;
                     width: $width-wide;
+                    // overflow-x: scroll;
+                    // overflow-y: hidden;
+                    overflow: hidden;
                     height: auto;
                     margin: auto;
                     cursor: pointer;
@@ -1145,9 +1148,14 @@ main {
                     @include responsive(large-screens) {
                         flex-direction: column;
                         justify-content: center; 
+                        overflow-x: none;
                         // align-items: center; 
                         // gap: -50px;
                     }
+
+                    // &.active {
+                    //     cursor: grabbing;
+                    // }
                 // .content-box1 {
                 //  }
                     div {
@@ -1403,6 +1411,7 @@ main {
                }  // content-box1/2
 
                .content-box1 {
+                    transform: translate(0, 0);
                     @include responsive(large-screens) {
                         position: relative;
                         // top: -1400px;
