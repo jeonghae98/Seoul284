@@ -455,15 +455,13 @@ main .intro-page p {
   }
 }
 main .content-page {
-  height: 1009px;
-  overflow: hidden;
   margin-bottom: 20px;
   /* form */
   /* ###########search box################# */
   /* scrollbarrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr */
   /* scrollbarrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr */
   /* ==============exhibiton================= */
-  /* =============exhibiton====================== */
+  /* =================exhibiton====================== */
 }
 main .content-page form {
   margin-top: 50px;
@@ -650,6 +648,8 @@ main .content-page .now-exhibition,
 main .content-page .fin-exhibition {
   margin: 100px auto;
   width: 80%;
+  height: 600px;
+  overflow-y: scroll;
 }
 @media only screen and (min-width: 1024px) {
   main .content-page .now-exhibition,

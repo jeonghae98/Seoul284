@@ -78,8 +78,8 @@ main {
 
     /* 222222222page2222222222222222222 */
     .content-page {
-        height: 1009px;
-        overflow: hidden;
+        // height: 1009px;
+        // overflow: hidden;
         margin-bottom: 20px;
 
         form {
@@ -299,7 +299,9 @@ main {
         .fin-exhibition {
             margin: 100px auto;
             width: 80%;
-            // background-color: azure;
+            height: 600px;
+            overflow-y: scroll;
+            // background-color: rgb(18, 245, 245);
 
             @include responsive(large-screens) {
                 width: 70%;
@@ -400,18 +402,12 @@ main {
 
             }
         }
+/* =================exhibiton====================== */
+    } /* content-page */
+    
+} /* main */
 
-        .fin-exhibition {
-            // display: none
-        }
 
-        /* =============exhibiton====================== */
-    }
-
-    /* content-page */
-}
-
-/* main */
 
 //***********footer***********
 footer {
