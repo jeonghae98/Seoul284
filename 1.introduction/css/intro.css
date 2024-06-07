@@ -490,6 +490,7 @@ main .container section.main-title .sec1-menu div:first-child {
   font-weight: 400;
   border: 1px solid #c2c2c2;
   border-right: none;
+  background-color: #ff6000;
 }
 @media only screen and (min-width: 1024px) {
   main .container section.main-title .sec1-menu div:first-child {
@@ -499,8 +500,8 @@ main .container section.main-title .sec1-menu div:first-child {
     font-weight: 600;
   }
 }
-main .container section.main-title .sec1-menu div:first-child a:hover {
-  color: #ff6000;
+main .container section.main-title .sec1-menu div:first-child a {
+  color: #fff;
 }
 main .container section.main-title .sec1-menu div:nth-child(2) {
   width: 100%;
@@ -511,7 +512,6 @@ main .container section.main-title .sec1-menu div:nth-child(2) {
   font-weight: 400;
   border: 1px solid #c2c2c2;
   border-right: none;
-  background-color: #ff6000;
 }
 @media only screen and (min-width: 1024px) {
   main .container section.main-title .sec1-menu div:nth-child(2) {
@@ -521,8 +521,8 @@ main .container section.main-title .sec1-menu div:nth-child(2) {
     font-weight: 600;
   }
 }
-main .container section.main-title .sec1-menu div:nth-child(2) a {
-  color: #fff;
+main .container section.main-title .sec1-menu div:nth-child(2) a:hover {
+  color: #ff6000;
 }
 main .container section.main-title .sec1-menu div:last-child {
   width: 100%;

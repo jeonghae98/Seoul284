@@ -519,7 +519,7 @@ main .space .sec1 p span {
   color: #ff6000;
 }
 main .space .sec2 {
-  border-bottom: 1px solid #dddddd;
+  height: 700px;
 }
 @media only screen and (min-width: 1024px) {
   main .space .sec2 {
@@ -579,6 +579,9 @@ main .space .sec2 p span {
   display: inline;
   color: #ff6000;
 }
+main .space .slide1 {
+  overflow: hidden;
+}
 @media only screen and (min-width: 1024px) {
   main .space .slide1 {
     width: 100%;
@@ -592,10 +595,11 @@ main .space .slide1 .box1 {
   border-left: none;
   border-right: none;
   overflow: hidden;
-  margin-bottom: 300px;
+  margin-bottom: 0px;
 }
 @media only screen and (min-width: 1024px) {
   main .space .slide1 .box1 {
+    margin-bottom: 200px;
     padding: 0px 0 0px 0;
     background-image: url(../images/sd_bg.png);
     background-repeat: no-repeat;
@@ -685,6 +689,41 @@ main .space .slide1 .box1 .img-list2 img {
     display: block;
   }
 }
+main .space .slide1 .btn-sd {
+  width: 50%;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  text-align: center;
+}
+@media only screen and (min-width: 1024px) {
+  main .space .slide1 .btn-sd {
+    display: none;
+  }
+}
+main .space .slide1 .btn-sd .left1 {
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 50%;
+  border: 1px solid #9b9b9b;
+  font-weight: 600;
+  color: black;
+}
+main .space .slide1 .btn-sd .right {
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 50%;
+  border: 1px solid #9b9b9b;
+  font-weight: 600;
+  color: black;
+}
+main .space .slide1-2 {
+  overflow: hidden;
+  background-color: #ff6000;
+}
 @media only screen and (min-width: 1024px) {
   main .space .slide1-2 {
     width: 100%;
@@ -706,7 +745,7 @@ main .space .slide1-2 .box1 {
 }
 main .space .slide1-2 .box1 .img-list {
   display: flex;
-  width: 500px;
+  width: 100px;
 }
 @media only screen and (min-width: 1024px) {
   main .space .slide1-2 .box1 .img-list {
@@ -785,11 +824,7 @@ main .space .slide1-2 .box1 .img-list2 img {
   }
 }
 main .space .btn {
-  position: absolute;
-  top: 2400px;
-  left: 50%;
-  transform: translate(-50%);
-  width: 30%;
+  width: 40%;
   height: 50px;
   margin: 0 auto;
   margin-bottom: 200px;
@@ -799,6 +834,10 @@ main .space .btn {
 }
 @media only screen and (min-width: 1024px) {
   main .space .btn {
+    position: absolute;
+    top: 2400px;
+    left: 50%;
+    transform: translate(-50%);
     width: 20%;
     top: 3150px;
   }
