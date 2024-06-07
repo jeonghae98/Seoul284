@@ -17,23 +17,6 @@ header {
     @include header-style();
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 //***********main***********
 main {
     // background-color: aqua;
@@ -1142,33 +1125,7 @@ section.box4 {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-***********footer***********
+//***********footer***********
 footer {
     @include footer-style();
 }

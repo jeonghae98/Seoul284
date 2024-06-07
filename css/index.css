@@ -1412,8 +1412,6 @@ main .main-inform .container-none .inform-content-box .content-box2 {
   justify-content: center;
   gap: 20px;
   width: 100%;
-  overflow-x: scroll;
-  overflow: hidden;
   height: auto;
   margin: auto;
   cursor: pointer;

@@ -481,3 +481,9 @@ main {
         } // tb
     } // container
 } // main
+
+
+//***********footer***********
+footer {
+    @include footer-style();
+}

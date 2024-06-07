@@ -864,4 +864,180 @@ main .vission-box .container .vission2 .flex-box .plus-ic {
     line-height: 200px;
     font-size: 4rem;
   }
+}
+
+footer {
+  position: relative;
+  width: 100%;
+}
+footer .footer-img img {
+  width: 100%;
+}
+footer .footerlogo-info {
+  padding: 35px 20px;
+}
+footer .footerlogo-info .footer-content-box {
+  position: relative;
+  width: 84%;
+  margin: 0 auto;
+}
+@media only screen and (min-width: 1024px) {
+  footer .footerlogo-info .footer-content-box {
+    display: flex;
+    width: 82%;
+    height: 150px;
+  }
+}
+footer .footerlogo-info .footer-content-box .footer-logo {
+  margin-bottom: 30px;
+  width: 100%;
+}
+@media only screen and (min-width: 1024px) {
+  footer .footerlogo-info .footer-content-box .footer-logo {
+    margin-right: 6%;
+    width: 290px;
+  }
+}
+footer .footerlogo-info .footer-content-box .footer-logo h2 {
+  font-weight: 100;
+  font-size: 2.333rem;
+}
+@media only screen and (min-width: 1024px) {
+  footer .footerlogo-info .footer-content-box .footer-logo h2 {
+    line-height: 1.2;
+    font-size: 3.75rem;
+  }
+}
+footer .footerlogo-info .footer-content-box .footer-info-box {
+  width: 100%;
+}
+@media only screen and (min-width: 1024px) {
+  footer .footerlogo-info .footer-content-box .footer-info-box {
+    display: flex;
+    flex-direction: column;
+  }
+}
+footer .footerlogo-info .footer-content-box .footer-info-box .info {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+@media only screen and (min-width: 1024px) {
+  footer .footerlogo-info .footer-content-box .footer-info-box .info {
+    width: 100%;
+  }
+}
+footer .footerlogo-info .footer-content-box .footer-info-box .info div strong {
+  font-weight: 400;
+  font-size: 1rem;
+  color: #717171;
+}
+@media only screen and (min-width: 1024px) {
+  footer .footerlogo-info .footer-content-box .footer-info-box .info div strong {
+    margin-bottom: 15px;
+    font-size: 1.167rem;
+  }
+}
+footer .footerlogo-info .footer-content-box .footer-info-box .info div .long-line {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 2px;
+  margin: 10px 0;
+  background-color: #b0afaf;
+}
+footer .footerlogo-info .footer-content-box .footer-info-box .info div .long-line .line {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 2;
+  width: 41px;
+  height: 100%;
+  background-color: #717171;
+}
+@media only screen and (min-width: 1024px) {
+  footer .footerlogo-info .footer-content-box .footer-info-box .info div .long-line .line {
+    width: 33px;
+  }
+}
+footer .footerlogo-info .footer-content-box .footer-info-box .info .address {
+  width: 45%;
+}
+@media only screen and (min-width: 1024px) {
+  footer .footerlogo-info .footer-content-box .footer-info-box .info .address {
+    width: 40%;
+  }
+}
+footer .footerlogo-info .footer-content-box .footer-info-box .info .tel {
+  width: 40%;
+}
+@media only screen and (min-width: 1024px) {
+  footer .footerlogo-info .footer-content-box .footer-info-box .info .tel {
+    width: 35%;
+  }
+}
+footer .footerlogo-info .footer-content-box .footer-info-box .info .sns {
+  width: 15%;
+}
+@media only screen and (min-width: 1024px) {
+  footer .footerlogo-info .footer-content-box .footer-info-box .info .sns {
+    width: 25%;
+  }
+}
+footer .footerlogo-info .footer-content-box .footer-info-box .info .sns li a:hover {
+  color: #000;
+}
+footer .footerlogo-info .footer-content-box .footer-info-box .info .txt {
+  width: 80%;
+  font-weight: 400;
+  font-size: 0.83rem;
+  color: #b0afaf;
+}
+@media only screen and (min-width: 1024px) {
+  footer .footerlogo-info .footer-content-box .footer-info-box .info .txt {
+    width: 75%;
+    font-size: 1rem;
+  }
+}
+footer .footerlogo-info .footer-content-box .footer-info-box .copyright {
+  width: 100%;
+  margin-top: 20px;
+}
+@media only screen and (min-width: 1024px) {
+  footer .footerlogo-info .footer-content-box .footer-info-box .copyright {
+    margin-top: 0;
+  }
+}
+footer .footerlogo-info .footer-content-box .footer-info-box .copyright p {
+  font-weight: 400;
+  font-size: 0.83rem;
+  color: #b0afaf;
+}
+footer .fixed-menu {
+  position: fixed;
+  right: 30px;
+  bottom: 50px;
+  z-index: 10;
+}
+@media only screen and (min-width: 1024px) {
+  footer .fixed-menu {
+    right: 60px;
+    bottom: 100px;
+  }
+}
+footer .fixed-menu a {
+  width: 35px;
+  height: 35px;
+  line-height: 35px;
+  border-radius: 50%;
+  text-align: center;
+  color: #fff;
+  background-color: #000;
+}
+@media only screen and (min-width: 1024px) {
+  footer .fixed-menu a {
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+  }
 }/*# sourceMappingURL=mission.css.map */

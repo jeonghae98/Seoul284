@@ -443,3 +443,9 @@ main {
         } //container
     } // vission-box
 }
+
+
+//***********footer***********
+footer {
+    @include footer-style();
+}

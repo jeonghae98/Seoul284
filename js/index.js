@@ -5,13 +5,21 @@ $(function() {
         return $(this).text().split("").map((char, i) => `<span style="transform:rotate(${i * 15}deg)">${char}</span>`).join("");
     });
 
+    // var mainVideoHeight = $('.main-video').height();
 
+    // $(window).scroll(function() {
+    //     if ($(this).scrollTop() > mainVideoHeight - 100) {
+    //         $('html, body').animate({
+    //             scrollTop: $('.main-intro').offset().top
+    //         }, 800);
+    //     }
+    // });
 
     //--------------------- intro ---------------------
     $(window).scroll(function() {
         var scrollPosition = $(this).scrollTop();  // 수직 스크롤바의 위치 인식
         var elementOffset = $('.main-intro').offset().top;
-        var colLineOffset = $('.collection-line').offset().top;
+        // var colLineOffset = $('.collection-line').offset().top;
         var windowHeight = $(window).height();
         var windowWidth = $(window).width();
         // console.log(elementOffset);
@@ -444,7 +452,7 @@ $(function() {
 });
 
 
-// window.load = function() {
+// window.onload = function() {
 //   const slider = document.querySelector('.content-box1');
 //   let isMouseDown = false;
 //   let startX, scrollLeft;
@@ -551,7 +559,7 @@ $(function() {
 
 // window.onload = function() {
 //     // 요소 & 사이즈
-//     const list = document.querySelector('.content-box1');
+//     const list = document.querySelector('.content-box2');
 //     const listScrollWidth = list.scrollWidth;
 //     const listClientWidth = list.clientWidth;
 //     // 이벤트마다 갱신될 값
@@ -629,3 +637,50 @@ $(function() {
 
 //     bindEvents();
 // };
+
+
+// window.onload = function() {
+//     let slider = document.querySelector(".inform-content-box");
+//     let innerSlider = document.querySelector(".content-box1");
+//     let pressed = false;
+//     let startx;
+//     let x;
+
+//     slider.addEventListener("mousedown", e => {
+//     pressed = true
+//     startx = e.offsetX - innerSlider.offsetLeft
+//     slider.style.cursor = "grabbing"
+//     });
+
+//     slider.addEventListener("mouseenter", () => {
+//     slider.style.cursor = "grab"
+//     });
+
+//     slider.addEventListener("mouseup", () => {
+//     slider.style.cursor = "grab"
+//     });
+
+//     window.addEventListener("mouseup", () => {
+//     pressed = false
+//     });
+
+//     slider.addEventListener("mousemove", e => {
+//     if (!pressed) return
+//     e.preventDefault();
+//     x = e.offsetX;
+
+//     innerSlider.style.left = `${x - startx}px`;
+//     checkboundary();
+//     });
+
+//     function checkboundary() {
+//     let outer = slider.getBoundingClientRect();
+//     let inner = innerSlider.getBoundingClientRect();
+
+//     if (parseInt(innerSlider.style.left) > 0) {
+//         innerSlider.style.left = "0px"
+//     } else if (inner.right < outer.right) {
+//         innerSlider.style.left = `-${inner.width - outer.width}px`
+//     }
+//     } 
+// }
