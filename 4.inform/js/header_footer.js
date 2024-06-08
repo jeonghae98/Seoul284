@@ -1,5 +1,13 @@
 $(function() {
     //===================== header =====================
+    //--------------------- 공통 ---------------------
+    // <search-box 나오게 하기>
+    $('.right-menu .search > img').on('click', function() {
+        $('.header-search-box').toggleClass('sub-visible');
+    });
+
+
+
     //--------------------- 모바일 ---------------------
     var mobile = $('#mobileBar');
     

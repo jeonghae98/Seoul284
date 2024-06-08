@@ -1,13 +1,20 @@
 $(function() {
     //===================== header =====================
-    //--------------------- 모바일 ---------------------
+    //--------------------- 공통 ---------------------
     var mobile = $('#mobileBar');
-
-    // --------------------- 공통 ---------------------
     $('.right-menu .search > img').attr('src', './images/header_search_white.png');
     $('.right-menu .login  img').attr('src', './images/login_white.png');
     mobile.find('.bar').css('backgroundColor', '#fff');
+
+
+    // <search-box 나오게 하기>
+    $('.right-menu .search > img').on('click', function() {
+        $('.header-search-box').toggleClass('visible');
+    });
+
+
     
+    // --------------------- 모바일 ---------------------
     mobile.on('click', function() {
         var mainMenu = $('#mainMenu');
 
@@ -92,6 +99,8 @@ $(function() {
     });
 
  
+
+    
 
     //--------------------- PC ---------------------
     var pcWindowWidth = $(window).width() > 768;
