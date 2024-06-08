@@ -19,7 +19,6 @@
     z-index: 1;
     width: $width-wide;
     height: 12vh;
-    // background-color: rgba(255,255,255,0.5);
 
     @include responsive(large-screens) {
         height: 150px;
@@ -306,6 +305,7 @@
                         .search {
                             width: $width-wide;
                             // background-color: lightblue;\
+                            cursor: pointer;
 
                             &.hide {
                                 display: none;
@@ -320,7 +320,10 @@
                         }
                     }
         
-    
+                    
+                    
+                    
+
                     .mobile-menu {
                         position: relative;
                         z-index: 2000;
@@ -379,4 +382,65 @@
             }  //logo-gnb-menu-box
         } 
     }  // logo-gnb-rightmenu
+
+    .header-search-box {
+        display: none;  
+        position: absolute;
+        left: 0; top: 12vh;
+        width: $width-wide;
+        height: 11vh;
+        border-top: 1px solid $line-gray;
+        border-bottom: 1px solid $line-gray;
+        background-color: rgba(0, 0, 0, 0.3);
+        
+        @include responsive(large-screens) {
+            top: 150px;
+            height: 80px;
+        }
+
+        .search-box {
+            position: absolute;
+            left: 50%; top: 3vh;
+            transform: translateX(-50%);
+            padding-left: 10px;
+            width: 90%;
+            height: 5vh;
+            border: 1px solid $color-main;
+            border-radius: 10px;
+
+            @include responsive(large-screens) {
+                top: 20px;
+                width: 1000px;
+                height: 40px;
+                border-radius: 10px;
+            }
+
+            &:focus {
+                outline: none;
+            }
+        }
+
+        img {
+            width: auto;
+            height: 3vh;
+            cursor: pointer;
+            position: absolute;
+            right: 7vw; top: 4vh;
+
+            @include responsive(large-screens) {
+                right: 230px; top: 27px;
+                width: 26px;
+                height: auto;
+            }
+        }
+
+        &.visible {
+            display: block;
+        }
+
+        &.sub-visible {
+            display: block;
+            background-color: $color-second;
+        }
+    }
 }  // header-style()
