@@ -134,7 +134,9 @@ main {
         
 
         .sec2 {
-            border-bottom: 1px solid #dddddd;
+         
+            height: 700px;
+            
             @include responsive(large-screens) {
                 float: right;
                 width: 100%;
@@ -192,7 +194,7 @@ main {
         } // sec2
 
         .slide1 {
-           
+           overflow: hidden;
             @include responsive(large-screens) {
                 width: 100%;
                 margin: 0px 0 0px 0;
@@ -205,10 +207,11 @@ main {
                 border-left: none;
                 border-right: none;
                 overflow: hidden;
-                margin-bottom: 300px;
+                margin-bottom: 0px;
               
               
                 @include responsive(large-screens) {
+                    margin-bottom: 200px;
                     padding: 0px 0 0px 0;
                     background-image: url(../images/sd_bg.png);
                     background-repeat: no-repeat;
@@ -224,10 +227,11 @@ main {
                     }
 
                     img {
-                        width: 100%;
+                        width: 100%; 
                     }
                 
                 } 
+              
                 
                 .img-list1 {
                     display: none;
@@ -299,13 +303,41 @@ main {
                     }
                 }
             } // box1
-
+            .btn-sd {
+                width: 50%; 
+                justify-content: space-between;
+                margin: 0 auto;
+                padding: 20px;
+                display: flex;
+                text-align: center;
+                @include responsive(large-screens)  {
+                    display: none;
+                }
+                .left1 {
+                    width: 40px; height: 40px;
+                    line-height: 40px;
+                    border-radius: 50%;
+                    border: 1px solid #9b9b9b;
+                  
+                    font-weight: $font-semibold;
+                    color: black;
+                }
+                .right {
+                    width: 40px; height: 40px;
+                    line-height: 40px;
+                    border-radius: 50%;
+                    border: 1px solid #9b9b9b;
+                    font-weight: $font-semibold;
+                    color: black;
+                }
+            }
                
         } // slide1
 
 
         .slide1-2 {
-        
+            overflow: hidden;
+            background-color: #ff6000;
             @include responsive(large-screens) {
                 width: 100%;
                 margin: 0px 0 1px 0;
@@ -318,14 +350,13 @@ main {
                 border-left: none;
                 border-right: none;
                 overflow: hidden;
-                // background-color: #ff6000;
-
+            
                 @include responsive(large-screens) {
                     padding: 0px 0 0px 0;
                 }
                 .img-list {
                     display: flex;
-                    width: 500px; 
+                    width: 100px; 
                     @include responsive(large-screens) {
                         display: none;
                     }
@@ -403,15 +434,16 @@ main {
             
         } // slide1-2
         .btn {
-            position: absolute; top: 2400px; left: 50%;
-            transform: translate(-50%);
-            width: 30%; height: 50px;
+        
+            width: 40%; height: 50px;
             margin: 0 auto;
             margin-bottom: 200px;
             margin-top: 50px;
             background-color: white;
             border: 1px solid black;
             @include responsive(large-screens) {
+                position: absolute; top: 2400px; left: 50%;
+                transform: translate(-50%);
                 width: 20%;
                 top: 3150px;
             }

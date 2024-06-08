@@ -87,7 +87,7 @@ main {
                     font-weight: $font-regular;
                     border: 1px solid #c2c2c2;
                     border-right: none; 
-                    background-color: $color-point;
+                    
                     @include responsive (large-screens) {
                         height: 60px; 
                         line-height: 60px;
@@ -95,8 +95,8 @@ main {
                         font-weight: $font-semibold;
                     }
         
-                    a {
-                        color: $color-second;
+                    a:hover {
+                        color: $color-point;
                     }
                 }
                 div:last-child {
@@ -106,15 +106,15 @@ main {
                     font-size: 0.9rem;
                     font-weight: $font-regular;
                     border: 1px solid #c2c2c2;
-                    // background-color: #ADB4B0;
+                    background-color: $color-point;
                     @include responsive (large-screens) {
                         height: 60px;
                         line-height: 60px;
                         font-size: 1rem;
                         font-weight: $font-semibold;
                     }
-                     a:hover {
-                        color: $color-point;
+                     a {
+                        color: $color-second;
                      }
                 }
             } //bi-menu

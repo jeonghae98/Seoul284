@@ -540,7 +540,6 @@ main .bi .container .bi-menu div:nth-child(2) {
   font-weight: 400;
   border: 1px solid #c2c2c2;
   border-right: none;
-  background-color: #ff6000;
 }
 @media only screen and (min-width: 1024px) {
   main .bi .container .bi-menu div:nth-child(2) {
@@ -550,8 +549,8 @@ main .bi .container .bi-menu div:nth-child(2) {
     font-weight: 600;
   }
 }
-main .bi .container .bi-menu div:nth-child(2) a {
-  color: #fff;
+main .bi .container .bi-menu div:nth-child(2) a:hover {
+  color: #ff6000;
 }
 main .bi .container .bi-menu div:last-child {
   width: 100%;
@@ -561,6 +560,7 @@ main .bi .container .bi-menu div:last-child {
   font-size: 0.9rem;
   font-weight: 400;
   border: 1px solid #c2c2c2;
+  background-color: #ff6000;
 }
 @media only screen and (min-width: 1024px) {
   main .bi .container .bi-menu div:last-child {
@@ -570,8 +570,8 @@ main .bi .container .bi-menu div:last-child {
     font-weight: 600;
   }
 }
-main .bi .container .bi-menu div:last-child a:hover {
-  color: #ff6000;
+main .bi .container .bi-menu div:last-child a {
+  color: #fff;
 }
 @media only screen and (min-width: 1024px) {
   main .bi .container .sec-box {

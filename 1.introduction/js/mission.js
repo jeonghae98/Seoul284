@@ -46,27 +46,29 @@ $(function() {
         } else {
     
         if ($scrollTop < 200) {
-            $('.sec1').stop().animate({ opacity: '0' }, 300);
-            $('.plus').stop().animate({ opacity: '0' }, 1600);
+            $('.sec1').stop().animate({ opacity: '0' }, 100);
+            $('.plus').stop().animate({ opacity: '0' }, 1000);
             $('.plus').stop().animate({ marginTop: '-200px' }, 300);
         } else {
-            $('.sec1').stop().animate({ opacity: '1' }, 300);
-            $('.plus').stop().animate({ opacity: '1' }, 2200);
-            $('.plus').stop().animate({ marginTop: '0px' }, 2000);
+            $('.sec1').stop().animate({ opacity: '1' }, 200);
+            $('.plus').stop().animate({ opacity: '1' }, 1000);
+            $('.plus').stop().animate({ marginTop: '0px' }, 1500);
         }
 
         if ($scrollTop < 200) {
             $('.sec2').stop().animate({ opacity: '0' }, 300);
+            $('.plus2').stop().animate({ opacity: '0' }, 1000);
             $('.plus2').stop().animate({ marginTop: '-200px' }, 300);
         } else {
-            $('.sec2').stop().animate({ opacity: '1' }, 1000);
-            $('.plus2').stop().animate({ marginTop: '0px' }, 3350);
+            $('.sec2').stop().animate({ opacity: '1' }, 500);
+            $('.plus2').stop().animate({ opacity: '0' }, 1000);
+            $('.plus2').stop().animate({ marginTop: '0px' }, 2000);
         }
 
         if ($scrollTop < 200) {
             $('.sec3').stop().animate({ opacity: '0' }, 300);
         } else {
-            $('.sec3').stop().animate({ opacity: '1' }, 2000);
+            $('.sec3').stop().animate({ opacity: '1' }, 700);
         }
 
         if ($scrollTop < 1200) {
