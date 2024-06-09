@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="ko">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" type="image/png" href="../../images/favicon.png">
     <link rel="stylesheet" href="./css/reset.css">
-    <link rel="stylesheet" href="./css/notice.css">
-    <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
+    <link rel="stylesheet" href="./css/ex-detail.css">
+    <script src="./js/jquery.js"></script>
+    <script src="./js/header_footer.js"></script>
+    <script src="./js/ex-detail.js"></script>
     <title>전시</title>
 </head>
-
 <body>
     <header>
         <div class="logo-gnb-rightmenu">
@@ -20,57 +20,58 @@
                         <h1><a href="../../index.html"><img src="../../images/logo.png" alt="logo"></a></h1>
                     </div>
 
-                    <nav class="main-menu">
+                    <nav class="main-menu" id="mainMenu">
                         <ul class="gnb">
                             <li>
-                                <a href=".././1. introduction/intro.html" class="gnb-title">소개</a>
+                                <a href="../../1.introduction/intro.html" class="gnb-title">소개</a>
                                 <ul class="sub-menu">
-                                    <li><a href="../../1. introduction/intro.html">문화역서울284 소개</a></li>
-                                    <li><a href="../../1. introduction/visit.html">방문안내</a></li>
-                                    <li><a href="../../1. introduction/space.html">공간안내</a></li>
-                                    <li><a href="../../1. introduction/division.html">조직도</a></li>
+                                    <li><a href="../../1.introduction/intro.html">문화역서울284 소개</a></li>
+                                    <li><a href="../../1.introduction/guide.html">방문안내</a></li>
+                                    <li><a href="../../1.introduction/space.html">공간안내</a></li>
+                                    <li><a href="../../1.introduction/division.html">조직도</a></li>
                                 </ul>
                             </li>
                             <li>
-                                <a href="./exhibition.html" class="gnb-title">프로그램</a>
+                                <a href="../1.exhibition/exhibition.html" class="gnb-title">프로그램</a>
                                 <ul class="sub-menu">
-                                    <li><a href="../exhibition.html">전시</a></li>
-                                    <li><a href="../event.html">공연/행사</a></li>
-                                    <li><a href="../tour.html">공간투어</a></li>
+                                    <li><a href="../1.exhibition/exhibition.html">전시</a></li>
+                                    <li><a href="../3.event/event.html">공연/행사</a></li>
+                                    <li><a href="../5.tour/tour.html">공간투어</a></li>
+                                    <li><a href="https://my.matterport.com/show/?m=KADWpw1cse2" target="_blank">VR공간투어</a></li>
                                 </ul>
                             </li>
                             <li>
-                                <a href="../../3. referenceroom/collection.html" class="gnb-title">자료실</a>
+                                <a href="../../3.referenceroom/collection.html" class="gnb-title">자료실</a>
                                 <ul class="sub-menu">
-                                    <li><a href="../../3. referenceroom/collection.html">소장품</a></li>
+                                    <li><a href="../../3.referenceroom/collection.html">소장품</a></li>
                                 </ul>
                             </li>
                             <li>
-                                <a href="../../4.notice/notice.html" class="gnb-title">알림/소식</a>
+                                <a href="../../4.inform/notice.html" class="gnb-title">알림/소식</a>
                                 <ul class="sub-menu">
-                                    <li><a href="../../4.notice/notice.html">공지사항</a></li>
-                                    <li><a href="../../4.notice/news.html">보도자료</a></li>
+                                    <li><a href="../../4.inform/notice.html">공지사항</a></li>
+                                    <li><a href="../../4.inform/news.html">보도자료</a></li>
                                 </ul>
                             </li>
-                        </ul> <!-- gnb -->
-                    </nav> <!-- main-menu -->
+                        </ul>  <!-- gnb -->
+                    </nav>  <!-- main-menu -->
 
                     <div class="right-menu">
                         <ul>
-                            <li class="login"><a href="../../login.html"><img src="../../images/login.png"
-                                        alt="login"></a></li>
-                            <li class="search"><img src="../../images/header_search.png" alt="search"></li>
+                            <li class="login"><a href="../8.login/login.html"><img src="../../images/login.png" alt="login"></a></li>
+                            <li class="search"><img src="../../images/header_search.png" alt="search"></li>  
                         </ul>
-
-                        <div class="mobile-menu"> <!-- 모바일(햄버거 메뉴) -->
+                        
+                        <div class="mobile-menu" id="mobileBar">  <!-- 모바일(햄버거 메뉴) -->
                             <div class="bar"></div>
                             <div class="bar"></div>
                             <div class="bar"></div>
                         </div>
                     </div>
-                </div> <!-- logo-menu-box -->
-            </div> <!-- container -->
-        </div> <!-- logo-rightmenu -->
+
+                </div>  <!-- logo-menu-box -->
+            </div>  <!-- container -->
+        </div>  <!-- logo-rightmenu -->
     </header>
     <!-- mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm -->
     <main>
@@ -100,7 +101,7 @@
                 <div class="content-img">
                     <img src="./images/ex7.png" alt="con7">
                 </div>
-                <p>
+                <div class="page-number">
                     발달 장애 아동과 비장애 아동이 전하는 공예의 즐거움,그리고 다양성 존중의 메시지<br>
                     &nbsp;<br>
                     &lt;반짝반짝 작은손&gt;은 “나의 자랑”을 주제로 개개인의 생각과 감정을 솔직하게 담아낸 작품을 전시합니다. 60가지 서로 다른 공예적 상상력과 표현력을 확인할 수 있는
@@ -119,62 +120,63 @@
                     &nbsp;<br>
                     참여 작가 중에는 특수학교 재학생도 있습니다. 지적장애(정서, 자폐성장애 포함) 공립 특수학교인 이은학교 5학년생 19명입니다. 이들을 포함한 모든 참여 작가들은 원하는 것을
                     생각하고 손으로 만들어 내는 공예 창작 워크숍을 즐기며 다채로운 방식으로 “나의 자랑”을 완성했습니다.&nbsp;
-                </p>
+                </div>
             </div> <!-- container -->
         </section>
     </main>
     <!--mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm  -->
     <footer>
         <div class="footer-img"><img src="../../images/footer_image.png" alt="footer image"></div>
-
+        
         <div class="footerlogo-info">
             <div class="container">
                 <div class="footer-content-box">
-                    <div class="footer-logo">
-                        <h2>문화역서울284</h2>
-                    </div>
+                    <div class="footer-logo"><h2></h2></div>
+                    
+                    <div class="division-line"></div>
 
-                    <div class="division-line">
-                        <div class="line"></div>
-                        <div class="line"></div>
-                        <div class="line"></div>
-                    </div>
-
-                    <div class="info">
-                        <div class="address">
-                            <strong>주소</strong>
-                            <address class="txt">04509 서울특별시 중구 통일로 1 서울역(본옥) 문화역서울284</address>
-                        </div>
-                        <div class="tel">
-                            <strong>전화번호/FAX</strong>
-                            <ul>
-                                <li>
-                                    <address class="txt">Tel. 02-3407-3500</address>
-                                </li>
-                                <li>
-                                    <address class="txt">Fax. 02-3407-3510</address>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="sns">
-                            <strong>SNS</strong>
-                            <ul>
-                                <li><a href="" class="txt">Facebook</a></li>
-                                <li><a href="" class="txt">YouTube</a></li>
-                                <li><a href="" class="txt">Instagram</a></li>
-                            </ul>
-                        </div>
+                    <div class="footer-info-box">
+                        <div class="info">
+                            <div class="address">
+                                <strong>주소</strong>
+                                <div class="long-line">
+                                    <div class="line"></div>
+                                </div>
+                                <address class="txt">04509 서울특별시 중구 통일로 1 서울역(본옥) 문화역서울284</address>
+                            </div>
+                            <div class="tel">
+                                <strong>전화번호/FAX</strong>
+                                <div class="long-line">
+                                    <div class="line"></div>
+                                </div>
+                                <ul>
+                                    <li><address class="txt">Tel. 02-3407-3500</address></li>
+                                    <li><address class="txt">Fax. 02-3407-3510</address></li>
+                                </ul>
+                            </div>
+                            <div class="sns">
+                                <strong>SNS</strong>
+                                <div class="long-line">
+                                    <div class="line"></div>
+                                </div>
+                                <ul>
+                                    <li><a href="https://www.facebook.com/seoul284/?locale=ko_KR" class="txt">Facebook</a></li>
+                                    <li><a href="https://www.youtube.com/seoul284official" class="txt">YouTube</a></li>
+                                    <li><a href="https://www.instagram.com/culturestationseoul284/" class="txt">Instagram</a></li>
+                                </ul>
+                            </div>
+                        </div>  <!-- info -->
+                        
                         <div class="copyright">
                             <p>Copyright © 2021. KOREA CRAFT & DESIGN FOUNDATION. All Rights Reserved.</p>
                         </div>
-                    </div> <!-- info -->
-
-                </div> <!-- footer-content-box -->
-            </div> <!-- container -->
-        </div> <!-- footerlogo-info -->
-
+                    </div>
+                </div>  <!-- footer-content-box -->
+            </div>  <!-- container -->
+        </div>  <!-- footerlogo-info -->
+        
         <div class="fixed-menu">
-            <a href="">↑</a> <!-- 각자 현재 html 넣으면 됨 -->
+            <a href="#">↑</a>
         </div>
     </footer>
 </body>

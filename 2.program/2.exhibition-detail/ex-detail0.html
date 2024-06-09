@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" type="image/png" href="../../images/favicon.png">
     <link rel="stylesheet" href="./css/reset.css">
-    <link rel="stylesheet" href="./css/ba.css">
-    <!-- <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script> -->
-    <script src="../js/jquery.js"></script>
-    <script src="../js/header_footer.js"></script>
+    <link rel="stylesheet" href="./css/ex-detail.css">
+    <script src="./js/jquery.js"></script>
+    <script src="./js/header_footer.js"></script>
+    <script src="./js/ex-detail.js"></script>
     <title>전시</title>
 </head>
 <body>
@@ -34,9 +34,9 @@
                             <li>
                                 <a href="../1.exhibition/exhibition.html" class="gnb-title">프로그램</a>
                                 <ul class="sub-menu">
-                                    <li><a href="../1.exhibition/exhibition.html">전시</a></li>
-                                    <li><a href="../3.event/event.html">공연/행사</a></li>
-                                    <li><a href="../5.tour/tour.html">공간투어</a></li>
+                                    <li><a href="../exhibition.html">전시</a></li>
+                                    <li><a href="../event.html">공연/행사</a></li>
+                                    <li><a href="../tour.html">공간투어</a></li>
                                 </ul>
                             </li>
                             <li>
@@ -57,7 +57,7 @@
 
                     <div class="right-menu">
                         <ul>
-                            <li class="login"><a href="../../2.program/8.login/login.html"><img src="../../images/login.png"  alt="login"></a></li>
+                            <li class="login"><a href="../../login.html"><img src="../../images/login.png" alt="login"></a></li>
                             <li class="search"><img src="../../images/header_search.png" alt="search"></li>  
                         </ul>
                         
@@ -67,6 +67,7 @@
                             <div class="bar"></div>
                         </div>
                     </div>
+
                 </div>  <!-- logo-menu-box -->
             </div>  <!-- container -->
         </div>  <!-- logo-gnb-rightmenu -->
@@ -87,7 +88,7 @@
                     <img src="./images/nowex1.jpg" alt="now-ex1">
                     <div class="line1"></div>
                     <div class="detail-info">
-                        <h2>2024 문화역서울284 협력전시2 <로컬 크리에이티브 2024: The Next Community></h2>
+                        <h2>2024 문화역서울284 협력전시2<br> <로컬 크리에이티브 2024: The Next Community></h2>
                         <ul>
                             <li>운영시간 : 2024-03-29 ~ 2024-04-21</li>
                             <li>장소 : 문화역서울284</li>
@@ -97,7 +98,7 @@
                     </div>
                 </div> <!-- ex-detail-content -->
                 <div class="list-btn">
-                    <a href="#">목록</a>
+                    <a href="../1.exhibition/exhibition.html">목록</a>
                 </div>
             </div> <!-- container -->
         </section>
@@ -106,7 +107,7 @@
                 <div class="content-img">
                     <img src="./images/nowexde1.jpeg" alt="now-con1">
                 </div>
-                <p>
+                <div class="p">
                     <strong>[전시 개요]</strong><br>
                     &lt;로컬 크리에이티브 2024: The Next Community&gt;는 로컬을 주제로 한 국내 첫 대규모 전시로,<br>
                     동시대 라이프스타일에 녹아있는 로컬 브랜드의 다양성과 크리에이터들의 문화적 창의성을 조명합니다.<br>
@@ -142,53 +143,45 @@
                     <br>
                     <strong>[전시 및 티켓 구매 문의]</strong><br>
                     070-8896-5653</div>
-                </p>
+                </div>
             </div>
         </section>
     </main>
     <!--mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm  -->
     <footer>
         <div class="footer-img"><img src="../../images/footer_image.png" alt="footer image"></div>
-    
+
         <div class="footerlogo-info">
             <div class="container">
                 <div class="footer-content-box">
                     <div class="footer-logo"><h2></h2></div>
                     
-                    <div class="division-line"></div>
-    
-                    <div class="footer-info-box">
-                        <div class="info">
-                            <div class="address">
-                                <strong>주소</strong>
-                                <div class="long-line">
-                                    <div class="line"></div>
-                                </div>
-                                <address class="txt">04509 서울특별시 중구 통일로 1 서울역(본옥) 문화역서울284</address>
-                            </div>
-                            <div class="tel">
-                                <strong>전화번호/FAX</strong>
-                                <div class="long-line">
-                                    <div class="line"></div>
-                                </div>
-                                <ul>
-                                    <li><address class="txt">Tel. 02-3407-3500</address></li>
-                                    <li><address class="txt">Fax. 02-3407-3510</address></li>
-                                </ul>
-                            </div>
-                            <div class="sns">
-                                <strong>SNS</strong>
-                                <div class="long-line">
-                                    <div class="line"></div>
-                                </div>
-                                <ul>
-                                    <li><a href="https://www.facebook.com/seoul284/?locale=ko_KR" class="txt">Facebook</a></li>
-                                    <li><a href="https://www.youtube.com/seoul284official" class="txt">YouTube</a></li>
-                                    <li><a href="https://www.instagram.com/culturestationseoul284/" class="txt">Instagram</a></li>
-                                </ul>
-                            </div>
-                        </div>  <!-- info -->
-                        
+                    <div class="division-line">
+                        <div class="line"></div>
+                        <div class="line"></div>
+                        <div class="line"></div>
+                    </div>
+
+                    <div class="info">
+                        <div class="address">
+                            <strong>주소</strong>
+                            <address class="txt">04509 서울특별시 중구 통일로 1 서울역(본옥) 문화역서울284</address>
+                        </div>
+                        <div class="tel">
+                            <strong>전화번호/FAX</strong>
+                            <ul>
+                                <li><address class="txt">Tel. 02-3407-3500</address></li>
+                                <li><address class="txt">Fax. 02-3407-3510</address></li>
+                            </ul>
+                        </div>
+                        <div class="sns">
+                            <strong>SNS</strong>
+                            <ul>
+                                <li><a href="" class="txt">Facebook</a></li>
+                                <li><a href="" class="txt">YouTube</a></li>
+                                <li><a href="" class="txt">Instagram</a></li>
+                            </ul>
+                        </div>
                         <div class="copyright">
                             <p>Copyright © 2021. KOREA CRAFT & DESIGN FOUNDATION. All Rights Reserved.</p>
                         </div>

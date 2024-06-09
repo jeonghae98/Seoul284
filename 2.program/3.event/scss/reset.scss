@@ -22,9 +22,6 @@ a {
     text-decoration: none;
     color: $color-a;
 }
-a:hover {
-    text-decoration: underline;
-}
 strong,
 span {
     display: block;
@@ -44,12 +41,15 @@ select {
 }
 h1 {
     font-size: 30px;
+    font-weight: $font-semibold;
 }
 h2 {
     font-size: 24px;
+    font-weight: $font-semibold;
 }
 h3 {
     font-size: 20px;
+    font-weight: $font-semibold;
 }
 p {
     font-size: 16px;
@@ -61,4 +61,3 @@ section,
 footer {
     display: block;
 }
-
