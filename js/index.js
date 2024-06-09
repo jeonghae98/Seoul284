@@ -254,25 +254,13 @@ $(function() {
 
 
     $(window).scroll(function() {
-        var scrollPos = $(window).scrollTop();
-        var lineOffset = $('.info-line1').offset().top;
-        var windowHeight = $(window).height();
         var windowWidth = $(window).width();
-        const contentBox1 =  $('.content-box1');
-        const contentBox2 =  $('.content-box2');
 
         if( windowWidth > 768 ) {
-            if(scrollPos <= (lineOffset - windowHeight)) {
-                // contentBox1.css('animation', 'none');
-                // contentBox2.css('animation', 'none');
-            } else {
-                // contentBox1.css('animation', 'moveBox1 4s ease-in-out forwards');
-                // contentBox2.css('animation', 'moveBox2 4s ease-in-out forwards');
-                }
             moveAnimation();
         } else {
             // <animation>
-            const contentBox = $('.content-box1'); // 변경해야 할 요소 선택
+            const contentBox = $('.content-box1, .content-box2'); // 변경해야 할 요소 선택
 
             // 스크롤 시작 시 justify-content 해제
             contentBox.on('scroll', function() {
@@ -280,26 +268,26 @@ $(function() {
             });
 
 
-            function addCenterEffectToSecondElement() {
-                const secondElement = $('.content-box2').children().eq(1).find('.txt-box');
-                secondElement.addClass('center');
-            }
+            // function addCenterEffectToSecondElement() {
+            //     const secondElement = $('.content-box2').children().eq(1).find('.txt-box');
+            //     secondElement.addClass('center');
+            // }
 
-            function delaySlideTransition() {
-                setTimeout(() => {
-                    const sliderInner = $('.content-box2');
-                    const firstItem = sliderInner.children().eq(0);
-                    sliderInner.append(firstItem);
+            // function delaySlideTransition() {
+            //     setTimeout(() => {
+            //         const sliderInner = $('.content-box2');
+            //         const firstItem = sliderInner.children().eq(0);
+            //         sliderInner.append(firstItem);
                     
-                    // center 클래스 제거 및 추가
-                    const centerElement = $('.center');
-                    const nextCenterElement = sliderInner.children().eq(1).find('.txt-box');
-                    nextCenterElement.addClass('center');
-                    centerElement.removeClass('center');
-                }, 3000);
-            }
-            addCenterEffectToSecondElement();
-            setInterval(delaySlideTransition, 3000);
+            //         // center 클래스 제거 및 추가
+            //         const centerElement = $('.center');
+            //         const nextCenterElement = sliderInner.children().eq(1).find('.txt-box');
+            //         nextCenterElement.addClass('center');
+            //         centerElement.removeClass('center');
+            //     }, 3000);
+            // }
+            // addCenterEffectToSecondElement();
+            // setInterval(delaySlideTransition, 3000);
         }
        
 
@@ -313,31 +301,22 @@ $(function() {
             const finalTranslateY2 = -1370;
             const distance1 = Math.abs(finalTranslateY1 - initialTranslateY1);
             const distance2 = Math.abs(finalTranslateY2 - initialTranslateY2);
-            const mainInform = $('.main-inform');
+            const informBox = $('.inform-content-box');
 
             $(window).on('scroll', function() {
                 const scrollTop = $(this).scrollTop();
-                const informOffset = mainInform.offset().top;
-                const informHeight = mainInform.outerHeight();
+                const informOffset = informBox.offset().top;
+                const informHeight = informBox.outerHeight();
                 const windowHeight = $(window).height();
 
                 if (scrollTop + windowHeight > informOffset && scrollTop < informOffset + informHeight) {
-                    // 애니메이션이 실행되는 동안 .main-inform을 고정
-                    // mainInform.addClass('fixed');
-
                     const scrollFraction = (scrollTop + windowHeight - informOffset) / (informHeight + windowHeight);
                     const translateY1 = initialTranslateY1 + scrollFraction * distance1;
                     const translateY2 = initialTranslateY2 - scrollFraction * distance2;
                     contentBox1.css('transform', `translateY(${translateY1}px)`);
                     contentBox2.css('transform', `translateY(${translateY2}px)`);
 
-                    // 애니메이션 완료 후 .main-inform의 고정 해제
-                    // setTimeout(function() {
-                    //     mainInform.removeClass('fixed');
-                    // }, 3000); // 애니메이션 지속 시간 (여기서는 3초로 가정)
                 } else if (scrollTop >= informOffset + informHeight) {
-                    // inform이 화면을 벗어난 경우 .main-inform 고정 해제
-                    mainInform.removeClass('fixed');
                     contentBox1.css('transform', `translateY(${finalTranslateY1}px)`);
                     contentBox2.css('transform', `translateY(${finalTranslateY2}px)`);
                 } else {

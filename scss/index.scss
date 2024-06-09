@@ -1137,6 +1137,7 @@ main {
                     display: flex;
                     align-items: flex-start; 
                     justify-content: center;
+                    overflow-x: scroll;
                     gap: 20px;
                     width: $width-wide;
                     height: auto;
@@ -1419,13 +1420,10 @@ main {
                }  // content-box1/2
 
                .content-box1 {
-                    overflow-x: scroll;
-
                     @include responsive(large-screens) {
                         position: relative;
-                        overflow-x: none;
                         transform: translateY(-1370px);
-                        transition: transform 2s;
+                        transition: transform 0.5s ease-out;
                         // animation: moveBox1 4s ease-in-out forwards;
 
                         // @keyframes moveBox1 {
