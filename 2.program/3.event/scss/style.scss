@@ -1,0 +1,39 @@
+// font
+$font: 'Noto Sans KR', sans-serif;
+$font-thin: 100;
+$font-light: 300;
+$font-regular: 400;
+$font-semibold: 600;
+
+$color-main: #000;  // *
+$color-second: #fff;
+$color-point: #ff6000;
+$color-a: #000;
+$color-hover: #fff;
+
+$line-black: #000;
+$line-white: #fff;
+$line-gray: #dbdbdb;
+
+$background-orange: #ff6000;
+$background-hover: #000;
+
+$width-wide: 100%;  // *
+$width-half: 50%;  // *
+
+$break-small: 320px;  // *
+$break-large: 1024px;  // *
+
+// footer
+$footer-darkgray: #717171;
+$footer-gray: #b0afaf;
+
+$font-size: 20px;
+$frame-color: #000000;
+$size: 2.5em;
+$open-width: 18em;
+$open-padding: 0.3em 2.1em 0.3em 0.4em;
+$frame-thickness: 0.3em;
+$handle-height: 1.4em;
+$open-trans-time: 800ms;
+$close-trans-time: 150ms;

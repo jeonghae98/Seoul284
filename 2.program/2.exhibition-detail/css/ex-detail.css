@@ -22,6 +22,10 @@ a {
   color: #000;
 }
 
+a:hover {
+  text-decoration: underline;
+}
+
 strong,
 span {
   display: block;
@@ -410,6 +414,7 @@ header .header-search-box {
   width: 100%;
   height: 11vh;
   border-top: 1px solid #dbdbdb;
+  border-bottom: 1px solid #dbdbdb;
   background-color: rgba(0, 0, 0, 0.3);
 }
 @media only screen and (min-width: 1024px) {
@@ -424,7 +429,7 @@ header .header-search-box .search-box {
   top: 3vh;
   transform: translateX(-50%);
   padding-left: 10px;
-  width: 70%;
+  width: 90%;
   height: 5vh;
   border: 1px solid #000;
   border-radius: 10px;
@@ -445,7 +450,7 @@ header .header-search-box img {
   height: 3vh;
   cursor: pointer;
   position: absolute;
-  right: 16vw;
+  right: 7vw;
   top: 4vh;
 }
 @media only screen and (min-width: 1024px) {
@@ -459,105 +464,155 @@ header .header-search-box img {
 header .header-search-box.visible {
   display: block;
 }
+header .header-search-box.sub-visible {
+  display: block;
+  background-color: #fff;
+}
 
-main {
-  width: 100%;
-}
-main section.login {
-  height: 600px;
-}
 @media only screen and (min-width: 1024px) {
-  main section.login {
-    background: url(../images/sketch2.png);
-    /* background-size: 2000px 800px; */
-    background-position: center;
+  main section.detail {
+    margin-bottom: 100px;
   }
 }
-main section.login .orange-box {
-  position: relative;
-  top: 10px;
-  width: 700px;
-  height: 500px;
-  margin: 0 auto;
-  background-color: #ff6000;
-  border-radius: 5px;
-  box-shadow: 5px 5px 5px #8d8d8d;
-}
-main section.login .orange-box .login-box {
-  position: relative;
-  width: 400px;
-  height: 350px;
-  margin: 0 auto;
-  z-index: 5;
-  background-color: white;
-  transform: translateY(75px);
-  border-radius: 5px;
+main section.detail h1 {
+  margin: 30px;
+  text-align: center;
+  font-size: 30px;
 }
 @media only screen and (min-width: 1024px) {
-  main section.login .orange-box .login-box {
-    transform: translateX(-250px) translateY(75px);
+  main section.detail h1 {
+    text-align: left;
+    margin: 30px 0 30px 0;
   }
 }
-main section.login .orange-box .login-box form {
-  height: 100%;
+main section.detail .detail-content {
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
-  text-align: center;
-}
-main section.login .orange-box .login-box form h1 {
-  font-weight: 300;
-  transform: translateY(10px);
-}
-main section.login .orange-box .login-box form .pw {
-  transform: translateY(-20px);
-}
-main section.login .orange-box .login-box form label {
-  display: block;
-  transform: translateX(-70px);
-}
-main section.login .orange-box .login-box form input {
-  width: 200px;
-  height: 40px;
-  border-radius: 5px;
-  font-size: 18px;
-  font-weight: 100;
-  padding-left: 5px;
-}
-main section.login .orange-box .login-box form button {
-  margin: 0 auto;
-  width: 150px;
-  height: 40px;
-  background-color: #ff6000;
-  color: white;
-  transform: translateY(-10px);
-  border: none;
-  border-radius: 50px;
-  cursor: pointer;
-  font-size: 16px;
-}
-main section.login .orange-box .login-box form button:hover {
-  color: #ff6000;
-  background-color: white;
-  border: 2px solid;
-  font-weight: 600;
-  transition: all 0.3s;
-}
-main section.login .orange-box .login-image {
-  position: absolute;
-  z-index: 2;
-}
-main section.login .orange-box .login-image img {
-  z-index: 0;
-  margin: 0 auto;
-  height: 500px;
-  transform: translateY(-350px) translateX(175px);
-  opacity: 1;
+  align-items: center;
 }
 @media only screen and (min-width: 1024px) {
-  main section.login .orange-box .login-image img {
-    transform: translateX(330px) translateY(-350px) scale(0.7);
+  main section.detail .detail-content {
+    flex-direction: row;
+    justify-content: space-between;
   }
+}
+main section.detail .detail-content img {
+  max-width: 80%;
+  height: auto;
+}
+@media only screen and (min-width: 1024px) {
+  main section.detail .detail-content img {
+    width: 40%;
+  }
+}
+main section.detail .detail-content .line1 {
+  width: 50%;
+  height: 2px;
+  background-color: #ff6000;
+  margin: 30px 0;
+}
+@media only screen and (min-width: 1024px) {
+  main section.detail .detail-content .line1 {
+    width: 2px;
+    height: 200px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  main section.detail .detail-content .detail-info {
+    margin-top: -50px;
+  }
+}
+main section.detail .detail-content .detail-info h2 {
+  font-size: 25px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+@media only screen and (min-width: 1024px) {
+  main section.detail .detail-content .detail-info h2 {
+    text-align: justify;
+    font-size: 22px;
+    margin-bottom: 20px;
+  }
+}
+main section.detail .detail-content .detail-info ul {
+  display: block;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0px auto;
+}
+@media only screen and (min-width: 1024px) {
+  main section.detail .detail-content .detail-info ul {
+    margin: 0px;
+  }
+}
+main section.detail .detail-content .detail-info ul li {
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+@media only screen and (min-width: 1024px) {
+  main section.detail .detail-content .detail-info ul li {
+    font-size: 18px;
+  }
+}
+main section.detail .detail-content .detail-info ul li a {
+  display: inline;
+}
+main section.detail .list-btn {
+  width: 80%;
+  margin: 20px auto;
+}
+@media only screen and (min-width: 1024px) {
+  main section.detail .list-btn {
+    width: 100px;
+    position: absolute;
+    right: 0;
+    top: 310px;
+  }
+}
+main section.detail .list-btn a {
+  padding: 10px 20px;
+  background-color: #000;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 20px;
+}
+main section.detail .list-btn a:hover {
+  background-color: #ff6000;
+  transition: all 0.25s;
+}
+
+section.content {
+  margin-bottom: 50px;
+}
+section.content .content-img {
+  text-align: center;
+}
+section.content .content-img img {
+  max-width: 100%;
+  height: auto;
+}
+@media only screen and (min-width: 1024px) {
+  section.content .content-img img {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+section.content .p {
+  font-size: 20px;
+  margin-top: 20px;
+  text-align: center;
+}
+@media only screen and (min-width: 1024px) {
+  section.content .p {
+    margin-top: 80px;
+    font-size: 16px;
+  }
+}
+section.content iframe {
+  display: block;
+  margin: 0 auto;
 }
 
 footer {
@@ -734,4 +789,4 @@ footer .fixed-menu a {
     height: 50px;
     line-height: 50px;
   }
-}/*# sourceMappingURL=ba.css.map */
+}/*# sourceMappingURL=ex-detail.css.map */

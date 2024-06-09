@@ -22,6 +22,9 @@ a {
     text-decoration: none;
     color: $color-a;
 }
+a:hover {
+    text-decoration: underline;
+}
 strong,
 span {
     display: block;
@@ -58,3 +61,4 @@ section,
 footer {
     display: block;
 }
+
