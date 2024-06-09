@@ -133,8 +133,8 @@ main {
             background: {
                 image: url(/images/intro-bg.png);
                 repeat: no-repeat;
-                position-x: 30%; // 성민 수정
-                position-y: 600px; // 성민 수정
+                position-x: 30%;
+                position-y: 600px;
                 size: 1170px 788px;
                 // color: aqua;
             }
@@ -205,7 +205,6 @@ main {
                     display: none;
                     top: 315px; left: -3px; // 성민 수정
                     // opacity: 0;
-                    // transition: opacity 0.3s ease-in 1.2s;
                     
                     @include responsive(large-screens) {
                         top: 535px; left: -4px; // 성민 수정
@@ -304,8 +303,8 @@ main {
         }
 
         .now-year {
-            left: 72%; top: 500px;  // 30px // 성민 수정
-            font-size: 2.5rem;  // 50pt // 성민 수정
+            left: 72%; top: 500px;
+            font-size: 2.5rem;
             color: transparent;
             background-image: url(../images/text_bg_2024.jpg);
             background-position-y: 600px;
@@ -333,7 +332,7 @@ main {
                 width: 65%;
                 font: {
                     weight: $font-regular;
-                    size: 2.3rem;   // 40pt origin 56pt // 성민 수정
+                    size: 2.3rem;
                 }
                 opacity: 0;
                 transform: translateX(-30px);
@@ -341,7 +340,7 @@ main {
 
                 @include responsive(large-screens) {
                     font: {
-                        size: 4rem;  // 75pt // 성민 수정
+                        size: 4rem; 
                     }
                     
                 }
@@ -349,10 +348,10 @@ main {
     
             .intro-text {
                 margin-top: 20px;
-                width: 60%;  // 385px
+                width: 60%;
                 font: {
                     weight: $font-thin;
-                    size: 1rem;   // 24pt // 성민 수정
+                    size: 1rem;  
                 }
                 
                 opacity: 0;
@@ -361,7 +360,7 @@ main {
 
                 @include responsive(large-screens) {
                     width: 310px;
-                    font-size: 1.2rem;  // 30pt // 성민 수정
+                    font-size: 1.2rem;
                 }
                 .num {
                     display: inline;
@@ -378,8 +377,8 @@ main {
             transition: opacity 1.5s ease 4s;
 
             @include responsive(large-screens) {
-                margin-top: -65px;// 성민 수정
-                margin-left: 480px; // 성민 수정
+                margin-top: -65px;
+                margin-left: 480px; 
             }
         }
         
@@ -805,9 +804,10 @@ main {
 
             .exhibition4 {
                 @include responsive(large-screens) {
+                    position: relative;
                     border-bottom: 2px solid $line-gray;
                 }
-
+                
                 .content-box {
                     border-bottom: 2px solid $line-gray;
 
@@ -818,9 +818,12 @@ main {
 
                     .ex-img {
                         @include responsive(large-screens) {
+                            position: relative;
+                            z-index: 1;
                             padding: 50px 0 50px;
-                            width: 930px;
+                            width: 64.59%;  // 930px
                             border-left: 2px solid $line-gray;
+                            background-color: $color-second;
                         }
 
                         img {
@@ -837,8 +840,7 @@ main {
 
                     .ex-txt {
                         @include responsive(large-screens) {
-                            width: 500px;
-                            // width: 70%;
+                            width: 38.88%;
                         }
 
                         .title {
@@ -856,69 +858,57 @@ main {
 
             
             .arrow-button {
+                padding:  0 20px;
+
                 @include responsive(large-screens) {
                     position: absolute;
                     left: 0; bottom: 0;
-                    width: 38.8%;  // 750px
-                    border-top: 2px solid $line-gray;
+                    width: 800px;  // 750px
+                    padding: 0;
                 }
                 .detail-btn {
                     padding: 0;
                     margin: 0;
                     border-bottom: 2px solid $line-gray;
-                //    background-color: aqua;
+                //  background-color: aqua;
 
                     @include responsive(large-screens) {
                         width: $width-wide;
                         height: 120px;
                         border-bottom: 0;
+                        border-top: 2px solid $line-gray;
 
                         }
 
-                    ul {
-                        display: flex;
-                        flex-direction: row;
-                        flex-wrap: nowrap;
-                        // align-items: center;
-                        width: $width-wide;
+                    .arrow {
+                        width: 20%;
                         height: 70px;
+                        line-height: 70px;
+                        margin-left: 80%;
+                        border-left: 2px solid $line-gray;
+                        // background-color: lightcoral;
 
                         @include responsive(large-screens) {
+                            position: absolute;
+                            top: 0; left: 31%;
+                            width: 10%;
                             height: $height-wide;
-                            }
-
-                        .empty {
-                            width: 560px;
-                            height: $height-wide;
-
-                            @include responsive(large-screens) {
-                                width: 87%;
-                            }
+                            line-height: 120px;
+                            margin-left: 0;
                         }
-                        .arrow {
-                            width: 120px;
-                            height: 70px;
-                            line-height: 70px;
-                            align-items: center;
-                            // background-color: lightcoral;
 
-                            @include responsive(large-screens) {
-                                width: 13%;
-                                height: $height-wide;
-                                line-height: 120px;
+                        a {
+                            width: $width-wide;
+                            height: $height-wide;
+                            font: {
+                                weight: $font-thin;
+                                size: 2rem;
                             }
-                            a {
-                                border-left: 2px solid $line-gray;
-                                font: {
-                                    weight: $font-thin;
-                                    size: 2.5rem;  // 30pt
-                                }
-                                text-align: center;
-                                color: #999494;
+                            text-align: center;
+                            color: #999494;
 
-                                // @include responsive(large-screens) {
-                                // }
-                            }
+                            // @include responsive(large-screens) {
+                            // }
                         }
                     }
                 }
@@ -1411,7 +1401,7 @@ main {
                }  // content-box1/2
 
                .content-box1 {
-                    transform: translate(0, 0);
+                    transform: translateY(0, 06);
                     @include responsive(large-screens) {
                         position: relative;
                         // top: -1400px;

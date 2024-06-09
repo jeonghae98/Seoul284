@@ -17,24 +17,17 @@ $(function() {
 
     //--------------------- intro ---------------------
     $(window).scroll(function() {
-        var scrollPosition = $(this).scrollTop();  // 수직 스크롤바의 위치 인식
+        var scrollPosition = $(this).scrollTop(); 
         var elementOffset = $('.main-intro').offset().top;
-        // var colLineOffset = $('.collection-line').offset().top;
         var windowHeight = $(window).height();
         var windowWidth = $(window).width();
-        // console.log(elementOffset);
-        // console.log(windowHeight);
 
         if (scrollPosition > (elementOffset - windowHeight)) {
-            if(windowWidth < 768 ) {  // 모바일 버전
-                // <배경 사진>
-             $('.intro-bg-img')
-                .css({
+            if(windowWidth < 768 ) { 
+             $('.intro-bg-img').css({
                     'opacity': 1,
                     'background-position-y': '500px'
                 });
-
-                // <선>
                 $('.main-intro .intro-line').animate({
                     height: '1020px'
                   }, 3000);
@@ -42,57 +35,39 @@ $(function() {
                 setTimeout(function() {
                     $('.first-circle').delay(700).fadeIn();
                 }, 300);
-
                 setTimeout(function() {
                     $('.second-circle').delay(1200).fadeIn();
                 }, 300);
             } 
-            else {  // pc 버전
-                // <배경 사진>
-                $('.intro-bg-img')
-                .css({
+            else { 
+                $('.intro-bg-img').css({
                     'opacity': 1,
                     'background-position-y': '600px'
-
                 });
-               
-
-                // <선>
                 $('.main-intro .intro-line').animate({
-                        height: '1472px'
-                      }, 3000);
+                    height: '1472px'
+                }, 3000);
 
                 setTimeout(function() {
                     $('.first-circle').delay(1000).fadeIn();
                 }, 300);
-
                 setTimeout(function() {
                     $('.second-circle').delay(1500).fadeIn();
                 }, 300);
-
             }
             
             // 모바일, pc 공통
              // <txt>
              $('.year').css('opacity', 1);
              $('.now-year').css('opacity', 1);
-
-            //  $('.first-circle').css('opacity', 1);
-
-             $('.intro-title')
-             .css({
+             $('.intro-title').css({
                  'opacity': 1,
                  'transform': 'translateX(0)'
              });
-
-             $('.intro-text')
-             .css({
+             $('.intro-text').css({
                  'opacity': 1,
                  'transform': 'translateX(0)'
              });
-            
-            
-             //--- 버튼 ---
              $('.intro-btn').css('opacity', 1);
              
         }
@@ -163,15 +138,9 @@ $(function() {
         var scrollPos = $(this).scrollTop();
         var exTitleTop = $('.exhibition-title').offset().top;
         var windowHeight = $(window).height(); 
-        var scrollLimit = exTitleTop - windowHeight; // 초기화할 스크롤 위치
         var mainWindowWidth = $(window).width();
- 
-        // console.log(scrollPos);
-        // console.log(scrollLimit);
-      
 
-        if (scrollPos <= scrollLimit) {  // 애니메이션 초기화
-            
+        if (scrollPos <= (exTitleTop - windowHeight)) {
             $('.exhibition-content .ex').each(function() {
                 var $img = $(this).find('.ex-img img');
                 var $title = $(this).find('.ex-txt .title');
@@ -180,36 +149,21 @@ $(function() {
                         'opacity': 0,
                         'transition': 'opacity 0.5s'
                     });
-
                     $title.stop().css({
                         'opacity': 0,
                         'transition': 'opacity 0.5s'
                     });
                 } else {
-                    $('.exhibition1').find('.ex-img > img').stop().css({
+                    $img.stop().css({
                         'transform': 'translateX(50px)',
-                        'opacity': 0,
-                        'transition': 'transform 0.5s opacity 0.5s'
-                    });  
-        
+                            'opacity': 0,
+                            'transition': 'transform 0.5s opacity 0.5s'
+                    });
                     $('.exhibition2').find('.ex-img > img').stop().css({
                         'transform': 'translateX(-50px)',
                         'opacity': 0,
                         'transition': 'transform 0.5s opacity 0.5s'
                     });
-        
-                    $('.exhibition3').find('.ex-img > img').stop().css({
-                        'transform': 'translateX(50px)',
-                        'opacity': 0,
-                        'transition': 'transform 0.5s opacity 0.5s'
-                    });
-        
-                    $('.exhibition4').find('.ex-img > img').stop().css({
-                        'transform': 'translateX(50px)',
-                        'opacity': 0,
-                        'transition': 'transform 0.5s opacity 0.5s'
-                    });
-
                     $title.stop().css({
                         'opacity': 0,
                         'transition': 'opacity 0.5s'
@@ -217,7 +171,7 @@ $(function() {
                 }
             });
         }
-        else {  // 애니메이션 실행
+        else {
             animateScroll();
         }
     });
@@ -261,41 +215,53 @@ $(function() {
     //--------------------- inform ---------------------
     function chgBox() {
         var informWindowWidth = $(window).width();
-    
+        const contentBox1 =  $('.content-box1');
+        const contentBox2 =  $('.content-box2');
+        
         if (informWindowWidth < 768) {
-            $('.content-box1').insertAfter('.content-box2');
             const notice1 = $('.content-box1 .notice-content1').clone();
-            $('.content-box1 .notice-content1').remove();
-            $('.content-box2').append(notice1);
-    
             const news3 = $('.content-box2 .news-content3').clone();
-            $('.content-box2 .news-content3').remove();
-            $('.content-box1').append(news3); 
-        } else {
-            // 768 이상이면 원상복귀
-            $('.content-box1').insertBefore('.content-box2');
+            
+            contentBox1.insertAfter('.content-box2');
 
-            const notice1 = $('.content-box2 .notice-content1').clone();
-            $('.content-box2 .notice-content1').remove();
-            $('.content-box1').append(notice1)
-            notice1.insertAfter('.news-content1');
+            $('.content-box1 .notice-content1').remove();
+            contentBox2.append(notice1);
     
-            const news3 = $('.content-box1 .news-content3').clone();
-            $('.content-box1 .news-content3').remove();
-            $('.content-box2').append(news3);
-            news3.insertAfter('.notice-content2');
+            $('.content-box2 .news-content3').remove();
+            contentBox1.append(news3); 
+        } else {
+            const notice = $('.content-box2 .notice-content1').clone();
+            const news = $('.content-box1 .news-content3').clone();
+            
+            contentBox1.insertBefore('.content-box2');
 
+            $('.content-box2 .notice-content1').remove();
+            contentBox1.append(notice)
+            notice.insertAfter('.news-content1');
+    
+            $('.content-box1 .news-content3').remove();
+            contentBox2.append(news);
+            news.insertAfter('.notice-content2');
         }
     }
 
     chgBox(); 
 
-    
-    // 윈도우 크기가 변경될 때마다 chgBox 함수 호출
     $(window).resize(function() {
         chgBox();
     });
 
+
+
+    $(window).scroll(function() {
+        var scrollPos = $(window).scrollTop();
+        var lineOffset = $('.info-line1').offset().top;
+        var windowHeight = $(window).height();
+
+        if(scrollPos > (lineOffset - windowHeight)) {
+            
+        }
+    });
     // <animation>
     // css translate 속성을 이용해 움직이기
 
@@ -414,6 +380,9 @@ $(function() {
     //     // 클릭 이벤트 처리
     // };
       
+
+
+    
     // ****info-btn*****
     $('.info-btn').click(function() {
         window.location.href = '.././4.inform/notice.html'

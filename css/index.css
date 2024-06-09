@@ -1170,6 +1170,7 @@ main .exhibition .exhibition-content .exhibition3 .content-box .ex-img img {
 }
 @media only screen and (min-width: 1024px) {
   main .exhibition .exhibition-content .exhibition4 {
+    position: relative;
     border-bottom: 2px solid #dbdbdb;
   }
 }
@@ -1184,9 +1185,12 @@ main .exhibition .exhibition-content .exhibition4 .content-box {
 }
 @media only screen and (min-width: 1024px) {
   main .exhibition .exhibition-content .exhibition4 .content-box .ex-img {
+    position: relative;
+    z-index: 1;
     padding: 50px 0 50px;
-    width: 930px;
+    width: 64.59%;
     border-left: 2px solid #dbdbdb;
+    background-color: #fff;
   }
 }
 main .exhibition .exhibition-content .exhibition4 .content-box .ex-img img {
@@ -1202,7 +1206,7 @@ main .exhibition .exhibition-content .exhibition4 .content-box .ex-img img {
 }
 @media only screen and (min-width: 1024px) {
   main .exhibition .exhibition-content .exhibition4 .content-box .ex-txt {
-    width: 500px;
+    width: 38.88%;
   }
 }
 @media only screen and (min-width: 1024px) {
@@ -1213,13 +1217,16 @@ main .exhibition .exhibition-content .exhibition4 .content-box .ex-img img {
     text-align: right;
   }
 }
+main .exhibition .exhibition-content .arrow-button {
+  padding: 0 20px;
+}
 @media only screen and (min-width: 1024px) {
   main .exhibition .exhibition-content .arrow-button {
     position: absolute;
     left: 0;
     bottom: 0;
-    width: 38.8%;
-    border-top: 2px solid #dbdbdb;
+    width: 800px;
+    padding: 0;
   }
 }
 main .exhibition .exhibition-content .arrow-button .detail-btn {
@@ -1232,46 +1239,32 @@ main .exhibition .exhibition-content .arrow-button .detail-btn {
     width: 100%;
     height: 120px;
     border-bottom: 0;
+    border-top: 2px solid #dbdbdb;
   }
 }
-main .exhibition .exhibition-content .arrow-button .detail-btn ul {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  width: 100%;
-  height: 70px;
-}
-@media only screen and (min-width: 1024px) {
-  main .exhibition .exhibition-content .arrow-button .detail-btn ul {
-    height: 100%;
-  }
-}
-main .exhibition .exhibition-content .arrow-button .detail-btn ul .empty {
-  width: 560px;
-  height: 100%;
-}
-@media only screen and (min-width: 1024px) {
-  main .exhibition .exhibition-content .arrow-button .detail-btn ul .empty {
-    width: 87%;
-  }
-}
-main .exhibition .exhibition-content .arrow-button .detail-btn ul .arrow {
-  width: 120px;
+main .exhibition .exhibition-content .arrow-button .detail-btn .arrow {
+  width: 20%;
   height: 70px;
   line-height: 70px;
-  align-items: center;
+  margin-left: 80%;
+  border-left: 2px solid #dbdbdb;
 }
 @media only screen and (min-width: 1024px) {
-  main .exhibition .exhibition-content .arrow-button .detail-btn ul .arrow {
-    width: 13%;
+  main .exhibition .exhibition-content .arrow-button .detail-btn .arrow {
+    position: absolute;
+    top: 0;
+    left: 31%;
+    width: 10%;
     height: 100%;
     line-height: 120px;
+    margin-left: 0;
   }
 }
-main .exhibition .exhibition-content .arrow-button .detail-btn ul .arrow a {
-  border-left: 2px solid #dbdbdb;
+main .exhibition .exhibition-content .arrow-button .detail-btn .arrow a {
+  width: 100%;
+  height: 100%;
   font-weight: 100;
-  font-size: 2.5rem;
+  font-size: 2rem;
   text-align: center;
   color: #999494;
 }
@@ -1737,7 +1730,7 @@ main .main-inform .container-none .inform-content-box .content-box2 .notice .txt
   }
 }
 main .main-inform .container-none .inform-content-box .content-box1 {
-  transform: translate(0, 0);
+  transform: translateY(0, 0);
 }
 @media only screen and (min-width: 1024px) {
   main .main-inform .container-none .inform-content-box .content-box1 {
