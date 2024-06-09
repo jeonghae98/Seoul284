@@ -178,9 +178,8 @@
                                 
                                 &:hover,
                                 &.active {
-                                    @include responsive(large-screens) {
-                                        color: $color-point;
-                                        }
+                                    text-decoration: none;
+                                    color: $color-point;
                                 }
 
                             }
@@ -217,10 +216,8 @@
 
                                         &:hover,
                                         &:focus {
-                                            @include responsive(large-screens) {
-                                                text-decoration: underline;
-                                                color: $color-second;
-                                            }
+                                            text-decoration: underline;
+                                            color: $color-second;
                                         }
                                     }
                                     

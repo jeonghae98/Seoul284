@@ -92,7 +92,7 @@ $(function() {
             });
     
             $(this).css({  
-                'color': '#fff',
+                'color': '#000',
                 'textDecoration': 'underline'
             });
         });
@@ -127,6 +127,19 @@ $(function() {
         });
         $("#mainMenu li li:last-child a").focusout(function () {
             $("#mainMenu > ul > li").removeClass("active");
+        });
+
+         // #sub-menu 눌렀을 때 모습
+         $('.sub-menu a').click(function() {
+            $('.sub-menu a').css({  
+                'color': '',
+                'textDecoration': '',
+            });
+    
+            $(this).css({  
+                'color': '#fff',
+                'textDecoration': 'underline'
+            });
         });
     }
 
