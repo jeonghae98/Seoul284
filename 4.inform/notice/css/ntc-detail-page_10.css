@@ -257,10 +257,9 @@ header .logo-gnb-rightmenu .container .logo-gnb-menu-box .main-menu .gnb li a.gn
     color: #fff;
   }
 }
-@media only screen and (min-width: 1024px) {
-  header .logo-gnb-rightmenu .container .logo-gnb-menu-box .main-menu .gnb li a.gnb-title:hover, header .logo-gnb-rightmenu .container .logo-gnb-menu-box .main-menu .gnb li a.gnb-title.active {
-    color: #ff6000;
-  }
+header .logo-gnb-rightmenu .container .logo-gnb-menu-box .main-menu .gnb li a.gnb-title:hover, header .logo-gnb-rightmenu .container .logo-gnb-menu-box .main-menu .gnb li a.gnb-title.active {
+  text-decoration: none;
+  color: #ff6000;
 }
 @media only screen and (min-width: 1024px) {
   header .logo-gnb-rightmenu .container .logo-gnb-menu-box .main-menu .gnb li:last-child a {
@@ -288,11 +287,9 @@ header .logo-gnb-rightmenu .container .logo-gnb-menu-box .main-menu .gnb li .sub
     color: #fff;
   }
 }
-@media only screen and (min-width: 1024px) {
-  header .logo-gnb-rightmenu .container .logo-gnb-menu-box .main-menu .gnb li .sub-menu li a:hover, header .logo-gnb-rightmenu .container .logo-gnb-menu-box .main-menu .gnb li .sub-menu li a:focus {
-    text-decoration: underline;
-    color: #fff;
-  }
+header .logo-gnb-rightmenu .container .logo-gnb-menu-box .main-menu .gnb li .sub-menu li a:hover, header .logo-gnb-rightmenu .container .logo-gnb-menu-box .main-menu .gnb li .sub-menu li a:focus {
+  text-decoration: underline;
+  color: #fff;
 }
 header .logo-gnb-rightmenu .container .logo-gnb-menu-box .main-menu .only-mobile {
   position: absolute;
@@ -820,4 +817,7 @@ footer .fixed-menu a {
     height: 50px;
     line-height: 50px;
   }
+}
+footer .fixed-menu a:hover {
+  text-decoration: none;
 }/*# sourceMappingURL=ntc-detail-page_10.css.map */
