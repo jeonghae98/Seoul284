@@ -1225,7 +1225,7 @@ main .exhibition .exhibition-content .arrow-button {
     position: absolute;
     left: 0;
     bottom: 0;
-    width: 800px;
+    width: 40.8%;
     padding: 0;
   }
 }
@@ -1253,8 +1253,8 @@ main .exhibition .exhibition-content .arrow-button .detail-btn .arrow {
   main .exhibition .exhibition-content .arrow-button .detail-btn .arrow {
     position: absolute;
     top: 0;
-    left: 31%;
-    width: 10%;
+    left: 70%;
+    width: 30%;
     height: 100%;
     line-height: 120px;
     margin-left: 0;
@@ -1729,12 +1729,44 @@ main .main-inform .container-none .inform-content-box .content-box2 .notice .txt
     padding-left: 10px;
   }
 }
-main .main-inform .container-none .inform-content-box .content-box1 {
-  transform: translateY(0, 0);
-}
 @media only screen and (min-width: 1024px) {
   main .main-inform .container-none .inform-content-box .content-box1 {
     position: relative;
+    animation: moveBox1 4s ease-in-out forwards;
+  }
+  @keyframes moveBox1 {
+    0% {
+      transform: translateY(-1370px);
+    }
+    100% {
+      transform: translateY(1370px);
+    }
+  }
+}
+@media only screen and (min-width: 1024px) {
+  main .main-inform .container-none .inform-content-box .content-box1:hover {
+    animation-play-state: paused;
+    cursor: pointer;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  main .main-inform .container-none .inform-content-box .content-box2 {
+    position: relative;
+    animation: moveBox2 4s ease-in-out forwards;
+  }
+  @keyframes moveBox2 {
+    0% {
+      transform: translateY(1370px);
+    }
+    100% {
+      transform: translateY(-1370px);
+    }
+  }
+}
+@media only screen and (min-width: 1024px) {
+  main .main-inform .container-none .inform-content-box .content-box2:hover {
+    animation-play-state: paused;
+    cursor: pointer;
   }
 }
 main .main-sns {

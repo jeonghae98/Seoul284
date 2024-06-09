@@ -863,7 +863,7 @@ main {
                 @include responsive(large-screens) {
                     position: absolute;
                     left: 0; bottom: 0;
-                    width: 800px;  // 750px
+                    width: 40.8%;  // 750px
                     padding: 0;
                 }
                 .detail-btn {
@@ -890,8 +890,8 @@ main {
 
                         @include responsive(large-screens) {
                             position: absolute;
-                            top: 0; left: 31%;
-                            width: 10%;
+                            top: 0; left: 70%;
+                            width: 30%;
                             height: $height-wide;
                             line-height: 120px;
                             margin-left: 0;
@@ -1120,7 +1120,7 @@ main {
                     gap: 0;
                     height: 1200px;
                 }
-    
+
                .content-box1,
                .content-box2 {
                     display: flex;
@@ -1401,12 +1401,42 @@ main {
                }  // content-box1/2
 
                .content-box1 {
-                    transform: translateY(0, 06);
                     @include responsive(large-screens) {
                         position: relative;
-                        // top: -1400px;
+                        animation: moveBox1 4s ease-in-out forwards;
+
+                        @keyframes moveBox1 {
+                            0% { transform: translateY(-1370px); }
+                            100% { transform: translateY(1370px); }
+                        }
+                    }
+
+                    &:hover {
+                        @include responsive(large-screens) {
+                            animation-play-state: paused; 
+                            cursor:pointer;
+                        }
                     }
                }
+
+               .content-box2 {
+                @include responsive(large-screens) {
+                    position: relative;
+                    animation: moveBox2 4s ease-in-out forwards;
+
+                    @keyframes moveBox2 {
+                        0% { transform: translateY(1370px); }
+                        100% { transform: translateY(-1370px); }
+                    }
+                }
+
+                &:hover {
+                    @include responsive(large-screens) {
+                        animation-play-state: paused; 
+                        cursor:pointer;
+                    }
+                }
+           }
             }  // inform-content-box
         }  // container-none
     }  // inform

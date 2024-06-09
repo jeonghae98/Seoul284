@@ -257,11 +257,43 @@ $(function() {
         var scrollPos = $(window).scrollTop();
         var lineOffset = $('.info-line1').offset().top;
         var windowHeight = $(window).height();
+        var windowWidth = $(window).width();
+        const contentBox1 =  $('.content-box1');
+        const contentBox2 =  $('.content-box2');
 
-        if(scrollPos > (lineOffset - windowHeight)) {
-            
+        if( windowWidth > 768 ) {
+            if(scrollPos <= (lineOffset - windowHeight)) {
+                contentBox1.css('animation', 'none');
+                contentBox2.css('animation', 'none');
+            } else {
+                contentBox1.css('animation', 'moveBox1 4s ease-in-out forwards');
+                contentBox2.css('animation', 'moveBox2 4s ease-in-out forwards');
+                moveAnimation();
+            }
+        }
+       
+
+        
+        function moveAnimation() {
+            contentBox1.hover(function() {
+                $(this).css("animation-play-state","paused");
+                contentBox2.css("animation-play-state","paused");
+            }, function() {
+                $(this).css("animation-play-state","running");
+                contentBox2.css("animation-play-state","running");
+            });
+
+            contentBox2.hover(function() {
+                $(this).css("animation-play-state","paused");
+                contentBox1.css("animation-play-state","paused");
+            }, function() {
+                $(this).css("animation-play-state","running");
+                contentBox1.css("animation-play-state","running");
+            });
         }
     });
+
+    
     // <animation>
     // css translate 속성을 이용해 움직이기
 
