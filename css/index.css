@@ -1742,7 +1742,7 @@ main .main-inform .container-none .inform-content-box .content-box1 {
     position: relative;
     overflow-x: none;
     transform: translateY(-1370px);
-    transition: transform 0.1s ease-out;
+    transition: transform 2s;
   }
 }
 main .main-inform .container-none .inform-content-box .content-box2 {
@@ -1752,7 +1752,7 @@ main .main-inform .container-none .inform-content-box .content-box2 {
   main .main-inform .container-none .inform-content-box .content-box2 {
     position: relative;
     transform: translateY(1370px);
-    transition: transform 0.1s ease-out;
+    transition: transform 0.5s ease-out;
   }
 }
 main .main-sns {
