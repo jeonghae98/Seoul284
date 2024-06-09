@@ -1001,6 +1001,17 @@ main {
             height: 1300px;
             padding: 0;
         }
+
+        // &.fixed {
+        //     @include responsive(large-screens) {
+        //         position: sticky;
+        //         top: 0;
+        //         left: 0;
+        //         width: 100%;
+        //         // z-index: 999;
+        //     }
+        // }
+
         .main-inform-line {
             margin: 0 2.777%;
             div{
@@ -1128,9 +1139,6 @@ main {
                     justify-content: center;
                     gap: 20px;
                     width: $width-wide;
-                    // overflow-x: scroll;
-                    // overflow-y: hidden;
-                    // overflow: hidden;
                     height: auto;
                     margin: auto;
                     cursor: pointer;
@@ -1141,6 +1149,7 @@ main {
                         overflow-x: none;
                         // align-items: center; 
                         // gap: -50px;
+                        // transition: transform 0.1s ease-out;
                     }
 
                     // &.active {
@@ -1148,9 +1157,13 @@ main {
                     // }
                 // .content-box1 {
                 //  }
+
+                &::-webkit-scrollbar{
+                    display: none; 
+                }
                     div {
                         width: 72.222%;
-    
+
                         .txt-box {
                             display: flex;
                             flex-direction: row;
@@ -1158,8 +1171,12 @@ main {
                             width: $width-wide;
                             // height: 300px;
                             padding: 50px 30px;
-                            transition: box-shadow 0.3s;
                             
+                            
+                            &.center {
+                                box-shadow: 5px 5px 7px 3px rgba(0, 0, 0, 0.3);
+                            }
+
                             &:hover {
                                 box-shadow: 5px 5px 7px 3px rgba(0, 0, 0, 0.3);
                             }
@@ -1175,6 +1192,7 @@ main {
                                 // background-color: antiquewhite;
         
                                 @include responsive(large-screens) {
+                                    transition: box-shadow 0.3s;
                                     font-size: 1.175rem;
                                     
                                 }
@@ -1401,41 +1419,50 @@ main {
                }  // content-box1/2
 
                .content-box1 {
+                    overflow-x: scroll;
+
                     @include responsive(large-screens) {
                         position: relative;
-                        animation: moveBox1 4s ease-in-out forwards;
+                        overflow-x: none;
+                        transform: translateY(-1370px);
+                        transition: transform 0.1s ease-out;
+                        // animation: moveBox1 4s ease-in-out forwards;
 
-                        @keyframes moveBox1 {
-                            0% { transform: translateY(-1370px); }
-                            100% { transform: translateY(1370px); }
-                        }
+                        // @keyframes moveBox1 {
+                        //     0% { transform: translateY(-1370px); }
+                        //     100% { transform: translateY(1370px); }
+                        // }
                     }
 
-                    &:hover {
-                        @include responsive(large-screens) {
-                            animation-play-state: paused; 
-                            cursor:pointer;
-                        }
-                    }
+                    // &:hover {
+                    //     @include responsive(large-screens) {
+                    //         animation-play-state: paused; 
+                    //         cursor:pointer;
+                    //     }
+                    // }
                }
 
                .content-box2 {
+                transition: transform 0.5s ease;
+
                 @include responsive(large-screens) {
                     position: relative;
-                    animation: moveBox2 4s ease-in-out forwards;
+                    transform: translateY(1370px);
+                    transition: transform 0.1s ease-out;
+                    // animation: moveBox2 4s ease-in-out forwards;
 
-                    @keyframes moveBox2 {
-                        0% { transform: translateY(1370px); }
-                        100% { transform: translateY(-1370px); }
-                    }
+                    // @keyframes moveBox2 {
+                    //     0% { transform: translateY(1370px); }
+                    //     100% { transform: translateY(-1370px); }
+                    // }
                 }
 
-                &:hover {
-                    @include responsive(large-screens) {
-                        animation-play-state: paused; 
-                        cursor:pointer;
-                    }
-                }
+                // &:hover {
+                //     @include responsive(large-screens) {
+                //         animation-play-state: paused; 
+                //         cursor:pointer;
+                //     }
+                // }
            }
             }  // inform-content-box
         }  // container-none

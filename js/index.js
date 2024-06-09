@@ -263,156 +263,137 @@ $(function() {
 
         if( windowWidth > 768 ) {
             if(scrollPos <= (lineOffset - windowHeight)) {
-                contentBox1.css('animation', 'none');
-                contentBox2.css('animation', 'none');
+                // contentBox1.css('animation', 'none');
+                // contentBox2.css('animation', 'none');
             } else {
-                contentBox1.css('animation', 'moveBox1 4s ease-in-out forwards');
-                contentBox2.css('animation', 'moveBox2 4s ease-in-out forwards');
-                moveAnimation();
+                // contentBox1.css('animation', 'moveBox1 4s ease-in-out forwards');
+                // contentBox2.css('animation', 'moveBox2 4s ease-in-out forwards');
+                }
+            moveAnimation();
+        } else {
+            // <animation>
+            const contentBox = $('.content-box1'); // 변경해야 할 요소 선택
+
+            // 스크롤 시작 시 justify-content 해제
+            contentBox.on('scroll', function() {
+                $(this).css('justify-content', 'initial'); // justify-content 해제
+            });
+
+
+            function addCenterEffectToSecondElement() {
+                const secondElement = $('.content-box2').children().eq(1).find('.txt-box');
+                secondElement.addClass('center');
             }
+
+            function delaySlideTransition() {
+                setTimeout(() => {
+                    const sliderInner = $('.content-box2');
+                    const firstItem = sliderInner.children().eq(0);
+                    sliderInner.append(firstItem);
+                    
+                    // center 클래스 제거 및 추가
+                    const centerElement = $('.center');
+                    const nextCenterElement = sliderInner.children().eq(1).find('.txt-box');
+                    nextCenterElement.addClass('center');
+                    centerElement.removeClass('center');
+                }, 3000);
+            }
+            addCenterEffectToSecondElement();
+            setInterval(delaySlideTransition, 3000);
         }
        
 
         
         function moveAnimation() {
-            contentBox1.hover(function() {
-                $(this).css("animation-play-state","paused");
-                contentBox2.css("animation-play-state","paused");
-            }, function() {
-                $(this).css("animation-play-state","running");
-                contentBox2.css("animation-play-state","running");
-            });
+            // contentBox1.hover(function() {
+            //     $(this).css("animation-play-state","paused");
+            //     contentBox2.css("animation-play-state","paused");
+            // }, function() {
+            //     $(this).css("animation-play-state","running");
+            //     contentBox2.css("animation-play-state","running");
+            // });
 
-            contentBox2.hover(function() {
-                $(this).css("animation-play-state","paused");
-                contentBox1.css("animation-play-state","paused");
-            }, function() {
-                $(this).css("animation-play-state","running");
-                contentBox1.css("animation-play-state","running");
+            // contentBox2.hover(function() {
+            //     $(this).css("animation-play-state","paused");
+            //     contentBox1.css("animation-play-state","paused");
+            // }, function() {
+            //     $(this).css("animation-play-state","running");
+            //     contentBox1.css("animation-play-state","running");
+            // });
+
+            // const contentBox1 = $('.content-box1');
+            // const contentBox2 = $('.content-box2');
+            // const inform = $('.inform-content-box');
+            // const initialTranslateY1 = -1370;
+            // const finalTranslateY1 = 1370;
+            // const initialTranslateY2 = 1370;
+            // const finalTranslateY2 = -1370;
+            // const distance1 = Math.abs(finalTranslateY1 - initialTranslateY1);
+            // const distance2 = Math.abs(finalTranslateY2 - initialTranslateY2);
+
+            // $(window).on('scroll', function() {
+            //     const scrollTop = $(this).scrollTop();
+            //     const informOffset = inform.offset().top;
+            //     const informHeight = inform.outerHeight();
+            //     const windowHeight = $(window).height();
+
+            //     if (scrollTop + windowHeight > informOffset && scrollTop < informOffset + informHeight) {
+            //         const scrollFraction = (scrollTop + windowHeight - informOffset) / (informHeight + windowHeight);
+            //         const translateY1 = initialTranslateY1 + scrollFraction * distance1;
+            //         const translateY2 = initialTranslateY2 - scrollFraction * distance2;
+            //         contentBox1.css('transform', `translateY(${translateY1}px)`);
+            //         contentBox2.css('transform', `translateY(${translateY2}px)`);
+            //     } else if (scrollTop >= informOffset + informHeight) {
+            //         contentBox1.css('transform', `translateY(${finalTranslateY1}px)`);
+            //         contentBox2.css('transform', `translateY(${finalTranslateY2}px)`);
+            //     } else {
+            //         contentBox1.css('transform', `translateY(${initialTranslateY1}px)`);
+            //         contentBox2.css('transform', `translateY(${initialTranslateY2}px)`);
+            //     }
+            // });
+
+            const contentBox1 = $('.content-box1');
+            const contentBox2 = $('.content-box2');
+            const initialTranslateY1 = -1370;
+            const finalTranslateY1 = 1370;
+            const initialTranslateY2 = 1370;
+            const finalTranslateY2 = -1370;
+            const distance1 = Math.abs(finalTranslateY1 - initialTranslateY1);
+            const distance2 = Math.abs(finalTranslateY2 - initialTranslateY2);
+            const mainInform = $('.main-inform');
+
+            $(window).on('scroll', function() {
+                const scrollTop = $(this).scrollTop();
+                const informOffset = mainInform.offset().top;
+                const informHeight = mainInform.outerHeight();
+                const windowHeight = $(window).height();
+
+                if (scrollTop + windowHeight > informOffset && scrollTop < informOffset + informHeight) {
+                    // 애니메이션이 실행되는 동안 .main-inform을 고정
+                    mainInform.addClass('fixed');
+
+                    const scrollFraction = (scrollTop + windowHeight - informOffset) / (informHeight + windowHeight);
+                    const translateY1 = initialTranslateY1 + scrollFraction * distance1;
+                    const translateY2 = initialTranslateY2 - scrollFraction * distance2;
+                    contentBox1.css('transform', `translateY(${translateY1}px)`);
+                    contentBox2.css('transform', `translateY(${translateY2}px)`);
+
+                    // 애니메이션 완료 후 .main-inform의 고정 해제
+                    setTimeout(function() {
+                        mainInform.removeClass('fixed');
+                    }, 3000); // 애니메이션 지속 시간 (여기서는 3초로 가정)
+                } else if (scrollTop >= informOffset + informHeight) {
+                    // inform이 화면을 벗어난 경우 .main-inform 고정 해제
+                    mainInform.removeClass('fixed');
+                    contentBox1.css('transform', `translateY(${finalTranslateY1}px)`);
+                    contentBox2.css('transform', `translateY(${finalTranslateY2}px)`);
+                } else {
+                    contentBox1.css('transform', `translateY(${initialTranslateY1}px)`);
+                    contentBox2.css('transform', `translateY(${initialTranslateY2}px)`);
+                }
             });
         }
     });
-
-    
-    // <animation>
-    // css translate 속성을 이용해 움직이기
-
-    // const $box = $('.content-box1');
-    // const boxScrollWidth = $box.scrollWidth;  // 가려진 영역(스크롤 영역)을 포함한 요소의 가로 사이즈
-    // const boxClientWidth = $box.clientWidth;  // 가려진 영역 제외한 현재 화면에 보이는 요소에 대한 가로 사이즈
-
-    // let startX = 0;
-    // let nowX = 0;
-    // let endX =0;
-    // let boxX = 0;
-
-    // const getClientX = (e) => {  // 터치 이벤트인지 확인
-    //     const isTouches = e.originalEvent.touches ? true : false;
-    //     return isTouches ? e.originalEvent.touches[0].clientX : e.clientX;
-    //   };
-
-    //   const getTranslateX = () => {
-    //     return parseInt($box.css('transform').split(/[^\-0-9]+/g)[5]);
-    //   };
-
-    //   const setTranslateX = (x) => {
-    //     $box.css('transform', `translateX(${x}px)`);
-    //   };
-
-
-    //   const $event = () => {  // 이벤트 연결
-    //     $box.on('mousedown', onScrollStart);
-    //     $box.on('touchstart', onScrollStart);
-    //     $box.on('click', onClick);
-    //   };
-
-    //   $event();
-
-
-    //   const onScrollStart = (e) => {
-    //     startX = getClientX(e);  // 스크롤을 시작했을 때 마우스 또는 터치한 지점을 startX 변수에 저장
-    //     $(window).on('mousemove', onScrollMove);
-    //     $(window).on('touchmove', onScrollMove);
-    //     $(window).on('mouseup', onScrollEnd);
-    //     $(window).on('touchend', onScrollEnd);
-
-    //     console.log(startX);
-    //   };
-
-    //  const onScrollMove = (e) => {
-    //     nowX = getClientX;
-    //     setTranslateX(boxX + nowX - startX);  // boxX에 translateX 값이 저장되어 있으며, 스크롤 종료 이벤트 함수 안에서 할당함
-    //  }
-
-
-    // const $list = $('.content-box1');
-    // const listScrollWidth = $list.get(0).scrollWidth;
-    // const listClientWidth = $list.get(0).clientWidth;
-    // let startX = 0;
-    // let nowX = 0;
-    // let endX = 0;
-    // let listX = 0;
-
-    // const getClientX = (e) => {
-    //     const isTouches = e.touches ? true : false;
-    //     return isTouches ? e.touches[0].clientX : e.clientX;
-    // };
-    
-    // const getTranslateX = () => {
-    //     const matrix = $list.css('transform').replace(/[^0-9\-.,]/g, '').split(',');
-    //     return parseInt(matrix[4]);
-    // };
-    
-    // const setTranslateX = (x) => {
-    //     $list.css('transform', `translateX(${x}px)`);
-    // };
-
-    // const bindEvents = () => {
-    //     $list.off('mousedown touchstart', onScrollStart);
-    //     $list.off('click', onClick);
-        
-    //     $list.on('mousedown touchstart', onScrollStart);
-    //     $list.on('click', onClick);
-    // };
-
-    // const onScrollStart = (e) => {
-    //     startX = getClientX(e);
-    //     $(window).on('mousemove touchmove', onScrollMove);
-    //     $(window).on('mouseup touchend', onScrollEnd);
-    // };
-
-    // const onScrollMove = (e) => {
-    //     nowX = getClientX(e);
-    //     setTranslateX(listX + nowX - startX);
-    // };
-
-    // const onScrollEnd = (e) => {
-    //     endX = getClientX(e);
-    //     listX = getTranslateX();
-    //     if (listX > 0) {
-    //         setTranslateX(0);
-    //         $list.css('transition', 'all 0.3s ease');
-    //         listX = 0;
-    //     } else if (listX < listClientWidth - listScrollWidth) {
-    //         setTranslateX(listClientWidth - listScrollWidth);
-    //         $list.css('transition', 'all 0.3s ease');
-    //         listX = listClientWidth - listScrollWidth;
-    //     }
-    
-    //     $(window).off('mousemove touchmove', onScrollMove);
-    //     $(window).off('mouseup touchend', onScrollEnd);
-    
-    //     setTimeout(() => {
-    //         bindEvents();
-    //         $list.css('transition', '');
-    //     }, 300);
-    // };
-
-    // const onClick = (e) => {
-    //     // 클릭 이벤트 처리
-    // };
-      
-
 
     
     // ****info-btn*****
@@ -452,110 +433,6 @@ $(function() {
     });
 });
 
-
-// window.onload = function() {
-//   const slider = document.querySelector('.content-box1');
-//   let isMouseDown = false;
-//   let startX, scrollLeft;
-
-//   slider.addEventListener('mousedown', (e) => {
-//     isMouseDown = true;
-//     slider.classList.add('active');
-
-//     startX = e.pageX - slider.offsetLeft;
-//     scrollLeft = slider.scrollLeft;
-//   });
-  
-//   slider.addEventListener('mouseleave', () => {
-//     isMouseDown = false;
-//     slider.classList.remove('active');
-//   });
-  
-//   slider.addEventListener('mouseup', () => {
-//     isMouseDown = false;
-//     slider.classList.remove('active');
-//   });
-
-//   slider.addEventListener('mousemove', (e) => {
-//     if (!isMouseDown) return;
-
-//     e.preventDefault();
-//     const x = e.pageX - slider.offsetLeft;
-//     const walk = (x - startX) * 1;
-//     slider.scrollLeft = scrollLeft - walk;
-//   });
-// }
-
-// window.onload = function() {
-//     // 요소 & 사이즈
-//     const list = document.querySelector('.content-box1');
-//     const listScrollWidth = list.scrollWidth;
-//     const listClientWidth = list.clientWidth;
-//     // 이벤트마다 갱신될 값
-//     let startX = 0;
-//     let nowX = 0;
-//     let endX = 0;
-//     let listX = 0;
-
-//     const getClientX = (e) => {
-//         const isTouches = e.touches ? true : false;
-//         return isTouches ? e.touches[0].clientX : e.clientX;
-//       };
-      
-//       const getTranslateX = () => {
-//         return parseInt(getComputedStyle(list).transform.split(/[^\-0-9]+/g)[5]);
-//       };
-      
-//       const setTranslateX = (x) => {
-//         list.style.transform = `translateX(${x}px)`;
-//       };
-
-//       const bindEvents = () => {
-//         list.addEventListener('mousedown', onScrollStart);
-//         list.addEventListener('touchstart', onScrollStart);
-//         list.addEventListener('click', onClick);
-//       };
-//       bindEvents();
-
-//       const onScrollStart = (e) => {
-//         startX = getClientX(e);
-//         window.addEventListener('mousemove', onScrollMove);
-//         window.addEventListener('touchmove', onScrollMove);
-//         window.addEventListener('mouseup', onScrollEnd);
-//         window.addEventListener('touchend', onScrollEnd);
-//       };
-
-//       const onScrollMove = (e) => {
-//         nowX = getClientX(e);
-//         setTranslateX(listX + nowX - startX);
-//       };
-//       const onScrollEnd = (e) => {
-//         endX = getClientX(e);
-//         listX = getTranslateX();
-//         if (listX > 0) {
-//           setTranslateX(0);
-//           list.style.transition = `all 0.3s ease`;
-//           listX = 0;
-//         } else if (listX < listClientWidth - listScrollWidth) {
-//           setTranslateX(listClientWidth - listScrollWidth);
-//           list.style.transition = `all 0.3s ease`;
-//           listX = listClientWidth - listScrollWidth;
-//         }
-      
-//         window.removeEventListener('mousedown', onScrollStart);
-//         window.removeEventListener('touchstart', onScrollStart);
-//         window.removeEventListener('mousemove', onScrollMove);
-//         window.removeEventListener('touchmove', onScrollMove);
-//         window.removeEventListener('mouseup', onScrollEnd);
-//         window.removeEventListener('touchend', onScrollEnd);
-//         window.removeEventListener('click', onClick);
-      
-//         setTimeout(() => {
-//           bindEvents();
-//           list.style.transition = '';
-//         }, 300);
-//       };
-// }
 
 
 // window.onload = function() {
@@ -641,47 +518,197 @@ $(function() {
 
 
 // window.onload = function() {
-//     let slider = document.querySelector(".inform-content-box");
-//     let innerSlider = document.querySelector(".content-box1");
-//     let pressed = false;
-//     let startx;
-//     let x;
+//     // 요소 & 사이즈
+//     const contentBoxes = document.querySelectorAll('.content-box1, .content-box2');
+    
+//     contentBoxes.forEach(list => {
+//         const listScrollWidth = list.scrollWidth;
+//         const listClientWidth = list.clientWidth;
+//         // 이벤트마다 갱신될 값
+//         let startX = 0;
+//         let nowX = 0;
+//         let endX = 0;
+//         let listX = 0;
 
-//     slider.addEventListener("mousedown", e => {
-//     pressed = true
-//     startx = e.offsetX - innerSlider.offsetLeft
-//     slider.style.cursor = "grabbing"
+//         const isMobileDevice = () => {
+//             return window.innerWidth <= 768; // 모바일 화면 너비 임계값 (768px 이하)
+//         };
+
+//         const getClientX = (e) => {
+//             if (!e) return 0; // e 객체가 없으면 0을 반환하도록 수정
+//             const isTouches = e.touches ? true : false;
+//             return isTouches ? e.touches[0].clientX : e.clientX;
+//         };
+
+//         const getTranslateX = () => {
+//             return parseInt(getComputedStyle(list).transform.split(/[^\-0-9]+/g)[5]) || 0;
+//         };
+
+//         const setTranslateX = (x) => {
+//             list.style.transform = `translateX(${x}px)`;
+//         };
+
+//         const bindEvents = () => {
+//             list.addEventListener('mousedown', onScrollStart);
+//             list.addEventListener('touchstart', onScrollStart);
+//             list.addEventListener('click', onClick);
+//         };
+
+//         const onScrollStart = (e) => {
+//             if (!isMobileDevice()) return; // 모바일이 아닌 경우 이벤트 무시
+//             startX = getClientX(e);
+//             window.addEventListener('mousemove', onScrollMove);
+//             window.addEventListener('touchmove', onScrollMove);
+//             window.addEventListener('mouseup', onScrollEnd);
+//             window.addEventListener('touchend', onScrollEnd);
+//         };
+
+//         const onScrollMove = (e) => {
+//             if (!isMobileDevice()) return; // 모바일이 아닌 경우 이벤트 무시
+//             nowX = getClientX(e);
+//             setTranslateX(listX + nowX - startX);
+//         };
+
+//         const onScrollEnd = (e) => {
+//             if (!isMobileDevice()) return; // 모바일이 아닌 경우 이벤트 무시
+//             endX = getClientX(e);
+//             listX = getTranslateX();
+//             if (listX > 0) {
+//                 setTranslateX(0);
+//                 list.style.transition = `all 0.3s ease`;
+//                 listX = 0;
+//             } else if (listX < listClientWidth - listScrollWidth) {
+//                 setTranslateX(listClientWidth - listScrollWidth);
+//                 list.style.transition = `all 0.3s ease`;
+//                 listX = listClientWidth - listScrollWidth;
+//             }
+
+//             window.removeEventListener('mousemove', onScrollMove);
+//             window.removeEventListener('touchmove', onScrollMove);
+//             window.removeEventListener('mouseup', onScrollEnd);
+//             window.removeEventListener('touchend', onScrollEnd);
+
+//             setTimeout(() => {
+//                 list.style.transition = '';
+//             }, 300);
+//         };
+
+//         const onClick = (e) => {
+//             // 클릭 이벤트 처리 (필요에 따라 구현)
+//         };
+
+//         bindEvents();
 //     });
+// };
 
-//     slider.addEventListener("mouseenter", () => {
-//     slider.style.cursor = "grab"
+// window.onload = function() {
+//     // 요소 & 사이즈
+//     const contentBoxes = document.querySelectorAll('.content-box1, .content-box2');
+    
+//     contentBoxes.forEach(list => {
+//         const listScrollWidth = list.scrollWidth;
+//         const listClientWidth = list.clientWidth;
+//         // 이벤트마다 갱신될 값
+//         let startX = 0;
+//         let nowX = 0;
+//         let listX = 0;
+
+//         const isMobileDevice = () => {
+//             return window.innerWidth <= 768; // 모바일 화면 너비 임계값 (768px 이하)
+//         };
+
+//         const getClientX = (e) => {
+//             if (!e) return 0; // e 객체가 없으면 0을 반환하도록 수정
+//             const isTouches = e.touches ? true : false;
+//             return isTouches ? e.touches[0].clientX : e.clientX;
+//         };
+
+//         const getTranslateX = () => {
+//             const style = getComputedStyle(list);
+//             const matrix = new WebKitCSSMatrix(style.transform);
+//             return matrix.m41;
+//         };
+
+//         const setTranslateX = (x) => {
+//             list.style.transform = `translateX(${x}px)`;
+//         };
+
+//         const bindEvents = () => {
+//             list.addEventListener('mousedown', onScrollStart);
+//             list.addEventListener('touchstart', onScrollStart);
+//             list.addEventListener('click', onClick);
+//         };
+
+//         const onScrollStart = (e) => {
+//             if (!isMobileDevice()) return; // 모바일이 아닌 경우 이벤트 무시
+//             startX = getClientX(e);
+//             window.addEventListener('mousemove', onScrollMove);
+//             window.addEventListener('touchmove', onScrollMove);
+//             window.addEventListener('mouseup', onScrollEnd);
+//             window.addEventListener('touchend', onScrollEnd);
+//         };
+
+//         const onScrollMove = (e) => {
+//             if (!isMobileDevice()) return; // 모바일이 아닌 경우 이벤트 무시
+//             nowX = getClientX(e);
+//             setTranslateX(listX + nowX - startX);
+//         };
+
+//         const onScrollEnd = (e) => {
+//             if (!isMobileDevice()) return; // 모바일이 아닌 경우 이벤트 무시
+//             if (e === undefined) return; // 이벤트 객체가 없는 경우 함수를 종료합니다.
+//             const endX = getClientX(e);
+//             listX = getTranslateX();
+//             if (listX > 0) {
+//                 setTranslateX(0);
+//                 list.style.transition = `all 0.3s ease`;
+//                 listX = 0;
+//             } else if (listX < listClientWidth - listScrollWidth) {
+//                 setTranslateX(listClientWidth - listScrollWidth);
+//                 list.style.transition = `all 0.3s ease`;
+//                 listX = listClientWidth - listScrollWidth;
+//             }
+
+//             window.removeEventListener('mousemove', onScrollMove);
+//             window.removeEventListener('touchmove', onScrollMove);
+//             window.removeEventListener('mouseup', onScrollEnd);
+//             window.removeEventListener('touchend', onScrollEnd);
+
+//             setTimeout(() => {
+//                 list.style.transition = '';
+//             }, 300);
+//         };
+
+//         const onClick = (e) => {
+//             // 클릭 이벤트 처리 (필요에 따라 구현)
+//         };
+
+//         bindEvents();
 //     });
+// };
 
-//     slider.addEventListener("mouseup", () => {
-//     slider.style.cursor = "grab"
-//     });
+// window.onload = function() {
+//     const sliderInner = document.querySelector('.content-box2');
 
-//     window.addEventListener("mouseup", () => {
-//     pressed = false
-//     });
-
-//     slider.addEventListener("mousemove", e => {
-//     if (!pressed) return
-//     e.preventDefault();
-//     x = e.offsetX;
-
-//     innerSlider.style.left = `${x - startx}px`;
-//     checkboundary();
-//     });
-
-//     function checkboundary() {
-//     let outer = slider.getBoundingClientRect();
-//     let inner = innerSlider.getBoundingClientRect();
-
-//     if (parseInt(innerSlider.style.left) > 0) {
-//         innerSlider.style.left = "0px"
-//     } else if (inner.right < outer.right) {
-//         innerSlider.style.left = `-${inner.width - outer.width}px`
+//     function addCenterEffectToSecondElement() {
+//         const secondElement = sliderInner.children[1].querySelector('.txt-box');;
+//         secondElement.classList.add('center');
 //     }
-//     } 
+
+//     function delaySlideTransition() {
+//         setTimeout(() => {
+//             const firstItem = sliderInner.firstElementChild;
+//             sliderInner.removeChild(firstItem);
+//             sliderInner.appendChild(firstItem);
+            
+//             // center 클래스 제거 및 추가
+//             const centerElement = document.querySelector('.center');
+//             const nextCenterElement = sliderInner.children[1].querySelector('.txt-box');
+//             nextCenterElement.classList.add('center');
+//             centerElement.classList.remove('center');
+//         }, 3000);
+//     }
+//     addCenterEffectToSecondElement();
+    
+//     setInterval(delaySlideTransition, 3000);
 // }

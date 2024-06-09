@@ -1477,6 +1477,10 @@ main .main-inform .container-none .inform-content-box .content-box2 {
     overflow-x: none;
   }
 }
+main .main-inform .container-none .inform-content-box .content-box1::-webkit-scrollbar,
+main .main-inform .container-none .inform-content-box .content-box2::-webkit-scrollbar {
+  display: none;
+}
 main .main-inform .container-none .inform-content-box .content-box1 div,
 main .main-inform .container-none .inform-content-box .content-box2 div {
   width: 72.222%;
@@ -1488,7 +1492,10 @@ main .main-inform .container-none .inform-content-box .content-box2 div .txt-box
   flex-wrap: wrap;
   width: 100%;
   padding: 50px 30px;
-  transition: box-shadow 0.3s;
+}
+main .main-inform .container-none .inform-content-box .content-box1 div .txt-box.center,
+main .main-inform .container-none .inform-content-box .content-box2 div .txt-box.center {
+  box-shadow: 5px 5px 7px 3px rgba(0, 0, 0, 0.3);
 }
 main .main-inform .container-none .inform-content-box .content-box1 div .txt-box:hover,
 main .main-inform .container-none .inform-content-box .content-box2 div .txt-box:hover {
@@ -1506,6 +1513,7 @@ main .main-inform .container-none .inform-content-box .content-box2 div .txt-box
 @media only screen and (min-width: 1024px) {
   main .main-inform .container-none .inform-content-box .content-box1 div .txt-box .txt-title,
   main .main-inform .container-none .inform-content-box .content-box2 div .txt-box .txt-title {
+    transition: box-shadow 0.3s;
     font-size: 1.175rem;
   }
 }
@@ -1726,44 +1734,25 @@ main .main-inform .container-none .inform-content-box .content-box2 .notice .txt
     padding-left: 10px;
   }
 }
+main .main-inform .container-none .inform-content-box .content-box1 {
+  overflow-x: scroll;
+}
 @media only screen and (min-width: 1024px) {
   main .main-inform .container-none .inform-content-box .content-box1 {
     position: relative;
-    animation: moveBox1 4s ease-in-out forwards;
-  }
-  @keyframes moveBox1 {
-    0% {
-      transform: translateY(-1370px);
-    }
-    100% {
-      transform: translateY(1370px);
-    }
+    overflow-x: none;
+    transform: translateY(-1370px);
+    transition: transform 0.1s ease-out;
   }
 }
-@media only screen and (min-width: 1024px) {
-  main .main-inform .container-none .inform-content-box .content-box1:hover {
-    animation-play-state: paused;
-    cursor: pointer;
-  }
+main .main-inform .container-none .inform-content-box .content-box2 {
+  transition: transform 0.5s ease;
 }
 @media only screen and (min-width: 1024px) {
   main .main-inform .container-none .inform-content-box .content-box2 {
     position: relative;
-    animation: moveBox2 4s ease-in-out forwards;
-  }
-  @keyframes moveBox2 {
-    0% {
-      transform: translateY(1370px);
-    }
-    100% {
-      transform: translateY(-1370px);
-    }
-  }
-}
-@media only screen and (min-width: 1024px) {
-  main .main-inform .container-none .inform-content-box .content-box2:hover {
-    animation-play-state: paused;
-    cursor: pointer;
+    transform: translateY(1370px);
+    transition: transform 0.1s ease-out;
   }
 }
 main .main-sns {
