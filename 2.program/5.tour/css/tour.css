@@ -796,9 +796,8 @@ footer .footerlogo-info .footer-content-box .footer-info-box .info .sns li a:hov
 }
 footer .footerlogo-info .footer-content-box .footer-info-box .info .txt {
   width: 80%;
-  font-weight: 400;
   font-size: 0.83rem;
-  color: #b0afaf;
+  color: #353535;
 }
 @media only screen and (min-width: 1024px) {
   footer .footerlogo-info .footer-content-box .footer-info-box .info .txt {
@@ -816,9 +815,8 @@ footer .footerlogo-info .footer-content-box .footer-info-box .copyright {
   }
 }
 footer .footerlogo-info .footer-content-box .footer-info-box .copyright p {
-  font-weight: 400;
   font-size: 0.83rem;
-  color: #b0afaf;
+  color: #353535;
 }
 footer .fixed-menu {
   position: fixed;

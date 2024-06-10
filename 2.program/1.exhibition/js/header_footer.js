@@ -1,5 +1,13 @@
 $(function() {
     //===================== header =====================
+    //--------------------- 공통 ---------------------
+    // <search-box 나오게 하기>
+    $('.right-menu .search > img').on('click', function() {
+        $('.header-search-box').toggleClass('sub-visible');
+    });
+    
+    
+
     //--------------------- 모바일 ---------------------
     var mobile = $('#mobileBar');
     
@@ -118,6 +126,14 @@ $(function() {
     // <색 변경>
     $('header').addClass('sub-bg');
     $('.gnb-title').css('color', '#000');
+    $('.gnb-title').hover(function() {
+        $(this).css({
+            'textDecoration': 'none',
+            'color': '#ff6000'
+        });
+    }, function() {
+        $('.gnb-title').css('color', '#000');
+    });
     $('.sub-menu a').css('color', '#000');
     
     //===================== footer =====================

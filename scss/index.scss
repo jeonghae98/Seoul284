@@ -42,10 +42,7 @@ main {
             width: $width-wide;
             height: $height-wide;
             color: $color-main;
-            font: {
-                weight: $font-light;
-                size: 0.5625rem;  // 10pt
-            }
+            font-size: 0.5625rem;  // 10pt
             animation: textRotation 8s linear infinite;
 
             @keyframes textRotation {
@@ -131,7 +128,7 @@ main {
             width: 100%; height: 100%;
             opacity: 0;
             background: {
-                image: url(/images/intro-bg.png);
+                image: url(../images/intro-bg.png);
                 repeat: no-repeat;
                 position-x: 30%;
                 position-y: 600px;
@@ -222,18 +219,11 @@ main {
 
             .collection-line {
                 display: none;
-                // position: relative; 
-                // z-index: 1;
-                // height: 246px;  // 나중에 제이쿼리
-                // width: $width-wide;
-                // position: relative;
-                // z-index: 5;
-                // width: 1px;
-                // border: 1px solid $line-white;
 
                 @include responsive(large-screens) {
                     display: block;
                     position: relative;
+                    right: 1px;
                     z-index: 5;
                     width: 1px;
                     border: 1px solid $line-white;
@@ -320,18 +310,18 @@ main {
         }
         .intro-text-box {
             padding-top: 420px;
-            margin-left: 5%; // 성민 수정
+            margin-left: 5%; 
             // background-color: beige;
 
             @include responsive(large-screens) {
-                padding-top: 700px; // 성민 수정
-                margin-left: 10%; // 성민 수정
+                padding-top: 700px; 
+                margin-left: 10%; 
             }
 
             .intro-title {
-                width: 65%;
+                width: 65%; 
                 font: {
-                    weight: $font-regular;
+                    weight: $font-medium;
                     size: 2.3rem;
                 }
                 opacity: 0;
@@ -349,10 +339,7 @@ main {
             .intro-text {
                 margin-top: 20px;
                 width: 60%;
-                font: {
-                    weight: $font-thin;
-                    size: 1rem;  
-                }
+                font-size: 1rem;
                 
                 opacity: 0;
                 transform: translateX(-20px);
@@ -905,7 +892,7 @@ main {
                                 size: 2rem;
                             }
                             text-align: center;
-                            color: #999494;
+                            color: $color-gray;
 
                             // @include responsive(large-screens) {
                             // }
@@ -947,7 +934,7 @@ main {
 
                 .typo {
                     color: transparent;
-                    -webkit-text-stroke: 4px #a6a6a6;
+                    -webkit-text-stroke: 4px $color-main;
                 }
 
                 .no-stroke {
@@ -974,7 +961,7 @@ main {
                 animation: textMoving2 60s linear infinite;
                 .second-typo {
                     color: transparent;
-                    -webkit-text-stroke: 4px #ffccac;
+                    -webkit-text-stroke: 4px $color-point;
                 }
             }
 
@@ -1137,6 +1124,7 @@ main {
                     display: flex;
                     align-items: flex-start; 
                     justify-content: center;
+                    overflow-x: scroll;
                     gap: 20px;
                     width: $width-wide;
                     height: auto;
@@ -1419,13 +1407,10 @@ main {
                }  // content-box1/2
 
                .content-box1 {
-                    overflow-x: scroll;
-
                     @include responsive(large-screens) {
                         position: relative;
-                        overflow-x: none;
                         transform: translateY(-1370px);
-                        transition: transform 2s;
+                        transition: transform 0.5s ease-out;
                         // animation: moveBox1 4s ease-in-out forwards;
 
                         // @keyframes moveBox1 {
@@ -1626,24 +1611,21 @@ main {
                         margin-bottom: 15px;
                         font: {
                             weight: $font-light;
-                            size: 2rem;  // 32pt
+                            size: 2rem;
                         }
 
                         @include responsive(large-screens) {
                             margin-bottom: 35px;
                             font: {
                                 weight: $font-regular;
-                                size: 3rem;  // 45pt
+                                size: 3rem;
                             }
                         }
                     }
 
                     .sns-txt {
-                        font: {
-                            weight: $font-regular;
-                            size: 1rem;  // 16pt
-                        }
-                        color: #787878;
+                        font-size: 1rem;
+                        color: $color-gray;
                         
                         @include responsive(large-screens) {
                             font-size: 1.3rem;

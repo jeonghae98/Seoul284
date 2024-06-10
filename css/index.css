@@ -6,7 +6,7 @@
 }
 
 body {
-  font-weight: 300;
+  font-weight: 400;
   font-size: 16px;
   font-family: "Noto Sans KR", sans-serif;
 }
@@ -55,7 +55,6 @@ h1 {
 }
 
 h2 {
-  font-weight: 100;
   font-size: 24px;
 }
 
@@ -490,7 +489,6 @@ main .detail-button .circle-text {
   width: 100%;
   height: 100%;
   color: #000;
-  font-weight: 300;
   font-size: 0.5625rem;
   animation: textRotation 8s linear infinite;
 }
@@ -565,7 +563,7 @@ main section.main-intro .intro-bg-img {
   width: 100%;
   height: 100%;
   opacity: 0;
-  background-image: url(/images/intro-bg.png);
+  background-image: url(../images/intro-bg.png);
   background-repeat: no-repeat;
   background-position-x: 30%;
   background-position-y: 600px;
@@ -661,6 +659,7 @@ main section.main-intro .intro-collection-exhibition-line-box .collection-line {
   main section.main-intro .intro-collection-exhibition-line-box .collection-line {
     display: block;
     position: relative;
+    right: 1px;
     z-index: 5;
     width: 1px;
     border: 1px solid #fff;
@@ -754,7 +753,7 @@ main section.main-intro .intro-text-box {
 }
 main section.main-intro .intro-text-box .intro-title {
   width: 65%;
-  font-weight: 400;
+  font-weight: 500;
   font-size: 2.3rem;
   opacity: 0;
   transform: translateX(-30px);
@@ -768,7 +767,6 @@ main section.main-intro .intro-text-box .intro-title {
 main section.main-intro .intro-text-box .intro-text {
   margin-top: 20px;
   width: 60%;
-  font-weight: 100;
   font-size: 1rem;
   opacity: 0;
   transform: translateX(-20px);
@@ -1263,7 +1261,7 @@ main .exhibition .exhibition-content .arrow-button .detail-btn .arrow a {
   font-weight: 100;
   font-size: 2rem;
   text-align: center;
-  color: #999494;
+  color: #353535;
 }
 main .typography {
   position: relative;
@@ -1295,7 +1293,7 @@ main .typography .typo-box .typo-box2 p {
 main .typography .typo-box .typo-box1 .typo,
 main .typography .typo-box .typo-box2 .typo {
   color: transparent;
-  -webkit-text-stroke: 4px #a6a6a6;
+  -webkit-text-stroke: 4px #000;
 }
 main .typography .typo-box .typo-box1 .no-stroke,
 main .typography .typo-box .typo-box2 .no-stroke {
@@ -1321,7 +1319,7 @@ main .typography .typo-box .typo-box2 {
 }
 main .typography .typo-box .typo-box2 .second-typo {
   color: transparent;
-  -webkit-text-stroke: 4px #ffccac;
+  -webkit-text-stroke: 4px #ff6000;
 }
 @keyframes textMoving2 {
   0% {
@@ -1463,6 +1461,7 @@ main .main-inform .container-none .inform-content-box .content-box2 {
   display: flex;
   align-items: flex-start;
   justify-content: center;
+  overflow-x: scroll;
   gap: 20px;
   width: 100%;
   height: auto;
@@ -1734,15 +1733,11 @@ main .main-inform .container-none .inform-content-box .content-box2 .notice .txt
     padding-left: 10px;
   }
 }
-main .main-inform .container-none .inform-content-box .content-box1 {
-  overflow-x: scroll;
-}
 @media only screen and (min-width: 1024px) {
   main .main-inform .container-none .inform-content-box .content-box1 {
     position: relative;
-    overflow-x: none;
     transform: translateY(-1370px);
-    transition: transform 2s;
+    transition: transform 0.5s ease-out;
   }
 }
 main .main-inform .container-none .inform-content-box .content-box2 {
@@ -1915,9 +1910,8 @@ main .main-sns .sns-content div .content-txt .sns-title {
   }
 }
 main .main-sns .sns-content div .content-txt .sns-txt {
-  font-weight: 400;
   font-size: 1rem;
-  color: #787878;
+  color: #353535;
 }
 @media only screen and (min-width: 1024px) {
   main .main-sns .sns-content div .content-txt .sns-txt {
@@ -2098,9 +2092,9 @@ footer .footerlogo-info .footer-content-box .footer-info-box .info {
   }
 }
 footer .footerlogo-info .footer-content-box .footer-info-box .info div strong {
-  font-weight: 400;
+  font-weight: 500;
   font-size: 1rem;
-  color: #717171;
+  color: #353535;
 }
 @media only screen and (min-width: 1024px) {
   footer .footerlogo-info .footer-content-box .footer-info-box .info div strong {
@@ -2159,9 +2153,8 @@ footer .footerlogo-info .footer-content-box .footer-info-box .info .sns li a:hov
 }
 footer .footerlogo-info .footer-content-box .footer-info-box .info .txt {
   width: 80%;
-  font-weight: 400;
   font-size: 0.83rem;
-  color: #b0afaf;
+  color: #353535;
 }
 @media only screen and (min-width: 1024px) {
   footer .footerlogo-info .footer-content-box .footer-info-box .info .txt {
@@ -2179,9 +2172,8 @@ footer .footerlogo-info .footer-content-box .footer-info-box .copyright {
   }
 }
 footer .footerlogo-info .footer-content-box .footer-info-box .copyright p {
-  font-weight: 400;
   font-size: 0.83rem;
-  color: #b0afaf;
+  color: #353535;
 }
 footer .fixed-menu {
   position: fixed;

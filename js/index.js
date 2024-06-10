@@ -5,15 +5,6 @@ $(function() {
         return $(this).text().split("").map((char, i) => `<span style="transform:rotate(${i * 15}deg)">${char}</span>`).join("");
     });
 
-    // var mainVideoHeight = $('.main-video').height();
-
-    // $(window).scroll(function() {
-    //     if ($(this).scrollTop() > mainVideoHeight - 100) {
-    //         $('html, body').animate({
-    //             scrollTop: $('.main-intro').offset().top
-    //         }, 800);
-    //     }
-    // });
 
     //--------------------- intro ---------------------
     $(window).scroll(function() {
@@ -190,11 +181,11 @@ $(function() {
                 if (mainWindowWidth < 768) {
                     $img.animate({
                         opacity: 1
-                    }, 1300);
+                    }, 1000);
     
                     $(this).find('.ex-txt .title').animate({
                         opacity: 1
-                    }, 500);
+                    }, 300);
                 } else {
                     $img.css({
                         'opacity': '1',
@@ -203,7 +194,7 @@ $(function() {
     
                     $(this).find('.ex-txt .title').animate({
                         opacity: 1
-                    }, 500);
+                    }, 300);
                 }
             }
         });
@@ -253,100 +244,65 @@ $(function() {
 
 
 
-    $(window).scroll(function() {
-        var scrollPos = $(window).scrollTop();
-        var lineOffset = $('.info-line1').offset().top;
-        var windowHeight = $(window).height();
-        var windowWidth = $(window).width();
-        const contentBox1 =  $('.content-box1');
-        const contentBox2 =  $('.content-box2');
+    function moveAnimation() {
+        const contentBox1 = $('.content-box1');
+        const contentBox2 = $('.content-box2');
+        const initialTranslateY1 = -1370;
+        const finalTranslateY1 = 1370;
+        const initialTranslateY2 = 1370;
+        const finalTranslateY2 = -1370;
+        const distance1 = Math.abs(finalTranslateY1 - initialTranslateY1);
+        const distance2 = Math.abs(finalTranslateY2 - initialTranslateY2);
+        const informBox = $('.inform-content-box');
 
-        if( windowWidth > 768 ) {
-            if(scrollPos <= (lineOffset - windowHeight)) {
-                // contentBox1.css('animation', 'none');
-                // contentBox2.css('animation', 'none');
+        function onScroll() {
+            const scrollTop = $(window).scrollTop();
+            const informOffset = informBox.offset().top;
+            const informHeight = informBox.outerHeight();
+            const windowHeight = $(window).height();
+
+            if (scrollTop + windowHeight > informOffset && scrollTop < informOffset + informHeight) {
+                const scrollFraction = (scrollTop + windowHeight - informOffset) / (informHeight + windowHeight);
+                const translateY1 = initialTranslateY1 + scrollFraction * distance1;
+                const translateY2 = initialTranslateY2 - scrollFraction * distance2;
+                contentBox1.css('transform', `translateY(${translateY1}px)`);
+                contentBox2.css('transform', `translateY(${translateY2}px)`);
+            } else if (scrollTop >= informOffset + informHeight) {
+                contentBox1.css('transform', `translateY(${finalTranslateY1}px)`);
+                contentBox2.css('transform', `translateY(${finalTranslateY2}px)`);
             } else {
-                // contentBox1.css('animation', 'moveBox1 4s ease-in-out forwards');
-                // contentBox2.css('animation', 'moveBox2 4s ease-in-out forwards');
-                }
+                contentBox1.css('transform', `translateY(${initialTranslateY1}px)`);
+                contentBox2.css('transform', `translateY(${initialTranslateY2}px)`);
+            }
+        }
+
+        $(window).on('scroll.moveAnimation', onScroll);
+    }
+
+    function handleResize() {
+        var windowWidth = $(window).width();
+
+        // 기존 scroll 이벤트 제거
+        $(window).off('scroll.moveAnimation');
+        
+        if (windowWidth > 768) {
             moveAnimation();
         } else {
             // <animation>
-            const contentBox = $('.content-box1'); // 변경해야 할 요소 선택
-
-            // 스크롤 시작 시 justify-content 해제
-            contentBox.on('scroll', function() {
+            const contentBox = $('.content-box1, .content-box2'); 
+            contentBox.css('transform', ''); // transform 초기화
+            contentBox.off('scroll').on('scroll', function() {
                 $(this).css('justify-content', 'initial'); // justify-content 해제
             });
-
-
-            function addCenterEffectToSecondElement() {
-                const secondElement = $('.content-box2').children().eq(1).find('.txt-box');
-                secondElement.addClass('center');
-            }
-
-            function delaySlideTransition() {
-                setTimeout(() => {
-                    const sliderInner = $('.content-box2');
-                    const firstItem = sliderInner.children().eq(0);
-                    sliderInner.append(firstItem);
-                    
-                    // center 클래스 제거 및 추가
-                    const centerElement = $('.center');
-                    const nextCenterElement = sliderInner.children().eq(1).find('.txt-box');
-                    nextCenterElement.addClass('center');
-                    centerElement.removeClass('center');
-                }, 3000);
-            }
-            addCenterEffectToSecondElement();
-            setInterval(delaySlideTransition, 3000);
         }
-       
+    }
 
-        
-        function moveAnimation() {
-            const contentBox1 = $('.content-box1');
-            const contentBox2 = $('.content-box2');
-            const initialTranslateY1 = -1370;
-            const finalTranslateY1 = 1370;
-            const initialTranslateY2 = 1370;
-            const finalTranslateY2 = -1370;
-            const distance1 = Math.abs(finalTranslateY1 - initialTranslateY1);
-            const distance2 = Math.abs(finalTranslateY2 - initialTranslateY2);
-            const mainInform = $('.main-inform');
+    handleResize();
 
-            $(window).on('scroll', function() {
-                const scrollTop = $(this).scrollTop();
-                const informOffset = mainInform.offset().top;
-                const informHeight = mainInform.outerHeight();
-                const windowHeight = $(window).height();
-
-                if (scrollTop + windowHeight > informOffset && scrollTop < informOffset + informHeight) {
-                    // 애니메이션이 실행되는 동안 .main-inform을 고정
-                    // mainInform.addClass('fixed');
-
-                    const scrollFraction = (scrollTop + windowHeight - informOffset) / (informHeight + windowHeight);
-                    const translateY1 = initialTranslateY1 + scrollFraction * distance1;
-                    const translateY2 = initialTranslateY2 - scrollFraction * distance2;
-                    contentBox1.css('transform', `translateY(${translateY1}px)`);
-                    contentBox2.css('transform', `translateY(${translateY2}px)`);
-
-                    // 애니메이션 완료 후 .main-inform의 고정 해제
-                    // setTimeout(function() {
-                    //     mainInform.removeClass('fixed');
-                    // }, 3000); // 애니메이션 지속 시간 (여기서는 3초로 가정)
-                } else if (scrollTop >= informOffset + informHeight) {
-                    // inform이 화면을 벗어난 경우 .main-inform 고정 해제
-                    mainInform.removeClass('fixed');
-                    contentBox1.css('transform', `translateY(${finalTranslateY1}px)`);
-                    contentBox2.css('transform', `translateY(${finalTranslateY2}px)`);
-                } else {
-                    contentBox1.css('transform', `translateY(${initialTranslateY1}px)`);
-                    contentBox2.css('transform', `translateY(${initialTranslateY2}px)`);
-                }
-            });
-        }
+    $(window).resize(function() {
+        handleResize();
     });
+
 
     
     // ****info-btn*****
