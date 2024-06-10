@@ -253,79 +253,65 @@ $(function() {
 
 
 
-    $(window).scroll(function() {
+    function moveAnimation() {
+        const contentBox1 = $('.content-box1');
+        const contentBox2 = $('.content-box2');
+        const initialTranslateY1 = -1370;
+        const finalTranslateY1 = 1370;
+        const initialTranslateY2 = 1370;
+        const finalTranslateY2 = -1370;
+        const distance1 = Math.abs(finalTranslateY1 - initialTranslateY1);
+        const distance2 = Math.abs(finalTranslateY2 - initialTranslateY2);
+        const informBox = $('.inform-content-box');
+
+        function onScroll() {
+            const scrollTop = $(window).scrollTop();
+            const informOffset = informBox.offset().top;
+            const informHeight = informBox.outerHeight();
+            const windowHeight = $(window).height();
+
+            if (scrollTop + windowHeight > informOffset && scrollTop < informOffset + informHeight) {
+                const scrollFraction = (scrollTop + windowHeight - informOffset) / (informHeight + windowHeight);
+                const translateY1 = initialTranslateY1 + scrollFraction * distance1;
+                const translateY2 = initialTranslateY2 - scrollFraction * distance2;
+                contentBox1.css('transform', `translateY(${translateY1}px)`);
+                contentBox2.css('transform', `translateY(${translateY2}px)`);
+            } else if (scrollTop >= informOffset + informHeight) {
+                contentBox1.css('transform', `translateY(${finalTranslateY1}px)`);
+                contentBox2.css('transform', `translateY(${finalTranslateY2}px)`);
+            } else {
+                contentBox1.css('transform', `translateY(${initialTranslateY1}px)`);
+                contentBox2.css('transform', `translateY(${initialTranslateY2}px)`);
+            }
+        }
+
+        $(window).on('scroll.moveAnimation', onScroll);
+    }
+
+    function handleResize() {
         var windowWidth = $(window).width();
 
-        if( windowWidth > 768 ) {
+        // 기존 scroll 이벤트 제거
+        $(window).off('scroll.moveAnimation');
+        
+        if (windowWidth > 768) {
             moveAnimation();
         } else {
             // <animation>
-            const contentBox = $('.content-box1, .content-box2'); // 변경해야 할 요소 선택
-
-            // 스크롤 시작 시 justify-content 해제
-            contentBox.on('scroll', function() {
+            const contentBox = $('.content-box1, .content-box2'); 
+            contentBox.css('transform', ''); // transform 초기화
+            contentBox.off('scroll').on('scroll', function() {
                 $(this).css('justify-content', 'initial'); // justify-content 해제
             });
-
-
-            // function addCenterEffectToSecondElement() {
-            //     const secondElement = $('.content-box2').children().eq(1).find('.txt-box');
-            //     secondElement.addClass('center');
-            // }
-
-            // function delaySlideTransition() {
-            //     setTimeout(() => {
-            //         const sliderInner = $('.content-box2');
-            //         const firstItem = sliderInner.children().eq(0);
-            //         sliderInner.append(firstItem);
-                    
-            //         // center 클래스 제거 및 추가
-            //         const centerElement = $('.center');
-            //         const nextCenterElement = sliderInner.children().eq(1).find('.txt-box');
-            //         nextCenterElement.addClass('center');
-            //         centerElement.removeClass('center');
-            //     }, 3000);
-            // }
-            // addCenterEffectToSecondElement();
-            // setInterval(delaySlideTransition, 3000);
         }
-       
+    }
 
-        
-        function moveAnimation() {
-            const contentBox1 = $('.content-box1');
-            const contentBox2 = $('.content-box2');
-            const initialTranslateY1 = -1370;
-            const finalTranslateY1 = 1370;
-            const initialTranslateY2 = 1370;
-            const finalTranslateY2 = -1370;
-            const distance1 = Math.abs(finalTranslateY1 - initialTranslateY1);
-            const distance2 = Math.abs(finalTranslateY2 - initialTranslateY2);
-            const informBox = $('.inform-content-box');
+    handleResize();
 
-            $(window).on('scroll', function() {
-                const scrollTop = $(this).scrollTop();
-                const informOffset = informBox.offset().top;
-                const informHeight = informBox.outerHeight();
-                const windowHeight = $(window).height();
-
-                if (scrollTop + windowHeight > informOffset && scrollTop < informOffset + informHeight) {
-                    const scrollFraction = (scrollTop + windowHeight - informOffset) / (informHeight + windowHeight);
-                    const translateY1 = initialTranslateY1 + scrollFraction * distance1;
-                    const translateY2 = initialTranslateY2 - scrollFraction * distance2;
-                    contentBox1.css('transform', `translateY(${translateY1}px)`);
-                    contentBox2.css('transform', `translateY(${translateY2}px)`);
-
-                } else if (scrollTop >= informOffset + informHeight) {
-                    contentBox1.css('transform', `translateY(${finalTranslateY1}px)`);
-                    contentBox2.css('transform', `translateY(${finalTranslateY2}px)`);
-                } else {
-                    contentBox1.css('transform', `translateY(${initialTranslateY1}px)`);
-                    contentBox2.css('transform', `translateY(${initialTranslateY2}px)`);
-                }
-            });
-        }
+    $(window).resize(function() {
+        handleResize();
     });
+
 
     
     // ****info-btn*****
