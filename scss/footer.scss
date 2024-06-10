@@ -87,10 +87,10 @@
                     div {
                         strong {
                             font: {
-                                weight: $font-regular;
+                                weight: $font-medium;
                                 size: 1rem;
                             }
-                            color: $footer-darkgray;
+                            color: $color-gray;
                             
                             @include responsive(large-screens) {
                                 margin-bottom: 15px;
@@ -154,11 +154,8 @@
                     
                     .txt {
                         width: 80%;
-                        font: {
-                            weight: $font-regular;
-                            size: 0.83rem;  
-                        }
-                        color: $footer-gray;
+                        font-size: 0.83rem;  
+                        color: $color-gray;
                         // background-color: aqua;
 
                         @include responsive(large-screens) {
@@ -178,11 +175,8 @@
                     }
 
                     p {
-                        font: {
-                            weight: $font-regular;
-                            size: 0.83rem;  
-                        }
-                        color: $footer-gray;
+                        font-size: 0.83rem;  
+                        color: $color-gray;
                     }
                 }  // copyright
             }  // footer-info-box

@@ -5,15 +5,6 @@ $(function() {
         return $(this).text().split("").map((char, i) => `<span style="transform:rotate(${i * 15}deg)">${char}</span>`).join("");
     });
 
-    // var mainVideoHeight = $('.main-video').height();
-
-    // $(window).scroll(function() {
-    //     if ($(this).scrollTop() > mainVideoHeight - 100) {
-    //         $('html, body').animate({
-    //             scrollTop: $('.main-intro').offset().top
-    //         }, 800);
-    //     }
-    // });
 
     //--------------------- intro ---------------------
     $(window).scroll(function() {
@@ -190,11 +181,11 @@ $(function() {
                 if (mainWindowWidth < 768) {
                     $img.animate({
                         opacity: 1
-                    }, 1300);
+                    }, 1000);
     
                     $(this).find('.ex-txt .title').animate({
                         opacity: 1
-                    }, 500);
+                    }, 300);
                 } else {
                     $img.css({
                         'opacity': '1',
@@ -203,7 +194,7 @@ $(function() {
     
                     $(this).find('.ex-txt .title').animate({
                         opacity: 1
-                    }, 500);
+                    }, 300);
                 }
             }
         });
