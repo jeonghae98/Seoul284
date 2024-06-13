@@ -175,14 +175,14 @@ main {
         background-size: cover;
         background-repeat: no-repeat;
         background-attachment: fixed;
-        background-position-x: -300px;
+        background-position-x: -000px;
         @include responsive(large-screens) {
             position: relative;
             width: 100%;
             height:1000px;
             // height: 880px;
             background-image: url(../images/1900_bg.png);
-            background-position-x: -200px;
+            
             background-size: cover;
             // background-color: aqua;
         }
@@ -239,13 +239,13 @@ main {
                             margin: 0 auto;
                             font-size: 16px;
                             font-weight:$font-regular;
-                            color: #565656;
+                            color: #3f3f3f;
                             // background-color: aquamarine;
                             @include responsive(large-screens) {
                                 width: 30%;
                                 margin-bottom: 1%;
                                 margin-left: 58%;
-                                color: #adadad;
+                                color: #3f3f3f;
                                 // background-color: aqua;
                             }
                     }
@@ -255,7 +255,7 @@ main {
                         margin: 0 auto;
                         font-weight: $font-regular;
                         font-size: 1.2rem;
-                        color: #565656;
+                        color: #ffffff;
                       
                         li {
                             list-style-type: none;
@@ -440,7 +440,7 @@ main {
             width: 100%;
             height:1000px;
             border: none;
-            background-image: url(../images/1925_bg.jpg);
+            background-image: url(../images/1925_bg.png);
             background-position-x: 500px;
             background-size: cover;
             background-repeat: no-repeat;
@@ -666,7 +666,7 @@ section.box3 {
     background-attachment: fixed;
    
     @include responsive(large-screens) {       
-        background-image: url(../images/2004_bg.png);
+        background-image: url(../images/2004_bg\ \(2\).png);
         background-position-x: 255px;
         width: 100%;
         height:600px;
@@ -893,7 +893,7 @@ section.box4 {
     width: 100%;
     height:auto;
     margin-bottom: 200px;
-    background-image: url(../images/2011m_bg.png);
+    background-image: url(../images/2011_bg.png);
     background-size: cover;
     background-attachment: fixed;
     background-position-x: -100px;
