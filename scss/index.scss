@@ -42,7 +42,7 @@ main {
             width: $width-wide;
             height: $height-wide;
             color: $color-main;
-            font-size: 0.5625rem;  // 10pt
+            font-size: 0.5625rem; 
             animation: textRotation 8s linear infinite;
 
             @keyframes textRotation {
@@ -53,8 +53,8 @@ main {
                     transform: rotate(360deg);
                 }
             }
-
-            span {
+          
+            span {  // 자바스크립트용
                 position: absolute;
                 left: 50%;
                 font-size: 0.5625rem;
@@ -391,7 +391,7 @@ main {
             width: 99.5%;
             height: $height-wide;
             background: {
-                color: #fb7829;
+                color: $color-point;
             }
             transform: skew(8deg) rotate(8deg);
 
@@ -426,7 +426,8 @@ main {
                 line-height: 1.2;
                 color: $color-second;
                 opacity: 0;
-                transition: opacity 1s ease 1s;
+                transform: translateX(-50px);
+                transition: opacity 0.7s ease 1s, transform 0.7s ease 1s;
                 
                 @include responsive(large-screens) {
                     margin-left: 9%;
@@ -455,7 +456,8 @@ main {
 
                 .collection-text {
                     opacity: 0;
-                    transition: opacity 1s ease 1.5s;
+                    transform: translateY(10px);
+                    transition: opacity 0.5s ease 1.5s, transform 0.5s ease 1.5s;
 
                     @include responsive(large-screens) {
                         padding-left: 10px;
@@ -482,7 +484,8 @@ main {
                         display: block;
                         margin-bottom: 45px;
                         opacity: 0;
-                        transition: opacity 1s ease 2s;
+                        transform: translateX(10px);
+                        transition: opacity 0.3s ease 2s, transform 0.3s ease 2s;
 
                         // background-color: lightgreen;
                     }
@@ -505,12 +508,13 @@ main {
     
                 .col-btn {  // detail-button
                     margin-right: -15px;
-                    opacity: 0;
-                    transition: opacity 1s ease 2s;
+                    // opacity: 0;
+                    transform: scale(0);
+                    transition: transform 0.5s ease 2s;
                     
                     @include responsive(large-screens) {
                         margin-right: 300px;
-                        transition: opacity 1s ease 2.5s;
+                        transition:  transform 0.5s ease 2.5s;
                     }
                     .circle-text {
                         color: $color-second;
@@ -532,7 +536,7 @@ main {
                 width: 100%;  // 600px
                 height: 100%;
                 opacity: 0;
-                transition: opacity 1s ease 2.2s;
+                transition: opacity 0.5s ease 2.2s;
                 // background-color: lightblue;
 
                 @include responsive(large-screens) {
@@ -621,7 +625,8 @@ main {
             margin-bottom: 5%;
             font-size: 2.5rem; 
             opacity: 0;
-            transition: opacity 1.5s ease;
+            transform: translateY(50px);
+            transition: opacity 0.5s ease, transform 0.5s ease;
             
             @include responsive(large-screens) {
                 margin-bottom: 65px;
@@ -670,6 +675,8 @@ main {
                                 bottom: 0;
                                 width: 100%;
                                 font-size: 1.3rem;
+                                transform: translateY(40px);
+                                transition: opacity 0.5s, transform 0.5s;
                             }
                         }
                     }
@@ -694,7 +701,7 @@ main {
                                 width: 93.333%;
                                 opacity: 0;
                                 transform: translateX(50px);
-                                transition: opacity 1.3s, transform 1.3s;
+                                transition: opacity 0.5s, transform 0.5s;
                             }
                         }
                     }
@@ -728,7 +735,7 @@ main {
                             @include responsive(large-screens) {
                                 opacity: 0;
                                 transform: translateX(-50px);
-                                transition: opacity 1.3s, transform 1.3s;
+                                transition: opacity 0.5s, transform 0.5s;
                             }
                         }
                     }
@@ -769,7 +776,7 @@ main {
                                 width: 85.714%;
                                 opacity: 0;
                                 transform: translateX(50px);
-                                transition: opacity 1.3s, transform 1.3s;
+                                transition: opacity 0.5s, transform 0.5s;
                             }
                         }
                     }
@@ -820,7 +827,7 @@ main {
                                 width: 93.548%;
                                 opacity: 0;
                                 transform: translateX(50px);
-                                transition: opacity 1.3s, transform 1.3s;
+                                transition: opacity 0.5s, transform 0.5s;
                             }
                         }
                     }
@@ -999,62 +1006,62 @@ main {
         //     }
         // }
         
-        .main-inform-line {
-            margin: 0 2.777%;
-            div{
-                position: absolute;
-                z-index: 1;
-                width: 94.444%;
-                height: 2px;
-                border: 2px solid $color-second;
-            }
+        // .main-inform-line {
+        //     margin: 0 2.777%;
+        //     div{
+        //         position: absolute;
+        //         z-index: 1;
+        //         width: 94.444%;
+        //         height: 2px;
+        //         border: 2px solid $color-second;
+        //     }
     
-            .info-line1 {
-                top: 250px;
-                animation: seesawTop 3s ease-in-out infinite;
+        //     .info-line1 {
+        //         top: 250px;
+        //         animation: seesawTop 3s ease-in-out infinite;
     
-                @keyframes seesawTop {
-                    0% {
-                        transform: rotate(2deg);
-                    }
-                    50% {
-                        transform: rotate(-2deg);
-                    }
+        //         @keyframes seesawTop {
+        //             0% {
+        //                 transform: rotate(2deg);
+        //             }
+        //             50% {
+        //                 transform: rotate(-2deg);
+        //             }
     
-                    100% {
-                        transform: rotate(2deg);
+        //             100% {
+        //                 transform: rotate(2deg);
     
-                    }
-                }
+        //             }
+        //         }
     
-                @include responsive(large-screens) {
-                    top: 150px;
-                }
-            }
+        //         @include responsive(large-screens) {
+        //             top: 150px;
+        //         }
+        //     }
     
-            .info-line2 {
-                bottom : 130px;
-                animation: seesawBottom 3s ease-in-out infinite;
+        //     .info-line2 {
+        //         bottom : 130px;
+        //         animation: seesawBottom 3s ease-in-out infinite;
     
-                @keyframes seesawBottom {
-                    0% {
-                        transform: rotate(-2deg);
-                    }
-                    50% {
-                        transform: rotate(2deg);
-                    }
+        //         @keyframes seesawBottom {
+        //             0% {
+        //                 transform: rotate(-2deg);
+        //             }
+        //             50% {
+        //                 transform: rotate(2deg);
+        //             }
     
-                    100% {
-                        transform: rotate(-2deg);
+        //             100% {
+        //                 transform: rotate(-2deg);
     
-                    }
-                }
+        //             }
+        //         }
     
-                @include responsive(large-screens) {
-                    bottom: 133px;
-                }
-            }
-        }  // main-inform-line
+        //         @include responsive(large-screens) {
+        //             bottom: 133px;
+        //         }
+        //     }
+        // }  // main-inform-line
 
         .title-btn-wrap {
             display: flex;
@@ -1621,12 +1628,20 @@ main {
                                 size: 3rem;
                             }
                         }
+
+                        &.visible {
+                            opacity: 1;
+                            transform: translateX(0);
+                        }
                     }
 
                     .sns-txt {
                         font-size: 1rem;
                         color: $color-gray;
-                        
+                        opacity: 0;
+                        transform: translateY(20px);
+                        translate: opacity 0.5s ease 0.5s, transform 0.5 ease 0.5;
+
                         @include responsive(large-screens) {
                             font-size: 1.3rem;
                         }
@@ -1636,19 +1651,16 @@ main {
                 .left-txt {
                     opacity: 0;
                     transform: translateX(-15px);
-                    transition: opacity 1.5s ease, transform 1s ease;
+                    transition: opacity 0.5s ease, transform 0.5s ease;
                 }
 
                 .right-txt {
                     opacity: 0;
                     transform: translateX(15px);
-                    transition: opacity 1.5s ease, transform 1s ease;
+                    transition: opacity 0.5s ease, transform 0.5s ease;
                 }
 
-                &.visible {
-                    opacity: 1;
-                    transform: translateX(0);
-                }
+                
 
                 .sns-img {
                     overflow: hidden;
@@ -1727,7 +1739,7 @@ main {
                     }
 
                     @include responsive(large-screens) {
-                        width: 593px;
+                        width: 580px;
                         height: 615px;
                         margin-right: 0;
                     }
