@@ -199,20 +199,20 @@ $(function() {
     
             if (windowMiddle > imgOffset && $img.css('opacity') == 0) {
                 if (mainWindowWidth < 768) {
-                    $img.animate({
-                        opacity: 1
-                    }, 500);
-    
-                    $title.animate({
-                        opacity: 1
-                    }, 300);
+                    $img.stop().css({
+                        'opacity': '1',
+                    });
+                    $title.stop().css({
+                        'opacity': '1',
+                        'transform': 'translateY(0)'
+                    });
                 } else {
-                    $img.css({
+                    $img.stop().css({
                         'opacity': '1',
                         'transform': 'translateX(0)'
                     });
     
-                    $title.css({
+                    $title.stop().css({
                         'opacity': '1',
                         'transform': 'translateY(0)'
                     });
@@ -332,18 +332,25 @@ $(function() {
     });
 
     //--------------------- sns ---------------------
-    $(window).scroll(function() {
+    $(window).on('scroll', function() {
+        var scrollTop = $(window).scrollTop();
         var windowHeight = $(window).height();
         var windowMiddle = $(window).scrollTop() + windowHeight / 2;
-    
+        var snsHeight = $('.main-sns').offset().top;
+        
         $('.sns-title').each(function() {
             var txtOffset = $(this).offset().top;
             if (windowMiddle > txtOffset && $(this).css('opacity') == 0) {
                 $(this).addClass('visible');
+                $(this).siblings('.sns-txt').addClass('visible');
             }
         });
-    });
 
+        if(scrollTop <= (snsHeight - windowHeight)) {
+            $('.sns-title').removeClass('visible');
+            $('.sns-txt').removeClass('visible');
+        }
+    });
     // 초기 로드 시 가시성 확인
     $(window).scroll();
     
