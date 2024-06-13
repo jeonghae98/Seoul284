@@ -501,7 +501,7 @@ main .sec1 .container .sec1-title h2 {
   main .sec1 .container .sec1-title h2 {
     margin-top: 80px;
     font-size: 2.5rem;
-    color: #8d8f8e;
+    color: #323232;
   }
 }
 main .sec1 .container .sec1-title p {
@@ -558,7 +558,7 @@ main .sec1 .container .sec1-info p {
   margin: 0 auto;
   padding-bottom: 10px;
   font-size: 0.9rem;
-  color: #565656;
+  color: #323232;
 }
 main .sec1 .container .sec1-menu {
   display: flex;
@@ -677,7 +677,7 @@ main .sec2 .container .sec2-title p {
   padding-bottom: 20px;
   font-size: 1rem;
   font-weight: 400;
-  color: #565656;
+  color: #323232;
 }
 @media only screen and (min-width: 1024px) {
   main .sec2 .container .sec2-title p {
@@ -707,7 +707,7 @@ main .sec2 .container .img-box .img-box-inner {
 main .sec2 .container .img-box .img-box-inner p {
   font-size: 0.7rem;
   padding: 0 0 150px 0;
-  color: #c2c2c2;
+  color: #323232;
 }
 @media only screen and (min-width: 1024px) {
   main .sec2 .container .img-box .img-box-inner p {
@@ -739,7 +739,7 @@ main .sec3 .container .sec3-box1 img {
 main .sec3 .container p {
   margin-top: 90px;
   font-size: 0.7rem;
-  color: #c2c2c2;
+  color: #323232;
 }
 main .sec3 .container .sec3-box2 strong {
   font-size: 1.2rem;
@@ -762,7 +762,7 @@ main .sec3 .container .sec3-box2 img {
 main .sec3 .container p {
   margin-top: 90px;
   font-size: 0.7rem;
-  color: #c2c2c2;
+  color: #323232;
 }
 main .sec3 .container .sec3-box3 strong {
   font-size: 1.2rem;
@@ -805,7 +805,7 @@ main .sec4 .sec4-title p {
   margin: auto;
   font-size: 0.87rem;
   text-align: center;
-  color: #565656;
+  color: #323232;
 }
 @media only screen and (min-width: 1024px) {
   main .sec4 .sec4-title p {

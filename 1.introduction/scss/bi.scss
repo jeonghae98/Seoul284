@@ -53,7 +53,7 @@ main {
                     @include responsive (large-screens) {
                         margin-top: 80px;
                         font-size: 2.5rem;
-                        color: #8d8f8e;
+                        color: $color-gray2;
                     }
                 }
                 p {
@@ -102,7 +102,7 @@ main {
                    margin: 0 auto;
                    padding-bottom: 10px;
                    font-size: 0.9rem;
-                   color: #565656;
+                   color: $color-gray2;
    
                 }
             } //sec1-info
@@ -216,7 +216,7 @@ main {
                     padding-bottom: 20px;
                     font-size: 1rem;
                     font-weight: $font-regular;
-                    color: #565656;
+                    color: $color-gray2;
 
                     @include responsive (large-screens) {
                         font-size: 1rem;
@@ -248,7 +248,7 @@ main {
                     p{
                         font-size: 0.7rem;
                         padding: 0 0 150px 0;
-                        color: #c2c2c2;
+                        color: $color-gray2;
                         // background-color: #914c21;
                         @include responsive (large-screens) {
                             width: 300px; height: 60px; 
@@ -293,7 +293,7 @@ main {
             p {
                 margin-top: 90px;
                 font-size: 0.7rem;
-                color: #c2c2c2;
+                color: $color-gray2;
                 @include responsive (large-screens) {
                     
                 }
@@ -325,7 +325,7 @@ main {
             p {
                 margin-top: 90px;
                 font-size: 0.7rem;
-                color: #c2c2c2;
+                color: $color-gray2;
             }
             .sec3-box3 {
                 // width: 80%;
@@ -371,7 +371,7 @@ main {
                 margin: auto;
                 font-size: 0.87rem;
                 text-align: center;
-                color: #565656;
+                color: $color-gray2;
                 @include responsive (large-screens) {
                     width: 20%;
                     font-size: 1rem;
