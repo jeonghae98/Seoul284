@@ -102,17 +102,28 @@ $(function() {
                     height: '1238px'
                   }, 2000);
     
-                $('.main-collection-list').css('opacity', '1');
+                $('.main-collection-list').css({
+                    'opacity': 1,
+                    'transform': 'translateX(0)'
+                });
             }
 
 
             // <공통>
             $('.main-collection-row-line').animate({
                 width: '100%'
-            }, 2000);
-            $('.collection-title').css('opacity', '1');
-            $('.collection-text').css('opacity', '1');
-            $('.col-btn').css('opacity', '1');
+            }, 1500);
+            $('.collection-title').css({
+                'opacity': 1,
+                'transform': 'translateX(0)'
+            });
+            $('.collection-text').css({
+                'opacity': 1,
+                'transform': 'translateY(0)'
+            });
+            $('.col-btn').css({
+                'transform': 'scale(1)'
+            });
             $('.collection-image').css('opacity', '1');
         }
     }); 
@@ -132,6 +143,10 @@ $(function() {
         var mainWindowWidth = $(window).width();
 
         if (scrollPos <= (exTitleTop - windowHeight)) {
+            $('.exhibition-title').css({
+                'opacity': 0,
+                'transform': 'translateY(50px)'
+            });
             $('.exhibition-content .ex').each(function() {
                 var $img = $(this).find('.ex-img img');
                 var $title = $(this).find('.ex-txt .title');
@@ -157,7 +172,8 @@ $(function() {
                     });
                     $title.stop().css({
                         'opacity': 0,
-                        'transition': 'opacity 0.5s'
+                        'transform': 'translateY(40px)',
+                        'transition': 'opacity 0.5s, transform 0.5s'
                     });
                 }
             });
@@ -171,19 +187,23 @@ $(function() {
         var windowHeight = $(window).height();
         var windowMiddle = $(window).scrollTop() + windowHeight / 2;
         var mainWindowWidth = $(window).width();
-        $('.exhibition-title').css('opacity', '1');
+        $('.exhibition-title').css({
+            'opacity': '1',
+            'transform': 'translateY(0)'
+        });
     
         $('.exhibition-content .ex').each(function() {
             var $img = $(this).find('.ex-img > img');
+            var $title = $(this).find('.ex-txt .title');
             var imgOffset = $img.offset().top;
     
             if (windowMiddle > imgOffset && $img.css('opacity') == 0) {
                 if (mainWindowWidth < 768) {
                     $img.animate({
                         opacity: 1
-                    }, 1000);
+                    }, 500);
     
-                    $(this).find('.ex-txt .title').animate({
+                    $title.animate({
                         opacity: 1
                     }, 300);
                 } else {
@@ -192,9 +212,10 @@ $(function() {
                         'transform': 'translateX(0)'
                     });
     
-                    $(this).find('.ex-txt .title').animate({
-                        opacity: 1
-                    }, 300);
+                    $title.css({
+                        'opacity': '1',
+                        'transform': 'translateY(0)'
+                    });
                 }
             }
         });
@@ -315,7 +336,7 @@ $(function() {
         var windowHeight = $(window).height();
         var windowMiddle = $(window).scrollTop() + windowHeight / 2;
     
-        $('.content-txt').each(function() {
+        $('.sns-title').each(function() {
             var txtOffset = $(this).offset().top;
             if (windowMiddle > txtOffset && $(this).css('opacity') == 0) {
                 $(this).addClass('visible');
