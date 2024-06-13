@@ -491,7 +491,7 @@ main .space .space-title h1 {
 }
 main .space .space-title p {
   font-size: 0.9rem;
-  color: #b6b6b6;
+  color: #323232;
 }
 @media only screen and (min-width: 1024px) {
   main .space .space-title p {
@@ -520,16 +520,6 @@ main .space .sec1 {
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    animation-duration: 4s;
-    animation-name: move;
-  }
-  @keyframes move {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
   }
 }
 main .space .sec1 img {
@@ -568,7 +558,7 @@ main .space .sec1 p {
     width: 30%;
     margin-right: 55%;
     padding-bottom: 0px;
-    color: #646464;
+    color: #323232;
     font-size: 1.1rem;
     font-weight: 400;
     text-align: right;
@@ -629,7 +619,7 @@ main .space .sec2 p {
   main .space .sec2 p {
     width: 32%;
     margin-left: 55%;
-    color: #646464;
+    color: #323232;
     font-size: 1.1rem;
     font-weight: 400;
     text-align: left;
@@ -661,7 +651,6 @@ main .space .slide1 .box1 {
   main .space .slide1 .box1 {
     margin-bottom: 200px;
     padding: 0px 0 0px 0;
-    background-image: url(../images/sd_bg.png);
     background-repeat: no-repeat;
     background-size: cover;
   }

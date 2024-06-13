@@ -899,7 +899,7 @@ main .vission-box .container .vission2 .flex-box p {
   font-size: 1.2rem;
   color: #fff;
   border-radius: 50%;
-  background: linear-gradient(to right, #ff6000, #ff6000, #ffffff);
+  background: linear-gradient(to right, #ff6000, #ff9b5d);
 }
 @media only screen and (min-width: 1024px) {
   main .vission-box .container .vission2 .flex-box p {
@@ -910,10 +910,10 @@ main .vission-box .container .vission2 .flex-box p {
   }
 }
 main .vission-box .container .vission2 .flex-box p:nth-child(3) {
-  background: linear-gradient(to right, #ff8665, #ff8665, #ffffff);
+  background: linear-gradient(to right, #ff8665, #ffb5a1);
 }
 main .vission-box .container .vission2 .flex-box p:last-child {
-  background: linear-gradient(to right, #d89f90, #d89f90, #ffffff);
+  background: linear-gradient(to right, #d89f90, #f6b9aa);
 }
 main .vission-box .container .vission2 .flex-box .plus-ic {
   font-size: 2rem;

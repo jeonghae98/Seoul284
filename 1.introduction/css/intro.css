@@ -489,7 +489,7 @@ main .container section.main-title p {
   margin: 0 auto;
   font-size: 1rem;
   font-weight: 400;
-  color: #353535;
+  color: #323232;
   animation-duration: 2s;
   animation-name: move;
 }
@@ -617,7 +617,7 @@ main section.box1 {
   border-left: none;
   border-right: none;
   border-top: none;
-  background-image: url(../images/1900_bg.png);
+  background-image: url(../images/1900m_bg.png);
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -687,14 +687,14 @@ main section.box1 .box1-line .container .box1-txt .box1-title p {
   margin: 0 auto;
   font-size: 16px;
   font-weight: 400;
-  color: #3f3f3f;
+  color: #323232;
 }
 @media only screen and (min-width: 1024px) {
   main section.box1 .box1-line .container .box1-txt .box1-title p {
     width: 30%;
     margin-bottom: 1%;
     margin-left: 58%;
-    color: #3f3f3f;
+    color: #323232;
   }
 }
 main section.box1 .box1-line .container .box1-txt ul.years {
@@ -929,7 +929,7 @@ main section.box2 .box2-line .box2-title p {
   margin: 0 auto;
   font-size: 16px;
   font-weight: 400;
-  color: #565656;
+  color: #323232;
 }
 @media only screen and (min-width: 1024px) {
   main section.box2 .box2-line .box2-title p {
@@ -937,7 +937,7 @@ main section.box2 .box2-line .box2-title p {
     width: 60%;
     padding-right: 38.3%;
     margin-bottom: 1%;
-    color: #adadad;
+    color: #323232;
   }
 }
 main section.box2 .box2-line ul.years {
@@ -945,7 +945,7 @@ main section.box2 .box2-line ul.years {
   margin: 0 auto;
   font-weight: 400;
   font-size: 1.2rem;
-  color: #565656;
+  color: #323232;
 }
 @media only screen and (min-width: 1024px) {
   main section.box2 .box2-line ul.years {
@@ -1159,7 +1159,7 @@ main section.box3 .box3-line .box-txt .box3-title p {
   margin: 0 auto;
   font-size: 16px;
   font-weight: 400;
-  color: #565656;
+  color: #323232;
 }
 @media only screen and (min-width: 1024px) {
   main section.box3 .box3-line .box-txt .box3-title p {
@@ -1167,7 +1167,7 @@ main section.box3 .box3-line .box-txt .box3-title p {
     padding-right: 30%;
     margin-right: 20%;
     margin-bottom: 1%;
-    color: #adadad;
+    color: #323232;
   }
 }
 main section.box3 .box3-line .box-txt ul.years {
@@ -1175,7 +1175,7 @@ main section.box3 .box3-line .box-txt ul.years {
   margin: 0 auto;
   font-weight: 400;
   font-size: 1.2rem;
-  color: #565656;
+  color: #323232;
 }
 @media only screen and (min-width: 1024px) {
   main section.box3 .box3-line .box-txt ul.years {
@@ -1304,7 +1304,7 @@ main section.box4 {
   width: 100%;
   height: auto;
   margin-bottom: 200px;
-  background-image: url(../images/2011_bg.png);
+  background-image: url(../images/2011m_bg.png);
   background-size: cover;
   background-attachment: fixed;
   background-position-x: -100px;
@@ -1370,7 +1370,7 @@ main section.box4 .box4-line .box4-title p {
   margin: 0 auto;
   font-size: 16px;
   font-weight: 400;
-  color: #565656;
+  color: #323232;
 }
 @media only screen and (min-width: 1024px) {
   main section.box4 .box4-line .box4-title p {
@@ -1378,7 +1378,7 @@ main section.box4 .box4-line .box4-title p {
     width: 60%;
     padding-right: 38.3%;
     margin-bottom: 1%;
-    color: #adadad;
+    color: #323232;
   }
 }
 main section.box4 .box4-line ul.years {
@@ -1386,7 +1386,7 @@ main section.box4 .box4-line ul.years {
   margin: 0 auto;
   font-weight: 400;
   font-size: 1.2rem;
-  color: #565656;
+  color: #323232;
 }
 @media only screen and (min-width: 1024px) {
   main section.box4 .box4-line ul.years {

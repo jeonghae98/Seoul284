@@ -416,7 +416,7 @@ main {
                         font-size: 1.2rem;
                         color: $color-second;
                         border-radius: 50%;
-                        background: linear-gradient(to right,#ff6000,#ff6000 , #ffffff);
+                        background: linear-gradient(to right,#ff6000,#ff9b5d);
                         @include responsive (large-screens) {
                             width: 200px; height: 200px;
                             line-height: 200px;
@@ -424,10 +424,10 @@ main {
                         }
                     }
                     p:nth-child(3) {
-                        background: linear-gradient(to right,#ff8665,#ff8665, #ffffff)
+                        background: linear-gradient(to right,#ff8665,#ffb5a1)
                     }
                     p:last-child {
-                        background: linear-gradient(to right,#d89f90, #d89f90, #ffffff)
+                        background: linear-gradient(to right,#d89f90, #f6b9aa)
 
                     }
                     .plus-ic {

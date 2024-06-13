@@ -20,15 +20,15 @@ $(function() {
             }
                 
             if ($scrollTop < 700) {
-                $('.img-box').stop().animate({ marginTop: '1000px' }, 1000);
+                $('.img-box').stop().animate({ marginTop: '1000px' }, 500);
             } else {
-                $('.img-box').stop().animate({ marginTop: '0px' }, 1000);
+                $('.img-box').stop().animate({ marginTop: '0px' }, 500);
             }
 
             if ($scrollTop < 1100) {
-                $('.sec3').stop().animate({ opacity: '0' }, 1000);
+                $('.sec3').stop().animate({ opacity: '0' }, 700);
             } else {
-                $('.sec3').stop().animate({ opacity: '1' }, 1000);
+                $('.sec3').stop().animate({ opacity: '1' }, 700);
             }
 
 
@@ -50,9 +50,9 @@ $(function() {
             $('.plus').stop().animate({ opacity: '0' }, 1000);
             $('.plus').stop().animate({ marginTop: '-200px' }, 300);
         } else {
-            $('.sec1').stop().animate({ opacity: '1' }, 200);
+            $('.sec1').stop().animate({ opacity: '1' }, 100);
             $('.plus').stop().animate({ opacity: '1' }, 1000);
-            $('.plus').stop().animate({ marginTop: '0px' }, 1500);
+            $('.plus').stop().animate({ marginTop: '0px' }, 500);
         }
 
         if ($scrollTop < 200) {
@@ -60,27 +60,27 @@ $(function() {
             $('.plus2').stop().animate({ opacity: '0' }, 1000);
             $('.plus2').stop().animate({ marginTop: '-200px' }, 300);
         } else {
-            $('.sec2').stop().animate({ opacity: '1' }, 500);
+            $('.sec2').stop().animate({ opacity: '1' }, 200);
             $('.plus2').stop().animate({ opacity: '0' }, 1000);
-            $('.plus2').stop().animate({ marginTop: '0px' }, 2000);
+            $('.plus2').stop().animate({ marginTop: '0px' }, 700);
         }
 
         if ($scrollTop < 200) {
             $('.sec3').stop().animate({ opacity: '0' }, 300);
         } else {
-            $('.sec3').stop().animate({ opacity: '1' }, 700);
+            $('.sec3').stop().animate({ opacity: '1' }, 300);
         }
 
         if ($scrollTop < 1200) {
             $('.vission').stop().animate({ opacity: '0' }, 1000);
         } else {
-            $('.vission').stop().animate({ opacity: '1'  }, 1000);
+            $('.vission').stop().animate({ opacity: '1'  }, 500);
         }
 
         if ($scrollTop < 1800) {
             $('.vission2').stop().animate({ opacity: '0' }, 1000);
         } else {
-            $('.vission2').stop().animate({ opacity: '1'  }, 1000);
+            $('.vission2').stop().animate({ opacity: '1'  }, 500);
         }
         }
 
