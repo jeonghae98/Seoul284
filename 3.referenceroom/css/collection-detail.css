@@ -612,6 +612,9 @@ header .header-search-box.sub-visible {
     width: 200px;
   }
 }
+.collection-detail-page .collec-image-desc-box .other-images-box .other-images.first {
+  margin-right: 20px;
+}
 .collection-detail-page .collec-image-desc-box .other-images-box .other-images .last-image {
   display: none;
 }
