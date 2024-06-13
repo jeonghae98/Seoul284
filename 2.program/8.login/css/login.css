@@ -624,9 +624,9 @@ footer .footerlogo-info .footer-content-box .footer-info-box .info {
   }
 }
 footer .footerlogo-info .footer-content-box .footer-info-box .info div strong {
-  font-weight: 400;
+  font-weight: 500;
   font-size: 1rem;
-  color: #717171;
+  color: #353535;
 }
 @media only screen and (min-width: 1024px) {
   footer .footerlogo-info .footer-content-box .footer-info-box .info div strong {
