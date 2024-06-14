@@ -158,6 +158,7 @@ header .logo-gnb-rightmenu {
   }
 }
 header .logo-gnb-rightmenu.active {
+  z-index: 2;
   background-color: #fff;
 }
 header .logo-gnb-rightmenu .container {
