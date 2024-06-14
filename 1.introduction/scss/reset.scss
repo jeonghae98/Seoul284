@@ -11,6 +11,11 @@ body {
         size: 16px;
         family: $font;
     }
+
+    &.stop-scroll {
+        height: 100%;
+        overflow: hidden;
+    }
 }
 ol,
 ul {

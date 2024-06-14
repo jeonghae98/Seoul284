@@ -38,6 +38,7 @@ $(function() {
             $('.main-menu').css({
                 'display': 'block',
                 'position': 'fixed',
+                'z-index': 100,
                 'top': '12vh',
                 'right': 0,
                 'borderTop': '1px solid #dbdbdb',
