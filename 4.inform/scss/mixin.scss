@@ -142,7 +142,7 @@
         // background-color: bisque;
         font: {
             weight: $font-medium;
-            size: 1rem; 
+            size: 0.875rem; 
         }
         text-align: center;
 
@@ -152,13 +152,12 @@
             width: 70px;
             font: {
                 weight: $font-regular; 
-                size: 1.333rem;
+                size: 1.167rem;
             }
         }
     }
     
     .fixed-number {
-        
         color: $color-point;
     }
 }
@@ -167,10 +166,13 @@
 
 
 @mixin list-title() {
-    font-size: 1.167rem; 
-    
+    font: {
+        weight: $font-regular;
+        size: 1rem; 
+    }
+
     @include responsive(large-screens) {
-        font-size: 1.5rem; 
+        font-size: 1.333rem; 
         // background-color: lightgreen;
     }
 }
@@ -199,7 +201,10 @@
 
             li {
                 a {
-                    font-size: 1.167rem; 
+                    font: {
+                        weight: $font-regular;
+                        size: 1.167rem;
+                    } 
 
                     @include responsive(large-screens) {
                         font-size: 1.333rem;  // 16pt
@@ -218,7 +223,7 @@
                a {
                     &:hover,
                     &.num-selected {
-                        font-weight: $font-regular;
+                        font-weight: $font-medium;
                         color: $color-point;
                         text-decoration: underline $color-point;
                     }

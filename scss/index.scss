@@ -34,33 +34,59 @@ main {
         justify-content: center;
         width: 80px;
         height: 80px;
-        border-radius: 100%;
+        border-radius: 100vmax;
         cursor: pointer;
+        // background-color: #ff8665;
 
-        .circle-text {
-            position: absolute;
-            width: $width-wide;
-            height: $height-wide;
-            color: $color-main;
-            font-size: 0.5625rem; 
-            animation: textRotation 8s linear infinite;
+        @include responsive(large-screens) {
+            position: relative;
+            width: 100px;
+            height: 100px;
+            border-radius: 100vmax;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
 
-            @keyframes textRotation {
-                0% {
-                    transform: rotate(0deg);
-                }
-                100% {
-                    transform: rotate(360deg);
-                }
-            }
-          
-            span {  // 자바스크립트용
+        .btn-txt {
                 position: absolute;
-                left: 50%;
-                font-size: 0.5625rem;
-                transform-origin: 0 40px;
-            }
-        }  // circle-text
+                width: $width-wide;
+                height: $height-wide;
+                color: $color-main;
+                font-size: 0.5625rem; 
+                animation: textRotation 8s linear infinite;
+    
+                @keyframes textRotation {
+                    to {
+                        transform: rotate(360deg);
+                    }
+                }
+
+                @include responsive(large-screens) {
+                    font-size: 0.875rem;
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    color: #000;
+                }
+
+            .circle-text {
+                span {  // 자바스크립트용
+                    position: absolute;
+                    left: 50%;
+                    // transform: translateX(-50%);
+                    font-size: 0.5625rem;
+                    transform-origin: 0 40px;
+    
+                    @include responsive(large-screens) {
+                        position: absolute;
+                        left: 50%;
+                        font-size: 0.75rem;
+                        transform-origin: 0 51px;
+                    }
+                }
+            } // circle-text
+        }  
 
         .button {
             position: absolute;
@@ -73,14 +99,15 @@ main {
             border-radius: 100%;
             border: 1px solid $color-main;
 
+            @include responsive(large-screens) {
+                // left: 5px;    
+            }
             .btn-line {
                 width: 16px;
                 height: 2px;
                 margin-bottom: 5px;
                 border-radius: 2px;
                 background-color: $color-main;
-                // transition: transform 0.3s ease;
-                // transform-origin: center;
             }
 
             .btn-line:last-child {
@@ -135,7 +162,7 @@ main {
                 size: 1170px 788px;
                 // color: aqua;
             }
-            transition: opacity 1.5s ease 2.5s, background-position-y 1.5s ease 2s;
+            transition: opacity 1s ease-out 1.5s, background-position-y 1s ease-out 1.5s;
             
             @include responsive(large-screens) {
                 background: {
@@ -186,30 +213,30 @@ main {
                     // left: 69.4%;
                     right: 28.6%;  // 194px // 
                     z-index: 1;
-                    width: 7px; // 성민 수정
-                    height: 7px; // 성민 수정
+                    width: 7px;
+                    height: 7px;
                     border-radius: 50%;
                     background-color: $color-main;
             
                     @include responsive(large-screens) {
                         right: 397px;
-                        width: 10px; // 성민 수정
-                        height: 10px; // 성민 수정
+                        width: 10px;
+                        height: 10px;
                     }
                 }
             
                 .first-circle {
                     display: none;
-                    top: 315px; left: -3px; // 성민 수정
+                    top: 315px; left: -3px;
                     // opacity: 0;
                     
                     @include responsive(large-screens) {
-                        top: 535px; left: -4px; // 성민 수정
+                        top: 535px; left: -4px;
                     }
                 }
                 .second-circle {
                     display: none;
-                    top: 527px; left: -3px; // 성민 수정
+                    top: 527px; left: -3px;
             
                     @include responsive(large-screens) {
                         top: 975px; left: -4px;
@@ -280,15 +307,12 @@ main {
             background-position-y: 600px;
             background-clip: text;
             opacity: 0;
-            transition: opacity 0.3s ease-in 1s;
+            transition: opacity 0.3s ease-in 0.6s;
 
             
             @include responsive(large-screens) {
                 right: 450px; top: 500px;
                 font-size: 3.5rem;  
-                transition: opacity 0.3s ease-in 1.5s;
-
-                
             }
         }
 
@@ -300,12 +324,11 @@ main {
             background-position-y: 600px;
             background-clip: text;
             opacity: 0;
-            transition: opacity 0.3s ease-in 1.5s;
+            transition: opacity 0.3s ease-in 1s;
  
             @include responsive(large-screens) {
                 left: 75%; top: 900px;
                 font-size: 6rem;
-                transition: opacity 0.3s ease-in 2s;
             }
         }
         .intro-text-box {
@@ -325,8 +348,8 @@ main {
                     size: 2.3rem;
                 }
                 opacity: 0;
-                transform: translateX(-30px);
-                transition: opacity 1.5s ease 3s, transform 1.5s ease 2.5s;
+                transform: translateX(30px);
+                transition: opacity 1s ease 2s, transform 1s ease 2s;
 
                 @include responsive(large-screens) {
                     font: {
@@ -343,7 +366,7 @@ main {
                 
                 opacity: 0;
                 transform: translateX(-20px);
-                transition: opacity 1.5s ease 3.5s, transform 1.5s ease 3s;
+                transition: opacity 1s ease 2.5s, transform 1s ease 2.5s;
 
                 @include responsive(large-screens) {
                     width: 310px;
@@ -359,9 +382,8 @@ main {
         .detail-button {
             margin-top: 30px;
             margin-left: 20px;
-            
             opacity: 0;
-            transition: opacity 1.5s ease 4s;
+            transition: opacity 0.5s ease-in 2.8s;
 
             @include responsive(large-screens) {
                 margin-top: -65px;
@@ -494,6 +516,7 @@ main {
                         @include responsive(large-screens) {
                             padding-left: 10px;
                         }
+
                         li {
                             @include responsive(large-screens) {
                                 font: {
@@ -503,19 +526,26 @@ main {
                                 color: $color-second;
                             }
                         }
+
+                        .etc {
+                            line-height: 0.5;
+                            padding-top: 5px;
+                            padding-left: 30px;
+                        }
                     }
                 }
     
                 .col-btn {  // detail-button
                     margin-right: -15px;
-                    // opacity: 0;
-                    transform: scale(0);
-                    transition: transform 0.5s ease 2s;
+                    opacity: 0;
+                    transform: scale(0.5);
+                    transition: opacity 0.5s ease-in 2s, transform 0.5s ease-in 2s;
                     
                     @include responsive(large-screens) {
                         margin-right: 300px;
-                        transition:  transform 0.5s ease 2.5s;
+                        transition: opacity 0.5s ease-in 2.3s, transform 0.5s ease 2.3s;
                     }
+
                     .circle-text {
                         color: $color-second;
                     }
@@ -997,80 +1027,13 @@ main {
         position: relative;
         width: $width-wide;
         padding: 100px 0 150px;
-        background-color: #fb7829;
+        background-color: $color-point;
     
         @include responsive(large-screens) {
             overflow: hidden;
             height: 1300px;
             padding: 0;
         }
-
-        // &.fixed {
-        //     @include responsive(large-screens) {
-        //         position: sticky;
-        //         top: 0;
-        //         left: 0;
-        //         width: 100%;
-        //         // z-index: 999;
-        //     }
-        // }
-        
-        // .main-inform-line {
-        //     margin: 0 2.777%;
-        //     div{
-        //         position: absolute;
-        //         z-index: 1;
-        //         width: 94.444%;
-        //         height: 2px;
-        //         border: 2px solid $color-second;
-        //     }
-    
-        //     .info-line1 {
-        //         top: 250px;
-        //         animation: seesawTop 3s ease-in-out infinite;
-    
-        //         @keyframes seesawTop {
-        //             0% {
-        //                 transform: rotate(2deg);
-        //             }
-        //             50% {
-        //                 transform: rotate(-2deg);
-        //             }
-    
-        //             100% {
-        //                 transform: rotate(2deg);
-    
-        //             }
-        //         }
-    
-        //         @include responsive(large-screens) {
-        //             top: 150px;
-        //         }
-        //     }
-    
-        //     .info-line2 {
-        //         bottom : 130px;
-        //         animation: seesawBottom 3s ease-in-out infinite;
-    
-        //         @keyframes seesawBottom {
-        //             0% {
-        //                 transform: rotate(-2deg);
-        //             }
-        //             50% {
-        //                 transform: rotate(2deg);
-        //             }
-    
-        //             100% {
-        //                 transform: rotate(-2deg);
-    
-        //             }
-        //         }
-    
-        //         @include responsive(large-screens) {
-        //             bottom: 133px;
-        //         }
-        //     }
-        // }  // main-inform-line
 
         .title-btn-wrap {
             display: flex;
