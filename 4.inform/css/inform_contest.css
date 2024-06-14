@@ -608,7 +608,7 @@ main .inform .list-box .list .list-number {
   margin-left: 10px;
   margin-right: 10px;
   font-weight: 500;
-  font-size: 1rem;
+  font-size: 0.875rem;
   text-align: center;
 }
 @media only screen and (min-width: 1024px) {
@@ -618,7 +618,7 @@ main .inform .list-box .list .list-number {
     margin-right: 80px;
     width: 70px;
     font-weight: 400;
-    font-size: 1.333rem;
+    font-size: 1.167rem;
   }
 }
 main .inform .list-box .list .fixed-number {
@@ -630,7 +630,8 @@ main .inform .list-box .list .list-content {
   align-items: flex-start;
   width: 100%;
   margin-right: 15px;
-  font-size: 1.167rem;
+  font-weight: 400;
+  font-size: 1rem;
 }
 @media only screen and (min-width: 1024px) {
   main .inform .list-box .list .list-content {
@@ -642,7 +643,7 @@ main .inform .list-box .list .list-content {
 }
 @media only screen and (min-width: 1024px) {
   main .inform .list-box .list .list-content {
-    font-size: 1.5rem;
+    font-size: 1.333rem;
   }
 }
 main .inform .list-box .list .list-content .receipt ul {

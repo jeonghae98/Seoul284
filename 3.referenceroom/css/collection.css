@@ -679,6 +679,7 @@ header .header-search-box.sub-visible {
   }
 }
 .collection .page-number ul li a {
+  font-weight: 400;
   font-size: 1.167rem;
 }
 @media only screen and (min-width: 1024px) {
@@ -690,7 +691,7 @@ header .header-search-box.sub-visible {
   font-weight: 600;
 }
 .collection .page-number ul .number a:hover, .collection .page-number ul .number a.num-selected {
-  font-weight: 400;
+  font-weight: 500;
   color: #ff6000;
   -webkit-text-decoration: underline #ff6000;
           text-decoration: underline #ff6000;

@@ -570,6 +570,9 @@ header .header-search-box.sub-visible {
   width: 120px;
   font-weight: 500;
 }
+.collection-detail-page .collec-image-desc-box .collec-data table tr .cat-content {
+  font-weight: 400;
+}
 .collection-detail-page .collec-image-desc-box .other-images-box {
   position: relative;
   display: flex;
@@ -613,7 +616,12 @@ header .header-search-box.sub-visible {
   }
 }
 .collection-detail-page .collec-image-desc-box .other-images-box .other-images.first {
-  margin-right: 20px;
+  margin-right: 15px;
+}
+@media only screen and (min-width: 1024px) {
+  .collection-detail-page .collec-image-desc-box .other-images-box .other-images.first {
+    margin-right: 20px;
+  }
 }
 .collection-detail-page .collec-image-desc-box .other-images-box .other-images .last-image {
   display: none;
@@ -647,6 +655,7 @@ header .header-search-box.sub-visible {
   padding: 20px;
   border: 2px solid #ebebeb;
   font-size: 1rem;
+  font-weight: 400;
 }
 @media only screen and (min-width: 1024px) {
   .collection-detail-page .collec-image-desc-box .detail-desc-box .content-desc {

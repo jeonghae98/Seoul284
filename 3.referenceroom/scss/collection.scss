@@ -259,7 +259,10 @@ header {
 
             li {
                 a {
-                    font-size: 1.167rem; 
+                    font: {
+                        weight: $font-regular;
+                        size: 1.167rem;
+                    } 
 
                     @include responsive(large-screens) {
                         font-size: 1.333rem;  // 16pt
@@ -279,7 +282,7 @@ header {
                a {
                     &:hover,
                     &.num-selected {
-                        font-weight: $font-regular;
+                        font-weight: $font-medium;
                         color: $color-point;
                         text-decoration: underline $color-point;
                     }

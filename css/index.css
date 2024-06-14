@@ -482,10 +482,21 @@ main .detail-button {
   justify-content: center;
   width: 80px;
   height: 80px;
-  border-radius: 100%;
+  border-radius: 100vmax;
   cursor: pointer;
 }
-main .detail-button .circle-text {
+@media only screen and (min-width: 1024px) {
+  main .detail-button {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    border-radius: 100vmax;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+main .detail-button .btn-txt {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -494,18 +505,32 @@ main .detail-button .circle-text {
   animation: textRotation 8s linear infinite;
 }
 @keyframes textRotation {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
+  to {
     transform: rotate(360deg);
   }
 }
-main .detail-button .circle-text span {
+@media only screen and (min-width: 1024px) {
+  main .detail-button .btn-txt {
+    font-size: 0.875rem;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    color: #000;
+  }
+}
+main .detail-button .btn-txt .circle-text span {
   position: absolute;
   left: 50%;
   font-size: 0.5625rem;
   transform-origin: 0 40px;
+}
+@media only screen and (min-width: 1024px) {
+  main .detail-button .btn-txt .circle-text span {
+    position: absolute;
+    left: 50%;
+    font-size: 0.75rem;
+    transform-origin: 0 51px;
+  }
 }
 main .detail-button .button {
   position: absolute;
@@ -569,7 +594,7 @@ main section.main-intro .intro-bg-img {
   background-position-x: 30%;
   background-position-y: 600px;
   background-size: 1170px 788px;
-  transition: opacity 1.5s ease 2.5s, background-position-y 1.5s ease 2s;
+  transition: opacity 1s ease-out 1.5s, background-position-y 1s ease-out 1.5s;
 }
 @media only screen and (min-width: 1024px) {
   main section.main-intro .intro-bg-img {
@@ -712,14 +737,13 @@ main section.main-intro .year {
   -webkit-background-clip: text;
           background-clip: text;
   opacity: 0;
-  transition: opacity 0.3s ease-in 1s;
+  transition: opacity 0.3s ease-in 0.6s;
 }
 @media only screen and (min-width: 1024px) {
   main section.main-intro .year {
     right: 450px;
     top: 500px;
     font-size: 3.5rem;
-    transition: opacity 0.3s ease-in 1.5s;
   }
 }
 main section.main-intro .now-year {
@@ -732,14 +756,13 @@ main section.main-intro .now-year {
   -webkit-background-clip: text;
           background-clip: text;
   opacity: 0;
-  transition: opacity 0.3s ease-in 1.5s;
+  transition: opacity 0.3s ease-in 1s;
 }
 @media only screen and (min-width: 1024px) {
   main section.main-intro .now-year {
     left: 75%;
     top: 900px;
     font-size: 6rem;
-    transition: opacity 0.3s ease-in 2s;
   }
 }
 main section.main-intro .intro-text-box {
@@ -757,8 +780,8 @@ main section.main-intro .intro-text-box .intro-title {
   font-weight: 500;
   font-size: 2.3rem;
   opacity: 0;
-  transform: translateX(-30px);
-  transition: opacity 1.5s ease 3s, transform 1.5s ease 2.5s;
+  transform: translateX(30px);
+  transition: opacity 1s ease 2s, transform 1s ease 2s;
 }
 @media only screen and (min-width: 1024px) {
   main section.main-intro .intro-text-box .intro-title {
@@ -771,7 +794,7 @@ main section.main-intro .intro-text-box .intro-text {
   font-size: 1rem;
   opacity: 0;
   transform: translateX(-20px);
-  transition: opacity 1.5s ease 3.5s, transform 1.5s ease 3s;
+  transition: opacity 1s ease 2.5s, transform 1s ease 2.5s;
 }
 @media only screen and (min-width: 1024px) {
   main section.main-intro .intro-text-box .intro-text {
@@ -787,7 +810,7 @@ main section.main-intro .detail-button {
   margin-top: 30px;
   margin-left: 20px;
   opacity: 0;
-  transition: opacity 1.5s ease 4s;
+  transition: opacity 0.5s ease-in 2.8s;
 }
 @media only screen and (min-width: 1024px) {
   main section.main-intro .detail-button {
@@ -919,15 +942,21 @@ main .main-collection .parallelogram .main-collection-content .main-collection-l
     color: #fff;
   }
 }
+main .main-collection .parallelogram .main-collection-content .main-collection-list ul .etc {
+  line-height: 0.5;
+  padding-top: 5px;
+  padding-left: 30px;
+}
 main .main-collection .parallelogram .main-collection-content .col-btn {
   margin-right: -15px;
-  transform: scale(0);
-  transition: transform 0.5s ease 2s;
+  opacity: 0;
+  transform: scale(0.5);
+  transition: opacity 0.5s ease-in 2s, transform 0.5s ease-in 2s;
 }
 @media only screen and (min-width: 1024px) {
   main .main-collection .parallelogram .main-collection-content .col-btn {
     margin-right: 300px;
-    transition: transform 0.5s ease 2.5s;
+    transition: opacity 0.5s ease-in 2.3s, transform 0.5s ease 2.3s;
   }
 }
 main .main-collection .parallelogram .main-collection-content .col-btn .circle-text {
@@ -1354,7 +1383,7 @@ main .main-inform {
   position: relative;
   width: 100%;
   padding: 100px 0 150px;
-  background-color: #fb7829;
+  background-color: #ff6000;
 }
 @media only screen and (min-width: 1024px) {
   main .main-inform {

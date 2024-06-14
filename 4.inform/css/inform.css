@@ -610,7 +610,7 @@ main .inform .list-box .list ul .list-number {
   margin-left: 10px;
   margin-right: 10px;
   font-weight: 500;
-  font-size: 1rem;
+  font-size: 0.875rem;
   text-align: center;
 }
 @media only screen and (min-width: 1024px) {
@@ -620,7 +620,7 @@ main .inform .list-box .list ul .list-number {
     margin-right: 80px;
     width: 70px;
     font-weight: 400;
-    font-size: 1.333rem;
+    font-size: 1.167rem;
   }
 }
 main .inform .list-box .list ul .fixed-number {
@@ -629,7 +629,8 @@ main .inform .list-box .list ul .fixed-number {
 main .inform .list-box .list ul .list-content {
   width: 100%;
   margin-right: 10px;
-  font-size: 1.167rem;
+  font-weight: 400;
+  font-size: 1rem;
 }
 @media only screen and (min-width: 1024px) {
   main .inform .list-box .list ul .list-content {
@@ -641,7 +642,7 @@ main .inform .list-box .list ul .list-content {
 }
 @media only screen and (min-width: 1024px) {
   main .inform .list-box .list ul .list-content {
-    font-size: 1.5rem;
+    font-size: 1.333rem;
   }
 }
 main .inform .list-box .list ul .list-content .list-date {
@@ -686,6 +687,7 @@ main .inform .page-number ul {
   }
 }
 main .inform .page-number ul li a {
+  font-weight: 400;
   font-size: 1.167rem;
 }
 @media only screen and (min-width: 1024px) {
@@ -697,7 +699,7 @@ main .inform .page-number ul .arrow a:hover {
   font-weight: 600;
 }
 main .inform .page-number ul .number a:hover, main .inform .page-number ul .number a.num-selected {
-  font-weight: 400;
+  font-weight: 500;
   color: #ff6000;
   -webkit-text-decoration: underline #ff6000;
           text-decoration: underline #ff6000;
