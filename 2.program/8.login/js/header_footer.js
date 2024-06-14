@@ -15,7 +15,7 @@ $(function() {
         var mainMenu = $('#mainMenu');
 
         // <햄버거 메뉴 -> X 모양>
-        mobile.toggleClass('active');  
+        mobile.toggleClass('active');
         
         
         // <search 없애기>
@@ -32,6 +32,7 @@ $(function() {
             $('.main-menu').css({
                 'display': 'block',
                 'position': 'fixed',
+                'z-index' : '500',
                 'top': '12vh',
                 'right': 0,
                 'borderTop': '1px solid #dbdbdb',
