@@ -1,0 +1,278 @@
+@import "./style.scss";
+@import "./reset.scss";
+@import "./mixin.scss";
+@import "../../../scss/header.scss";
+@import "../../../scss/footer.scss";
+
+
+.container {
+    width: $width-wide;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 10px;
+    // background-color: antiquewhite;
+}
+
+//***********header***********
+header {
+    @include header-style();
+}
+
+
+//***********main***********
+main {
+    section {
+
+        &.tour-reservation {
+
+            .reservation-box {
+
+                @include responsive(large-screens) {
+                    display: flex;
+                }
+                .info-box {
+                    h1 {
+                        text-align: center;
+            
+                        @include responsive(large-screens) {
+                            font-size: 48px;
+                            text-align: left;
+                        }
+                    }
+                    
+            
+                    img {
+                        width: 80%;
+                        margin: 10px auto;
+            
+                        @include responsive(large-screens) {
+                            width: 300px;
+                            display: inline;
+                            margin-top: 50px;
+                        }
+                    }
+                }
+
+                .touch-box {
+
+                    @include responsive(large-screens) {
+                        margin-left: 200px;
+                        margin-top: 115px;
+                    }
+                    h2 {
+                        font-size: 5vw;
+                        margin-bottom: 20px;
+                        text-align: center;
+    
+                        @include responsive(large-screens) {
+                            font-size: 24px;
+                            text-align: left;
+                        }
+                    }
+    
+                    .reservation-date {
+                        margin-bottom: 30px;
+    
+                        .month {
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            gap: 30px;
+                            
+                            @include responsive(large-screens) {
+                                justify-content: left;
+                            }
+    
+                            button {
+                                background: none;
+                                border: none;
+                                font-size: 8vw;
+                                cursor: pointer;
+
+                                @include responsive(large-screens) {
+                                    font-size: 24px;
+                                }
+                            }
+    
+                            #monthLabel {
+                                margin: 0 10px;
+                                font-size: 6vw;
+
+                                @include responsive(large-screens) {
+                                    font-size: 24px;
+                                }
+                            }
+                        }
+    
+                        .dates {
+                            display: flex;
+                            justify-content: center;
+                            gap: 10px;
+                            flex-wrap: wrap;
+    
+                            button {
+                                background: none;
+                                border: 1px solid $color-main;
+                                padding: 10px;
+                                cursor: pointer;
+    
+                                &:hover {
+                                    background: $color-point;
+                                    color: $color-second;
+                                    border: 1px solid $color-point;
+                                    transition: all 0.2s;
+                                }
+                                &:focus {
+                                    background: $color-point;
+                                    color: $color-second;
+                                    border: 1px solid $color-point;
+                                    transition: all 0.2s;
+                                }
+                            }
+                        }
+                    }
+    
+                    .reservation-time {
+                        margin-bottom: 50px;
+    
+                        h3 {
+                            font-size: 4vw;
+                            margin-bottom: 20px;
+                            text-align: center;
+
+                            @include responsive(large-screens) {
+                                font-size: 24px;
+                                text-align: left;
+                            }
+                        }
+    
+                        .time-selector {
+                            display: flex;
+                            justify-content: center;
+                            gap: 10px;
+
+                            @include responsive(large-screens) {
+                                justify-content: left;
+                                gap: 30px;
+                            }
+    
+                            .time-option {
+                                background: none;
+                                border: 1px solid $color-main;
+                                padding: 10px 20px;
+                                cursor: pointer;
+                                font-size: 4vw;
+
+                                @include responsive(large-screens) {
+                                    font-size: 18px;
+                                    text-align: left;
+                                }
+    
+                                &:hover {
+                                    background: $color-point;
+                                    color: $color-second;
+                                    border: 1px solid $color-point;
+                                    transition: all 0.2s;
+                                }
+    
+                                &:focus {
+                                    background: $color-point;
+                                    color: $color-second;
+                                    border: 1px solid $color-point;
+                                    transition: all 0.2s;
+                                }
+                            }
+                        }
+                    }
+    
+                    .reservation-number {
+                        margin-bottom: 20px;
+    
+                        h3 {
+                            font-size: 4vw;
+                            margin-bottom: 20px;
+                            text-align: center;
+
+                            @include responsive(large-screens) {
+                                font-size: 24px;
+                                text-align: left;
+                            }
+                        }
+    
+                        .person-selector {
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            gap: 20px;
+
+                            @include responsive(large-screens) {
+                                justify-content: left;
+                            }
+    
+                            button {
+                                background: none;
+                                border: 1px solid $color-main;
+                                padding: 10px;
+                                font-size: 2.5vw;
+                                cursor: pointer;
+
+                                @include responsive(large-screens) {
+                                    font-size: 16px;
+                                }
+    
+                                &:hover {
+                                    background: $color-point;
+                                    color: $color-second;
+                                    border: 1px solid $color-point;
+                                    transition: all 0.2s;
+                                }
+                            }
+    
+                            #personCount {
+                                font-size: 5vw;
+
+                                @include responsive(large-screens) {
+                                    font-size: 24px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            #prev-btn, #next-btn {
+                width: 100%;
+                background: $color-second;
+                color: $color-main;
+                padding: 10px 20px;
+                border: 1px solid $color-main;
+                cursor: pointer;
+                margin-bottom: 10px;
+
+                @include responsive(large-screens) {
+                    width: 150px;
+                    font-size: 16px;
+                    transform: translateX(1117px);
+                }
+
+                &#next-btn {
+                    margin-bottom: 30px;
+                }
+
+                &:hover {
+                    background: $color-point;
+                    color: $color-second;
+                    border: 1px solid $color-point;
+                    transition: all 0.2s;
+                }
+            }
+        }
+    }
+}
+
+
+
+//***********footer***********
+footer {
+    @include footer-style();
+}

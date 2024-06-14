@@ -114,9 +114,9 @@ main {
             margin: 20px auto;
 
             @include responsive(large-screens) {
-                width: 100px;
+                width: 200px;
                 position: absolute;
-                right: 0; top: 310px;
+                right: 0; top: 0; left: 610px;
             }
 
             a {

@@ -473,7 +473,7 @@ main section.detail {
   margin-bottom: 50px;
 }
 main section.detail h1 {
-  font-size: 1.8rem;
+  font-size: 2rem;
   margin: 30px 0;
   text-align: center;
 }
@@ -571,6 +571,9 @@ main section.detail .tour-box .inside-tour .tour-hover-box .reservation-btn:hove
 main section.detail .tour-box .inside-tour:hover .tour-hover-box, main section.detail .tour-box .outside-tour:hover .tour-hover-box {
   opacity: 1;
   transition: opacity 0.2s ease;
+}
+main section.detail .hide {
+  display: none;
 }
 main section.tour-reservation .reservation-box h2 {
   font-size: 5vw;
