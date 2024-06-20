@@ -95,6 +95,7 @@ main {
                     li {
                         margin-bottom: 10px;
                         font-size: 20px;
+                        list-style: disc;
 
                         @include responsive(large-screens) {
                             font-size: 18px;
@@ -164,6 +165,11 @@ section.content {
         }
 
         img {
+            margin: 0 auto;
+            display: inline-block;
+        }
+
+        table {
             margin: 0 auto;
         }
     }

@@ -96,6 +96,7 @@ main {
                     li {
                         margin-bottom: 10px;
                         font-size: 20px;
+                        list-style: disc;
 
                         @include responsive(large-screens) {
                             font-size: 18px;
