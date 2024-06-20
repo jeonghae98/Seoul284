@@ -33,7 +33,7 @@ $(function() {
     checkVisibility(); // 페이지 로드 시 초기 가시성 확인
 
     $('.list-btn').on('click', function() {
-        window.location.href = '../1.exhibition/exhibition.html'; 
+        window.location.href = '../3.event/event.html'; 
     });
 });
 
