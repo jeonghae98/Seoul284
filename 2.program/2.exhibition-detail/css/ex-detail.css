@@ -109,7 +109,7 @@ footer {
 
 header {
   position: relative;
-  z-index: 1;
+  z-index: 2;
   width: 100%;
   height: 12vh;
 }
@@ -555,6 +555,7 @@ main section.detail .detail-content .detail-info ul {
 main section.detail .detail-content .detail-info ul li {
   margin-bottom: 10px;
   font-size: 20px;
+  list-style: disc;
 }
 @media only screen and (min-width: 1024px) {
   main section.detail .detail-content .detail-info ul li {
