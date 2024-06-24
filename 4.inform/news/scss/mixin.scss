@@ -54,7 +54,7 @@
 
         p {
             font: {
-                weight: $font-regular;
+                weight: $font-medium;
                 size: 0.875rem; 
             }
             color: $color-gray;
@@ -113,7 +113,7 @@
             width: 130px;
             margin-right: 20px;
             font: {
-                weight: $font-regular;
+                weight: $font-medium;
                 size: 1.167rem;
             }
             // background-color: aquamarine;
@@ -182,6 +182,7 @@
             }
 
             a {
+                font-weight: $font-regular;
                 font-size: 1rem;  
 
                 @include responsive(large-screens) {
