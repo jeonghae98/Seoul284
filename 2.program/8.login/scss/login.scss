@@ -54,7 +54,7 @@ main {
 
             .login-box {
                 position: relative;
-                width: 400px;
+                width: 90%;
                 height: 350px;
                 margin: 0 auto;
                 z-index: 1;
@@ -63,7 +63,7 @@ main {
                 border-radius: 5px;
 
                 @include responsive(large-screens) {
-
+                    width: 400px;
                     transform: translateX(-250px) translateY(75px);
                 }
 
@@ -84,7 +84,10 @@ main {
                     }
                     label {
                         display: block;
-                        transform: translateX(-70px);
+                        
+                        @include responsive(large-screens) {
+                            transform: translateX(-70px);
+                        }
                     }
                     input {
                         width: 200px;
@@ -93,6 +96,10 @@ main {
                         font-size: 18px;
                         font-weight: $font-thin;
                         padding-left: 5px;
+
+                        @include responsive(large-screens) {
+                            width: 200px;
+                        }
                     }
                     button {
                         margin: 0 auto;
@@ -120,7 +127,7 @@ main {
             .login-image{
                 transform: translateX(0px) translateY(-350px);
                 margin: 0 auto;
-                width: 350px;
+                width: 80%;
                 // background-color: aliceblue;
                 
                 img {

@@ -504,7 +504,7 @@ main section.login .orange-box {
 }
 main section.login .orange-box .login-box {
   position: relative;
-  width: 400px;
+  width: 90%;
   height: 350px;
   margin: 0 auto;
   z-index: 1;
@@ -514,6 +514,7 @@ main section.login .orange-box .login-box {
 }
 @media only screen and (min-width: 1024px) {
   main section.login .orange-box .login-box {
+    width: 400px;
     transform: translateX(-250px) translateY(75px);
   }
 }
@@ -533,7 +534,11 @@ main section.login .orange-box .login-box form .pw {
 }
 main section.login .orange-box .login-box form label {
   display: block;
-  transform: translateX(-70px);
+}
+@media only screen and (min-width: 1024px) {
+  main section.login .orange-box .login-box form label {
+    transform: translateX(-70px);
+  }
 }
 main section.login .orange-box .login-box form input {
   width: 200px;
@@ -542,6 +547,11 @@ main section.login .orange-box .login-box form input {
   font-size: 18px;
   font-weight: 100;
   padding-left: 5px;
+}
+@media only screen and (min-width: 1024px) {
+  main section.login .orange-box .login-box form input {
+    width: 200px;
+  }
 }
 main section.login .orange-box .login-box form button {
   margin: 0 auto;
@@ -565,7 +575,7 @@ main section.login .orange-box .login-box form button:hover {
 main section.login .orange-box .login-image {
   transform: translateX(0px) translateY(-350px);
   margin: 0 auto;
-  width: 350px;
+  width: 80%;
 }
 main section.login .orange-box .login-image img {
   margin: 0 auto;
