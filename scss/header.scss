@@ -218,7 +218,11 @@
                                         &:hover,
                                         &:focus {
                                             text-decoration: underline;
-                                            color: $color-second;
+                                            color: $color-main;
+
+                                            @include responsive(large-screens) {
+                                                color: $color-second;
+                                            } 
                                         }
                                     }
                                     

@@ -97,6 +97,18 @@ $(function() {
                 'textDecoration': 'underline'
             });
         });
+
+        $('.sub-menu a').hover(function() {
+            $('.sub-menu a').css({  
+                'color': '',
+                'textDecoration': '',
+            });
+    
+            $(this).css({  
+                'color': '#000',
+                'textDecoration': 'underline'
+            });
+        });
     });
 
  

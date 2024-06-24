@@ -10,6 +10,10 @@ body {
   font-size: 16px;
   font-family: "Noto Sans KR", sans-serif;
 }
+body.stop-scroll {
+  height: 100%;
+  overflow: hidden;
+}
 
 ol,
 ul {
@@ -278,7 +282,12 @@ header .logo-gnb-rightmenu .container .logo-gnb-menu-box .main-menu .gnb li .sub
 }
 header .logo-gnb-rightmenu .container .logo-gnb-menu-box .main-menu .gnb li .sub-menu li a:hover, header .logo-gnb-rightmenu .container .logo-gnb-menu-box .main-menu .gnb li .sub-menu li a:focus {
   text-decoration: underline;
-  color: #fff;
+  color: #000;
+}
+@media only screen and (min-width: 1024px) {
+  header .logo-gnb-rightmenu .container .logo-gnb-menu-box .main-menu .gnb li .sub-menu li a:hover, header .logo-gnb-rightmenu .container .logo-gnb-menu-box .main-menu .gnb li .sub-menu li a:focus {
+    color: #fff;
+  }
 }
 header .logo-gnb-rightmenu .container .logo-gnb-menu-box .main-menu .only-mobile {
   position: absolute;
@@ -1051,9 +1060,11 @@ footer .footerlogo-info .footer-content-box .footer-info-box .info .sns {
 }
 footer .footerlogo-info .footer-content-box .footer-info-box .info .sns li a:hover {
   color: #000;
+  text-decoration: underline;
 }
 footer .footerlogo-info .footer-content-box .footer-info-box .info .txt {
   width: 80%;
+  font-weight: 400;
   font-size: 0.83rem;
   color: #353535;
 }
@@ -1073,6 +1084,7 @@ footer .footerlogo-info .footer-content-box .footer-info-box .copyright {
   }
 }
 footer .footerlogo-info .footer-content-box .footer-info-box .copyright p {
+  font-weight: 400;
   font-size: 0.83rem;
   color: #353535;
 }

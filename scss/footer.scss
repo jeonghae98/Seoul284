@@ -59,7 +59,7 @@
                     @include responsive(large-screens) {
                         line-height: 1.2;
                         font: {
-                            size: 3.75rem;  
+                            size: 3.75rem;   
                         }
                     }
                 }
@@ -90,7 +90,7 @@
                                 weight: $font-medium;
                                 size: 1rem;
                             }
-                            color: $color-gray;
+                            color: #353535;
                             
                             @include responsive(large-screens) {
                                 margin-bottom: 15px;
@@ -145,6 +145,7 @@
                             a {
                                 &:hover {
                                     color: $color-main;
+                                    text-decoration: underline;
                                 }
                             }
                         }
@@ -154,8 +155,9 @@
                     
                     .txt {
                         width: 80%;
+                        font-weight: $font-regular;
                         font-size: 0.83rem;  
-                        color: $color-gray;
+                        color: #353535;
                         // background-color: aqua;
 
                         @include responsive(large-screens) {
@@ -175,8 +177,9 @@
                     }
 
                     p {
+                        font-weight: $font-regular;
                         font-size: 0.83rem;  
-                        color: $color-gray;
+                        color: #353535;
                     }
                 }  // copyright
             }  // footer-info-box
