@@ -18,7 +18,7 @@
         font-size: 2.667rem;
         // background-color: aquamarine;
         opacity: 0;
-        transition: opacity 2s ease;
+        transition: opacity 0.5s ease;
         
         @include responsive(large-screens) {
             margin-bottom: 30px;
@@ -42,7 +42,7 @@
         width: $width-wide;
         margin: auto;
         opacity: 0;
-        transition: opacity 2s ease;
+        transition: opacity 0.5s ease;
 
 
         ul {

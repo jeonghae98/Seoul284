@@ -601,7 +601,7 @@ main .inform .list-box .list {
   cursor: pointer;
   opacity: 0;
   transform: translateY(50px);
-  transition: opacity 1s ease, transform 1s ease, box-shadow 0.3s ease;
+  transition: opacity 0.5s ease, transform 0.5s ease, box-shadow 0.3s ease;
 }
 main .inform .list-box .list.visible {
   opacity: 1;

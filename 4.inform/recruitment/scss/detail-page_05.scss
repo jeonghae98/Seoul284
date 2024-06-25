@@ -33,7 +33,7 @@ main {
             margin-top: 20px;
             opacity: 0;
             transform: translateY(50px);
-            transition: opacity 1s ease, transform 1s ease;
+            transition: opacity 0.5s ease, transform 0.5s ease;
             @include responsive(large-screens) {
                  margin-top: 30px;
             }

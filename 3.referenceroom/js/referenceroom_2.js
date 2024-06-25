@@ -6,15 +6,20 @@ $(function() {
 
      function Visibility() {  // 리스트 애니메이션
         $('.box').each(function() {
-            var boxTop = $(this).offset().top;
-            var boxBottom = boxTop + $(this).outerHeight();
+            var $this = $(this);
+            var boxTop = $this.offset().top;
+            var boxBottom = boxTop + $this.outerHeight();
             var viewportTop = $(window).scrollTop();
             var viewportBottom = viewportTop + $(window).height();
-
+    
             if (boxBottom > viewportTop && boxTop < viewportBottom) {
-                $(this).addClass('visible');
+                if (!$this.hasClass('visible')) {
+                    setTimeout(function() {
+                        $this.addClass('visible');
+                    }, Math.random() * 1000); 
+                }
             } else {
-                $(this).removeClass('visible');
+                $this.removeClass('visible');
             }
         });
     }

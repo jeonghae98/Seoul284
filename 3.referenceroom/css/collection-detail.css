@@ -508,7 +508,7 @@ header .header-search-box.sub-visible {
   border-top: 2px solid #d9d9d9;
   opacity: 0;
   transform: translateY(50px);
-  transition: opacity 1s ease, transform 1s ease;
+  transition: opacity 0.5s ease, transform 0.5s ease;
 }
 .collection-detail-page .collec-image-desc-box .main-image {
   grid-area: a;

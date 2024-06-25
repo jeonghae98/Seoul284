@@ -500,7 +500,7 @@ main .detail-page .content-box {
   margin-top: 20px;
   opacity: 0;
   transform: translateY(50px);
-  transition: opacity 1s ease, transform 1s ease;
+  transition: opacity 0.5s ease, transform 0.5s ease;
 }
 @media only screen and (min-width: 1024px) {
   main .detail-page .content-box {
