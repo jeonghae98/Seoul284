@@ -487,7 +487,7 @@ main .inform .inform-title {
   text-align: center;
   font-size: 2.667rem;
   opacity: 0;
-  transition: opacity 2s ease;
+  transition: opacity 0.5s ease;
 }
 @media only screen and (min-width: 1024px) {
   main .inform .inform-title {
@@ -505,7 +505,7 @@ main .inform .menu-list {
   width: 100%;
   margin: auto;
   opacity: 0;
-  transition: opacity 2s ease;
+  transition: opacity 0.5s ease;
 }
 main .inform .menu-list ul {
   display: flex;

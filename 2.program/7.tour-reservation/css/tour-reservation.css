@@ -553,30 +553,36 @@ main section.tour-reservation .reservation-box .touch-box .reservation-date .mon
 }
 main section.tour-reservation .reservation-box .touch-box .reservation-date .dates {
   display: flex;
+  width: 100%;
   justify-content: center;
-  gap: 10px;
+  gap: 40px;
   flex-wrap: wrap;
-}
-main section.tour-reservation .reservation-box .touch-box .reservation-date .dates button {
-  background: none;
-  border: 1px solid #000;
-  padding: 10px;
+  font-size: 150%;
   cursor: pointer;
 }
-main section.tour-reservation .reservation-box .touch-box .reservation-date .dates button:hover {
-  background: #ff6000;
-  color: #fff;
-  border: 1px solid #ff6000;
-  transition: all 0.2s;
+@media only screen and (min-width: 1024px) {
+  main section.tour-reservation .reservation-box .touch-box .reservation-date .dates {
+    justify-content: left;
+    font-size: 20px;
+    margin-top: 20px;
+  }
 }
-main section.tour-reservation .reservation-box .touch-box .reservation-date .dates button:focus {
-  background: #ff6000;
-  color: #fff;
-  border: 1px solid #ff6000;
-  transition: all 0.2s;
+main section.tour-reservation .reservation-box .touch-box .reservation-date .selected {
+  width: 4vh;
+  height: 4vh;
+  text-align: center;
+  border-radius: 0%;
+  background-color: #ff6000;
+  color: white;
+  transition: background-color 0.5s;
+}
+main section.tour-reservation .reservation-box .touch-box .reservation-date .unavailable {
+  color: #aaa;
+  cursor: not-allowed;
 }
 main section.tour-reservation .reservation-box .touch-box .reservation-time {
   margin-bottom: 50px;
+  display: none;
 }
 main section.tour-reservation .reservation-box .touch-box .reservation-time h3 {
   font-size: 4vw;
@@ -619,7 +625,7 @@ main section.tour-reservation .reservation-box .touch-box .reservation-time .tim
   border: 1px solid #ff6000;
   transition: all 0.2s;
 }
-main section.tour-reservation .reservation-box .touch-box .reservation-time .time-selector .time-option:focus {
+main section.tour-reservation .reservation-box .touch-box .reservation-time .time-selector .selected {
   background: #ff6000;
   color: #fff;
   border: 1px solid #ff6000;
@@ -627,6 +633,7 @@ main section.tour-reservation .reservation-box .touch-box .reservation-time .tim
 }
 main section.tour-reservation .reservation-box .touch-box .reservation-number {
   margin-bottom: 20px;
+  display: none;
 }
 main section.tour-reservation .reservation-box .touch-box .reservation-number h3 {
   font-size: 4vw;
@@ -694,6 +701,7 @@ main section.tour-reservation #prev-btn, main section.tour-reservation #next-btn
 }
 main section.tour-reservation #prev-btn#next-btn, main section.tour-reservation #next-btn#next-btn {
   margin-bottom: 30px;
+  display: none;
 }
 main section.tour-reservation #prev-btn:hover, main section.tour-reservation #next-btn:hover {
   background: #ff6000;
