@@ -489,7 +489,7 @@ main .intro-page .intro-text {
   padding-top: 100px;
 }
 main .intro-page .intro-text h1 {
-  font-size: 150px;
+  font-size: 7vh;
   text-align: center;
 }
 @media only screen and (min-width: 1024px) {
@@ -502,9 +502,10 @@ main .intro-page .intro-text h1 {
 main .intro-page .intro-text h2 {
   padding-left: 250px;
   transform: translateY(-280px);
-  font-size: 150px;
+  font-size: 6vh;
   opacity: 0.2;
   text-align: center;
+  display: none;
 }
 @media only screen and (min-width: 1024px) {
   main .intro-page .intro-text h2 {
@@ -512,11 +513,13 @@ main .intro-page .intro-text h2 {
     text-align: left;
     padding-left: 100px;
     padding-top: 50px;
+    display: block;
   }
 }
 main .intro-page p {
-  font-size: 30px;
+  font-size: 2.5vh;
   text-align: center;
+  margin-top: 50px;
 }
 @media only screen and (min-width: 1024px) {
   main .intro-page p {
@@ -710,10 +713,15 @@ main .content-page .ex-scroll .years {
   }
 }
 main .content-page .ex-scroll .years span {
-  font-size: 30px;
-  font-weight: 600;
+  font-size: 3vh;
+  font-weight: 400;
   cursor: pointer;
-  text-align: right;
+}
+@media only screen and (min-width: 1024px) {
+  main .content-page .ex-scroll .years span {
+    font-size: 30px;
+    text-align: right;
+  }
 }
 main .content-page .now-exhibition,
 main .content-page .fin-exhibition {
@@ -721,6 +729,7 @@ main .content-page .fin-exhibition {
   width: 80%;
   height: 600px;
   overflow-y: scroll;
+  -ms-overflow-style: none;
 }
 @media only screen and (min-width: 1024px) {
   main .content-page .now-exhibition,
@@ -728,6 +737,10 @@ main .content-page .fin-exhibition {
     width: 70%;
     transform: translateX(50px);
   }
+}
+main .content-page .now-exhibition::-webkit-scrollbar,
+main .content-page .fin-exhibition::-webkit-scrollbar {
+  display: none;
 }
 main .content-page .fin-exhibition {
   display: none;
