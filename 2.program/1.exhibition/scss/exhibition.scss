@@ -30,7 +30,7 @@ main {
             padding-top: 100px;
 
             h1 {
-                font-size: 150px;
+                font-size: 7vh;
                 text-align: center;
 
                 // background-color: blue;
@@ -48,15 +48,17 @@ main {
                 padding-left: 250px;
                 transform: translateY(-280px);
                 // background-color: #1a1a1a;
-                font-size: 150px;
+                font-size: 6vh;
                 opacity: 0.2;
                 text-align: center;
+                display: none;
 
                 @include responsive(large-screens) {
                     font-size: 120px;
                     text-align: left;
                     padding-left: 100px;
                     padding-top: 50px;
+                    display: block;
                 }
             }
 
@@ -64,8 +66,9 @@ main {
         }
 
         p {
-            font-size: 30px;
+            font-size: 2.5vh;
             text-align: center;
+            margin-top: 50px;
 
             @include responsive(large-screens) {
                 text-align: left;
@@ -285,10 +288,14 @@ main {
                 }
 
                 span {
-                    font-size: 30px;
-                    font-weight: $font-semibold;
+                    font-size: 3vh;
+                    font-weight: $font-regular;
                     cursor: pointer;
-                    text-align: right;
+
+                    @include responsive(large-screens) {
+                        font-size: 30px;
+                        text-align: right;
+                    }
                 }
             }
         }
@@ -306,6 +313,11 @@ main {
             @include responsive(large-screens) {
                 width: 70%;
                 transform: translateX(50px);
+            }
+
+            -ms-overflow-style: none;
+            &::-webkit-scrollbar {
+                display: none;
             }
         }
         .fin-exhibition {
