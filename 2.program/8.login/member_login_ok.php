@@ -8,9 +8,10 @@ $user_id = $_POST['user_id'];
 $user_pw = $_POST['user_pw'];
 
 $members = array(
-    'jeonghae12' => array('pw' => 'answjdgo12!', 'name' => '문정해'),
-    'sungmin12' => array('pw' => 'dltjdals12!', 'name' => '이성민')
-    'hyunho12' => array('pw' => 'tlsgusgh12!', 'name' => '신현호')
+    'answjdgo123' => array('pw' => 'answjdgo123!', 'name' => '문정해'),
+    'dltjdals123' => array('pw' => 'dltjdals123!', 'name' => '이성민'),
+    'tlsgusgh123' => array('pw' => 'tlsgusgh123!', 'name' => '신현호'),
+    'dldmsdud123' => array('pw' => 'dldmsdud123!', 'name' => '이은영')
 );
 
 if (isset($members[$user_id]) && $members[$user_id]['pw'] === $user_pw) {
@@ -19,6 +20,6 @@ if (isset($members[$user_id]) && $members[$user_id]['pw'] === $user_pw) {
         'user_name' => $members[$user_id]['name']
     ));
 } else {
-    echo json_encode(array('error' => 'Invalid ID or password.'));
+    echo json_encode(array('error' => '아이디 또는 비밀번호가 일치하지 않습니다.'));
 }
 ?>
