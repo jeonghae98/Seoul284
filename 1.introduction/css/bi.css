@@ -574,7 +574,7 @@ main .sec1 .container .sec1-menu {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 70%;
+  width: 100%;
   margin: 0 auto;
   padding-top: 20px;
   text-align: center;
@@ -1226,7 +1226,7 @@ footer .footerlogo-info .footer-content-box .footer-info-box .info div .long-lin
   left: 0;
   top: 0;
   z-index: 2;
-  width: 35px;
+  width: 41px;
   height: 100%;
   background-color: #717171;
 }
