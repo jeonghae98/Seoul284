@@ -291,7 +291,7 @@ main {
                 }
 
                 span {
-                    font-size: 3vh;
+                    font-size: 2vh;
                     font-weight: $font-regular;
                     cursor: pointer;
 
@@ -310,7 +310,7 @@ main {
 
                 .year-2023 {
                     
-                    transform: translate(-80px, -65px);
+                    transform: translate(-60px, -65px);
                 
                     @include responsive(large-screens) {
                         transform: translateY(-130px);

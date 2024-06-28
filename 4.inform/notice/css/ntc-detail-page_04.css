@@ -553,8 +553,7 @@ main .detail-page .content-box .title-box {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 160px;
-  padding: 30px 0;
+  height: 20vh;
   border-top: 2px solid #d9d9d9;
 }
 main .detail-page .content-box .title-box .title {
@@ -745,7 +744,7 @@ footer .footerlogo-info .footer-content-box .footer-info-box .info div .long-lin
   left: 0;
   top: 0;
   z-index: 2;
-  width: 35px;
+  width: 41px;
   height: 100%;
   background-color: #717171;
 }

@@ -142,6 +142,7 @@ main {
                     .reservation-time {
                         margin-bottom: 50px;
                         display: none;
+                        // background-color: antiquewhite;
     
                         h3 {
                             font-size: 4vw;
@@ -167,7 +168,7 @@ main {
                             .time-option {
                                 background: none;
                                 border: 1px solid $color-main;
-                                padding: 10px 20px;
+                                padding: 10px 16px;
                                 cursor: pointer;
                                 font-size: 4vw;
 
