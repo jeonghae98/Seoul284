@@ -106,34 +106,42 @@ main {
     
                         .dates {
                             display: flex;
+                            width: 100%;
                             justify-content: center;
-                            gap: 10px;
+                            gap: 40px;
                             flex-wrap: wrap;
-    
-                            button {
-                                background: none;
-                                border: 1px solid $color-main;
-                                padding: 10px;
-                                cursor: pointer;
-    
-                                &:hover {
-                                    background: $color-point;
-                                    color: $color-second;
-                                    border: 1px solid $color-point;
-                                    transition: all 0.2s;
-                                }
-                                &:focus {
-                                    background: $color-point;
-                                    color: $color-second;
-                                    border: 1px solid $color-point;
-                                    transition: all 0.2s;
-                                }
+                            font-size: 150%;
+                            cursor: pointer;
+                            // background-color: aliceblue;
+                            
+                            @include responsive(large-screens) {
+                                justify-content: left;
+                                font-size: 20px;
+                                margin-top: 20px;
                             }
+                            
+                        }
+                        .selected {
+                            width: 4vh;
+                            height: 4vh;
+                            text-align: center;
+                            border-radius: 0%;
+                            background-color: $color-point;
+                            color: white;
+                            transition: background-color 0.5s;
+                        }
+                        .available {
+                            // font-weight: $font-semibold;
+                        }
+                        .unavailable {
+                            color: #aaa;
+                            cursor: not-allowed;
                         }
                     }
     
                     .reservation-time {
                         margin-bottom: 50px;
+                        display: none;
     
                         h3 {
                             font-size: 4vw;
@@ -175,18 +183,19 @@ main {
                                     transition: all 0.2s;
                                 }
     
-                                &:focus {
-                                    background: $color-point;
-                                    color: $color-second;
-                                    border: 1px solid $color-point;
-                                    transition: all 0.2s;
-                                }
+                            }
+                            .selected {
+                                background: $color-point;
+                                color: $color-second;
+                                border: 1px solid $color-point;
+                                transition: all 0.2s;
                             }
                         }
                     }
     
                     .reservation-number {
                         margin-bottom: 20px;
+                        display: none;
     
                         h3 {
                             font-size: 4vw;
@@ -257,6 +266,7 @@ main {
 
                 &#next-btn {
                     margin-bottom: 30px;
+                    display: none;
                 }
 
                 &:hover {
