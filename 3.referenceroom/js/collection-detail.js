@@ -21,15 +21,9 @@ $(function() {
 
 
     // <이미지 변경>
-    $('.other-images img').on('click', function() {
-        var mainImg = $('.main-image img');
-        var clickedImg = $(this);
-
-        var mainSrc = mainImg.attr('src');
-        var clickedSrc = clickedImg.attr('src');
-
-        mainImg.attr('src', clickedSrc);
-        clickedImg.attr('src', mainSrc);
+    $('.other-images img').click(function() {
+        var newSrc = $(this).attr('src'); 
+        $('.main-image img').attr('src', newSrc); 
     });
 
 

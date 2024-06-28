@@ -31,7 +31,7 @@
 
         .footer-content-box {
             position: relative;
-            width: 87%;
+            width: 90%;
             margin: 0 auto;
             // background-color: lightpink;
 
@@ -54,7 +54,7 @@
                 h2 {
                     font: {
                         weight: $font-thin;
-                        size: 2.333rem;  
+                        size: 2rem;  
                     }
                     @include responsive(large-screens) {
                         line-height: 1.2;
