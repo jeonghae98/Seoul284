@@ -577,6 +577,27 @@ main .main-video video {
   -o-object-fit: cover;
      object-fit: cover;
 }
+main .main-video ::-webkit-media-controls-fullscreen-button {
+  display: none;
+}
+main .main-video ::-webkit-media-controls-play-button {
+  display: none;
+}
+main .main-video ::-webkit-media-controls-timeline {
+  display: none;
+}
+main .main-video ::-webkit-media-controls-current-time-display {
+  display: none;
+}
+main .main-video ::-webkit-media-controls-time-remaining-display {
+  display: none;
+}
+main .main-video ::-webkit-media-controls-volume-slider {
+  display: none;
+}
+main .main-video ::-webkit-media-controls-mute-button {
+  transform: translateX(-820px);
+}
 main section.main-intro {
   position: relative;
   margin-top: -12vh;
