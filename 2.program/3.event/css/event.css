@@ -487,40 +487,43 @@ main .intro-page {
 }
 main .intro-page .intro-text {
   padding-top: 100px;
+  transition: all 0.5s;
 }
 main .intro-page .intro-text h1 {
   font-size: 7vh;
   text-align: center;
-  margin-bottom: 100px;
+  transition: all 0.5s;
 }
 @media only screen and (min-width: 1024px) {
   main .intro-page .intro-text h1 {
-    font-size: 120px;
+    font-size: 7vh;
     text-align: left;
     padding-top: 150px;
-    margin-bottom: 0;
   }
 }
 main .intro-page .intro-text h2 {
   padding-left: 250px;
   transform: translateY(-280px);
-  font-size: 5vh;
+  font-size: 6vh;
   opacity: 0.2;
   text-align: center;
   display: none;
+  transition: all 0.5s;
 }
 @media only screen and (min-width: 1024px) {
   main .intro-page .intro-text h2 {
-    display: block;
-    font-size: 120px;
+    font-size: 6vh;
     text-align: left;
-    padding-left: 100px;
-    padding-top: 50px;
+    padding-left: 70px;
+    padding-top: 160px;
+    display: block;
   }
 }
 main .intro-page p {
-  font-size: 30px;
+  font-size: 2.5vh;
   text-align: center;
+  margin-top: 50px;
+  transition: all 0.5s;
 }
 @media only screen and (min-width: 1024px) {
   main .intro-page p {
@@ -530,7 +533,6 @@ main .intro-page p {
   }
 }
 main .content-page {
-  margin-bottom: 20px;
   /* form */
   /* ###########search box################# */
   /* scrollbarrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr */
@@ -651,6 +653,9 @@ main .content-page form .searchform input[type=search]:focus {
   border-color: #000;
   outline: none;
 }
+main .content-page .scrollbar {
+  display: none;
+}
 @media only screen and (min-width: 1024px) {
   main .content-page .scrollbar {
     float: right;
@@ -714,23 +719,81 @@ main .content-page .ex-scroll .years {
   }
 }
 main .content-page .ex-scroll .years span {
-  font-size: 30px;
-  font-weight: 600;
+  font-size: 3vh;
+  font-weight: 400;
   cursor: pointer;
-  text-align: right;
+}
+@media only screen and (min-width: 1024px) {
+  main .content-page .ex-scroll .years span {
+    font-size: 30px;
+    text-align: right;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  main .content-page .ex-scroll .years .year-2024 {
+    transform: translateY(-20px);
+  }
+}
+main .content-page .ex-scroll .years .year-2023 {
+  transform: translate(-80px, -65px);
+}
+@media only screen and (min-width: 1024px) {
+  main .content-page .ex-scroll .years .year-2023 {
+    transform: translateY(-130px);
+  }
+}
+main .content-page .ex-scroll .years .year-2022 {
+  transform: translateX(35px);
+}
+@media only screen and (min-width: 1024px) {
+  main .content-page .ex-scroll .years .year-2022 {
+    transform: translateY(42px);
+  }
+}
+main .content-page .ex-scroll .years .year-2021 {
+  transform: translate(55px, -65px);
+}
+@media only screen and (min-width: 1024px) {
+  main .content-page .ex-scroll .years .year-2021 {
+    transform: translateY(54px);
+  }
+}
+main .content-page .ex-scroll .years .year-2020 {
+  color: #dbdbdb;
+}
+@media only screen and (min-width: 1024px) {
+  main .content-page .ex-scroll .years .year-2020 {
+    transform: translateY(0px);
+  }
 }
 main .content-page .now-exhibition,
 main .content-page .fin-exhibition {
   margin: 100px auto;
   width: 80%;
-  height: 600px;
+  height: 700px;
   overflow-y: scroll;
+  border-left: none;
+  border-right: none;
+  -ms-overflow-style: none;
 }
 @media only screen and (min-width: 1024px) {
   main .content-page .now-exhibition,
   main .content-page .fin-exhibition {
     width: 70%;
     transform: translateX(50px);
+  }
+}
+main .content-page .now-exhibition::-webkit-scrollbar,
+main .content-page .fin-exhibition::-webkit-scrollbar {
+  display: none;
+}
+main .content-page .now-exhibition h3 {
+  text-align: center;
+}
+@media only screen and (min-width: 1024px) {
+  main .content-page .now-exhibition h3 {
+    margin-top: 300px;
+    margin-left: 400px;
   }
 }
 main .content-page .fin-exhibition {
@@ -745,6 +808,7 @@ main .content-page .exhibition-list a {
   flex-direction: column;
   text-align: center;
   margin-bottom: 20px;
+  transition: all 0.5s;
 }
 @media only screen and (min-width: 1024px) {
   main .content-page .exhibition-list a {
