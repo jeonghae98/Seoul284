@@ -111,10 +111,10 @@ $(function() {
 
 
         } else {
-            if ($scrollTop < 200) {
-                $('.box1-title').stop().animate({ opacity: '0' }, 600);
+            if ($scrollTop < 600) {
+                $('.box1-title').stop().animate({ opacity: '0' }, 200);
             } else {
-                $('.box1-title').stop().animate({ opacity: '1' }, 600);
+                $('.box1-title').stop().animate({ opacity: '1' }, 500);
             }
 
 
