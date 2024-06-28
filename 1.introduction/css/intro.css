@@ -1329,7 +1329,6 @@ main section.box4 {
     height: 600px;
     margin-bottom: 200px;
     background-image: url(../images/2011_bg.png);
-    background-position-y: 100px;
     background-position-x: 10px;
     background-size: cover;
     background-repeat: no-repeat;
