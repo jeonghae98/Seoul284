@@ -26,15 +26,7 @@ $(function () {
                
             }
     
-            // if ($scrollTop < 100) {
-            //     $('.sec1').stop().animate({ width: '0%', height: '0px' }, 300);
-               
-            // } else {
-            //     $('.sec1').stop().animate({ width: '100%', height: '1000px' }, 1000);
-               
-            // }
-
-            /////////////////////////////////////////////////////////////////
+         
 
             if ($scrollTop < 1300) {
                 $('.sec2 h2').stop().animate({ opacity: '0' }, 300);
@@ -47,14 +39,7 @@ $(function () {
             } else if ($scrollTop < 2000) {
                 $('.sec2 p').stop().animate({ opacity: '1' }, 900);
             }
-    
-            // if ($scrollTop < 900) {
-            //     $('.sec2').stop().animate({ width: '0%', height: '0px' }, 300);
-            // } else {
-            //     $('.sec2').stop().animate({ width: '100%', height: '1000px' }, 1000);
-            // }  
-            
-            
+                
             if ($scrollTop < 1700) {
                 $('.slide1').stop().animate({ opacity: '0%' }, 300);
             } else {
@@ -83,7 +68,7 @@ $(function () {
                 $('.sec1').stop().animate({ width: '0%', height: '0px' }, 300);
                
             } else {
-                $('.sec1').stop().animate({ width: '100%', height: '1000px' }, 1000);
+                $('.sec1').stop().animate({ width: '100%', height: '1000px' }, 500);
                
             }
     /////////////////////////////////////////////////////////////////////
@@ -104,42 +89,19 @@ $(function () {
             if ($scrollTop < 900) {
                 $('.sec2').stop().animate({ width: '0%', height: '0px' }, 300);
             } else {
-                $('.sec2').stop().animate({ width: '100%', height: '1000px' }, 1000);
+                $('.sec2').stop().animate({ width: '100%', height: '1000px' }, 500);
             }  
             
             
             if ($scrollTop < 1700) {
                 $('.slide1').stop().animate({ opacity: '0%' }, 300);
             } else {
-                $('.slide1').stop().animate({ opacity: '100%'}, 1000);
+                $('.slide1').stop().animate({ opacity: '100%'}, 800);
             }  
         }
     }) 
 
 
-    ///////////////////////////////////
-//     var mHtml = $("html");
-//     var page = 0.525;
-
-//     if($(window).width() <= 768) {
-//         // mobile only code
-//     } else {
-
-//     }
-//     mHtml.animate({scrollTop : 0},10);
-
-//     $(window).on("wheel", function(e) {
-//     if(mHtml.is(":animated")) return;
-//     if(e.originalEvent.deltaY > 0) {
-//         if(page == 5) return;
-//         page++;
-//     } else if(e.originalEvent.deltaY < 0) {
-//         if(page == 1) return;
-//         page--;
-//     }
-//     var posTop =(page-1) * $(window).height();
-//     mHtml.animate({scrollTop : posTop});
-// })
 
 if($(window).width() <= 768) {
     $('.left1').on('click', function() {
@@ -170,4 +132,3 @@ if($(window).width() <= 768) {
   
 
 })
-
