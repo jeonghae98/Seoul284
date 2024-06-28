@@ -72,7 +72,7 @@ main {
                 width: 330px; height: auto;
                 margin: 0 auto;
  
-                animation-duration: 4s;
+                animation-duration: 3s;
                 animation-name: move;
 
                 @keyframes move {
@@ -906,7 +906,7 @@ section.box4 {
         height:600px;
         margin-bottom: 200px;
         background-image: url(../images/2011_bg.png);
-        background-position-y: 100px;
+        
         background-position-x: 10px;
         background-size: cover;
         background-repeat: no-repeat;
@@ -1121,7 +1121,33 @@ section.box4 {
     } // box4-line
 } // section.box4
 
+@keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
 
+.fade-in {
+    animation: slideInFromLeft 0.6s ease forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.fade-in-slow {
+    animation: fadeIn 1s ease forwards;
+}
 
 } // main
 

@@ -601,13 +601,13 @@ header .header-search-box.sub-visible {
   transition: transform 0.3s ease;
 }
 .collection .collection-content .content-box .box img {
-  transform: scale(1.1);
+  transform: scale(1.15);
 }
 .collection .collection-content .content-box .box .book-image {
   transform: scale(1);
 }
 .collection .collection-content .content-box .box .content-title-txt {
-  padding: 20px 10px;
+  padding: 10px 10px 20px;
 }
 @media only screen and (min-width: 1024px) {
   .collection .collection-content .content-box .box .content-title-txt {
@@ -631,7 +631,7 @@ header .header-search-box.sub-visible {
 }
 @media only screen and (min-width: 1024px) {
   .collection .collection-content .content-box .box .content-title-txt ul .content-title {
-    font-size: 1.667rem;
+    font-size: 1.5rem;
   }
 }
 .collection .collection-content .content-box .box .content-title-txt ul .content-txt {
@@ -731,7 +731,7 @@ footer .footerlogo-info {
 }
 footer .footerlogo-info .footer-content-box {
   position: relative;
-  width: 84%;
+  width: 90%;
   margin: 0 auto;
 }
 @media only screen and (min-width: 1024px) {
@@ -753,7 +753,7 @@ footer .footerlogo-info .footer-content-box .footer-logo {
 }
 footer .footerlogo-info .footer-content-box .footer-logo h2 {
   font-weight: 100;
-  font-size: 2.333rem;
+  font-size: 2rem;
 }
 @media only screen and (min-width: 1024px) {
   footer .footerlogo-info .footer-content-box .footer-logo h2 {
@@ -782,7 +782,7 @@ footer .footerlogo-info .footer-content-box .footer-info-box .info {
 }
 footer .footerlogo-info .footer-content-box .footer-info-box .info div strong {
   font-weight: 500;
-  font-size: 1rem;
+  font-size: 0.9rem;
   color: #353535;
 }
 @media only screen and (min-width: 1024px) {
@@ -804,7 +804,7 @@ footer .footerlogo-info .footer-content-box .footer-info-box .info div .long-lin
   left: 0;
   top: 0;
   z-index: 2;
-  width: 41px;
+  width: 35px;
   height: 100%;
   background-color: #717171;
 }
@@ -844,7 +844,7 @@ footer .footerlogo-info .footer-content-box .footer-info-box .info .sns li a:hov
 footer .footerlogo-info .footer-content-box .footer-info-box .info .txt {
   width: 80%;
   font-weight: 400;
-  font-size: 0.83rem;
+  font-size: 0.75rem;
   color: #353535;
 }
 @media only screen and (min-width: 1024px) {
@@ -864,7 +864,7 @@ footer .footerlogo-info .footer-content-box .footer-info-box .copyright {
 }
 footer .footerlogo-info .footer-content-box .footer-info-box .copyright p {
   font-weight: 400;
-  font-size: 0.83rem;
+  font-size: 0.75rem;
   color: #353535;
 }
 footer .fixed-menu {
