@@ -2,7 +2,10 @@ $(function() {
     //===================== main =====================
      // <공통 애니메이션>
      $('.collection-title').css('opacity', '1');
-     $('.search').css('opacity', '1');
+     $('.search').css({
+        'opacity': 1,
+        'transform': 'translateX(0)'
+    });
 
      function Visibility() {  // 리스트 애니메이션
         $('.box').each(function() {

@@ -31,7 +31,7 @@
 
         .footer-content-box {
             position: relative;
-            width: 84%;
+            width: 87%;
             margin: 0 auto;
             // background-color: lightpink;
 
@@ -88,7 +88,7 @@
                         strong {
                             font: {
                                 weight: $font-medium;
-                                size: 1rem;
+                                size: 0.9rem;
                             }
                             color: #353535;
                             
@@ -156,7 +156,7 @@
                     .txt {
                         width: 80%;
                         font-weight: $font-regular;
-                        font-size: 0.83rem;  
+                        font-size: 0.75rem;  
                         color: #353535;
                         // background-color: aqua;
 
@@ -178,7 +178,7 @@
 
                     p {
                         font-weight: $font-regular;
-                        font-size: 0.83rem;  
+                        font-size: 0.75rem;  
                         color: #353535;
                     }
                 }  // copyright

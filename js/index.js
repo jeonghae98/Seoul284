@@ -48,7 +48,6 @@ $(function() {
             }
             
             // 모바일, pc 공통
-             // <txt>
              $('.year').css('opacity', 1);
              $('.now-year').css('opacity', 1);
              $('.intro-title').css({
@@ -106,6 +105,14 @@ $(function() {
                     'opacity': 1,
                     'transform': 'translateX(0)'
                 });
+
+                $('.main-collection-row-line').animate({
+                    width: '100%'
+                }, 1500);
+            } else {
+                $('.main-collection-row-line').animate({
+                    width: '100%'
+                }, 1000);
             }
 
 
@@ -223,7 +230,31 @@ $(function() {
     }
     
 
+    // <전시 페이지 연결>
+    $('.ex-txt .title').hover(
+        function() {
+            $(this).css('font-weight', '500');
+        },
+        function() {
+            $(this).css('font-weight', '400'); 
+        }
+    );
 
+    $('.ex-txt .ex1').click(function() {
+        window.location.href = '.././2.program/2.exhibition-detail/ex-detail0.html';
+    });
+
+    $('.ex-txt .ex2').click(function() {
+        window.location.href = '.././2.program/2.exhibition-detail/ex-detail5.html';
+    });
+
+    $('.ex-txt .ex3').click(function() {
+        window.location.href = '.././2.program/2.exhibition-detail/ex-detail1.html';
+    });
+
+    $('.ex-txt .ex4').click(function() {
+        window.location.href = '.././2.program/2.exhibition-detail/ex-detail2.html';
+    });
     
     //--------------------- inform ---------------------
     function chgBox() {
@@ -358,6 +389,7 @@ $(function() {
        
 
     // <sns 연결>
+    
     $('.youtube .sns-img').click(function() {
         window.location.href = 'https://www.youtube.com/seoul284official'
     });
