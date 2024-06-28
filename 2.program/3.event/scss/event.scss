@@ -28,18 +28,18 @@ main {
 
         .intro-text {
             padding-top: 100px;
+            transition: all 0.5s;
 
             h1 {
                 font-size: 7vh;
                 text-align: center;
-                margin-bottom: 100px;
+                transition: all 0.5s;
 
                 // background-color: blue;
                 @include responsive(large-screens) {
-                    font-size: 120px;
+                    font-size: 7vh;
                     text-align: left;
                     padding-top: 150px;
-                    margin-bottom: 0;
                 }
 
             }
@@ -50,17 +50,18 @@ main {
                 padding-left: 250px;
                 transform: translateY(-280px);
                 // background-color: #1a1a1a;
-                font-size: 5vh;
+                font-size: 6vh;
                 opacity: 0.2;
                 text-align: center;
                 display: none;
+                transition: all 0.5s;
 
                 @include responsive(large-screens) {
-                    display: block;
-                    font-size: 120px;
+                    font-size: 6vh;
                     text-align: left;
-                    padding-left: 100px;
-                    padding-top: 50px;
+                    padding-left: 70px;
+                    padding-top: 160px;
+                    display: block;
                 }
             }
 
@@ -68,8 +69,10 @@ main {
         }
 
         p {
-            font-size: 30px;
+            font-size: 2.5vh;
             text-align: center;
+            margin-top: 50px;
+            transition: all 0.5s;
 
             @include responsive(large-screens) {
                 text-align: left;
@@ -84,7 +87,6 @@ main {
     .content-page {
         // height: 1009px;
         // overflow: hidden;
-        margin-bottom: 20px;
 
         form {
             margin-top: 50px;
@@ -224,7 +226,7 @@ main {
         /* scrollbarrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr */
 
         .scrollbar {
-
+            display: none;
             @include responsive(large-screens) {
                 float: right;
             }
@@ -289,10 +291,55 @@ main {
                 }
 
                 span {
-                    font-size: 30px;
-                    font-weight: $font-semibold;
+                    font-size: 3vh;
+                    font-weight: $font-regular;
                     cursor: pointer;
-                    text-align: right;
+
+                    @include responsive(large-screens) {
+                        font-size: 30px;
+                        text-align: right;
+                    }
+                }
+                .year-2024 {
+
+                    @include responsive(large-screens) {
+                        transform: translateY(-20px);
+                    }
+                }
+
+
+                .year-2023 {
+                    
+                    transform: translate(-80px, -65px);
+                
+                    @include responsive(large-screens) {
+                        transform: translateY(-130px);
+                    }
+                }
+
+                .year-2022 {
+
+                    transform: translateX(35px);
+
+                    @include responsive(large-screens) {
+                        transform: translateY(42px);
+                    }
+                }
+
+                .year-2021 {
+
+                    transform: translate(55px, -65px);
+                    
+                    @include responsive(large-screens) {
+                        transform: translateY(54px);
+                    }
+                }
+
+                .year-2020 {
+                    color: $line-gray;
+                    @include responsive(large-screens) {
+                        transform: translateY(0px);
+                    }
                 }
             }
         }
@@ -303,15 +350,33 @@ main {
         .fin-exhibition {
             margin: 100px auto;
             width: 80%;
-            height: 600px;
+            height: 700px;
             overflow-y: scroll;
+            // border: 1px solid black;
+            border-left: none; border-right: none;
             // background-color: rgb(18, 245, 245);
 
             @include responsive(large-screens) {
                 width: 70%;
                 transform: translateX(50px);
             }
+
+            -ms-overflow-style: none;
+            &::-webkit-scrollbar {
+                display: none;
+            }
         }
+
+        .now-exhibition {
+            h3{
+                text-align: center;
+                @include responsive(large-screens) {
+                    margin-top: 300px;
+                    margin-left: 400px;
+                }
+            }
+        }
+
         .fin-exhibition {
             display: none;
         }
@@ -329,6 +394,7 @@ main {
                 flex-direction: column;
                 text-align: center;
                 margin-bottom: 20px;
+                transition: all 0.5s;
                 // background-color: azure;
 
                 @include responsive(large-screens) {

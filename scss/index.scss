@@ -133,6 +133,16 @@ main {
             height: $height-wide;
             object-fit: cover;
         }
+        ::-webkit-media-controls-fullscreen-button {display: none;}
+        ::-webkit-media-controls-play-button {display: none;}
+        ::-webkit-media-controls-timeline {display: none;}
+        ::-webkit-media-controls-current-time-display{display: none;}
+        ::-webkit-media-controls-time-remaining-display {display: none;}
+        ::-webkit-media-controls-volume-slider { display: none;}
+        ::-webkit-media-controls-mute-button {
+            transform: translateX(-820px);
+        }
+        
     }
   
 
