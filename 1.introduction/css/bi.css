@@ -480,7 +480,6 @@ main .sec1 {
   }
 }
 main .sec1 .container .sec1-title {
-  opacity: 0;
   text-align: center;
   animation-duration: 2s;
   animation-name: move;
@@ -672,6 +671,7 @@ main .sec2 .container .sec2-title {
   padding-bottom: 30px;
 }
 main .sec2 .container .sec2-title h2 {
+  opacity: 0;
   font-weight: 600;
   padding: 0 0 50px 0;
 }
@@ -682,6 +682,7 @@ main .sec2 .container .sec2-title h2 {
   }
 }
 main .sec2 .container .sec2-title p {
+  opacity: 0;
   text-align: center;
   width: 70%;
   margin: auto;
