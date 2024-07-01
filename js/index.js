@@ -338,7 +338,7 @@ $(function() {
 
         $(window).off('scroll.moveAnimation');
         
-        if (windowWidth > 768) {
+        if (windowWidth >= 768) {
             moveAnimation();
         } else {
             const contentBox = $('.content-box1, .content-box2'); 
