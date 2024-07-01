@@ -30,6 +30,7 @@ main {
         }
         .container {
             .sec1-title {
+                
                 text-align: center;
                 animation-duration: 2s;
                 animation-name: move;
@@ -76,6 +77,7 @@ main {
                 }
             }
             .sec1-info {
+                
                 margin-top: 30px;
                 text-align: center;
                 animation-duration: 1s;
@@ -187,7 +189,7 @@ main {
     } //sec1
 
     .sec2 {
-        margin-top: 100px;
+        margin-top: 10%;
         padding: 100px 0 100px 0;
         background-image: url(../images/overlay_bg.png);
         background-attachment: fixed;
@@ -195,12 +197,12 @@ main {
         background-size: cover;
         .container {
             .sec2-title {
-                
                 text-align: center;
                 // background-color: #ADB4B0;
                 padding-top: 30px;
                 padding-bottom: 30px;
                 h2 {
+                    opacity: 0;
                     font-weight:$font-semibold;
                     padding: 0 0 50px 0;
                     @include responsive (large-screens) {
@@ -210,6 +212,7 @@ main {
                     }
                 }
                 p {
+                    opacity: 0;
                     text-align: center;
                     width: 70%;
                     margin: auto;

@@ -658,7 +658,7 @@ main .sec1 .container .sec1-menu div:last-child a:hover {
   color: #ff6000;
 }
 main .sec2 {
-  margin-top: 100px;
+  margin-top: 10%;
   padding: 100px 0 100px 0;
   background-image: url(../images/overlay_bg.png);
   background-attachment: fixed;
@@ -671,6 +671,7 @@ main .sec2 .container .sec2-title {
   padding-bottom: 30px;
 }
 main .sec2 .container .sec2-title h2 {
+  opacity: 0;
   font-weight: 600;
   padding: 0 0 50px 0;
 }
@@ -681,6 +682,7 @@ main .sec2 .container .sec2-title h2 {
   }
 }
 main .sec2 .container .sec2-title p {
+  opacity: 0;
   text-align: center;
   width: 70%;
   margin: auto;
