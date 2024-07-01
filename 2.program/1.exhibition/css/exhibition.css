@@ -721,7 +721,7 @@ main .content-page .ex-scroll .years {
   }
 }
 main .content-page .ex-scroll .years span {
-  font-size: 3vh;
+  font-size: 2vh;
   font-weight: 400;
   cursor: pointer;
 }
@@ -737,7 +737,7 @@ main .content-page .ex-scroll .years span {
   }
 }
 main .content-page .ex-scroll .years .year-2023 {
-  transform: translate(-80px, -65px);
+  transform: translate(-60px, -65px);
 }
 @media only screen and (min-width: 1024px) {
   main .content-page .ex-scroll .years .year-2023 {

@@ -2,7 +2,7 @@ $(function() {
     $('.detail-content, .detail-info, .list-btn, .content-img, .p').css({
         'opacity': 0,
         'position': 'relative',
-        'bottom': '-100px' // 오른쪽으로 100px 이동하여 숨김
+        'bottom': '-100px' // 아래쪽으로 100px 이동하여 숨김
     });
 
     function checkVisibility() {

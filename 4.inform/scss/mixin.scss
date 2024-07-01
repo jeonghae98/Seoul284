@@ -190,7 +190,7 @@
             display: flex;
             justify-content: flex-start;
             align-items: center;
-            width: 205px;
+            width: 170px;
             margin: auto;
 
             // background-color: aquamarine;
@@ -203,7 +203,7 @@
                 a {
                     font: {
                         weight: $font-regular;
-                        size: 1.167rem;
+                        size: 1rem;
                     } 
 
                     @include responsive(large-screens) {
@@ -232,13 +232,24 @@
 
 
             .single-left-arrow {
-                padding-right: 32px;
+                padding-right: 25px;
+
+                @include responsive(large-screens) {
+                    padding-right: 32px;
+                }
             }
             .num1 {
-                padding-right: 45px;
+                padding-right: 35px;
+                @include responsive(large-screens) {
+                    padding-right: 42px;
+                }
             }
             .single-right-arrow {
-                padding-left: 32px;
+                padding-left: 25px;
+
+                @include responsive(large-screens) {
+                    padding-left: 32px;
+                }
             }
         }
     }  // page-number

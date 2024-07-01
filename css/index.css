@@ -1550,7 +1550,7 @@ main .main-inform .container-none .inform-content-box .content-box2 div .txt-box
   width: 20%;
   padding-top: 15px;
   font-weight: 400;
-  font-size: 0.875rem;
+  font-size: 0.833rem;
   text-align: right;
 }
 @media only screen and (min-width: 1024px) {
@@ -1562,9 +1562,11 @@ main .main-inform .container-none .inform-content-box .content-box2 div .txt-box
 main .main-inform .container-none .inform-content-box .content-box1 div .txt-box .txt,
 main .main-inform .container-none .inform-content-box .content-box2 div .txt-box .txt {
   width: 100%;
-  height: 250px;
+  height: 243px;
   margin-top: 10px;
   padding: 20px 0 40px;
+  overflow: hidden;
+  text-overflow: ellipsis;
   border-top: 2px solid #dbdbdb;
   font-size: 1rem;
 }
@@ -1580,7 +1582,7 @@ main .main-inform .container-none .inform-content-box .content-box2 div .txt-box
   padding-bottom: 20px;
   border-bottom: 2px solid #dbdbdb;
   text-align: right;
-  font-size: 1rem;
+  font-size: 0.833rem;
 }
 @media only screen and (min-width: 1024px) {
   main .main-inform .container-none .inform-content-box .content-box1 div .txt-box .detail-btn,
@@ -1655,7 +1657,7 @@ main .main-inform .container-none .inform-content-box .content-box2 .news .main-
 }
 main .main-inform .container-none .inform-content-box .content-box1 .news .main-news-title p,
 main .main-inform .container-none .inform-content-box .content-box2 .news .main-news-title p {
-  font-size: 0.95rem;
+  font-size: 0.833rem;
   color: #fff;
 }
 @media only screen and (min-width: 1024px) {
@@ -1929,7 +1931,7 @@ main .main-sns .sns-content div .content-txt .sns-title {
   width: 100%;
   margin-bottom: 15px;
   font-weight: 300;
-  font-size: 2rem;
+  font-size: 1.667rem;
 }
 @media only screen and (min-width: 1024px) {
   main .main-sns .sns-content div .content-txt .sns-title {
@@ -1997,7 +1999,7 @@ main .main-sns .sns-content div.youtube .sns-img {
   background-image: url(../images/sns_youtube.jpg);
   background-repeat: no-repeat;
   background-size: 400px;
-  background-position: right -70px center;
+  background-position: right -50px center;
 }
 @media only screen and (min-width: 1024px) {
   main .main-sns .sns-content div.youtube .sns-img {

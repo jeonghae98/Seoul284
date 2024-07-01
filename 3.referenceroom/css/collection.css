@@ -681,17 +681,17 @@ header .header-search-box.sub-visible {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  width: 275px;
+  width: 240px;
   margin: auto;
 }
 @media only screen and (min-width: 1024px) {
   .collection .page-number ul {
-    width: 290px;
+    width: 325px;
   }
 }
 .collection .page-number ul li a {
   font-weight: 400;
-  font-size: 1.167rem;
+  font-size: 1rem;
 }
 @media only screen and (min-width: 1024px) {
   .collection .page-number ul li a {
@@ -708,15 +708,32 @@ header .header-search-box.sub-visible {
           text-decoration: underline #ff6000;
 }
 .collection .page-number ul .single-left-arrow {
-  padding-right: 32px;
+  padding-right: 25px;
+}
+@media only screen and (min-width: 1024px) {
+  .collection .page-number ul .single-left-arrow {
+    padding-right: 32px;
+  }
 }
 .collection .page-number ul .num1,
 .collection .page-number ul .num2,
 .collection .page-number ul .num3 {
-  padding-right: 32px;
+  padding-right: 30px;
+}
+@media only screen and (min-width: 1024px) {
+  .collection .page-number ul .num1,
+  .collection .page-number ul .num2,
+  .collection .page-number ul .num3 {
+    padding-right: 42px;
+  }
 }
 .collection .page-number ul .single-right-arrow {
-  padding-left: 32px;
+  padding-left: 25px;
+}
+@media only screen and (min-width: 1024px) {
+  .collection .page-number ul .single-right-arrow {
+    padding-left: 32px;
+  }
 }
 
 footer {

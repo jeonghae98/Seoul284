@@ -2,7 +2,7 @@ $(function() {
     $('.detail-content, .detail-info, .list-btn, .content-img, .p').css({
         'opacity': 0,
         'position': 'relative',
-        'right': '-100px' // 오른쪽으로 100px 이동하여 숨김
+        'bottom': '-100px' // 아래쪽으로 100px 이동하여 숨김
     });
 
     function checkVisibility() {
@@ -17,12 +17,12 @@ $(function() {
             if (scrollTop + windowHeight > elementTop && scrollTop < elementBottom) {
                 $(this).stop().animate({
                     'opacity': 1,
-                    'right': '0'
+                    'bottom': '0'
                 }, 500);
             } else {
                 $(this).stop().animate({
                     'opacity': 0,
-                    'right': '-100px'
+                    'bottom': '-100px'
                 }, 500);
             }
         });
