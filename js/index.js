@@ -66,7 +66,7 @@ $(function() {
 
     // ****intro-btn*****
     $('.intro-btn').click(function() {
-        window.location.href = '.././1.introduction/intro.html'
+        window.location.href = './1.introduction/intro.html'
     });
         
     //--------------------- collection ---------------------
@@ -139,7 +139,7 @@ $(function() {
     
     // ****intro-btn*****
     $('.col-btn').click(function() {
-        window.location.href = '.././3.referenceroom/collection.html'
+        window.location.href = './3.referenceroom/collection.html'
     });
 
 
@@ -165,18 +165,19 @@ $(function() {
                     });
                     $title.stop().css({
                         'opacity': 0,
-                        'transition': 'opacity 0.5s'
+                        'transform': 'translateY(20px)',
+                        'transition': 'opacity 0.5s, trnasform 0.5s'
                     });
                 } else {
                     $img.stop().css({
                         'transform': 'translateX(50px)',
-                            'opacity': 0,
-                            'transition': 'transform 0.5s opacity 0.5s'
+                        'opacity': 0,
+                        'transition': 'transform 0.5s, opacity 0.5s'
                     });
                     $('.exhibition2').find('.ex-img > img').stop().css({
                         'transform': 'translateX(-50px)',
                         'opacity': 0,
-                        'transition': 'transform 0.5s opacity 0.5s'
+                        'transition': 'transform 0.5s, opacity 0.5s'
                     });
                     $title.stop().css({
                         'opacity': 0,
@@ -241,19 +242,19 @@ $(function() {
     );
 
     $('.ex-txt .ex1').click(function() {
-        window.location.href = '.././2.program/2.exhibition-detail/ex-detail0.html';
+        window.location.href = './2.program/2.exhibition-detail/ex-detail0.html';
     });
 
     $('.ex-txt .ex2').click(function() {
-        window.location.href = '.././2.program/2.exhibition-detail/ex-detail5.html';
+        window.location.href = './2.program/2.exhibition-detail/ex-detail5.html';
     });
 
     $('.ex-txt .ex3').click(function() {
-        window.location.href = '.././2.program/2.exhibition-detail/ex-detail1.html';
+        window.location.href = './2.program/2.exhibition-detail/ex-detail1.html';
     });
 
     $('.ex-txt .ex4').click(function() {
-        window.location.href = '.././2.program/2.exhibition-detail/ex-detail2.html';
+        window.location.href = './2.program/2.exhibition-detail/ex-detail2.html';
     });
     
     //--------------------- inform ---------------------
@@ -335,17 +336,15 @@ $(function() {
     function handleResize() {
         var windowWidth = $(window).width();
 
-        // 기존 scroll 이벤트 제거
         $(window).off('scroll.moveAnimation');
         
         if (windowWidth > 768) {
             moveAnimation();
         } else {
-            // <animation>
             const contentBox = $('.content-box1, .content-box2'); 
-            contentBox.css('transform', ''); // transform 초기화
+            contentBox.css('transform', '');
             contentBox.off('scroll').on('scroll', function() {
-                $(this).css('justify-content', 'initial'); // justify-content 해제
+                $(this).css('justify-content', 'initial');
             });
         }
     }
@@ -360,7 +359,7 @@ $(function() {
     
     // ****info-btn*****
     $('.info-btn').click(function() {
-        window.location.href = '.././4.inform/notice.html'
+        window.location.href = './4.inform/notice.html'
     });
 
     //--------------------- sns ---------------------

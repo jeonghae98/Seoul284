@@ -1118,7 +1118,7 @@ main .exhibition .exhibition-content div.ex .content-box .ex-txt .title {
   margin-top: 50px;
   font-size: 1rem;
   opacity: 0;
-  transform: translateY(10px);
+  transform: translateY(40px);
   transition: opacity 0.3s ease-in, transform 0.3s ease-in;
   cursor: pointer;
 }
