@@ -1124,16 +1124,7 @@ main {
                         flex-direction: column;
                         justify-content: center; 
                         overflow-x: none;
-                        // align-items: center; 
-                        // gap: -50px;
-                        // transition: transform 0.1s ease-out;
                     }
-
-                    // &.active {
-                    //     cursor: grabbing;
-                    // }
-                // .content-box1 {
-                //  }
 
                 &::-webkit-scrollbar{
                     display: none; 
@@ -1181,7 +1172,7 @@ main {
                                 padding-top: 15px;
                                 font: {
                                     weight: $font-regular;
-                                    size: 0.875rem;
+                                    size: 0.833rem;
                                 }
                                 text-align: right;
                                 // background-color: lightcyan;
@@ -1193,9 +1184,11 @@ main {
         
                             .txt {
                                 width: $width-wide;
-                                height: 250px;
+                                height: 243px;
                                 margin-top: 10px;
                                 padding: 20px 0 40px;
+                                overflow: hidden;
+                                text-overflow: ellipsis;
                                 border-top: 2px solid $line-gray;
                                 font-size: 1rem;
                                 // background-color: lightpink;
@@ -1210,7 +1203,7 @@ main {
                                 padding-bottom: 20px;
                                 border-bottom: 2px solid $line-gray;
                                 text-align: right;
-                                font-size: 1rem;
+                                font-size: 0.833rem;
                                 // background-color: lightgreen;
                                 @include responsive(large-screens) {
                                     font-size: 0.875rem;
@@ -1285,7 +1278,7 @@ main {
                             }
     
                             p {
-                                font-size: 0.95rem;
+                                font-size: 0.833rem;
                                 color: $color-second;
                                 // background-color: lightgoldenrodyellow;
     
@@ -1400,20 +1393,7 @@ main {
                         position: relative;
                         transform: translateY(-1370px);
                         transition: transform 0.5s ease-out;
-                        // animation: moveBox1 4s ease-in-out forwards;
-
-                        // @keyframes moveBox1 {
-                        //     0% { transform: translateY(-1370px); }
-                        //     100% { transform: translateY(1370px); }
-                        // }
                     }
-
-                    // &:hover {
-                    //     @include responsive(large-screens) {
-                    //         animation-play-state: paused; 
-                    //         cursor:pointer;
-                    //     }
-                    // }
                }
 
                .content-box2 {
@@ -1423,20 +1403,7 @@ main {
                     position: relative;
                     transform: translateY(1370px);
                     transition: transform 0.5s ease-out;
-                    // animation: moveBox2 4s ease-in-out forwards;
-
-                    // @keyframes moveBox2 {
-                    //     0% { transform: translateY(1370px); }
-                    //     100% { transform: translateY(-1370px); }
-                    // }
                 }
-
-                // &:hover {
-                //     @include responsive(large-screens) {
-                //         animation-play-state: paused; 
-                //         cursor:pointer;
-                //     }
-                // }
            }
             }  // inform-content-box
         }  // container-none
@@ -1600,7 +1567,7 @@ main {
                         margin-bottom: 15px;
                         font: {
                             weight: $font-light;
-                            size: 2rem;
+                            size: 1.667rem;
                         }
 
                         @include responsive(large-screens) {
@@ -1683,7 +1650,7 @@ main {
                         image: url(../images/sns_youtube.jpg);
                         repeat: no-repeat;
                         size: 400px;
-                        position: right -70px center;
+                        position: right -50px center;
                     }
                     @include responsive(large-screens) {
                         width: 696px;

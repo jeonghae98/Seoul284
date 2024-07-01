@@ -553,11 +553,11 @@ main .detail-page .content-box .title-box {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 20vh;
   padding: 20px 0;
   border-top: 2px solid #d9d9d9;
 }
 main .detail-page .content-box .title-box .title {
+  margin-bottom: 3vh;
   font-weight: 400;
   font-size: 1.333rem;
 }

@@ -249,20 +249,20 @@ header {
             display: flex;
             justify-content: flex-start;
             align-items: center;
-            width: 275px;
+            width: 240px;
             margin: auto;
 
             // background-color: aquamarine;
 
             @include responsive(large-screens) {
-                width: 290px;
+                width: 325px;
             }
 
             li {
                 a {
                     font: {
                         weight: $font-regular;
-                        size: 1.167rem;
+                        size: 1rem;
                     } 
 
                     @include responsive(large-screens) {
@@ -293,15 +293,27 @@ header {
 
 
             .single-left-arrow {
-                padding-right: 32px;
+                padding-right: 25px;
+
+                @include responsive(large-screens) {
+                    padding-right: 32px;
+                } 
             }
             .num1,
             .num2,
             .num3 {
-                padding-right: 32px;
+                padding-right: 30px;
+
+                @include responsive(large-screens) {
+                    padding-right: 42px;
+                }
             }
             .single-right-arrow {
-                padding-left: 32px;
+                padding-left: 25px;
+
+                @include responsive(large-screens) {
+                    padding-left: 32px;
+                }
             }
         }
     }  // page-number

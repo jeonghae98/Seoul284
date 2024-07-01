@@ -47,7 +47,7 @@ main {
                 justify-content: space-between;
                 align-items: center;
                 width: $width-wide;
-                padding: 40px 0;
+                padding: 25px 0;
                 border-top: 1px solid $inform-line-gray;
                 border-bottom: 1px solid $inform-line-gray;
                 cursor: pointer;
@@ -55,6 +55,10 @@ main {
                 transform: translateY(50px);
                 transition: opacity 0.5s ease, transform 0.5s ease, box-shadow 0.3s ease;
 
+                @include responsive(large-screens) {
+                    padding: 40px 0;
+                }
+                
                 &.visible {
                     opacity: 1;
                     transform: translateY(0);

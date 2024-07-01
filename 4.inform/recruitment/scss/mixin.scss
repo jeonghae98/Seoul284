@@ -96,11 +96,11 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        height: 20vh;
         padding: 20px 0;
         border-top: 2px solid $inform-line-gray;
 
         .title {
+            margin-bottom: 3vh;
             font: {
                 weight: $font-regular;
                 size: 1.333rem;  
