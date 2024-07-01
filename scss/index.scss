@@ -699,6 +699,7 @@ main {
                             transition: opacity 0.3s ease-in;
                         }
                     }
+
                     .ex-txt {
                         @include responsive(large-screens) {
                             position: relative;
@@ -709,7 +710,7 @@ main {
                             margin-top: 50px;
                             font-size: 1rem;
                             opacity: 0;
-                            transform: translateY(40px);
+                            transform: translateY(20px);
                             transition: opacity 0.3s ease-in, transform 0.3s ease-in;
                             cursor: pointer;
                             // background-color: #ffccac;
@@ -944,6 +945,10 @@ main {
                             text-align: center;
                             color: $color-gray;
                             animation: moveArrow 1.5s ease-in-out infinite;
+
+                            &:hover {
+                                font-weight: $font-light;
+                            }
 
                             @keyframes moveArrow {
                                 0% { transform: translateX(0) }
