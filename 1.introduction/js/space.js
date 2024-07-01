@@ -10,15 +10,15 @@ $(function () {
 
         if($(window).width() <= 768) {
             // mobile only code
-            if ($scrollTop < 500) {
+            if ($scrollTop < 300) {
                 $('.sec1 h2').show()       
-                $('.sec1 h2').stop().animate({ opacity: '0' }, 300);
+                $('.sec1 h2').stop().animate({ opacity: '0' }, 100);
                 
             } else {
                 $('.sec1 h2').show()
                 $('.sec1 h2').stop().animate({ opacity: '1' }, 300);
             }
-            if ($scrollTop < 500) {
+            if ($scrollTop < 300) {
                 $('.sec1 p').stop().animate({ opacity: '0' }, 300);
             } else {
                 $('.sec1 p').show()
@@ -28,19 +28,19 @@ $(function () {
     
          
 
-            if ($scrollTop < 1300) {
+            if ($scrollTop < 800) {
                 $('.sec2 h2').stop().animate({ opacity: '0' }, 300);
             } else if ($scrollTop < 2000) {
                 $('.sec2 h2').stop().animate({ opacity: '1' }, 300);
             }
     
-            if ($scrollTop < 1300) {
+            if ($scrollTop < 800) {
                 $('.sec2 p').stop().animate({ opacity: '0' }, 100);
             } else if ($scrollTop < 2000) {
                 $('.sec2 p').stop().animate({ opacity: '1' }, 900);
             }
                 
-            if ($scrollTop < 1700) {
+            if ($scrollTop < 1100) {
                 $('.slide1').stop().animate({ opacity: '0%' }, 300);
             } else {
                 $('.slide1').stop().animate({ opacity: '100%'}, 1000);

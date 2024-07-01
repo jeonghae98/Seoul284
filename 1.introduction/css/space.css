@@ -542,6 +542,7 @@ main .space .sec1 img {
   }
 }
 main .space .sec1 h2 {
+  opacity: 0;
   padding-bottom: 20px;
   text-align: center;
   font-size: 600;
@@ -556,6 +557,7 @@ main .space .sec1 h2 {
   }
 }
 main .space .sec1 p {
+  opacity: 0;
   width: 70%;
   text-align: center;
   margin: 0 auto;
@@ -579,7 +581,8 @@ main .space .sec1 p span {
   color: #ff6000;
 }
 main .space .sec2 {
-  height: 700px;
+  width: 100%;
+  height: 50%;
 }
 @media only screen and (min-width: 1024px) {
   main .space .sec2 {
@@ -596,7 +599,7 @@ main .space .sec2 {
   }
 }
 main .space .sec2 img {
-  margin-top: 100px;
+  margin-top: 30%;
 }
 @media only screen and (min-width: 1024px) {
   main .space .sec2 img {
@@ -641,6 +644,7 @@ main .space .sec2 p span {
 }
 main .space .slide1 {
   overflow: hidden;
+  width: 100%;
 }
 @media only screen and (min-width: 1024px) {
   main .space .slide1 {
@@ -651,7 +655,7 @@ main .space .slide1 {
 main .space .slide1 .box1 {
   display: flex;
   width: 100%;
-  height: 100%;
+  height: 100vw;
   border-left: none;
   border-right: none;
   overflow: hidden;
@@ -667,7 +671,7 @@ main .space .slide1 .box1 {
 }
 main .space .slide1 .box1 .img-list {
   display: flex;
-  width: 500px;
+  width: 100%;
   text-align: center;
 }
 @media only screen and (min-width: 1024px) {
@@ -680,7 +684,7 @@ main .space .slide1 .box1 .img-list img {
 }
 main .space .slide1 .box1 .img-list1 {
   display: none;
-  width: 500px;
+  width: 100%;
 }
 @media only screen and (min-width: 1024px) {
   main .space .slide1 .box1 .img-list1 {
@@ -998,7 +1002,7 @@ footer .footerlogo-info .footer-content-box .footer-info-box .info div .long-lin
   left: 0;
   top: 0;
   z-index: 2;
-  width: 35px;
+  width: 41px;
   height: 100%;
   background-color: #717171;
 }

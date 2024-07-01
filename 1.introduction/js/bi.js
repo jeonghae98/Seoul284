@@ -9,18 +9,18 @@ $(function() {
 
         if ($(window).width() <= 768) {
             // 모바일 화면일 때의 애니메이션
-            if ($scrollTop < 600 && !animatedSec2Title) {
+            if ($scrollTop < 400 && !animatedSec2Title) {
                 animatedSec2Title = true;
                 $('.sec2-title h2, .sec2-title p').stop().animate({ opacity: '0' }, 300);
-            } else if ($scrollTop >= 600 && animatedSec2Title) {
+            } else if ($scrollTop >= 400 && animatedSec2Title) {
                 animatedSec2Title = false;
                 $('.sec2-title h2, .sec2-title p').stop().animate({ opacity: '1' }, 300);
             }
 
-            if ($scrollTop < 600 && !animatedImgBox) {
+            if ($scrollTop < 500 && !animatedImgBox) {
                 animatedImgBox = true;
                 $('.img-box').stop().animate({ marginTop: '1000px' }, 800);
-            } else if ($scrollTop >= 600 && animatedImgBox) {
+            } else if ($scrollTop >= 500 && animatedImgBox) {
                 animatedImgBox = false;
                 $('.img-box').stop().animate({ marginTop: '0px' }, 800);
             }
