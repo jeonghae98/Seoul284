@@ -155,27 +155,30 @@ section.content {
     }
 
     .p {
-        font-size: 20px;
-        margin-top: 20px;
-        text-align: center;
-        
-        @include responsive(large-screens) {
-            margin-top: 80px;
-            font-size: 16px
+        .introduce_box {
+            font-size: 20px;
+            margin-top: 20px;
+            text-align: center;
+            
+            @include responsive(large-screens) {
+                margin-top: 80px;
+                font-size: 16px
+            }
+    
+            img {
+                margin: 0 auto;
+                display: inline-block;
+                
+            }
+    
+            table {
+                margin: 0 auto;
+            }
+            iframe {
+                display: block;
+                margin: 0 auto;
+            }
         }
-
-        img {
-            margin: 0 auto;
-            display: inline-block;
-        }
-
-        table {
-            margin: 0 auto;
-        }
-    }
-    iframe {
-        display: block;
-        margin: 0 auto;
     }
 }
 
