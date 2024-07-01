@@ -20,6 +20,7 @@ header {
 //***********main***********
 main {
     // background-color: aqua;
+    overflow: hidden;
     .container {
         section.main-title {
             // background-color: aqua;
@@ -69,7 +70,7 @@ main {
                 }
             }
             img {
-                width: 280px; height: auto;
+                width: 330px; height: auto;
                 margin: 0 auto;
  
                 animation-duration: 3s;
@@ -212,6 +213,7 @@ main {
                     // border: 1px dashed black;
                     // background-color: antiquewhite;
                     .box1-title {
+                        opacity: 0;
                         padding-top: 90px;
                         // background-color: aqua;
                         @include responsive(large-screens) {
@@ -219,6 +221,7 @@ main {
                             // background-color: antiquewhite;
                         }
                         h2 {
+                            
                             width: 53%; 
                             margin: 0 auto;
                             padding-bottom: 20px;
@@ -235,6 +238,7 @@ main {
                             }
                         }
                         p {
+                           
                             width: 53%;
                             margin: 0 auto;
                             font-size: 16px;
@@ -251,6 +255,7 @@ main {
                     }
                     }
                     ul.years {
+                        
                         width: 53%;
                         margin: 0 auto;
                         font-weight: $font-regular;
@@ -258,6 +263,7 @@ main {
                         color: #ffffff;
                       
                         li {
+                            opacity: 0;
                             list-style-type: none;
                             color: black;
                             // background-color: antiquewhite;  

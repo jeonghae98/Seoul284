@@ -30,6 +30,7 @@ main {
         }
         .container {
             .sec1-title {
+                opacity: 0;
                 text-align: center;
                 animation-duration: 2s;
                 animation-name: move;
@@ -187,7 +188,7 @@ main {
     } //sec1
 
     .sec2 {
-        margin-top: 100px;
+        margin-top: 10%;
         padding: 100px 0 100px 0;
         background-image: url(../images/overlay_bg.png);
         background-attachment: fixed;

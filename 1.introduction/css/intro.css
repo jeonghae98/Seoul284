@@ -471,6 +471,9 @@ header .header-search-box.sub-visible {
   background-color: #fff;
 }
 
+main {
+  overflow: hidden;
+}
 main .container section.main-title h2 {
   margin: 120px 0 50px 0;
   font-font-weight: 600;
@@ -518,7 +521,7 @@ main .container section.main-title p {
   }
 }
 main .container section.main-title img {
-  width: 280px;
+  width: 330px;
   height: auto;
   margin: 0 auto;
   animation-duration: 3s;
@@ -670,6 +673,7 @@ main section.box1 .box1-line .container .box1-txt {
   }
 }
 main section.box1 .box1-line .container .box1-txt .box1-title {
+  opacity: 0;
   padding-top: 90px;
 }
 @media only screen and (min-width: 1024px) {
@@ -715,6 +719,7 @@ main section.box1 .box1-line .container .box1-txt ul.years {
   color: #ffffff;
 }
 main section.box1 .box1-line .container .box1-txt ul.years li {
+  opacity: 0;
   list-style-type: none;
   color: black;
 }
