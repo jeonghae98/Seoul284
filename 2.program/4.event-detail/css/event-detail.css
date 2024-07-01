@@ -609,25 +609,25 @@ section.content .content-img img {
     margin: 0 auto;
   }
 }
-section.content .p {
+section.content .p .introduce_box {
   font-size: 20px;
   margin-top: 20px;
   text-align: center;
 }
 @media only screen and (min-width: 1024px) {
-  section.content .p {
+  section.content .p .introduce_box {
     margin-top: 80px;
     font-size: 16px;
   }
 }
-section.content .p img {
+section.content .p .introduce_box img {
   margin: 0 auto;
   display: inline-block;
 }
-section.content .p table {
+section.content .p .introduce_box table {
   margin: 0 auto;
 }
-section.content iframe {
+section.content .p .introduce_box iframe {
   display: block;
   margin: 0 auto;
 }
