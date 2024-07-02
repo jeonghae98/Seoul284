@@ -641,7 +641,7 @@ section.content .p .introduce_box iframe {
 }
 @media only screen and (min-width: 1024px) {
   section.content .p .introduce_box iframe {
-    width: 50%;
+    width: 50% !important;
     height: 400px;
   }
 }
@@ -661,7 +661,7 @@ section.content .p iframe {
 }
 @media only screen and (min-width: 1024px) {
   section.content .p iframe {
-    width: 50%;
+    width: 50% !important;
     height: 400px;
   }
 }

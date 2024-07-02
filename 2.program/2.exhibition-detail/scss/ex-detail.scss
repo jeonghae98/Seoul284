@@ -186,7 +186,7 @@ section.content {
                 margin: 0 auto;
 
                 @include responsive(large-screens) {
-                    width: 50%;
+                    width: 50% !important;
                     height: 400px;
                 }
             }
@@ -211,7 +211,7 @@ section.content {
             margin: 0 auto;
 
             @include responsive(large-screens) {
-                width: 50%;
+                width: 50% !important;
                 height: 400px;
             }
         }
