@@ -11,6 +11,9 @@
     margin: 0 auto;
     padding: 20px;
     // background-color: antiquewhite;
+    @include responsive(large-screens) {
+        padding: 0 10px;
+    }
 }
 
 //***********header***********
