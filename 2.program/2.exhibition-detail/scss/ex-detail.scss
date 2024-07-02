@@ -173,8 +173,8 @@ section.content {
                 display: inline-block;
                 width: 100% !important;
             }
-            a {
-            }
+            // a {
+            // }
     
             table {
                 margin: 0 auto !important;
@@ -198,7 +198,8 @@ section.content {
             width: 100% !important;
         }
         a {
-        }
+            font-size: 14px;
+        }   
 
         table {
             margin: 0 auto !important;

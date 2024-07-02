@@ -649,6 +649,9 @@ section.content .p img {
   display: inline-block;
   width: 100% !important;
 }
+section.content .p a {
+  font-size: 14px;
+}
 section.content .p table {
   margin: 0 auto !important;
   width: 100% !important;
