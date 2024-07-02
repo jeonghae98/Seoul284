@@ -623,13 +623,42 @@ section.content .p .introduce_box {
 section.content .p .introduce_box img {
   margin: 0 auto;
   display: inline-block;
+  width: 100% !important;
 }
 section.content .p .introduce_box table {
-  margin: 0 auto;
+  margin: 0 auto !important;
+  width: 100% !important;
 }
 section.content .p .introduce_box iframe {
   display: block;
+  width: 100% !important;
   margin: 0 auto;
+}
+@media only screen and (min-width: 1024px) {
+  section.content .p .introduce_box iframe {
+    width: 50%;
+    height: 400px;
+  }
+}
+section.content .p img {
+  margin: 0 auto;
+  display: inline-block;
+  width: 100% !important;
+}
+section.content .p table {
+  margin: 0 auto !important;
+  width: 100% !important;
+}
+section.content .p iframe {
+  display: block;
+  width: 100% !important;
+  margin: 0 auto;
+}
+@media only screen and (min-width: 1024px) {
+  section.content .p iframe {
+    width: 50%;
+    height: 400px;
+  }
 }
 
 footer {

@@ -168,15 +168,47 @@ section.content {
             img {
                 margin: 0 auto;
                 display: inline-block;
-                
+                width: 100% !important;
+            }
+            a {
             }
     
             table {
-                margin: 0 auto;
+                margin: 0 auto !important;
+                width: 100% !important;
             }
             iframe {
                 display: block;
+                width: 100% !important;
                 margin: 0 auto;
+
+                @include responsive(large-screens) {
+                    width: 50%;
+                    height: 400px;
+                }
+            }
+        }
+
+        img {
+            margin: 0 auto;
+            display: inline-block;
+            width: 100% !important;
+        }
+        a {
+        }
+
+        table {
+            margin: 0 auto !important;
+            width: 100% !important;
+        }
+        iframe {
+            display: block;
+            width: 100% !important;
+            margin: 0 auto;
+
+            @include responsive(large-screens) {
+                width: 50%;
+                height: 400px;
             }
         }
     }
