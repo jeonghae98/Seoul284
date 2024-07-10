@@ -739,6 +739,9 @@ main .sec3 {
   padding: 100px 0 100px 0;
   text-align: center;
 }
+main .sec3 h2 {
+  display: none;
+}
 @media only screen and (min-width: 1024px) {
   main .sec3 .container {
     display: flex;

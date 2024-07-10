@@ -275,7 +275,9 @@ main {
         // background-color: rgb(255, 251, 243);
         // background: linear-gradient(to bottom, #ffffff,#ffffff,#fffbf9,#ffffff,);
 
-   
+        h2 {
+            display: none;
+        }
         .container {
             @include responsive (large-screens) {
                 display: flex;

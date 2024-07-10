@@ -382,7 +382,7 @@ main {
                     font-weight: $font-semibold;
                     color: $color-second;
                     border-top-left-radius: 80px;
-                    border-end-end-radius: 80px;
+                    border-bottom-right-radius: 80px;
                     background: linear-gradient(to right,#ff6000, #d89f90);
                     @include responsive (large-screens) {
                         width: 100%;

@@ -30,10 +30,10 @@ main {
             // background-color: aqua;
             h2 {
                 margin: 120px 0 50px 0;
-                font: {
-                    font-weight: $font-semibold;
-                   size : 2.5rem;
-                }
+               
+                font-weight: $font-semibold;
+                font-size: 2.5rem;
+              
                 text-align: center;
                 animation-duration: 0.5s;
                 animation-name: move;

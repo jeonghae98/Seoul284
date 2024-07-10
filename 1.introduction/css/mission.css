@@ -880,7 +880,7 @@ main .vission-box .container .vission p {
   font-weight: 600;
   color: #fff;
   border-top-left-radius: 80px;
-  border-end-end-radius: 80px;
+  border-bottom-right-radius: 80px;
   background: linear-gradient(to right, #ff6000, #d89f90);
 }
 @media only screen and (min-width: 1024px) {
