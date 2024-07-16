@@ -1,4 +1,4 @@
-# 🏫 문화역서울 284 Website Reneewal
+# 🏫 문화역서울 284 Website Renewal
 ![이미지 넣기](./images/Mockup.png)
 
 
