@@ -1505,7 +1505,7 @@ main .main-inform .container-none .inform-content-box .content-box2 {
   main .main-inform .container-none .inform-content-box .content-box2 {
     flex-direction: column;
     justify-content: center;
-    overflow-x: none;
+    overflow-x: auto;
   }
 }
 main .main-inform .container-none .inform-content-box .content-box1::-webkit-scrollbar,
