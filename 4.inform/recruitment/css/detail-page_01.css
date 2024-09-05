@@ -692,21 +692,16 @@ main .detail-page .list-box .list-btn {
   width: 100%;
   height: 50px;
   border: 2px solid #d9d9d9;
+  font-weight: 400;
+  font-size: 1rem;
   background-color: #fff;
+  cursor: pointer;
 }
 @media only screen and (min-width: 1024px) {
   main .detail-page .list-box .list-btn {
     margin: 60px 0 160px;
     width: 100%;
     height: 55px;
-  }
-}
-main .detail-page .list-box .list-btn a {
-  font-weight: 400;
-  font-size: 1rem;
-}
-@media only screen and (min-width: 1024px) {
-  main .detail-page .list-box .list-btn a {
     font-size: 1.167rem;
   }
 }

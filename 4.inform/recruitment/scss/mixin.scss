@@ -240,21 +240,16 @@
             width: $width-wide;
             height: 50px;
             border: 2px solid $inform-line-gray;
+            font-weight: $font-regular;
+            font-size: 1rem;
             background-color: $color-second;
+            cursor: pointer;
 
             @include responsive(large-screens) {
                 margin: 60px 0 160px;
                 width: $width-wide;
                 height: 55px;
-            }
-
-            a {
-                font-weight: $font-regular;
-                font-size: 1rem;  
-
-                @include responsive(large-screens) {
-                    font-size: 1.167rem;   
-                }
+                font-size: 1.167rem;   
             }
         }
     }
