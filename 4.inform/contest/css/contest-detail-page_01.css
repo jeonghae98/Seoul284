@@ -610,6 +610,9 @@ main .detail-page .content-box .txt-box div strong {
   text-decoration: underline;
   line-height: 2;
 }
+main .detail-page .content-box .txt-box div p .point {
+  font-size: 400;
+}
 main .detail-page .content-box .txt-box .paragraph_2,
 main .detail-page .content-box .txt-box .paragraph_3,
 main .detail-page .content-box .txt-box .paragraph_4 {
