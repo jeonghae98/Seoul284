@@ -1576,10 +1576,10 @@ main {
                         }
 
                         @include responsive(large-screens) {
-                            margin-bottom: 35px;
+                            margin-bottom: 24px;
                             font: {
-                                weight: $font-regular;
-                                size: 3rem;
+                                weight: $font-semibold;
+                                size: 2rem;
                             }
                         }
 
@@ -1602,7 +1602,7 @@ main {
                         }
                         
                         @include responsive(large-screens) {
-                            font-size: 1.3rem;
+                            font-size: 1.2rem;
                         }
                     }
                 }
